@@ -1,0 +1,98 @@
+/**
+ * LinguaFlow - A1 Ünite 27-30 Quizleri
+ * Unit 27: DEL Kullanımı, Unit 28: Sıra Sayıları, Unit 29: Soru Kelimeleri, Unit 30: PODER Fiili
+ */
+import { Question } from "./questions";
+
+// UNIT 27: DEL KULLANIMI (de + el = del)
+export const unit27Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Del' ne demek?", options: [{ id: "a", text: "...a", correct: false }, { id: "b", text: "...nın/nin (erkek)", correct: true }, { id: "c", text: "...da", correct: false }, { id: "d", text: "...dan", correct: false }] },
+    { id: 2, type: "SELECT", question: "'De + el' birleşince ne olur?", options: [{ id: "a", text: "De el", correct: false }, { id: "b", text: "Del", correct: true }, { id: "c", text: "Al", correct: false }, { id: "d", text: "Dela", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "El libro del profesor", options: [{ id: "a", text: "Öğretmenin kitabı", correct: true }, { id: "b", text: "Öğretmenin defteri", correct: false }, { id: "c", text: "Öğrencinin kitabı", correct: false }, { id: "d", text: "Kitap öğretmene", correct: false }] },
+    { id: 4, type: "SELECT", question: "'De la' birleşir mi?", options: [{ id: "a", text: "Evet, dela olur", correct: false }, { id: "b", text: "Hayır, ayrı kalır", correct: true }, { id: "c", text: "Bazen birleşir", correct: false }, { id: "d", text: "Dal olur", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Al' ne demek?", options: [{ id: "a", text: "...dan", correct: false }, { id: "b", text: "...a (erkek)", correct: true }, { id: "c", text: "...nın", correct: false }, { id: "d", text: "...da", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Voy al parque", options: [{ id: "a", text: "Parka gidiyorum", correct: true }, { id: "b", text: "Parktan geliyorum", correct: false }, { id: "c", text: "Parka gittim", correct: false }, { id: "d", text: "Parka gideceğim", correct: false }] },
+    { id: 7, type: "TRANSLATE", question: "Çevir:", hint: "Öğretmenin", correctAnswer: "Del profesor" },
+    { id: 8, type: "SELECT", question: "'A + el' birleşince ne olur?", options: [{ id: "a", text: "A el", correct: false }, { id: "b", text: "Al", correct: true }, { id: "c", text: "Ael", correct: false }, { id: "d", text: "Del", correct: false }] },
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "El coche _____ médico es nuevo.", options: [{ id: "a", text: "del", correct: true }, { id: "b", text: "de la", correct: false }] },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Parka", correctAnswer: "Al parque" },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cerca del banco", options: [{ id: "a", text: "Bankanın yakınında", correct: true }, { id: "b", text: "Bankanın içinde", correct: false }, { id: "c", text: "Bankaya yakın", correct: false }, { id: "d", text: "Bankadan uzakta", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Voy _____ cine.", options: [{ id: "a", text: "al", correct: true }, { id: "b", text: "a la", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Öğretmenin kitabı", correctAnswer: "El libro del profesor" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Estoy cerca _____ supermercado.", options: [{ id: "a", text: "del", correct: true }, { id: "b", text: "de la", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Sinemaya gidiyorum", correctAnswer: "Voy al cine" },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "La casa _____ María es grande.", options: [{ id: "a", text: "de", correct: true }, { id: "b", text: "del", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Lejos del centro", options: [{ id: "a", text: "Merkezden uzakta", correct: true }, { id: "b", text: "Merkeze yakın", correct: false }, { id: "c", text: "Merkezde", correct: false }, { id: "d", text: "Merkeze gidiyorum", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bankanın yakınında", correctAnswer: "Cerca del banco" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Merkezden uzakta", correctAnswer: "Lejos del centro" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Doktorun arabası yeni", correctAnswer: "El coche del médico es nuevo" },
+];
+
+export const unit27Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Delante de' ne demek?", options: [{ id: "a", text: "Arkasında", correct: false }, { id: "b", text: "Önünde", correct: true }, { id: "c", text: "Yanında", correct: false }, { id: "d", text: "İçinde", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Detrás de' ne demek?", options: [{ id: "a", text: "Önünde", correct: false }, { id: "b", text: "Arkasında", correct: true }, { id: "c", text: "Yanında", correct: false }, { id: "d", text: "Altında", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Delante del edificio", options: [{ id: "a", text: "Binanın önünde", correct: true }, { id: "b", text: "Binanın arkasında", correct: false }, { id: "c", text: "Binanın içinde", correct: false }, { id: "d", text: "Binanın yanında", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Al lado de' ne demek?", options: [{ id: "a", text: "Önünde", correct: false }, { id: "b", text: "Yanında", correct: true }, { id: "c", text: "Altında", correct: false }, { id: "d", text: "Üstünde", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Encima de' ne demek?", options: [{ id: "a", text: "Altında", correct: false }, { id: "b", text: "Üstünde", correct: true }, { id: "c", text: "Yanında", correct: false }, { id: "d", text: "Önünde", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Detrás del coche", options: [{ id: "a", text: "Arabanın arkasında", correct: true }, { id: "b", text: "Arabanın önünde", correct: false }, { id: "c", text: "Arabanın içinde", correct: false }, { id: "d", text: "Arabanın üstünde", correct: false }] },
+    { id: 7, type: "TRANSLATE", question: "Çevir:", hint: "Önünde", correctAnswer: "Delante de" },
+    { id: 8, type: "SELECT", question: "'Debajo de' ne demek?", options: [{ id: "a", text: "Üstünde", correct: false }, { id: "b", text: "Altında", correct: true }, { id: "c", text: "Yanında", correct: false }, { id: "d", text: "Arkasında", correct: false }] },
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Estoy delante _____ cine.", options: [{ id: "a", text: "del", correct: true }, { id: "b", text: "de la", correct: false }] },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Arkasında", correctAnswer: "Detrás de" },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Al lado del hospital", options: [{ id: "a", text: "Hastanenin yanında", correct: true }, { id: "b", text: "Hastanenin önünde", correct: false }, { id: "c", text: "Hastanenin içinde", correct: false }, { id: "d", text: "Hastaneye", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Detrás _____ restaurante.", options: [{ id: "a", text: "del", correct: true }, { id: "b", text: "de el", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Binanın önünde", correctAnswer: "Delante del edificio" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Encima _____ mesa.", options: [{ id: "a", text: "de la", correct: true }, { id: "b", text: "del", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Arabanın arkasında", correctAnswer: "Detrás del coche" },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "Al lado _____ banco.", options: [{ id: "a", text: "del", correct: true }, { id: "b", text: "de la", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Debajo del puente", options: [{ id: "a", text: "Köprünün altında", correct: true }, { id: "b", text: "Köprünün üstünde", correct: false }, { id: "c", text: "Köprünün yanında", correct: false }, { id: "d", text: "Köprüye", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Hastanenin yanında", correctAnswer: "Al lado del hospital" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Köprünün altında", correctAnswer: "Debajo del puente" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Masanın üstünde", correctAnswer: "Encima de la mesa" },
+];
+
+export const unit27Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'A la derecha' ne demek?", options: [{ id: "a", text: "Solda", correct: false }, { id: "b", text: "Sağda", correct: true }, { id: "c", text: "Düz", correct: false }, { id: "d", text: "Arkada", correct: false }] },
+    { id: 2, type: "SELECT", question: "'A la izquierda' ne demek?", options: [{ id: "a", text: "Sağda", correct: false }, { id: "b", text: "Solda", correct: true }, { id: "c", text: "Düz", correct: false }, { id: "d", text: "Önde", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "A la derecha del banco", options: [{ id: "a", text: "Bankanın sağında", correct: true }, { id: "b", text: "Bankanın solunda", correct: false }, { id: "c", text: "Bankanın önünde", correct: false }, { id: "d", text: "Bankanın arkasında", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Todo recto' ne demek?", options: [{ id: "a", text: "Sağda", correct: false }, { id: "b", text: "Düz ileri", correct: true }, { id: "c", text: "Solda", correct: false }, { id: "d", text: "Geri", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Entre' ne demek?", options: [{ id: "a", text: "Yanında", correct: false }, { id: "b", text: "Arasında", correct: true }, { id: "c", text: "Üstünde", correct: false }, { id: "d", text: "Altında", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Entre el banco y el cine", options: [{ id: "a", text: "Banka ile sinemanın arasında", correct: true }, { id: "b", text: "Banka ve sinema", correct: false }, { id: "c", text: "Bankanın yanında", correct: false }, { id: "d", text: "Sinemanın arkasında", correct: false }] },
+    { id: 7, type: "TRANSLATE", question: "Çevir:", hint: "Sağda", correctAnswer: "A la derecha" },
+    { id: 8, type: "SELECT", question: "'Enfrente de' ne demek?", options: [{ id: "a", text: "Yanında", correct: false }, { id: "b", text: "Karşısında", correct: true }, { id: "c", text: "Arkasında", correct: false }, { id: "d", text: "Üstünde", correct: false }] },
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "A la izquierda _____ museo.", options: [{ id: "a", text: "del", correct: true }, { id: "b", text: "de la", correct: false }] },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Solda", correctAnswer: "A la izquierda" },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Enfrente del supermercado", options: [{ id: "a", text: "Süpermarketin karşısında", correct: true }, { id: "b", text: "Süpermarketin arkasında", correct: false }, { id: "c", text: "Süpermarketin yanında", correct: false }, { id: "d", text: "Süpermarkette", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Entre el banco y _____ parque.", options: [{ id: "a", text: "el", correct: true }, { id: "b", text: "la", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bankanın sağında", correctAnswer: "A la derecha del banco" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Enfrente _____ iglesia.", options: [{ id: "a", text: "de la", correct: true }, { id: "b", text: "del", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Banka ve sinema arasında", correctAnswer: "Entre el banco y el cine" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Süpermarketin karşısında", correctAnswer: "Enfrente del supermercado" },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Gira a la derecha", options: [{ id: "a", text: "Sağa dön", correct: true }, { id: "b", text: "Sola dön", correct: false }, { id: "c", text: "Düz git", correct: false }, { id: "d", text: "Geri dön", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sağa dön", correctAnswer: "Gira a la derecha" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Düz git", correctAnswer: "Sigue todo recto" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Kilisenin karşısında", correctAnswer: "Enfrente de la iglesia" },
+];
+
+export const unit27Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "Hangi ifade sadece erkek isimlerle birleşir?", options: [{ id: "a", text: "De la", correct: false }, { id: "b", text: "Del (de + el)", correct: true }, { id: "c", text: "A la", correct: false }, { id: "d", text: "De", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Salgo del trabajo' ne demek?", options: [{ id: "a", text: "İşe gidiyorum", correct: false }, { id: "b", text: "İşten çıkıyorum", correct: true }, { id: "c", text: "İşteyim", correct: false }, { id: "d", text: "İşe başlıyorum", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Vengo del colegio", options: [{ id: "a", text: "Okuldan geliyorum", correct: true }, { id: "b", text: "Okula gidiyorum", correct: false }, { id: "c", text: "Okuldayım", correct: false }, { id: "d", text: "Okulda çalışıyorum", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Al final de' ne demek?", options: [{ id: "a", text: "Başında", correct: false }, { id: "b", text: "Sonunda", correct: true }, { id: "c", text: "Ortasında", correct: false }, { id: "d", text: "Yanında", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Vengo _____ hospital.", options: [{ id: "a", text: "del", correct: true }, { id: "b", text: "de la", correct: false }] },
+    { id: 6, type: "TRANSLATE", question: "Çevir:", hint: "Okuldan geliyorum", correctAnswer: "Vengo del colegio" },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Al final de la calle", options: [{ id: "a", text: "Caddenin sonunda", correct: true }, { id: "b", text: "Caddenin başında", correct: false }, { id: "c", text: "Caddede", correct: false }, { id: "d", text: "Caddeye", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Salgo _____ oficina.", options: [{ id: "a", text: "de la", correct: true }, { id: "b", text: "del", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "İşten çıkıyorum", correctAnswer: "Salgo del trabajo" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Al principio _____ película.", options: [{ id: "a", text: "de la", correct: true }, { id: "b", text: "del", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Caddenin sonunda", correctAnswer: "Al final de la calle" },
+    { id: 12, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La puerta del garaje", options: [{ id: "a", text: "Garajın kapısı", correct: true }, { id: "b", text: "Kapının garajı", correct: false }, { id: "c", text: "Garaj kapısında", correct: false }, { id: "d", text: "Garaja", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Garajın kapısı", correctAnswer: "La puerta del garaje" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Los libros _____ estudiantes.", options: [{ id: "a", text: "de los", correct: true }, { id: "b", text: "del", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Öğrencilerin kitapları", correctAnswer: "Los libros de los estudiantes" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "El final del partido", options: [{ id: "a", text: "Maçın sonu", correct: true }, { id: "b", text: "Maçın başı", correct: false }, { id: "c", text: "Maç sırasında", correct: false }, { id: "d", text: "Maça gidiyorum", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Maçın sonu", correctAnswer: "El final del partido" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Filmin başında", correctAnswer: "Al principio de la película" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Ofisten çıkıyorum", correctAnswer: "Salgo de la oficina" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hastaneden geliyorum", correctAnswer: "Vengo del hospital" },
+];

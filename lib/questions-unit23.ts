@@ -1,0 +1,98 @@
+/**
+ * LinguaFlow - A1 Ünite 23: QUERER ve GUSTAR (80 soru)
+ * Gramer: İstek ve tercih ifade etme
+ */
+
+import { Question } from "./questions";
+
+export const unit23Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Quiero' ne demek?", options: [{ id: "a", text: "Seviyorum", correct: false }, { id: "b", text: "İstiyorum", correct: true }, { id: "c", text: "Yapabilirim", correct: false }, { id: "d", text: "Zorundayım", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Me gusta' ne demek?", options: [{ id: "a", text: "İstiyorum", correct: false }, { id: "b", text: "Hoşuma gidiyor/Severim", correct: true }, { id: "c", text: "Yapabilirim", correct: false }, { id: "d", text: "Zorundayım", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Quieres' hangi kişiye ait?", options: [{ id: "a", text: "Ben", correct: false }, { id: "b", text: "Sen", correct: true }, { id: "c", text: "O", correct: false }, { id: "d", text: "Biz", correct: false }] },
+    { id: 4, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quiero comer", options: [{ id: "a", text: "Yemek istiyorum", correct: true }, { id: "b", text: "Yemek seviyorum", correct: false }, { id: "c", text: "Yemek zorundayım", correct: false }, { id: "d", text: "Yemek yapabilirim", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Te gusta' ne demek?", options: [{ id: "a", text: "Severim", correct: false }, { id: "b", text: "Seversin/Hoşuna gider", correct: true }, { id: "c", text: "Sever", correct: false }, { id: "d", text: "Severiz", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Quiere' hangi kişiye ait?", options: [{ id: "a", text: "Ben", correct: false }, { id: "b", text: "O (él/ella)", correct: true }, { id: "c", text: "Biz", correct: false }, { id: "d", text: "Sen", correct: false }] },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Me gusta bailar", options: [{ id: "a", text: "Dans etmeyi seviyorum", correct: true }, { id: "b", text: "Dans etmek istiyorum", correct: false }, { id: "c", text: "Dans edebilirim", correct: false }, { id: "d", text: "Dans ediyorum", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Comer' ne demek?", options: [{ id: "a", text: "İçmek", correct: false }, { id: "b", text: "Yemek yemek", correct: true }, { id: "c", text: "Uyumak", correct: false }, { id: "d", text: "Koşmak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "İstiyorum", correctAnswer: "Quiero" },
+    { id: 10, type: "SELECT", question: "'Quiero ir al cine' ne demek?", options: [{ id: "a", text: "Sinemayı seviyorum", correct: false }, { id: "b", text: "Sinemaya gitmek istiyorum", correct: true }, { id: "c", text: "Sinemaya gidebilirim", correct: false }, { id: "d", text: "Sinemaya gittim", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "¿Qué quieres?", options: [{ id: "a", text: "Ne istiyorsun?", correct: true }, { id: "b", text: "Ne seviyorsun?", correct: false }, { id: "c", text: "Ne yapıyorsun?", correct: false }, { id: "d", text: "Ne yapabilirsin?", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Yo _____ comer pizza.", options: [{ id: "a", text: "quiero", correct: true }, { id: "b", text: "quieres", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Severim (hoşuma gider)", correctAnswer: "Me gusta" },
+    { id: 14, type: "SELECT", question: "'No quiero' ne demek?", options: [{ id: "a", text: "Sevmiyorum", correct: false }, { id: "b", text: "İstemiyorum", correct: true }, { id: "c", text: "Yapamıyorum", correct: false }, { id: "d", text: "Zorunda değilim", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Yemek istiyorum", correctAnswer: "Quiero comer" },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "_____ gusta nadar.", options: [{ id: "a", text: "Me", correct: true }, { id: "b", text: "Te", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "No me gusta estudiar", options: [{ id: "a", text: "Çalışmayı sevmiyorum", correct: true }, { id: "b", text: "Çalışmak istemiyorum", correct: false }, { id: "c", text: "Çalışamıyorum", correct: false }, { id: "d", text: "Çalışmıyorum", correct: false }] },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Ella _____ ir a la playa.", options: [{ id: "a", text: "quiere", correct: true }, { id: "b", text: "quiero", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Sinemaya gitmek istiyorum", correctAnswer: "Quiero ir al cine" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Dans etmeyi seviyorum", correctAnswer: "Me gusta bailar" },
+];
+
+export const unit23Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Queremos' hangi kişiye ait?", options: [{ id: "a", text: "Ben", correct: false }, { id: "b", text: "Biz", correct: true }, { id: "c", text: "Onlar", correct: false }, { id: "d", text: "Sen", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Nos gusta' ne demek?", options: [{ id: "a", text: "Severim", correct: false }, { id: "b", text: "Severiz/Hoşumuza gider", correct: true }, { id: "c", text: "Seversiniz", correct: false }, { id: "d", text: "Severler", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Le gusta' ne demek?", options: [{ id: "a", text: "Benim hoşuma gider", correct: false }, { id: "b", text: "Onun hoşuna gider", correct: true }, { id: "c", text: "Bizim hoşumuza gider", correct: false }, { id: "d", text: "Sizin hoşunuza gider", correct: false }] },
+    { id: 4, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Queremos jugar", options: [{ id: "a", text: "Oynamak istiyoruz", correct: true }, { id: "b", text: "Oynamayı seviyoruz", correct: false }, { id: "c", text: "Oynayabiliriz", correct: false }, { id: "d", text: "Oynuyoruz", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Quieren' hangi kişiye ait?", options: [{ id: "a", text: "Ben", correct: false }, { id: "b", text: "Onlar (ellos)", correct: true }, { id: "c", text: "Biz", correct: false }, { id: "d", text: "O", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Les gusta' ne demek?", options: [{ id: "a", text: "Severim", correct: false }, { id: "b", text: "Onların hoşuna gider", correct: true }, { id: "c", text: "Bizim hoşumuza gider", correct: false }, { id: "d", text: "Senin hoşuna gider", correct: false }] },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le gusta leer", options: [{ id: "a", text: "Onun okumayı sevmesi", correct: true }, { id: "b", text: "Benim okumayı sevmem", correct: false }, { id: "c", text: "Senin okumayı sevmen", correct: false }, { id: "d", text: "Bizim okumayı sevmemiz", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Jugar' ne demek?", options: [{ id: "a", text: "Koşmak", correct: false }, { id: "b", text: "Oynamak", correct: true }, { id: "c", text: "Yüzmek", correct: false }, { id: "d", text: "Dans etmek", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "İstiyoruz", correctAnswer: "Queremos" },
+    { id: 10, type: "SELECT", question: "'¿Te gusta la música?' ne demek?", options: [{ id: "a", text: "Müzik istiyor musun?", correct: false }, { id: "b", text: "Müziği sever misin?", correct: true }, { id: "c", text: "Müzik dinler misin?", correct: false }, { id: "d", text: "Müzik çalar mısın?", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "¿Quieres ir conmigo?", options: [{ id: "a", text: "Benimle gelmek ister misin?", correct: true }, { id: "b", text: "Benimle gelmeli misin?", correct: false }, { id: "c", text: "Benimle gelebilir misin?", correct: false }, { id: "d", text: "Benimle geliyor musun?", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Nosotros _____ viajar.", options: [{ id: "a", text: "queremos", correct: true }, { id: "b", text: "quieren", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Hoşlarına gider (onların)", correctAnswer: "Les gusta" },
+    { id: 14, type: "SELECT", question: "'Viajar' ne demek?", options: [{ id: "a", text: "Yüzmek", correct: false }, { id: "b", text: "Seyahat etmek", correct: true }, { id: "c", text: "Koşmak", correct: false }, { id: "d", text: "Okumak", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Oynamak istiyoruz", correctAnswer: "Queremos jugar" },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "A María _____ gusta cocinar.", options: [{ id: "a", text: "le", correct: true }, { id: "b", text: "me", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Nos gusta viajar", options: [{ id: "a", text: "Seyahat etmeyi severiz", correct: true }, { id: "b", text: "Seyahat etmek istiyoruz", correct: false }, { id: "c", text: "Seyahat edebiliriz", correct: false }, { id: "d", text: "Seyahat ediyoruz", correct: false }] },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Ellos _____ comprar un coche.", options: [{ id: "a", text: "quieren", correct: true }, { id: "b", text: "queremos", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Benimle gelmek ister misin?", correctAnswer: "¿Quieres ir conmigo?" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Seyahat etmeyi severiz", correctAnswer: "Nos gusta viajar" },
+];
+
+export const unit23Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Me gustan' ne zaman kullanılır?", options: [{ id: "a", text: "Tekil isimlerle", correct: false }, { id: "b", text: "Çoğul isimlerle", correct: true }, { id: "c", text: "Fiillerle", correct: false }, { id: "d", text: "Her zaman", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Me gustan los libros' ne demek?", options: [{ id: "a", text: "Kitap istiyorum", correct: false }, { id: "b", text: "Kitapları severim", correct: true }, { id: "c", text: "Kitap okuyorum", correct: false }, { id: "d", text: "Kitaplarım var", correct: false }] },
+    { id: 3, type: "SELECT", question: "'La comida' ne demek?", options: [{ id: "a", text: "İçecek", correct: false }, { id: "b", text: "Yemek", correct: true }, { id: "c", text: "Tatlı", correct: false }, { id: "d", text: "Meyve", correct: false }] },
+    { id: 4, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Me gustan las frutas", options: [{ id: "a", text: "Meyveleri severim", correct: true }, { id: "b", text: "Meyve istiyorum", correct: false }, { id: "c", text: "Meyvelerim var", correct: false }, { id: "d", text: "Meyve yiyorum", correct: false }] },
+    { id: 5, type: "SELECT", question: "'La película' ne demek?", options: [{ id: "a", text: "Kitap", correct: false }, { id: "b", text: "Film", correct: true }, { id: "c", text: "Müzik", correct: false }, { id: "d", text: "Oyun", correct: false }] },
+    { id: 6, type: "SELECT", question: "'El deporte' ne demek?", options: [{ id: "a", text: "Müzik", correct: false }, { id: "b", text: "Spor", correct: true }, { id: "c", text: "Film", correct: false }, { id: "d", text: "Oyun", correct: false }] },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "¿Te gusta la comida española?", options: [{ id: "a", text: "İspanyol yemeklerini sever misin?", correct: true }, { id: "b", text: "İspanyol yemekleri ister misin?", correct: false }, { id: "c", text: "İspanyol yemekleri yer misin?", correct: false }, { id: "d", text: "İspanyol yemekleri var mı?", correct: false }] },
+    { id: 8, type: "SELECT", question: "'¿Te gustan las películas?' ne demek?", options: [{ id: "a", text: "Film ister misin?", correct: false }, { id: "b", text: "Filmleri sever misin?", correct: true }, { id: "c", text: "Film izler misin?", correct: false }, { id: "d", text: "Filmlerin var mı?", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Severim (çoğul)", correctAnswer: "Me gustan" },
+    { id: 10, type: "SELECT", question: "'Me encanta' ne demek?", options: [{ id: "a", text: "Severim", correct: false }, { id: "b", text: "Bayılırım/Çok severim", correct: true }, { id: "c", text: "İsterim", correct: false }, { id: "d", text: "Yaparım", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Me encanta la música", options: [{ id: "a", text: "Müziğe bayılırım", correct: true }, { id: "b", text: "Müzik severim", correct: false }, { id: "c", text: "Müzik istiyorum", correct: false }, { id: "d", text: "Müzik dinliyorum", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Me _____ los animales.", options: [{ id: "a", text: "gustan", correct: true }, { id: "b", text: "gusta", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bayılırım", correctAnswer: "Me encanta" },
+    { id: 14, type: "SELECT", question: "'Me encantan' ne zaman kullanılır?", options: [{ id: "a", text: "Tekil isimlerle", correct: false }, { id: "b", text: "Çoğul isimlerle", correct: true }, { id: "c", text: "Fiillerle", correct: false }, { id: "d", text: "Sayılarla", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kitapları severim", correctAnswer: "Me gustan los libros" },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "Me _____ el chocolate.", options: [{ id: "a", text: "encanta", correct: true }, { id: "b", text: "encantan", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Me encantan los perros", options: [{ id: "a", text: "Köpeklere bayılırım", correct: true }, { id: "b", text: "Köpekleri severim", correct: false }, { id: "c", text: "Köpeklerim var", correct: false }, { id: "d", text: "Köpek istiyorum", correct: false }] },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "¿Te _____ el deporte?", options: [{ id: "a", text: "gusta", correct: true }, { id: "b", text: "gustan", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Müziğe bayılırım", correctAnswer: "Me encanta la música" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "İspanyol yemeklerini sever misin?", correctAnswer: "¿Te gusta la comida española?" },
+];
+
+export const unit23Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Prefiero' ne demek?", options: [{ id: "a", text: "Seviyorum", correct: false }, { id: "b", text: "Tercih ediyorum", correct: true }, { id: "c", text: "İstiyorum", correct: false }, { id: "d", text: "Yapabilirim", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Prefieres' hangi kişiye ait?", options: [{ id: "a", text: "Ben", correct: false }, { id: "b", text: "Sen", correct: true }, { id: "c", text: "O", correct: false }, { id: "d", text: "Biz", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Odio' ne demek?", options: [{ id: "a", text: "Seviyorum", correct: false }, { id: "b", text: "Nefret ediyorum", correct: true }, { id: "c", text: "İstiyorum", correct: false }, { id: "d", text: "Tercih ediyorum", correct: false }] },
+    { id: 4, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Prefiero el café", options: [{ id: "a", text: "Kahveyi tercih ederim", correct: true }, { id: "b", text: "Kahve severim", correct: false }, { id: "c", text: "Kahve istiyorum", correct: false }, { id: "d", text: "Kahve içiyorum", correct: false }] },
+    { id: 5, type: "SELECT", question: "'El té' ne demek?", options: [{ id: "a", text: "Kahve", correct: false }, { id: "b", text: "Çay", correct: true }, { id: "c", text: "Su", correct: false }, { id: "d", text: "Süt", correct: false }] },
+    { id: 6, type: "SELECT", question: "'O' İspanyolca'da ne demek?", options: [{ id: "a", text: "Ve", correct: false }, { id: "b", text: "Veya", correct: true }, { id: "c", text: "Ama", correct: false }, { id: "d", text: "Çünkü", correct: false }] },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "¿Prefieres té o café?", options: [{ id: "a", text: "Çay mı kahve mi tercih edersin?", correct: true }, { id: "b", text: "Çay ya da kahve ister misin?", correct: false }, { id: "c", text: "Çay ve kahve sever misin?", correct: false }, { id: "d", text: "Çay mı kahve mi?", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Pero' ne demek?", options: [{ id: "a", text: "Ve", correct: false }, { id: "b", text: "Ama", correct: true }, { id: "c", text: "Veya", correct: false }, { id: "d", text: "Çünkü", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Tercih ediyorum", correctAnswer: "Prefiero" },
+    { id: 10, type: "SELECT", question: "'Me gusta el fútbol, pero prefiero el baloncesto' ne demek?", options: [{ id: "a", text: "Futbolu severim ama basketbolu tercih ederim", correct: true }, { id: "b", text: "Futbol ve basketbolu severim", correct: false }, { id: "c", text: "Futbol ya da basketbolu severim", correct: false }, { id: "d", text: "Futbolu tercih ederim ama basketbolu severim", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Odio levantarme temprano", options: [{ id: "a", text: "Erken kalkmaktan nefret ederim", correct: true }, { id: "b", text: "Erken kalkmayı severim", correct: false }, { id: "c", text: "Erken kalkamam", correct: false }, { id: "d", text: "Erken kalkmak zorundayım", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Yo _____ la playa, pero mi hermano prefiere la montaña.", options: [{ id: "a", text: "prefiero", correct: true }, { id: "b", text: "prefieres", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Nefret ediyorum", correctAnswer: "Odio" },
+    { id: 14, type: "SELECT", question: "'También' ne demek?", options: [{ id: "a", text: "Ama", correct: false }, { id: "b", text: "Ayrıca/Da", correct: true }, { id: "c", text: "Hiç", correct: false }, { id: "d", text: "Sadece", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kahveyi tercih ederim", correctAnswer: "Prefiero el café" },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "¿_____ té o café?", options: [{ id: "a", text: "Prefieres", correct: true }, { id: "b", text: "Prefiero", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Me gusta la pizza y también la pasta", options: [{ id: "a", text: "Pizzayı severim ve ayrıca makarnayı da", correct: true }, { id: "b", text: "Pizza ve makarna isterim", correct: false }, { id: "c", text: "Pizza ya da makarna severim", correct: false }, { id: "d", text: "Pizza ama makarna değil", correct: false }] },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Me gusta el chocolate, _____ no me gusta el café.", options: [{ id: "a", text: "pero", correct: true }, { id: "b", text: "y", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Çay mı kahve mi tercih edersin?", correctAnswer: "¿Prefieres té o café?" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Futbolu severim ama basketbolu tercih ederim", correctAnswer: "Me gusta el fútbol, pero prefiero el baloncesto" },
+];

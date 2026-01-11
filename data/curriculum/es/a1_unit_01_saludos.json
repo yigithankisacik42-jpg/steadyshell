@@ -1,0 +1,214 @@
+{
+    "unit_id": 1,
+    "unit_title": "Ünite 1: Selamlaşma ve Vedalaşma",
+    "unit_title_native": "Saludos y Despedidas",
+    "level": "A1",
+    "lecture_note": "<h3>🇪🇸 Selamlaşma ve Vedalaşma</h3><p>İspanyolcada selamlaşma, günün saatine göre değişir. Sabah <strong>Buenos días</strong> (Günaydın), öğleden sonra <strong>Buenas tardes</strong> (Tünaydın) ve gece <strong>Buenas noches</strong> (İyi geceler) kullanılır.</p><p>Genel bir merhaba için <strong>¡Hola!</strong> her zaman geçerlidir. Vedalaşmada ise <strong>Adiós</strong> (Hoşça kal), <strong>Hasta luego</strong> (Görüşürüz) ve <strong>Hasta mañana</strong> (Yarın görüşürüz) en yaygın kalıplardır.</p><ul><li><strong>Nasılsın?</strong> → ¿Cómo estás? (samimi) / ¿Cómo está usted? (resmi)</li><li><strong>İyiyim, teşekkürler</strong> → Bien, gracias</li><li><strong>Memnun oldum</strong> → Mucho gusto / Encantado(a)</li></ul>",
+    "questions": [
+        {
+            "id": 1,
+            "type": "multiple_choice",
+            "difficulty": "easy",
+            "question_text": "'Merhaba' kelimesinin İspanyolcası nedir?",
+            "options": [
+                "Hola",
+                "Adiós",
+                "Gracias",
+                "Por favor"
+            ],
+            "correct_answer": "Hola",
+            "explanation": "'Hola' İspanyolcada 'Merhaba' anlamına gelir ve günün her saatinde kullanılabilir."
+        },
+        {
+            "id": 2,
+            "type": "multiple_choice",
+            "difficulty": "easy",
+            "question_text": "'Adiós' ne demektir?",
+            "options": [
+                "Merhaba",
+                "Teşekkürler",
+                "Hoşça kal",
+                "Lütfen"
+            ],
+            "correct_answer": "Hoşça kal",
+            "explanation": "'Adiós' vedalaşmak için kullanılır ve 'Hoşça kal' anlamına gelir."
+        },
+        {
+            "id": 3,
+            "type": "multiple_choice",
+            "difficulty": "easy",
+            "question_text": "Sabah birini selamlamak için hangi ifade kullanılır?",
+            "options": [
+                "Buenas noches",
+                "Buenos días",
+                "Buenas tardes",
+                "Hasta luego"
+            ],
+            "correct_answer": "Buenos días",
+            "explanation": "'Buenos días' sabah vakti (06:00-12:00) kullanılan 'Günaydın' selamlamasıdır."
+        },
+        {
+            "id": 4,
+            "type": "multiple_choice",
+            "difficulty": "easy",
+            "question_text": "'Gracias' kelimesi ne anlama gelir?",
+            "options": [
+                "Lütfen",
+                "Merhaba",
+                "Teşekkürler",
+                "Hoşça kal"
+            ],
+            "correct_answer": "Teşekkürler",
+            "explanation": "'Gracias' teşekkür etmek için kullanılır. Çok teşekkür etmek için 'Muchas gracias' denir."
+        },
+        {
+            "id": 5,
+            "type": "multiple_choice",
+            "difficulty": "easy",
+            "question_text": "'¿Cómo estás?' sorusunun anlamı nedir?",
+            "options": [
+                "Adın ne?",
+                "Nerelisin?",
+                "Nasılsın?",
+                "Kaç yaşındasın?"
+            ],
+            "correct_answer": "Nasılsın?",
+            "explanation": "'¿Cómo estás?' samimi ortamlarda 'Nasılsın?' anlamında kullanılır. Resmi durumlarda '¿Cómo está usted?' denir."
+        },
+        {
+            "id": 6,
+            "type": "fill_in_blank",
+            "difficulty": "medium",
+            "question_text": "_______ días, ¿cómo estás?",
+            "options": [
+                "Buenos",
+                "Buenas",
+                "Bien",
+                "Hola"
+            ],
+            "correct_answer": "Buenos",
+            "explanation": "'Buenos días' kalıbında 'Buenos' kullanılır çünkü 'día' (gün) eril bir isimdir."
+        },
+        {
+            "id": 7,
+            "type": "fill_in_blank",
+            "difficulty": "medium",
+            "question_text": "Buenas _______, señora. (Öğleden sonra selamlaşma)",
+            "options": [
+                "días",
+                "noches",
+                "tardes",
+                "mañana"
+            ],
+            "correct_answer": "tardes",
+            "explanation": "'Buenas tardes' öğleden sonra (12:00-20:00) kullanılan 'Tünaydın/İyi günler' selamlamasıdır."
+        },
+        {
+            "id": 8,
+            "type": "multiple_choice",
+            "difficulty": "medium",
+            "question_text": "Birisi sana 'Gracias' dediğinde ne cevap verirsin?",
+            "options": [
+                "Hola",
+                "Adiós",
+                "De nada",
+                "Buenos días"
+            ],
+            "correct_answer": "De nada",
+            "explanation": "'De nada' (Bir şey değil/Rica ederim) teşekküre verilen standart cevaptır."
+        },
+        {
+            "id": 9,
+            "type": "fill_in_blank",
+            "difficulty": "medium",
+            "question_text": "Hasta _______, nos vemos mañana. (Yarın görüşürüz)",
+            "options": [
+                "luego",
+                "mañana",
+                "pronto",
+                "siempre"
+            ],
+            "correct_answer": "mañana",
+            "explanation": "'Hasta mañana' 'Yarın görüşürüz' anlamına gelir. 'Mañana' yarın demektir."
+        },
+        {
+            "id": 10,
+            "type": "listening_match",
+            "difficulty": "medium",
+            "audio_transcript": "¡Hola! Buenos días. ¿Cómo estás? Muy bien, gracias.",
+            "question_text": "Diyalogda kişi nasıl olduğunu sorduğunda cevap ne?",
+            "options": [
+                "Mal, gracias",
+                "Muy bien, gracias",
+                "No sé",
+                "Adiós"
+            ],
+            "correct_answer": "Muy bien, gracias",
+            "explanation": "'Muy bien, gracias' (Çok iyiyim, teşekkürler) en yaygın 'Nasılsın?' cevabıdır."
+        },
+        {
+            "id": 11,
+            "type": "translate_to_target",
+            "difficulty": "hard",
+            "question_text": "İyi geceler, yarın görüşürüz.",
+            "correct_answer": "Buenas noches, hasta mañana",
+            "accepted_answers": [
+                "Buenas noches, hasta mañana.",
+                "Buenas noches. Hasta mañana."
+            ],
+            "explanation": "'Buenas noches' gece selamlaması, 'hasta mañana' ise 'yarın görüşürüz' anlamına gelir."
+        },
+        {
+            "id": 12,
+            "type": "translate_to_target",
+            "difficulty": "hard",
+            "question_text": "Merhaba, nasılsın?",
+            "correct_answer": "¡Hola! ¿Cómo estás?",
+            "accepted_answers": [
+                "Hola, ¿cómo estás?",
+                "¡Hola! ¿Cómo estás?",
+                "Hola ¿cómo estás?"
+            ],
+            "explanation": "'¿Cómo estás?' samimi ortamlarda kullanılır. Soru işareti hem başta (ters) hem sonda kullanılır."
+        },
+        {
+            "id": 13,
+            "type": "translate_to_native",
+            "difficulty": "hard",
+            "question_text": "Mucho gusto, me llamo Carlos. ¿Y tú?",
+            "correct_answer": "Memnun oldum, benim adım Carlos. Ya sen?",
+            "accepted_answers": [
+                "Memnun oldum, adım Carlos. Sen?",
+                "Tanıştığıma memnun oldum, benim adım Carlos. Ya sen?"
+            ],
+            "explanation": "'Mucho gusto' tanışmalarda kullanılır. 'Me llamo' kendini tanıtmak için kullanılan kalıptır."
+        },
+        {
+            "id": 14,
+            "type": "translate_to_target",
+            "difficulty": "hard",
+            "question_text": "Çok teşekkür ederim, görüşürüz!",
+            "correct_answer": "¡Muchas gracias, hasta luego!",
+            "accepted_answers": [
+                "Muchas gracias, hasta luego",
+                "¡Muchas gracias! ¡Hasta luego!"
+            ],
+            "explanation": "'Muchas gracias' çok teşekkürler, 'hasta luego' ise 'görüşürüz' veya 'sonra görüşürüz' anlamındadır."
+        },
+        {
+            "id": 15,
+            "type": "listening_match",
+            "difficulty": "hard",
+            "audio_transcript": "Buenos días, señor García. ¿Cómo está usted? Muy bien, gracias. ¿Y usted? Bien también, gracias. Hasta luego.",
+            "question_text": "Bu diyalog hangi ortamda geçiyor olabilir?",
+            "options": [
+                "Arkadaşlar arasında",
+                "Resmi bir ortamda",
+                "Aile içinde",
+                "Çocuklar arasında"
+            ],
+            "correct_answer": "Resmi bir ortamda",
+            "explanation": "'Usted' ve 'señor' kullanımı resmi bir ortama işaret eder. Samimi ortamlarda 'tú' ve isimler kullanılır."
+        }
+    ]
+}
