@@ -196,7 +196,7 @@ export default function OnboardingPage() {
                     <div className="text-center mb-6">
                         <div className="w-28 h-28 mx-auto mb-4 relative animate-bounce-slow">
                             <Image
-                                src="/mascot.png"
+                                src="/mascot_v2.png"
                                 alt="Shelby"
                                 width={112}
                                 height={112}

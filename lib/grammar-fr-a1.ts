@@ -575,15 +575,53 @@ const unit311Grammar: UnitGrammar = {
 // ===== ÜNİTE 312: GİYSİLER =====
 const unit312Grammar: UnitGrammar = {
     unitId: 312,
-    title: "Porter Fiili (Giymek)",
+    title: "Porter Fiili ve Giysiler",
     rules: [
         {
-            id: "fr-a1-porter",
-            title: "👕 Ne giyiyorsun?",
-            explanation: "**Porter** düzenli bir -er fiilidir.\nJe porte, Tu portes, Il porte...",
+            id: "fr-a1-porter-conjugation",
+            title: "🧥 Porter Fiil Çekimi (Şimdiki Zaman)",
+            explanation: "**Porter** düzenli bir -er fiilidir. Kök: PORT-\n\nÖnemli: Yazılanların çoğu OKUNMAZ!\n\n• Je **porte** (Jö Port) → Giyiyorum\n• Tu **portes** (Tü Port) → Giyiyorsun\n• Il/Elle **porte** (İl Port) → Giyiyor\n• Nous **portons** (Nu Porton) → Giyiyoruz\n• Vous **portez** (Vu Porte) → Giyiyorsunuz\n• Ils/Elles **portent** (İl Port) → Giyiyorlar\n\n⚠️ **BÜYÜK UYARI (ILS PORTENT):**\nÇoğul eki olan -ENT fiillerde ASLA OKUNMAZ!\nSakın 'Portent' deme! Sadece 'Port' de.",
             examples: [
-                { fr: "Je porte un manteau.", tr: "Bir palto giyiyorum." },
-                { fr: "Elle porte une robe rouge.", tr: "Kırmızı bir elbise giyiyor." }
+                { fr: "Je porte un pantalon.", tr: "Pantolon giyiyorum." },
+                { fr: "Tu portes quoi?", tr: "Ne giyiyorsun?" },
+                { fr: "Ils portent des lunettes.", tr: "Gözlük takıyorlar." }
+            ]
+        },
+        {
+            id: "fr-a1-porter-meanings",
+            title: "👜 Porter'ın Anlam Genişliği",
+            explanation: "İspanyolcadaki 'Llevar' gibi, Porter de birden fazla anlama gelir:\n\n👕 **Giymek:**\n• Je porte un pantalon. (Pantolon giyiyorum.)\n\n🧳 **Taşımak:**\n• Je porte une valise. (Bavul taşıyorum.)\n\n👓 **Takmak (Gözlük/Parfüm):**\n• Je porte des lunettes. (Gözlük takıyorum.)\n• Je porte du parfum. (Parfüm sıkıyorum.)",
+            examples: [
+                { fr: "Je porte un sac.", tr: "Çanta taşıyorum." },
+                { fr: "Elle porte des boucles d'oreilles.", tr: "Küpe takıyor." }
+            ]
+        },
+        {
+            id: "fr-a1-clothes-vocabulary",
+            title: "👗 Gardırop Sözlüğü",
+            explanation: "**ÜST GİYİM:**\n• Une chemise (Şömiz) → Gömlek (Dişi)\n• Un t-shirt → Tişört (Erkek)\n• Un pull (Pül) → Kazak (Erkek)\n• Une robe → Elbise (Dişi)\n• Un manteau (Manto) → Mont/Kaban (Erkek)\n\n**ALT GİYİM:**\n• Un pantalon → Pantolon (Erkek)\n• Une jupe (Jüp) → Etek (Dişi)\n• Un jean (Cin) → Kot pantolon (Erkek)\n\n**AKSESUARLAR:**\n• Des chaussures (Şossür) → Ayakkabılar (Çoğul)\n• Des lunettes (Lünet) → Gözlük (Çoğul)\n• Un chapeau (Şapo) → Şapka (Erkek)",
+            examples: [
+                { fr: "Je porte une chemise blanche.", tr: "Beyaz gömlek giyiyorum." },
+                { fr: "Il porte un jean et un t-shirt.", tr: "Kot ve tişört giyiyor." }
+            ]
+        },
+        {
+            id: "fr-a1-clothes-colors",
+            title: "🎨 Renklerle Kombin Yapmak",
+            explanation: "Renk sıfatı, giysinin cinsiyetine göre değişir:\n\n🚹 **Erkek giysi:**\n• Un pantalon **noir** (Siyah pantolon)\n\n🚺 **Dişi giysi:**\n• Une chemise **noire** (+e eklenir)\n\n👯 **Çoğul giysi:**\n• Des chaussures **noires** (+es eklenir)\n\n💡 Okunuş genellikle aynı kalır!",
+            examples: [
+                { fr: "Je porte un pull rouge.", tr: "Kırmızı kazak giyiyorum." },
+                { fr: "Elle porte une jupe bleue.", tr: "Mavi etek giyiyor." },
+                { fr: "Ils portent des chaussures blanches.", tr: "Beyaz ayakkabılar giyiyorlar." }
+            ]
+        },
+        {
+            id: "fr-a1-clothes-questions",
+            title: "🗣️ 'Ne Giyiyorsun?' Soruları",
+            explanation: "Birinin stilini sormak için:\n\n**Resmi:**\n• Qu'est-ce que tu portes? (Kes-kı tü port?)\n→ Ne giyiyorsun?\n\n**Sokak Ağzı:**\n• Tu portes quoi? (Tü port kua?)\n→ Ne giyiyorsun?\n\n**Cevap:**\n• Je porte... (Jö port...)",
+            examples: [
+                { fr: "Qu'est-ce que tu portes aujourd'hui?", tr: "Bugün ne giyiyorsun?" },
+                { fr: "Je porte un jean et une chemise.", tr: "Kot ve gömlek giyiyorum." }
             ]
         }
     ]

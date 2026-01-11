@@ -61,7 +61,7 @@ export const Sidebar = ({ className }: { className?: string }) => {
       <Link href="/learn">
         <div className="pt-8 pl-4 pb-4 flex items-center gap-x-2">
           <Image
-            src="/mascot.png"
+            src="/mascot_v2.png"
             alt="Shelby"
             width={36}
             height={36}

@@ -16,7 +16,7 @@ export default function Home() {
                     {/* Turtle Logo */}
                     <div className="w-10 h-10 relative">
                         <Image
-                            src="/mascot.png"
+                            src="/mascot_v2.png"
                             alt="Shelby"
                             width={40}
                             height={40}
@@ -38,7 +38,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-br from-violet-200 to-purple-200 rounded-full animate-pulse opacity-40"></div>
                     <div className="z-10 bg-white border-2 border-slate-100 p-8 rounded-3xl shadow-2xl shadow-violet-200/50 rotate-3 transition-transform hover:rotate-0 duration-500">
                         <Image
-                            src="/mascot.png"
+                            src="/mascot_v2.png"
                             alt="Shelby - SteadyShell Mascot"
                             width={180}
                             height={180}
@@ -59,14 +59,8 @@ export default function Home() {
                         Sıkıcı ders kitaplarını unut. Oyun oynar gibi İngilizce, İspanyolca ve Fransızca öğren.
                     </p>
 
-                    {/* Early Access Banner */}
-                    {isEarlyAccess && (
-                        <div className="w-full max-w-[350px] bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-3 text-center">
-                            <p className="text-sm font-bold text-amber-700">
-                                🎉 Erken Erişim döneminde tüm özellikler ücretsiz!
-                            </p>
-                        </div>
-                    )}
+
+                    {/* Early Access Banner REMOVED */}
 
                     <div className="flex flex-col gap-3 w-full max-w-[350px]">
                         {/* BAŞLA BUTONU */}

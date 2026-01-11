@@ -98,6 +98,7 @@ export const frA1Videos: UnitVideo[] = [
     { unitId: 309, youtubeId: "HBBjtOEstaM", title: "Evimiz", level: "A1" },
     { unitId: 310, youtubeId: "7Xr017HFkig", title: "Sınıfta", level: "A1" },
     { unitId: 311, youtubeId: "1ngixAv1Pqo", title: "Vücudumuz", level: "A1" },
+    { unitId: 312, youtubeId: "DdPzOwdTNiQ", title: "Giysiler", level: "A1" },
 ];
 
 // Fransızca A2 Videoları

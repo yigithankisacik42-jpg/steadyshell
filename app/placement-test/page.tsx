@@ -627,7 +627,7 @@ export default function PlacementTestPage() {
                     <div className="text-center mb-8">
                         <div className="w-32 h-32 mx-auto mb-4 relative">
                             <Image
-                                src="/mascot.png"
+                                src="/mascot_v2.png"
                                 alt="SteadyShell Maskot"
                                 width={128}
                                 height={128}
@@ -741,7 +741,7 @@ export default function PlacementTestPage() {
                     {/* Maskot Mesajı */}
                     <div className="bg-violet-50 rounded-xl p-4 mb-6 flex items-start gap-3">
                         <Image
-                            src="/mascot.png"
+                            src="/mascot_v2.png"
                             alt="Shelby"
                             width={48}
                             height={48}
