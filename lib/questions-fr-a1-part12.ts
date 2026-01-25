@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 326-327
+import { Question } from "./questions";
+
+// ===== ÜNİTE 326: TEKNOLOJİ =====
+export const unit326Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'L'ordinateur' ne demek?", options: [{ id: "a", text: "Bilgisayar", correct: true }, { id: "b", text: "Telefon", correct: false }, { id: "c", text: "Televizyon", correct: false }, { id: "d", text: "Radyo", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le téléphone portable' ne demek?", options: [{ id: "a", text: "Cep telefonu", correct: true }, { id: "b", text: "Sabit telefon", correct: false }, { id: "c", text: "Tablet", correct: false }, { id: "d", text: "Bilgisayar", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La tablette", options: [{ id: "a", text: "Tablet", correct: true }, { id: "b", text: "Masa", correct: false }, { id: "c", text: "Telefon", correct: false }, { id: "d", text: "Ekran", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'écran' ne demek?", options: [{ id: "a", text: "Ekran", correct: true }, { id: "b", text: "Klavye", correct: false }, { id: "c", text: "Fare", correct: false }, { id: "d", text: "Kamera", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La souris", options: [{ id: "a", text: "Fare (Mouse)", correct: true }, { id: "b", text: "Klavye", correct: false }, { id: "c", text: "Kedi", correct: false }, { id: "d", text: "Ekran", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le clavier' ne demek?", options: [{ id: "a", text: "Klavye", correct: true }, { id: "b", text: "Ekran", correct: false }, { id: "c", text: "Fare", correct: false }, { id: "d", text: "Tuş", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Internet' ne demek?", options: [{ id: "a", text: "İnternet", correct: true }, { id: "b", text: "Ağ", correct: false }, { id: "c", text: "Site", correct: false }, { id: "d", text: "E-posta", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le site web' ne demek?", options: [{ id: "a", text: "Web sitesi", correct: true }, { id: "b", text: "İnternet", correct: false }, { id: "c", text: "Sayfa", correct: false }, { id: "d", text: "Adres", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bilgisayarım çalışmıyor", correctAnswer: "Mon ordinateur ne fonctionne pas" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'utilise ma ___.", options: [{ id: "a", text: "souris", correct: true }, { id: "b", text: "écran", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Envoyer un email", options: [{ id: "a", text: "E-posta göndermek", correct: true }, { id: "b", text: "E-posta almak", correct: false }, { id: "c", text: "E-posta okumak", correct: false }, { id: "d", text: "E-posta yazmak", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le message' ne demek?", options: [{ id: "a", text: "Mesaj", correct: true }, { id: "b", text: "Mektup", correct: false }, { id: "c", text: "Not", correct: false }, { id: "d", text: "Kağıt", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Telefon numaran nedir?", correctAnswer: "Quel est ton numéro de téléphone?" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il tape sur le ___.", options: [{ id: "a", text: "clavier", correct: true }, { id: "b", text: "souris", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "İnternette sörf yapıyorum", correctAnswer: "Je surfe sur internet" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cliquer", options: [{ id: "a", text: "Tıklamak", correct: true }, { id: "b", text: "Yazmak", correct: false }, { id: "c", text: "Bakmak", correct: false }, { id: "d", text: "Açmak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai acheté une nouvelle ___.", options: [{ id: "a", text: "tablette", correct: true }, { id: "b", text: "ordinateur", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Ekran kırık", correctAnswer: "L'écran est cassé" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Visitez notre ___ web.", options: [{ id: "a", text: "site", correct: true }, { id: "b", text: "internet", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Teknoloji terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes technologiques!" }
+];
+
+export const unit326Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le mot de passe' ne demek?", options: [{ id: "a", text: "Şifre", correct: true }, { id: "b", text: "Kullanıcı adı", correct: false }, { id: "c", text: "Kod", correct: false }, { id: "d", text: "Anahtar", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'identifiant' ne demek?", options: [{ id: "a", text: "Kullanıcı adı", correct: true }, { id: "b", text: "Şifre", correct: false }, { id: "c", text: "Kimlik", correct: false }, { id: "d", text: "Adres", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Se connecter", options: [{ id: "a", text: "Bağlanmak/Giriş yapmak", correct: true }, { id: "b", text: "Çıkış yapmak", correct: false }, { id: "c", text: "Kayıt olmak", correct: false }, { id: "d", text: "İptal etmek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Se déconnecter' ne demek?", options: [{ id: "a", text: "Çıkış yapmak/Bağlantıyı kesmek", correct: true }, { id: "b", text: "Bağlanmak", correct: false }, { id: "c", text: "Girmek", correct: false }, { id: "d", text: "Açmak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Télécharger", options: [{ id: "a", text: "İndirmek", correct: true }, { id: "b", text: "Yüklemek", correct: false }, { id: "c", text: "Silmek", correct: false }, { id: "d", text: "Kaydetmek", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Enregistrer' (dosya) ne demek?", options: [{ id: "a", text: "Kaydetmek", correct: true }, { id: "b", text: "Silmek", correct: false }, { id: "c", text: "Açmak", correct: false }, { id: "d", text: "Kapatmak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Supprimer' ne demek?", options: [{ id: "a", text: "Silmek", correct: true }, { id: "b", text: "Ekleme", correct: false }, { id: "c", text: "Kaydetmek", correct: false }, { id: "d", text: "Kopyalamak", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Imprimer' ne demek?", options: [{ id: "a", text: "Yazdırmak", correct: true }, { id: "b", text: "Taramak", correct: false }, { id: "c", text: "Okumak", correct: false }, { id: "d", text: "Yazmak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Şifremi unuttum", correctAnswer: "J'ai oublié mon mot de passe" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je veux ___ ce fichier.", options: [{ id: "a", text: "télécharger", correct: true }, { id: "b", text: "internet", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le réseau social", options: [{ id: "a", text: "Sosyal ağ", correct: true }, { id: "b", text: "İnternet", correct: false }, { id: "c", text: "Telefon", correct: false }, { id: "d", text: "Bilgisayar", correct: false }] },
+    { id: 12, type: "SELECT", question: "'L'application' ne demek?", options: [{ id: "a", text: "Uygulama", correct: true }, { id: "b", text: "Program", correct: false }, { id: "c", text: "Oyun", correct: false }, { id: "d", text: "Dosya", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Fotoğrafı kaydediyorum", correctAnswer: "J'enregistre la photo" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut se ___.", options: [{ id: "a", text: "connecter", correct: true }, { id: "b", text: "connexion", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Belgeyi yazdırıyorum", correctAnswer: "J'imprime le document" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Envoyer un message", options: [{ id: "a", text: "Mesaj göndermek", correct: true }, { id: "b", text: "Mesaj almak", correct: false }, { id: "c", text: "Mesaj silmek", correct: false }, { id: "d", text: "Mesaj okumak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette ___ est utile.", options: [{ id: "a", text: "application", correct: true }, { id: "b", text: "mot de passe", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Dosyayı sildim", correctAnswer: "J'ai supprimé le fichier" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Entrez votre ___.", options: [{ id: "a", text: "identifiant", correct: true }, { id: "b", text: "souris", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "İnternet işlemlerini öğrendik!", correctAnswer: "Nous avons appris les opérations internet!" }
+];
+
+export const unit326Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Allumer' ne demek?", options: [{ id: "a", text: "Açmak (elektrikli alet)", correct: true }, { id: "b", text: "Kapatmak", correct: false }, { id: "c", text: "Fişe takmak", correct: false }, { id: "d", text: "Bozmak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Éteindre' ne demek?", options: [{ id: "a", text: "Kapatmak (elektrikli alet)", correct: true }, { id: "b", text: "Açmak", correct: false }, { id: "c", text: "Yakmak", correct: false }, { id: "d", text: "Tamir etmek", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La batterie", options: [{ id: "a", text: "Pil/Batarya", correct: true }, { id: "b", text: "Elektrik", correct: false }, { id: "c", text: "Kablo", correct: false }, { id: "d", text: "Şarj", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le chargeur' ne demek?", options: [{ id: "a", text: "Şarj aleti", correct: true }, { id: "b", text: "Priz", correct: false }, { id: "c", text: "Kablo", correct: false }, { id: "d", text: "Telefon", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Charger", options: [{ id: "a", text: "Şarj etmek", correct: true }, { id: "b", text: "Kullanmak", correct: false }, { id: "c", text: "Açmak", correct: false }, { id: "d", text: "Kapatmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le câble' ne demek?", options: [{ id: "a", text: "Kablo", correct: true }, { id: "b", text: "Tel", correct: false }, { id: "c", text: "Fiş", correct: false }, { id: "d", text: "Priz", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La prise' ne demek?", options: [{ id: "a", text: "Priz", correct: true }, { id: "b", text: "Fiş", correct: false }, { id: "c", text: "Anahtar", correct: false }, { id: "d", text: "Lamba", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le casque' ne demek?", options: [{ id: "a", text: "Kulaklık", correct: true }, { id: "b", text: "Hoparlör", correct: false }, { id: "c", text: "Mikrofon", correct: false }, { id: "d", text: "Kamera", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bilgisayarı açıyorum", correctAnswer: "J'allume l'ordinateur" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Ma ___ est vide.", options: [{ id: "a", text: "batterie", correct: true }, { id: "b", text: "chargeur", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Brancher", options: [{ id: "a", text: "Fişe takmak/Bağlamak", correct: true }, { id: "b", text: "Çıkarmak", correct: false }, { id: "c", text: "Açmak", correct: false }, { id: "d", text: "Kapatmak", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Débrancher' ne demek?", options: [{ id: "a", text: "Fişten çekmek", correct: true }, { id: "b", text: "Takmak", correct: false }, { id: "c", text: "Açmak", correct: false }, { id: "d", text: "Kapatmak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Telefonumu şarj ediyorum", correctAnswer: "Je charge mon téléphone" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Où est le ___?", options: [{ id: "a", text: "chargeur", correct: true }, { id: "b", text: "batterie", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Tableti kapat", correctAnswer: "Éteins la tablette" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça ne marche pas", options: [{ id: "a", text: "Bu çalışmıyor", correct: true }, { id: "b", text: "Bu çalışıyor", correct: false }, { id: "c", text: "Bu yeni", correct: false }, { id: "d", text: "Bu eski", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'écoute avec mon ___.", options: [{ id: "a", text: "casque", correct: true }, { id: "b", text: "écran", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Kabloyu tak", correctAnswer: "Branche le câble" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Il n'y a pas de ___ ici.", options: [{ id: "a", text: "prise", correct: true }, { id: "b", text: "fil", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Donanım parçalarını öğrendik!", correctAnswer: "Nous avons appris les pièces de matériel!" }
+];
+
+export const unit326Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le fichier' ne demek?", options: [{ id: "a", text: "Dosya", correct: true }, { id: "b", text: "Klasör", correct: false }, { id: "c", text: "Belge", correct: false }, { id: "d", text: "Resim", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le dossier' ne demek?", options: [{ id: "a", text: "Klasör", correct: true }, { id: "b", text: "Dosya", correct: false }, { id: "c", text: "Çanta", correct: false }, { id: "d", text: "Kutu", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Copier", options: [{ id: "a", text: "Kopyalamak", correct: true }, { id: "b", text: "Yapıştırmak", correct: false }, { id: "c", text: "Kesmek", correct: false }, { id: "d", text: "Silmek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Coller' ne demek?", options: [{ id: "a", text: "Yapıştırmak", correct: true }, { id: "b", text: "Kopyalamak", correct: false }, { id: "c", text: "Kesmek", correct: false }, { id: "d", text: "Silmek", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Couper", options: [{ id: "a", text: "Kesmek", correct: true }, { id: "b", text: "Kopyalamak", correct: false }, { id: "c", text: "Yapıştırmak", correct: false }, { id: "d", text: "Silmek", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Partager' ne demek?", options: [{ id: "a", text: "Paylaşmak", correct: true }, { id: "b", text: "Göndermek", correct: false }, { id: "c", text: "Almak", correct: false }, { id: "d", text: "Saklamak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le lien' ne demek?", options: [{ id: "a", text: "Link/Bağlantı", correct: true }, { id: "b", text: "Site", correct: false }, { id: "c", text: "Sayfa", correct: false }, { id: "d", text: "Dosya", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La photo' digital ne demek?", options: [{ id: "a", text: "Fotoğraf", correct: true }, { id: "b", text: "Video", correct: false }, { id: "c", text: "Ses", correct: false }, { id: "d", text: "Yazı", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bu dosyayı kopyalıyorum", correctAnswer: "Je copie ce fichier" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Ouvrez le ___.", options: [{ id: "a", text: "dossier", correct: true }, { id: "b", text: "souris", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cliquez sur le lien", options: [{ id: "a", text: "Linke tıklayın", correct: true }, { id: "b", text: "Linki kopyalayın", correct: false }, { id: "c", text: "Linki gönderin", correct: false }, { id: "d", text: "Linki silin", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La vidéo' ne demek?", options: [{ id: "a", text: "Video", correct: true }, { id: "b", text: "Fotoğraf", correct: false }, { id: "c", text: "Müzik", correct: false }, { id: "d", text: "Oyun", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Metni yapıştırıyorum", correctAnswer: "Je colle le texte" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je veux ___ cette photo.", options: [{ id: "a", text: "partager", correct: true }, { id: "b", text: "cliquer", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Resmi kes", correctAnswer: "Coupe l'image" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Sauvegarder", options: [{ id: "a", text: "Yedeklemek/Kaydetmek", correct: true }, { id: "b", text: "Silmek", correct: false }, { id: "c", text: "Açmak", correct: false }, { id: "d", text: "Kapatmak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Envoyez-moi le ___.", options: [{ id: "a", text: "lien", correct: true }, { id: "b", text: "souris", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Çalışmanı kaydet", correctAnswer: "Sauvegarde ton travail" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Regardez cette ___.", options: [{ id: "a", text: "vidéo", correct: true }, { id: "b", text: "son", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Bilgisayar işlemlerini öğrendik!", correctAnswer: "Nous avons appris les opérations informatiques!" }
+];
+
+// ===== ÜNİTE 327: MESLEKLER =====
+export const unit327Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le médecin' ne demek?", options: [{ id: "a", text: "Doktor", correct: true }, { id: "b", text: "Öğretmen", correct: false }, { id: "c", text: "Avukat", correct: false }, { id: "d", text: "Mühendis", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le professeur' ne demek?", options: [{ id: "a", text: "Öğretmen/Profesör", correct: true }, { id: "b", text: "Öğrenci", correct: false }, { id: "c", text: "Müdür", correct: false }, { id: "d", text: "Sekreter", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'ingénieur", options: [{ id: "a", text: "Mühendis", correct: true }, { id: "b", text: "Mimar", correct: false }, { id: "c", text: "Doktor", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'avocat' ne demek?", options: [{ id: "a", text: "Avukat", correct: true }, { id: "b", text: "Hakim", correct: false }, { id: "c", text: "Polis", correct: false }, { id: "d", text: "Savcı", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'étudiant", options: [{ id: "a", text: "Öğrenci (erkek)", correct: true }, { id: "b", text: "Öğretmen", correct: false }, { id: "c", text: "Müdür", correct: false }, { id: "d", text: "Çalışan", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'étudiante' ne demek?", options: [{ id: "a", text: "Öğrenci (kadın)", correct: true }, { id: "b", text: "Öğretmen", correct: false }, { id: "c", text: "Sekreter", correct: false }, { id: "d", text: "Hemşire", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le métier' ne demek?", options: [{ id: "a", text: "Meslek", correct: true }, { id: "b", text: "İş", correct: false }, { id: "c", text: "Çalışma", correct: false }, { id: "d", text: "Ofis", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le travail' ne demek?", options: [{ id: "a", text: "İş/Çalışma", correct: true }, { id: "b", text: "Meslek", correct: false }, { id: "c", text: "Okul", correct: false }, { id: "d", text: "Tatil", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Babam doktor", correctAnswer: "Mon père est médecin" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___.", options: [{ id: "a", text: "avocate", correct: true }, { id: "b", text: "avocat", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis professeur", options: [{ id: "a", text: "Ben öğretmenim", correct: true }, { id: "b", text: "Ben öğrenciyim", correct: false }, { id: "c", text: "Ben doktorum", correct: false }, { id: "d", text: "Ben mühendisim", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le patron' ne demek?", options: [{ id: "a", text: "Patron", correct: true }, { id: "b", text: "Çalışan", correct: false }, { id: "c", text: "Müşteri", correct: false }, { id: "d", text: "Arkadaş", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Ne iş yapıyorsunuz?", correctAnswer: "Quel est votre métier?" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il travaille comme ___.", options: [{ id: "a", text: "ingénieur", correct: true }, { id: "b", text: "travail", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "O bir öğrenci (erkek)", correctAnswer: "Il est étudiant" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'employé", options: [{ id: "a", text: "Çalışan/Eleman", correct: true }, { id: "b", text: "Patron", correct: false }, { id: "c", text: "Müşteri", correct: false }, { id: "d", text: "Müdür", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Ma mère est ___.", options: [{ id: "a", text: "professeur", correct: true }, { id: "b", text: "professeure", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "İşimi seviyorum", correctAnswer: "J'aime mon travail" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un bon ___.", options: [{ id: "a", text: "médecin", correct: true }, { id: "b", text: "santé", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Temel meslekleri öğrendik!", correctAnswer: "Nous avons appris les métiers de base!" }
+];
+
+export const unit327Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le policier' ne demek?", options: [{ id: "a", text: "Polis", correct: true }, { id: "b", text: "Asker", correct: false }, { id: "c", text: "İtfaiyeci", correct: false }, { id: "d", text: "Güvenlik", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le pompier' ne demek?", options: [{ id: "a", text: "İtfaiyeci", correct: true }, { id: "b", text: "Polis", correct: false }, { id: "c", text: "Doktor", correct: false }, { id: "d", text: "Hemşire", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le vendeur", options: [{ id: "a", text: "Satıcı (erkek)", correct: true }, { id: "b", text: "Alıcı", correct: false }, { id: "c", text: "Kasiyer", correct: false }, { id: "d", text: "Müdür", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La vendeuse' ne demek?", options: [{ id: "a", text: "Satıcı (kadın)", correct: true }, { id: "b", text: "Alıcı", correct: false }, { id: "c", text: "Hemşire", correct: false }, { id: "d", text: "Öğretmen", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le secrétaire", options: [{ id: "a", text: "Sekreter (erkek)", correct: true }, { id: "b", text: "Patron", correct: false }, { id: "c", text: "Çalışan", correct: false }, { id: "d", text: "Müdür", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le serveur' ne demek?", options: [{ id: "a", text: "Garson (erkek)", correct: true }, { id: "b", text: "Aşçı", correct: false }, { id: "c", text: "Bulaşıkçı", correct: false }, { id: "d", text: "Patron", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La serveuse' ne demek?", options: [{ id: "a", text: "Garson (kadın)", correct: true }, { id: "b", text: "Aşçı", correct: false }, { id: "c", text: "Müşteri", correct: false }, { id: "d", text: "Satıcı", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le cuisinier' ne demek?", options: [{ id: "a", text: "Aşçı (erkek)", correct: true }, { id: "b", text: "Garson", correct: false }, { id: "c", text: "Fırıncı", correct: false }, { id: "d", text: "Kasap", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Kardeşim polis", correctAnswer: "Mon frère est policier" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___ dans un magasin.", options: [{ id: "a", text: "vendeuse", correct: true }, { id: "b", text: "vendeur", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le facteur", options: [{ id: "a", text: "Postacı", correct: true }, { id: "b", text: "Şoför", correct: false }, { id: "c", text: "Pilot", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le coiffeur' ne demek?", options: [{ id: "a", text: "Kuaför/Berber", correct: true }, { id: "b", text: "Terzi", correct: false }, { id: "c", text: "Manav", correct: false }, { id: "d", text: "Fırıncı", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "İtfaiyeciler kahramandır", correctAnswer: "Les pompiers sont des héros" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ prépare le repas.", options: [{ id: "a", text: "cuisinier", correct: true }, { id: "b", text: "serveur", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Restoranda çalışıyor", correctAnswer: "Il travaille au restaurant" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La secrétaire", options: [{ id: "a", text: "Sekreter (kadın)", correct: true }, { id: "b", text: "Öğretmen", correct: false }, { id: "c", text: "Doktor", correct: false }, { id: "d", text: "Hemşire", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ apporte le menu.", options: [{ id: "a", text: "serveur", correct: true }, { id: "b", text: "cuisinier", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Postacı mektupları getirir", correctAnswer: "Le facteur apporte les lettres" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais chez le ___.", options: [{ id: "a", text: "coiffeur", correct: true }, { id: "b", text: "policier", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hizmet mesleklerini öğrendik!", correctAnswer: "Nous avons appris les métiers de service!" }
+];
+
+export const unit327Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'L'acteur' ne demek?", options: [{ id: "a", text: "Aktör/Oyuncu (erkek)", correct: true }, { id: "b", text: "Şarkıcı", correct: false }, { id: "c", text: "Yazar", correct: false }, { id: "d", text: "Ressam", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'actrice' ne demek?", options: [{ id: "a", text: "Aktris/Oyuncu (kadın)", correct: true }, { id: "b", text: "Şarkıcı", correct: false }, { id: "c", text: "Dansçı", correct: false }, { id: "d", text: "Ressam", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le chanteur", options: [{ id: "a", text: "Şarkıcı (erkek)", correct: true }, { id: "b", text: "Oyuncu", correct: false }, { id: "c", text: "Müzisyen", correct: false }, { id: "d", text: "Yazar", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La chanteuse' ne demek?", options: [{ id: "a", text: "Şarkıcı (kadın)", correct: true }, { id: "b", text: "Oyuncu", correct: false }, { id: "c", text: "Yazar", correct: false }, { id: "d", text: "Dansçı", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'artiste", options: [{ id: "a", text: "Sanatçı", correct: true }, { id: "b", text: "Doktor", correct: false }, { id: "c", text: "Mühendis", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le peintre' ne demek?", options: [{ id: "a", text: "Ressam/Boyacı", correct: true }, { id: "b", text: "Yazar", correct: false }, { id: "c", text: "Şair", correct: false }, { id: "d", text: "Müzisyen", correct: false }] },
+    { id: 7, type: "SELECT", question: "'L'écrivain' ne demek?", options: [{ id: "a", text: "Yazar", correct: true }, { id: "b", text: "Okur", correct: false }, { id: "c", text: "Şair", correct: false }, { id: "d", text: "Gazeteci", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le journaliste' ne demek?", options: [{ id: "a", text: "Gazeteci", correct: true }, { id: "b", text: "Yazar", correct: false }, { id: "c", text: "Fotoğrafçı", correct: false }, { id: "d", text: "Sunucu", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "O ünlü bir oyuncu", correctAnswer: "C'est un acteur célèbre" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___ de pop.", options: [{ id: "a", text: "chanteuse", correct: true }, { id: "b", text: "chanteur", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le musicien", options: [{ id: "a", text: "Müzisyen", correct: true }, { id: "b", text: "Şarkıcı", correct: false }, { id: "c", text: "Besteci", correct: false }, { id: "d", text: "Orkestra şefi", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le photographe' ne demek?", options: [{ id: "a", text: "Fotoğrafçı", correct: true }, { id: "b", text: "Kameraman", correct: false }, { id: "c", text: "Yönetmen", correct: false }, { id: "d", text: "Ressam", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Ressam resim yapıyor", correctAnswer: "Le peintre peint" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ écrit des livres.", options: [{ id: "a", text: "écrivain", correct: true }, { id: "b", text: "lecteur", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bu şarkıyı seviyorum", correctAnswer: "J'aime cette chanson" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'architecte", options: [{ id: "a", text: "Mimar", correct: true }, { id: "b", text: "Mühendis", correct: false }, { id: "c", text: "İnşaatçı", correct: false }, { id: "d", text: "Tasarımcı", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ pour un journal.", options: [{ id: "a", text: "journaliste", correct: true }, { id: "b", text: "écrivain", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Fotoğraf çekmeyi sever", correctAnswer: "Il aime prendre des photos" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une grande ___.", options: [{ id: "a", text: "artiste", correct: true }, { id: "b", text: "métier", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Sanat mesleklerini öğrendik!", correctAnswer: "Nous avons appris les métiers artistiques!" }
+];
+
+export const unit327Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le fermier' ne demek?", options: [{ id: "a", text: "Çiftçi", correct: true }, { id: "b", text: "Bahçıvan", correct: false }, { id: "c", text: "Köylü", correct: false }, { id: "d", text: "Ormancı", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le boulanger' ne demek?", options: [{ id: "a", text: "Fırıncı", correct: true }, { id: "b", text: "Pastacı", correct: false }, { id: "c", text: "Aşçı", correct: false }, { id: "d", text: "Kasap", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le boucher", options: [{ id: "a", text: "Kasap", correct: true }, { id: "b", text: "Fırıncı", correct: false }, { id: "c", text: "Manav", correct: false }, { id: "d", text: "Balıkçı", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le mécanicien' ne demek?", options: [{ id: "a", text: "Tamirci/Mekanik", correct: true }, { id: "b", text: "Şoför", correct: false }, { id: "c", text: "Mühendis", correct: false }, { id: "d", text: "Pilot", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'électricien", options: [{ id: "a", text: "Elektrikçi", correct: true }, { id: "b", text: "Tamirci", correct: false }, { id: "c", text: "Mühendis", correct: false }, { id: "d", text: "Tesisatçı", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le plombier' ne demek?", options: [{ id: "a", text: "Tesisatçı", correct: true }, { id: "b", text: "Elektrikçi", correct: false }, { id: "c", text: "Tamirci", correct: false }, { id: "d", text: "İnşaatçı", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le chauffeur' ne demek?", options: [{ id: "a", text: "Şoför", correct: true }, { id: "b", text: "Pilot", correct: false }, { id: "c", text: "Kaptan", correct: false }, { id: "d", text: "Yolcu", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le pilote' ne demek?", options: [{ id: "a", text: "Pilot", correct: true }, { id: "b", text: "Şoför", correct: false }, { id: "c", text: "Kaptan", correct: false }, { id: "d", text: "Hostes", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Fırıncı ekmek yapıyor", correctAnswer: "Le boulanger fait du pain" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ répare la voiture.", options: [{ id: "a", text: "mécanicien", correct: true }, { id: "b", text: "chauffeur", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Travailler dur", options: [{ id: "a", text: "Sıkı çalışmak", correct: true }, { id: "b", text: "Az çalışmak", correct: false }, { id: "c", text: "Çalışmamak", correct: false }, { id: "d", text: "Dinlenmek", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le dentiste' ne demek?", options: [{ id: "a", text: "Dişçi", correct: true }, { id: "b", text: "Doktor", correct: false }, { id: "c", text: "Cerrah", correct: false }, { id: "d", text: "Hemşire", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Taksi şoförü", correctAnswer: "Chauffeur de taxi" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ répare la lumière.", options: [{ id: "a", text: "électricien", correct: true }, { id: "b", text: "plombier", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Çiftçiler tarlada çalışır", correctAnswer: "Les fermiers travaillent dans les champs" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "À la retraite", options: [{ id: "a", text: "Emekli", correct: true }, { id: "b", text: "Çalışan", correct: false }, { id: "c", text: "İşsiz", correct: false }, { id: "d", text: "Öğrenci", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ vend de la viande.", options: [{ id: "a", text: "boucher", correct: true }, { id: "b", text: "boulanger", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "O bir pilot", correctAnswer: "Il est pilote" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ a réparé la fuite.", options: [{ id: "a", text: "plombier", correct: true }, { id: "b", text: "électricien", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "El işi mesleklerini öğrendik!", correctAnswer: "Nous avons appris les métiers manuels!" }
+];

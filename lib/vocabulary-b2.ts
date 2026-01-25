@@ -1,5 +1,5 @@
 /**
- * LinguaFlow İspanyolca B2 Kelime Veritabanı
+ * SteadyShell İspanyolca B2 Kelime Veritabanı
  * 
  * B2 Seviyesi: Ünite 61-80 (20 ünite × 10 kelime = 200 kelime)
  * İleri düzey akademik, profesyonel ve soyut kavramlar

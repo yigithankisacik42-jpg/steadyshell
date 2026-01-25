@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Okuma Veritabanı - İspanyolca B1
+ * SteadyShell Okuma Veritabanı - İspanyolca B1
  * 30 Ünite (ID: 61-90), curriculum ile uyumlu
  * Her ünite: título, hikaye, çeviri, 5 kelime, 10 soru
  */

@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 318-319
+import { Question } from "./questions";
+
+// ===== ÜNİTE 318: HAVA DURUMU =====
+export const unit318Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le temps' ne demek?", options: [{ id: "a", text: "Hava/Zaman", correct: true }, { id: "b", text: "Saat", correct: false }, { id: "c", text: "Gün", correct: false }, { id: "d", text: "Yıl", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le soleil' ne demek?", options: [{ id: "a", text: "Güneş", correct: true }, { id: "b", text: "Ay", correct: false }, { id: "c", text: "Yıldız", correct: false }, { id: "d", text: "Bulut", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La pluie", options: [{ id: "a", text: "Yağmur", correct: true }, { id: "b", text: "Kar", correct: false }, { id: "c", text: "Rüzgar", correct: false }, { id: "d", text: "Dolu", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La neige' ne demek?", options: [{ id: "a", text: "Kar", correct: true }, { id: "b", text: "Yağmur", correct: false }, { id: "c", text: "Buz", correct: false }, { id: "d", text: "Sis", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le vent", options: [{ id: "a", text: "Rüzgar", correct: true }, { id: "b", text: "Fırtına", correct: false }, { id: "c", text: "Hava", correct: false }, { id: "d", text: "Bulut", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le nuage' ne demek?", options: [{ id: "a", text: "Bulut", correct: true }, { id: "b", text: "Gökkuşağı", correct: false }, { id: "c", text: "Gökyüzü", correct: false }, { id: "d", text: "Güneş", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le ciel' ne demek?", options: [{ id: "a", text: "Gökyüzü", correct: true }, { id: "b", text: "Yeryüzü", correct: false }, { id: "c", text: "Deniz", correct: false }, { id: "d", text: "Hava", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Il fait beau' ne demek?", options: [{ id: "a", text: "Hava güzel", correct: true }, { id: "b", text: "Hava kötü", correct: false }, { id: "c", text: "Hava soğuk", correct: false }, { id: "d", text: "Hava sıcak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bugün hava güneşli", correctAnswer: "Il fait du soleil aujourd'hui" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a des ___ dans le ciel.", options: [{ id: "a", text: "nuages", correct: true }, { id: "b", text: "soleil", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il pleut", options: [{ id: "a", text: "Yağmur yağıyor", correct: true }, { id: "b", text: "Kar yağıyor", correct: false }, { id: "c", text: "Güneşli", correct: false }, { id: "d", text: "Rüzgarlı", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Chaud' ne demek?", options: [{ id: "a", text: "Sıcak", correct: true }, { id: "b", text: "Soğuk", correct: false }, { id: "c", text: "Ilık", correct: false }, { id: "d", text: "Serin", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Hava soğuk", correctAnswer: "Il fait froid" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ du vent.", options: [{ id: "a", text: "fait", correct: true }, { id: "b", text: "a", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kar yağıyor", correctAnswer: "Il neige" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quel temps fait-il?", options: [{ id: "a", text: "Hava nasıl?", correct: true }, { id: "b", text: "Saat kaç?", correct: false }, { id: "c", text: "Neredesin?", correct: false }, { id: "d", text: "Ne yapıyorsun?", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ brille.", options: [{ id: "a", text: "soleil", correct: true }, { id: "b", text: "pluie", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Gökyüzü mavi", correctAnswer: "Le ciel est bleu" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je n'aime pas la ___.", options: [{ id: "a", text: "pluie", correct: true }, { id: "b", text: "soleil", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hava durumunu öğrendik!", correctAnswer: "Nous avons appris la météo!" }
+];
+
+export const unit318Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'La saison' ne demek?", options: [{ id: "a", text: "Mevsim", correct: true }, { id: "b", text: "Ay", correct: false }, { id: "c", text: "Yıl", correct: false }, { id: "d", text: "Hafta", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'été' ne demek?", options: [{ id: "a", text: "Yaz", correct: true }, { id: "b", text: "Kış", correct: false }, { id: "c", text: "Bahar", correct: false }, { id: "d", text: "Sonbahar", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'hiver", options: [{ id: "a", text: "Kış", correct: true }, { id: "b", text: "Yaz", correct: false }, { id: "c", text: "Sonbahar", correct: false }, { id: "d", text: "İlkbahar", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'automne' ne demek?", options: [{ id: "a", text: "Sonbahar", correct: true }, { id: "b", text: "İlkbahar", correct: false }, { id: "c", text: "Yaz", correct: false }, { id: "d", text: "Kış", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le printemps", options: [{ id: "a", text: "İlkbahar", correct: true }, { id: "b", text: "Sonbahar", correct: false }, { id: "c", text: "Kış", correct: false }, { id: "d", text: "Yaz", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La température' ne demek?", options: [{ id: "a", text: "Sıcaklık/Derece", correct: true }, { id: "b", text: "Hava", correct: false }, { id: "c", text: "İklim", correct: false }, { id: "d", text: "Mevsim", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le degré' ne demek?", options: [{ id: "a", text: "Derece", correct: true }, { id: "b", text: "Ölçü", correct: false }, { id: "c", text: "Sayı", correct: false }, { id: "d", text: "Yüzde", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Frais' ne demek?", options: [{ id: "a", text: "Serin/Taze", correct: true }, { id: "b", text: "Sıcak", correct: false }, { id: "c", text: "Kuru", correct: false }, { id: "d", text: "Islak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Yazın hava sıcaktır", correctAnswer: "En été, il fait chaud" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Au ___, les fleurs poussent.", options: [{ id: "a", text: "printemps", correct: true }, { id: "b", text: "hiver", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il fait froid en hiver", options: [{ id: "a", text: "Kışın hava soğuktur", correct: true }, { id: "b", text: "Yazın hava sıcaktır", correct: false }, { id: "c", text: "Sonbaharda yağmur yağar", correct: false }, { id: "d", text: "İlkbaharda çiçekler açar", correct: false }] },
+    { id: 12, type: "SELECT", question: "'L'orage' ne demek?", options: [{ id: "a", text: "Fırtına/Gök gürültüsü", correct: true }, { id: "b", text: "Yağmur", correct: false }, { id: "c", text: "Şimşek", correct: false }, { id: "d", text: "Rüzgar", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kışın kayak yaparım", correctAnswer: "Je fais du ski en hiver" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Les feuilles tombent en ___.", options: [{ id: "a", text: "automne", correct: true }, { id: "b", text: "été", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hava kaç derece?", correctAnswer: "Quelle est la température?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il fait vingt degrés", options: [{ id: "a", text: "Hava yirmi derece", correct: true }, { id: "b", text: "Hava otuz derece", correct: false }, { id: "c", text: "Hava on derece", correct: false }, { id: "d", text: "Hava sıfır derece", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime l'___ parce qu'il fait beau.", options: [{ id: "a", text: "été", correct: true }, { id: "b", text: "hiver", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sonbaharda rüzgar eser", correctAnswer: "Il y a du vent en automne" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ma ___ préférée.", options: [{ id: "a", text: "saison", correct: true }, { id: "b", text: "temps", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Mevsimleri öğrendik!", correctAnswer: "Nous avons appris les saisons!" }
+];
+
+export const unit318Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le parapluie' ne demek?", options: [{ id: "a", text: "Şemsiye", correct: true }, { id: "b", text: "Yağmurluk", correct: false }, { id: "c", text: "Şapka", correct: false }, { id: "d", text: "Bot", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Les lunettes de soleil' ne demek?", options: [{ id: "a", text: "Güneş gözlüğü", correct: true }, { id: "b", text: "Şapka", correct: false }, { id: "c", text: "Güneş kremi", correct: false }, { id: "d", text: "Havlu", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'imperméable", options: [{ id: "a", text: "Yağmurluk", correct: true }, { id: "b", text: "Palto", correct: false }, { id: "c", text: "Şemsiye", correct: false }, { id: "d", text: "Çizme", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Mouillé' ne demek?", options: [{ id: "a", text: "Islak", correct: true }, { id: "b", text: "Kuru", correct: false }, { id: "c", text: "Sıcak", correct: false }, { id: "d", text: "Soğuk", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Sec", options: [{ id: "a", text: "Kuru", correct: true }, { id: "b", text: "Islak", correct: false }, { id: "c", text: "Temiz", correct: false }, { id: "d", text: "Kirli", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le climat' ne demek?", options: [{ id: "a", text: "İklim", correct: true }, { id: "b", text: "Hava", correct: false }, { id: "c", text: "Doğa", correct: false }, { id: "d", text: "Çevre", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La tempête' ne demek?", options: [{ id: "a", text: "Fırtına", correct: true }, { id: "b", text: "Rüzgar", correct: false }, { id: "c", text: "Yağmur", correct: false }, { id: "d", text: "Dalga", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le brouillard' ne demek?", options: [{ id: "a", text: "Sis", correct: true }, { id: "b", text: "Duman", correct: false }, { id: "c", text: "Bulut", correct: false }, { id: "d", text: "Hava", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Şemsiyemi alıyorum", correctAnswer: "Je prends mon parapluie" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a du ___ aujourd'hui.", options: [{ id: "a", text: "brouillard", correct: true }, { id: "b", text: "pluie", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est nuageux", options: [{ id: "a", text: "Bulutlu", correct: true }, { id: "b", text: "Güneşli", correct: false }, { id: "c", text: "Yağmurlu", correct: false }, { id: "d", text: "Karlı", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Geler' ne demek?", options: [{ id: "a", text: "Donmak", correct: true }, { id: "b", text: "Erimek", correct: false }, { id: "c", text: "Isınmak", correct: false }, { id: "d", text: "Soğumak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Dikkat et, yerler ıslak", correctAnswer: "Attention, le sol est mouillé" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut mettre des ___ de soleil.", options: [{ id: "a", text: "lunettes", correct: true }, { id: "b", text: "chapeau", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Yarın fırtına olacak", correctAnswer: "Il y aura une tempête demain" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il fait mauvais", options: [{ id: "a", text: "Hava kötü", correct: true }, { id: "b", text: "Hava güzel", correct: false }, { id: "c", text: "Hava sıcak", correct: false }, { id: "d", text: "Hava soğuk", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le temps est ___.", options: [{ id: "a", text: "sec", correct: true }, { id: "b", text: "mouillé", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Hava durumu tahmini", correctAnswer: "La prévision météo" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ dehors.", options: [{ id: "a", text: "gèle", correct: true }, { id: "b", text: "pleut", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hava olaylarını öğrendik!", correctAnswer: "Nous avons appris les phénomènes météorologiques!" }
+];
+
+export const unit318Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le nord' ne demek?", options: [{ id: "a", text: "Kuzey", correct: true }, { id: "b", text: "Güney", correct: false }, { id: "c", text: "Doğu", correct: false }, { id: "d", text: "Batı", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le sud' ne demek?", options: [{ id: "a", text: "Güney", correct: true }, { id: "b", text: "Kuzey", correct: false }, { id: "c", text: "Doğu", correct: false }, { id: "d", text: "Batı", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'est", options: [{ id: "a", text: "Doğu", correct: true }, { id: "b", text: "Batı", correct: false }, { id: "c", text: "Kuzey", correct: false }, { id: "d", text: "Güney", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'ouest' ne demek?", options: [{ id: "a", text: "Batı", correct: true }, { id: "b", text: "Doğu", correct: false }, { id: "c", text: "Kuzey", correct: false }, { id: "d", text: "Güney", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le monde", options: [{ id: "a", text: "Dünya", correct: true }, { id: "b", text: "Ülke", correct: false }, { id: "c", text: "Şehir", correct: false }, { id: "d", text: "Kıta", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La terre' ne demek?", options: [{ id: "a", text: "Dünya/Toprak", correct: true }, { id: "b", text: "Ay", correct: false }, { id: "c", text: "Güneş", correct: false }, { id: "d", text: "Deniz", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La nature' ne demek?", options: [{ id: "a", text: "Doğa", correct: true }, { id: "b", text: "Şehir", correct: false }, { id: "c", text: "Köy", correct: false }, { id: "d", text: "Park", correct: false }] },
+    { id: 8, type: "SELECT", question: "'L'environnement' ne demek?", options: [{ id: "a", text: "Çevre", correct: true }, { id: "b", text: "Doğa", correct: false }, { id: "c", text: "Hava", correct: false }, { id: "d", text: "İklim", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Güneş doğudan doğar", correctAnswer: "Le soleil se lève à l'est" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il fait chaud dans le ___.", options: [{ id: "a", text: "sud", correct: true }, { id: "b", text: "nord", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Protéger la nature", options: [{ id: "a", text: "Doğayı korumak", correct: true }, { id: "b", text: "Doğayı sevmek", correct: false }, { id: "c", text: "Doğayı izlemek", correct: false }, { id: "d", text: "Doğayı gezmek", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La pollution' ne demek?", options: [{ id: "a", text: "Kirlilik", correct: true }, { id: "b", text: "Temizlik", correct: false }, { id: "c", text: "Gürültü", correct: false }, { id: "d", text: "Kalabalık", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kuzeyde hava soğuk", correctAnswer: "Il fait froid dans le nord" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "J'habite à l'___ de la France.", options: [{ id: "a", text: "ouest", correct: true }, { id: "b", text: "nord", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Dünya yuvarlaktır", correctAnswer: "La terre est ronde" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est important", options: [{ id: "a", text: "Bu önemli", correct: true }, { id: "b", text: "Bu gereksiz", correct: false }, { id: "c", text: "Bu zor", correct: false }, { id: "d", text: "Bu kolay", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous devons respecter l'___.", options: [{ id: "a", text: "environnement", correct: true }, { id: "b", text: "pollution", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Güneş batıdan batar", correctAnswer: "Le soleil se couche à l'ouest" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est belle.", options: [{ id: "a", text: "nature", correct: true }, { id: "b", text: "polluer", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yönleri ve doğayı öğrendik!", correctAnswer: "Nous avons appris les directions et la nature!" }
+];
+
+// ===== ÜNİTE 319: DUYGULAR =====
+export const unit319Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Heureux' ne demek?", options: [{ id: "a", text: "Mutlu (erkek)", correct: true }, { id: "b", text: "Üzgün", correct: false }, { id: "c", text: "Kızgın", correct: false }, { id: "d", text: "Yorgun", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Heureuse' ne demek?", options: [{ id: "a", text: "Mutlu (kadın)", correct: true }, { id: "b", text: "Üzgün", correct: false }, { id: "c", text: "Kızgın", correct: false }, { id: "d", text: "Yorgun", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Triste", options: [{ id: "a", text: "Üzgün", correct: true }, { id: "b", text: "Mutlu", correct: false }, { id: "c", text: "Korkmuş", correct: false }, { id: "d", text: "Şaşırmış", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Content' ne demek?", options: [{ id: "a", text: "Memnun/Mutlu", correct: true }, { id: "b", text: "Üzgün", correct: false }, { id: "c", text: "Sinirli", correct: false }, { id: "d", text: "Yorgun", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Fatigué", options: [{ id: "a", text: "Yorgun", correct: true }, { id: "b", text: "Dinç", correct: false }, { id: "c", text: "Hasta", correct: false }, { id: "d", text: "Mutlu", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Malade' ne demek?", options: [{ id: "a", text: "Hasta", correct: true }, { id: "b", text: "Sağlıklı", correct: false }, { id: "c", text: "Yorgun", correct: false }, { id: "d", text: "Mutlu", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Énervé' ne demek?", options: [{ id: "a", text: "Sinirli", correct: true }, { id: "b", text: "Sakin", correct: false }, { id: "c", text: "Mutlu", correct: false }, { id: "d", text: "Üzgün", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Avoir peur' ne demek?", options: [{ id: "a", text: "Korkmak", correct: true }, { id: "b", text: "Cesur olmak", correct: false }, { id: "c", text: "Gülmek", correct: false }, { id: "d", text: "Ağlamak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Çok mutluyum", correctAnswer: "Je suis très heureux" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___ aujourd'hui.", options: [{ id: "a", text: "triste", correct: true }, { id: "b", text: "tristesse", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis fatiguée", options: [{ id: "a", text: "Yorgunum (kadın)", correct: true }, { id: "b", text: "Yorgunum (erkek)", correct: false }, { id: "c", text: "Hastayım", correct: false }, { id: "d", text: "Mutluyum", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Surpris' ne demek?", options: [{ id: "a", text: "Şaşırmış", correct: true }, { id: "b", text: "Korkmuş", correct: false }, { id: "c", text: "Mutlu", correct: false }, { id: "d", text: "Üzgün", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Köpekten korkuyorum", correctAnswer: "J'ai peur du chien" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ parce qu'il a perdu.", options: [{ id: "a", text: "triste", correct: true }, { id: "b", text: "content", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Neden sinirlisin?", correctAnswer: "Pourquoi es-tu énervé?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je me sens bien", options: [{ id: "a", text: "Kendimi iyi hissediyorum", correct: true }, { id: "b", text: "Kendimi kötü hissediyorum", correct: false }, { id: "c", text: "Hastayım", correct: false }, { id: "d", text: "Yorgunum", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous sommes ___ de vous voir.", options: [{ id: "a", text: "contents", correct: true }, { id: "b", text: "content", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "O hasta (kadın)", correctAnswer: "Elle est malade" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu as l'air ___.", options: [{ id: "a", text: "fatigué", correct: true }, { id: "b", text: "fatigue", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Temel duyguları öğrendik!", correctAnswer: "Nous avons appris les émotions de base!" }
+];
+
+export const unit319Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Amoureux' ne demek?", options: [{ id: "a", text: "Aşık", correct: true }, { id: "b", text: "Nefret dolu", correct: false }, { id: "c", text: "Kızgın", correct: false }, { id: "d", text: "Kıskanç", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Inquiet' ne demek?", options: [{ id: "a", text: "Endişeli", correct: true }, { id: "b", text: "Sakin", correct: false }, { id: "c", text: "Mutlu", correct: false }, { id: "d", text: "Yorgun", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Calme", options: [{ id: "a", text: "Sakin", correct: true }, { id: "b", text: "Sinirli", correct: false }, { id: "c", text: "Heyecanlı", correct: false }, { id: "d", text: "Korkmuş", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Ennuyé' ne demek?", options: [{ id: "a", text: "Sıkılmış", correct: true }, { id: "b", text: "Eğlenmiş", correct: false }, { id: "c", text: "Mutlu", correct: false }, { id: "d", text: "Üzgün", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Jaloux", options: [{ id: "a", text: "Kıskanç", correct: true }, { id: "b", text: "Cömert", correct: false }, { id: "c", text: "Mutlu", correct: false }, { id: "d", text: "Üzgün", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Fier' ne demek?", options: [{ id: "a", text: "Gururlu", correct: true }, { id: "b", text: "Utangaç", correct: false }, { id: "c", text: "Korkak", correct: false }, { id: "d", text: "Üzgün", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Timide' ne demek?", options: [{ id: "a", text: "Utangaç", correct: true }, { id: "b", text: "Cesur", correct: false }, { id: "c", text: "Konuşkan", correct: false }, { id: "d", text: "Sakin", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Drôle' ne demek?", options: [{ id: "a", text: "Komik", correct: true }, { id: "b", text: "Ciddi", correct: false }, { id: "c", text: "Sıkıcı", correct: false }, { id: "d", text: "Üzgün", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Seninle gurur duyuyorum", correctAnswer: "Je suis fier de toi" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne sois pas ___.", options: [{ id: "a", text: "triste", correct: true }, { id: "b", text: "tristesse", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est ennuyeux", options: [{ id: "a", text: "Bu sıkıcı", correct: true }, { id: "b", text: "Bu eğlenceli", correct: false }, { id: "c", text: "Bu komik", correct: false }, { id: "d", text: "Bu ilginç", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Sympa' ne demek?", options: [{ id: "a", text: "Sempatik/Hoş", correct: true }, { id: "b", text: "Kötü", correct: false }, { id: "c", text: "Kaba", correct: false }, { id: "d", text: "Sıkıcı", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "O çok utangaç", correctAnswer: "Il est très timide" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___ de son succès.", options: [{ id: "a", text: "heureuse", correct: true }, { id: "b", text: "heureux", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Endişelenme", correctAnswer: "Ne t'inquiète pas" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis amoureux", options: [{ id: "a", text: "Aşığım", correct: true }, { id: "b", text: "Kızgınım", correct: false }, { id: "c", text: "Yorgunum", correct: false }, { id: "d", text: "Hastayım", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une histoire ___.", options: [{ id: "a", text: "drôle", correct: true }, { id: "b", text: "triste", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sakin ol", correctAnswer: "Sois calme" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ de son frère.", options: [{ id: "a", text: "jaloux", correct: true }, { id: "b", text: "jalouse", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Duygusal durumları öğrendik!", correctAnswer: "Nous avons appris les états émotionnels!" }
+];
+
+export const unit319Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Pleurer' ne demek?", options: [{ id: "a", text: "Ağlamak", correct: true }, { id: "b", text: "Gülmek", correct: false }, { id: "c", text: "Bağırmak", correct: false }, { id: "d", text: "Konuşmak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Rire' ne demek?", options: [{ id: "a", text: "Gülmek", correct: true }, { id: "b", text: "Ağlamak", correct: false }, { id: "c", text: "Kızmak", correct: false }, { id: "d", text: "Korkmak", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Sourire", options: [{ id: "a", text: "Gülümsemek", correct: true }, { id: "b", text: "Ağlamak", correct: false }, { id: "c", text: "Bağırmak", correct: false }, { id: "d", text: "Uyuma", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Crier' ne demek?", options: [{ id: "a", text: "Bağırmak", correct: true }, { id: "b", text: "Fısıldamak", correct: false }, { id: "c", text: "Gülmek", correct: false }, { id: "d", text: "Ağlamak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Se sentir bien", options: [{ id: "a", text: "İyi hissetmek", correct: true }, { id: "b", text: "Kötü hissetmek", correct: false }, { id: "c", text: "Hasta olmak", correct: false }, { id: "d", text: "Yorgun olmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'amour' ne demek?", options: [{ id: "a", text: "Aşk/Sevgi", correct: true }, { id: "b", text: "Nefret", correct: false }, { id: "c", text: "Korku", correct: false }, { id: "d", text: "Üzüntü", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La haine' ne demek?", options: [{ id: "a", text: "Nefret", correct: true }, { id: "b", text: "Aşk", correct: false }, { id: "c", text: "Sevgi", correct: false }, { id: "d", text: "Mutluluk", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La joie' ne demek?", options: [{ id: "a", text: "Sevinç/Neşe", correct: true }, { id: "b", text: "Üzüntü", correct: false }, { id: "c", text: "Korku", correct: false }, { id: "d", text: "Öfke", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Neden ağlıyorsun?", correctAnswer: "Pourquoi pleures-tu?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ tout le temps.", options: [{ id: "a", text: "rit", correct: true }, { id: "b", text: "pleure", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Garder le sourire", options: [{ id: "a", text: "Gülümsemeye devam et", correct: true }, { id: "b", text: "Ağlamaya devam et", correct: false }, { id: "c", text: "Konuşmaya devam et", correct: false }, { id: "d", text: "Yürümeye devam et", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La peur' ne demek?", options: [{ id: "a", text: "Korku", correct: true }, { id: "b", text: "Cesaret", correct: false }, { id: "c", text: "Sevgi", correct: false }, { id: "d", text: "Nefret", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Seni seviyorum", correctAnswer: "Je t'aime" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une grande ___.", options: [{ id: "a", text: "joie", correct: true }, { id: "b", text: "tristesse", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bana bağırma", correctAnswer: "Ne me crie pas dessus" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je déteste ça", options: [{ id: "a", text: "Bundan nefret ediyorum", correct: true }, { id: "b", text: "Bunu seviyorum", correct: false }, { id: "c", text: "Buna bayılıyorum", correct: false }, { id: "d", text: "Bunu istiyorum", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Il a ___ du noir.", options: [{ id: "a", text: "peur", correct: true }, { id: "b", text: "joie", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "O her zaman gülümser", correctAnswer: "Elle sourit toujours" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est plus fort que la haine.", options: [{ id: "a", text: "amour", correct: true }, { id: "b", text: "peur", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Duygu ifadelerini öğrendik!", correctAnswer: "Nous avons appris les expressions émotionnelles!" }
+];
+
+export const unit319Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le sentiment' ne demek?", options: [{ id: "a", text: "Duygu/His", correct: true }, { id: "b", text: "Düşünce", correct: false }, { id: "c", text: "Fikir", correct: false }, { id: "d", text: "Hayal", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Ressentir' ne demek?", options: [{ id: "a", text: "Hissetmek", correct: true }, { id: "b", text: "Düşünmek", correct: false }, { id: "c", text: "Görmek", correct: false }, { id: "d", text: "Duymak", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est dommage", options: [{ id: "a", text: "Yazık/Ne yazık", correct: true }, { id: "b", text: "Harika", correct: false }, { id: "c", text: "Güzel", correct: false }, { id: "d", text: "İyi", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Heureusement' ne demek?", options: [{ id: "a", text: "Neyse ki/İyi ki", correct: true }, { id: "b", text: "Maalesef", correct: false }, { id: "c", text: "Bazen", correct: false }, { id: "d", text: "Asla", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Malheureusement", options: [{ id: "a", text: "Maalesef", correct: true }, { id: "b", text: "Neyse ki", correct: false }, { id: "c", text: "Mutlulukla", correct: false }, { id: "d", text: "Kesinlikle", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Désolé' ne demek?", options: [{ id: "a", text: "Üzgünüm/Özür dilerim", correct: true }, { id: "b", text: "Mutluyum", correct: false }, { id: "c", text: "Sinirliyim", correct: false }, { id: "d", text: "Yorgunum", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Pardon' ne demek?", options: [{ id: "a", text: "Pardon/Affedersiniz", correct: true }, { id: "b", text: "Lütfen", correct: false }, { id: "c", text: "Teşekkürler", correct: false }, { id: "d", text: "Güle güle", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Félicitations' ne demek?", options: [{ id: "a", text: "Tebrikler", correct: true }, { id: "b", text: "Üzgünüm", correct: false }, { id: "c", text: "Hoşça kal", correct: false }, { id: "d", text: "Merhaba", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Ne hissettiğini anlıyorum", correctAnswer: "Je comprends ce que tu ressens" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis ___ pour le retard.", options: [{ id: "a", text: "désolé", correct: true }, { id: "b", text: "content", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Bravo", options: [{ id: "a", text: "Bravo/Aferin", correct: true }, { id: "b", text: "Kötü", correct: false }, { id: "c", text: "Hayır", correct: false }, { id: "d", text: "Dur", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Bonne chance' ne demek?", options: [{ id: "a", text: "İyi şanslar", correct: true }, { id: "b", text: "İyi günler", correct: false }, { id: "c", text: "İyi geceler", correct: false }, { id: "d", text: "İyi yolculuklar", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Maalesef gelemem", correctAnswer: "Malheureusement je ne peux pas venir" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___, il fait beau.", options: [{ id: "a", text: "Heureusement", correct: true }, { id: "b", text: "Malheureusement", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Tebrikler, kazandın!", correctAnswer: "Félicitations, tu as gagné!" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est super", options: [{ id: "a", text: "Bu süper", correct: true }, { id: "b", text: "Bu kötü", correct: false }, { id: "c", text: "Bu sıkıcı", correct: false }, { id: "d", text: "Bu zor", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Quel est ton ___?", options: [{ id: "a", text: "sentiment", correct: true }, { id: "b", text: "pensée", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sınav için iyi şanslar", correctAnswer: "Bonne chance pour l'examen" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ que tu partes.", options: [{ id: "a", text: "dommage", correct: true }, { id: "b", text: "super", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Duygu ünitesini bitirdik, tebrikler!", correctAnswer: "Nous avons terminé l'unité des émotions, félicitations!" }
+];

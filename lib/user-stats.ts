@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Kullanıcı İstatistikleri Modülü
+ * SteadyShell Kullanıcı İstatistikleri Modülü
  * Ders performansı, doğru/yanlış cevaplar ve süre takibi
  */
 

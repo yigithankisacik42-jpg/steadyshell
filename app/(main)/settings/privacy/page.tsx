@@ -66,7 +66,7 @@ export default function PrivacyPage() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "linguaflow-verilerim.json";
+        a.download = "steadyshell-verilerim.json";
         a.click();
         URL.revokeObjectURL(url);
     };

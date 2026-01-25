@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Phrases - English A2 (Units 131-140)
+ * SteadyShell Phrases - English A2 (Units 131-140)
  * 15 phrase per unit
  */
 

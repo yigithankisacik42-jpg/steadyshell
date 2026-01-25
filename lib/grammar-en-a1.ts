@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Grammar Database - English A1
+ * SteadyShell Grammar Database - English A1
  * 30 Units (ID: 101-130) with grammar rules and exercises
  */
 

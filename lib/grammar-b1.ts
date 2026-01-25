@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Gramer Veritabanı - İspanyolca B1
+ * SteadyShell Gramer Veritabanı - İspanyolca B1
  * 30 Ünite (ID: 61-90) - Curriculum ile TAM UYUMLU
  * Her ünite için CEFR B1 seviyesine uygun gramer kuralları
  */

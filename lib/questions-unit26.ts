@@ -1,5 +1,5 @@
 /**
- * LinguaFlow - A1 Ünite 26: İşaret Sıfatları (80 soru)
+ * SteadyShell - A1 Ünite 26: İşaret Sıfatları (80 soru)
  * Gramer: Este/Esta, Ese/Esa, Aquel/Aquella
  */
 import { Question } from "./questions";

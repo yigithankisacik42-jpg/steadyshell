@@ -1,5 +1,5 @@
 /**
- * LinguaFlow - A1 Ünite 30: PODER Fiili (80 soru)
+ * SteadyShell - A1 Ünite 30: PODER Fiili (80 soru)
  * Gramer: Poder + mastar fiil - yetenek ve izin ifadesi
  */
 import { Question } from "./questions";

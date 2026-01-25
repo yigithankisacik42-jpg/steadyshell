@@ -30,14 +30,17 @@ export function LanguageSwitcher() {
             {/* Dropdown Menü */}
             {isOpen && (
                 <>
-                    {/* Overlay */}
+                    {/* Overlay - z-index must be lower than dropdown */}
                     <div
                         className="fixed inset-0 z-40"
                         onClick={() => setIsOpen(false)}
                     />
 
-                    {/* Dropdown */}
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    {/* Dropdown - z-index must be higher than overlay */}
+                    <div
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200"
+                        onClick={(e) => e.stopPropagation()}
+                    >
                         <div className="p-2">
                             <p className="text-xs font-bold text-slate-400 uppercase px-3 py-2">Dil Seç</p>
 
@@ -48,12 +51,16 @@ export function LanguageSwitcher() {
                                 return (
                                     <button
                                         key={lang.code}
-                                        onClick={() => {
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            console.log(`Switching language from ${currentLanguage.code} to ${lang.code}`);
                                             switchLanguage(lang.code);
-                                            setIsOpen(false);
+                                            // Close dropdown after a brief delay for visual feedback
+                                            setTimeout(() => setIsOpen(false), 100);
                                         }}
                                         className={cn(
-                                            "w-full flex items-center gap-3 p-3 rounded-xl transition-all",
+                                            "w-full flex items-center gap-3 p-3 rounded-xl transition-all cursor-pointer",
                                             isSelected
                                                 ? "bg-indigo-50 border-2 border-indigo-200"
                                                 : "hover:bg-slate-50 border-2 border-transparent"

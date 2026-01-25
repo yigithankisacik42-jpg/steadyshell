@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Kalıplar Veritabanı - İspanyolca A2
+ * SteadyShell Kalıplar Veritabanı - İspanyolca A2
  * 20 Ünite (ID: 21-40), her biri için 8 kalıp
  */
 

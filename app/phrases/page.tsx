@@ -52,7 +52,48 @@ function PhrasesContent() {
 
     const playAudio = (text: string) => {
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = "es-ES";
+
+        // Dil belirleme
+        let targetLang = "es-ES";
+        if (content.unitId >= 301 && content.unitId <= 360) {
+            targetLang = "fr-FR"; // Fransızca A1 ve A2
+        } else if (content.unitId >= 101 && content.unitId <= 220) {
+            targetLang = "en-US";
+        }
+
+        utterance.lang = targetLang;
+
+        // Kadın sesi tercih et
+        const voices = speechSynthesis.getVoices();
+        const femaleVoice = voices.find(v =>
+            v.lang.startsWith(targetLang.split('-')[0]) &&
+            (v.name.toLowerCase().includes('female') ||
+                v.name.toLowerCase().includes('woman') ||
+                v.name.toLowerCase().includes('amelie') ||
+                v.name.toLowerCase().includes('marie') ||
+                v.name.toLowerCase().includes('céline') ||
+                v.name.toLowerCase().includes('celine') ||
+                v.name.toLowerCase().includes('léa') ||
+                v.name.toLowerCase().includes('lea') ||
+                v.name.toLowerCase().includes('julie') ||
+                v.name.toLowerCase().includes('virginie') ||
+                v.name.toLowerCase().includes('paulina') ||
+                v.name.toLowerCase().includes('monica') ||
+                v.name.toLowerCase().includes('helena') ||
+                v.name.toLowerCase().includes('samantha') ||
+                v.name.toLowerCase().includes('karen') ||
+                v.name.toLowerCase().includes('victoria') ||
+                v.name.toLowerCase().includes('zira') ||
+                v.name.includes('Google') && v.name.toLowerCase().includes('female'))
+        ) || voices.find(v => v.lang.startsWith(targetLang.split('-')[0]));
+
+        if (femaleVoice) {
+            utterance.voice = femaleVoice;
+        }
+
+        utterance.rate = 0.9; // Biraz yavaş konuşsun
+        utterance.pitch = 1.1; // Kadın sesi için biraz daha yüksek pitch
+
         speechSynthesis.speak(utterance);
     };
 
@@ -122,7 +163,11 @@ function PhrasesContent() {
                         <div className="mb-8">
                             {content.level && (
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-2xl">🇪🇸</span>
+                                    <span className="text-2xl">
+                                        {content.unitId >= 301 && content.unitId <= 330 ? "🇫🇷" :
+                                            content.unitId >= 101 && content.unitId <= 220 ? "🇬🇧" :
+                                                "🇪🇸"}
+                                    </span>
                                     <span className="font-bold text-slate-600">{content.level}</span>
                                 </div>
                             )}

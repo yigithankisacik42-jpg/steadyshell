@@ -1,4 +1,4 @@
-// LinguaFlow Konuşma Pratikleri - Fransızca A1 (301-330)
+// SteadyShell Konuşma Pratikleri - Fransızca A1 (301-330)
 // Her ünite için 10 konuşma alıştırması
 
 export interface SpeakingExercise {
@@ -149,43 +149,9 @@ const unit308Speaking: UnitSpeaking = {
     ]
 };
 
-// ===== ÜNİTE 309: YİYECEKLER =====
+// ===== ÜNİTE 309: EVİMİZ =====
 const unit309Speaking: UnitSpeaking = {
-    unitId: 309, title: "Yiyecekler Pratiği",
-    exercises: [
-        { text: "J'ai faim.", translation: "Açım.", pronunciation: "je fen" },
-        { text: "Qu'est-ce qu'on mange?", translation: "Ne yiyeceğiz?", pronunciation: "kes kon manj" },
-        { text: "Le petit-déjeuner est prêt.", translation: "Kahvaltı hazır.", pronunciation: "lö pö-ti de-jö-ne e pre" },
-        { text: "Bon appétit!", translation: "Afiyet olsun!", pronunciation: "bon a-pe-ti" },
-        { text: "C'est délicieux!", translation: "Çok lezzetli!", pronunciation: "se de-li-syö" },
-        { text: "Je suis végétarien.", translation: "Vejetaryenim.", pronunciation: "jö süi ve-je-ta-ryen" },
-        { text: "Encore un peu?", translation: "Biraz daha?", pronunciation: "an-kor ön pö" },
-        { text: "Non merci, je suis rassasié.", translation: "Teşekkürler, doydum.", pronunciation: "non mer-si jö süi ra-sa-zye" },
-        { text: "Qu'est-ce que vous recommandez?", translation: "Ne önerirsiniz?", pronunciation: "kes kö vu rö-ko-man-de" },
-        { text: "Je voudrais le plat du jour.", translation: "Günün menüsünü istiyorum.", pronunciation: "jö vu-dre lö pla dü jur" }
-    ]
-};
-
-// ===== ÜNİTE 310: İÇECEKLER =====
-const unit310Speaking: UnitSpeaking = {
-    unitId: 310, title: "İçecekler Pratiği",
-    exercises: [
-        { text: "J'ai soif.", translation: "Susadım.", pronunciation: "je suaf" },
-        { text: "Un café, s'il vous plaît.", translation: "Bir kahve, lütfen.", pronunciation: "ön ka-fe sil vu ple" },
-        { text: "Avec ou sans sucre?", translation: "Şekerli mi şekersiz mi?", pronunciation: "a-vek u san sükr" },
-        { text: "Je voudrais un thé.", translation: "Bir çay istiyorum.", pronunciation: "jö vu-dre ön te" },
-        { text: "Un verre d'eau, s'il vous plaît.", translation: "Bir bardak su, lütfen.", pronunciation: "ön ver do sil vu ple" },
-        { text: "L'addition, s'il vous plaît.", translation: "Hesap, lütfen.", pronunciation: "la-di-syon sil vu ple" },
-        { text: "Santé!", translation: "Şerefe!", pronunciation: "san-te" },
-        { text: "C'est ma tournée.", translation: "Bu benden.", pronunciation: "se ma tur-ne" },
-        { text: "Qu'est-ce que vous buvez?", translation: "Ne içiyorsunuz?", pronunciation: "kes kö vu bü-ve" },
-        { text: "Avec des glaçons.", translation: "Buzlu.", pronunciation: "a-vek de gla-son" }
-    ]
-};
-
-// ===== ÜNİTE 311-320 =====
-const unit311Speaking: UnitSpeaking = {
-    unitId: 311, title: "Ev Pratiği",
+    unitId: 309, title: "Ev Pratiği",
     exercises: [
         { text: "Bienvenue chez moi!", translation: "Evime hoş geldiniz!", pronunciation: "byan-vö-nü şe mua" },
         { text: "Fais comme chez toi.", translation: "Evinde gibi hisset.", pronunciation: "fe kom şe tua" },
@@ -200,51 +166,88 @@ const unit311Speaking: UnitSpeaking = {
     ]
 };
 
+// ===== ÜNİTE 310: SINIFTA =====
+const unit310Speaking: UnitSpeaking = {
+    unitId: 310, title: "Sınıf Pratiği",
+    exercises: [
+        { text: "Je vais à l'école.", translation: "Okula gidiyorum.", pronunciation: "jö ve a le-kol" },
+        { text: "Ouvre ton livre.", translation: "Kitabını aç.", pronunciation: "uvr ton livr" },
+        { text: "Écris dans ton cahier.", translation: "Defterine yaz.", pronunciation: "e-kri dan ton ka-ye" },
+        { text: "Le professeur explique.", translation: "Öğretmen açıklıyor.", pronunciation: "lö pro-fe-sör eks-plik" },
+        { text: "Lève la main.", translation: "Elini kaldır.", pronunciation: "lev la men" },
+        { text: "Je n'ai pas compris.", translation: "Anlamadım.", pronunciation: "jö ne pa kom-pri" },
+        { text: "Pouvez-vous répéter?", translation: "Tekrar eder misiniz?", pronunciation: "pu-ve vu re-pe-te" },
+        { text: "Le cours commence.", translation: "Ders başlıyor.", pronunciation: "lö kur ko-mans" },
+        { text: "Où est le tableau?", translation: "Tahta nerede?", pronunciation: "u e lö ta-blo" },
+        { text: "Range tes affaires.", translation: "Eşyalarını topla.", pronunciation: "ranj te za-fer" }
+    ]
+};
+
+// ===== ÜNİTE 311: VÜCUDUMUZ =====
+const unit311Speaking: UnitSpeaking = {
+    unitId: 311, title: "Vücut Pratiği",
+    exercises: [
+        { text: "J'ai mal à la tête.", translation: "Başım ağrıyor.", pronunciation: "je mal a la tet" },
+        { text: "J'ai mal au ventre.", translation: "Karnım ağrıyor.", pronunciation: "je mal o vantr" },
+        { text: "J'ai mal au dos.", translation: "Sırtım ağrıyor.", pronunciation: "je mal o do" },
+        { text: "Ouvre la bouche.", translation: "Ağzını aç.", pronunciation: "uvr la buş" },
+        { text: "Lève la main.", translation: "Elini kaldır.", pronunciation: "lev la men" },
+        { text: "Ferme les yeux.", translation: "Gözlerini kapat.", pronunciation: "ferm le zyö" },
+        { text: "Je suis fort.", translation: "Güçlüyüm.", pronunciation: "jö süi for" },
+        { text: "J'ai les cheveux bruns.", translation: "Saçlarım kahverengi.", pronunciation: "je le şö-vö brön" },
+        { text: "Elle a les yeux bleus.", translation: "Mavi gözleri var.", pronunciation: "el a le zyö blö" },
+        { text: "Il est grand.", translation: "O uzun boylu.", pronunciation: "il e gran" }
+    ]
+};
+
+// ===== ÜNİTE 312: GİYSİLER =====
 const unit312Speaking: UnitSpeaking = {
-    unitId: 312, title: "Mobilya Pratiği",
+    unitId: 312, title: "Giysi Pratiği",
     exercises: [
-        { text: "Range ta chambre!", translation: "Odanı topla!", pronunciation: "ranj ta şambr" },
-        { text: "Assieds-toi sur le canapé.", translation: "Kanepede otur.", pronunciation: "a-sye tua sür lö ka-na-pe" },
-        { text: "Allume la lumière.", translation: "Işığı aç.", pronunciation: "a-lüm la lü-myer" },
-        { text: "Éteins la télévision.", translation: "Televizyonu kapat.", pronunciation: "e-ten la te-le-vi-zyon" },
-        { text: "Le lit est confortable.", translation: "Yatak rahat.", pronunciation: "lö li e kon-for-tabl" },
-        { text: "Il y a une armoire.", translation: "Bir dolap var.", pronunciation: "il ya ün ar-muar" },
-        { text: "La table est en bois.", translation: "Masa ahşap.", pronunciation: "la tabl e an bua" },
-        { text: "Mets ça dans le tiroir.", translation: "Bunu çekmeceye koy.", pronunciation: "me sa dan lö ti-ruar" },
-        { text: "Le miroir est cassé.", translation: "Ayna kırık.", pronunciation: "lö mi-ruar e ka-se" },
-        { text: "Le frigo est vide.", translation: "Buzdolabı boş.", pronunciation: "lö fri-go e vid" }
+        { text: "Qu'est-ce que tu portes?", translation: "Ne giyiyorsun?", pronunciation: "kes kö tü port" },
+        { text: "Je porte un pantalon noir.", translation: "Siyah pantolon giyiyorum.", pronunciation: "jö port ön pan-ta-lon nuar" },
+        { text: "Cette robe est belle.", translation: "Bu elbise güzel.", pronunciation: "set rob e bel" },
+        { text: "J'aime cette chemise.", translation: "Bu gömleği seviyorum.", pronunciation: "jem set şö-miz" },
+        { text: "Mets ton manteau.", translation: "Montunu giy.", pronunciation: "me ton man-to" },
+        { text: "Enlève tes chaussures.", translation: "Ayakkabılarını çıkar.", pronunciation: "an-lev te şo-sür" },
+        { text: "Vous l'avez en taille M?", translation: "M bedeniniz var mı?", pronunciation: "vu la-ve an tay em" },
+        { text: "Je peux l'essayer?", translation: "Deneyebilir miyim?", pronunciation: "jö pö le-se-ye" },
+        { text: "C'est trop grand.", translation: "Çok büyük.", pronunciation: "se tro gran" },
+        { text: "C'est trop petit.", translation: "Çok küçük.", pronunciation: "se tro pö-ti" }
     ]
 };
 
+// ===== ÜNİTE 313: YİYECEKLER =====
 const unit313Speaking: UnitSpeaking = {
-    unitId: 313, title: "Şehir Pratiği",
+    unitId: 313, title: "Yiyecekler Pratiği",
     exercises: [
-        { text: "Excusez-moi, où est la gare?", translation: "Affedersiniz, istasyon nerede?", pronunciation: "eks-kü-ze mua u e la gar" },
-        { text: "C'est tout droit.", translation: "Düz gidin.", pronunciation: "se tu drua" },
-        { text: "Tournez à droite.", translation: "Sağa dönün.", pronunciation: "tur-ne a druat" },
-        { text: "Tournez à gauche.", translation: "Sola dönün.", pronunciation: "tur-ne a goş" },
-        { text: "C'est près d'ici.", translation: "Buraya yakın.", pronunciation: "se pre di-si" },
-        { text: "C'est loin?", translation: "Uzak mı?", pronunciation: "se luen" },
-        { text: "Je cherche une pharmacie.", translation: "Eczane arıyorum.", pronunciation: "jö şerş ün far-ma-si" },
-        { text: "Il y a une banque près d'ici?", translation: "Yakında banka var mı?", pronunciation: "il ya ün bank pre di-si" },
-        { text: "Je me suis perdu.", translation: "Kayboldum.", pronunciation: "jö mö süi per-dü" },
-        { text: "Pouvez-vous m'aider?", translation: "Bana yardım edebilir misiniz?", pronunciation: "pu-ve vu me-de" }
+        { text: "J'ai faim.", translation: "Açım.", pronunciation: "je fen" },
+        { text: "Qu'est-ce qu'on mange?", translation: "Ne yiyeceğiz?", pronunciation: "kes kon manj" },
+        { text: "Le petit-déjeuner est prêt.", translation: "Kahvaltı hazır.", pronunciation: "lö pö-ti de-jö-ne e pre" },
+        { text: "Bon appétit!", translation: "Afiyet olsun!", pronunciation: "bon a-pe-ti" },
+        { text: "C'est délicieux!", translation: "Çok lezzetli!", pronunciation: "se de-li-syö" },
+        { text: "Je suis végétarien.", translation: "Vejetaryenim.", pronunciation: "jö süi ve-je-ta-ryen" },
+        { text: "Encore un peu?", translation: "Biraz daha?", pronunciation: "an-kor ön pö" },
+        { text: "Non merci, je suis rassasié.", translation: "Teşekkürler, doydum.", pronunciation: "non mer-si jö süi ra-sa-zye" },
+        { text: "J'aime les légumes.", translation: "Sebzeleri severim.", pronunciation: "jem le le-güm" },
+        { text: "Le pain est frais.", translation: "Ekmek taze.", pronunciation: "lö pan e fre" }
     ]
 };
 
+// ===== ÜNİTE 314: İÇECEKLER =====
 const unit314Speaking: UnitSpeaking = {
-    unitId: 314, title: "Ulaşım Pratiği",
+    unitId: 314, title: "İçecekler Pratiği",
     exercises: [
-        { text: "Un billet aller-retour.", translation: "Gidiş-dönüş bileti.", pronunciation: "ön bi-ye a-le rö-tur" },
-        { text: "Le train part à quelle heure?", translation: "Tren saat kaçta kalkıyor?", pronunciation: "lö tren par a kel ör" },
-        { text: "Je voudrais réserver une place.", translation: "Bir yer ayırtmak istiyorum.", pronunciation: "jö vu-dre re-zer-ve ün plas" },
-        { text: "De quel quai part le train?", translation: "Tren hangi perondan kalkıyor?", pronunciation: "dö kel ke par lö tren" },
-        { text: "Où est l'arrêt de bus?", translation: "Otobüs durağı nerede?", pronunciation: "u e la-re dö büs" },
-        { text: "Je suis en retard.", translation: "Geç kaldım.", pronunciation: "jö süi an rö-tar" },
-        { text: "Il y a des embouteillages.", translation: "Trafik var.", pronunciation: "il ya de zan-bu-te-yaj" },
-        { text: "Bon voyage!", translation: "İyi yolculuklar!", pronunciation: "bon vua-yaj" },
-        { text: "Je descends ici.", translation: "Burada iniyorum.", pronunciation: "jö de-san di-si" },
-        { text: "C'est direct?", translation: "Aktarmasız mı?", pronunciation: "se di-rekt" }
+        { text: "J'ai soif.", translation: "Susadım.", pronunciation: "je suaf" },
+        { text: "Un café, s'il vous plaît.", translation: "Bir kahve, lütfen.", pronunciation: "ön ka-fe sil vu ple" },
+        { text: "Avec ou sans sucre?", translation: "Şekerli mi şekersiz mi?", pronunciation: "a-vek u san sükr" },
+        { text: "Je voudrais un thé.", translation: "Bir çay istiyorum.", pronunciation: "jö vu-dre ön te" },
+        { text: "Un verre d'eau, s'il vous plaît.", translation: "Bir bardak su, lütfen.", pronunciation: "ön ver do sil vu ple" },
+        { text: "L'addition, s'il vous plaît.", translation: "Hesap, lütfen.", pronunciation: "la-di-syon sil vu ple" },
+        { text: "Santé!", translation: "Şerefe!", pronunciation: "san-te" },
+        { text: "C'est ma tournée.", translation: "Bu benden.", pronunciation: "se ma tur-ne" },
+        { text: "Qu'est-ce que vous buvez?", translation: "Ne içiyorsunuz?", pronunciation: "kes kö vu bü-ve" },
+        { text: "Avec des glaçons.", translation: "Buzlu.", pronunciation: "a-vek de gla-son" }
     ]
 };
 
@@ -265,23 +268,7 @@ const unit315Speaking: UnitSpeaking = {
 };
 
 const unit316Speaking: UnitSpeaking = {
-    unitId: 316, title: "Hava Durumu Pratiği",
-    exercises: [
-        { text: "Quel temps fait-il?", translation: "Hava nasıl?", pronunciation: "kel tan fe-til" },
-        { text: "Il fait beau.", translation: "Hava güzel.", pronunciation: "il fe bo" },
-        { text: "Il pleut.", translation: "Yağmur yağıyor.", pronunciation: "il plö" },
-        { text: "Il neige.", translation: "Kar yağıyor.", pronunciation: "il nej" },
-        { text: "Il fait chaud.", translation: "Hava sıcak.", pronunciation: "il fe şo" },
-        { text: "Il fait froid.", translation: "Hava soğuk.", pronunciation: "il fe frua" },
-        { text: "Le soleil brille.", translation: "Güneş parlıyor.", pronunciation: "lö so-ley briy" },
-        { text: "Il y a du vent.", translation: "Rüzgar var.", pronunciation: "il ya dü van" },
-        { text: "Prends ton parapluie.", translation: "Şemsiyeni al.", pronunciation: "pran ton pa-ra-plüi" },
-        { text: "Il fait 25 degrés.", translation: "25 derece var.", pronunciation: "il fe vent-senk dö-gre" }
-    ]
-};
-
-const unit317Speaking: UnitSpeaking = {
-    unitId: 317, title: "Günlük Aktiviteler Pratiği",
+    unitId: 316, title: "Günlük Rutin Pratiği",
     exercises: [
         { text: "Je me réveille à 7 heures.", translation: "7'de uyanıyorum.", pronunciation: "jö mö re-vey a set ör" },
         { text: "Je prends le petit-déjeuner.", translation: "Kahvaltı yapıyorum.", pronunciation: "jö pran lö pö-ti de-jö-ne" },
@@ -296,8 +283,8 @@ const unit317Speaking: UnitSpeaking = {
     ]
 };
 
-const unit318Speaking: UnitSpeaking = {
-    unitId: 318, title: "Hobiler Pratiği",
+const unit317Speaking: UnitSpeaking = {
+    unitId: 317, title: "Hobiler Pratiği",
     exercises: [
         { text: "Qu'est-ce que tu aimes faire?", translation: "Ne yapmayı seversin?", pronunciation: "kes kö tü em fer" },
         { text: "J'aime lire.", translation: "Okumayı severim.", pronunciation: "jem lir" },
@@ -309,6 +296,22 @@ const unit318Speaking: UnitSpeaking = {
         { text: "Je joue aux jeux vidéo.", translation: "Video oyunu oynuyorum.", pronunciation: "jö ju o jö vi-de-o" },
         { text: "C'est passionnant!", translation: "Çok heyecan verici!", pronunciation: "se pa-syo-nan" },
         { text: "Je m'amuse beaucoup.", translation: "Çok eğleniyorum.", pronunciation: "jö ma-müz bo-ku" }
+    ]
+};
+
+const unit318Speaking: UnitSpeaking = {
+    unitId: 318, title: "Hava Durumu Pratiği",
+    exercises: [
+        { text: "Quel temps fait-il?", translation: "Hava nasıl?", pronunciation: "kel tan fe-til" },
+        { text: "Il fait beau.", translation: "Hava güzel.", pronunciation: "il fe bo" },
+        { text: "Il pleut.", translation: "Yağmur yağıyor.", pronunciation: "il plö" },
+        { text: "Il neige.", translation: "Kar yağıyor.", pronunciation: "il nej" },
+        { text: "Il fait chaud.", translation: "Hava sıcak.", pronunciation: "il fe şo" },
+        { text: "Il fait froid.", translation: "Hava soğuk.", pronunciation: "il fe frua" },
+        { text: "Le soleil brille.", translation: "Güneş parlıyor.", pronunciation: "lö so-ley briy" },
+        { text: "Il y a du vent.", translation: "Rüzgar var.", pronunciation: "il ya dü van" },
+        { text: "Prends ton parapluie.", translation: "Şmsiyeni al.", pronunciation: "pran ton pa-ra-plüi" },
+        { text: "Il fait 25 degrés.", translation: "25 derece var.", pronunciation: "il fe vent-senk dö-gre" }
     ]
 };
 
@@ -329,136 +332,72 @@ const unit319Speaking: UnitSpeaking = {
 };
 
 const unit320Speaking: UnitSpeaking = {
-    unitId: 320, title: "Vücut Pratiği",
+    unitId: 320, title: "Şehirde Yönler Pratiği",
     exercises: [
-        { text: "J'ai mal à la tête.", translation: "Başım ağrıyor.", pronunciation: "je mal a la tet" },
-        { text: "J'ai mal au ventre.", translation: "Karnım ağrıyor.", pronunciation: "je mal o vantr" },
-        { text: "J'ai mal au dos.", translation: "Sırtım ağrıyor.", pronunciation: "je mal o do" },
-        { text: "Ouvre la bouche.", translation: "Ağzını aç.", pronunciation: "uvr la buş" },
-        { text: "Lève la main.", translation: "Elini kaldır.", pronunciation: "lev la men" },
-        { text: "Ferme les yeux.", translation: "Gözlerini kapat.", pronunciation: "ferm le zyö" },
-        { text: "Je suis fort.", translation: "Güçlüyüm.", pronunciation: "jö süi for" },
-        { text: "J'ai les cheveux bruns.", translation: "Saçlarım kahverengi.", pronunciation: "je le şö-vö brön" },
-        { text: "Elle a les yeux bleus.", translation: "Mavi gözleri var.", pronunciation: "el a le zyö blö" },
-        { text: "Il est grand.", translation: "O uzun boylu.", pronunciation: "il e gran" }
+        { text: "Excusez-moi, où est la gare?", translation: "Affedersiniz, istasyon nerede?", pronunciation: "eks-kü-ze mua u e la gar" },
+        { text: "C'est tout droit.", translation: "Düz gidin.", pronunciation: "se tu drua" },
+        { text: "Tournez à droite.", translation: "Sağa dönün.", pronunciation: "tur-ne a druat" },
+        { text: "Tournez à gauche.", translation: "Sola dönün.", pronunciation: "tur-ne a goş" },
+        { text: "C'est près d'ici.", translation: "Buraya yakın.", pronunciation: "se pre di-si" },
+        { text: "C'est loin?", translation: "Uzak mı?", pronunciation: "se luen" },
+        { text: "Je cherche une pharmacie.", translation: "Eczane arıyorum.", pronunciation: "jö şerş ün far-ma-si" },
+        { text: "Il y a une banque près d'ici?", translation: "Yakında banka var mı?", pronunciation: "il ya ün bank pre di-si" },
+        { text: "Je me suis perdu.", translation: "Kayboldum.", pronunciation: "jö mö süi per-dü" },
+        { text: "Pouvez-vous m'aider?", translation: "Bana yardım edebilir misiniz?", pronunciation: "pu-ve vu me-de" }
     ]
 };
 
 // ===== ÜNİTE 321-330 =====
 const unit321Speaking: UnitSpeaking = {
-    unitId: 321, title: "Giysiler Pratiği",
+    unitId: 321, title: "Ulaşım Pratiği",
     exercises: [
-        { text: "Qu'est-ce que tu portes?", translation: "Ne giyiyorsun?", pronunciation: "kes kö tü port" },
-        { text: "Je porte un pantalon noir.", translation: "Siyah pantolon giyiyorum.", pronunciation: "jö port ön pan-ta-lon nuar" },
-        { text: "Cette robe est belle.", translation: "Bu elbise güzel.", pronunciation: "set rob e bel" },
-        { text: "J'aime cette chemise.", translation: "Bu gömleği seviyorum.", pronunciation: "jem set şö-miz" },
-        { text: "Mets ton manteau.", translation: "Montunu giy.", pronunciation: "me ton man-to" },
-        { text: "Enlève tes chaussures.", translation: "Ayakkabılarını çıkar.", pronunciation: "an-lev te şo-sür" },
-        { text: "Vous l'avez en taille M?", translation: "M bedeniniz var mı?", pronunciation: "vu la-ve an tay em" },
-        { text: "Je peux l'essayer?", translation: "Deneyebilir miyim?", pronunciation: "jö pö le-se-ye" },
-        { text: "C'est trop grand.", translation: "Çok büyük.", pronunciation: "se tro gran" },
-        { text: "C'est trop petit.", translation: "Çok küçük.", pronunciation: "se tro pö-ti" }
+        { text: "Un billet aller-retour.", translation: "Gidiş-dönüş bileti.", pronunciation: "ön bi-ye a-le rö-tur" },
+        { text: "Le train part à quelle heure?", translation: "Tren saat kaçta kalkıyor?", pronunciation: "lö tren par a kel ör" },
+        { text: "Je voudrais réserver une place.", translation: "Bir yer ayırtmak istiyorum.", pronunciation: "jö vu-dre re-zer-ve ün plas" },
+        { text: "De quel quai part le train?", translation: "Tren hangi perondan kalkıyor?", pronunciation: "dö kel ke par lö tren" },
+        { text: "Où est l'arrêt de bus?", translation: "Otobüs durağı nerede?", pronunciation: "u e la-re dö büs" },
+        { text: "Je suis en retard.", translation: "Geç kaldım.", pronunciation: "jö süi an rö-tar" },
+        { text: "Il y a des embouteillages.", translation: "Trafik var.", pronunciation: "il ya de zan-bu-te-yaj" },
+        { text: "Bon voyage!", translation: "İyi yolculuklar!", pronunciation: "bon vua-yaj" },
+        { text: "Je descends ici.", translation: "Burada iniyorum.", pronunciation: "jö de-san di-si" },
+        { text: "C'est direct?", translation: "Aktarmasız mı?", pronunciation: "se di-rekt" }
     ]
 };
 
 const unit322Speaking: UnitSpeaking = {
-    unitId: 322, title: "Hayvanlar Pratiği",
+    unitId: 322, title: "Mevsimler Pratiği",
     exercises: [
-        { text: "J'ai un chien.", translation: "Köpeğim var.", pronunciation: "je ön şyen" },
-        { text: "Le chat dort.", translation: "Kedi uyuyor.", pronunciation: "lö şa dor" },
-        { text: "L'oiseau chante.", translation: "Kuş şarkı söylüyor.", pronunciation: "lua-zo şant" },
-        { text: "J'aime les animaux.", translation: "Hayvanları severim.", pronunciation: "jem le za-ni-mo" },
-        { text: "Le chien aboie.", translation: "Köpek havlıyor.", pronunciation: "lö şyen a-bua" },
-        { text: "Le chat miaule.", translation: "Kedi miyavlıyor.", pronunciation: "lö şa myol" },
-        { text: "C'est un animal domestique.", translation: "Bu evcil hayvan.", pronunciation: "se tön a-ni-mal do-mes-tik" },
-        { text: "Le lion est sauvage.", translation: "Aslan vahşi.", pronunciation: "lö li-on e so-vaj" },
-        { text: "Je monte à cheval.", translation: "Ata biniyorum.", pronunciation: "jö mont a şö-val" },
-        { text: "L'éléphant est grand.", translation: "Fil büyük.", pronunciation: "le-le-fan e gran" }
+        { text: "C'est le printemps.", translation: "Bahar geldi.", pronunciation: "se lö pren-tan" },
+        { text: "En été, il fait chaud.", translation: "Yazın hava sıcak.", pronunciation: "an e-te il fe şo" },
+        { text: "Les feuilles tombent en automne.", translation: "Sonbaharda yapraklar dökülür.", pronunciation: "le föy tomb an o-ton" },
+        { text: "Il neige en hiver.", translation: "Kışın kar yağar.", pronunciation: "il nej an i-ver" },
+        { text: "J'aime le printemps.", translation: "Baharı severim.", pronunciation: "jem lö pren-tan" },
+        { text: "L'été est ma saison préférée.", translation: "Yaz en sevdiğim mevsim.", pronunciation: "le-te e ma se-zon pre-fe-re" },
+        { text: "Il fait froid en hiver.", translation: "Kışın soğuk olur.", pronunciation: "il fe frua an i-ver" },
+        { text: "Les fleurs poussent au printemps.", translation: "Baharda çiçekler açar.", pronunciation: "le flör pus o pren-tan" },
+        { text: "Je vais à la plage en été.", translation: "Yazın plaja giderim.", pronunciation: "jö ve a la plaj an e-te" },
+        { text: "L'automne est beau.", translation: "Sonbahar güzel.", pronunciation: "lo-ton e bo" }
     ]
 };
 
 const unit323Speaking: UnitSpeaking = {
-    unitId: 323, title: "Meyve Sebze Pratiği",
+    unitId: 323, title: "Doğum Günü Pratiği",
     exercises: [
-        { text: "Je voudrais des pommes.", translation: "Elma istiyorum.", pronunciation: "jö vu-dre de pom" },
-        { text: "Les oranges sont fraîches.", translation: "Portakallar taze.", pronunciation: "le zo-ranj son freş" },
-        { text: "J'aime les fraises.", translation: "Çilekleri severim.", pronunciation: "jem le frez" },
-        { text: "Les légumes sont bons pour la santé.", translation: "Sebzeler sağlığa iyi.", pronunciation: "le le-güm son bon pur la san-te" },
-        { text: "Un kilo de tomates.", translation: "Bir kilo domates.", pronunciation: "ön ki-lo dö to-mat" },
-        { text: "Les carottes sont fraîches.", translation: "Havuçlar taze.", pronunciation: "le ka-rot son freş" },
-        { text: "C'est mûr?", translation: "Olgun mu?", pronunciation: "se mür" },
-        { text: "C'est trop vert.", translation: "Çok yeşil.", pronunciation: "se tro ver" },
-        { text: "Je n'aime pas les oignons.", translation: "Soğan sevmem.", pronunciation: "jö nem pa le zo-nyon" },
-        { text: "C'est bio?", translation: "Organik mi?", pronunciation: "se bi-o" }
+        { text: "Joyeux anniversaire!", translation: "Mutlu yıllar!", pronunciation: "jua-yö a-ni-ver-ser" },
+        { text: "C'est ton anniversaire?", translation: "Bugün doğum günün mü?", pronunciation: "se ton a-ni-ver-ser" },
+        { text: "Tu as quel âge?", translation: "Kaç yaşındasın?", pronunciation: "tü a kel aj" },
+        { text: "J'ai 25 ans.", translation: "25 yaşındayım.", pronunciation: "je vent-senk an" },
+        { text: "Voici ton cadeau.", translation: "İşte hediyem.", pronunciation: "vua-si ton ka-do" },
+        { text: "Merci beaucoup!", translation: "Çok teşekkürler!", pronunciation: "mer-si bo-ku" },
+        { text: "On fait une fête!", translation: "Parti yapalım!", pronunciation: "on fe ün fet" },
+        { text: "Souffle les bougies!", translation: "Mumlara üfle!", pronunciation: "sufl le bu-ji" },
+        { text: "Le gâteau est délicieux.", translation: "Pasta çok lezzetli.", pronunciation: "lö ga-to e de-li-syö" },
+        { text: "Fais un vœu!", translation: "Dilek tut!", pronunciation: "fe ön vö" }
     ]
 };
 
 const unit324Speaking: UnitSpeaking = {
-    unitId: 324, title: "Alışveriş Pratiği",
-    exercises: [
-        { text: "Combien ça coûte?", translation: "Bu ne kadar?", pronunciation: "kom-byan sa kut" },
-        { text: "C'est trop cher.", translation: "Çok pahalı.", pronunciation: "se tro şer" },
-        { text: "Vous avez une réduction?", translation: "İndiriminiz var mı?", pronunciation: "vu za-ve ün re-dük-syon" },
-        { text: "Je peux payer par carte?", translation: "Kartla ödeyebilir miyim?", pronunciation: "jö pö pe-ye par kart" },
-        { text: "Un sac, s'il vous plaît.", translation: "Bir poşet, lütfen.", pronunciation: "ön sak sil vu ple" },
-        { text: "Gardez la monnaie.", translation: "Üstü kalsın.", pronunciation: "gar-de la mo-ne" },
-        { text: "Je regarde seulement.", translation: "Sadece bakıyorum.", pronunciation: "jö rö-gard söl-man" },
-        { text: "Je vais réfléchir.", translation: "Düşüneceğim.", pronunciation: "jö ve re-fle-şir" },
-        { text: "Je prends celui-ci.", translation: "Bunu alıyorum.", pronunciation: "jö pran sö-lui-si" },
-        { text: "Où est la caisse?", translation: "Kasa nerede?", pronunciation: "u e la kes" }
-    ]
-};
-
-const unit325Speaking: UnitSpeaking = {
-    unitId: 325, title: "Sağlık Pratiği",
-    exercises: [
-        { text: "Je suis malade.", translation: "Hastayım.", pronunciation: "jö süi ma-lad" },
-        { text: "J'ai de la fièvre.", translation: "Ateşim var.", pronunciation: "je dö la fyevr" },
-        { text: "J'ai mal à la gorge.", translation: "Boğazım ağrıyor.", pronunciation: "je mal a la gorj" },
-        { text: "Je tousse.", translation: "Öksürüyorum.", pronunciation: "jö tus" },
-        { text: "J'ai le rhume.", translation: "Nezle oldum.", pronunciation: "je lö rüm" },
-        { text: "Je dois voir un médecin.", translation: "Doktor görmem lazım.", pronunciation: "jö dua vuar ön med-sen" },
-        { text: "Prenez ce médicament.", translation: "Bu ilacı alın.", pronunciation: "prö-ne sö me-di-ka-man" },
-        { text: "Reposez-vous bien.", translation: "İyi dinlenin.", pronunciation: "rö-po-ze vu byan" },
-        { text: "Je me sens mieux.", translation: "Daha iyi hissediyorum.", pronunciation: "jö mö san myö" },
-        { text: "Bonne guérison!", translation: "Geçmiş olsun!", pronunciation: "bon ge-ri-zon" }
-    ]
-};
-
-const unit326Speaking: UnitSpeaking = {
-    unitId: 326, title: "Okul Pratiği",
-    exercises: [
-        { text: "Je vais à l'école.", translation: "Okula gidiyorum.", pronunciation: "jö ve a le-kol" },
-        { text: "J'ai un examen demain.", translation: "Yarın sınavım var.", pronunciation: "je ön eg-za-men dö-men" },
-        { text: "J'étudie le français.", translation: "Fransızca çalışıyorum.", pronunciation: "je-tü-di lö fran-se" },
-        { text: "Le professeur est sympa.", translation: "Öğretmen sempatik.", pronunciation: "lö pro-fe-sör e sen-pa" },
-        { text: "J'ai fait mes devoirs.", translation: "Ödevimi yaptım.", pronunciation: "je fe me dö-vuar" },
-        { text: "La classe commence à 9 heures.", translation: "Ders 9'da başlıyor.", pronunciation: "la klas ko-mans a növ ör" },
-        { text: "J'ai réussi l'examen!", translation: "Sınavı geçtim!", pronunciation: "je re-ü-si leg-za-men" },
-        { text: "Je dois étudier plus.", translation: "Daha çok çalışmam lazım.", pronunciation: "jö dua e-tü-dye plüs" },
-        { text: "Ouvre ton livre.", translation: "Kitabını aç.", pronunciation: "uvr ton livr" },
-        { text: "Écris dans ton cahier.", translation: "Defterine yaz.", pronunciation: "e-kri dan ton ka-ye" }
-    ]
-};
-
-const unit327Speaking: UnitSpeaking = {
-    unitId: 327, title: "Spor Pratiği",
-    exercises: [
-        { text: "Je joue au football.", translation: "Futbol oynuyorum.", pronunciation: "jö ju o fut-bol" },
-        { text: "J'aime le tennis.", translation: "Tenisi severim.", pronunciation: "jem lö te-nis" },
-        { text: "Je fais de la natation.", translation: "Yüzüyorum.", pronunciation: "jö fe dö la na-ta-syon" },
-        { text: "On a gagné!", translation: "Kazandık!", pronunciation: "on a ga-nye" },
-        { text: "On a perdu.", translation: "Kaybettik.", pronunciation: "on a per-dü" },
-        { text: "Allez, on joue!", translation: "Hadi oynayalım!", pronunciation: "a-le on ju" },
-        { text: "Je m'entraîne tous les jours.", translation: "Her gün antrenman yapıyorum.", pronunciation: "jö man-tren tu le jur" },
-        { text: "C'est un bon match!", translation: "İyi bir maç!", pronunciation: "se tön bon maç" },
-        { text: "Je suis fatigué après le sport.", translation: "Spordan sonra yorgunum.", pronunciation: "jö süi fa-ti-ge a-pre lö spor" },
-        { text: "L'équipe est forte.", translation: "Takım güçlü.", pronunciation: "le-kip e fort" }
-    ]
-};
-
-const unit328Speaking: UnitSpeaking = {
-    unitId: 328, title: "Tatil Pratiği",
+    unitId: 324, title: "Tatil Pratiği",
     exercises: [
         { text: "Je pars en vacances!", translation: "Tatile gidiyorum!", pronunciation: "jö par an va-kans" },
         { text: "J'ai réservé un hôtel.", translation: "Otel ayırttım.", pronunciation: "je re-zer-ve ön o-tel" },
@@ -473,19 +412,83 @@ const unit328Speaking: UnitSpeaking = {
     ]
 };
 
-const unit329Speaking: UnitSpeaking = {
-    unitId: 329, title: "İletişim Pratiği",
+const unit325Speaking: UnitSpeaking = {
+    unitId: 325, title: "Alışveriş Pratiği",
     exercises: [
-        { text: "Mon téléphone sonne.", translation: "Telefonum çalıyor.", pronunciation: "mon te-le-fon son" },
-        { text: "Je t'appelle ce soir.", translation: "Bu akşam seni ararım.", pronunciation: "jö ta-pel sö suar" },
-        { text: "Tu m'as envoyé un message?", translation: "Bana mesaj mı attın?", pronunciation: "tü ma an-vua-ye ön me-saj" },
-        { text: "Je n'ai pas de réseau.", translation: "Çekim yok.", pronunciation: "jö ne pa dö re-zo" },
-        { text: "Écris-moi un email.", translation: "Bana email yaz.", pronunciation: "e-kri mua ön i-mel" },
-        { text: "Je suis sur Internet.", translation: "İnternetteyim.", pronunciation: "jö süi sür en-ter-net" },
+        { text: "Combien ça coûte?", translation: "Bu ne kadar?", pronunciation: "kom-byan sa kut" },
+        { text: "C'est trop cher.", translation: "Çok pahalı.", pronunciation: "se tro şer" },
+        { text: "Vous avez une réduction?", translation: "İndiriminiz var mı?", pronunciation: "vu za-ve ün re-dük-syon" },
+        { text: "Je peux payer par carte?", translation: "Kartla ödeyebilir miyim?", pronunciation: "jö pö pe-ye par kart" },
+        { text: "Un sac, s'il vous plaît.", translation: "Bir poşet, lütfen.", pronunciation: "ön sak sil vu ple" },
+        { text: "Gardez la monnaie.", translation: "Üstü kalsın.", pronunciation: "gar-de la mo-ne" },
+        { text: "Je regarde seulement.", translation: "Sadece bakıyorum.", pronunciation: "jö rö-gard söl-man" },
+        { text: "Je vais réfléchir.", translation: "Düşüneceğim.", pronunciation: "jö ve re-fle-şir" },
+        { text: "Je prends celui-ci.", translation: "Bunu alıyorum.", pronunciation: "jö pran sö-lui-si" },
+        { text: "Où est la caisse?", translation: "Kasa nerede?", pronunciation: "u e la kes" }
+    ]
+};
+
+const unit326Speaking: UnitSpeaking = {
+    unitId: 326, title: "Restoran Pratiği",
+    exercises: [
+        { text: "Une table pour deux, s'il vous plaît.", translation: "İki kişilik masa, lütfen.", pronunciation: "ün tabl pur dö sil vu ple" },
+        { text: "Qu'est-ce que vous recommandez?", translation: "Ne önerirsiniz?", pronunciation: "kes kö vu rö-ko-man-de" },
+        { text: "Je voudrais le menu.", translation: "Menüyü istiyorum.", pronunciation: "jö vu-dre lö mö-nü" },
+        { text: "L'addition, s'il vous plaît.", translation: "Hesap, lütfen.", pronunciation: "la-di-syon sil vu ple" },
+        { text: "C'était délicieux!", translation: "Çok lezzetliydi!", pronunciation: "se-te de-li-syö" },
+        { text: "Je suis allergique aux noix.", translation: "Fındığa alerjim var.", pronunciation: "jö süi a-ler-jik o nua" },
+        { text: "Un verre de vin rouge.", translation: "Bir kadeh kırmızı şarap.", pronunciation: "ön ver dö ven ruj" },
+        { text: "Je voudrais le plat du jour.", translation: "Günün menüsünü istiyorum.", pronunciation: "jö vu-dre lö pla dü jur" },
+        { text: "Pouvez-vous apporter du pain?", translation: "Ekmek getirir misiniz?", pronunciation: "pu-ve vu a-por-te dü pen" },
+        { text: "C'est à emporter.", translation: "Paket olsun.", pronunciation: "se ta an-por-te" }
+    ]
+};
+
+const unit327Speaking: UnitSpeaking = {
+    unitId: 327, title: "Sıfat Pratiği",
+    exercises: [
+        { text: "C'est grand ou petit?", translation: "Büyük mü küçük mü?", pronunciation: "se gran u pö-ti" },
+        { text: "Cette maison est vieille.", translation: "Bu ev eski.", pronunciation: "set me-zon e vyey" },
+        { text: "La voiture est rapide.", translation: "Araba hızlı.", pronunciation: "la vua-tür e ra-pid" },
+        { text: "C'est très intéressant.", translation: "Çok ilginç.", pronunciation: "se tre an-te-re-san" },
+        { text: "Elle est belle.", translation: "O güzel.", pronunciation: "el e bel" },
+        { text: "Il est jeune.", translation: "O genç.", pronunciation: "il e jön" },
+        { text: "C'est facile ou difficile?", translation: "Kolay mı zor mu?", pronunciation: "se fa-sil u di-fi-sil" },
+        { text: "La rue est large.", translation: "Sokak geniş.", pronunciation: "la rü e larj" },
+        { text: "Le film est long.", translation: "Film uzun.", pronunciation: "lö film e long" },
+        { text: "C'est nouveau.", translation: "Bu yeni.", pronunciation: "se nu-vo" }
+    ]
+};
+
+const unit328Speaking: UnitSpeaking = {
+    unitId: 328, title: "Hayvanlar Pratiği",
+    exercises: [
+        { text: "J'ai un chien.", translation: "Köpeğim var.", pronunciation: "je ön şyen" },
+        { text: "Le chat dort.", translation: "Kedi uyuyor.", pronunciation: "lö şa dor" },
+        { text: "L'oiseau chante.", translation: "Kuş şarkı söylüyor.", pronunciation: "lua-zo şant" },
+        { text: "J'aime les animaux.", translation: "Hayvanları severim.", pronunciation: "jem le za-ni-mo" },
+        { text: "Le chien aboie.", translation: "Köpek havlıyor.", pronunciation: "lö şyen a-bua" },
+        { text: "Le chat miaule.", translation: "Kedi miyavlıyor.", pronunciation: "lö şa myol" },
+        { text: "C'est un animal domestique.", translation: "Bu evcil hayvan.", pronunciation: "se tön a-ni-mal do-mes-tik" },
+        { text: "Le lion est sauvage.", translation: "Aslan vahşi.", pronunciation: "lö li-on e so-vaj" },
+        { text: "Je monte à cheval.", translation: "Ata biniyorum.", pronunciation: "jö mont a şö-val" },
+        { text: "L'éléphant est grand.", translation: "Fil büyük.", pronunciation: "le-le-fan e gran" }
+    ]
+};
+
+const unit329Speaking: UnitSpeaking = {
+    unitId: 329, title: "Teknoloji Pratiği",
+    exercises: [
+        { text: "Mon téléphone est cassé.", translation: "Telefonum bozuldu.", pronunciation: "mon te-le-fon e ka-se" },
+        { text: "J'ai un ordinateur.", translation: "Bilgisayarım var.", pronunciation: "je ön or-di-na-tör" },
+        { text: "Le wifi ne marche pas.", translation: "Wifi çalışmıyor.", pronunciation: "lö wi-fi nö marş pa" },
         { text: "Je télécharge une application.", translation: "Uygulama indiriyorum.", pronunciation: "jö te-le-şarj ün a-pli-ka-syon" },
-        { text: "Tu es connecté?", translation: "Bağlı mısın?", pronunciation: "tü e ko-nek-te" },
-        { text: "Quel est ton numéro?", translation: "Numaran ne?", pronunciation: "kel e ton nü-me-ro" },
-        { text: "Je réponds tout de suite.", translation: "Hemen cevap veriyorum.", pronunciation: "jö re-pon tu dö süit" }
+        { text: "Envoie-moi un message.", translation: "Bana mesaj at.", pronunciation: "an-vua mua ön me-saj" },
+        { text: "Je suis sur Internet.", translation: "İnternetteyim.", pronunciation: "jö süi sür en-ter-net" },
+        { text: "Où est le chargeur?", translation: "Şarj aleti nerede?", pronunciation: "u e lö şar-jör" },
+        { text: "La batterie est vide.", translation: "Batarya bitti.", pronunciation: "la ba-tri e vid" },
+        { text: "Fais une photo!", translation: "Fotoğraf çek!", pronunciation: "fe ün fo-to" },
+        { text: "Je regarde des vidéos.", translation: "Video izliyorum.", pronunciation: "jö rö-gard de vi-de-o" }
     ]
 };
 

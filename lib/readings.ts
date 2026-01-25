@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Okuma Veritabanı - İspanyolca A1
+ * SteadyShell Okuma Veritabanı - İspanyolca A1
  * Daha uzun metinler ve 5 soru/ünite
  */
 
@@ -8,6 +8,7 @@ import { getB1ReadingForUnit } from './readings-b1';
 import { getB2ReadingForUnit } from './readings-b2';
 import { getEnglishA2ReadingForUnit } from './readings-en-a2';
 import { getReadingForUnit as getFrenchA1ReadingForUnit } from './readings-fr-a1';
+import { getFrenchA2ReadingForUnit } from './readings-fr-a2';
 
 export interface ReadingQuestion {
     id: number;
@@ -504,6 +505,12 @@ export function getReadingForUnit(unitId: number): UnitReading {
     if (unitId >= 301 && unitId <= 330) {
         const frA1Reading = getFrenchA1ReadingForUnit(unitId);
         return frA1Reading || unit1Reading;
+    }
+
+    // French A2 seviyesi (331-360)
+    if (unitId >= 331 && unitId <= 360) {
+        const frA2Reading = getFrenchA2ReadingForUnit(unitId);
+        return frA2Reading || unit1Reading;
     }
 
     return unit1Reading;

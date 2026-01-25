@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Bot, Send, ArrowLeft, Loader2, MessageCircle, Globe, Check, Theater, Sparkles, Mic, MicOff, Volume2, VolumeX } from "lucide-react";
+import { Bot, Send, ArrowLeft, Loader2, MessageCircle, Globe, Check, Theater, Sparkles, Mic, MicOff, Volume2, VolumeX, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { SCENE_CATEGORIES, getSceneById, buildSceneSystemPrompt, Scene, LANGUAGE_NAMES } from "@/lib/scenes";
 import { useSpeech } from "@/lib/use-speech";
+import { cn } from "@/lib/utils";
 
 const LANGUAGES = [
     { code: 'es', name: 'İspanyolca', flag: '🇪🇸' },
@@ -21,12 +22,10 @@ interface Message {
 }
 
 export default function SceneModePage() {
-    // Selection state
     const [selectedLang, setSelectedLang] = useState<string>('');
     const [selectedLevel, setSelectedLevel] = useState<string>('');
     const [selectedScene, setSelectedScene] = useState<Scene | null>(null);
 
-    // Chat state
     const [isInChat, setIsInChat] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputValue, setInputValue] = useState('');
@@ -35,7 +34,6 @@ export default function SceneModePage() {
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
-    // Ses özellikleri
     const {
         isListening,
         transcript,
@@ -48,19 +46,16 @@ export default function SceneModePage() {
         error: speechError
     } = useSpeech(selectedLang || 'es');
 
-    // Ses tanıma sonucu geldiğinde input'a yaz
     useEffect(() => {
         if (transcript && !isListening) {
             setInputValue(transcript);
         }
     }, [transcript, isListening]);
 
-    // Auto scroll to bottom
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
 
-    // Start scene - get AI's first message
     const startScene = async (scene: Scene) => {
         setSelectedScene(scene);
         setIsInChat(true);
@@ -69,13 +64,9 @@ export default function SceneModePage() {
 
         try {
             const systemPrompt = buildSceneSystemPrompt(selectedLang, selectedLevel, scene);
-
-            // Güvenli backend API'yi çağır
             const response = await fetch('/api/chat', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     model: 'llama-3.3-70b-versatile',
                     messages: [
@@ -87,7 +78,6 @@ export default function SceneModePage() {
 
             if (!response.ok) {
                 const errorData = await response.json();
-                console.error('API Error:', errorData);
                 setMessages([{ role: 'assistant', content: `⚠️ API Hatası: ${errorData?.error?.message || 'Lütfen tekrar deneyin.'}` }]);
                 return;
             }
@@ -102,7 +92,6 @@ export default function SceneModePage() {
 
             setMessages([{ role: 'assistant', content: aiMessage }]);
         } catch (error) {
-            console.error('Error starting scene:', error);
             setMessages([{ role: 'assistant', content: '⚠️ Bağlantı hatası. İnternet bağlantınızı kontrol edin.' }]);
         } finally {
             setIsLoading(false);
@@ -110,8 +99,6 @@ export default function SceneModePage() {
         }
     };
 
-
-    // Send message
     const sendMessage = async () => {
         if (!inputValue.trim() || isLoading || !selectedScene) return;
 
@@ -122,13 +109,9 @@ export default function SceneModePage() {
 
         try {
             const systemPrompt = buildSceneSystemPrompt(selectedLang, selectedLevel, selectedScene);
-
-            // Güvenli backend API'yi çağır
             const response = await fetch('/api/chat', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     model: 'llama-3.3-70b-versatile',
                     messages: [
@@ -141,11 +124,7 @@ export default function SceneModePage() {
 
             if (!response.ok) {
                 const errorData = await response.json();
-                console.error('API Error:', errorData);
-                setMessages(prev => [...prev, {
-                    role: 'assistant',
-                    content: `⚠️ API Hatası: ${errorData?.error?.message || 'Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.'}`
-                }]);
+                setMessages(prev => [...prev, { role: 'assistant', content: `⚠️ API Hatası: ${errorData?.error?.message || 'Lütfen tekrar deneyin.'}` }]);
                 return;
             }
 
@@ -153,26 +132,18 @@ export default function SceneModePage() {
             const aiMessage = data.choices?.[0]?.message?.content;
 
             if (!aiMessage) {
-                setMessages(prev => [...prev, {
-                    role: 'assistant',
-                    content: '⚠️ AI yanıt vermedi. Lütfen tekrar deneyin.'
-                }]);
+                setMessages(prev => [...prev, { role: 'assistant', content: '⚠️ AI yanıt vermedi.' }]);
                 return;
             }
 
             setMessages(prev => [...prev, { role: 'assistant', content: aiMessage }]);
         } catch (error) {
-            console.error('Error sending message:', error);
-            setMessages(prev => [...prev, {
-                role: 'assistant',
-                content: '⚠️ Bağlantı hatası. İnternet bağlantınızı kontrol edin.'
-            }]);
+            setMessages(prev => [...prev, { role: 'assistant', content: '⚠️ Bağlantı hatası.' }]);
         } finally {
             setIsLoading(false);
         }
     };
 
-    // Handle enter key
     const handleKeyPress = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
@@ -180,195 +151,225 @@ export default function SceneModePage() {
         }
     };
 
-    // Back to scene selection
     const backToSelection = () => {
         setIsInChat(false);
         setSelectedScene(null);
         setMessages([]);
     };
 
-    // Selection Screen
+    // --- Selection Screen ---
     if (!isInChat) {
         return (
-            <div className="min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
+            <div className="min-h-screen bg-slate-950 relative overflow-hidden">
+                {/* Background Blobs */}
+                <div className="absolute inset-0 pointer-events-none z-0">
+                    <div className="absolute top-[-10%] left-[20%] w-[50rem] h-[50rem] bg-violet-600/10 rounded-full blur-[120px] animate-pulse" />
+                    <div className="absolute bottom-[10%] right-[10%] w-[40rem] h-[40rem] bg-fuchsia-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
+                </div>
+
                 {/* Header */}
-                <div className="border-b border-white/10 backdrop-blur-lg bg-black/20 sticky top-0 z-50">
-                    <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+                <header className="sticky top-0 z-40 bg-slate-950/70 backdrop-blur-xl border-b border-white/10">
+                    <div className="max-w-4xl mx-auto px-4 h-[72px] flex items-center justify-between">
                         <div className="flex items-center gap-3">
                             <Link href="/learn">
-                                <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+                                <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white hover:bg-white/10 rounded-xl">
                                     <ArrowLeft className="w-5 h-5" />
                                 </Button>
                             </Link>
-                            <div className="flex items-center gap-2">
-                                <Theater className="w-6 h-6 text-purple-400" />
-                                <h1 className="text-xl font-bold text-white">Sahne Modu</h1>
-                            </div>
+                            <h1 className="text-xl font-black text-white flex items-center gap-2">
+                                <Theater className="w-6 h-6 text-violet-400" />
+                                Sahne Modu
+                            </h1>
                         </div>
-                        <div className="flex items-center gap-2 text-purple-300">
+                        <div className="flex items-center gap-2 text-violet-300 text-sm font-medium">
                             <Sparkles className="w-4 h-4" />
-                            <span className="text-sm">Gerçek hayat senaryoları</span>
+                            Gerçek hayat senaryoları
                         </div>
                     </div>
-                </div>
+                </header>
 
-                <div className="max-w-4xl mx-auto px-4 py-8">
-                    {/* Step 1: Language Selection */}
-                    <div className="mb-8">
-                        <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                            <span className="w-7 h-7 bg-purple-600 rounded-full flex items-center justify-center text-sm">1</span>
+                {/* Content */}
+                <main className="max-w-4xl mx-auto px-4 py-8 relative z-10 space-y-10">
+
+                    {/* Step 1: Language */}
+                    <section>
+                        <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-3">
+                            <span className="w-8 h-8 bg-violet-600 rounded-xl flex items-center justify-center text-sm font-black">1</span>
                             Dil Seç
                         </h2>
-                        <div className="flex gap-3">
+                        <div className="flex flex-wrap gap-3">
                             {LANGUAGES.map(lang => (
                                 <button
                                     key={lang.code}
                                     onClick={() => setSelectedLang(lang.code)}
-                                    className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all ${selectedLang === lang.code
-                                        ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/30'
-                                        : 'bg-white/10 text-white/70 hover:bg-white/20'
-                                        }`}
+                                    className={cn(
+                                        "flex items-center gap-3 px-5 py-3.5 rounded-2xl font-bold transition-all duration-300 border-b-4",
+                                        selectedLang === lang.code
+                                            ? "bg-violet-600 text-white border-violet-800 shadow-lg shadow-violet-500/30 scale-105"
+                                            : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                                    )}
                                 >
                                     <span className="text-2xl">{lang.flag}</span>
                                     <span>{lang.name}</span>
-                                    {selectedLang === lang.code && <Check className="w-4 h-4" />}
+                                    {selectedLang === lang.code && <Check className="w-5 h-5" />}
                                 </button>
                             ))}
                         </div>
-                    </div>
+                    </section>
 
-                    {/* Step 2: Level Selection */}
+                    {/* Step 2: Level */}
                     {selectedLang && (
-                        <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
-                            <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                                <span className="w-7 h-7 bg-purple-600 rounded-full flex items-center justify-center text-sm">2</span>
+                        <section className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                            <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-3">
+                                <span className="w-8 h-8 bg-violet-600 rounded-xl flex items-center justify-center text-sm font-black">2</span>
                                 Seviye Seç
                             </h2>
-                            <div className="flex gap-3">
+                            <div className="flex flex-wrap gap-3">
                                 {LEVELS.map(level => (
                                     <button
                                         key={level}
                                         onClick={() => setSelectedLevel(level)}
-                                        className={`px-6 py-3 rounded-xl font-semibold transition-all ${selectedLevel === level
-                                            ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/30'
-                                            : 'bg-white/10 text-white/70 hover:bg-white/20'
-                                            }`}
+                                        className={cn(
+                                            "px-6 py-3.5 rounded-2xl font-bold transition-all duration-300 border-b-4",
+                                            selectedLevel === level
+                                                ? "bg-violet-600 text-white border-violet-800 shadow-lg shadow-violet-500/30 scale-105"
+                                                : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white"
+                                        )}
                                     >
                                         {level}
-                                        {selectedLevel === level && <Check className="w-4 h-4 inline ml-2" />}
                                     </button>
                                 ))}
                             </div>
-                        </div>
+                        </section>
                     )}
 
-                    {/* Step 3: Scene Selection */}
+                    {/* Step 3: Scene */}
                     {selectedLang && selectedLevel && (
-                        <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
-                            <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                                <span className="w-7 h-7 bg-purple-600 rounded-full flex items-center justify-center text-sm">3</span>
+                        <section className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                            <h2 className="text-lg font-bold text-white mb-6 flex items-center gap-3">
+                                <span className="w-8 h-8 bg-violet-600 rounded-xl flex items-center justify-center text-sm font-black">3</span>
                                 Senaryo Seç
                             </h2>
 
                             {SCENE_CATEGORIES.map(category => (
-                                <div key={category.id} className="mb-6">
-                                    <h3 className="text-white/60 text-sm font-medium mb-3 flex items-center gap-2">
+                                <div key={category.id} className="mb-8">
+                                    <h3 className="text-white/50 text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                                         <span>{category.icon}</span>
                                         {category.title}
                                     </h3>
-                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                         {category.scenes.map(scene => (
                                             <button
                                                 key={scene.id}
                                                 onClick={() => startScene(scene)}
-                                                className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/50 rounded-xl p-4 text-left transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10"
+                                                className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-violet-500/50 rounded-2xl p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
                                             >
-                                                <div className="text-3xl mb-2">{scene.icon}</div>
-                                                <div className="text-white font-medium text-sm">{scene.titleTr}</div>
-                                                <div className="text-white/40 text-xs mt-1 line-clamp-2">{scene.description}</div>
+                                                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{scene.icon}</div>
+                                                <div className="text-white font-bold text-sm mb-1">{scene.titleTr}</div>
+                                                <div className="text-white/40 text-xs leading-relaxed line-clamp-2">{scene.description}</div>
                                             </button>
                                         ))}
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </section>
                     )}
-                </div>
+                </main>
             </div>
         );
     }
 
-    // Chat Screen
+    // --- Chat Screen ---
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 flex flex-col">
-            {/* Chat Header */}
-            <div className="border-b border-white/10 backdrop-blur-lg bg-black/20 sticky top-0 z-50">
-                <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+        <div className="min-h-screen bg-slate-950 flex flex-col relative overflow-hidden">
+            {/* Background */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+                <div className="absolute top-[20%] left-[-10%] w-[40rem] h-[40rem] bg-violet-600/10 rounded-full blur-[100px]" />
+                <div className="absolute bottom-[10%] right-[-10%] w-[30rem] h-[30rem] bg-fuchsia-500/10 rounded-full blur-[80px]" />
+            </div>
+
+            {/* Header */}
+            <header className="sticky top-0 z-40 bg-slate-950/70 backdrop-blur-xl border-b border-white/10">
+                <div className="max-w-3xl mx-auto px-4 h-[72px] flex items-center justify-between">
+                    <div className="flex items-center gap-4">
                         <Button
                             variant="ghost"
                             size="icon"
                             onClick={backToSelection}
-                            className="text-white hover:bg-white/10"
+                            className="text-slate-400 hover:text-white hover:bg-white/10 rounded-xl"
                         >
                             <ArrowLeft className="w-5 h-5" />
                         </Button>
-                        <div className="flex items-center gap-2">
-                            <span className="text-2xl">{selectedScene?.icon}</span>
+                        <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 bg-violet-500/20 rounded-2xl flex items-center justify-center text-3xl">
+                                {selectedScene?.icon}
+                            </div>
                             <div>
-                                <div className="text-white font-medium">{selectedScene?.titleTr}</div>
-                                <div className="text-white/50 text-xs flex items-center gap-2">
+                                <h1 className="text-white font-bold">{selectedScene?.titleTr}</h1>
+                                <p className="text-white/50 text-xs flex items-center gap-2">
                                     <span>{LANGUAGES.find(l => l.code === selectedLang)?.flag}</span>
                                     <span>{selectedLevel}</span>
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </header>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto px-4 py-6">
-                <div className="max-w-3xl mx-auto space-y-4">
+            <div className="flex-1 overflow-y-auto pt-4 pb-[120px] px-4 relative z-10">
+                <div className="max-w-3xl mx-auto space-y-5">
                     {messages.map((message, index) => (
                         <div
                             key={index}
-                            className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                            className={cn(
+                                "flex gap-4 animate-in fade-in slide-in-from-bottom-4 duration-300",
+                                message.role === 'user' ? "flex-row-reverse" : ""
+                            )}
                         >
-                            <div
-                                className={`max-w-[80%] rounded-2xl px-4 py-3 ${message.role === 'user'
-                                    ? 'bg-purple-600 text-white'
-                                    : 'bg-white/10 text-white border border-white/10'
-                                    }`}
-                            >
-                                {message.role === 'assistant' && (
-                                    <div className="flex items-center gap-2 mb-1 text-purple-300">
-                                        <span className="text-lg">{selectedScene?.icon}</span>
-                                        <span className="text-xs font-medium">AI</span>
-                                    </div>
-                                )}
-                                <p className="whitespace-pre-wrap">{message.content}</p>
-                                {/* Dinle butonu - sadece AI mesajları için */}
+                            <div className={cn(
+                                "w-10 h-10 rounded-xl flex items-center justify-center shrink-0",
+                                message.role === 'user'
+                                    ? "bg-violet-600 text-white"
+                                    : "bg-white/10 border border-white/10 text-2xl"
+                            )}>
+                                {message.role === 'user' ? <User className="w-5 h-5" /> : selectedScene?.icon}
+                            </div>
+
+                            <div className={cn(
+                                "max-w-[85%] rounded-[20px] px-5 py-4 shadow-md group",
+                                message.role === 'user'
+                                    ? "bg-violet-600 text-white rounded-tr-sm"
+                                    : "bg-white/10 text-white border border-white/10 rounded-tl-sm"
+                            )}>
+                                <p className="whitespace-pre-wrap leading-relaxed font-medium">{message.content}</p>
+
                                 {message.role === 'assistant' && speechSupported && (
-                                    <button
-                                        onClick={() => isSpeaking ? stopSpeaking() : speak(message.content)}
-                                        className="mt-2 flex items-center gap-1 text-xs text-purple-300 hover:text-purple-100 transition-colors"
-                                    >
-                                        {isSpeaking ? (
-                                            <><VolumeX className="w-3 h-3" /> Durdur</>
-                                        ) : (
-                                            <><Volume2 className="w-3 h-3" /> Dinle 🔊</>
-                                        )}
-                                    </button>
+                                    <div className="mt-3 pt-3 border-t border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button
+                                            onClick={() => isSpeaking ? stopSpeaking() : speak(message.content)}
+                                            className="flex items-center gap-1.5 text-xs font-bold text-violet-300 hover:text-violet-100 bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg transition-colors"
+                                        >
+                                            {isSpeaking ? <><VolumeX className="w-3.5 h-3.5" /> Durdur</> : <><Volume2 className="w-3.5 h-3.5" /> Dinle</>}
+                                        </button>
+                                    </div>
                                 )}
                             </div>
                         </div>
                     ))}
 
                     {isLoading && (
-                        <div className="flex justify-start">
-                            <div className="bg-white/10 rounded-2xl px-4 py-3 border border-white/10">
-                                <Loader2 className="w-5 h-5 animate-spin text-purple-400" />
+                        <div className="flex gap-4">
+                            <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-2xl">
+                                {selectedScene?.icon}
+                            </div>
+                            <div className="bg-white/10 border border-white/10 rounded-[20px] rounded-tl-sm px-5 py-4 flex items-center gap-3">
+                                <div className="flex space-x-1">
+                                    <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                                    <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                                    <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce"></div>
+                                </div>
+                                <span className="text-sm font-bold text-white/50">Sahne partneriniz düşünüyor...</span>
                             </div>
                         </div>
                     )}
@@ -377,45 +378,57 @@ export default function SceneModePage() {
                 </div>
             </div>
 
-            {/* Input */}
-            <div className="border-t border-white/10 backdrop-blur-lg bg-black/20 p-4">
-                <div className="max-w-3xl mx-auto flex gap-3">
-                    <input
-                        ref={inputRef}
-                        type="text"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        onKeyPress={handleKeyPress}
-                        placeholder={isListening ? "🎤 Dinleniyor..." : `${LANGUAGE_NAMES[selectedLang]?.native || 'Hedef dilde'} yaz veya 🎤 ile konuş`}
-                        className={`flex-1 bg-white/10 border rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 ${isListening ? 'border-red-400 bg-red-500/20' : 'border-white/20'}`}
-                        disabled={isLoading || isListening}
-                    />
-                    {/* Mikrofon Butonu */}
-                    {speechSupported && (
-                        <Button
-                            onClick={isListening ? stopListening : startListening}
-                            disabled={isLoading}
-                            className={`rounded-xl px-4 transition-all ${isListening
-                                ? 'bg-red-500 hover:bg-red-600 animate-pulse'
-                                : 'bg-white/20 hover:bg-white/30 text-white'
-                                }`}
-                            title={isListening ? "Kaydı durdur" : "Sesli mesaj gönder"}
-                        >
-                            {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
-                        </Button>
+            {/* Floating Input */}
+            <div className="fixed bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent pt-10 z-50">
+                <div className="max-w-3xl mx-auto">
+                    {speechError && (
+                        <div className="mb-2 p-2 bg-red-500/20 text-red-300 text-xs font-bold rounded-lg text-center border border-red-500/30">
+                            ⚠️ {speechError}
+                        </div>
                     )}
-                    <Button
-                        onClick={sendMessage}
-                        disabled={!inputValue.trim() || isLoading}
-                        className="bg-purple-600 hover:bg-purple-700 text-white px-6 rounded-xl"
-                    >
-                        <Send className="w-5 h-5" />
-                    </Button>
+
+                    <div className="bg-white/5 p-2 rounded-[24px] shadow-2xl shadow-violet-500/5 border border-white/10 flex items-center gap-2">
+                        <input
+                            ref={inputRef}
+                            type="text"
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            onKeyPress={handleKeyPress}
+                            placeholder={isListening ? "Dinleniyor..." : "Mesajınızı yazın..."}
+                            disabled={isLoading || isListening}
+                            className={cn(
+                                "flex-1 bg-transparent h-12 pl-4 pr-4 font-medium text-white placeholder:text-white/40 border-none outline-none",
+                                isListening && "placeholder:text-violet-400"
+                            )}
+                        />
+
+                        <div className="flex items-center gap-1 pr-1">
+                            {speechSupported && (
+                                <Button
+                                    size="icon"
+                                    onClick={isListening ? stopListening : startListening}
+                                    className={cn(
+                                        "h-10 w-10 rounded-xl transition-all duration-300",
+                                        isListening
+                                            ? "bg-rose-500 hover:bg-rose-600 text-white shadow-lg shadow-rose-500/30 animate-pulse"
+                                            : "bg-white/10 hover:bg-white/20 text-white/70"
+                                    )}
+                                >
+                                    {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+                                </Button>
+                            )}
+
+                            <Button
+                                size="icon"
+                                onClick={sendMessage}
+                                disabled={!inputValue.trim() || isLoading}
+                                className="h-10 w-10 bg-violet-600 hover:bg-violet-700 text-white rounded-xl shadow-lg shadow-violet-500/30"
+                            >
+                                <Send className="w-5 h-5 ml-0.5" />
+                            </Button>
+                        </div>
+                    </div>
                 </div>
-                {/* Ses hatası gösterimi */}
-                {speechError && (
-                    <p className="text-xs text-red-400 text-center mt-2">⚠️ {speechError}</p>
-                )}
             </div>
         </div>
     );

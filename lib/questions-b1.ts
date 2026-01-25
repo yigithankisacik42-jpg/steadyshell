@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Quiz Veritabanı - İspanyolca B1
+ * SteadyShell Quiz Veritabanı - İspanyolca B1
  * 30 Ünite (ID: 61-90) - Curriculum ile TAM UYUMLU
  * Her ünite için 10 soru
  */

@@ -1,5 +1,5 @@
 /**
- * LinguaFlow - A1 Ünite 23: QUERER ve GUSTAR (80 soru)
+ * SteadyShell - A1 Ünite 23: QUERER ve GUSTAR (80 soru)
  * Gramer: İstek ve tercih ifade etme
  */
 

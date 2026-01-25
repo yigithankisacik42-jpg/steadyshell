@@ -1,4 +1,4 @@
-// LinguaFlow Konuşma - İspanyolca A1 (1-30) - 10 alıştırma/ünite
+// SteadyShell Konuşma - İspanyolca A1 (1-30) - 10 alıştırma/ünite
 
 export interface SpeakingExercise {
     id: number;

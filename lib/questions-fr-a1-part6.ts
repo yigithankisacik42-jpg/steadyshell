@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 314-317
+import { Question } from "./questions";
+
+// ===== ÜNİTE 314: İÇECEKLER =====
+export const unit314Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'L'eau' ne demek?", options: [{ id: "a", text: "Su", correct: true }, { id: "b", text: "Süt", correct: false }, { id: "c", text: "Çay", correct: false }, { id: "d", text: "Meyve suyu", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le café' ne demek?", options: [{ id: "a", text: "Kahve", correct: true }, { id: "b", text: "Çay", correct: false }, { id: "c", text: "Süt", correct: false }, { id: "d", text: "Kakao", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le thé", options: [{ id: "a", text: "Çay", correct: true }, { id: "b", text: "Kahve", correct: false }, { id: "c", text: "Süt", correct: false }, { id: "d", text: "Su", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le lait' ne demek?", options: [{ id: "a", text: "Süt", correct: true }, { id: "b", text: "Su", correct: false }, { id: "c", text: "Ayran", correct: false }, { id: "d", text: "Yoğurt", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le jus d'orange", options: [{ id: "a", text: "Portakal suyu", correct: true }, { id: "b", text: "Elma suyu", correct: false }, { id: "c", text: "Üzüm suyu", correct: false }, { id: "d", text: "Nar suyu", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La limonade' ne demek?", options: [{ id: "a", text: "Limonata", correct: true }, { id: "b", text: "Kola", correct: false }, { id: "c", text: "Gazoz", correct: false }, { id: "d", text: "Portakal suyu", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Boire' ne demek?", options: [{ id: "a", text: "İçmek", correct: true }, { id: "b", text: "Yemek", correct: false }, { id: "c", text: "Almak", correct: false }, { id: "d", text: "Vermek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Avoir soif' ne demek?", options: [{ id: "a", text: "Susamak", correct: true }, { id: "b", text: "Acıkmak", correct: false }, { id: "c", text: "Yorulmak", correct: false }, { id: "d", text: "Uyumak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Su içiyorum", correctAnswer: "Je bois de l'eau" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je voudrais un ___, s'il vous plaît.", options: [{ id: "a", text: "café", correct: true }, { id: "b", text: "cafée", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'ai soif", options: [{ id: "a", text: "Susadım", correct: true }, { id: "b", text: "Açım", correct: false }, { id: "c", text: "Yorgunum", correct: false }, { id: "d", text: "Üşüdüm", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le chocolat chaud' ne demek?", options: [{ id: "a", text: "Sıcak çikolata", correct: true }, { id: "b", text: "Çikolata pastası", correct: false }, { id: "c", text: "Bitter çikolata", correct: false }, { id: "d", text: "Çikolata dondurması", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bir bardak süt lütfen", correctAnswer: "Un verre de lait s'il vous plaît" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle boit du ___ vert.", options: [{ id: "a", text: "thé", correct: true }, { id: "b", text: "café", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kahvemi şekerli alırım", correctAnswer: "Je prends mon café avec du sucre" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Un verre d'eau", options: [{ id: "a", text: "Bir bardak su", correct: true }, { id: "b", text: "Bir şişe su", correct: false }, { id: "c", text: "Bir bardak süt", correct: false }, { id: "d", text: "Bir fincan çay", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ d'orange est frais.", options: [{ id: "a", text: "jus", correct: true }, { id: "b", text: "eau", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Her sabah çay içerim", correctAnswer: "Je bois du thé tous les matins" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ soif.", options: [{ id: "a", text: "ai", correct: true }, { id: "b", text: "suis", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Temel içecekleri öğrendik!", correctAnswer: "Nous avons appris les boissons de base!" }
+];
+
+export const unit314Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le soda' ne demek?", options: [{ id: "a", text: "Gazlı içecek", correct: true }, { id: "b", text: "Su", correct: false }, { id: "c", text: "Meyve suyu", correct: false }, { id: "d", text: "Süt", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'eau gazeuse' ne demek?", options: [{ id: "a", text: "Maden suyu", correct: true }, { id: "b", text: "Normal su", correct: false }, { id: "c", text: "Soda", correct: false }, { id: "d", text: "Limonata", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'eau plate", options: [{ id: "a", text: "Düz su (gazsız)", correct: true }, { id: "b", text: "Maden suyu", correct: false }, { id: "c", text: "Soğuk su", correct: false }, { id: "d", text: "Sıcak su", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Une tasse' ne demek?", options: [{ id: "a", text: "Fincan", correct: true }, { id: "b", text: "Bardak", correct: false }, { id: "c", text: "Şişe", correct: false }, { id: "d", text: "Kupa", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Un verre", options: [{ id: "a", text: "Bardak", correct: true }, { id: "b", text: "Fincan", correct: false }, { id: "c", text: "Şişe", correct: false }, { id: "d", text: "Sürahili", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Une bouteille' ne demek?", options: [{ id: "a", text: "Şişe", correct: true }, { id: "b", text: "Bardak", correct: false }, { id: "c", text: "Kutu", correct: false }, { id: "d", text: "Kova", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Chaud' ne demek?", options: [{ id: "a", text: "Sıcak", correct: true }, { id: "b", text: "Soğuk", correct: false }, { id: "c", text: "Ilık", correct: false }, { id: "d", text: "Buzlu", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Froid' ne demek?", options: [{ id: "a", text: "Soğuk", correct: true }, { id: "b", text: "Sıcak", correct: false }, { id: "c", text: "Ilık", correct: false }, { id: "d", text: "Normal", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bir şişe maden suyu lütfen", correctAnswer: "Une bouteille d'eau gazeuse s'il vous plaît" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je veux un café ___.", options: [{ id: "a", text: "chaud", correct: true }, { id: "b", text: "chaude", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Avec ou sans sucre?", options: [{ id: "a", text: "Şekerli mi şekersiz mi?", correct: true }, { id: "b", text: "Sıcak mı soğuk mu?", correct: false }, { id: "c", text: "Büyük mü küçük mü?", correct: false }, { id: "d", text: "Sütlü mü sütsüz mü?", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Avec du lait' ne demek?", options: [{ id: "a", text: "Sütlü", correct: true }, { id: "b", text: "Şekerli", correct: false }, { id: "c", text: "Kremalı", correct: false }, { id: "d", text: "Ballı", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Sütlü kahve istiyorum", correctAnswer: "Je veux un café avec du lait" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Une ___ de thé, s'il vous plaît.", options: [{ id: "a", text: "tasse", correct: true }, { id: "b", text: "verre", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Soğuk bir limonata lütfen", correctAnswer: "Une limonade froide s'il vous plaît" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Sans sucre", options: [{ id: "a", text: "Şekersiz", correct: true }, { id: "b", text: "Şekerli", correct: false }, { id: "c", text: "Sütsüz", correct: false }, { id: "d", text: "Sütlü", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "L'eau est ___.", options: [{ id: "a", text: "froide", correct: true }, { id: "b", text: "froid", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "İki şişe su alıyorum", correctAnswer: "Je prends deux bouteilles d'eau" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je préfère l'eau ___.", options: [{ id: "a", text: "plate", correct: true }, { id: "b", text: "gazeuse", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "İçecek türlerini öğrendik!", correctAnswer: "Nous avons appris les types de boissons!" }
+];
+
+export const unit314Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le smoothie' ne demek?", options: [{ id: "a", text: "Smoothie", correct: true }, { id: "b", text: "Milkshake", correct: false }, { id: "c", text: "Meyve suyu", correct: false }, { id: "d", text: "Ayran", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le milk-shake' ne demek?", options: [{ id: "a", text: "Milkshake", correct: true }, { id: "b", text: "Smoothie", correct: false }, { id: "c", text: "Sütlü kahve", correct: false }, { id: "d", text: "Sıcak çikolata", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le jus de pomme", options: [{ id: "a", text: "Elma suyu", correct: true }, { id: "b", text: "Portakal suyu", correct: false }, { id: "c", text: "Üzüm suyu", correct: false }, { id: "d", text: "Şeftali suyu", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La tisane' ne demek?", options: [{ id: "a", text: "Bitki çayı", correct: true }, { id: "b", text: "Siyah çay", correct: false }, { id: "c", text: "Yeşil çay", correct: false }, { id: "d", text: "Kahve", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La menthe", options: [{ id: "a", text: "Nane", correct: true }, { id: "b", text: "Papatya", correct: false }, { id: "c", text: "Adaçayı", correct: false }, { id: "d", text: "Lavanta", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Rafraîchissant' ne demek?", options: [{ id: "a", text: "Serinletici", correct: true }, { id: "b", text: "Isıtıcı", correct: false }, { id: "c", text: "Tatlı", correct: false }, { id: "d", text: "Acı", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Glacé' ne demek?", options: [{ id: "a", text: "Buzlu", correct: true }, { id: "b", text: "Sıcak", correct: false }, { id: "c", text: "Ilık", correct: false }, { id: "d", text: "Soğuk", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Un café glacé' ne demek?", options: [{ id: "a", text: "Buzlu kahve", correct: true }, { id: "b", text: "Sıcak kahve", correct: false }, { id: "c", text: "Sütlü kahve", correct: false }, { id: "d", text: "Espresso", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Çilekli smoothie istiyorum", correctAnswer: "Je veux un smoothie à la fraise" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Un thé ___, s'il vous plaît.", options: [{ id: "a", text: "glacé", correct: true }, { id: "b", text: "glacée", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est trop sucré", options: [{ id: "a", text: "Çok tatlı", correct: true }, { id: "b", text: "Çok tuzlu", correct: false }, { id: "c", text: "Çok acı", correct: false }, { id: "d", text: "Çok sıcak", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Amer' ne demek?", options: [{ id: "a", text: "Acı", correct: true }, { id: "b", text: "Tatlı", correct: false }, { id: "c", text: "Tuzlu", correct: false }, { id: "d", text: "Ekşi", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bitki çayı sağlıklı", correctAnswer: "La tisane est saine" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette boisson est très ___.", options: [{ id: "a", text: "rafraîchissante", correct: true }, { id: "b", text: "rafraîchissant", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Naneli buzlu çay seviyorum", correctAnswer: "J'aime le thé glacé à la menthe" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Un café serré", options: [{ id: "a", text: "Sert/koyu kahve", correct: true }, { id: "b", text: "Sütlü kahve", correct: false }, { id: "c", text: "Şekerli kahve", correct: false }, { id: "d", text: "Buzlu kahve", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le café est un peu ___.", options: [{ id: "a", text: "amer", correct: true }, { id: "b", text: "sucré", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Çikolatalı milkshake çok lezzetli", correctAnswer: "Le milk-shake au chocolat est très délicieux" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je préfère le jus de ___.", options: [{ id: "a", text: "pomme", correct: true }, { id: "b", text: "orange", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Özel içecekleri öğrendik!", correctAnswer: "Nous avons appris les boissons spéciales!" }
+];
+
+export const unit314Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Commander une boisson' ne demek?", options: [{ id: "a", text: "İçecek sipariş etmek", correct: true }, { id: "b", text: "İçecek hazırlamak", correct: false }, { id: "c", text: "İçecek içmek", correct: false }, { id: "d", text: "İçecek almak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'À emporter' ne demek?", options: [{ id: "a", text: "Götürülecek/Paket", correct: true }, { id: "b", text: "Burada", correct: false }, { id: "c", text: "Hemen", correct: false }, { id: "d", text: "Sonra", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Sur place", options: [{ id: "a", text: "Burada/İçeride", correct: true }, { id: "b", text: "Götürü", correct: false }, { id: "c", text: "Dışarıda", correct: false }, { id: "d", text: "Uzakta", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Petit, moyen, grand' ne demek?", options: [{ id: "a", text: "Küçük, orta, büyük", correct: true }, { id: "b", text: "Az, çok, fazla", correct: false }, { id: "c", text: "Bir, iki, üç", correct: false }, { id: "d", text: "Sıcak, ılık, soğuk", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quelle taille?", options: [{ id: "a", text: "Hangi boy?", correct: true }, { id: "b", text: "Hangi fiyat?", correct: false }, { id: "c", text: "Hangi renk?", correct: false }, { id: "d", text: "Hangi çeşit?", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Servir' ne demek?", options: [{ id: "a", text: "Servis etmek", correct: true }, { id: "b", text: "İçmek", correct: false }, { id: "c", text: "Almak", correct: false }, { id: "d", text: "Vermek", correct: false }] },
+    { id: 7, type: "SELECT", question: "'L'addition' ne demek?", options: [{ id: "a", text: "Hesap", correct: true }, { id: "b", text: "Menü", correct: false }, { id: "c", text: "Sipariş", correct: false }, { id: "d", text: "Bahşiş", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Santé!' ne demek?", options: [{ id: "a", text: "Şerefe!/Sağlık!", correct: true }, { id: "b", text: "Afiyet olsun!", correct: false }, { id: "c", text: "Hoş geldiniz!", correct: false }, { id: "d", text: "Teşekkürler!", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Büyük boy buzlu kahve lütfen", correctAnswer: "Un grand café glacé s'il vous plaît" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est pour ___ ou à emporter?", options: [{ id: "a", text: "ici", correct: true }, { id: "b", text: "là", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'addition, s'il vous plaît", options: [{ id: "a", text: "Hesap lütfen", correct: true }, { id: "b", text: "Menü lütfen", correct: false }, { id: "c", text: "Su lütfen", correct: false }, { id: "d", text: "Kahve lütfen", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le pourboire' ne demek?", options: [{ id: "a", text: "Bahşiş", correct: true }, { id: "b", text: "Hesap", correct: false }, { id: "c", text: "Para üstü", correct: false }, { id: "d", text: "Fatura", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Paket olarak alacağım", correctAnswer: "Je vais prendre à emporter" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Un café ___, s'il vous plaît.", options: [{ id: "a", text: "moyen", correct: true }, { id: "b", text: "moiene", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Ne içmek istersiniz?", correctAnswer: "Qu'est-ce que vous voulez boire?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça fait combien?", options: [{ id: "a", text: "Ne kadar tutar?", correct: true }, { id: "b", text: "Kaç tane?", correct: false }, { id: "c", text: "Ne zaman?", correct: false }, { id: "d", text: "Nasıl?", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je laisse un ___.", options: [{ id: "a", text: "pourboire", correct: true }, { id: "b", text: "addition", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Hesap 5 avro", correctAnswer: "L'addition est de cinq euros" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "___!", options: [{ id: "a", text: "Santé", correct: true }, { id: "b", text: "Salut", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "İçecekler konusunu bitirdik, tebrikler!", correctAnswer: "Nous avons terminé le sujet des boissons, félicitations!" }
+];
+
+// ===== ÜNİTE 315: SAAT KAÇ? =====
+export const unit315Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Quelle heure est-il?' ne demek?", options: [{ id: "a", text: "Saat kaç?", correct: true }, { id: "b", text: "Ne zaman?", correct: false }, { id: "c", text: "Hangi gün?", correct: false }, { id: "d", text: "Bugün ne?", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Il est midi' ne demek?", options: [{ id: "a", text: "Saat 12 (öğlen)", correct: true }, { id: "b", text: "Saat 12 (gece)", correct: false }, { id: "c", text: "Yarım saat", correct: false }, { id: "d", text: "Bir saat", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est minuit", options: [{ id: "a", text: "Gece yarısı", correct: true }, { id: "b", text: "Öğlen", correct: false }, { id: "c", text: "Akşam", correct: false }, { id: "d", text: "Sabah", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Il est une heure' ne demek?", options: [{ id: "a", text: "Saat bir", correct: true }, { id: "b", text: "Bir saatte", correct: false }, { id: "c", text: "Saat on", correct: false }, { id: "d", text: "Yarım saat", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est trois heures", options: [{ id: "a", text: "Saat üç", correct: true }, { id: "b", text: "Saat dört", correct: false }, { id: "c", text: "Saat beş", correct: false }, { id: "d", text: "Saat altı", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Il est six heures' ne demek?", options: [{ id: "a", text: "Saat altı", correct: true }, { id: "b", text: "Saat yedi", correct: false }, { id: "c", text: "Saat sekiz", correct: false }, { id: "d", text: "Saat beş", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Il est dix heures' ne demek?", options: [{ id: "a", text: "Saat on", correct: true }, { id: "b", text: "Saat on bir", correct: false }, { id: "c", text: "Saat dokuz", correct: false }, { id: "d", text: "Saat sekiz", correct: false }] },
+    { id: 8, type: "SELECT", question: "'L'heure' ne demek?", options: [{ id: "a", text: "Saat", correct: true }, { id: "b", text: "Dakika", correct: false }, { id: "c", text: "Saniye", correct: false }, { id: "d", text: "Gün", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Saat kaç?", correctAnswer: "Quelle heure est-il?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ heures.", options: [{ id: "a", text: "sept", correct: true }, { id: "b", text: "set", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est huit heures", options: [{ id: "a", text: "Saat sekiz", correct: true }, { id: "b", text: "Saat yedi", correct: false }, { id: "c", text: "Saat dokuz", correct: false }, { id: "d", text: "Saat on", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La montre' ne demek?", options: [{ id: "a", text: "Kol saati", correct: true }, { id: "b", text: "Duvar saati", correct: false }, { id: "c", text: "Alarm", correct: false }, { id: "d", text: "Kronometre", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Saat beş", correctAnswer: "Il est cinq heures" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ heures du matin.", options: [{ id: "a", text: "neuf", correct: true }, { id: "b", text: "nef", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Öğlen oldu", correctAnswer: "Il est midi" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est onze heures", options: [{ id: "a", text: "Saat on bir", correct: true }, { id: "b", text: "Saat on", correct: false }, { id: "c", text: "Saat dokuz", correct: false }, { id: "d", text: "Saat on iki", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ heures du soir.", options: [{ id: "a", text: "quatre", correct: true }, { id: "b", text: "quatre", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Gece yarısı", correctAnswer: "Il est minuit" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Quelle ___ est-il?", options: [{ id: "a", text: "heure", correct: true }, { id: "b", text: "heures", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Tam saatleri öğrendik!", correctAnswer: "Nous avons appris les heures exactes!" }
+];
+
+export const unit315Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Et demie' ne demek?", options: [{ id: "a", text: "Buçuk", correct: true }, { id: "b", text: "Çeyrek", correct: false }, { id: "c", text: "On", correct: false }, { id: "d", text: "Yirmi", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Et quart' ne demek?", options: [{ id: "a", text: "Çeyrek geçe", correct: true }, { id: "b", text: "Buçuk", correct: false }, { id: "c", text: "Çeyrek kala", correct: false }, { id: "d", text: "Yarım", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Moins le quart", options: [{ id: "a", text: "Çeyrek kala", correct: true }, { id: "b", text: "Çeyrek geçe", correct: false }, { id: "c", text: "Buçuk", correct: false }, { id: "d", text: "Tam", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Il est deux heures et demie' ne demek?", options: [{ id: "a", text: "Saat iki buçuk", correct: true }, { id: "b", text: "Saat iki", correct: false }, { id: "c", text: "Saat üç", correct: false }, { id: "d", text: "Saat iki çeyrek", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est cinq heures et quart", options: [{ id: "a", text: "Saat beşi çeyrek geçiyor", correct: true }, { id: "b", text: "Saat beş buçuk", correct: false }, { id: "c", text: "Saat beşe çeyrek var", correct: false }, { id: "d", text: "Saat altı", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Il est huit heures moins le quart' ne demek?", options: [{ id: "a", text: "Sekize çeyrek var", correct: true }, { id: "b", text: "Sekizi çeyrek geçiyor", correct: false }, { id: "c", text: "Sekiz buçuk", correct: false }, { id: "d", text: "Saat sekiz", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Il est midi et demi' ne demek?", options: [{ id: "a", text: "Saat on iki buçuk", correct: true }, { id: "b", text: "Gece yarısı buçuk", correct: false }, { id: "c", text: "Öğlen", correct: false }, { id: "d", text: "Öğleden sonra", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La minute' ne demek?", options: [{ id: "a", text: "Dakika", correct: true }, { id: "b", text: "Saat", correct: false }, { id: "c", text: "Saniye", correct: false }, { id: "d", text: "An", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Saat üç buçuk", correctAnswer: "Il est trois heures et demie" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est six heures et ___.", options: [{ id: "a", text: "quart", correct: true }, { id: "b", text: "demie", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est sept heures moins le quart", options: [{ id: "a", text: "Yediye çeyrek var", correct: true }, { id: "b", text: "Yediyi çeyrek geçiyor", correct: false }, { id: "c", text: "Yedi buçuk", correct: false }, { id: "d", text: "Saat yedi", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Moins cinq' ne demek?", options: [{ id: "a", text: "Beş var", correct: true }, { id: "b", text: "Beş geçe", correct: false }, { id: "c", text: "Beş dakika", correct: false }, { id: "d", text: "Saat beş", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Dördü çeyrek geçiyor", correctAnswer: "Il est quatre heures et quart" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est neuf heures ___ le quart.", options: [{ id: "a", text: "moins", correct: true }, { id: "b", text: "et", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "On bire beş var", correctAnswer: "Il est onze heures moins cinq" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est dix heures et quart", options: [{ id: "a", text: "Onu çeyrek geçiyor", correct: true }, { id: "b", text: "On buçuk", correct: false }, { id: "c", text: "Ona çeyrek var", correct: false }, { id: "d", text: "Saat on", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est midi et ___.", options: [{ id: "a", text: "demi", correct: true }, { id: "b", text: "demie", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sekiz buçuk", correctAnswer: "Il est huit heures et demie" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est une heure et ___.", options: [{ id: "a", text: "demie", correct: true }, { id: "b", text: "demi", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Buçuk ve çeyrek saatleri öğrendik!", correctAnswer: "Nous avons appris les demi-heures et les quarts!" }
+];
+
+export const unit315Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Il est trois heures dix' ne demek?", options: [{ id: "a", text: "Üçü on geçiyor", correct: true }, { id: "b", text: "Üçe on var", correct: false }, { id: "c", text: "Saat on üç", correct: false }, { id: "d", text: "Saat üç", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Il est quatre heures vingt' ne demek?", options: [{ id: "a", text: "Dördü yirmi geçiyor", correct: true }, { id: "b", text: "Dörde yirmi var", correct: false }, { id: "c", text: "Saat yirmi dört", correct: false }, { id: "d", text: "Saat dört", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est cinq heures moins vingt", options: [{ id: "a", text: "Beşe yirmi var", correct: true }, { id: "b", text: "Beşi yirmi geçiyor", correct: false }, { id: "c", text: "Beş buçuk", correct: false }, { id: "d", text: "Saat beş", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Il est six heures moins dix' ne demek?", options: [{ id: "a", text: "Altıya on var", correct: true }, { id: "b", text: "Altıyı on geçiyor", correct: false }, { id: "c", text: "Altı buçuk", correct: false }, { id: "d", text: "Saat altı", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est sept heures vingt-cinq", options: [{ id: "a", text: "Yediyi yirmi beş geçiyor", correct: true }, { id: "b", text: "Yediye yirmi beş var", correct: false }, { id: "c", text: "Saat yedi buçuk", correct: false }, { id: "d", text: "Saat yedi", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Du matin' ne demek?", options: [{ id: "a", text: "Sabah (AM)", correct: true }, { id: "b", text: "Öğleden sonra", correct: false }, { id: "c", text: "Akşam", correct: false }, { id: "d", text: "Gece", correct: false }] },
+    { id: 7, type: "SELECT", question: "'De l'après-midi' ne demek?", options: [{ id: "a", text: "Öğleden sonra", correct: true }, { id: "b", text: "Sabah", correct: false }, { id: "c", text: "Akşam", correct: false }, { id: "d", text: "Gece", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Du soir' ne demek?", options: [{ id: "a", text: "Akşam (PM)", correct: true }, { id: "b", text: "Sabah", correct: false }, { id: "c", text: "Öğlen", correct: false }, { id: "d", text: "Gece yarısı", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Sabah saat yedi", correctAnswer: "Il est sept heures du matin" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est huit heures ___ soir.", options: [{ id: "a", text: "du", correct: true }, { id: "b", text: "de", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est neuf heures moins vingt-cinq", options: [{ id: "a", text: "Dokuza yirmi beş var", correct: true }, { id: "b", text: "Dokuzu yirmi beş geçiyor", correct: false }, { id: "c", text: "Dokuz buçuk", correct: false }, { id: "d", text: "Saat dokuz", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Tôt' ne demek?", options: [{ id: "a", text: "Erken", correct: true }, { id: "b", text: "Geç", correct: false }, { id: "c", text: "Zamanında", correct: false }, { id: "d", text: "Hızlı", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Öğleden sonra saat üç", correctAnswer: "Il est trois heures de l'après-midi" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est dix heures ___ matin.", options: [{ id: "a", text: "du", correct: true }, { id: "b", text: "de", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Altıyı beş geçiyor", correctAnswer: "Il est six heures cinq" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis en retard", options: [{ id: "a", text: "Geç kaldım", correct: true }, { id: "b", text: "Erken geldim", correct: false }, { id: "c", text: "Zamanındayım", correct: false }, { id: "d", text: "Yorgunum", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ heures moins cinq.", options: [{ id: "a", text: "onze", correct: true }, { id: "b", text: "onz", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Çok erken", correctAnswer: "C'est très tôt" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis en ___.", options: [{ id: "a", text: "retard", correct: true }, { id: "b", text: "avance", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Dakikaları ve zaman dilimlerini öğrendik!", correctAnswer: "Nous avons appris les minutes et les périodes de la journée!" }
+];
+
+export const unit315Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'À quelle heure?' ne demek?", options: [{ id: "a", text: "Saat kaçta?", correct: true }, { id: "b", text: "Saat kaç?", correct: false }, { id: "c", text: "Ne zaman?", correct: false }, { id: "d", text: "Hangi gün?", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Rendez-vous' ne demek?", options: [{ id: "a", text: "Randevu/Buluşma", correct: true }, { id: "b", text: "Toplantı", correct: false }, { id: "c", text: "Saat", correct: false }, { id: "d", text: "Tarih", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "À huit heures", options: [{ id: "a", text: "Saat sekizde", correct: true }, { id: "b", text: "Saat sekiz", correct: false }, { id: "c", text: "Sekiz saat", correct: false }, { id: "d", text: "Sekiz dakika", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Être à l'heure' ne demek?", options: [{ id: "a", text: "Zamanında olmak", correct: true }, { id: "b", text: "Geç olmak", correct: false }, { id: "c", text: "Erken olmak", correct: false }, { id: "d", text: "Meşgul olmak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Être en avance", options: [{ id: "a", text: "Erken olmak", correct: true }, { id: "b", text: "Geç olmak", correct: false }, { id: "c", text: "Zamanında olmak", correct: false }, { id: "d", text: "Meşgul olmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Durer' ne demek?", options: [{ id: "a", text: "Sürmek", correct: true }, { id: "b", text: "Başlamak", correct: false }, { id: "c", text: "Bitmek", correct: false }, { id: "d", text: "Beklemek", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Commencer' ne demek?", options: [{ id: "a", text: "Başlamak", correct: true }, { id: "b", text: "Bitirmek", correct: false }, { id: "c", text: "Sürmek", correct: false }, { id: "d", text: "Beklemek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Finir' ne demek?", options: [{ id: "a", text: "Bitmek/Bitirmek", correct: true }, { id: "b", text: "Başlamak", correct: false }, { id: "c", text: "Sürmek", correct: false }, { id: "d", text: "Devam etmek", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Film saat kaçta başlıyor?", correctAnswer: "À quelle heure commence le film?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Le cours ___ à neuf heures.", options: [{ id: "a", text: "commence", correct: true }, { id: "b", text: "finit", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça dure combien de temps?", options: [{ id: "a", text: "Ne kadar sürüyor?", correct: true }, { id: "b", text: "Saat kaç?", correct: false }, { id: "c", text: "Ne zaman başlıyor?", correct: false }, { id: "d", text: "Ne zaman bitiyor?", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Attendre' ne demek?", options: [{ id: "a", text: "Beklemek", correct: true }, { id: "b", text: "Gitmek", correct: false }, { id: "c", text: "Gelmek", correct: false }, { id: "d", text: "Koşmak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Randevum saat üçte", correctAnswer: "J'ai rendez-vous à trois heures" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le film ___ deux heures.", options: [{ id: "a", text: "dure", correct: true }, { id: "b", text: "finit", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Ders saat dörtte bitiyor", correctAnswer: "Le cours finit à quatre heures" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'attends depuis une heure", options: [{ id: "a", text: "Bir saattir bekliyorum", correct: true }, { id: "b", text: "Saat birde bekliyorum", correct: false }, { id: "c", text: "Bir saat bekleyeceğim", correct: false }, { id: "d", text: "Bir saat önce geldim", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis à l'___.", options: [{ id: "a", text: "heure", correct: true }, { id: "b", text: "avance", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "On dakika erken geldim", correctAnswer: "Je suis arrivé dix minutes en avance" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "À ___ heure commence la réunion?", options: [{ id: "a", text: "quelle", correct: true }, { id: "b", text: "quel", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Saat konusunu bitirdik, tebrikler!", correctAnswer: "Nous avons terminé le sujet de l'heure, félicitations!" }
+];

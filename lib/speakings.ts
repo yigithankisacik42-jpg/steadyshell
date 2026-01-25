@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Konuşma Veritabanı - İspanyolca
+ * SteadyShell Konuşma Veritabanı - İspanyolca
  * 
  * Her ünite için özel SPEAKING içeriği
  */
@@ -8,6 +8,7 @@ import { getA2SpeakingForUnit } from './speakings-a2';
 import { getB1SpeakingForUnit } from './speakings-b1';
 import { getB2SpeakingForUnit } from './speakings-b2';
 import { getFrenchA1SpeakingForUnit } from './speakings-fr-a1';
+import { getFrenchA2SpeakingForUnit } from './speakings-fr-a2';
 import { getSpanishA1SpeakingForUnit } from './speakings-es-a1';
 
 export interface SpeakingExercise {
@@ -406,6 +407,26 @@ export function getSpeakingForUnit(unitId: number): UnitSpeaking {
                 exercises: frSpeaking.exercises.map((e, i) => ({
                     id: i + 1,
                     type: "repeat" as const, // Şimdilik hepsi repeat, ilerde özelleştirilebilir
+                    prompt: "Bu cümleyi tekrar et:",
+                    text: e.text,
+                    translation: e.translation
+                }))
+            };
+        }
+    }
+
+    // Fransızca A2 (331-360)
+    if (unitId >= 331 && unitId <= 360) {
+        const frA2Speaking = getFrenchA2SpeakingForUnit(unitId);
+        if (frA2Speaking) {
+            return {
+                unitId: frA2Speaking.unitId,
+                title: frA2Speaking.title,
+                language: "fr",
+                level: "A2",
+                exercises: frA2Speaking.exercises.map((e, i) => ({
+                    id: i + 1,
+                    type: "repeat" as const,
                     prompt: "Bu cümleyi tekrar et:",
                     text: e.text,
                     translation: e.translation

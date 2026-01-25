@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Dil Verileri
+ * SteadyShell Dil Verileri
  * 
  * Desteklenen diller ve seviyeleri tanımlar.
  * Ileride Drizzle ile veritabanından çekilecek.

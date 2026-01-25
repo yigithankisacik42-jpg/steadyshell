@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Konuşma Veritabanı - İspanyolca A2
+ * SteadyShell Konuşma Veritabanı - İspanyolca A2
  * Ünite 21-50 için konuşma içerikleri
  * Curriculum ile uyumlu
  */

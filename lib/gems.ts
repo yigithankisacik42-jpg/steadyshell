@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Gem (Taş) Sistemi
+ * SteadyShell Gem (Taş) Sistemi
  * Günlük ödüller, taş kazanma ve harcama
  */
 

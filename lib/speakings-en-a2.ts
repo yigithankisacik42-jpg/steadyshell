@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Speaking - English A2 (Units 131-160)
+ * SteadyShell Speaking - English A2 (Units 131-160)
  * Curriculum ile uyumlu konuşma içerikleri
  */
 

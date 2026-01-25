@@ -159,7 +159,48 @@ function LessonContent() {
     if (challenge?.audioText) {
       setAudioPlaying(true);
       const utterance = new SpeechSynthesisUtterance(challenge.audioText);
-      utterance.lang = "es-ES";
+
+      // Dil belirleme
+      let targetLang = "es-ES";
+      if (unitId >= 301 && unitId <= 360) {
+        targetLang = "fr-FR"; // Fransızca A1 ve A2
+      } else if (unitId >= 101 && unitId <= 220) {
+        targetLang = "en-US";
+      }
+
+      utterance.lang = targetLang;
+
+      // Kadın sesi tercih et
+      const voices = speechSynthesis.getVoices();
+      const femaleVoice = voices.find(v =>
+        v.lang.startsWith(targetLang.split('-')[0]) &&
+        (v.name.toLowerCase().includes('female') ||
+          v.name.toLowerCase().includes('woman') ||
+          v.name.toLowerCase().includes('amelie') ||
+          v.name.toLowerCase().includes('marie') ||
+          v.name.toLowerCase().includes('céline') ||
+          v.name.toLowerCase().includes('celine') ||
+          v.name.toLowerCase().includes('léa') ||
+          v.name.toLowerCase().includes('lea') ||
+          v.name.toLowerCase().includes('julie') ||
+          v.name.toLowerCase().includes('virginie') ||
+          v.name.toLowerCase().includes('paulina') ||
+          v.name.toLowerCase().includes('monica') ||
+          v.name.toLowerCase().includes('helena') ||
+          v.name.toLowerCase().includes('samantha') ||
+          v.name.toLowerCase().includes('karen') ||
+          v.name.toLowerCase().includes('victoria') ||
+          v.name.toLowerCase().includes('zira') ||
+          v.name.includes('Google') && v.name.toLowerCase().includes('female'))
+      ) || voices.find(v => v.lang.startsWith(targetLang.split('-')[0]));
+
+      if (femaleVoice) {
+        utterance.voice = femaleVoice;
+      }
+
+      utterance.rate = 0.9;
+      utterance.pitch = 1.1;
+
       utterance.onend = () => setAudioPlaying(false);
       speechSynthesis.speak(utterance);
     }

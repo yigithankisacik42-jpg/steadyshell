@@ -1,12 +1,12 @@
 /**
- * LinguaFlow Konu Anlatımı Veritabanı - İspanyolca A1
+ * SteadyShell Konu Anlatımı Veritabanı - İspanyolca A1
  * Sıfırdan başlayanlar için detaylı anlatım
  * Her ünite için kültürel ipuçları, dilbilgisi kuralları ve pratik bölümleri içerir
  */
 
 export interface LectureSlide {
     id: number;
-    type: "intro" | "vocabulary" | "grammar" | "example" | "summary" | "practice" | "culture";
+    type: "intro" | "vocabulary" | "grammar" | "example" | "summary" | "practice" | "culture" | "table";
     title: string;
     content?: string;
     tip?: string;
@@ -16,6 +16,8 @@ export interface LectureSlide {
     dialogue?: { speaker: string; text: string; translation: string }[];
     points?: string[];
     cta?: string;
+    headers?: string[];
+    rows?: string[][]; // Array of rows, where each row is an array of cell strings
 }
 
 export interface UnitLecture {
@@ -708,6 +710,7 @@ import { getB2LectureForUnit } from './lectures-b2';
 import { getEnglishA1LectureForUnit } from './lectures-en-a1';
 import { getEnglishA2LectureForUnit } from './lectures-en-a2';
 import { getFrenchA1LectureForUnit } from './lectures-fr-a1';
+import { getFrenchA2LectureForUnit } from './lectures-fr-a2';
 
 
 export function getLectureForUnit(unitId: number): UnitLecture {
@@ -751,6 +754,12 @@ export function getLectureForUnit(unitId: number): UnitLecture {
     // Fransızca A1 (301-330)
     if (unitId >= 301 && unitId <= 330) {
         return getFrenchA1LectureForUnit(unitId);
+    }
+
+    // Fransızca A2 (331-360)
+    if (unitId >= 331 && unitId <= 360) {
+        const frA2Lecture = getFrenchA2LectureForUnit(unitId);
+        if (frA2Lecture) return frA2Lecture;
     }
 
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===

@@ -1,4 +1,4 @@
-// LinguaFlow - Scene Mode Scenarios
+// SteadyShell - Scene Mode Scenarios
 // 20 senaryo, 6 kategori
 
 export interface Scene {

@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Okuma Veritabanı - İspanyolca A2
+ * SteadyShell Okuma Veritabanı - İspanyolca A2
  * Ünite 21-40 için okuma içerikleri
  */
 

@@ -71,7 +71,38 @@ function SpeakingContent() {
     const playAudio = (text: string) => {
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = languageCode;
-        utterance.rate = 0.8;
+
+        // Kadın sesi tercih et
+        const voices = speechSynthesis.getVoices();
+        const femaleVoice = voices.find(v =>
+            v.lang.startsWith(languageCode.split('-')[0]) &&
+            (v.name.toLowerCase().includes('female') ||
+                v.name.toLowerCase().includes('woman') ||
+                v.name.toLowerCase().includes('amelie') ||
+                v.name.toLowerCase().includes('marie') ||
+                v.name.toLowerCase().includes('céline') ||
+                v.name.toLowerCase().includes('celine') ||
+                v.name.toLowerCase().includes('léa') ||
+                v.name.toLowerCase().includes('lea') ||
+                v.name.toLowerCase().includes('julie') ||
+                v.name.toLowerCase().includes('virginie') ||
+                v.name.toLowerCase().includes('paulina') ||
+                v.name.toLowerCase().includes('monica') ||
+                v.name.toLowerCase().includes('helena') ||
+                v.name.toLowerCase().includes('samantha') ||
+                v.name.toLowerCase().includes('karen') ||
+                v.name.toLowerCase().includes('victoria') ||
+                v.name.toLowerCase().includes('zira') ||
+                v.name.includes('Google') && v.name.toLowerCase().includes('female'))
+        ) || voices.find(v => v.lang.startsWith(languageCode.split('-')[0]));
+
+        if (femaleVoice) {
+            utterance.voice = femaleVoice;
+        }
+
+        utterance.rate = 0.85; // Daha yavaş ve anlaşılır
+        utterance.pitch = 1.1; // Kadın sesi için biraz daha yüksek pitch
+
         speechSynthesis.speak(utterance);
     };
 

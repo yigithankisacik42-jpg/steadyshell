@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Lectures - English A2 (Units 131-160)
+ * SteadyShell Lectures - English A2 (Units 131-160)
  * Curriculum ile uyumlu içerikler
  */
 

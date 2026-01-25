@@ -1,5 +1,5 @@
 /**
- * LinguaFlow İspanyolca B2 Ders Anlatımları
+ * SteadyShell İspanyolca B2 Ders Anlatımları
  * 
  * B2 Seviyesi: Ünite 61-80 (20 ünite)
  * İleri düzey konular ve detaylı açıklamalar

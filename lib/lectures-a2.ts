@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Konu Anlatımı Veritabanı - İspanyolca A2
+ * SteadyShell Konu Anlatımı Veritabanı - İspanyolca A2
  * 20 Ünite (ID: 21-40), her biri için detaylı konu anlatımı
  */
 

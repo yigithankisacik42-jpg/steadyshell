@@ -1,11 +1,11 @@
 /**
- * LinguaFlow Müfredat Verileri - 20 Ünite/Seviye
+ * SteadyShell Müfredat Verileri - 20 Ünite/Seviye
  * 
  * Dil > Seviye > Ünite > Ders hiyerarşisi
  * Tüm ünite başlıkları Türkçe (Türkçe bilenlere yönelik)
  */
 
-export type LessonType = "LESSON" | "READING" | "LECTURE" | "SPEAKING" | "VOCABULARY" | "PHRASES" | "GRAMMAR";
+export type LessonType = "LESSON" | "READING" | "LECTURE" | "SPEAKING" | "VOCABULARY" | "PHRASES" | "GRAMMAR" | "VIDEO";
 
 export interface Lesson {
     id: number;
@@ -61,16 +61,17 @@ const unitColors = [
 function generateLessons(startId: number, count: number = 10): Lesson[] {
     const lessons: Lesson[] = [];
     const pattern: LessonType[] = [
-        "LECTURE",     // 1. Konu Anlatımı
-        "VOCABULARY",  // 2. Kelimeler
-        "PHRASES",     // 3. Kalıplar (YENİ)
-        "GRAMMAR",     // 4. Gramer (YENİ)
-        "LESSON",      // 5. Quiz 1
-        "LESSON",      // 6. Quiz 2
-        "SPEAKING",    // 7. Konuşma
-        "READING",     // 8. Okuma
-        "LESSON",      // 9. Quiz 3
-        "LESSON"       // 10. Quiz 4
+        "VIDEO",       // 1. Video (YENİ)
+        "LECTURE",     // 2. Konu Anlatımı
+        "VOCABULARY",  // 3. Kelimeler
+        "PHRASES",     // 4. Kalıplar
+        "GRAMMAR",     // 5. Gramer
+        "LESSON",      // 6. Quiz 1
+        "LESSON",      // 7. Quiz 2
+        "SPEAKING",    // 8. Konuşma
+        "READING",     // 9. Okuma
+        "LESSON",      // 10. Quiz 3
+        "LESSON"       // 11. Quiz 4
     ];
 
     for (let i = 0; i < count; i++) {
@@ -78,13 +79,14 @@ function generateLessons(startId: number, count: number = 10): Lesson[] {
         lessons.push({
             id: startId + i,
             type,
-            title: type === "LECTURE" ? "Konu Anlatımı" :
-                type === "VOCABULARY" ? "Kelimeler" :
-                    type === "PHRASES" ? "Kalıplar" :
-                        type === "GRAMMAR" ? "Gramer" :
-                            type === "READING" ? "Okuma" :
-                                type === "SPEAKING" ? "Konuşma" :
-                                    `Alıştırma`,
+            title: type === "VIDEO" ? "Video Ders" :
+                type === "LECTURE" ? "Konu Anlatımı" :
+                    type === "VOCABULARY" ? "Kelimeler" :
+                        type === "PHRASES" ? "Kalıplar" :
+                            type === "GRAMMAR" ? "Gramer" :
+                                type === "READING" ? "Okuma" :
+                                    type === "SPEAKING" ? "Konuşma" :
+                                        `Alıştırma`,
         });
     }
 

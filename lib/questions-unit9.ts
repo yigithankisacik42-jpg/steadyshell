@@ -1,5 +1,5 @@
 /**
- * LinguaFlow - Ünite 9: Ev Odaları (100 soru - 4 quiz × 25 soru)
+ * SteadyShell - Ünite 9: Ev Odaları (100 soru - 4 quiz × 25 soru)
  */
 
 import { Question } from "./questions";

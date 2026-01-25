@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Gramer Veritabanı - İspanyolca A2
+ * SteadyShell Gramer Veritabanı - İspanyolca A2
  * 20 Ünite (ID: 21-40), her biri için detaylı gramer kuralları
  */
 

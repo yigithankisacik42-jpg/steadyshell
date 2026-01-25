@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Güvenlik Modülü
+ * SteadyShell Güvenlik Modülü
  * Şifre hashleme, validasyon ve güvenlik yardımcıları
  */
 

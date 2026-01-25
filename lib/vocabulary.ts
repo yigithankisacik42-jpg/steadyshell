@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Kelime Veritabanı - İspanyolca A1
+ * SteadyShell Kelime Veritabanı - İspanyolca A1
  * Her ünite için ayrı kelime listesi
  */
 
@@ -1091,6 +1091,7 @@ import { getB2VocabularyForUnit } from './vocabulary-b2';
 import { getEnglishA1VocabularyForUnit } from './vocabulary-en-a1';
 import { getEnglishA2VocabularyForUnit } from './vocabulary-en-a2';
 import { getFrenchA1VocabularyForUnit } from './vocabulary-fr-a1';
+import { getFrenchA2VocabularyForUnit } from './vocabulary-fr-a2';
 
 export function getVocabularyForUnit(unitId: number): UnitVocabulary {
     // === İNGİLİZCE ÜNİTELER (ID 101-220) ===
@@ -1131,6 +1132,12 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         const frVocab = getFrenchA1VocabularyForUnit(unitId);
         if (frVocab) return frVocab;
         // Fallback or empty if null
+    }
+
+    // Fransızca A2 (331-360)
+    if (unitId >= 331 && unitId <= 360) {
+        const frA2Vocab = getFrenchA2VocabularyForUnit(unitId);
+        if (frA2Vocab) return frA2Vocab;
     }
 
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===

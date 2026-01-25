@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Kalıplar (Phrases) Veritabanı - İspanyolca A1
+ * SteadyShell Kalıplar (Phrases) Veritabanı - İspanyolca A1
  * Günlük hayatta sık kullanılan kalıplar ve deyimler
  */
 
@@ -24,6 +24,7 @@ import { getB2PhrasesForUnit } from './phrases-b2';
 import { getEnglishA1PhrasesForUnit } from './phrases-en-a1';
 import { getEnglishA2PhrasesForUnit } from './phrases-en-a2';
 import { getFrenchA1PhrasesForUnit } from './phrases-fr-a1';
+import { getFrenchA2PhrasesForUnit } from './phrases-fr-a2';
 import { getUnit } from './curriculum';
 
 export function getPhrasesForUnit(unitId: number): UnitPhrases {
@@ -69,6 +70,23 @@ export function getPhrasesForUnit(unitId: number): UnitPhrases {
                 title: frPhrases.title,
                 level: "A1",
                 phrases: frPhrases.phrases.map(p => ({
+                    target: p.text,
+                    native: p.meaning,
+                    pronunciation: p.pronunciation
+                }))
+            };
+        }
+    }
+
+    // Fransızca A2 (331-360)
+    if (unitId >= 331 && unitId <= 360) {
+        const frA2Phrases = getFrenchA2PhrasesForUnit(unitId);
+        if (frA2Phrases) {
+            return {
+                unitId: frA2Phrases.unitId,
+                title: frA2Phrases.title,
+                level: "A2",
+                phrases: frA2Phrases.phrases.map(p => ({
                     target: p.text,
                     native: p.meaning,
                     pronunciation: p.pronunciation

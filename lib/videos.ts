@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Video Veritabanı
+ * SteadyShell Video Veritabanı
  * YouTube video ID'leri - NotebookLM ile oluşturulan ders videoları
  */
 
@@ -99,6 +99,23 @@ export const frA1Videos: UnitVideo[] = [
     { unitId: 310, youtubeId: "7Xr017HFkig", title: "Sınıfta", level: "A1" },
     { unitId: 311, youtubeId: "1ngixAv1Pqo", title: "Vücudumuz", level: "A1" },
     { unitId: 312, youtubeId: "DdPzOwdTNiQ", title: "Giysiler", level: "A1" },
+    { unitId: 313, youtubeId: "NperjB9yH9I", title: "Yiyecekler", level: "A1" }, // Video OK
+    { unitId: 314, youtubeId: "bf__GK-vGOg", title: "İçecekler", level: "A1" },
+    { unitId: 315, youtubeId: "xdof7kG1Gio", title: "Saatler", level: "A1" },
+    { unitId: 316, youtubeId: "w-Gp7UjkFu4", title: "Günlük Rutin", level: "A1" },
+    { unitId: 317, youtubeId: "rZ6O0QDJtMw", title: "Hobiler", level: "A1" },
+    { unitId: 318, youtubeId: "3VbAiVhaqOU", title: "Hava Durumu", level: "A1" },
+    { unitId: 319, youtubeId: "OHlc5tltHqc", title: "Duygular", level: "A1" },
+    { unitId: 320, youtubeId: "ghQEVtBMKnU", title: "Şehirde Yönler", level: "A1" },
+    { unitId: 321, youtubeId: "YiPopRksYMA", title: "Ulaşım", level: "A1" },
+    { unitId: 322, youtubeId: "YSptqTMNOQM", title: "Mevsimler", level: "A1" },
+    { unitId: 323, youtubeId: "gKVZct090as", title: "Doğum Günü", level: "A1" },
+    { unitId: 324, youtubeId: "viIw2KTYKUo", title: "Tatilde", level: "A1" },
+    { unitId: 325, youtubeId: "gsL_ztzNWKA", title: "Alışveriş", level: "A1" },
+    { unitId: 326, youtubeId: "GsWfhzkHlmM", title: "Restoranda", level: "A1" },
+    { unitId: 327, youtubeId: "qCGBxEfd_p0", title: "Karşılaştırma", level: "A1" },
+    { unitId: 328, youtubeId: "ludiYRNkOp4", title: "Hayvanlar", level: "A1" },
+    { unitId: 329, youtubeId: "ludiYRNkOp4", title: "Teknoloji", level: "A1" },
 ];
 
 // Fransızca A2 Videoları

@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Okuma Veritabanı - İspanyolca B2
+ * SteadyShell Okuma Veritabanı - İspanyolca B2
  * Ünite 61-80 için okuma içerikleri
  */
 

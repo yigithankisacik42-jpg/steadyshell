@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Phrases Database - English A1
+ * SteadyShell Phrases Database - English A1
  * 30 Units (ID: 101-130) with common phrases
  */
 

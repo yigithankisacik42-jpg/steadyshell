@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Dilbilgisi Veritabanı
+ * SteadyShell Dilbilgisi Veritabanı
  * Her ünite için detaylı dilbilgisi kuralları, tablolar ve örnekler
  */
 
@@ -10,6 +10,7 @@ import { getB1GrammarForUnit } from './grammar-b1';
 import { getB2GrammarForUnit } from './grammar-b2';
 import { getA2GrammarForUnit } from './grammar-a2';
 import { getFrenchA1GrammarForUnit } from './grammar-fr-a1';
+import { getFrenchA2GrammarForUnit } from './grammar-fr-a2';
 
 export interface GrammarExample {
     es?: string;
@@ -3258,6 +3259,14 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
         const frGrammar = getFrenchA1GrammarForUnit(unitId);
         if (frGrammar) {
             return frGrammar;
+        }
+    }
+
+    // Fransızca A2 (331-360)
+    if (unitId >= 331 && unitId <= 360) {
+        const frA2Grammar = getFrenchA2GrammarForUnit(unitId);
+        if (frA2Grammar) {
+            return frA2Grammar;
         }
     }
 

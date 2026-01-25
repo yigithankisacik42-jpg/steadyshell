@@ -1,5 +1,5 @@
 /**
- * LinguaFlow - Ünite 14: Meslekler (100 soru - 4 quiz × 25 soru)
+ * SteadyShell - Ünite 14: Meslekler (100 soru - 4 quiz × 25 soru)
  */
 
 import { Question } from "./questions";

@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 322-323
+import { Question } from "./questions";
+
+// ===== ÜNİTE 322: ULAŞIM =====
+export const unit322Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'La voiture' ne demek?", options: [{ id: "a", text: "Araba", correct: true }, { id: "b", text: "Otobüs", correct: false }, { id: "c", text: "Tren", correct: false }, { id: "d", text: "Uçak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le bus' ne demek?", options: [{ id: "a", text: "Otobüs", correct: true }, { id: "b", text: "Araba", correct: false }, { id: "c", text: "Taksi", correct: false }, { id: "d", text: "Kamyon", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le train", options: [{ id: "a", text: "Tren", correct: true }, { id: "b", text: "Metro", correct: false }, { id: "c", text: "Tramvay", correct: false }, { id: "d", text: "Vapur", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'avion' ne demek?", options: [{ id: "a", text: "Uçak", correct: true }, { id: "b", text: "Helikopter", correct: false }, { id: "c", text: "Gemi", correct: false }, { id: "d", text: "Roket", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le bateau", options: [{ id: "a", text: "Gemi/Tekne", correct: true }, { id: "b", text: "Uçak", correct: false }, { id: "c", text: "Tren", correct: false }, { id: "d", text: "Araba", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le taxi' ne demek?", options: [{ id: "a", text: "Taksi", correct: true }, { id: "b", text: "Otobüs", correct: false }, { id: "c", text: "Minibüs", correct: false }, { id: "d", text: "Metro", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le vélo' ne demek?", options: [{ id: "a", text: "Bisiklet", correct: true }, { id: "b", text: "Motosiklet", correct: false }, { id: "c", text: "Scooter", correct: false }, { id: "d", text: "Kaykay", correct: false }] },
+    { id: 8, type: "SELECT", question: "'À pied' ne demek?", options: [{ id: "a", text: "Yürüyerek/Yaya", correct: true }, { id: "b", text: "Arabayla", correct: false }, { id: "c", text: "Otobüsle", correct: false }, { id: "d", text: "Trenle", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "İşe arabayla gidiyorum", correctAnswer: "Je vais au travail en voiture" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je prends le ___.", options: [{ id: "a", text: "bus", correct: true }, { id: "b", text: "voiture", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le transport", options: [{ id: "a", text: "Ulaşım/Taşıt", correct: true }, { id: "b", text: "Trafik", correct: false }, { id: "c", text: "Yol", correct: false }, { id: "d", text: "Seyahat", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La moto' ne demek?", options: [{ id: "a", text: "Motosiklet", correct: true }, { id: "b", text: "Bisiklet", correct: false }, { id: "c", text: "Araba", correct: false }, { id: "d", text: "Otobüs", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Tren istasyonda", correctAnswer: "Le train est à la gare" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous voyageons en ___.", options: [{ id: "a", text: "avion", correct: true }, { id: "b", text: "pied", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Taksi çağırıyorum", correctAnswer: "J'appelle un taxi" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Prendre le métro", options: [{ id: "a", text: "Metroya binmek", correct: true }, { id: "b", text: "Otobüse binmek", correct: false }, { id: "c", text: "Trene binmek", correct: false }, { id: "d", text: "Taksiye binmek", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Il va à l'école à ___.", options: [{ id: "a", text: "vélo", correct: true }, { id: "b", text: "voiture", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Yürümeyi tercih ederim", correctAnswer: "Je préfère marcher" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ part à huit heures.", options: [{ id: "a", text: "bateau", correct: true }, { id: "b", text: "voiture", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Taşıt araçlarını öğrendik!", correctAnswer: "Nous avons appris les moyens de transport!" }
+];
+
+export const unit322Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le billet' ne demek?", options: [{ id: "a", text: "Bilet", correct: true }, { id: "b", text: "Pasaport", correct: false }, { id: "c", text: "Kimlik", correct: false }, { id: "d", text: "Para", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le ticket' ne demek?", options: [{ id: "a", text: "Bilet (küçük/şehir içi)", correct: true }, { id: "b", text: "Fatura", correct: false }, { id: "c", text: "Fiş", correct: false }, { id: "d", text: "Kart", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Composter", options: [{ id: "a", text: "Bileti okutmak/onaylatmak", correct: true }, { id: "b", text: "Bilet almak", correct: false }, { id: "c", text: "Bilet satmak", correct: false }, { id: "d", text: "Bilet kaybetmek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le guichet' ne demek?", options: [{ id: "a", text: "Gişe", correct: true }, { id: "b", text: "Kapı", correct: false }, { id: "c", text: "Pencere", correct: false }, { id: "d", text: "Masa", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Un aller simple", options: [{ id: "a", text: "Tek gidiş bilet", correct: true }, { id: "b", text: "Gidiş dönüş bilet", correct: false }, { id: "c", text: "İndirimli bilet", correct: false }, { id: "d", text: "Tam bilet", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Un aller-retour' ne demek?", options: [{ id: "a", text: "Gidiş-dönüş bileti", correct: true }, { id: "b", text: "Tek yön bilet", correct: false }, { id: "c", text: "Öğrenci bileti", correct: false }, { id: "d", text: "Tam bilet", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le passager' ne demek?", options: [{ id: "a", text: "Yolcu", correct: true }, { id: "b", text: "Şoför", correct: false }, { id: "c", text: "Pilot", correct: false }, { id: "d", text: "Hostes", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le conducteur' ne demek?", options: [{ id: "a", text: "Sürücü/Şoför", correct: true }, { id: "b", text: "Yolcu", correct: false }, { id: "c", text: "Yaya", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bir bilet istiyorum", correctAnswer: "Je voudrais un billet" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Où est le ___?", options: [{ id: "a", text: "guichet", correct: true }, { id: "b", text: "billet", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Combien ça coûte?", options: [{ id: "a", text: "Ne kadar tutuyor?", correct: true }, { id: "b", text: "Saat kaç?", correct: false }, { id: "c", text: "Ne zaman geliyor?", correct: false }, { id: "d", text: "Nereye gidiyor?", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Valider' ne demek?", options: [{ id: "a", text: "Onaylamak/Okutmak", correct: true }, { id: "b", text: "İptal etmek", correct: false }, { id: "c", text: "Satın almak", correct: false }, { id: "d", text: "Satmak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Paris'e gidiş-dönüş", correctAnswer: "Un aller-retour pour Paris" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "N'oubliez pas de ___ votre billet.", options: [{ id: "a", text: "composter", correct: true }, { id: "b", text: "acheter", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Tren doldu", correctAnswer: "Le train est complet" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Réserver une place", options: [{ id: "a", text: "Yer ayırtmak", correct: true }, { id: "b", text: "Bilet almak", correct: false }, { id: "c", text: "Oturmak", correct: false }, { id: "d", text: "Kalkmak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis un ___.", options: [{ id: "a", text: "passager", correct: true }, { id: "b", text: "billet", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Otobüse biniyorum", correctAnswer: "Je monte dans le bus" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ conduit le bus.", options: [{ id: "a", text: "conducteur", correct: true }, { id: "b", text: "passager", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Bilet işlemlerini öğrendik!", correctAnswer: "Nous avons appris les procédures de billets!" }
+];
+
+export const unit322Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Partir' ne demek?", options: [{ id: "a", text: "Hareket etmek/Ayrılmak", correct: true }, { id: "b", text: "Varmak", correct: false }, { id: "c", text: "Gelmek", correct: false }, { id: "d", text: "Beklemek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Arriver' ne demek?", options: [{ id: "a", text: "Varmak/Gelmek", correct: true }, { id: "b", text: "Gitmek", correct: false }, { id: "c", text: "Kalkmak", correct: false }, { id: "d", text: "İnmek", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le départ", options: [{ id: "a", text: "Kalkış", correct: true }, { id: "b", text: "Varış", correct: false }, { id: "c", text: "Yolculuk", correct: false }, { id: "d", text: "Durak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'arrivée' ne demek?", options: [{ id: "a", text: "Varış", correct: true }, { id: "b", text: "Kalkış", correct: false }, { id: "c", text: "Gecikme", correct: false }, { id: "d", text: "İptal", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "En retard", options: [{ id: "a", text: "Gecikmeli/Geç kalmış", correct: true }, { id: "b", text: "Zamanında", correct: false }, { id: "c", text: "Erken", correct: false }, { id: "d", text: "İptal", correct: false }] },
+    { id: 6, type: "SELECT", question: "'À l'heure' ne demek?", options: [{ id: "a", text: "Zamanında", correct: true }, { id: "b", text: "Geç", correct: false }, { id: "c", text: "Erken", correct: false }, { id: "d", text: "Hızlı", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Annulé' ne demek?", options: [{ id: "a", text: "İptal edildi", correct: true }, { id: "b", text: "Ertelendi", correct: false }, { id: "c", text: "Onaylandı", correct: false }, { id: "d", text: "Bitti", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le quai' ne demek?", options: [{ id: "a", text: "Peron/Rıhtım", correct: true }, { id: "b", text: "Ray", correct: false }, { id: "c", text: "Vagon", correct: false }, { id: "d", text: "Koltuk", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Tren saat kaçta kalkıyor?", correctAnswer: "À quelle heure part le train?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "L'avion ___ à dix heures.", options: [{ id: "a", text: "arrive", correct: true }, { id: "b", text: "arriver", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le voyage", options: [{ id: "a", text: "Yolculuk", correct: true }, { id: "b", text: "Tatil", correct: false }, { id: "c", text: "Bilet", correct: false }, { id: "d", text: "Valiz", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le vol' ne demek?", options: [{ id: "a", text: "Uçuş", correct: true }, { id: "b", text: "Yolculuk", correct: false }, { id: "c", text: "Kanat", correct: false }, { id: "d", text: "Pilot", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Tren peron 2'de", correctAnswer: "Le train est au quai deux" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le bus est en ___.", options: [{ id: "a", text: "retard", correct: true }, { id: "b", text: "avance", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "İyi yolculuklar!", correctAnswer: "Bon voyage!" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Monter", options: [{ id: "a", text: "Binmek/Çıkmak", correct: true }, { id: "b", text: "İnmek", correct: false }, { id: "c", text: "Gitmek", correct: false }, { id: "d", text: "Durmak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ du train.", options: [{ id: "a", text: "descends", correct: true }, { id: "b", text: "monte", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Uçuş iptal edildi", correctAnswer: "Le vol est annulé" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est prévu à midi.", options: [{ id: "a", text: "arrivée", correct: true }, { id: "b", text: "arrive", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yolculuk terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes de voyage!" }
+];
+
+export const unit322Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Les bagages' ne demek?", options: [{ id: "a", text: "Bagaj/Bavullar", correct: true }, { id: "b", text: "Biletler", correct: false }, { id: "c", text: "Yolcular", correct: false }, { id: "d", text: "Hediyeler", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La valise' ne demek?", options: [{ id: "a", text: "Valiz/Bavul", correct: true }, { id: "b", text: "Çanta", correct: false }, { id: "c", text: "Kutu", correct: false }, { id: "d", text: "Paket", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le sac à dos", options: [{ id: "a", text: "Sırt çantası", correct: true }, { id: "b", text: "El çantası", correct: false }, { id: "c", text: "Cüzdan", correct: false }, { id: "d", text: "Poşet", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le passeport' ne demek?", options: [{ id: "a", text: "Pasaport", correct: true }, { id: "b", text: "Kimlik", correct: false }, { id: "c", text: "Bilet", correct: false }, { id: "d", text: "Vize", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La douane", options: [{ id: "a", text: "Gümrük", correct: true }, { id: "b", text: "Polis", correct: false }, { id: "c", text: "Havalimanı", correct: false }, { id: "d", text: "Sınır", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La carte d'identité' ne demek?", options: [{ id: "a", text: "Kimlik kartı", correct: true }, { id: "b", text: "Kredi kartı", correct: false }, { id: "c", text: "Harita", correct: false }, { id: "d", text: "Kartvizit", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Enregistrer' (bagaj) ne demek?", options: [{ id: "a", text: "Bagaj teslim etmek", correct: true }, { id: "b", text: "Kaydetmek", correct: false }, { id: "c", text: "Taşımak", correct: false }, { id: "d", text: "Almak", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le contrôle' ne demek?", options: [{ id: "a", text: "Kontrol", correct: true }, { id: "b", text: "Geçiş", correct: false }, { id: "c", text: "Giriş", correct: false }, { id: "d", text: "Çıkış", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Valizim nerede?", correctAnswer: "Où est ma valise?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai deux ___.", options: [{ id: "a", text: "valises", correct: true }, { id: "b", text: "billet", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Votre passeport, s'il vous plaît", options: [{ id: "a", text: "Pasaportunuz lütfen", correct: true }, { id: "b", text: "Biletiniz lütfen", correct: false }, { id: "c", text: "Kimliğiniz lütfen", correct: false }, { id: "d", text: "Bagajınız lütfen", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Lourd' ne demek?", options: [{ id: "a", text: "Ağır", correct: true }, { id: "b", text: "Hafif", correct: false }, { id: "c", text: "Büyük", correct: false }, { id: "d", text: "Küçük", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Çantam çok ağır", correctAnswer: "Mon sac est très lourd" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je passe la ___.", options: [{ id: "a", text: "douane", correct: true }, { id: "b", text: "ville", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kimliğimi kaybettim", correctAnswer: "J'ai perdu ma carte d'identité" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Léger", options: [{ id: "a", text: "Hafif", correct: true }, { id: "b", text: "Ağır", correct: false }, { id: "c", text: "Boş", correct: false }, { id: "d", text: "Dolu", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Vos ___ sont ici.", options: [{ id: "a", text: "bagages", correct: true }, { id: "b", text: "billet", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bagajlarımı bekliyorum", correctAnswer: "J'attends mes bagages" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Montrez-moi votre ___.", options: [{ id: "a", text: "passeport", correct: true }, { id: "b", text: "valise", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yol hazırlığını öğrendik!", correctAnswer: "Nous avons appris les préparatifs de voyage!" }
+];
+
+// ===== ÜNİTE 323: KONAKLAMA =====
+export const unit323Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'L'hôtel' ne demek?", options: [{ id: "a", text: "Otel", correct: true }, { id: "b", text: "Ev", correct: false }, { id: "c", text: "Hastane", correct: false }, { id: "d", text: "Okul", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La chambre' ne demek?", options: [{ id: "a", text: "Oda", correct: true }, { id: "b", text: "Banyo", correct: false }, { id: "c", text: "Mutfak", correct: false }, { id: "d", text: "Salon", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Réserver", options: [{ id: "a", text: "Rezervasyon yapmak", correct: true }, { id: "b", text: "İptal etmek", correct: false }, { id: "c", text: "Satın almak", correct: false }, { id: "d", text: "Satmak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La réservation' ne demek?", options: [{ id: "a", text: "Rezervasyon", correct: true }, { id: "b", text: "Resepsiyon", correct: false }, { id: "c", text: "Anahtar", correct: false }, { id: "d", text: "Fatura", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La réception", options: [{ id: "a", text: "Resepsiyon", correct: true }, { id: "b", text: "Restoran", correct: false }, { id: "c", text: "Oda", correct: false }, { id: "d", text: "Bar", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le client' ne demek?", options: [{ id: "a", text: "Müşteri", correct: true }, { id: "b", text: "Çalışan", correct: false }, { id: "c", text: "Müdür", correct: false }, { id: "d", text: "Garson", correct: false }] },
+    { id: 7, type: "SELECT", question: "'L'ascenseur' ne demek?", options: [{ id: "a", text: "Asansör", correct: true }, { id: "b", text: "Merdiven", correct: false }, { id: "c", text: "Koridor", correct: false }, { id: "d", text: "Kapı", correct: false }] },
+    { id: 8, type: "SELECT", question: "'L'escalier' ne demek?", options: [{ id: "a", text: "Merdiven", correct: true }, { id: "b", text: "Asansör", correct: false }, { id: "c", text: "Kat", correct: false }, { id: "d", text: "Balkon", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bir oda rezerve etmek istiyorum", correctAnswer: "Je voudrais réserver une chambre" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai une ___ au nom de Yılmaz.", options: [{ id: "a", text: "réservation", correct: true }, { id: "b", text: "chambre", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une chambre simple", options: [{ id: "a", text: "Tek kişilik oda", correct: true }, { id: "b", text: "Çift kişilik oda", correct: false }, { id: "c", text: "Üç kişilik oda", correct: false }, { id: "d", text: "Aile odası", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Une chambre double' ne demek?", options: [{ id: "a", text: "Çift kişilik oda", correct: true }, { id: "b", text: "İki oda", correct: false }, { id: "c", text: "Tek kişilik oda", correct: false }, { id: "d", text: "Büyük oda", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Resepsiyon nerede?", correctAnswer: "Où est la réception?" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Prenez l'___ pour monter.", options: [{ id: "a", text: "ascenseur", correct: true }, { id: "b", text: "escalier", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Beşinci katta", correctAnswer: "Au cinquième étage" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'étage", options: [{ id: "a", text: "Kat", correct: true }, { id: "b", text: "Oda", correct: false }, { id: "c", text: "Çatı", correct: false }, { id: "d", text: "Zemin", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis un ___ de l'hôtel.", options: [{ id: "a", text: "client", correct: true }, { id: "b", text: "réception", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bu otel çok güzel", correctAnswer: "Cet hôtel est très beau" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je voudrais une chambre ___.", options: [{ id: "a", text: "double", correct: true }, { id: "b", text: "doubles", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Otel terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes de l'hôtel!" }
+];
+
+export const unit323Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le lit' ne demek?", options: [{ id: "a", text: "Yatak", correct: true }, { id: "b", text: "Yastık", correct: false }, { id: "c", text: "Dolap", correct: false }, { id: "d", text: "Masa", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La salle de bain' ne demek?", options: [{ id: "a", text: "Banyo", correct: true }, { id: "b", text: "Tuvalet", correct: false }, { id: "c", text: "Oda", correct: false }, { id: "d", text: "Duş", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La douche", options: [{ id: "a", text: "Duş", correct: true }, { id: "b", text: "Küvet", correct: false }, { id: "c", text: "Lavabo", correct: false }, { id: "d", text: "Havlu", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Les toilettes' ne demek?", options: [{ id: "a", text: "Tuvalet", correct: true }, { id: "b", text: "Banyo", correct: false }, { id: "c", text: "Mutfak", correct: false }, { id: "d", text: "Oda", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La serviette", options: [{ id: "a", text: "Havlu", correct: true }, { id: "b", text: "Sabun", correct: false }, { id: "c", text: "Şampuan", correct: false }, { id: "d", text: "Çarşaf", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le savon' ne demek?", options: [{ id: "a", text: "Sabun", correct: true }, { id: "b", text: "Şampuan", correct: false }, { id: "c", text: "Su", correct: false }, { id: "d", text: "Macun", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La clé' ne demek?", options: [{ id: "a", text: "Anahtar", correct: true }, { id: "b", text: "Kapı", correct: false }, { id: "c", text: "Kilit", correct: false }, { id: "d", text: "Kart", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le bruit' ne demek?", options: [{ id: "a", text: "Gürültü", correct: true }, { id: "b", text: "Sessizlik", correct: false }, { id: "c", text: "Müzik", correct: false }, { id: "d", text: "Ses", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Anahtarım nerede?", correctAnswer: "Où est ma clé?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a une ___ dans la chambre.", options: [{ id: "a", text: "télévision", correct: true }, { id: "b", text: "lit", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est propre", options: [{ id: "a", text: "Temiz", correct: true }, { id: "b", text: "Kirli", correct: false }, { id: "c", text: "Yeni", correct: false }, { id: "d", text: "Eski", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Sale' ne demek?", options: [{ id: "a", text: "Kirli", correct: true }, { id: "b", text: "Temiz", correct: false }, { id: "c", text: "Boş", correct: false }, { id: "d", text: "Dolu", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Banyo çok küçük", correctAnswer: "La salle de bain est très petite" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je veux une ___ propre.", options: [{ id: "a", text: "serviette", correct: true }, { id: "b", text: "savon", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Sıcak su yok", correctAnswer: "Il n'y a pas d'eau chaude" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le wifi", options: [{ id: "a", text: "Wifi/İnternet", correct: true }, { id: "b", text: "Bilgisayar", correct: false }, { id: "c", text: "Televizyon", correct: false }, { id: "d", text: "Telefon", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Voici votre ___.", options: [{ id: "a", text: "clé", correct: true }, { id: "b", text: "chambre", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Yatak çok rahat", correctAnswer: "Le lit est très confortable" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a trop de ___.", options: [{ id: "a", text: "bruit", correct: true }, { id: "b", text: "calme", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Oda özelliklerini öğrendik!", correctAnswer: "Nous avons appris les caractéristiques de la chambre!" }
+];
+
+export const unit323Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le petit-déjeuner compris' ne demek?", options: [{ id: "a", text: "Kahvaltı dahil", correct: true }, { id: "b", text: "Kahvaltı hariç", correct: false }, { id: "c", text: "Sadece kahvaltı", correct: false }, { id: "d", text: "Kahvaltı yok", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La demi-pension' ne demek?", options: [{ id: "a", text: "Yarım pansiyon", correct: true }, { id: "b", text: "Tam pansiyon", correct: false }, { id: "c", text: "Her şey dahil", correct: false }, { id: "d", text: "Sadece oda", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Pension complète", options: [{ id: "a", text: "Tam pansiyon", correct: true }, { id: "b", text: "Yarım pansiyon", correct: false }, { id: "c", text: "Oda kahvaltı", correct: false }, { id: "d", text: "Sadece oda", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Payer' ne demek?", options: [{ id: "a", text: "Ödemek", correct: true }, { id: "b", text: "Almak", correct: false }, { id: "c", text: "Vermek", correct: false }, { id: "d", text: "Sormak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "En espèces", options: [{ id: "a", text: "Nakit olarak", correct: true }, { id: "b", text: "Kartla", correct: false }, { id: "c", text: "Çekle", correct: false }, { id: "d", text: "Borçla", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Par carte' ne demek?", options: [{ id: "a", text: "Kartla", correct: true }, { id: "b", text: "Nakit", correct: false }, { id: "c", text: "Çekle", correct: false }, { id: "d", text: "Peşin", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Cher' ne demek?", options: [{ id: "a", text: "Pahalı", correct: true }, { id: "b", text: "Ucuz", correct: false }, { id: "c", text: "Güzel", correct: false }, { id: "d", text: "Kötü", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Bon marché' ne demek?", options: [{ id: "a", text: "Ucuz", correct: true }, { id: "b", text: "Pahalı", correct: false }, { id: "c", text: "Güzel", correct: false }, { id: "d", text: "İyi", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Hesabı ödemek istiyorum", correctAnswer: "Je voudrais payer l'addition" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Le petit-déjeuner est ___.", options: [{ id: "a", text: "compris", correct: true }, { id: "b", text: "gratuit", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est trop cher", options: [{ id: "a", text: "Çok pahalı", correct: true }, { id: "b", text: "Çok ucuz", correct: false }, { id: "c", text: "Çok güzel", correct: false }, { id: "d", text: "Çok kötü", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La facture' ne demek?", options: [{ id: "a", text: "Fatura", correct: true }, { id: "b", text: "Fiş", correct: false }, { id: "c", text: "Bilet", correct: false }, { id: "d", text: "Para", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Nakit ödeyebilir miyim?", correctAnswer: "Puis-je payer en espèces?" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Cet hôtel est bon ___.", options: [{ id: "a", text: "marché", correct: true }, { id: "b", text: "cher", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kredı kartı kabul ediyor musunuz?", correctAnswer: "Acceptez-vous la carte de crédit?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une nuit", options: [{ id: "a", text: "Bir gece", correct: true }, { id: "b", text: "Bir gün", correct: false }, { id: "c", text: "Bir hafta", correct: false }, { id: "d", text: "Bir saat", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je reste deux ___.", options: [{ id: "a", text: "nuits", correct: true }, { id: "b", text: "nuit", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Faturayı alabilir miyim?", correctAnswer: "Puis-je avoir la facture?" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous avons choisi la ___ complète.", options: [{ id: "a", text: "pension", correct: true }, { id: "b", text: "chambre", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Ödeme terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes de paiement!" }
+];
+
+export const unit323Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le service' ne demek?", options: [{ id: "a", text: "Hizmet/Servis", correct: true }, { id: "b", text: "Yemek", correct: false }, { id: "c", text: "Oda", correct: false }, { id: "d", text: "Otel", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Appeler' ne demek?", options: [{ id: "a", text: "Aramak/Çağırmak", correct: true }, { id: "b", text: "Konuşmak", correct: false }, { id: "c", text: "Sormak", correct: false }, { id: "d", text: "Gitmek", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le réveil", options: [{ id: "a", text: "Uyandırma/Çalar saat", correct: true }, { id: "b", text: "Yatma", correct: false }, { id: "c", text: "Kahvaltı", correct: false }, { id: "d", text: "Telefon", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La femme de chambre' ne demek?", options: [{ id: "a", text: "Oda temizlikçisi/Hizmetçi", correct: true }, { id: "b", text: "Resepsiyonist", correct: false }, { id: "c", text: "Müdür", correct: false }, { id: "d", text: "Aşçı", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Nettoyer", options: [{ id: "a", text: "Temizlemek", correct: true }, { id: "b", text: "Kirletmek", correct: false }, { id: "c", text: "Yapmak", correct: false }, { id: "d", text: "Bozmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le problème' ne demek?", options: [{ id: "a", text: "Sorun/Problem", correct: true }, { id: "b", text: "Çözüm", correct: false }, { id: "c", text: "Soru", correct: false }, { id: "d", text: "Cevap", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Fonctionner' ne demek?", options: [{ id: "a", text: "Çalışmak (bir aletin işlemesi)", correct: true }, { id: "b", text: "Çalışmak (iş yapmak)", correct: false }, { id: "c", text: "Bozulmak", correct: false }, { id: "d", text: "Durmak", correct: false }] },
+    { id: 8, type: "SELECT", question: "'En panne' ne demek?", options: [{ id: "a", text: "Arızalı", correct: true }, { id: "b", text: "Çalışıyor", correct: false }, { id: "c", text: "Yeni", correct: false }, { id: "d", text: "Eski", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Televizyon çalışmıyor", correctAnswer: "La télé ne fonctionne pas" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai un ___ avec ma chambre.", options: [{ id: "a", text: "problème", correct: true }, { id: "b", text: "service", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Service de chambre", options: [{ id: "a", text: "Oda servisi", correct: true }, { id: "b", text: "Oda temizliği", correct: false }, { id: "c", text: "Oda anahtarı", correct: false }, { id: "d", text: "Oda fiyatı", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Changer' ne demek?", options: [{ id: "a", text: "Değiştirmek", correct: true }, { id: "b", text: "Kalmak", correct: false }, { id: "c", text: "Gitmek", correct: false }, { id: "d", text: "Almak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Odamı değiştirmek istiyorum", correctAnswer: "Je voudrais changer de chambre" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ n'a pas fait le ménage.", options: [{ id: "a", text: "femme de chambre", correct: true }, { id: "b", text: "réception", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Klima arızalı", correctAnswer: "La climatisation est en panne" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Appeler la réception", options: [{ id: "a", text: "Resepsiyonu aramak", correct: true }, { id: "b", text: "Polisi aramak", correct: false }, { id: "c", text: "Doktoru aramak", correct: false }, { id: "d", text: "Taksi çağırmak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est excellent ici.", options: [{ id: "a", text: "service", correct: true }, { id: "b", text: "serviette", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Saat yedide uyandırma istiyorum", correctAnswer: "Je voudrais un réveil à sept heures" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Merci de ___ la chambre.", options: [{ id: "a", text: "nettoyer", correct: true }, { id: "b", text: "dormir", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Oteli ve hizmetleri öğrendik, tebrikler!", correctAnswer: "Nous avons appris l'hôtel et les services, félicitations!" }
+];

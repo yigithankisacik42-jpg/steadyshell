@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 312-315
+import { Question } from "./questions";
+
+// ===== ÜNİTE 312: GİYSİLER =====
+export const unit312Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le pantalon' ne demek?", options: [{ id: "a", text: "Pantolon", correct: true }, { id: "b", text: "Gömlek", correct: false }, { id: "c", text: "Etek", correct: false }, { id: "d", text: "Ceket", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La chemise' ne demek?", options: [{ id: "a", text: "Gömlek", correct: true }, { id: "b", text: "Tişört", correct: false }, { id: "c", text: "Kazak", correct: false }, { id: "d", text: "Ceket", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La robe", options: [{ id: "a", text: "Elbise", correct: true }, { id: "b", text: "Etek", correct: false }, { id: "c", text: "Bluz", correct: false }, { id: "d", text: "Kazak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La jupe' ne demek?", options: [{ id: "a", text: "Etek", correct: true }, { id: "b", text: "Elbise", correct: false }, { id: "c", text: "Pantolon", correct: false }, { id: "d", text: "Şort", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le t-shirt", options: [{ id: "a", text: "Tişört", correct: true }, { id: "b", text: "Gömlek", correct: false }, { id: "c", text: "Kazak", correct: false }, { id: "d", text: "Ceket", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le pull' ne demek?", options: [{ id: "a", text: "Kazak", correct: true }, { id: "b", text: "Hırka", correct: false }, { id: "c", text: "Ceket", correct: false }, { id: "d", text: "Yelek", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La veste' ne demek?", options: [{ id: "a", text: "Ceket", correct: true }, { id: "b", text: "Mont", correct: false }, { id: "c", text: "Palto", correct: false }, { id: "d", text: "Yelek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le manteau' ne demek?", options: [{ id: "a", text: "Palto/Mont", correct: true }, { id: "b", text: "Ceket", correct: false }, { id: "c", text: "Hırka", correct: false }, { id: "d", text: "Kazak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Mavi bir pantolon giyiyorum", correctAnswer: "Je porte un pantalon bleu" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle porte une ___ rouge.", options: [{ id: "a", text: "robe", correct: true }, { id: "b", text: "pantalon", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les chaussures", options: [{ id: "a", text: "Ayakkabılar", correct: true }, { id: "b", text: "Çoraplar", correct: false }, { id: "c", text: "Botlar", correct: false }, { id: "d", text: "Terlikler", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Les chaussettes' ne demek?", options: [{ id: "a", text: "Çoraplar", correct: true }, { id: "b", text: "Ayakkabılar", correct: false }, { id: "c", text: "Terlikler", correct: false }, { id: "d", text: "Botlar", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bu elbise güzel", correctAnswer: "Cette robe est belle" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je mets mes ___.", options: [{ id: "a", text: "chaussures", correct: true }, { id: "b", text: "chemise", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kışın palto giyerim", correctAnswer: "En hiver je porte un manteau" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Porter des vêtements", options: [{ id: "a", text: "Giysi giymek", correct: true }, { id: "b", text: "Giysi almak", correct: false }, { id: "c", text: "Giysi yıkamak", correct: false }, { id: "d", text: "Giysi satmak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Il fait froid, mets ton ___.", options: [{ id: "a", text: "pull", correct: true }, { id: "b", text: "t-shirt", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Gömlek ve pantolon giyiyorum", correctAnswer: "Je porte une chemise et un pantalon" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Ma ___ est en coton.", options: [{ id: "a", text: "chemise", correct: true }, { id: "b", text: "pantalon", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Temel giysileri öğrendik!", correctAnswer: "Nous avons appris les vêtements de base!" }
+];
+
+export const unit312Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le chapeau' ne demek?", options: [{ id: "a", text: "Şapka", correct: true }, { id: "b", text: "Bere", correct: false }, { id: "c", text: "Kasket", correct: false }, { id: "d", text: "Eşarp", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'écharpe' ne demek?", options: [{ id: "a", text: "Atkı", correct: true }, { id: "b", text: "Şal", correct: false }, { id: "c", text: "Fular", correct: false }, { id: "d", text: "Kravat", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les gants", options: [{ id: "a", text: "Eldivenler", correct: true }, { id: "b", text: "Çoraplar", correct: false }, { id: "c", text: "Bileklikler", correct: false }, { id: "d", text: "Yüzükler", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La cravate' ne demek?", options: [{ id: "a", text: "Kravat", correct: true }, { id: "b", text: "Atkı", correct: false }, { id: "c", text: "Kemer", correct: false }, { id: "d", text: "Papyon", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La ceinture", options: [{ id: "a", text: "Kemer", correct: true }, { id: "b", text: "Kravat", correct: false }, { id: "c", text: "Atkı", correct: false }, { id: "d", text: "Saat", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Les lunettes' ne demek?", options: [{ id: "a", text: "Gözlük", correct: true }, { id: "b", text: "Saat", correct: false }, { id: "c", text: "Küpe", correct: false }, { id: "d", text: "Kolye", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le sac' ne demek?", options: [{ id: "a", text: "Çanta", correct: true }, { id: "b", text: "Cüzdan", correct: false }, { id: "c", text: "Valiz", correct: false }, { id: "d", text: "Kutu", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Les bottes' ne demek?", options: [{ id: "a", text: "Botlar/Çizmeler", correct: true }, { id: "b", text: "Ayakkabılar", correct: false }, { id: "c", text: "Terlikler", correct: false }, { id: "d", text: "Sandaletler", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Şapka ve eldiven takıyorum", correctAnswer: "Je porte un chapeau et des gants" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il met sa ___.", options: [{ id: "a", text: "cravate", correct: true }, { id: "b", text: "chapeau", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les bijoux", options: [{ id: "a", text: "Mücevherler/Takılar", correct: true }, { id: "b", text: "Gözlükler", correct: false }, { id: "c", text: "Saatler", correct: false }, { id: "d", text: "Kemerler", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La montre' ne demek?", options: [{ id: "a", text: "Kol saati", correct: true }, { id: "b", text: "Duvar saati", correct: false }, { id: "c", text: "Bileklik", correct: false }, { id: "d", text: "Yüzük", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Güneş gözlüğü takıyorum", correctAnswer: "Je porte des lunettes de soleil" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Ma ___ est en cuir.", options: [{ id: "a", text: "ceinture", correct: true }, { id: "b", text: "cravate", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kışın bot giyerim", correctAnswer: "En hiver je porte des bottes" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quelle taille?", options: [{ id: "a", text: "Hangi beden?", correct: true }, { id: "b", text: "Hangi renk?", correct: false }, { id: "c", text: "Hangi fiyat?", correct: false }, { id: "d", text: "Hangi marka?", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai oublié mon ___ à la maison.", options: [{ id: "a", text: "sac", correct: true }, { id: "b", text: "gants", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Yeni bir kol saati aldım", correctAnswer: "J'ai acheté une nouvelle montre" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle porte une belle ___.", options: [{ id: "a", text: "écharpe", correct: true }, { id: "b", text: "chapeau", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Aksesuarları öğrendik!", correctAnswer: "Nous avons appris les accessoires!" }
+];
+
+export const unit312Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le short' ne demek?", options: [{ id: "a", text: "Şort", correct: true }, { id: "b", text: "Pantolon", correct: false }, { id: "c", text: "Etek", correct: false }, { id: "d", text: "Bermuda", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le maillot de bain' ne demek?", options: [{ id: "a", text: "Mayo", correct: true }, { id: "b", text: "Bikini", correct: false }, { id: "c", text: "Şort", correct: false }, { id: "d", text: "Plaj elbisesi", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le pyjama", options: [{ id: "a", text: "Pijama", correct: true }, { id: "b", text: "Gecelik", correct: false }, { id: "c", text: "Bornoz", correct: false }, { id: "d", text: "Terlik", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Les sandales' ne demek?", options: [{ id: "a", text: "Sandaletler", correct: true }, { id: "b", text: "Terlikler", correct: false }, { id: "c", text: "Ayakkabılar", correct: false }, { id: "d", text: "Botlar", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le costume", options: [{ id: "a", text: "Takım elbise", correct: true }, { id: "b", text: "Ceket", correct: false }, { id: "c", text: "Pantolon", correct: false }, { id: "d", text: "Gömlek", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le jean' ne demek?", options: [{ id: "a", text: "Kot pantolon", correct: true }, { id: "b", text: "Kumaş pantolon", correct: false }, { id: "c", text: "Şort", correct: false }, { id: "d", text: "Eşofman", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le survêtement' ne demek?", options: [{ id: "a", text: "Eşofman", correct: true }, { id: "b", text: "Spor kıyafeti", correct: false }, { id: "c", text: "Forma", correct: false }, { id: "d", text: "Şort", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le sous-vêtement' ne demek?", options: [{ id: "a", text: "İç çamaşırı", correct: true }, { id: "b", text: "Pijama", correct: false }, { id: "c", text: "Tişört", correct: false }, { id: "d", text: "Atlet", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Yazın şort giyerim", correctAnswer: "En été je porte un short" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je dors en ___.", options: [{ id: "a", text: "pyjama", correct: true }, { id: "b", text: "costume", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les baskets", options: [{ id: "a", text: "Spor ayakkabı", correct: true }, { id: "b", text: "Topuklu ayakkabı", correct: false }, { id: "c", text: "Botlar", correct: false }, { id: "d", text: "Sandaletler", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La taille' ne demek?", options: [{ id: "a", text: "Beden", correct: true }, { id: "b", text: "Boy", correct: false }, { id: "c", text: "Numara", correct: false }, { id: "d", text: "Renk", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Havuza giderken mayo giyerim", correctAnswer: "Je porte un maillot de bain pour la piscine" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Mon ___ est trop grand.", options: [{ id: "a", text: "jean", correct: true }, { id: "b", text: "jupe", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Toplantıya takım elbise giyeceğim", correctAnswer: "Je vais porter un costume pour la réunion" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Essayer un vêtement", options: [{ id: "a", text: "Giysi denemek", correct: true }, { id: "b", text: "Giysi almak", correct: false }, { id: "c", text: "Giysi giymek", correct: false }, { id: "d", text: "Giysi yıkamak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je fais du sport en ___.", options: [{ id: "a", text: "survêtement", correct: true }, { id: "b", text: "costume", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Spor ayakkabı numaram 42", correctAnswer: "Ma pointure de baskets est 42" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "L'été j'aime les ___.", options: [{ id: "a", text: "sandales", correct: true }, { id: "b", text: "bottes", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Özel giysileri öğrendik!", correctAnswer: "Nous avons appris les vêtements spéciaux!" }
+];
+
+export const unit312Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'S'habiller' ne demek?", options: [{ id: "a", text: "Giyinmek", correct: true }, { id: "b", text: "Soyunmak", correct: false }, { id: "c", text: "Giymek", correct: false }, { id: "d", text: "Çıkarmak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Se déshabiller' ne demek?", options: [{ id: "a", text: "Soyunmak", correct: true }, { id: "b", text: "Giyinmek", correct: false }, { id: "c", text: "Giymek", correct: false }, { id: "d", text: "Değiştirmek", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Se changer", options: [{ id: "a", text: "Üstünü değiştirmek", correct: true }, { id: "b", text: "Giyinmek", correct: false }, { id: "c", text: "Soyunmak", correct: false }, { id: "d", text: "Yıkamak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Grand' (beden) ne demek?", options: [{ id: "a", text: "Büyük", correct: true }, { id: "b", text: "Küçük", correct: false }, { id: "c", text: "Orta", correct: false }, { id: "d", text: "Dar", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Petit", options: [{ id: "a", text: "Küçük", correct: true }, { id: "b", text: "Büyük", correct: false }, { id: "c", text: "Orta", correct: false }, { id: "d", text: "Bol", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Serré' ne demek?", options: [{ id: "a", text: "Dar/Sıkı", correct: true }, { id: "b", text: "Geniş", correct: false }, { id: "c", text: "Bol", correct: false }, { id: "d", text: "Uzun", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Large' ne demek?", options: [{ id: "a", text: "Bol/Geniş", correct: true }, { id: "b", text: "Dar", correct: false }, { id: "c", text: "Kısa", correct: false }, { id: "d", text: "Uzun", correct: false }] },
+    { id: 8, type: "SELECT", question: "'À la mode' ne demek?", options: [{ id: "a", text: "Modaya uygun", correct: true }, { id: "b", text: "Eski moda", correct: false }, { id: "c", text: "Klasik", correct: false }, { id: "d", text: "Sade", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Her sabah giyiniyorum", correctAnswer: "Je m'habille tous les matins" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette jupe est trop ___.", options: [{ id: "a", text: "petite", correct: true }, { id: "b", text: "petit", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça te va bien", options: [{ id: "a", text: "Sana yakışıyor", correct: true }, { id: "b", text: "Sana küçük", correct: false }, { id: "c", text: "Sana büyük", correct: false }, { id: "d", text: "Sana dar", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Élégant' ne demek?", options: [{ id: "a", text: "Şık", correct: true }, { id: "b", text: "Sade", correct: false }, { id: "c", text: "Klasik", correct: false }, { id: "d", text: "Rahat", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bu pantolon çok dar", correctAnswer: "Ce pantalon est trop serré" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je préfère les vêtements ___.", options: [{ id: "a", text: "larges", correct: true }, { id: "b", text: "serrés", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bu elbise modaya uygun", correctAnswer: "Cette robe est à la mode" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est trop grand", options: [{ id: "a", text: "Çok büyük", correct: true }, { id: "b", text: "Çok küçük", correct: false }, { id: "c", text: "Tam beden", correct: false }, { id: "d", text: "Çok bol", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est très ___.", options: [{ id: "a", text: "élégante", correct: true }, { id: "b", text: "élégant", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Giysilerimi değiştirmem lazım", correctAnswer: "Je dois me changer" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Ces vêtements sont à la ___.", options: [{ id: "a", text: "mode", correct: true }, { id: "b", text: "grand", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Giysi konusunu bitirdik, tebrikler!", correctAnswer: "Nous avons terminé le sujet des vêtements, félicitations!" }
+];
+
+// ===== ÜNİTE 313: YİYECEKLER =====
+export const unit313Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le pain' ne demek?", options: [{ id: "a", text: "Ekmek", correct: true }, { id: "b", text: "Pasta", correct: false }, { id: "c", text: "Kek", correct: false }, { id: "d", text: "Börek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le fromage' ne demek?", options: [{ id: "a", text: "Peynir", correct: true }, { id: "b", text: "Tereyağı", correct: false }, { id: "c", text: "Süt", correct: false }, { id: "d", text: "Yoğurt", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La viande", options: [{ id: "a", text: "Et", correct: true }, { id: "b", text: "Balık", correct: false }, { id: "c", text: "Tavuk", correct: false }, { id: "d", text: "Hindi", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le poulet' ne demek?", options: [{ id: "a", text: "Tavuk", correct: true }, { id: "b", text: "Et", correct: false }, { id: "c", text: "Balık", correct: false }, { id: "d", text: "Hindi", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le poisson", options: [{ id: "a", text: "Balık", correct: true }, { id: "b", text: "Et", correct: false }, { id: "c", text: "Tavuk", correct: false }, { id: "d", text: "Karides", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'œuf' ne demek?", options: [{ id: "a", text: "Yumurta", correct: true }, { id: "b", text: "Tavuk", correct: false }, { id: "c", text: "Süt", correct: false }, { id: "d", text: "Peynir", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le riz' ne demek?", options: [{ id: "a", text: "Pirinç/Pilav", correct: true }, { id: "b", text: "Makarna", correct: false }, { id: "c", text: "Patates", correct: false }, { id: "d", text: "Ekmek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Les pâtes' ne demek?", options: [{ id: "a", text: "Makarna", correct: true }, { id: "b", text: "Pirinç", correct: false }, { id: "c", text: "Patates", correct: false }, { id: "d", text: "Ekmek", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Kahvaltıda ekmek yiyorum", correctAnswer: "Je mange du pain au petit-déjeuner" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime le ___ français.", options: [{ id: "a", text: "fromage", correct: true }, { id: "b", text: "viande", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les légumes", options: [{ id: "a", text: "Sebzeler", correct: true }, { id: "b", text: "Meyveler", correct: false }, { id: "c", text: "Etler", correct: false }, { id: "d", text: "Baharatlar", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Les fruits' ne demek?", options: [{ id: "a", text: "Meyveler", correct: true }, { id: "b", text: "Sebzeler", correct: false }, { id: "c", text: "Yemişler", correct: false }, { id: "d", text: "Tatlılar", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Akşam yemeğinde tavuk yiyorum", correctAnswer: "Je mange du poulet au dîner" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est bon pour la santé.", options: [{ id: "a", text: "poisson", correct: true }, { id: "b", text: "fromage", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "İki yumurta lütfen", correctAnswer: "Deux œufs s'il vous plaît" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'ai faim", options: [{ id: "a", text: "Açım", correct: true }, { id: "b", text: "Susadım", correct: false }, { id: "c", text: "Yorgunum", correct: false }, { id: "d", text: "Hastayım", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je préfère le ___ au poulet.", options: [{ id: "a", text: "poisson", correct: true }, { id: "b", text: "riz", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Pilav ve sebze severim", correctAnswer: "J'aime le riz et les légumes" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Les ___ sont délicieuses.", options: [{ id: "a", text: "pâtes", correct: true }, { id: "b", text: "viande", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Temel yiyecekleri öğrendik!", correctAnswer: "Nous avons appris les aliments de base!" }
+];
+
+export const unit313Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'La pomme' ne demek?", options: [{ id: "a", text: "Elma", correct: true }, { id: "b", text: "Armut", correct: false }, { id: "c", text: "Şeftali", correct: false }, { id: "d", text: "Erik", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La banane' ne demek?", options: [{ id: "a", text: "Muz", correct: true }, { id: "b", text: "Portakal", correct: false }, { id: "c", text: "Mandalina", correct: false }, { id: "d", text: "Limon", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'orange", options: [{ id: "a", text: "Portakal", correct: true }, { id: "b", text: "Mandalina", correct: false }, { id: "c", text: "Muz", correct: false }, { id: "d", text: "Elma", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La fraise' ne demek?", options: [{ id: "a", text: "Çilek", correct: true }, { id: "b", text: "Ahududu", correct: false }, { id: "c", text: "Böğürtlen", correct: false }, { id: "d", text: "Yabanmersini", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le raisin", options: [{ id: "a", text: "Üzüm", correct: true }, { id: "b", text: "Erik", correct: false }, { id: "c", text: "Kiraz", correct: false }, { id: "d", text: "Şeftali", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La carotte' ne demek?", options: [{ id: "a", text: "Havuç", correct: true }, { id: "b", text: "Patates", correct: false }, { id: "c", text: "Domates", correct: false }, { id: "d", text: "Salatalık", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La tomate' ne demek?", options: [{ id: "a", text: "Domates", correct: true }, { id: "b", text: "Biber", correct: false }, { id: "c", text: "Patlıcan", correct: false }, { id: "d", text: "Havuç", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La pomme de terre' ne demek?", options: [{ id: "a", text: "Patates", correct: true }, { id: "b", text: "Elma", correct: false }, { id: "c", text: "Havuç", correct: false }, { id: "d", text: "Turp", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Her gün elma yiyorum", correctAnswer: "Je mange une pomme tous les jours" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime les ___ rouges.", options: [{ id: "a", text: "fraises", correct: true }, { id: "b", text: "bananes", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'oignon", options: [{ id: "a", text: "Soğan", correct: true }, { id: "b", text: "Sarımsak", correct: false }, { id: "c", text: "Patates", correct: false }, { id: "d", text: "Havuç", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La salade' ne demek?", options: [{ id: "a", text: "Salata/Marul", correct: true }, { id: "b", text: "Lahana", correct: false }, { id: "c", text: "Ispanak", correct: false }, { id: "d", text: "Brokoli", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kahvaltıda muz yiyorum", correctAnswer: "Je mange une banane au petit-déjeuner" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "La soupe aux ___ est délicieuse.", options: [{ id: "a", text: "carottes", correct: true }, { id: "b", text: "pommes", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Domates ve salatalık severim", correctAnswer: "J'aime les tomates et les concombres" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est frais", options: [{ id: "a", text: "Taze", correct: true }, { id: "b", text: "Bayat", correct: false }, { id: "c", text: "Soğuk", correct: false }, { id: "d", text: "Sıcak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je fais une ___ verte.", options: [{ id: "a", text: "salade", correct: true }, { id: "b", text: "soupe", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Üzüm çok lezzetli", correctAnswer: "Le raisin est très délicieux" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Les ___ de terre sont cuites.", options: [{ id: "a", text: "pommes", correct: true }, { id: "b", text: "tomates", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Meyve ve sebzeleri öğrendik!", correctAnswer: "Nous avons appris les fruits et légumes!" }
+];
+
+export const unit313Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le gâteau' ne demek?", options: [{ id: "a", text: "Pasta/Kek", correct: true }, { id: "b", text: "Kurabiye", correct: false }, { id: "c", text: "Tart", correct: false }, { id: "d", text: "Puding", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le chocolat' ne demek?", options: [{ id: "a", text: "Çikolata", correct: true }, { id: "b", text: "Şeker", correct: false }, { id: "c", text: "Karamel", correct: false }, { id: "d", text: "Bal", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La glace", options: [{ id: "a", text: "Dondurma", correct: true }, { id: "b", text: "Buz", correct: false }, { id: "c", text: "Sorbe", correct: false }, { id: "d", text: "Milkshake", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le biscuit' ne demek?", options: [{ id: "a", text: "Bisküvi/Kurabiye", correct: true }, { id: "b", text: "Kek", correct: false }, { id: "c", text: "Pasta", correct: false }, { id: "d", text: "Gofret", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le sucre", options: [{ id: "a", text: "Şeker", correct: true }, { id: "b", text: "Tuz", correct: false }, { id: "c", text: "Biber", correct: false }, { id: "d", text: "Baharat", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le sel' ne demek?", options: [{ id: "a", text: "Tuz", correct: true }, { id: "b", text: "Şeker", correct: false }, { id: "c", text: "Biber", correct: false }, { id: "d", text: "Baharat", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le miel' ne demek?", options: [{ id: "a", text: "Bal", correct: true }, { id: "b", text: "Reçel", correct: false }, { id: "c", text: "Pekmez", correct: false }, { id: "d", text: "Şeker", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La confiture' ne demek?", options: [{ id: "a", text: "Reçel", correct: true }, { id: "b", text: "Bal", correct: false }, { id: "c", text: "Marmelat", correct: false }, { id: "d", text: "Jöle", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Çikolatalı pasta severim", correctAnswer: "J'aime le gâteau au chocolat" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je veux une ___ à la vanille.", options: [{ id: "a", text: "glace", correct: true }, { id: "b", text: "gâteau", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est sucré", options: [{ id: "a", text: "Tatlı", correct: true }, { id: "b", text: "Tuzlu", correct: false }, { id: "c", text: "Acı", correct: false }, { id: "d", text: "Ekşi", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Salé' ne demek?", options: [{ id: "a", text: "Tuzlu", correct: true }, { id: "b", text: "Tatlı", correct: false }, { id: "c", text: "Acı", correct: false }, { id: "d", text: "Ekşi", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kahveme şeker koyuyorum", correctAnswer: "Je mets du sucre dans mon café" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est trop ___!", options: [{ id: "a", text: "salé", correct: true }, { id: "b", text: "sucré", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Ekmek üstüne bal sürüyorum", correctAnswer: "Je mets du miel sur le pain" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est délicieux", options: [{ id: "a", text: "Lezzetli", correct: true }, { id: "b", text: "Tatsız", correct: false }, { id: "c", text: "Kötü", correct: false }, { id: "d", text: "İyi", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ de fraises est bonne.", options: [{ id: "a", text: "confiture", correct: true }, { id: "b", text: "glace", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Dondurma çok soğuk", correctAnswer: "La glace est très froide" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Ces ___ sont croustillants.", options: [{ id: "a", text: "biscuits", correct: true }, { id: "b", text: "gâteaux", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Tatlılar ve baharatları öğrendik!", correctAnswer: "Nous avons appris les desserts et les épices!" }
+];
+
+export const unit313Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le petit-déjeuner' ne demek?", options: [{ id: "a", text: "Kahvaltı", correct: true }, { id: "b", text: "Öğle yemeği", correct: false }, { id: "c", text: "Akşam yemeği", correct: false }, { id: "d", text: "Atıştırmalık", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le déjeuner' ne demek?", options: [{ id: "a", text: "Öğle yemeği", correct: true }, { id: "b", text: "Kahvaltı", correct: false }, { id: "c", text: "Akşam yemeği", correct: false }, { id: "d", text: "Brunch", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le dîner", options: [{ id: "a", text: "Akşam yemeği", correct: true }, { id: "b", text: "Öğle yemeği", correct: false }, { id: "c", text: "Kahvaltı", correct: false }, { id: "d", text: "Gece atıştırması", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Manger' ne demek?", options: [{ id: "a", text: "Yemek yemek", correct: true }, { id: "b", text: "İçmek", correct: false }, { id: "c", text: "Pişirmek", correct: false }, { id: "d", text: "Hazırlamak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cuisiner", options: [{ id: "a", text: "Yemek pişirmek", correct: true }, { id: "b", text: "Yemek yemek", correct: false }, { id: "c", text: "Yemek hazırlamak", correct: false }, { id: "d", text: "Yemek servis etmek", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La recette' ne demek?", options: [{ id: "a", text: "Tarif", correct: true }, { id: "b", text: "Menü", correct: false }, { id: "c", text: "Sipariş", correct: false }, { id: "d", text: "Fatura", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Bon appétit' ne demek?", options: [{ id: "a", text: "Afiyet olsun", correct: true }, { id: "b", text: "Sağlıcakla kal", correct: false }, { id: "c", text: "Teşekkürler", correct: false }, { id: "d", text: "Hoşça kal", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Avoir faim' ne demek?", options: [{ id: "a", text: "Acıkmak", correct: true }, { id: "b", text: "Susamak", correct: false }, { id: "c", text: "Yorulmak", correct: false }, { id: "d", text: "Uyumak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Kahvaltıda ne yersiniz?", correctAnswer: "Qu'est-ce que vous mangez au petit-déjeuner?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ à midi.", options: [{ id: "a", text: "déjeune", correct: true }, { id: "b", text: "dîne", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis rassasié", options: [{ id: "a", text: "Doydum", correct: true }, { id: "b", text: "Açım", correct: false }, { id: "c", text: "Susadım", correct: false }, { id: "d", text: "Yorgunum", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Commander' ne demek?", options: [{ id: "a", text: "Sipariş vermek", correct: true }, { id: "b", text: "Hazırlamak", correct: false }, { id: "c", text: "Pişirmek", correct: false }, { id: "d", text: "Servis etmek", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Akşam yemeğini saat 7'de yeriz", correctAnswer: "Nous dînons à sept heures" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime ___ des gâteaux.", options: [{ id: "a", text: "cuisiner", correct: true }, { id: "b", text: "manger", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bu yemeğin tarifi var mı?", correctAnswer: "Est-ce qu'il y a la recette de ce plat?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est prêt", options: [{ id: "a", text: "Hazır", correct: true }, { id: "b", text: "Pişiyor", correct: false }, { id: "c", text: "Soğuk", correct: false }, { id: "d", text: "Sıcak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Bon ___!", options: [{ id: "a", text: "appétit", correct: true }, { id: "b", text: "courage", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Yemek hazır, buyrun sofraya", correctAnswer: "Le repas est prêt, à table!" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai très ___.", options: [{ id: "a", text: "faim", correct: true }, { id: "b", text: "soif", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yiyecekler konusunu bitirdik, tebrikler!", correctAnswer: "Nous avons terminé le sujet de la nourriture, félicitations!" }
+];

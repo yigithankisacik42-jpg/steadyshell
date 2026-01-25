@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Kelime Veritabanı - İspanyolca A2
+ * SteadyShell Kelime Veritabanı - İspanyolca A2
  * 20 Ünite (ID: 21-40), her biri için 10 kelime
  */
 

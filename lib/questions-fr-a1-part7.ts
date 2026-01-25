@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 316-317
+import { Question } from "./questions";
+
+// ===== ÜNİTE 316: GÜNLÜK RUTİN =====
+export const unit316Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Se réveiller' ne demek?", options: [{ id: "a", text: "Uyanmak", correct: true }, { id: "b", text: "Kalkmak", correct: false }, { id: "c", text: "Uyumak", correct: false }, { id: "d", text: "Yatmak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Se lever' ne demek?", options: [{ id: "a", text: "Kalkmak (yataktan)", correct: true }, { id: "b", text: "Uyanmak", correct: false }, { id: "c", text: "Yıkanmak", correct: false }, { id: "d", text: "Giyinmek", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je me douche", options: [{ id: "a", text: "Duş alıyorum", correct: true }, { id: "b", text: "Uyanıyorum", correct: false }, { id: "c", text: "Giyiniyorum", correct: false }, { id: "d", text: "Kahvaltı yapıyorum", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Se brosser les dents' ne demek?", options: [{ id: "a", text: "Dişlerini fırçalamak", correct: true }, { id: "b", text: "Saçını taramak", correct: false }, { id: "c", text: "Yüzünü yıkamak", correct: false }, { id: "d", text: "Ellerini yıkamak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le matin", options: [{ id: "a", text: "Sabah", correct: true }, { id: "b", text: "Öğle", correct: false }, { id: "c", text: "Akşam", correct: false }, { id: "d", text: "Gece", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Prendre le petit-déjeuner' ne demek?", options: [{ id: "a", text: "Kahvaltı yapmak", correct: true }, { id: "b", text: "Öğle yemeği yemek", correct: false }, { id: "c", text: "Akşam yemeği yemek", correct: false }, { id: "d", text: "Ara öğün yemek", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Habituellement' ne demek?", options: [{ id: "a", text: "Genellikle", correct: true }, { id: "b", text: "Asla", correct: false }, { id: "c", text: "Bazen", correct: false }, { id: "d", text: "Nadiren", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Tous les jours' ne demek?", options: [{ id: "a", text: "Her gün", correct: true }, { id: "b", text: "Bazen", correct: false }, { id: "c", text: "Haftada bir", correct: false }, { id: "d", text: "Hiçbir zaman", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Yedide uyanıyorum", correctAnswer: "Je me réveille à sept heures" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je me ___ les dents.", options: [{ id: "a", text: "brosse", correct: true }, { id: "b", text: "lave", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je m'habille", options: [{ id: "a", text: "Giyiniyorum", correct: true }, { id: "b", text: "Soyunuyorum", correct: false }, { id: "c", text: "Yıkanıyorum", correct: false }, { id: "d", text: "Uyanıyorum", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Se préparer' ne demek?", options: [{ id: "a", text: "Hazırlanmak", correct: true }, { id: "b", text: "Gitmek", correct: false }, { id: "c", text: "Gelmek", correct: false }, { id: "d", text: "Beklemek", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Yüzümü yıkıyorum", correctAnswer: "Je me lave le visage" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il se ___ à huit heures.", options: [{ id: "a", text: "lève", correct: true }, { id: "b", text: "lave", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kahvaltıdan önce duş alırım", correctAnswer: "Je prends une douche avant le petit-déjeuner" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Tôt le matin", options: [{ id: "a", text: "Sabah erkenden", correct: true }, { id: "b", text: "Geç saatte", correct: false }, { id: "c", text: "Öğleden sonra", correct: false }, { id: "d", text: "Akşamüstü", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Ma mère se ___ tôt.", options: [{ id: "a", text: "réveille", correct: true }, { id: "b", text: "couche", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Hızlıca hazırlanıyorum", correctAnswer: "Je me prépare vite" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous prenons le ___.", options: [{ id: "a", text: "petit-déjeuner", correct: true }, { id: "b", text: "douche", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Sabah rutinini öğrendik!", correctAnswer: "Nous avons appris la routine matinale!" }
+];
+
+export const unit316Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Aller à l'école' ne demek?", options: [{ id: "a", text: "Okula gitmek", correct: true }, { id: "b", text: "İşe gitmek", correct: false }, { id: "c", text: "Eve gitmek", correct: false }, { id: "d", text: "Okuldan dönmek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Travailler' ne demek?", options: [{ id: "a", text: "Çalışmak", correct: true }, { id: "b", text: "Okumak", correct: false }, { id: "c", text: "Oynamak", correct: false }, { id: "d", text: "Dinlenmek", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Prendre le bus", options: [{ id: "a", text: "Otobüse binmek", correct: true }, { id: "b", text: "Trene binmek", correct: false }, { id: "c", text: "Arabaya binmek", correct: false }, { id: "d", text: "Yürümek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Conduire' ne demek?", options: [{ id: "a", text: "Araba sürmek", correct: true }, { id: "b", text: "Yürümek", correct: false }, { id: "c", text: "Koşmak", correct: false }, { id: "d", text: "Binmek", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Déjeuner", options: [{ id: "a", text: "Öğle yemeği yemek", correct: true }, { id: "b", text: "Kahvaltı yapmak", correct: false }, { id: "c", text: "Akşam yemeği yemek", correct: false }, { id: "d", text: "Çalışmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La pause' ne demek?", options: [{ id: "a", text: "Mola/Ara", correct: true }, { id: "b", text: "Ders", correct: false }, { id: "c", text: "İş", correct: false }, { id: "d", text: "Toplantı", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Commencer le travail' ne demek?", options: [{ id: "a", text: "İşe başlamak", correct: true }, { id: "b", text: "İşi bitirmek", correct: false }, { id: "c", text: "İşe gitmek", correct: false }, { id: "d", text: "İşten dönmek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Finir les cours' ne demek?", options: [{ id: "a", text: "Dersleri bitirmek", correct: true }, { id: "b", text: "Derslere başlamak", correct: false }, { id: "c", text: "Derse gitmek", correct: false }, { id: "d", text: "Ders çalışmak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Otobüsle okula gidiyorum", correctAnswer: "Je vais à l'école en bus" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Mon père ___ au travail.", options: [{ id: "a", text: "conduit", correct: true }, { id: "b", text: "marche", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "À midi", options: [{ id: "a", text: "Öğleyin (Saat 12'de)", correct: true }, { id: "b", text: "Gece yarısı", correct: false }, { id: "c", text: "Sabah", correct: false }, { id: "d", text: "Akşam", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La cantine' ne demek?", options: [{ id: "a", text: "Yemekhane", correct: true }, { id: "b", text: "Kafe", correct: false }, { id: "c", text: "Restoran", correct: false }, { id: "d", text: "Mutfak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Ofiste çalışıyorum", correctAnswer: "Je travaille au bureau" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous avons une ___ à dix heures.", options: [{ id: "a", text: "pause", correct: true }, { id: "b", text: "travail", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Öğle yemeğini arkadaşlarımla yerim", correctAnswer: "Je déjeune avec mes amis" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je finis à cinq heures", options: [{ id: "a", text: "Beşte bitiriyorum", correct: true }, { id: "b", text: "Beşte başlıyorum", correct: false }, { id: "c", text: "Beşte gidiyorum", correct: false }, { id: "d", text: "Beşte geliyorum", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "L'école ___ à huit heures.", options: [{ id: "a", text: "commence", correct: true }, { id: "b", text: "finit", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Her gün çok çalışıyorum", correctAnswer: "Je travaille beaucoup tous les jours" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je prends le ___.", options: [{ id: "a", text: "bus", correct: true }, { id: "b", text: "voiture", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Okul ve iş hayatını öğrendik!", correctAnswer: "Nous avons appris la vie scolaire et professionnelle!" }
+];
+
+export const unit316Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Rentrer à la maison' ne demek?", options: [{ id: "a", text: "Eve dönmek", correct: true }, { id: "b", text: "Evden çıkmak", correct: false }, { id: "c", text: "Evde kalmak", correct: false }, { id: "d", text: "Eve gitmek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Faire les devoirs' ne demek?", options: [{ id: "a", text: "Ödev yapmak", correct: true }, { id: "b", text: "Ders çalışmak", correct: false }, { id: "c", text: "Okula gitmek", correct: false }, { id: "d", text: "Kitap okumak", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Regarder la télé", options: [{ id: "a", text: "Televizyon izlemek", correct: true }, { id: "b", text: "Müzik dinlemek", correct: false }, { id: "c", text: "Kitap okumak", correct: false }, { id: "d", text: "Oyun oynamak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Dîner' (fiil) ne demek?", options: [{ id: "a", text: "Akşam yemeği yemek", correct: true }, { id: "b", text: "Öğle yemeği yemek", correct: false }, { id: "c", text: "Kahvaltı yapmak", correct: false }, { id: "d", text: "Yemek pişirmek", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Se reposer", options: [{ id: "a", text: "Dinlenmek", correct: true }, { id: "b", text: "Uyumak", correct: false }, { id: "c", text: "Çalışmak", correct: false }, { id: "d", text: "Yorulmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Lire un livre' ne demek?", options: [{ id: "a", text: "Kitap okumak", correct: true }, { id: "b", text: "Kitap yazmak", correct: false }, { id: "c", text: "Kitap almak", correct: false }, { id: "d", text: "Kitap satmak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Écouter de la musique' ne demek?", options: [{ id: "a", text: "Müzik dinlemek", correct: true }, { id: "b", text: "Müzik yapmak", correct: false }, { id: "c", text: "Şarkı söylemek", correct: false }, { id: "d", text: "Dans etmek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Jouer' ne demek?", options: [{ id: "a", text: "Oynamak", correct: true }, { id: "b", text: "Çalışmak", correct: false }, { id: "c", text: "Okumak", correct: false }, { id: "d", text: "Yazmak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Eve saat altıda dönerim", correctAnswer: "Je rentre à la maison à six heures" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ mes devoirs le soir.", options: [{ id: "a", text: "fais", correct: true }, { id: "b", text: "fait", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le soir", options: [{ id: "a", text: "Akşam", correct: true }, { id: "b", text: "Sabah", correct: false }, { id: "c", text: "Öğle", correct: false }, { id: "d", text: "Gece", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La famille' ne demek?", options: [{ id: "a", text: "Aile", correct: true }, { id: "b", text: "Arkadaş", correct: false }, { id: "c", text: "Komşu", correct: false }, { id: "d", text: "Okul", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Ailemle akşam yemeği yiyorum", correctAnswer: "Je dîne avec ma famille" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Après le dîner, je regarde la ___.", options: [{ id: "a", text: "télé", correct: true }, { id: "b", text: "radio", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kanepede dinleniyorum", correctAnswer: "Je me repose sur le canapé" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis fatigué", options: [{ id: "a", text: "Yorgunum", correct: true }, { id: "b", text: "Hastayım", correct: false }, { id: "c", text: "Mutluyum", correct: false }, { id: "d", text: "Üzgünüm", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime ___ de la musique.", options: [{ id: "a", text: "écouter", correct: true }, { id: "b", text: "regarder", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Kardeşimle oynuyorum", correctAnswer: "Je joue avec mon frère" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ un livre avant de dormir.", options: [{ id: "a", text: "lis", correct: true }, { id: "b", text: "li", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Akşam rutinini öğrendik!", correctAnswer: "Nous avons appris la routine du soir!" }
+];
+
+export const unit316Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Se coucher' ne demek?", options: [{ id: "a", text: "Yatmak/Uyumaya gitmek", correct: true }, { id: "b", text: "Uyanmak", correct: false }, { id: "c", text: "Kalkmak", correct: false }, { id: "d", text: "Dinlenmek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Dormir' ne demek?", options: [{ id: "a", text: "Uyumak", correct: true }, { id: "b", text: "Uyanmak", correct: false }, { id: "c", text: "Rüya görmek", correct: false }, { id: "d", text: "Yatmak", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La nuit", options: [{ id: "a", text: "Gece", correct: true }, { id: "b", text: "Gündüz", correct: false }, { id: "c", text: "Akşam", correct: false }, { id: "d", text: "Sabah", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Faire sa toilette' ne demek?", options: [{ id: "a", text: "Kişisel bakım yapmak (yıkanmak)", correct: true }, { id: "b", text: "Tuvalete gitmek", correct: false }, { id: "c", text: "Giyinmek", correct: false }, { id: "d", text: "Makyaj yapmak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le pyjama", options: [{ id: "a", text: "Pijama", correct: true }, { id: "b", text: "Gecelik", correct: false }, { id: "c", text: "Bornoz", correct: false }, { id: "d", text: "Terlik", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Mettre son pyjama' ne demek?", options: [{ id: "a", text: "Pijamasını giymek", correct: true }, { id: "b", text: "Pijamasını çıkarmak", correct: false }, { id: "c", text: "Pijamasını yıkamak", correct: false }, { id: "d", text: "Pijamasını almak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le lit' ne demek?", options: [{ id: "a", text: "Yatak", correct: true }, { id: "b", text: "Yastık", correct: false }, { id: "c", text: "Yorgan", correct: false }, { id: "d", text: "Çarşaf", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Rêver' ne demek?", options: [{ id: "a", text: "Rüya görmek/Hayal etmek", correct: true }, { id: "b", text: "Uyumak", correct: false }, { id: "c", text: "Uyanmak", correct: false }, { id: "d", text: "Düşünmek", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Erken yatıyorum", correctAnswer: "Je me couche tôt" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ huit heures par nuit.", options: [{ id: "a", text: "dors", correct: true }, { id: "b", text: "dor", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Bonne nuit", options: [{ id: "a", text: "İyi geceler", correct: true }, { id: "b", text: "Günaydın", correct: false }, { id: "c", text: "İyi akşamlar", correct: false }, { id: "d", text: "İyi günler", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Éteindre la lumière' ne demek?", options: [{ id: "a", text: "Işığı kapatmak", correct: true }, { id: "b", text: "Işığı açmak", correct: false }, { id: "c", text: "Kapıyı kapatmak", correct: false }, { id: "d", text: "Pencereyi kapatmak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Uyumadan önce ışığı kapatırım", correctAnswer: "J'éteins la lumière avant de dormir" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je mets mon ___.", options: [{ id: "a", text: "pyjama", correct: true }, { id: "b", text: "lit", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Gece yarısı uyurum", correctAnswer: "Je dors à minuit" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Beau rêve", options: [{ id: "a", text: "Güzel rüya", correct: true }, { id: "b", text: "Kötü rüya", correct: false }, { id: "c", text: "Derin uyku", correct: false }, { id: "d", text: "Kısa uyku", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais au ___.", options: [{ id: "a", text: "lit", correct: true }, { id: "b", text: "nuit", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Yorgunum, yatıyorum", correctAnswer: "Je suis fatigué, je me couche" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Fais de beaux ___.", options: [{ id: "a", text: "rêves", correct: true }, { id: "b", text: "rêve", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Günlük rutini tamamladık, tebrikler!", correctAnswer: "Nous avons terminé la routine quotidienne, félicitations!" }
+];
+
+// ===== ÜNİTE 317: HOBİLER =====
+export const unit317Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le loisir' ne demek?", options: [{ id: "a", text: "Hobi/Boş zaman uğraşı", correct: true }, { id: "b", text: "İş", correct: false }, { id: "c", text: "Okul", correct: false }, { id: "d", text: "Spor", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le sport' ne demek?", options: [{ id: "a", text: "Spor", correct: true }, { id: "b", text: "Hobi", correct: false }, { id: "c", text: "Oyun", correct: false }, { id: "d", text: "Ders", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le football", options: [{ id: "a", text: "Futbol", correct: true }, { id: "b", text: "Basketbol", correct: false }, { id: "c", text: "Voleybol", correct: false }, { id: "d", text: "Tenis", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le basketball' ne demek?", options: [{ id: "a", text: "Basketbol", correct: true }, { id: "b", text: "Futbol", correct: false }, { id: "c", text: "Hentbol", correct: false }, { id: "d", text: "Tenis", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le tennis", options: [{ id: "a", text: "Tenis", correct: true }, { id: "b", text: "Masa tenisi", correct: false }, { id: "c", text: "Badminton", correct: false }, { id: "d", text: "Golf", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La natation' ne demek?", options: [{ id: "a", text: "Yüzme", correct: true }, { id: "b", text: "Koşu", correct: false }, { id: "c", text: "Bisiklet", correct: false }, { id: "d", text: "Yürüyüş", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Courir' ne demek?", options: [{ id: "a", text: "Koşmak", correct: true }, { id: "b", text: "Yürümek", correct: false }, { id: "c", text: "Yüzmek", correct: false }, { id: "d", text: "Atlamak", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Nager' ne demek?", options: [{ id: "a", text: "Yüzmek", correct: true }, { id: "b", text: "Koşmak", correct: false }, { id: "c", text: "Oynamak", correct: false }, { id: "d", text: "Dalmak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Futbol oynamayı seviyorum", correctAnswer: "J'aime jouer au football" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je fais du ___.", options: [{ id: "a", text: "sport", correct: true }, { id: "b", text: "loisir", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'adore nager", options: [{ id: "a", text: "Yüzmeye bayılırım", correct: true }, { id: "b", text: "Koşmaya bayılırım", correct: false }, { id: "c", text: "Yürümeye bayılırım", correct: false }, { id: "d", text: "Oynamaya bayılırım", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le vélo' ne demek?", options: [{ id: "a", text: "Bisiklet", correct: true }, { id: "b", text: "Motosiklet", correct: false }, { id: "c", text: "Araba", correct: false }, { id: "d", text: "Tekerlek", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Hafta sonları tenis oynarım", correctAnswer: "Je joue au tennis le week-end" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il fait du ___ le dimanche.", options: [{ id: "a", text: "vélo", correct: true }, { id: "b", text: "foot", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "En sevdiğim spor basketbol", correctAnswer: "Mon sport préféré est le basketball" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'équipe", options: [{ id: "a", text: "Takım", correct: true }, { id: "b", text: "Oyuncu", correct: false }, { id: "c", text: "Maç", correct: false }, { id: "d", text: "Top", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous allons à la ___.", options: [{ id: "a", text: "piscine", correct: true }, { id: "b", text: "stade", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Her gün koşarım", correctAnswer: "Je cours tous les jours" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est un sport d'équipe.", options: [{ id: "a", text: "football", correct: true }, { id: "b", text: "natation", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Spor hobilerini öğrendik!", correctAnswer: "Nous avons appris les loisirs sportifs!" }
+];
+
+export const unit317Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'La musique' ne demek?", options: [{ id: "a", text: "Müzik", correct: true }, { id: "b", text: "Resim", correct: false }, { id: "c", text: "Dans", correct: false }, { id: "d", text: "Tiyatro", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Jouer de la guitare' ne demek?", options: [{ id: "a", text: "Gitar çalmak", correct: true }, { id: "b", text: "Piyano çalmak", correct: false }, { id: "c", text: "Keman çalmak", correct: false }, { id: "d", text: "Davul çalmak", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le piano", options: [{ id: "a", text: "Piyano", correct: true }, { id: "b", text: "Gitar", correct: false }, { id: "c", text: "Keman", correct: false }, { id: "d", text: "Flüt", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le cinéma' ne demek?", options: [{ id: "a", text: "Sinema", correct: true }, { id: "b", text: "Tiyatro", correct: false }, { id: "c", text: "Konser", correct: false }, { id: "d", text: "Müze", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Regarder un film", options: [{ id: "a", text: "Film izlemek", correct: true }, { id: "b", text: "Televizyon izlemek", correct: false }, { id: "c", text: "Müzik dinlemek", correct: false }, { id: "d", text: "Oyun oynamak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La lecture' ne demek?", options: [{ id: "a", text: "Okuma/Kitap okuma", correct: true }, { id: "b", text: "Yazma", correct: false }, { id: "c", text: "Konuşma", correct: false }, { id: "d", text: "Dinleme", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Lire' ne demek?", options: [{ id: "a", text: "Okumak", correct: true }, { id: "b", text: "Yazmak", correct: false }, { id: "c", text: "Çizmek", correct: false }, { id: "d", text: "Boyamak", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le livre' ne demek?", options: [{ id: "a", text: "Kitap", correct: true }, { id: "b", text: "Dergi", correct: false }, { id: "c", text: "Gazete", correct: false }, { id: "d", text: "Defter", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Piyano çalıyorum", correctAnswer: "Je joue du piano" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime ___ au cinéma.", options: [{ id: "a", text: "aller", correct: true }, { id: "b", text: "regarder", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'écoute de la musique", options: [{ id: "a", text: "Müzik dinliyorum", correct: true }, { id: "b", text: "Müzik çalıyorum", correct: false }, { id: "c", text: "Şarkı söylüyorum", correct: false }, { id: "d", text: "Dans ediyorum", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Chanter' ne demek?", options: [{ id: "a", text: "Şarkı söylemek", correct: true }, { id: "b", text: "Dans etmek", correct: false }, { id: "c", text: "Çalmak", correct: false }, { id: "d", text: "Dinlemek", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kitap okumayı severim", correctAnswer: "J'aime lire des livres" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle joue de la ___.", options: [{ id: "a", text: "guitare", correct: true }, { id: "b", text: "piano", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bu film çok iyi", correctAnswer: "Ce film est très bon" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une chanson", options: [{ id: "a", text: "Bir şarkı", correct: true }, { id: "b", text: "Bir film", correct: false }, { id: "c", text: "Bir kitap", correct: false }, { id: "d", text: "Bir oyun", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est mon passetemps favori.", options: [{ id: "a", text: "lecture", correct: true }, { id: "b", text: "livre", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Şarkı söylemeyi sever misin?", correctAnswer: "Aimes-tu chanter?" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Il apprend à jouer du ___.", options: [{ id: "a", text: "violon", correct: true }, { id: "b", text: "guitare", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Kültürel hobileri öğrendik!", correctAnswer: "Nous avons appris les loisirs culturels!" }
+];
+
+export const unit317Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Voyager' ne demek?", options: [{ id: "a", text: "Seyahat etmek", correct: true }, { id: "b", text: "Tatil yapmak", correct: false }, { id: "c", text: "Gezmek", correct: false }, { id: "d", text: "Yürümek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Les vacances' ne demek?", options: [{ id: "a", text: "Tatil", correct: true }, { id: "b", text: "Seyahat", correct: false }, { id: "c", text: "Hafta sonu", correct: false }, { id: "d", text: "Bayram", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La plage", options: [{ id: "a", text: "Plaj/Kumsal", correct: true }, { id: "b", text: "Deniz", correct: false }, { id: "c", text: "Havuz", correct: false }, { id: "d", text: "Göl", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La montagne' ne demek?", options: [{ id: "a", text: "Dağ", correct: true }, { id: "b", text: "Orman", correct: false }, { id: "c", text: "Tepe", correct: false }, { id: "d", text: "Vadi", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le camping", options: [{ id: "a", text: "Kamp", correct: true }, { id: "b", text: "Piknik", correct: false }, { id: "c", text: "Yürüyüş", correct: false }, { id: "d", text: "Tırmanış", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Faire une promenade' ne demek?", options: [{ id: "a", text: "Yürüyüşe çıkmak", correct: true }, { id: "b", text: "Piknik yapmak", correct: false }, { id: "c", text: "Spor yapmak", correct: false }, { id: "d", text: "Alışveriş yapmak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Visiter' ne demek?", options: [{ id: "a", text: "Ziyaret etmek/Gezmek", correct: true }, { id: "b", text: "Görmek", correct: false }, { id: "c", text: "Gitmek", correct: false }, { id: "d", text: "Kalmak", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le musée' ne demek?", options: [{ id: "a", text: "Müze", correct: true }, { id: "b", text: "Galeri", correct: false }, { id: "c", text: "Kale", correct: false }, { id: "d", text: "Saray", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Seyahat etmeyi çok severim", correctAnswer: "J'adore voyager" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais à la ___ en été.", options: [{ id: "a", text: "plage", correct: true }, { id: "b", text: "montagne", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Prendre des photos", options: [{ id: "a", text: "Fotoğraf çekmek", correct: true }, { id: "b", text: "Resim yapmak", correct: false }, { id: "c", text: "Film izlemek", correct: false }, { id: "d", text: "Müzik dinlemek", correct: false }] },
+    { id: 12, type: "SELECT", question: "'L'appareil photo' ne demek?", options: [{ id: "a", text: "Fotoğraf makinesi", correct: true }, { id: "b", text: "Telefon", correct: false }, { id: "c", text: "Kamera", correct: false }, { id: "d", text: "Bilgisayar", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Müzeleri geziyorum", correctAnswer: "Je visite les musées" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous faisons du ___ dans la forêt.", options: [{ id: "a", text: "camping", correct: true }, { id: "b", text: "plage", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Dağda yürüyüş yapıyoruz", correctAnswer: "Nous faisons une promenade à la montagne" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les souvenirs", options: [{ id: "a", text: "Hediyelik eşyalar/Anılar", correct: true }, { id: "b", text: "Fotoğraflar", correct: false }, { id: "c", text: "Kartpostallar", correct: false }, { id: "d", text: "Biletler", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime prendre des ___.", options: [{ id: "a", text: "photos", correct: true }, { id: "b", text: "caméra", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Tatildeyim", correctAnswer: "Je suis en vacances" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je veux visiter Paris.", options: [{ id: "a", text: "visiter", correct: true }, { id: "b", text: "voyager", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Seyahat hobilerini öğrendik!", correctAnswer: "Nous avons appris les loisirs de voyage!" }
+];
+
+export const unit317Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Les jeux vidéo' ne demek?", options: [{ id: "a", text: "Video oyunları", correct: true }, { id: "b", text: "Bilgisayar oyunları", correct: false }, { id: "c", text: "Masa oyunları", correct: false }, { id: "d", text: "Kart oyunları", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Jouer aux cartes' ne demek?", options: [{ id: "a", text: "Kart oynamak", correct: true }, { id: "b", text: "Satranç oynamak", correct: false }, { id: "c", text: "Oyun oynamak", correct: false }, { id: "d", text: "Kumar oynamak", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les échecs", options: [{ id: "a", text: "Satranç", correct: true }, { id: "b", text: "Dama", correct: false }, { id: "c", text: "Tavla", correct: false }, { id: "d", text: "Domino", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Internet' ne demek?", options: [{ id: "a", text: "İnternet", correct: true }, { id: "b", text: "Bilgisayar", correct: false }, { id: "c", text: "Ağ", correct: false }, { id: "d", text: "Site", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Surfer sur internet", options: [{ id: "a", text: "İnternette gezinmek", correct: true }, { id: "b", text: "Oyun oynamak", correct: false }, { id: "c", text: "Film izlemek", correct: false }, { id: "d", text: "Chat yapmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le jardinage' ne demek?", options: [{ id: "a", text: "Bahçecilik", correct: true }, { id: "b", text: "Çiftçilik", correct: false }, { id: "c", text: "Çiçekçilik", correct: false }, { id: "d", text: "Ormancılık", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La cuisine' (hobi olarak) ne demek?", options: [{ id: "a", text: "Yemek pişirme", correct: true }, { id: "b", text: "Yemek yeme", correct: false }, { id: "c", text: "Mutfak", correct: false }, { id: "d", text: "Restoran", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le bricolage' ne demek?", options: [{ id: "a", text: "Tamirat/El işleri", correct: true }, { id: "b", text: "İnşaat", correct: false }, { id: "c", text: "Boyama", correct: false }, { id: "d", text: "Montaj", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Video oyunları oynamayı severim", correctAnswer: "J'aime jouer aux jeux vidéo" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il joue aux ___ avec son ami.", options: [{ id: "a", text: "échecs", correct: true }, { id: "b", text: "cartes", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'aime cuisiner", options: [{ id: "a", text: "Yemek pişirmeyi severim", correct: true }, { id: "b", text: "Yemek yemeyi severim", correct: false }, { id: "c", text: "Temizlik yapmayı severim", correct: false }, { id: "d", text: "Bahçe işlerini severim", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Collectionner' ne demek?", options: [{ id: "a", text: "Koleksiyon yapmak", correct: true }, { id: "b", text: "Biriktirmek", correct: false }, { id: "c", text: "Toplamak", correct: false }, { id: "d", text: "Aramak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bahçede çalışıyorum", correctAnswer: "Je travaille dans le jardin" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle surfe sur ___.", options: [{ id: "a", text: "internet", correct: true }, { id: "b", text: "ordinateur", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Boş zamanımda tamirat yaparım", correctAnswer: "Je fais du bricolage pendant mon temps libre" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Mon passe-temps", options: [{ id: "a", text: "Hobim/Boş zaman uğraşım", correct: true }, { id: "b", text: "İşim", correct: false }, { id: "c", text: "Okulum", correct: false }, { id: "d", text: "Hayatım", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je collectionne les ___.", options: [{ id: "a", text: "timbres", correct: true }, { id: "b", text: "cartes", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Hafta sonu kart oynarız", correctAnswer: "Nous jouons aux cartes le week-end" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ me détend.", options: [{ id: "a", text: "jardinage", correct: true }, { id: "b", text: "cuisine", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Ev hobilerini öğrendik!", correctAnswer: "Nous avons appris les loisirs à la maison!" }
+];

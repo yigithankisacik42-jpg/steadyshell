@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Kelime Veritabanı - İspanyolca B1
+ * SteadyShell Kelime Veritabanı - İspanyolca B1
  * 30 Ünite (ID: 61-90), her biri için 20 kelime
  * Curriculum ile uyumlu
  */

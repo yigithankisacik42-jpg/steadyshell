@@ -1,5 +1,5 @@
 
-// LinguaFlow Konu Anlatımı - Fransızca A1 (301-330)
+// SteadyShell Konu Anlatımı - Fransızca A1 (301-330)
 // Curriculum.ts ile senkronize - Tüm üniteler için detaylı içerik
 
 import { UnitLecture, LectureSlide } from './lectures';

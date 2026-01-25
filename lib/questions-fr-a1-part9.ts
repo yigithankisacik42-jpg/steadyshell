@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 320-321
+import { Question } from "./questions";
+
+// ===== ÜNİTE 320: YÖNLER =====
+export const unit320Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'À gauche' ne demek?", options: [{ id: "a", text: "Sola/Solda", correct: true }, { id: "b", text: "Sağa", correct: false }, { id: "c", text: "Düz", correct: false }, { id: "d", text: "Geri", correct: false }] },
+    { id: 2, type: "SELECT", question: "'À droite' ne demek?", options: [{ id: "a", text: "Sağa/Sağda", correct: true }, { id: "b", text: "Sola", correct: false }, { id: "c", text: "Düz", correct: false }, { id: "d", text: "Yukarı", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Tout droit", options: [{ id: "a", text: "Dosdoğru/Düz", correct: true }, { id: "b", text: "Geri", correct: false }, { id: "c", text: "Sağa", correct: false }, { id: "d", text: "Sola", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Devant' ne demek?", options: [{ id: "a", text: "Önünde", correct: true }, { id: "b", text: "Arkasında", correct: false }, { id: "c", text: "Yanında", correct: false }, { id: "d", text: "Üstünde", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Derrière", options: [{ id: "a", text: "Arkasında", correct: true }, { id: "b", text: "Önünde", correct: false }, { id: "c", text: "Altında", correct: false }, { id: "d", text: "İçinde", correct: false }] },
+    { id: 6, type: "SELECT", question: "'À côté de' ne demek?", options: [{ id: "a", text: "Yanında", correct: true }, { id: "b", text: "Karşısında", correct: false }, { id: "c", text: "Uzağında", correct: false }, { id: "d", text: "Ortasında", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Loin de' ne demek?", options: [{ id: "a", text: "Uzağında", correct: true }, { id: "b", text: "Yakınında", correct: false }, { id: "c", text: "İçinde", correct: false }, { id: "d", text: "Dışında", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Près de' ne demek?", options: [{ id: "a", text: "Yakınında", correct: true }, { id: "b", text: "Uzağında", correct: false }, { id: "c", text: "Üstünde", correct: false }, { id: "d", text: "Altında", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Sola dönün", correctAnswer: "Tournez à gauche" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Allez tout ___.", options: [{ id: "a", text: "droit", correct: true }, { id: "b", text: "gauche", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est loin", options: [{ id: "a", text: "Uzak", correct: true }, { id: "b", text: "Yakın", correct: false }, { id: "c", text: "Burada", correct: false }, { id: "d", text: "Orada", correct: false }] },
+    { id: 12, type: "SELECT", question: "'En face de' ne demek?", options: [{ id: "a", text: "Karşısında", correct: true }, { id: "b", text: "Yanında", correct: false }, { id: "c", text: "Arkasında", correct: false }, { id: "d", text: "Önünde", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Sağa dönün", correctAnswer: "Tournez à droite" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le parc est ___ de l'école.", options: [{ id: "a", text: "près", correct: true }, { id: "b", text: "loin", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bankanın önünde", correctAnswer: "Devant la banque" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Tournez ici", options: [{ id: "a", text: "Buradan dönün", correct: true }, { id: "b", text: "Burada durun", correct: false }, { id: "c", text: "Buraya gelin", correct: false }, { id: "d", text: "Buradan gidin", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est à ___.", options: [{ id: "a", text: "gauche", correct: true }, { id: "b", text: "droit", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Düz gidin", correctAnswer: "Allez tout droit" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "La voiture est ___ la maison.", options: [{ id: "a", text: "derrière", correct: true }, { id: "b", text: "gauche", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Temel yönleri öğrendik!", correctAnswer: "Nous avons appris les directions de base!" }
+];
+
+export const unit320Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le nord' ne demek?", options: [{ id: "a", text: "Kuzey", correct: true }, { id: "b", text: "Güney", correct: false }, { id: "c", text: "Doğu", correct: false }, { id: "d", text: "Batı", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le sud' ne demek?", options: [{ id: "a", text: "Güney", correct: true }, { id: "b", text: "Kuzey", correct: false }, { id: "c", text: "Doğu", correct: false }, { id: "d", text: "Batı", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'est", options: [{ id: "a", text: "Doğu", correct: true }, { id: "b", text: "Batı", correct: false }, { id: "c", text: "Kuzey", correct: false }, { id: "d", text: "Güney", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'ouest' ne demek?", options: [{ id: "a", text: "Batı", correct: true }, { id: "b", text: "Doğu", correct: false }, { id: "c", text: "Kuzey", correct: false }, { id: "d", text: "Güney", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Continuer", options: [{ id: "a", text: "Devam etmek", correct: true }, { id: "b", text: "Durmak", correct: false }, { id: "c", text: "Dönmek", correct: false }, { id: "d", text: "Başlamak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Traverser' ne demek?", options: [{ id: "a", text: "Karşıya geçmek", correct: true }, { id: "b", text: "Dönmek", correct: false }, { id: "c", text: "Durmak", correct: false }, { id: "d", text: "Beklemek", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le coin' ne demek?", options: [{ id: "a", text: "Köşe", correct: true }, { id: "b", text: "Yol", correct: false }, { id: "c", text: "Sokak", correct: false }, { id: "d", text: "Meydan", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Au bout de' ne demek?", options: [{ id: "a", text: "Sonunda/Ucunda", correct: true }, { id: "b", text: "Başında", correct: false }, { id: "c", text: "Ortasında", correct: false }, { id: "d", text: "Yanında", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Caddenin karşısına geçin", correctAnswer: "Traversez la rue" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est au ___ de la rue.", options: [{ id: "a", text: "bout", correct: true }, { id: "b", text: "coin", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le carrefour", options: [{ id: "a", text: "Kavşak/Dörtyol", correct: true }, { id: "b", text: "Köprü", correct: false }, { id: "c", text: "Tünel", correct: false }, { id: "d", text: "Otoyol", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le feu rouge' ne demek?", options: [{ id: "a", text: "Kırmızı ışık", correct: true }, { id: "b", text: "Yeşil ışık", correct: false }, { id: "c", text: "Trafik işareti", correct: false }, { id: "d", text: "Yaya geçidi", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Köşeden sağa dönün", correctAnswer: "Tournez à droite au coin" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Allez vers le ___.", options: [{ id: "a", text: "nord", correct: true }, { id: "b", text: "droite", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Işıklara kadar devam edin", correctAnswer: "Continuez jusqu'aux feux" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Prenez la première rue", options: [{ id: "a", text: "Birinci sokağa girin", correct: true }, { id: "b", text: "İkinci sokağa girin", correct: false }, { id: "c", text: "Sokağı geçin", correct: false }, { id: "d", text: "Sokakta bekleyin", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Traversez le ___.", options: [{ id: "a", text: "pont", correct: true }, { id: "b", text: "rue", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Yolun sonunda", correctAnswer: "Au bout du chemin" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est à l'___ de la ville.", options: [{ id: "a", text: "est", correct: true }, { id: "b", text: "nord", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yol tariflerini öğrendik!", correctAnswer: "Nous avons appris les itinéraires!" }
+];
+
+export const unit320Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Où est...?' ne demek?", options: [{ id: "a", text: "Nerede...?", correct: true }, { id: "b", text: "Nereye...?", correct: false }, { id: "c", text: "Nasıl...?", correct: false }, { id: "d", text: "Ne zaman...?", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le plan' ne demek?", options: [{ id: "a", text: "Harita/Plan", correct: true }, { id: "b", text: "Yol", correct: false }, { id: "c", text: "Adres", correct: false }, { id: "d", text: "Yön", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis perdu", options: [{ id: "a", text: "Kayboldum", correct: true }, { id: "b", text: "Buradayım", correct: false }, { id: "c", text: "Gidiyorum", correct: false }, { id: "d", text: "Geliyorum", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Chercher' ne demek?", options: [{ id: "a", text: "Aramak", correct: true }, { id: "b", text: "Bulmak", correct: false }, { id: "c", text: "Kaybetmek", correct: false }, { id: "d", text: "Sormak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Trouver", options: [{ id: "a", text: "Bulmak", correct: true }, { id: "b", text: "Aramak", correct: false }, { id: "c", text: "Bakmak", correct: false }, { id: "d", text: "Görmek", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'adresse' ne demek?", options: [{ id: "a", text: "Adres", correct: true }, { id: "b", text: "Sokak", correct: false }, { id: "c", text: "Numara", correct: false }, { id: "d", text: "Şehir", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le chemin' ne demek?", options: [{ id: "a", text: "Yol", correct: true }, { id: "b", text: "Sokak", correct: false }, { id: "c", text: "Cadde", correct: false }, { id: "d", text: "Köşe", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La distance' ne demek?", options: [{ id: "a", text: "Mesafe", correct: true }, { id: "b", text: "Yön", correct: false }, { id: "c", text: "Zaman", correct: false }, { id: "d", text: "Hız", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "İstasyon nerede?", correctAnswer: "Où est la gare?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ mon hôtel.", options: [{ id: "a", text: "chercher", correct: true }, { id: "b", text: "trouver", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est par là", options: [{ id: "a", text: "Bu taraftan", correct: true }, { id: "b", text: "Şu taraftan", correct: false }, { id: "c", text: "Uzakta", correct: false }, { id: "d", text: "Yakında", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Kilomètre' ne demek?", options: [{ id: "a", text: "Kilometre", correct: true }, { id: "b", text: "Metre", correct: false }, { id: "c", text: "Mil", correct: false }, { id: "d", text: "Adım", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kayboldum, yardım edin", correctAnswer: "Je suis perdu, aidez-moi" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Regardez le ___.", options: [{ id: "a", text: "plan", correct: true }, { id: "b", text: "rue", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Yolu biliyor musunuz?", correctAnswer: "Connaissez-vous le chemin?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est tout près", options: [{ id: "a", text: "Çok yakın", correct: true }, { id: "b", text: "Çok uzak", correct: false }, { id: "c", text: "Biraz uzak", correct: false }, { id: "d", text: "Bayağı uzak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Quelle est l'___?", options: [{ id: "a", text: "adresse", correct: true }, { id: "b", text: "nom", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Buraya iki kilometre", correctAnswer: "C'est à deux kilomètres d'ici" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous allez ___ l'hôtel.", options: [{ id: "a", text: "trouver", correct: true }, { id: "b", text: "chercher", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Harita okumayı öğrendik!", correctAnswer: "Nous avons appris à lire une carte!" }
+];
+
+export const unit320Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le GPS' ne demek?", options: [{ id: "a", text: "GPS/Navigasyon", correct: true }, { id: "b", text: "Harita", correct: false }, { id: "c", text: "Pusula", correct: false }, { id: "d", text: "Telefon", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Suivre' ne demek?", options: [{ id: "a", text: "Takip etmek/İzlemek", correct: true }, { id: "b", text: "Gitmek", correct: false }, { id: "c", text: "Dönmek", correct: false }, { id: "d", text: "Durmak", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Faites demi-tour", options: [{ id: "a", text: "U dönüşü yapın/Geri dönün", correct: true }, { id: "b", text: "Sola dönün", correct: false }, { id: "c", text: "Sağa dönün", correct: false }, { id: "d", text: "Düz gidin", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le rond-point' ne demek?", options: [{ id: "a", text: "Döner kavşak", correct: true }, { id: "b", text: "Dörtyol", correct: false }, { id: "c", text: "Köprü", correct: false }, { id: "d", text: "Tünel", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La sortie", options: [{ id: "a", text: "Çıkış", correct: true }, { id: "b", text: "Giriş", correct: false }, { id: "c", text: "Yol", correct: false }, { id: "d", text: "Kapı", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'entrée' ne demek?", options: [{ id: "a", text: "Giriş", correct: true }, { id: "b", text: "Çıkış", correct: false }, { id: "c", text: "Kapı", correct: false }, { id: "d", text: "Yol", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le panneau' ne demek?", options: [{ id: "a", text: "Tabela/İşaret", correct: true }, { id: "b", text: "Işık", correct: false }, { id: "c", text: "Yol", correct: false }, { id: "d", text: "Harita", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Stationner' ne demek?", options: [{ id: "a", text: "Park etmek", correct: true }, { id: "b", text: "Durmak", correct: false }, { id: "c", text: "Gitmek", correct: false }, { id: "d", text: "Beklemek", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "GPS'i takip edin", correctAnswer: "Suivez le GPS" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Prenez la deuxième ___.", options: [{ id: "a", text: "sortie", correct: true }, { id: "b", text: "entré", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est interdit", options: [{ id: "a", text: "Yasak", correct: true }, { id: "b", text: "Serbest", correct: false }, { id: "c", text: "Mümkün", correct: false }, { id: "d", text: "Zorunlu", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le parking' ne demek?", options: [{ id: "a", text: "Otopark", correct: true }, { id: "b", text: "Park", correct: false }, { id: "c", text: "Bahçe", correct: false }, { id: "d", text: "Yol", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Giriş nerede?", correctAnswer: "Où est l'entrée?" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Au ___, tournez à droite.", options: [{ id: "a", text: "rond-point", correct: true }, { id: "b", text: "parking", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Buraya park edebilirsiniz", correctAnswer: "Vous pouvez stationner ici" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Suivez les panneaux", options: [{ id: "a", text: "Tabelaları takip edin", correct: true }, { id: "b", text: "Araba takip edin", correct: false }, { id: "c", text: "Yolu takip edin", correct: false }, { id: "d", text: "Işıkları takip edin", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je cherche un ___.", options: [{ id: "a", text: "parking", correct: true }, { id: "b", text: "panneau", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Çıkış solda", correctAnswer: "La sortie est à gauche" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Faites ___ ici.", options: [{ id: "a", text: "demi-tour", correct: true }, { id: "b", text: "tour", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Trafik kurallarını öğrendik!", correctAnswer: "Nous avons appris les règles de circulation!" }
+];
+
+// ===== ÜNİTE 321: ŞEHİRDE =====
+export const unit321Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'La ville' ne demek?", options: [{ id: "a", text: "Şehir", correct: true }, { id: "b", text: "Köy", correct: false }, { id: "c", text: "Ülke", correct: false }, { id: "d", text: "Mahalle", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le centre-ville' ne demek?", options: [{ id: "a", text: "Şehir merkezi", correct: true }, { id: "b", text: "Kenar mahalle", correct: false }, { id: "c", text: "meydan", correct: false }, { id: "d", text: "Park", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La rue", options: [{ id: "a", text: "Sokak/Cadde", correct: true }, { id: "b", text: "Yol", correct: false }, { id: "c", text: "Meydan", correct: false }, { id: "d", text: "Park", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La place' ne demek?", options: [{ id: "a", text: "Meydan", correct: true }, { id: "b", text: "Sokak", correct: false }, { id: "c", text: "Park", correct: false }, { id: "d", text: "Bina", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le bâtiment", options: [{ id: "a", text: "Bina", correct: true }, { id: "b", text: "Ev", correct: false }, { id: "c", text: "Okul", correct: false }, { id: "d", text: "Ofis", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le magasin' ne demek?", options: [{ id: "a", text: "Mağaza/Dükkan", correct: true }, { id: "b", text: "Market", correct: false }, { id: "c", text: "AVM", correct: false }, { id: "d", text: "Bakkal", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le parc' ne demek?", options: [{ id: "a", text: "Park", correct: true }, { id: "b", text: "Bahçe", correct: false }, { id: "c", text: "Orman", correct: false }, { id: "d", text: "Meydan", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le pont' ne demek?", options: [{ id: "a", text: "Köprü", correct: true }, { id: "b", text: "Nehir", correct: false }, { id: "c", text: "Göl", correct: false }, { id: "d", text: "Yol", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Şehirde yaşıyorum", correctAnswer: "J'habite en ville" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais au ___.", options: [{ id: "a", text: "centre-ville", correct: true }, { id: "b", text: "ville", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est une grande ville", options: [{ id: "a", text: "Bu büyük bir şehir", correct: true }, { id: "b", text: "Bu küçük bir şehir", correct: false }, { id: "c", text: "Bu güzel bir şehir", correct: false }, { id: "d", text: "Bu eski bir şehir", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le quartier' ne demek?", options: [{ id: "a", text: "Mahalle/Semt", correct: true }, { id: "b", text: "Şehir", correct: false }, { id: "c", text: "Sokak", correct: false }, { id: "d", text: "Apartman", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bu sokak çok uzun", correctAnswer: "Cette rue est très longue" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a un grand ___.", options: [{ id: "a", text: "bâtiment", correct: true }, { id: "b", text: "rue", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Parkta yürüyoruz", correctAnswer: "Nous marchons dans le parc" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Traverser le pont", options: [{ id: "a", text: "Köprüyü geçmek", correct: true }, { id: "b", text: "Yolu geçmek", correct: false }, { id: "c", text: "Sokağı geçmek", correct: false }, { id: "d", text: "Nehri geçmek", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Mon ___ est calme.", options: [{ id: "a", text: "quartier", correct: true }, { id: "b", text: "ville", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Mağazalar kapalı", correctAnswer: "Les magasins sont fermés" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est belle.", options: [{ id: "a", text: "place", correct: true }, { id: "b", text: "pont", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Şehir yerlerini öğrendik!", correctAnswer: "Nous avons appris les lieux de la ville!" }
+];
+
+export const unit321Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'La banque' ne demek?", options: [{ id: "a", text: "Banka", correct: true }, { id: "b", text: "Postane", correct: false }, { id: "c", text: "Hastane", correct: false }, { id: "d", text: "Okul", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La poste' ne demek?", options: [{ id: "a", text: "Postane", correct: true }, { id: "b", text: "Banka", correct: false }, { id: "c", text: "Polis", correct: false }, { id: "d", text: "İtfaiye", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'hôpital", options: [{ id: "a", text: "Hastane", correct: true }, { id: "b", text: "Eczane", correct: false }, { id: "c", text: "Klinik", correct: false }, { id: "d", text: "Otel", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La pharmacie' ne demek?", options: [{ id: "a", text: "Eczane", correct: true }, { id: "b", text: "Hastane", correct: false }, { id: "c", text: "Market", correct: false }, { id: "d", text: "Fırın", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le supermarché", options: [{ id: "a", text: "Süpermarket", correct: true }, { id: "b", text: "Pazar", correct: false }, { id: "c", text: "Bakkal", correct: false }, { id: "d", text: "Mağaza", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La boulangerie' ne demek?", options: [{ id: "a", text: "Fırın", correct: true }, { id: "b", text: "Pastane", correct: false }, { id: "c", text: "Kasap", correct: false }, { id: "d", text: "Manav", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le restaurant' ne demek?", options: [{ id: "a", text: "Restoran", correct: true }, { id: "b", text: "Kafe", correct: false }, { id: "c", text: "Bar", correct: false }, { id: "d", text: "Otel", correct: false }] },
+    { id: 8, type: "SELECT", question: "'L'hôtel' ne demek?", options: [{ id: "a", text: "Otel", correct: true }, { id: "b", text: "Ev", correct: false }, { id: "c", text: "Hastane", correct: false }, { id: "d", text: "Okul", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bankaya gidiyorum", correctAnswer: "Je vais à la banque" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'achète du pain à la ___.", options: [{ id: "a", text: "boulangerie", correct: true }, { id: "b", text: "pharmacie", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le marché", options: [{ id: "a", text: "Pazar/Çarşı", correct: true }, { id: "b", text: "Market", correct: false }, { id: "c", text: "Mağaza", correct: false }, { id: "d", text: "Fırın", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le cinéma' ne demek?", options: [{ id: "a", text: "Sinema", correct: true }, { id: "b", text: "Tiyatro", correct: false }, { id: "c", text: "Müze", correct: false }, { id: "d", text: "Park", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Postane nerede?", correctAnswer: "Où est la poste?" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il travaille à l'___.", options: [{ id: "a", text: "hôpital", correct: true }, { id: "b", text: "rue", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Akşam yemeğini restoranda yiyoruz", correctAnswer: "Nous dînons au restaurant" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le café", options: [{ id: "a", text: "Kafe", correct: true }, { id: "b", text: "Kahve", correct: false }, { id: "c", text: "Bar", correct: false }, { id: "d", text: "Restoran", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais au ___ pour acheter des fruits.", options: [{ id: "a", text: "supermarché", correct: true }, { id: "b", text: "pharmacie", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "İlaçlar eczanede", correctAnswer: "Les médicaments sont à la pharmacie" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous regardons un film au ___.", options: [{ id: "a", text: "cinéma", correct: true }, { id: "b", text: "théâtre", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Şehirdeki binaları öğrendik!", correctAnswer: "Nous avons appris les bâtiments de la ville!" }
+];
+
+export const unit321Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'La bibliothèque' ne demek?", options: [{ id: "a", text: "Kütüphane", correct: true }, { id: "b", text: "Kitapçı", correct: false }, { id: "c", text: "Okul", correct: false }, { id: "d", text: "Kırtasiye", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La librairie' ne demek?", options: [{ id: "a", text: "Kitapçı", correct: true }, { id: "b", text: "Kütüphane", correct: false }, { id: "c", text: "Gazete bayii", correct: false }, { id: "d", text: "Kırtasiye", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'école", options: [{ id: "a", text: "Okul", correct: true }, { id: "b", text: "Üniversite", correct: false }, { id: "c", text: "Lise", correct: false }, { id: "d", text: "Kreş", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La gare' ne demek?", options: [{ id: "a", text: "Tren istasyonu/Gar", correct: true }, { id: "b", text: "Otobüs durağı", correct: false }, { id: "c", text: "Havalimanı", correct: false }, { id: "d", text: "Liman", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'aéroport", options: [{ id: "a", text: "Havalimanı", correct: true }, { id: "b", text: "Liman", correct: false }, { id: "c", text: "Gar", correct: false }, { id: "d", text: "Durak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'arrêt de bus' ne demek?", options: [{ id: "a", text: "Otobüs durağı", correct: true }, { id: "b", text: "Tren istasyonu", correct: false }, { id: "c", text: "Taksi durağı", correct: false }, { id: "d", text: "Metro istasyonu", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La station de métro' ne demek?", options: [{ id: "a", text: "Metro istasyonu", correct: true }, { id: "b", text: "Tren garı", correct: false }, { id: "c", text: "Otobüs durağı", correct: false }, { id: "d", text: "Havalimanı", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le musée' ne demek?", options: [{ id: "a", text: "Müze", correct: true }, { id: "b", text: "Tiyatro", correct: false }, { id: "c", text: "Sinema", correct: false }, { id: "d", text: "Galeri", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Kütüphanede kitap okuyorum", correctAnswer: "Je lis des livres à la bibliothèque" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je prends le train à la ___.", options: [{ id: "a", text: "gare", correct: true }, { id: "b", text: "aéroport", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La mairie", options: [{ id: "a", text: "Belediye binası", correct: true }, { id: "b", text: "Adliye", correct: false }, { id: "c", text: "Karakol", correct: false }, { id: "d", text: "Postane", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le commissariat' ne demek?", options: [{ id: "a", text: "Karakol", correct: true }, { id: "b", text: "Belediye", correct: false }, { id: "c", text: "Hapishane", correct: false }, { id: "d", text: "İtfaiye", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Otobüs durağı nerede?", correctAnswer: "Où est l'arrêt de bus?" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "J'achète un livre à la ___.", options: [{ id: "a", text: "librairie", correct: true }, { id: "b", text: "bibliothèque", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Havalimanına gidiyoruz", correctAnswer: "Nous allons à l'aéroport" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'église", options: [{ id: "a", text: "Kilise", correct: true }, { id: "b", text: "Cami", correct: false }, { id: "c", text: "Sinagog", correct: false }, { id: "d", text: "Tapınak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le métro est à la ___.", options: [{ id: "a", text: "station", correct: true }, { id: "b", text: "arrêt", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Okul kütüphanenin yanında", correctAnswer: "L'école est à côté de la bibliothèque" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est au centre-ville.", options: [{ id: "a", text: "mairie", correct: true }, { id: "b", text: "gare", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Kamu binalarını öğrendik!", correctAnswer: "Nous avons appris les bâtiments publics!" }
+];
+
+export const unit321Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Ouvrir' ne demek?", options: [{ id: "a", text: "Açmak", correct: true }, { id: "b", text: "Kapatmak", correct: false }, { id: "c", text: "Girmek", correct: false }, { id: "d", text: "Çıkmak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Fermer' ne demek?", options: [{ id: "a", text: "Kapatmak", correct: true }, { id: "b", text: "Açmak", correct: false }, { id: "c", text: "Girmek", correct: false }, { id: "d", text: "Bitirmek", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ouvert", options: [{ id: "a", text: "Açık", correct: true }, { id: "b", text: "Kapalı", correct: false }, { id: "c", text: "Boş", correct: false }, { id: "d", text: "Dolu", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Fermé' ne demek?", options: [{ id: "a", text: "Kapalı", correct: true }, { id: "b", text: "Açık", correct: false }, { id: "c", text: "Dolu", correct: false }, { id: "d", text: "Boş", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'horaire", options: [{ id: "a", text: "Tarife/Çalışma saatleri", correct: true }, { id: "b", text: "Saat", correct: false }, { id: "c", text: "Zaman", correct: false }, { id: "d", text: "Tarih", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Entrer' ne demek?", options: [{ id: "a", text: "Girmek", correct: true }, { id: "b", text: "Çıkmak", correct: false }, { id: "c", text: "Açmak", correct: false }, { id: "d", text: "Kapamak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Sortir' ne demek?", options: [{ id: "a", text: "Çıkmak", correct: true }, { id: "b", text: "Girmek", correct: false }, { id: "c", text: "Kalmak", correct: false }, { id: "d", text: "Dönmek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le guichet' ne demek?", options: [{ id: "a", text: "Gişe", correct: true }, { id: "b", text: "Masa", correct: false }, { id: "c", text: "Kapı", correct: false }, { id: "d", text: "Pencere", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Mağaza saat dokuzda açılıyor", correctAnswer: "Le magasin ouvre à neuf heures" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "La banque est ___ le dimanche.", options: [{ id: "a", text: "fermée", correct: true }, { id: "b", text: "fermé", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est ouvert", options: [{ id: "a", text: "Açık", correct: true }, { id: "b", text: "Kapalı", correct: false }, { id: "c", text: "Yasak", correct: false }, { id: "d", text: "Serbest", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le distributeur' ne demek?", options: [{ id: "a", text: "Bankamatik", correct: true }, { id: "b", text: "Dağıtıcı", correct: false }, { id: "c", text: "Satıcı", correct: false }, { id: "d", text: "Kasiyer", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Lütfen giriniz", correctAnswer: "Entrez s'il vous plaît" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ de la maison.", options: [{ id: "a", text: "sors", correct: true }, { id: "b", text: "sort", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Müze bugün kapalı", correctAnswer: "Le musée est fermé aujourd'hui" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les heures d'ouverture", options: [{ id: "a", text: "Açılış saatleri", correct: true }, { id: "b", text: "Kapanış saatleri", correct: false }, { id: "c", text: "Öğle molası", correct: false }, { id: "d", text: "Çalışma günleri", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Allez au ___.", options: [{ id: "a", text: "guichet", correct: true }, { id: "b", text: "porte", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Kapıyı kapatıyorum", correctAnswer: "Je ferme la porte" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est en panne.", options: [{ id: "a", text: "distributeur", correct: true }, { id: "b", text: "guichet", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Şehir hayatını öğrendik!", correctAnswer: "Nous avons appris la vie urbaine!" }
+];

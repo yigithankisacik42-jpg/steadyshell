@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Speaking Exercises - English A1
+ * SteadyShell Speaking Exercises - English A1
  * 30 Units (ID: 101-130) with speaking prompts and dialogues
  */
 

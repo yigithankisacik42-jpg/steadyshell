@@ -221,6 +221,54 @@ function LectureContent() {
                             )}
                         </div>
                     )}
+
+                    {slide.type === "table" && (
+                        <div className="space-y-6">
+                            {slide.content && <p className="text-lg text-slate-600 mb-4">{slide.content}</p>}
+
+                            <div className="bg-white border-2 border-slate-100 rounded-2xl overflow-hidden shadow-sm">
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-left border-collapse">
+                                        {slide.headers && (
+                                            <thead>
+                                                <tr className="bg-indigo-50 border-b border-indigo-100">
+                                                    {slide.headers.map((header, i) => (
+                                                        <th key={i} className="px-4 py-3 text-sm font-bold text-indigo-900 uppercase tracking-wider">
+                                                            {header}
+                                                        </th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                        )}
+                                        <tbody className="divide-y divide-slate-100">
+                                            {slide.rows?.map((row, i) => (
+                                                <tr key={i} className="hover:bg-slate-50 transition-colors">
+                                                    {row.map((cell, j) => (
+                                                        <td key={j} className="px-4 py-3 text-slate-700 font-medium whitespace-nowrap md:whitespace-normal">
+                                                            {/* Markdown-like bold formatting support */}
+                                                            {cell.includes('**') ? (
+                                                                <span>
+                                                                    {cell.split('**').map((part, k) =>
+                                                                        k % 2 === 1 ? <strong key={k} className="text-indigo-700">{part}</strong> : part
+                                                                    )}
+                                                                </span>
+                                                            ) : cell}
+                                                        </td>
+                                                    ))}
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            {slide.note && (
+                                <div className="bg-indigo-50 border border-indigo-200 rounded-2xl p-4">
+                                    <p className="text-indigo-700 font-medium">💡 {slide.note}</p>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
 

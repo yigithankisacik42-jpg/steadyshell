@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Vocabulary Database - English A1
+ * SteadyShell Vocabulary Database - English A1
  * 30 Units (ID: 101-130), 15 words per unit
  */
 

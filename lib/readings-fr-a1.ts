@@ -4,7 +4,7 @@ import { UnitReading } from './readings';
 // ===== ÜNİTE 301: MERHABA (Selamlaşma ve Tanışma) =====
 const unit301Reading: UnitReading = {
     unitId: 301,
-    title: "Bonjour tout le monde!",
+    title: "Selamlaşma ve Tanışma",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -35,7 +35,7 @@ const unit301Reading: UnitReading = {
 // ===== ÜNİTE 302: ALFABE VE SESLER =====
 const unit302Reading: UnitReading = {
     unitId: 302,
-    title: "Les Sons du Français",
+    title: "Aksanlar ve Ulama",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -67,7 +67,7 @@ const unit302Reading: UnitReading = {
 // ===== ÜNİTE 303: SAYILAR (0-20) =====
 const unit303Reading: UnitReading = {
     unitId: 303,
-    title: "Combien ça coûte?",
+    title: "Sayılar 0-20",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -98,7 +98,7 @@ const unit303Reading: UnitReading = {
 // ===== ÜNİTE 304: RENKLER =====
 const unit304Reading: UnitReading = {
     unitId: 304,
-    title: "Mon Jardin Coloré",
+    title: "Renkler ve Cinsiyet Uyumu",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -129,7 +129,7 @@ const unit304Reading: UnitReading = {
 // ===== ÜNİTE 305: AİLE BİREYLERİ =====
 const unit305Reading: UnitReading = {
     unitId: 305,
-    title: "La Famille Dupont",
+    title: "Aile ve İyelik Sıfatları",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -160,7 +160,7 @@ const unit305Reading: UnitReading = {
 // ===== ÜNİTE 306: GÜNLER VE AYLAR =====
 const unit306Reading: UnitReading = {
     unitId: 306,
-    title: "Mon Agenda",
+    title: "Günler ve Aylar",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -191,7 +191,7 @@ const unit306Reading: UnitReading = {
 // ===== ÜNİTE 307: ÜLKELER VE MİLLETLER =====
 const unit307Reading: UnitReading = {
     unitId: 307,
-    title: "Mes Amis Internationaux",
+    title: "Ülkeler ve Milletler",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -222,7 +222,7 @@ const unit307Reading: UnitReading = {
 // ===== ÜNİTE 308: MESLEKLER =====
 const unit308Reading: UnitReading = {
     unitId: 308,
-    title: "Les Métiers",
+    title: "Mesleklerde Cinsiyet",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -253,7 +253,7 @@ const unit308Reading: UnitReading = {
 // ===== ÜNİTE 309: EVİMİZ =====
 const unit309Reading: UnitReading = {
     unitId: 309,
-    title: "Ma Maison",
+    title: "Evimiz (Yer Edatları ve Odalar)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -284,7 +284,7 @@ const unit309Reading: UnitReading = {
 // ===== ÜNİTE 310: SINIFTA =====
 const unit310Reading: UnitReading = {
     unitId: 310,
-    title: "Dans la Classe",
+    title: "Belirsiz Tanımlıklar (Les Articles Indéfinis)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -315,7 +315,7 @@ const unit310Reading: UnitReading = {
 // ===== ÜNİTE 311: VÜCUDUMUZ =====
 const unit311Reading: UnitReading = {
     unitId: 311,
-    title: "Le Corps Humain",
+    title: "Avoir Mal à (Ağrısı Olmak)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -346,7 +346,7 @@ const unit311Reading: UnitReading = {
 // ===== ÜNİTE 312: GİYSİLER =====
 const unit312Reading: UnitReading = {
     unitId: 312,
-    title: "Les Vêtements",
+    title: "Porter Fiili ve Giysiler",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -378,7 +378,7 @@ const unit312Reading: UnitReading = {
 // ===== ÜNİTE 313: YİYECEKLER =====
 const unit313Reading: UnitReading = {
     unitId: 313,
-    title: "Le Petit Déjeuner",
+    title: "Partitif Artikeller (Du, De la, De l', Des)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -409,7 +409,7 @@ const unit313Reading: UnitReading = {
 // ===== ÜNİTE 314: İÇECEKLER =====
 const unit314Reading: UnitReading = {
     unitId: 314,
-    title: "J'ai Soif",
+    title: "Vouloir, Pouvoir, Devoir (Modal Fiiller)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -440,7 +440,7 @@ const unit314Reading: UnitReading = {
 // ===== ÜNİTE 315: SAAT KAÇ? =====
 const unit315Reading: UnitReading = {
     unitId: 315,
-    title: "L'Heure",
+    title: "Saatleri Söyleme (L'Heure)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -471,7 +471,7 @@ const unit315Reading: UnitReading = {
 // ===== ÜNİTE 316: GÜNLÜK RUTİN =====
 const unit316Reading: UnitReading = {
     unitId: 316,
-    title: "Ma Journée",
+    title: "Günlük Rutin (Dönüşlü Fiiller)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -502,7 +502,7 @@ const unit316Reading: UnitReading = {
 // ===== ÜNİTE 317: HOBİLER =====
 const unit317Reading: UnitReading = {
     unitId: 317,
-    title: "Mes Loisirs",
+    title: "Hobiler (Faire vs Jouer)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -533,7 +533,7 @@ const unit317Reading: UnitReading = {
 // ===== ÜNİTE 318: HAVA DURUMU =====
 const unit318Reading: UnitReading = {
     unitId: 318,
-    title: "Quel temps fait-il?",
+    title: "Hava Durumu (Le Temps)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -564,7 +564,7 @@ const unit318Reading: UnitReading = {
 // ===== ÜNİTE 319: DUYGULAR =====
 const unit319Reading: UnitReading = {
     unitId: 319,
-    title: "Mes Émotions",
+    title: "Duygular ve Cinsiyet Uyumu",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -595,7 +595,7 @@ const unit319Reading: UnitReading = {
 // ===== ÜNİTE 320: ŞEHİRDE YÖNLER =====
 const unit320Reading: UnitReading = {
     unitId: 320,
-    title: "Où est la gare?",
+    title: "Emir Kipi ve Yol Tarifi (L'Impératif)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -626,7 +626,7 @@ const unit320Reading: UnitReading = {
 // ===== ÜNİTE 321: ULAŞIM =====
 const unit321Reading: UnitReading = {
     unitId: 321,
-    title: "Les Transports",
+    title: "Prendre Fiili ve Ulaşım",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -657,7 +657,7 @@ const unit321Reading: UnitReading = {
 // ===== ÜNİTE 322: MEVSİMLER =====
 const unit322Reading: UnitReading = {
     unitId: 322,
-    title: "Les Saisons",
+    title: "Mevsimler ve En/Au Edatları",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -689,69 +689,69 @@ const unit322Reading: UnitReading = {
 // ===== ÜNİTE 323: DOĞUM GÜNÜ =====
 const unit323Reading: UnitReading = {
     unitId: 323,
-    title: "Joyeux Anniversaire",
+    title: "Futur Proche (Yakın Gelecek)",
     language: "Fransızca",
     level: "A1",
     story: {
-        text: "C'est mon anniversaire. J'ai vingt ans. Il y a un gâteau au chocolat et des bougies. Mes amis chantent et me donnent des cadeaux.",
-        translation: "Bu benim doğum günüm. Yirmi yaşındayım. Çikolatalı pasta ve mumlar var. Arkadaşlarım şarkı söylüyor ve bana hediyeler veriyorlar."
+        text: "Demain, c'est mon anniversaire. Je vais fêter avec mes amis. Nous allons manger un gâteau. Je vais être très heureux.",
+        translation: "Yarın doğum günüm. Arkadaşlarımla kutlayacağım. Bir pasta yiyeceğiz. Çok mutlu olacağım."
     },
     questions: [
-        { id: 1, question: "Bugün ne?", options: ["Yılbaşı", "Doğum günü", "Bayram", "Tatil"], correctAnswer: "Doğum günü" },
-        { id: 2, question: "Kaç yaşında?", options: ["10", "15", "20", "25"], correctAnswer: "20" },
-        { id: 3, question: "Ne pastası var?", options: ["Meyveli", "Çikolatalı", "Çilekli", "Muzlu"], correctAnswer: "Çikolatalı" },
-        { id: 4, question: "Başka ne var?", options: ["Mumlar", "Balonlar", "Çiçekler", "Resimler"], correctAnswer: "Mumlar" },
-        { id: 5, question: "Arkadaşları ne yapıyor?", options: ["Uyuyor", "Gidiyor", "Şarkı söylüyor", "Ağlıyor"], correctAnswer: "Şarkı söylüyor" },
-        { id: 6, question: "Ona ne veriyorlar?", options: ["Para", "Hediye", "Yemek", "Su"], correctAnswer: "Hediye" },
-        { id: 7, question: "'Anniversaire' ne demek?", options: ["Yıldönümü/Doğum günü", "Kutlama", "Parti", "Hediye"], correctAnswer: "Yıldönümü/Doğum günü" },
-        { id: 8, question: "'Gâteau' ne demek?", options: ["Gato", "Pasta/Kek", "Ekmek", "Börek"], correctAnswer: "Pasta/Kek" },
-        { id: 9, question: "'Bougies' ne demek?", options: ["Bujiler", "Mumlar", "Işıklar", "Süsler"], correctAnswer: "Mumlar" },
-        { id: 10, question: "'Cadeaux' ne demek?", options: ["Paketler", "Hediyeler", "Kutular", "Kartlar"], correctAnswer: "Hediyeler" }
+        { id: 1, question: "Doğum günü ne zaman?", options: ["Bugün", "Yarın", "Dün", "Haftaya"], correctAnswer: "Yarın" },
+        { id: 2, question: "Kiminle kutlayacak?", options: ["Ailesiyle", "Yalnız", "Arkadaşlarıyla", "Öğretmeniyle"], correctAnswer: "Arkadaşlarıyla" },
+        { id: 3, question: "Ne yiyecekler?", options: ["Pizza", "Pasta", "Dondurma", "Meyve"], correctAnswer: "Pasta" },
+        { id: 4, question: "Nasıl hissedecek?", options: ["Üzgün", "Yorgun", "Mutlu", "Kızgın"], correctAnswer: "Mutlu" },
+        { id: 5, question: "Kullanılan zaman hangisi?", options: ["Geçmiş", "Şimdiki", "Yakın Gelecek", "Geniş"], correctAnswer: "Yakın Gelecek" },
+        { id: 6, question: "'Demain' ne demek?", options: ["Dün", "Yarın", "Bugün", "Sonra"], correctAnswer: "Yarın" },
+        { id: 7, question: "'Fêter' ne demek?", options: ["Ağlamak", "Kutlamak", "Uyumak", "Gitmek"], correctAnswer: "Kutlamak" },
+        { id: 8, question: "'Gâteau' ne demek?", options: ["Pasta", "Ekmek", "Su", "Şeker"], correctAnswer: "Pasta" },
+        { id: 9, question: "'Heureux' ne demek?", options: ["Mutlu", "Üzgün", "Hasta", "Hızlı"], correctAnswer: "Mutlu" },
+        { id: 10, question: "'Nous allons manger' ne demek?", options: ["Yedik", "Yiyoruz", "Yiyeceğiz", "Yemeliyiz"], correctAnswer: "Yiyeceğiz" }
     ],
     vocabulary: [
-        { word: "Anniversaire", meaning: "Doğum günü" },
+        { word: "Demain", meaning: "Yarın" },
+        { word: "Fêter", meaning: "Kutlamak" },
         { word: "Gâteau", meaning: "Pasta" },
-        { word: "Bougies", meaning: "Mumlar" },
-        { word: "Cadeaux", meaning: "Hediyeler" },
-        { word: "Chantent", meaning: "Şarkı söylüyorlar" }
+        { word: "Heureux", meaning: "Mutlu" },
+        { word: "Manger", meaning: "Yemek" }
     ]
 };
 
 // ===== ÜNİTE 324: TATİL =====
 const unit324Reading: UnitReading = {
     unitId: 324,
-    title: "Les Vacances",
+    title: "Passé Composé (Geçmiş Zaman)",
     language: "Fransızca",
     level: "A1",
     story: {
-        text: "Je vais en vacances à la mer. Je nage dans l'eau bleue. Je bronze sur la plage. C'est relaxant.",
-        translation: "Denize tatile gidiyorum. Mavi suda yüzüyorum. Plajda bronzlaşıyorum. Bu rahatlatıcı."
+        text: "L'été dernier, je suis allé en vacances. J'ai nagé dans la mer. J'ai mangé de bons plats. J'ai adoré mes vacances.",
+        translation: "Geçen yaz tatile gittim. Denizde yüzdüm. Güzel yemekler yedim. Tatilime bayıldım."
     },
     questions: [
-        { id: 1, question: "Nereye gidiyor?", options: ["Dağa", "Ormana", "Denize", "Şehre"], correctAnswer: "Denize" },
-        { id: 2, question: "Ne yapıyor?", options: ["Kayıyor", "Yüzüyor", "Koşuyor", "Uçuyor"], correctAnswer: "Yüzüyor" },
-        { id: 3, question: "Su ne renk?", options: ["Yeşil", "Mavi", "Siyah", "Gri"], correctAnswer: "Yeşil" },
-        { id: 4, question: "Nerede bronzlaşıyor?", options: ["Evde", "Havuzda", "Plajda", "Bahçede"], correctAnswer: "Plajda" },
-        { id: 5, question: "Tatil nasıl?", options: ["Sıkıcı", "Yorucu", "Rahatlatıcı", "Kötü"], correctAnswer: "Rahatlatıcı" },
-        { id: 6, question: "'Vacances' ne demek?", options: ["Tatil", "Boşluk", "Hafta sonu", "İzin"], correctAnswer: "Tatil" },
-        { id: 7, question: "'Mer' ne demek?", options: ["Göl", "Nehir", "Deniz", "Okyanus"], correctAnswer: "Deniz" },
-        { id: 8, question: "'Nage' ne demek?", options: ["Yüzmek", "Dalmak", "Girmek", "Çıkmak"], correctAnswer: "Yüzmek" },
-        { id: 9, question: "'Plage' ne demek?", options: ["Plaj/Kumsal", "Deniz", "Kum", "Güneş"], correctAnswer: "Plaj/Kumsal" },
-        { id: 10, question: "'Relaxant' ne demek?", options: ["Sıkıcı", "Rahatlatıcı", "Eğlenceli", "Komik"], correctAnswer: "Rahatlatıcı" }
+        { id: 1, question: "Ne zaman tatile gitti?", options: ["Bu kış", "Geçen yaz", "Yarın", "Haftaya"], correctAnswer: "Geçen yaz" },
+        { id: 2, question: "Nerede yüzdü?", options: ["Havuzda", "Nehirde", "Denizde", "Gölde"], correctAnswer: "Denizde" },
+        { id: 3, question: "Yemekler nasıldı?", options: ["Kötü", "Soğuk", "Güzel (Bon)", "Pahalı"], correctAnswer: "Güzel (Bon)" },
+        { id: 4, question: "Tatili sevdi mi?", options: ["Hayır", "Biraz", "Evet, bayıldı", "Nefret etti"], correctAnswer: "Evet, bayıldı" },
+        { id: 5, question: "Hangi zaman kullanılmış?", options: ["Gelecek", "Şimdiki", "Geçmiş (Passé Composé)", "Emir"], correctAnswer: "Geçmiş (Passé Composé)" },
+        { id: 6, question: "'Je suis allé' ne demek?", options: ["Gidiyorum", "Gideceğim", "Gittim", "Gitmeliyim"], correctAnswer: "Gittim" },
+        { id: 7, question: "'J'ai nagé' ne demek?", options: ["Yüzdüm", "Koştum", "Uçtum", "Yattım"], correctAnswer: "Yüzdüm" },
+        { id: 8, question: "'Mer' ne demek?", options: ["Dağ", "Deniz", "Orman", "Şehir"], correctAnswer: "Deniz" },
+        { id: 9, question: "'Plats' ne demek?", options: ["Tabaklar/Yemekler", "Bardaklar", "Çatallar", "Bıçaklar"], correctAnswer: "Tabaklar/Yemekler" },
+        { id: 10, question: "'J'ai adoré' ne demek?", options: ["Nefret ettim", "Bayıldım/Çok sevdim", "Gördüm", "Yaptım"], correctAnswer: "Bayıldım/Çok sevdim" }
     ],
     vocabulary: [
         { word: "Vacances", meaning: "Tatil" },
         { word: "Mer", meaning: "Deniz" },
-        { word: "Nage", meaning: "Yüzmek" },
-        { word: "Plage", meaning: "Plaj" },
-        { word: "Relaxant", meaning: "Rahatlatıcı" }
+        { word: "Allé", meaning: "Gitti" },
+        { word: "Nagé", meaning: "Yüzdü" },
+        { word: "Adoré", meaning: "Bayıldı/Çok sevdi" }
     ]
 };
 
 // ===== ÜNİTE 325: ALIŞVERİŞ =====
 const unit325Reading: UnitReading = {
     unitId: 325,
-    title: "Au Supermarché",
+    title: "Fiyat ve Miktar Sorma (Combien)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -782,7 +782,7 @@ const unit325Reading: UnitReading = {
 // ===== ÜNİTE 326: RESTORANDA =====
 const unit326Reading: UnitReading = {
     unitId: 326,
-    title: "Au Restaurant",
+    title: "Restoranda (Au Restaurant)",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -813,38 +813,38 @@ const unit326Reading: UnitReading = {
 // ===== ÜNİTE 327: RENKLER VE SIFATLAR =====
 const unit327Reading: UnitReading = {
     unitId: 327,
-    title: "Le Monde Coloré",
+    title: "Karşılaştırma (Le Comparatif)",
     language: "Fransızca",
     level: "A1",
     story: {
-        text: "La voiture est rouge. Le ciel est bleu. L'herbe est verte. La neige est blanche. La nuit est noire.",
-        translation: "Araba kırmızıdır. Gökyüzü mavidir. Çim yeşildir. Kar beyazdır. Gece siyahtır."
+        text: "Mon frère est plus grand que moi. Ma voiture est plus rapide que ton vélo. L'été est plus chaud que l'hiver. La souris est moins grande que l'éléphant.",
+        translation: "Erkek kardeşim benden daha uzun. Arabam senin bisikletinden daha hızlı. Yaz kıştan daha sıcak. Fare filden daha az büyüktür (küçüktür)."
     },
     questions: [
-        { id: 1, question: "Araba ne renk?", options: ["Mavi", "Kırmızı", "Sarı", "Siyah"], correctAnswer: "Kırmızı" },
-        { id: 2, question: "Gökyüzü ne renk?", options: ["Beyaz", "Gri", "Mavi", "Mor"], correctAnswer: "Mavi" },
-        { id: 3, question: "Çim ne renk?", options: ["Sarı", "Yeşil", "Kahverengi", "Mavi"], correctAnswer: "Yeşil" },
-        { id: 4, question: "Kar ne renk?", options: ["Beyaz", "Gri", "Mavi", "Sarı"], correctAnswer: "Beyaz" },
-        { id: 5, question: "Gece ne renk?", options: ["Mavi", "Lacivert", "Siyah", "Gri"], correctAnswer: "Siyah" },
-        { id: 6, question: "'Rouge' hangi renk?", options: ["Pembe", "Kırmızı", "Mor", "Turuncu"], correctAnswer: "Kırmızı" },
-        { id: 7, question: "'Bleu' hangi renk?", options: ["Yeşil", "Mavi", "Sarı", "Beyaz"], correctAnswer: "Mavi" },
-        { id: 8, question: "'Verte' hangi renk?", options: ["Mavi", "Yeşil", "Sarı", "Gri"], correctAnswer: "Yeşil" },
-        { id: 9, question: "'Blanche' hangi renk?", options: ["Siyah", "Beyaz", "Krem", "Gri"], correctAnswer: "Beyaz" },
-        { id: 10, question: "'Noire' hangi renk?", options: ["Beyaz", "Siyah", "Mavi", "Kırmızı"], correctAnswer: "Siyah" }
+        { id: 1, question: "Erkek kardeş nasıl?", options: ["Daha kısa", "Daha uzun (Grand)", "Daha şişman", "Daha genç"], correctAnswer: "Daha uzun (Grand)" },
+        { id: 2, question: "Araba bisikletten nasıl?", options: ["Daha yavaş", "Daha hızlı (Rapide)", "Daha ucuz", "Daha eski"], correctAnswer: "Daha hızlı (Rapide)" },
+        { id: 3, question: "Yaz kıştan nasıl?", options: ["Daha soğuk", "Daha sıcak (Chaud)", "Daha kısa", "Daha yağmurlu"], correctAnswer: "Daha sıcak (Chaud)" },
+        { id: 4, question: "Fare filden nasıl?", options: ["Daha büyük", "Daha küçük (Moins grande)", "Eşit", "Daha ağır"], correctAnswer: "Daha küçük (Moins grande)" },
+        { id: 5, question: "'Plus... que' ne demek?", options: ["Daha az... den", "Daha çok... den", "Kadar", "Gibi"], correctAnswer: "Daha çok... den" },
+        { id: 6, question: "'Moins... que' ne demek?", options: ["Daha çok", "Daha az", "Eşit", "Çok"], correctAnswer: "Daha az" },
+        { id: 7, question: "'Grand' ne demek?", options: ["Küçük", "Büyük/Uzun", "Kısa", "Zayıf"], correctAnswer: "Büyük/Uzun" },
+        { id: 8, question: "'Rapide' ne demek?", options: ["Yavaş", "Hızlı", "Güzel", "Çirkin"], correctAnswer: "Hızlı" },
+        { id: 9, question: "'Chaud' ne demek?", options: ["Soğuk", "Sıcak", "Ilık", "Serin"], correctAnswer: "Sıcak" },
+        { id: 10, question: "'Frère' ne demek?", options: ["Baba", "Anne", "Erkek kardeş", "Kız kardeş"], correctAnswer: "Erkek kardeş" }
     ],
     vocabulary: [
-        { word: "Rouge", meaning: "Kırmızı" },
-        { word: "Bleu", meaning: "Mavi" },
-        { word: "Vert", meaning: "Yeşil" },
-        { word: "Blanc", meaning: "Beyaz" },
-        { word: "Noir", meaning: "Siyah" }
+        { word: "Plus", meaning: "Daha (fazla)" },
+        { word: "Moins", meaning: "Daha az" },
+        { word: "Grand", meaning: "Büyük/Uzun" },
+        { word: "Rapide", meaning: "Hızlı" },
+        { word: "Chaud", meaning: "Sıcak" }
     ]
 };
 
 // ===== ÜNİTE 328: HAYVANLAR =====
 const unit328Reading: UnitReading = {
     unitId: 328,
-    title: "Les Animaux",
+    title: "Hayvanlar ve Cinsiyet Kuralı",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -875,7 +875,7 @@ const unit328Reading: UnitReading = {
 // ===== ÜNİTE 329: TEKNOLOJİ =====
 const unit329Reading: UnitReading = {
     unitId: 329,
-    title: "La Technologie",
+    title: "Amaç Bildirme: Pour + Mastar",
     language: "Fransızca",
     level: "A1",
     story: {
@@ -909,7 +909,7 @@ const unit329Reading: UnitReading = {
 // ===== ÜNİTE 330: A1 GENEL TEKRAR =====
 const unit330Reading: UnitReading = {
     unitId: 330,
-    title: "Révisions",
+    title: "A1 Dilbilgisi Özeti",
     language: "Fransızca",
     level: "A1",
     story: {

@@ -3,62 +3,77 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Star, Zap, BookOpen, Sparkles, GraduationCap, ChevronRight, MessageCircle, Library, Play, Heart, Clock } from "lucide-react";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { Star, Zap, BookOpen, Sparkles, GraduationCap, ChevronRight, MessageCircle, Library, Play, Heart, Clock, Award, Flame, Target, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useUserProgress } from "@/contexts/user-progress-context";
 import { getCurriculum, LessonType } from "@/lib/curriculum";
 import { APP_CONFIG } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { getVideoForUnit } from "@/lib/videos";
-import { useHearts, formatTime } from "@/lib/hearts-context";
+import { useHearts } from "@/lib/hearts-context";
+
 
 export default function LearnPage() {
     const { currentLanguage, currentLevel, setCurrentLevel, progress } = useLanguage();
-    const { hearts, maxHearts, getTimeUntilNextHeart, isRecovering } = useHearts();
-    const isPremiumLive = APP_CONFIG.isPremiumLive;
-    const allLessonsUnlocked = true; // TEST MODE: Tüm dersler açık
+    const { hearts } = useHearts();
+    const { user } = useUserProgress();
 
-    // Hydration mismatch'i önlemek için client-side mount kontrolü
+    // Test modu: Tüm dersler açık
+    const allLessonsUnlocked = true;
+
+    // Hydration mismatch önleme
     const [isMounted, setIsMounted] = useState(false);
-    const [timeUntilHeart, setTimeUntilHeart] = useState<number | null>(null);
 
     useEffect(() => {
         setIsMounted(true);
     }, []);
 
-    // Timer güncelleme
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setTimeUntilHeart(getTimeUntilNextHeart());
-        }, 1000);
-        return () => clearInterval(interval);
-    }, [getTimeUntilNextHeart]);
-
-    const currentProgress = progress[currentLanguage.code];
     const units = getCurriculum(currentLanguage.code, currentLevel?.code || "A1");
+    const currentProgress = progress[currentLanguage.code];
+
+    // Gerçek kullanıcı istatistikleri
+    const stats = [
+        { label: "Günlük Seri", value: String(user.streak || 0), icon: Flame, color: "text-orange-500", bg: "bg-orange-500/10" },
+        { label: "Toplam XP", value: String(user.totalXp || 0), icon: Zap, color: "text-yellow-500", bg: "bg-yellow-500/10" },
+        { label: "Başarılar", value: "0/50", icon: Trophy, color: "text-purple-500", bg: "bg-purple-500/10" },
+    ];
 
     const getLessonIcon = (type: LessonType, completed: boolean) => {
-        if (completed) return "✓";
+        if (completed) return <div className="text-xl font-bold">✓</div>;
         switch (type) {
-            case "LECTURE": return "📚";
-            case "VOCABULARY": return "📖";
-            case "PHRASES": return <MessageCircle className="w-8 h-8" />;
-            case "GRAMMAR": return <Library className="w-8 h-8" />;
-            case "READING": return "📕";
-            case "SPEAKING": return "🎤";
-            default: return "★";
+            case "VIDEO": return <Play className="w-6 h-6 ml-1" />;
+            case "LECTURE": return <BookOpen className="w-6 h-6" />;
+            case "VOCABULARY": return <Target className="w-6 h-6" />;
+            case "PHRASES": return <MessageCircle className="w-6 h-6" />;
+            case "GRAMMAR": return <Library className="w-6 h-6" />;
+            case "READING": return <BookOpen className="w-6 h-6" />;
+            case "SPEAKING": return <MessageCircle className="w-6 h-6" />;
+            default: return <Star className="w-6 h-6" />;
         }
     };
 
-    const getLessonRoute = (type: LessonType, unitId: number, lessonIndex: number, lessons: { type: LessonType }[]) => {
-        const baseRoute = type === "LECTURE" ? "/lecture" :
-            type === "VOCABULARY" ? "/vocabulary" :
-                type === "PHRASES" ? "/phrases" :
-                    type === "GRAMMAR" ? "/grammar" :
-                        type === "READING" ? "/reading" :
-                            type === "SPEAKING" ? "/speaking" : "/lesson";
+    const getLessonDescription = (type: LessonType) => {
+        switch (type) {
+            case "VIDEO": return "Konu Videosu";
+            case "LECTURE": return "Ders Anlatımı";
+            case "VOCABULARY": return "Kelime Çalışması";
+            case "PHRASES": return "Kalıp Pratiği";
+            case "GRAMMAR": return "Dilbilgisi";
+            case "READING": return "Okuma";
+            case "SPEAKING": return "Konuşma";
+            default: return "Pratik";
+        }
+    };
 
-        // LESSON tipi için kaçıncı quiz olduğunu hesapla
+    const getLessonRoute = (type: string, unitId: number, lessonIndex: number, lessons: { type: string }[]) => {
+        const baseRoute = type === "VIDEO" ? "/video" :
+            type === "LECTURE" ? "/lecture" :
+                type === "VOCABULARY" ? "/vocabulary" :
+                    type === "PHRASES" ? "/phrases" :
+                        type === "GRAMMAR" ? "/grammar" :
+                            type === "READING" ? "/reading" :
+                                type === "SPEAKING" ? "/speaking" : "/lesson";
+
         if (type === "LESSON") {
             const previousLessons = lessons.slice(0, lessonIndex);
             const quizIndex = previousLessons.filter(l => l.type === "LESSON").length + 1;
@@ -68,139 +83,205 @@ export default function LearnPage() {
         return `${baseRoute}?unitId=${unitId}`;
     };
 
-
     return (
-        <div className="flex flex-col gap-6 pb-40 items-center w-full bg-gradient-to-b from-slate-50 via-white to-indigo-50/30 min-h-screen text-foreground">
+        <div className="flex flex-col w-full min-h-screen bg-[#FDFDFD] pb-32">
 
-            {/* ÜST BİLGİ ÇUBUGU */}
-            <div className="sticky top-0 bg-white/95 backdrop-blur-md z-40 w-full border-b border-slate-200/50 shadow-sm">
-                <div className="p-4 flex justify-center items-center max-w-[800px] mx-auto">
-                    {/* Dil Seçici */}
-                    <LanguageSwitcher />
+            {/* HERO SECTION WITH GLASSMORPHISM */}
+            <div className="relative w-full bg-slate-900 text-white overflow-hidden pb-12 pt-6 px-4 md:px-8 shadow-2xl rounded-b-[3rem] mb-10 z-10">
+                {/* Abstract Background Shapes */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+                    <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[150%] bg-purple-600/30 blur-[100px] rounded-full mix-blend-screen animate-pulse" />
+                    <div className="absolute top-[20%] -right-[10%] w-[40%] h-[120%] bg-indigo-600/30 blur-[80px] rounded-full mix-blend-screen" />
+                    <div className="absolute bottom-[-20%] left-[20%] w-[60%] h-[80%] bg-blue-600/20 blur-[90px] rounded-full mix-blend-screen" />
                 </div>
 
-                {/* Seviye Seçici */}
-                <div className="border-t border-slate-100 bg-slate-50/50">
-                    <div className="flex gap-2 p-3 overflow-x-auto max-w-[800px] mx-auto items-center">
-                        {currentLanguage.levels.map((level) => {
-                            const isSelected = currentLevel?.code === level.code;
-                            return (
-                                <button
-                                    key={level.code}
-                                    onClick={() => setCurrentLevel(level)}
-                                    className={cn(
-                                        "flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-sm whitespace-nowrap transition-all",
-                                        isSelected
-                                            ? "bg-indigo-600 text-white shadow-lg shadow-indigo-200"
-                                            : "bg-white border border-slate-200 text-slate-600 hover:border-indigo-300 hover:shadow-md"
-                                    )}
-                                >
-                                    <GraduationCap className="w-4 h-4" />
-                                    {level.code} - {level.name}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
-            </div>
-
-            {/* SEVİYE BİLGİSİ */}
-            {currentLevel && (
-                <div className="w-full max-w-[600px] px-4">
-                    <div className="bg-gradient-to-r from-indigo-600 to-violet-600 p-4 rounded-2xl text-white shadow-lg shadow-indigo-200/50">
-                        <h2 className="text-xl font-extrabold">{currentLanguage.flag} {currentLanguage.name} - Seviye {currentLevel.code}</h2>
-                        <p className="text-white/80">{currentLevel.description}</p>
-                        <div className="flex items-center gap-4 mt-3 text-sm">
-                            <span>📚 {units.length} ünite</span>
-                            <span>📖 {units.reduce((acc, u) => acc + u.lessons.length, 0)} ders</span>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            {/* ÜNİTELER LİSTESİ */}
-            {units.length > 0 ? (
-                units.map((unit, unitIndex) => (
-                    <div key={unit.id} className="w-full max-w-[600px] relative px-4">
-                        {/* Ünite Başlık Kartı */}
-                        <div className={`bg-gradient-to-r ${unit.color} p-5 rounded-2xl mb-8 text-white shadow-xl flex justify-between items-center`}>
-                            <div>
-                                <h2 className="text-lg font-extrabold">{unit.title}</h2>
-                                <p className="font-medium opacity-90 text-sm">{unit.description}</p>
-                            </div>
-                            <Button variant="secondary" className="border-b-4 border-slate-200/50 active:border-b-0 rounded-xl font-bold text-sm bg-white/20 hover:bg-white/30 text-white border-transparent">
-                                <BookOpen className="w-4 h-4 mr-1" /> REHBER
-                            </Button>
+                <div className="relative z-10 max-w-5xl mx-auto">
+                    {/* Header Top Row */}
+                    <div className="flex justify-between items-center mb-8">
+                        <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+                            <span className="text-xl">{currentLanguage.flag}</span>
+                            <span className="font-bold text-sm tracking-wide">{currentLanguage.name}</span>
                         </div>
 
-                        {/* DERS BUTONLARI ZİNCİRİ */}
-                        <div className="flex flex-col items-center gap-3 mb-8">
-                            {/* VİDEO BUTONU - Eğer video varsa en başta göster */}
-                            {getVideoForUnit(unit.id) && (
-                                <div className="relative flex flex-col items-center">
-                                    <Link href={`/video?unitId=${unit.id}`}>
-                                        <Button className={`h-16 w-16 rounded-2xl text-2xl shadow-lg transition-all hover:scale-110 active:scale-95 border-b-4 bg-gradient-to-br ${unit.color} ${unit.borderColor}`}>
-                                            🎬
-                                        </Button>
-                                    </Link>
-                                    <span className="text-xs text-slate-500 mt-1 font-medium">Video</span>
-                                    <div className="h-6 w-2 bg-slate-300 rounded-full mt-1" />
-                                </div>
-                            )}
-                            {unit.lessons.map((lesson, lessonIndex) => {
-                                // Hydration mismatch önlemek için isMounted kontrolü
-                                const isCompleted = isMounted && currentProgress?.completedLessons.includes(lesson.id);
-                                const isAccessible = allLessonsUnlocked || isCompleted || (unitIndex === 0 && lessonIndex <= 1);
-                                const isCurrentLesson = unitIndex === 0 && lessonIndex === 1 && !isCompleted;
-
-                                // Zigzag pattern
-                                const offset = lessonIndex % 3 === 1 ? 'ml-12' : lessonIndex % 3 === 2 ? 'mr-12' : '';
-
+                        <div className="flex gap-2 p-1 bg-white/5 backdrop-blur-sm rounded-xl overflow-x-auto max-w-[50vw]">
+                            {currentLanguage.levels.map((level) => {
+                                const isSelected = currentLevel?.code === level.code;
                                 return (
-                                    <div
-                                        key={lesson.id}
-                                        className={`relative flex flex-col items-center ${offset}`}
+                                    <button
+                                        key={level.code}
+                                        onClick={() => setCurrentLevel(level)}
+                                        className={cn(
+                                            "px-4 py-2 rounded-lg font-bold text-xs transition-all duration-300",
+                                            isSelected
+                                                ? "bg-white text-indigo-900 shadow-lg scale-105"
+                                                : "text-white/60 hover:text-white hover:bg-white/10"
+                                        )}
                                     >
-                                        {isCurrentLesson && (
-                                            <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-white border-2 border-indigo-200 px-3 py-1 rounded-xl font-bold animate-bounce text-indigo-600 z-10 shadow-lg whitespace-nowrap text-sm">
-                                                <Sparkles className="inline w-3 h-3 mr-1" />BAŞLA!
-                                            </div>
-                                        )}
-
-                                        {isAccessible ? (
-                                            <Link href={getLessonRoute(lesson.type, unit.id, lessonIndex, unit.lessons)}>
-                                                <Button className={cn(
-                                                    "h-16 w-16 rounded-2xl text-2xl shadow-lg transition-all hover:scale-110 active:scale-95 border-b-4",
-                                                    isCompleted
-                                                        ? "bg-emerald-500 border-emerald-700"
-                                                        : `bg-gradient-to-br ${unit.color} ${unit.borderColor}`
-                                                )}>
-                                                    {getLessonIcon(lesson.type, isCompleted)}
-                                                </Button>
-                                            </Link>
-                                        ) : (
-                                            <Button disabled className="h-16 w-16 rounded-2xl bg-slate-200 border-b-4 border-slate-300 text-2xl opacity-50">
-                                                🔒
-                                            </Button>
-                                        )}
-
-                                        {/* Bağlantı Çizgisi */}
-                                        {lessonIndex !== unit.lessons.length - 1 && (
-                                            <div className="h-6 w-2 bg-slate-300 rounded-full mt-1" />
-                                        )}
-                                    </div>
+                                        {level.code}
+                                    </button>
                                 );
                             })}
                         </div>
                     </div>
-                ))
-            ) : (
-                <div className="w-full max-w-[600px] px-4 text-center py-20">
-                    <GraduationCap className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-slate-400">Bu seviye yakında eklenecek!</h3>
-                    <p className="text-slate-400 mt-2">Şimdilik A1 seviyesini tamamlayabilirsin.</p>
+
+                    {/* Main Hero Content */}
+                    <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-8">
+                        <div>
+                            <h1 className="text-4xl md:text-5xl font-black mb-2 tracking-tight">
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-200 to-indigo-100">
+                                    Öğrenmeye Devam Et!
+                                </span>
+                            </h1>
+                            <p className="text-indigo-200 font-medium text-lg">Bugün harika bir iş çıkarıyorsun, Yiğithan. 🚀</p>
+                        </div>
+
+                        {/* Quick Stats Row */}
+                        <div className="flex gap-3">
+                            {stats.map((stat, i) => (
+                                <div key={i} className="flex flex-col items-center justify-center w-24 h-24 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-colors">
+                                    <div className={`p-2 rounded-full mb-1 ${stat.bg}`}>
+                                        <stat.icon className={`w-5 h-5 ${stat.color}`} />
+                                    </div>
+                                    <span className="text-2xl font-bold">{stat.value}</span>
+                                    <span className="text-[10px] text-white/60 uppercase tracking-wider font-semibold">{stat.label}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Quick Access Card */}
+                    {isMounted && currentLevel && units.length > 0 && (
+                        <Link
+                            href={getLessonRoute(units[0].lessons[0].type, units[0].id, 0, units[0].lessons)}
+                            className="block w-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 p-6 rounded-3xl flex items-center justify-between group cursor-pointer hover:border-white/40 transition-all hover:scale-[1.02]"
+                        >
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-indigo-600">
+                                    <Play className="w-5 h-5 ml-1" />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-xl">Kaldığın Yerden Devam Et</h3>
+                                    <p className="text-white/70 text-sm">Ünite 1: {units[0].title} • {getLessonDescription(units[0].lessons[0].type)}</p>
+                                </div>
+                            </div>
+                            <ChevronRight className="w-6 h-6 text-white/50 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    )}
                 </div>
-            )}
+            </div>
+
+            {/* CURRICULUM CONTENT */}
+            <div className="max-w-3xl mx-auto px-4 w-full -mt-20 z-20 relative">
+                {units.length > 0 ? (
+                    <div className="flex flex-col gap-12">
+                        {units.map((unit, unitIndex) => (
+                            <div key={unit.id} className="group">
+                                {/* Unit Header Card */}
+                                <div className="relative mb-8 bg-white rounded-3xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                                    {/* Decorative Gradient Background */}
+                                    <div className={cn("absolute top-0 left-0 w-full h-2 bg-gradient-to-r", unit.color.replace('bg-', 'from-').replace('text-', 'to-'))} />
+
+                                    <div className="flex justify-between items-start relative z-10">
+                                        <div className="flex-1">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <span className={cn("text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide bg-slate-100 text-slate-500")}>
+                                                    ÜNİTE {unit.id}
+                                                </span>
+                                                {unitIndex === 0 && (
+                                                    <span className="text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide bg-emerald-100 text-emerald-600 flex items-center gap-1">
+                                                        <Sparkles className="w-3 h-3" /> AKTİF
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <h2 className="text-2xl font-black text-slate-800 mb-2 leading-tight">{unit.title}</h2>
+                                            <p className="text-slate-500 font-medium leading-relaxed">{unit.description}</p>
+                                        </div>
+                                        <Button variant="ghost" size="icon" className="text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl">
+                                            <BookOpen className="w-5 h-5" />
+                                        </Button>
+                                    </div>
+
+                                    {/* Progress Bar inside card */}
+                                    <div className="mt-6">
+                                        <div className="flex justify-between text-xs font-bold text-slate-400 mb-2">
+                                            <span>İLERLEME</span>
+                                            <span>%{(unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length / unit.lessons.length * 100).toFixed(0)}</span>
+                                        </div>
+                                        <div className="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
+                                            <div
+                                                className={cn("h-full rounded-full transition-all duration-1000 bg-gradient-to-r", unit.color.replace('bg-', 'from-').replace('text-', 'to-'))}
+                                                style={{ width: `${(unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length / unit.lessons.length * 100)}%` }}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Lesson Path (Vertical) */}
+                                <div className="flex flex-col items-center relative space-y-4 pb-4">
+                                    {unit.lessons.map((lesson, lessonIndex) => {
+                                        const isCompleted = isMounted && currentProgress?.completedLessons.includes(lesson.id);
+                                        const isAccessible = allLessonsUnlocked || isCompleted || (unitIndex === 0 && lessonIndex === 0);
+                                        const isCurrent = !isCompleted && isAccessible;
+
+                                        // Zig-zag offset calculation for visual variety
+                                        const xOffset = Math.sin(lessonIndex) * 20;
+
+                                        return (
+                                            <div key={lesson.id} className="relative z-10 flex flex-col items-center group/lesson" style={{ transform: `translateX(${xOffset}px)` }}>
+
+                                                {/* Tooltip on hover */}
+                                                <div className="opacity-0 group-hover/lesson:opacity-100 absolute bottom-full mb-3 px-3 py-1.5 bg-slate-800 text-white text-xs font-bold rounded-lg shadow-xl transition-all w-max pointer-events-none transform translate-y-2 group-hover/lesson:translate-y-0 text-center">
+                                                    {getLessonDescription(lesson.type)}
+                                                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800" />
+                                                </div>
+
+                                                <Link href={isAccessible ? getLessonRoute(lesson.type, unit.id, lessonIndex, unit.lessons) : '#'}>
+                                                    <div className={cn(
+                                                        "w-20 h-20 rounded-[2rem] flex items-center justify-center text-3xl transition-all duration-300 relative",
+                                                        isCompleted
+                                                            ? "bg-gradient-to-b from-emerald-400 to-emerald-600 text-white shadow-lg shadow-emerald-200"
+                                                            : isCurrent
+                                                                ? `bg-white border-4 ${unit.borderColor} ${unit.borderColor.replace('border-', 'text-')} shadow-xl scale-110`
+                                                                : "bg-white border-4 border-slate-200 text-slate-300"
+                                                    )}>
+                                                        {isCurrent && (
+                                                            <div className={cn("absolute inset-0 rounded-[2rem] border-4 animate-ping opacity-20", unit.borderColor)} />
+                                                        )}
+                                                        {getLessonIcon(lesson.type, isCompleted)}
+
+                                                        {/* Status Indicator Badge */}
+                                                        {isCurrent && (
+                                                            <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm animate-bounce">
+                                                                BAŞLA
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                </Link>
+
+                                                {/* Connector Line Logic */}
+                                                {lessonIndex < unit.lessons.length - 1 && (
+                                                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-1.5 h-12 -z-10 bg-slate-200/50" />
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="max-w-3xl mx-auto px-4 flex flex-col items-center justify-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100 text-center">
+                        <div className="w-24 h-24 bg-indigo-50 rounded-full flex items-center justify-center mb-6">
+                            <GraduationCap className="w-12 h-12 text-indigo-300" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-800 mb-2">Henüz İçerik Yok</h3>
+                        <p className="text-slate-500 text-lg max-w-md mx-auto">Bu seviye için içeriklerimiz hazırlanıyor. Lütfen daha sonra tekrar kontrol et!</p>
+                    </div>
+                )}
+            </div>
+
+            {/* GRADIENT BOTTOM OVERLAY */}
+            <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none z-30" />
         </div>
     );
 }

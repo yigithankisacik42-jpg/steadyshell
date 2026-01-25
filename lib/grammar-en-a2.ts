@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Grammar Database - English A2
+ * SteadyShell Grammar Database - English A2
  * 30 Units (ID: 131-160) with grammar rules and exercises
  * Curriculum ile uyumlu - Structure matches grammar-en-a1.ts
  */

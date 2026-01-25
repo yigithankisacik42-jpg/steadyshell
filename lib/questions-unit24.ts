@@ -1,5 +1,5 @@
 /**
- * LinguaFlow - A1 Ünite 24: SER + Milliyet (80 soru)
+ * SteadyShell - A1 Ünite 24: SER + Milliyet (80 soru)
  */
 import { Question } from "./questions";
 

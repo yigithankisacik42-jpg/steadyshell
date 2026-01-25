@@ -1,5 +1,5 @@
 /**
- * LinguaFlow - Tüm Ünite Soruları Birleştirilmiş
+ * SteadyShell - Tüm Ünite Soruları Birleştirilmiş
  * 20 ünite × 4 quiz × 15 soru = 1200 soru
  */
 
@@ -50,7 +50,7 @@ import { unit23Quiz1, unit23Quiz2, unit23Quiz3, unit23Quiz4 } from "./questions-
 import { unit24Quiz1, unit24Quiz2, unit24Quiz3, unit24Quiz4 } from "./questions-unit24";
 import { unit25Quiz1, unit25Quiz2, unit25Quiz3, unit25Quiz4 } from "./questions-unit25";
 import { unit26Quiz1, unit26Quiz2, unit26Quiz3, unit26Quiz4 } from "./questions-unit26";
-import { unit27Quiz1, unit27Quiz2, unit27Quiz3, unit27Quiz4 } from "./questions-unit27-30";
+import { unit27Quiz1, unit27Quiz2, unit27Quiz3, unit27Quiz4 } from "./questions-unit27";
 import { unit28Quiz1, unit28Quiz2, unit28Quiz3, unit28Quiz4 } from "./questions-unit28";
 import { unit29Quiz1, unit29Quiz2, unit29Quiz3, unit29Quiz4 } from "./questions-unit29";
 import { unit30Quiz1, unit30Quiz2, unit30Quiz3, unit30Quiz4 } from "./questions-unit30";
@@ -584,6 +584,7 @@ const unitTopics: { [key: number]: string } = {
 import { getEnglishA1QuestionsForUnit } from './questions-en-a1';
 import { getEnglishA2QuestionsForUnit } from './questions-en-a2';
 import { getFrenchA1QuestionsForUnit } from './questions-fr-a1';
+import { getFrenchA2Quiz } from './questions-fr-a2';
 
 export function getQuestionsForUnit(unitId: number, quizIndex: number = 1): Question[] {
     // === İNGİLİZCE ÜNİTELER (ID 101-220) ===
@@ -622,6 +623,11 @@ export function getQuestionsForUnit(unitId: number, quizIndex: number = 1): Ques
     // Fransızca A1 (301-330)
     if (unitId >= 301 && unitId <= 330) {
         return getFrenchA1QuestionsForUnit(unitId, quizIndex);
+    }
+
+    // Fransızca A2 (331-360)
+    if (unitId >= 331 && unitId <= 360) {
+        return getFrenchA2Quiz(unitId, quizIndex);
     }
 
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===

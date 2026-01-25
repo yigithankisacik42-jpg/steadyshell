@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Vocabulary - English A2 (Units 131-160)
+ * SteadyShell Vocabulary - English A2 (Units 131-160)
  * 30 words per unit
  */
 

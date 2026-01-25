@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 328-329
+import { Question } from "./questions";
+
+// ===== ÜNİTE 328: DOĞA =====
+export const unit328Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'L'arbre' ne demek?", options: [{ id: "a", text: "Ağaç", correct: true }, { id: "b", text: "Çiçek", correct: false }, { id: "c", text: "Yaprak", correct: false }, { id: "d", text: "Ot", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La fleur' ne demek?", options: [{ id: "a", text: "Çiçek", correct: true }, { id: "b", text: "Ağaç", correct: false }, { id: "c", text: "Gül", correct: false }, { id: "d", text: "Bahçe", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La forêt", options: [{ id: "a", text: "Orman", correct: true }, { id: "b", text: "Park", correct: false }, { id: "c", text: "Bahçe", correct: false }, { id: "d", text: "Tarla", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La mer' ne demek?", options: [{ id: "a", text: "Deniz", correct: true }, { id: "b", text: "Göl", correct: false }, { id: "c", text: "Nehir", correct: false }, { id: "d", text: "Havuz", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La montagne", options: [{ id: "a", text: "Dağ", correct: true }, { id: "b", text: "Tepe", correct: false }, { id: "c", text: "Vadi", correct: false }, { id: "d", text: "Ova", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le lac' ne demek?", options: [{ id: "a", text: "Göl", correct: true }, { id: "b", text: "Nehir", correct: false }, { id: "c", text: "Deniz", correct: false }, { id: "d", text: "Su", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La rivière' ne demek?", options: [{ id: "a", text: "Nehir/Irmak", correct: true }, { id: "b", text: "Göl", correct: false }, { id: "c", text: "Deniz", correct: false }, { id: "d", text: "Şelale", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La plage' ne demek?", options: [{ id: "a", text: "Plaj/Kumsal", correct: true }, { id: "b", text: "Deniz", correct: false }, { id: "c", text: "Kum", correct: false }, { id: "d", text: "Taş", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Ağaçların altında", correctAnswer: "Sous les arbres" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime nager dans la ___.", options: [{ id: "a", text: "mer", correct: true }, { id: "b", text: "montagne", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'herbe", options: [{ id: "a", text: "Çim/Ot", correct: true }, { id: "b", text: "Ağaç", correct: false }, { id: "c", text: "Çiçek", correct: false }, { id: "d", text: "Yaprak", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La feuille' ne demek?", options: [{ id: "a", text: "Yaprak", correct: true }, { id: "b", text: "Dal", correct: false }, { id: "c", text: "Kök", correct: false }, { id: "d", text: "Meyve", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Dağ çok yüksek", correctAnswer: "La montagne est très haute" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a des poissons dans le ___.", options: [{ id: "a", text: "lac", correct: true }, { id: "b", text: "forêt", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Ormanda yürüyoruz", correctAnswer: "Nous marchons dans la forêt" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le sable", options: [{ id: "a", text: "Kum", correct: true }, { id: "b", text: "Toprak", correct: false }, { id: "c", text: "Taş", correct: false }, { id: "d", text: "Çamur", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette ___ est belle.", options: [{ id: "a", text: "fleur", correct: true }, { id: "b", text: "arbre", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Nehir denize akar", correctAnswer: "La rivière coule vers la mer" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis à la ___.", options: [{ id: "a", text: "plage", correct: true }, { id: "b", text: "lac", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Doğa terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes de la nature!" }
+];
+
+export const unit328Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le ciel' ne demek?", options: [{ id: "a", text: "Gökyüzü", correct: true }, { id: "b", text: "Yeryüzü", correct: false }, { id: "c", text: "Bulut", correct: false }, { id: "d", text: "Güneş", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'étoile' ne demek?", options: [{ id: "a", text: "Yıldız", correct: true }, { id: "b", text: "Ay", correct: false }, { id: "c", text: "Güneş", correct: false }, { id: "d", text: "Gezegen", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La lune", options: [{ id: "a", text: "Ay", correct: true }, { id: "b", text: "Güneş", correct: false }, { id: "c", text: "Dünya", correct: false }, { id: "d", text: "Yıldız", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le soleil' ne demek?", options: [{ id: "a", text: "Güneş", correct: true }, { id: "b", text: "Ay", correct: false }, { id: "c", text: "Yıldız", correct: false }, { id: "d", text: "Bulut", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le nuage", options: [{ id: "a", text: "Bulut", correct: true }, { id: "b", text: "Rüzgar", correct: false }, { id: "c", text: "Yağmur", correct: false }, { id: "d", text: "Sis", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La terre' ne demek?", options: [{ id: "a", text: "Dünya/Toprak", correct: true }, { id: "b", text: "Ay", correct: false }, { id: "c", text: "Taş", correct: false }, { id: "d", text: "Kum", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le feu' ne demek?", options: [{ id: "a", text: "Ateş", correct: true }, { id: "b", text: "Su", correct: false }, { id: "c", text: "Hava", correct: false }, { id: "d", text: "Toprak", correct: false }] },
+    { id: 8, type: "SELECT", question: "'L'eau' ne demek?", options: [{ id: "a", text: "Su", correct: true }, { id: "b", text: "Ateş", correct: false }, { id: "c", text: "Hava", correct: false }, { id: "d", text: "Toprak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Güneş parlıyor", correctAnswer: "Le soleil brille" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Regarde les ___.", options: [{ id: "a", text: "étoiles", correct: true }, { id: "b", text: "ciel", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La pierre", options: [{ id: "a", text: "Taş", correct: true }, { id: "b", text: "Toprak", correct: false }, { id: "c", text: "Kum", correct: false }, { id: "d", text: "Kaya", correct: false }] },
+    { id: 12, type: "SELECT", question: "'L'air' ne demek?", options: [{ id: "a", text: "Hava", correct: true }, { id: "b", text: "Su", correct: false }, { id: "c", text: "Ateş", correct: false }, { id: "d", text: "Toprak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Ay çok güzel", correctAnswer: "La lune est très belle" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est bleu.", options: [{ id: "a", text: "ciel", correct: true }, { id: "b", text: "terre", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Susadım (Su istiyorum)", correctAnswer: "Je veux de l'eau" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La nature", options: [{ id: "a", text: "Doğa", correct: true }, { id: "b", text: "Şehir", correct: false }, { id: "c", text: "Köy", correct: false }, { id: "d", text: "Ev", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Attention au ___.", options: [{ id: "a", text: "feu", correct: true }, { id: "b", text: "eau", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bulutlar beyaz", correctAnswer: "Les nuages sont blancs" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ tourne.", options: [{ id: "a", text: "terre", correct: true }, { id: "b", text: "ciel", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Evren terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes de l'univers!" }
+];
+
+export const unit328Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'L'animal' ne demek?", options: [{ id: "a", text: "Hayvan", correct: true }, { id: "b", text: "Bitki", correct: false }, { id: "c", text: "İnsan", correct: false }, { id: "d", text: "Böcek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le chien' ne demek?", options: [{ id: "a", text: "Köpek", correct: true }, { id: "b", text: "Kedi", correct: false }, { id: "c", text: "Kuş", correct: false }, { id: "d", text: "At", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le chat", options: [{ id: "a", text: "Kedi", correct: true }, { id: "b", text: "Köpek", correct: false }, { id: "c", text: "Fare", correct: false }, { id: "d", text: "Aslan", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'oiseau' ne demek?", options: [{ id: "a", text: "Kuş", correct: true }, { id: "b", text: "Balık", correct: false }, { id: "c", text: "Böcek", correct: false }, { id: "d", text: "Yılan", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le poisson", options: [{ id: "a", text: "Balık", correct: true }, { id: "b", text: "Kuş", correct: false }, { id: "c", text: "Köpek", correct: false }, { id: "d", text: "Kedi", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le cheval' ne demek?", options: [{ id: "a", text: "At", correct: true }, { id: "b", text: "Eşek", correct: false }, { id: "c", text: "İnek", correct: false }, { id: "d", text: "Koyun", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La vache' ne demek?", options: [{ id: "a", text: "İnek", correct: true }, { id: "b", text: "Koyun", correct: false }, { id: "c", text: "Keçi", correct: false }, { id: "d", text: "At", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le mouton' ne demek?", options: [{ id: "a", text: "Koyun", correct: true }, { id: "b", text: "Keçi", correct: false }, { id: "c", text: "İnek", correct: false }, { id: "d", text: "Domuz", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Köpeğim var", correctAnswer: "J'ai un chien" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ miaule.", options: [{ id: "a", text: "chat", correct: true }, { id: "b", text: "chien", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'ours", options: [{ id: "a", text: "Ayı", correct: true }, { id: "b", text: "Kurt", correct: false }, { id: "c", text: "Tilki", correct: false }, { id: "d", text: "Tavşan", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le lapin' ne demek?", options: [{ id: "a", text: "Tavşan", correct: true }, { id: "b", text: "Fare", correct: false }, { id: "c", text: "Sincap", correct: false }, { id: "d", text: "Kedi", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kuşlar uçuyor", correctAnswer: "Les oiseaux volent" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ nage.", options: [{ id: "a", text: "poisson", correct: true }, { id: "b", text: "oiseau", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Ata biniyorum", correctAnswer: "Je monte à cheval" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le lion", options: [{ id: "a", text: "Aslan", correct: true }, { id: "b", text: "Kaplan", correct: false }, { id: "c", text: "Fil", correct: false }, { id: "d", text: "Zürafa", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ donne du lait.", options: [{ id: "a", text: "vache", correct: true }, { id: "b", text: "cheval", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Hayvanları severim", correctAnswer: "J'aime les animaux" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ mange de l'herbe.", options: [{ id: "a", text: "mouton", correct: true }, { id: "b", text: "loup", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hayvan isimlerini öğrendik!", correctAnswer: "Nous avons appris les noms d'animaux!" }
+];
+
+// ===== ÜNİTE 329: OKUL =====
+export const unit328Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le monde' ne demek?", options: [{ id: "a", text: "Dünya", correct: true }, { id: "b", text: "Güneş", correct: false }, { id: "c", text: "Ay", correct: false }, { id: "d", text: "Yıldız", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'environnement' ne demek?", options: [{ id: "a", text: "Çevre", correct: true }, { id: "b", text: "Doğa", correct: false }, { id: "c", text: "Hava", correct: false }, { id: "d", text: "Su", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Protéger", options: [{ id: "a", text: "Korumak", correct: true }, { id: "b", text: "Kirletmek", correct: false }, { id: "c", text: "Yok etmek", correct: false }, { id: "d", text: "Sevmek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Polluer' ne demek?", options: [{ id: "a", text: "Kirletmek", correct: true }, { id: "b", text: "Temizlemek", correct: false }, { id: "c", text: "Korumak", correct: false }, { id: "d", text: "Atmak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Recycler", options: [{ id: "a", text: "Geri dönüştürmek", correct: true }, { id: "b", text: "Atmak", correct: false }, { id: "c", text: "Yakmak", correct: false }, { id: "d", text: "Gömmek", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La pollution' ne demek?", options: [{ id: "a", text: "Kirlilik", correct: true }, { id: "b", text: "Temizlik", correct: false }, { id: "c", text: "Doğa", correct: false }, { id: "d", text: "Çöp", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La poubelle' ne demek?", options: [{ id: "a", text: "Çöp kutusu", correct: true }, { id: "b", text: "Kutu", correct: false }, { id: "c", text: "Sepet", correct: false }, { id: "d", text: "Poşet", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le déchet' ne demek?", options: [{ id: "a", text: "Atık/Çöp", correct: true }, { id: "b", text: "Ürün", correct: false }, { id: "c", text: "Eşya", correct: false }, { id: "d", text: "Yemek", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Doğayı korumalıyız", correctAnswer: "Nous devons protéger la nature" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut ___ le papier.", options: [{ id: "a", text: "recycler", correct: true }, { id: "b", text: "polluer", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'énergie", options: [{ id: "a", text: "Enerji", correct: true }, { id: "b", text: "Elektrik", correct: false }, { id: "c", text: "Su", correct: false }, { id: "d", text: "Hava", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le climat' ne demek?", options: [{ id: "a", text: "İklim", correct: true }, { id: "b", text: "Hava", correct: false }, { id: "c", text: "Mevsim", correct: false }, { id: "d", text: "Sıcaklık", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Çöpü yere atma", correctAnswer: "Ne jette pas de déchets par terre" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "L'air est ___.", options: [{ id: "a", text: "pollué", correct: true }, { id: "b", text: "propre", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Su hayattır", correctAnswer: "L'eau c'est la vie" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La plante", options: [{ id: "a", text: "Bitki", correct: true }, { id: "b", text: "Ağaç", correct: false }, { id: "c", text: "Çiçek", correct: false }, { id: "d", text: "Ot", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Jette ça à la ___.", options: [{ id: "a", text: "poubelle", correct: true }, { id: "b", text: "fenêtre", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Gezegenimizi seviyorum", correctAnswer: "J'aime notre planète" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ change.", options: [{ id: "a", text: "climat", correct: true }, { id: "b", text: "terre", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Çevre terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes de l'environnement!" }
+];
+
+export const unit329Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le livre' ne demek?", options: [{ id: "a", text: "Kitap", correct: true }, { id: "b", text: "Defter", correct: false }, { id: "c", text: "Kalem", correct: false }, { id: "d", text: "Silgi", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le cahier' ne demek?", options: [{ id: "a", text: "Defter", correct: true }, { id: "b", text: "Kitap", correct: false }, { id: "c", text: "Kağıt", correct: false }, { id: "d", text: "Dosya", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le stylo", options: [{ id: "a", text: "Tükenmez kalem", correct: true }, { id: "b", text: "Kurşun kalem", correct: false }, { id: "c", text: "Silgi", correct: false }, { id: "d", text: "Cetvel", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le crayon' ne demek?", options: [{ id: "a", text: "Kurşun kalem", correct: true }, { id: "b", text: "Tükenmez kalem", correct: false }, { id: "c", text: "Boya", correct: false }, { id: "d", text: "Fırça", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La gomme", options: [{ id: "a", text: "Silgi", correct: true }, { id: "b", text: "Kalemtraş", correct: false }, { id: "c", text: "Cetvel", correct: false }, { id: "d", text: "Makas", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'école' ne demek?", options: [{ id: "a", text: "Okul", correct: true }, { id: "b", text: "Sınıf", correct: false }, { id: "c", text: "Bahçe", correct: false }, { id: "d", text: "Ev", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La classe' ne demek?", options: [{ id: "a", text: "Sınıf", correct: true }, { id: "b", text: "Okul", correct: false }, { id: "c", text: "Ders", correct: false }, { id: "d", text: "Öğrenci", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le cours' ne demek?", options: [{ id: "a", text: "Ders/Kurs", correct: true }, { id: "b", text: "Sınıf", correct: false }, { id: "c", text: "Okul", correct: false }, { id: "d", text: "Ödev", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Kitabını aç", correctAnswer: "Ouvre ton livre" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'écris avec un ___.", options: [{ id: "a", text: "stylo", correct: true }, { id: "b", text: "gomme", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le tableau", options: [{ id: "a", text: "Tahta", correct: true }, { id: "b", text: "Masa", correct: false }, { id: "c", text: "Sandalye", correct: false }, { id: "d", text: "Duvar", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La chaise' ne demek?", options: [{ id: "a", text: "Sandalye", correct: true }, { id: "b", text: "Masa", correct: false }, { id: "c", text: "Sıra", correct: false }, { id: "d", text: "Koltuk", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Sınıftayım", correctAnswer: "Je suis en classe" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Prends ton ___.", options: [{ id: "a", text: "cahier", correct: true }, { id: "b", text: "chaise", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Ders başlıyor", correctAnswer: "Le cours commence" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La trousse", options: [{ id: "a", text: "Kalemlik", correct: true }, { id: "b", text: "Çanta", correct: false }, { id: "c", text: "Kutu", correct: false }, { id: "d", text: "Dosya", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai perdu ma ___.", options: [{ id: "a", text: "gomme", correct: true }, { id: "b", text: "stylo", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Tahtaya bak", correctAnswer: "Regarde le tableau" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est mon ___.", options: [{ id: "a", text: "crayon", correct: true }, { id: "b", text: "gomme", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Okul eşyalarını öğrendik!", correctAnswer: "Nous avons appris les fournitures scolaires!" }
+];
+
+export const unit329Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'L'examen' ne demek?", options: [{ id: "a", text: "Sınav", correct: true }, { id: "b", text: "Ödev", correct: false }, { id: "c", text: "Ders", correct: false }, { id: "d", text: "Not", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le devoir' ne demek?", options: [{ id: "a", text: "Ödev", correct: true }, { id: "b", text: "Sınav", correct: false }, { id: "c", text: "Ders", correct: false }, { id: "d", text: "Kitap", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Apprendre", options: [{ id: "a", text: "Öğrenmek", correct: true }, { id: "b", text: "Öğretmek", correct: false }, { id: "c", text: "Okumak", correct: false }, { id: "d", text: "Yazmak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Enseigner' ne demek?", options: [{ id: "a", text: "Öğretmek", correct: true }, { id: "b", text: "Öğrenmek", correct: false }, { id: "c", text: "Dinlemek", correct: false }, { id: "d", text: "Konuşmak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Étudier", options: [{ id: "a", text: "Ders çalışmak/Okumak", correct: true }, { id: "b", text: "Oynamak", correct: false }, { id: "c", text: "Uyuman", correct: false }, { id: "d", text: "Gezmek", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La note' ne demek?", options: [{ id: "a", text: "Not (puan)", correct: true }, { id: "b", text: "Kağıt", correct: false }, { id: "c", text: "Sınav", correct: false }, { id: "d", text: "Ödev", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Réussir' ne demek?", options: [{ id: "a", text: "Başarmak/Geçmek", correct: true }, { id: "b", text: "Kalmak", correct: false }, { id: "c", text: "Düşmek", correct: false }, { id: "d", text: "Gitmek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Rater' ne demek?", options: [{ id: "a", text: "Kaçırmak/Başarısız olmak", correct: true }, { id: "b", text: "Başarmak", correct: false }, { id: "c", text: "Kazanmak", correct: false }, { id: "d", text: "Bulmak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Sınavım var", correctAnswer: "J'ai un examen" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je fais mes ___.", options: [{ id: "a", text: "devoirs", correct: true }, { id: "b", text: "examen", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Comprendre", options: [{ id: "a", text: "Anlamak", correct: true }, { id: "b", text: "Bilmek", correct: false }, { id: "c", text: "Sormak", correct: false }, { id: "d", text: "Cevaplamak", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Savoir' ne demek?", options: [{ id: "a", text: "Bilmek", correct: true }, { id: "b", text: "Anlamak", correct: false }, { id: "c", text: "Görmek", correct: false }, { id: "d", text: "Duymak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Fransızca öğreniyorum", correctAnswer: "J'apprends le français" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le professeur ___ les maths.", options: [{ id: "a", text: "enseigne", correct: true }, { id: "b", text: "apprend", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Çok çalışmalısın", correctAnswer: "Tu dois étudier beaucoup" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La question", options: [{ id: "a", text: "Soru", correct: true }, { id: "b", text: "Cevap", correct: false }, { id: "c", text: "Sorun", correct: false }, { id: "d", text: "Çözüm", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai eu une bonne ___.", options: [{ id: "a", text: "note", correct: true }, { id: "b", text: "cours", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Soruyu anlamadım", correctAnswer: "Je n'ai pas compris la question" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "J'espère ___ l'examen.", options: [{ id: "a", text: "réussir", correct: true }, { id: "b", text: "rater", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Eğitim fiillerini öğrendik!", correctAnswer: "Nous avons appris les verbes d'éducation!" }
+];
+
+export const unit329Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le directeur' ne demek?", options: [{ id: "a", text: "Müdür (erkek)", correct: true }, { id: "b", text: "Öğretmen", correct: false }, { id: "c", text: "Öğrenci", correct: false }, { id: "d", text: "Hademe", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La directrice' ne demek?", options: [{ id: "a", text: "Müdür (kadın)", correct: true }, { id: "b", text: "Öğretmen", correct: false }, { id: "c", text: "Sekreter", correct: false }, { id: "d", text: "Hemşire", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La bibliothèque", options: [{ id: "a", text: "Kütüphane", correct: true }, { id: "b", text: "Sınıf", correct: false }, { id: "c", text: "Kantin", correct: false }, { id: "d", text: "Bahçe", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La cantine' ne demek?", options: [{ id: "a", text: "Kantin/Yemekhane", correct: true }, { id: "b", text: "Sınıf", correct: false }, { id: "c", text: "Tuvalet", correct: false }, { id: "d", text: "Spor salonu", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La cour", options: [{ id: "a", text: "Avlu/Bahçe", correct: true }, { id: "b", text: "Sınıf", correct: false }, { id: "c", text: "Koridor", correct: false }, { id: "d", text: "Salon", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le gymnase' ne demek?", options: [{ id: "a", text: "Spor salonu", correct: true }, { id: "b", text: "Stadyum", correct: false }, { id: "c", text: "Havuz", correct: false }, { id: "d", text: "Park", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Les mathématiques' ne demek?", options: [{ id: "a", text: "Matematik", correct: true }, { id: "b", text: "Fizik", correct: false }, { id: "c", text: "Tarih", correct: false }, { id: "d", text: "Müzik", correct: false }] },
+    { id: 8, type: "SELECT", question: "'L'histoire' ne demek?", options: [{ id: "a", text: "Tarih", correct: true }, { id: "b", text: "Coğrafya", correct: false }, { id: "c", text: "Hikaye", correct: false }, { id: "d", text: "Biyoloji", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Müdür ofisinde", correctAnswer: "Le directeur est dans son bureau" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je mange à la ___.", options: [{ id: "a", text: "cantine", correct: true }, { id: "b", text: "bibliothèque", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La géographie", options: [{ id: "a", text: "Coğrafya", correct: true }, { id: "b", text: "Tarih", correct: false }, { id: "c", text: "Resim", correct: false }, { id: "d", text: "Müzik", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Les sciences' ne demek?", options: [{ id: "a", text: "Fen bilimleri", correct: true }, { id: "b", text: "Sosyal bilgiler", correct: false }, { id: "c", text: "Yabancı diller", correct: false }, { id: "d", text: "Spor", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bahçede oynuyoruz", correctAnswer: "Nous jouons dans la cour" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime les ___.", options: [{ id: "a", text: "mathématiques", correct: true }, { id: "b", text: "cantine", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kütüphanede sessiz olun", correctAnswer: "Silence à la bibliothèque" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le sport", options: [{ id: "a", text: "Spor/Beden eğitimi", correct: true }, { id: "b", text: "Müzik", correct: false }, { id: "c", text: "Resim", correct: false }, { id: "d", text: "Tiyatro", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Le cours d'___ est intéressant.", options: [{ id: "a", text: "histoire", correct: true }, { id: "b", text: "gymnase", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Spor salonuna gidiyoruz", correctAnswer: "Nous allons au gymnase" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est gentille.", options: [{ id: "a", text: "directrice", correct: true }, { id: "b", text: "directeur", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Okul yerlerini ve dersleri öğrendik!", correctAnswer: "Nous avons appris les lieux de l'école et les matières!" }
+];
+
+export const unit329Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'La langue' ne demek?", options: [{ id: "a", text: "Dil", correct: true }, { id: "b", text: "Söz", correct: false }, { id: "c", text: "Yazı", correct: false }, { id: "d", text: "Okuma", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le mot' ne demek?", options: [{ id: "a", text: "Kelime", correct: true }, { id: "b", text: "Cümle", correct: false }, { id: "c", text: "Harf", correct: false }, { id: "d", text: "Ses", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La phrase", options: [{ id: "a", text: "Cümle", correct: true }, { id: "b", text: "Kelime", correct: false }, { id: "c", text: "Paragraf", correct: false }, { id: "d", text: "Sayfa", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La lettre' ne demek?", options: [{ id: "a", text: "Harf/Mektup", correct: true }, { id: "b", text: "Kelime", correct: false }, { id: "c", text: "Sayı", correct: false }, { id: "d", text: "Resim", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'exercice", options: [{ id: "a", text: "Alıştırma/Egzersiz", correct: true }, { id: "b", text: "Sınav", correct: false }, { id: "c", text: "Ders", correct: false }, { id: "d", text: "Ödev", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La page' ne demek?", options: [{ id: "a", text: "Sayfa", correct: true }, { id: "b", text: "Kitap", correct: false }, { id: "c", text: "Defter", correct: false }, { id: "d", text: "Satır", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le dictionnaire' ne demek?", options: [{ id: "a", text: "Sözlük", correct: true }, { id: "b", text: "Kitap", correct: false }, { id: "c", text: "Ansiklopedi", correct: false }, { id: "d", text: "Dergi", correct: false }] },
+    { id: 8, type: "SELECT", question: "'L'alphabet' ne demek?", options: [{ id: "a", text: "Alfabe", correct: true }, { id: "b", text: "Harf", correct: false }, { id: "c", text: "Kelime", correct: false }, { id: "d", text: "Dil", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bu kelime ne demek?", correctAnswer: "Que veut dire ce mot?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Écrivez une ___.", options: [{ id: "a", text: "phrase", correct: true }, { id: "b", text: "mot", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Parler", options: [{ id: "a", text: "Konuşmak", correct: true }, { id: "b", text: "Yazmak", correct: false }, { id: "c", text: "Okumak", correct: false }, { id: "d", text: "Dinlemek", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Écouter' ne demek?", options: [{ id: "a", text: "Dinlemek", correct: true }, { id: "b", text: "Duymak", correct: false }, { id: "c", text: "Konuşmak", correct: false }, { id: "d", text: "Bakmak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Sayfa 10'u açın", correctAnswer: "Ouvrez la page 10" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Regarde dans le ___.", options: [{ id: "a", text: "dictionnaire", correct: true }, { id: "b", text: "cahier", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Fransızca konuşuyorum", correctAnswer: "Je parle français" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Répétez s'il vous plaît", options: [{ id: "a", text: "Tekrar edin lütfen", correct: true }, { id: "b", text: "Yazın lütfen", correct: false }, { id: "c", text: "Okuyun lütfen", correct: false }, { id: "d", text: "Dinleyin lütfen", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Faites l'___ numéro 1.", options: [{ id: "a", text: "exercice", correct: true }, { id: "b", text: "mot", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Alfabeyi biliyorum", correctAnswer: "Je connais l'alphabet" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une belle ___.", options: [{ id: "a", text: "langue", correct: true }, { id: "b", text: "mot", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Dil öğrenme terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes d'apprentissage des langues!" }
+];

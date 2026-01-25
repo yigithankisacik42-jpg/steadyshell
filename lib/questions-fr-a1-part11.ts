@@ -1,0 +1,188 @@
+// French A1 Quiz Questions - Units 324-325
+import { Question } from "./questions";
+
+// ===== ÜNİTE 324: ALIŞVERİŞ =====
+export const unit324Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'Acheter' ne demek?", options: [{ id: "a", text: "Satın almak", correct: true }, { id: "b", text: "Satmak", correct: false }, { id: "c", text: "Bakmak", correct: false }, { id: "d", text: "Vermek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Vendre' ne demek?", options: [{ id: "a", text: "Satmak", correct: true }, { id: "b", text: "Almak", correct: false }, { id: "c", text: "Ödemek", correct: false }, { id: "d", text: "Sormak", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Combien ça coûte?", options: [{ id: "a", text: "Ne kadar tutuyor?", correct: true }, { id: "b", text: "Saat kaç?", correct: false }, { id: "c", text: "Nerede?", correct: false }, { id: "d", text: "Ne zaman?", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le prix' ne demek?", options: [{ id: "a", text: "Fiyat", correct: true }, { id: "b", text: "Para", correct: false }, { id: "c", text: "Cüzdan", correct: false }, { id: "d", text: "Fiş", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cher", options: [{ id: "a", text: "Pahalı", correct: true }, { id: "b", text: "Ucuz", correct: false }, { id: "c", text: "Güzel", correct: false }, { id: "d", text: "Kötü", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Bon marché' ne demek?", options: [{ id: "a", text: "Ucuz/Uygun fiyatlı", correct: true }, { id: "b", text: "Pahalı", correct: false }, { id: "c", text: "Kaliteli", correct: false }, { id: "d", text: "Yeni", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le magasin' ne demek?", options: [{ id: "a", text: "Mağaza/Dükkan", correct: true }, { id: "b", text: "Market", correct: false }, { id: "c", text: "Ofis", correct: false }, { id: "d", text: "Depo", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Les soldes' ne demek?", options: [{ id: "a", text: "İndirimler", correct: true }, { id: "b", text: "Fiyatlar", correct: false }, { id: "c", text: "Ürünler", correct: false }, { id: "d", text: "Müşteriler", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bu çok pahalı", correctAnswer: "C'est trop cher" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je veux ___ ce pantalon.", options: [{ id: "a", text: "acheter", correct: true }, { id: "b", text: "vendre", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La caisse", options: [{ id: "a", text: "Kasa", correct: true }, { id: "b", text: "Sepet", correct: false }, { id: "c", text: "Reyon", correct: false }, { id: "d", text: "Giriş", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Payer' ne demek?", options: [{ id: "a", text: "Ödemek", correct: true }, { id: "b", text: "Almak", correct: false }, { id: "c", text: "Vermek", correct: false }, { id: "d", text: "İstemek", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Fiyatı nedir?", correctAnswer: "Quel est le prix?" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ marché.", options: [{ id: "a", text: "bon", correct: true }, { id: "b", text: "cher", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Alışveriş yapıyorum", correctAnswer: "Je fais les courses" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le client", options: [{ id: "a", text: "Müşteri", correct: true }, { id: "b", text: "Satıcı", correct: false }, { id: "c", text: "Kasiyer", correct: false }, { id: "d", text: "Müdür", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Allez à la ___ pour payer.", options: [{ id: "a", text: "caisse", correct: true }, { id: "b", text: "magasin", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Satıcıya soruyorum", correctAnswer: "Je demande au vendeur" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a des ___ intéressants.", options: [{ id: "a", text: "soldes", correct: true }, { id: "b", text: "prix", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Alışveriş terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes d'achat!" }
+];
+
+export const unit324Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'L'argent' ne demek?", options: [{ id: "a", text: "Para/Gümüş", correct: true }, { id: "b", text: "Altın", correct: false }, { id: "c", text: "Bakır", correct: false }, { id: "d", text: "Demir", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La monnaie' ne demek?", options: [{ id: "a", text: "Bozuk para/Para üstü", correct: true }, { id: "b", text: "Kağıt para", correct: false }, { id: "c", text: "Kredi kartı", correct: false }, { id: "d", text: "Cüzdan", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le billet", options: [{ id: "a", text: "Kağıt para/Bilet", correct: true }, { id: "b", text: "Bozuk para", correct: false }, { id: "c", text: "Çek", correct: false }, { id: "d", text: "Kart", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La carte de crédit' ne demek?", options: [{ id: "a", text: "Kredi kartı", correct: true }, { id: "b", text: "Kimlik kartı", correct: false }, { id: "c", text: "Banka kartı", correct: false }, { id: "d", text: "Müşteri kartı", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Dépenser", options: [{ id: "a", text: "Harcamak", correct: true }, { id: "b", text: "Biriktirmek", correct: false }, { id: "c", text: "Kazanmak", correct: false }, { id: "d", text: "Kaybetmek", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Économiser' ne demek?", options: [{ id: "a", text: "Tasarruf etmek/Biriktirmek", correct: true }, { id: "b", text: "Harcamak", correct: false }, { id: "c", text: "Ödemek", correct: false }, { id: "d", text: "Borç almak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le portefeuille' ne demek?", options: [{ id: "a", text: "Cüzdan", correct: true }, { id: "b", text: "Çanta", correct: false }, { id: "c", text: "Kasa", correct: false }, { id: "d", text: "Cep", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La poche' ne demek?", options: [{ id: "a", text: "Cep", correct: true }, { id: "b", text: "Çanta", correct: false }, { id: "c", text: "Cüzdan", correct: false }, { id: "d", text: "Kemer", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Param yok", correctAnswer: "Je n'ai pas d'argent" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Avez-vous de la ___?", options: [{ id: "a", text: "monnaie", correct: true }, { id: "b", text: "argent", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça fait dix euros", options: [{ id: "a", text: "On avro tutuyor", correct: true }, { id: "b", text: "On avro veriyor", correct: false }, { id: "c", text: "On avro alıyor", correct: false }, { id: "d", text: "On avro istiyor", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Rendre la monnaie' ne demek?", options: [{ id: "a", text: "Para üstü vermek", correct: true }, { id: "b", text: "Para bozdurmak", correct: false }, { id: "c", text: "Para istemek", correct: false }, { id: "d", text: "Para kaybetmek", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kredi kartıyla ödüyorum", correctAnswer: "Je paie par carte de crédit" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il a perdu son ___.", options: [{ id: "a", text: "portefeuille", correct: true }, { id: "b", text: "argent", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Çok para harcıyor", correctAnswer: "Il dépense beaucoup d'argent" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est gratuit", options: [{ id: "a", text: "Bedava/Ücretsiz", correct: true }, { id: "b", text: "Ücretli", correct: false }, { id: "c", text: "Pahalı", correct: false }, { id: "d", text: "Ucuz", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je veux ___ pour les vacances.", options: [{ id: "a", text: "économiser", correct: true }, { id: "b", text: "dépenser", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bozuk paranız var mı?", correctAnswer: "Avez-vous de la monnaie?" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai un ___ de vingt euros.", options: [{ id: "a", text: "billet", correct: true }, { id: "b", text: "carte", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Para ve ödeme terimlerini öğrendik!", correctAnswer: "Nous avons appris l'argent et le paiement!" }
+];
+
+export const unit324Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'La taille' ne demek?", options: [{ id: "a", text: "Beden/Boyut", correct: true }, { id: "b", text: "Renk", correct: false }, { id: "c", text: "Fiyat", correct: false }, { id: "d", text: "Marka", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La pointure' ne demek?", options: [{ id: "a", text: "Ayakkabı numarası", correct: true }, { id: "b", text: "Giysi bedeni", correct: false }, { id: "c", text: "Boy uzunluğu", correct: false }, { id: "d", text: "Kilo", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Essayer", options: [{ id: "a", text: "Denemek", correct: true }, { id: "b", text: "Almak", correct: false }, { id: "c", text: "Satmak", correct: false }, { id: "d", text: "Bakmak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La cabine d'essayage' ne demek?", options: [{ id: "a", text: "Deneme kabini", correct: true }, { id: "b", text: "Kasa", correct: false }, { id: "c", text: "Vitrin", correct: false }, { id: "d", text: "Reyon", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça me va", options: [{ id: "a", text: "Bana uyuyor/oluyor", correct: true }, { id: "b", text: "Bana uymuyor", correct: false }, { id: "c", text: "Bana büyük", correct: false }, { id: "d", text: "Bana küçük", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Trop grand' ne demek?", options: [{ id: "a", text: "Çok büyük", correct: true }, { id: "b", text: "Çok küçük", correct: false }, { id: "c", text: "Tam", correct: false }, { id: "d", text: "Dar", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Trop petit' ne demek?", options: [{ id: "a", text: "Çok küçük", correct: true }, { id: "b", text: "Çok büyük", correct: false }, { id: "c", text: "Tam", correct: false }, { id: "d", text: "Bol", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La couleur' ne demek?", options: [{ id: "a", text: "Renk", correct: true }, { id: "b", text: "Beden", correct: false }, { id: "c", text: "Kumaş", correct: false }, { id: "d", text: "Model", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bunu deneyebilir miyim?", correctAnswer: "Puis-je essayer ça?" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Quelle est votre ___?", options: [{ id: "a", text: "taille", correct: true }, { id: "b", text: "prix", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je cherche une robe", options: [{ id: "a", text: "Bir elbise arıyorum", correct: true }, { id: "b", text: "Bir pantolon arıyorum", correct: false }, { id: "c", text: "Bir gömlek arıyorum", correct: false }, { id: "d", text: "Bir ayakkabı arıyorum", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le modèle' ne demek?", options: [{ id: "a", text: "Model", correct: true }, { id: "b", text: "Beden", correct: false }, { id: "c", text: "Renk", correct: false }, { id: "d", text: "Fiyat", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bu pantolon bana dar", correctAnswer: "Ce pantalon est trop serré" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "La cabine d'___ est là-bas.", options: [{ id: "a", text: "essayage", correct: true }, { id: "b", text: "essai", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Ayakkabı numaram 38", correctAnswer: "Ma pointure est 38" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Vous avez une autre couleur?", options: [{ id: "a", text: "Başka renginiz var mı?", correct: true }, { id: "b", text: "Başka bedeniniz var mı?", correct: false }, { id: "c", text: "Başka modeliniz var mı?", correct: false }, { id: "d", text: "Başka fiyatınız var mı?", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un peu ___.", options: [{ id: "a", text: "grand", correct: true }, { id: "b", text: "taille", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bu renk size yakışıyor", correctAnswer: "Cette couleur vous va bien" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais l'___.", options: [{ id: "a", text: "acheter", correct: true }, { id: "b", text: "essayer", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Giyim alışverişini öğrendik!", correctAnswer: "Nous avons appris le shopping de vêtements!" }
+];
+
+export const unit324Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le sac' ne demek?", options: [{ id: "a", text: "Çanta/Poşet", correct: true }, { id: "b", text: "Kutu", correct: false }, { id: "c", text: "Sepet", correct: false }, { id: "d", text: "Paket", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le cadeau' ne demek?", options: [{ id: "a", text: "Hediye", correct: true }, { id: "b", text: "Paket", correct: false }, { id: "c", text: "Kart", correct: false }, { id: "d", text: "Sürpriz", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Offrir", options: [{ id: "a", text: "Hediye etmek/Sunmak", correct: true }, { id: "b", text: "Almak", correct: false }, { id: "c", text: "Satmak", correct: false }, { id: "d", text: "Açmak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'emballage' ne demek?", options: [{ id: "a", text: "Ambalaj/Paketleme", correct: true }, { id: "b", text: "Hediye", correct: false }, { id: "c", text: "Kutu", correct: false }, { id: "d", text: "Etiket", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le chariot", options: [{ id: "a", text: "Alışveriş arabası", correct: true }, { id: "b", text: "Alışveriş sepeti", correct: false }, { id: "c", text: "Bebek arabası", correct: false }, { id: "d", text: "El arabası", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le panier' ne demek?", options: [{ id: "a", text: "Sepet", correct: true }, { id: "b", text: "Araba", correct: false }, { id: "c", text: "Çanta", correct: false }, { id: "d", text: "Kutu", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Que désirez-vous?' ne demek?", options: [{ id: "a", text: "Ne arzu edersiniz?", correct: true }, { id: "b", text: "Ne yapıyorsunuz?", correct: false }, { id: "c", text: "Ne alıyorsunuz?", correct: false }, { id: "d", text: "Ne satıyorsunuz?", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Puis-je vous aider?' ne demek?", options: [{ id: "a", text: "Size yardım edebilir miyim?", correct: true }, { id: "b", text: "Beni duyuyor musunuz?", correct: false }, { id: "c", text: "Beni görüyor musunuz?", correct: false }, { id: "d", text: "Nereye gidiyorsunuz?", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bir hediye arıyorum", correctAnswer: "Je cherche un cadeau" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je prends un ___.", options: [{ id: "a", text: "sac", correct: true }, { id: "b", text: "cadeau", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Faire les courses", options: [{ id: "a", text: "Alışveriş yapmak (market)", correct: true }, { id: "b", text: "Alışveriş yapmak (giysi)", correct: false }, { id: "c", text: "Yemek yapmak", correct: false }, { id: "d", text: "Temizlik yapmak", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Faire du shopping' ne demek?", options: [{ id: "a", text: "Alışveriş yapmak (zevk için)", correct: true }, { id: "b", text: "Market alışverişi yapmak", correct: false }, { id: "c", text: "Spor yapmak", correct: false }, { id: "d", text: "İş yapmak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Sepetim dolu", correctAnswer: "Mon panier est plein" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est pour ___.", options: [{ id: "a", text: "offrir", correct: true }, { id: "b", text: "acheter", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hediye paketi yapabilir misiniz?", correctAnswer: "Pouvez-vous faire un paquet cadeau?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le rayon", options: [{ id: "a", text: "Reyon/Bölüm", correct: true }, { id: "b", text: "Raf", correct: false }, { id: "c", text: "Kasa", correct: false }, { id: "d", text: "Mağaza", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Où est le ___ fruits?", options: [{ id: "a", text: "rayon", correct: true }, { id: "b", text: "panier", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Yardımınız için teşekkürler", correctAnswer: "Merci pour votre aide" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Avez-vous besoin d'un ___?", options: [{ id: "a", text: "sac", correct: true }, { id: "b", text: "panier", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Genel alışverişi tamamladık!", correctAnswer: "Nous avons terminé le shopping général!" }
+];
+
+// ===== ÜNİTE 325: SAĞLIK =====
+export const unit325Quiz1: Question[] = [
+    { id: 1, type: "SELECT", question: "'La santé' ne demek?", options: [{ id: "a", text: "Sağlık", correct: true }, { id: "b", text: "Hastalık", correct: false }, { id: "c", text: "Doktor", correct: false }, { id: "d", text: "İlaç", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le médecin' ne demek?", options: [{ id: "a", text: "Doktor", correct: true }, { id: "b", text: "Hemşire", correct: false }, { id: "c", text: "Hasta", correct: false }, { id: "d", text: "Eczacı", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis malade", options: [{ id: "a", text: "Hastayım", correct: true }, { id: "b", text: "Yorgunum", correct: false }, { id: "c", text: "İyiyim", correct: false }, { id: "d", text: "Mutluyum", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'hôpital' ne demek?", options: [{ id: "a", text: "Hastane", correct: true }, { id: "b", text: "Eczane", correct: false }, { id: "c", text: "Klinik", correct: false }, { id: "d", text: "Ev", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Avoir mal", options: [{ id: "a", text: "Ağrısı olmak/Canı yanmak", correct: true }, { id: "b", text: "Hasta olmak", correct: false }, { id: "c", text: "İyi olmak", correct: false }, { id: "d", text: "Korkmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La douleur' ne demek?", options: [{ id: "a", text: "Ağrı/Acı", correct: true }, { id: "b", text: "Hastalık", correct: false }, { id: "c", text: "İlaç", correct: false }, { id: "d", text: "Yara", correct: false }] },
+    { id: 7, type: "SELECT", question: "'La fièvre' ne demek?", options: [{ id: "a", text: "Ateş", correct: true }, { id: "b", text: "Öksürük", correct: false }, { id: "c", text: "Grip", correct: false }, { id: "d", text: "Soğuk algınlığı", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La grippe' ne demek?", options: [{ id: "a", text: "Grip", correct: true }, { id: "b", text: "Ateş", correct: false }, { id: "c", text: "Öksürük", correct: false }, { id: "d", text: "Baş ağrısı", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Doktora gidiyorum", correctAnswer: "Je vais chez le médecin" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai de la ___.", options: [{ id: "a", text: "fièvre", correct: true }, { id: "b", text: "mal", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'ai mal à la tête", options: [{ id: "a", text: "Başım ağrıyor", correct: true }, { id: "b", text: "Karnım ağrıyor", correct: false }, { id: "c", text: "Dişim ağrıyor", correct: false }, { id: "d", text: "Boğazım ağrıyor", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La tête' ne demek?", options: [{ id: "a", text: "Baş/Kafa", correct: true }, { id: "b", text: "Yüz", correct: false }, { id: "c", text: "Göz", correct: false }, { id: "d", text: "Kulak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kendimi iyi hissetmiyorum", correctAnswer: "Je ne me sens pas bien" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il a la ___.", options: [{ id: "a", text: "grippe", correct: true }, { id: "b", text: "malade", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Nereniz ağrıyor?", correctAnswer: "Où avez-vous mal?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça fait mal", options: [{ id: "a", text: "Acıyor/Ağrıyor", correct: true }, { id: "b", text: "İyi geliyor", correct: false }, { id: "c", text: "Kaşınıyor", correct: false }, { id: "d", text: "Yanıyor", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Prenez soin de votre ___.", options: [{ id: "a", text: "santé", correct: true }, { id: "b", text: "maladie", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Ateşim var", correctAnswer: "J'ai de la fièvre" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ m'a examiné.", options: [{ id: "a", text: "médecin", correct: true }, { id: "b", text: "santé", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hastalık belirtilerini öğrendik!", correctAnswer: "Nous avons appris les symptômes de la maladie!" }
+];
+
+export const unit325Quiz2: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le ventre' ne demek?", options: [{ id: "a", text: "Karın", correct: true }, { id: "b", text: "Mide", correct: false }, { id: "c", text: "Sırt", correct: false }, { id: "d", text: "Göğüs", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le dos' ne demek?", options: [{ id: "a", text: "Sırt", correct: true }, { id: "b", text: "Bel", correct: false }, { id: "c", text: "Omuz", correct: false }, { id: "d", text: "Boyun", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'ai mal au ventre", options: [{ id: "a", text: "Karnım ağrıyor", correct: true }, { id: "b", text: "Başım ağrıyor", correct: false }, { id: "c", text: "Sırtım ağrıyor", correct: false }, { id: "d", text: "Dişim ağrıyor", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La gorge' ne demek?", options: [{ id: "a", text: "Boğaz", correct: true }, { id: "b", text: "Ağız", correct: false }, { id: "c", text: "Burun", correct: false }, { id: "d", text: "Kulak", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le nez", options: [{ id: "a", text: "Burun", correct: true }, { id: "b", text: "Ağız", correct: false }, { id: "c", text: "Göz", correct: false }, { id: "d", text: "Kulak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La bouche' ne demek?", options: [{ id: "a", text: "Ağız", correct: true }, { id: "b", text: "Diş", correct: false }, { id: "c", text: "Dil", correct: false }, { id: "d", text: "Dudak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Les yeux' ne demek?", options: [{ id: "a", text: "Gözler", correct: true }, { id: "b", text: "Kulaklar", correct: false }, { id: "c", text: "Eller", correct: false }, { id: "d", text: "Ayaklar", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La main' ne demek?", options: [{ id: "a", text: "El", correct: true }, { id: "b", text: "Kol", correct: false }, { id: "c", text: "Parmak", correct: false }, { id: "d", text: "Ayak", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Sırtım ağrıyor", correctAnswer: "J'ai mal au dos" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Oouvre la ___.", options: [{ id: "a", text: "bouche", correct: true }, { id: "b", text: "nez", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le bras", options: [{ id: "a", text: "Kol", correct: true }, { id: "b", text: "Bacak", correct: false }, { id: "c", text: "El", correct: false }, { id: "d", text: "Ayak", correct: false }] },
+    { id: 12, type: "SELECT", question: "'La jambe' ne demek?", options: [{ id: "a", text: "Bacak", correct: true }, { id: "b", text: "Kol", correct: false }, { id: "c", text: "Ayak", correct: false }, { id: "d", text: "Diz", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Boğazım ağrıyor", correctAnswer: "J'ai mal à la gorge" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il s'est cassé la ___.", options: [{ id: "a", text: "jambe", correct: true }, { id: "b", text: "ventre", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Gözlerim ağrıyor", correctAnswer: "J'ai mal aux yeux" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le pied", options: [{ id: "a", text: "Ayak", correct: true }, { id: "b", text: "El", correct: false }, { id: "c", text: "Bacak", correct: false }, { id: "d", text: "Kol", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Donne-moi ta ___.", options: [{ id: "a", text: "main", correct: true }, { id: "b", text: "pied", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Dişim ağrıyor", correctAnswer: "J'ai mal aux dents" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai froid aux ___.", options: [{ id: "a", text: "pieds", correct: true }, { id: "b", text: "ventre", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Vücut bölümlerini öğrendik!", correctAnswer: "Nous avons appris les parties du corps!" }
+];
+
+export const unit325Quiz3: Question[] = [
+    { id: 1, type: "SELECT", question: "'Le médicament' ne demek?", options: [{ id: "a", text: "İlaç", correct: true }, { id: "b", text: "Reçete", correct: false }, { id: "c", text: "Doktor", correct: false }, { id: "d", text: "Eczane", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'ordonnance' ne demek?", options: [{ id: "a", text: "Reçete", correct: true }, { id: "b", text: "İlaç", correct: false }, { id: "c", text: "Rapor", correct: false }, { id: "d", text: "Muayene", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La pharmacie", options: [{ id: "a", text: "Eczane", correct: true }, { id: "b", text: "Hastane", correct: false }, { id: "c", text: "Klinik", correct: false }, { id: "d", text: "Laboratuvar", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le sirop' ne demek?", options: [{ id: "a", text: "Şurup", correct: true }, { id: "b", text: "Hap", correct: false }, { id: "c", text: "İğne", correct: false }, { id: "d", text: "Krem", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le comprimé", options: [{ id: "a", text: "Hap/Tablet", correct: true }, { id: "b", text: "Şurup", correct: false }, { id: "c", text: "İğne", correct: false }, { id: "d", text: "Damla", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'infirmier' ne demek?", options: [{ id: "a", text: "Hemşire (erkek)", correct: true }, { id: "b", text: "Doktor", correct: false }, { id: "c", text: "Hasta bakıcı", correct: false }, { id: "d", text: "Eczacı", correct: false }] },
+    { id: 7, type: "SELECT", question: "'L'infirmière' ne demek?", options: [{ id: "a", text: "Hemşire (kadın)", correct: true }, { id: "b", text: "Doktor", correct: false }, { id: "c", text: "Ebe", correct: false }, { id: "d", text: "Sekreter", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le rendez-vous' ne demek?", options: [{ id: "a", text: "Randevu", correct: true }, { id: "b", text: "Muayene", correct: false }, { id: "c", text: "Toplantı", correct: false }, { id: "d", text: "Ziyaret", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bu ilacı almalıyım", correctAnswer: "Je dois prendre ce médicament" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Le médecin m'a donné une ___.", options: [{ id: "a", text: "ordonnance", correct: true }, { id: "b", text: "pharmacie", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Prendre un comprimé", options: [{ id: "a", text: "Bir hap almak/içmek", correct: true }, { id: "b", text: "Bir şurup içmek", correct: false }, { id: "c", text: "Bir iğne olmak", correct: false }, { id: "d", text: "Bir ilaç almak", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Soigner' ne demek?", options: [{ id: "a", text: "Tedavi etmek/İyileştirmek", correct: true }, { id: "b", text: "Hasta olmak", correct: false }, { id: "c", text: "Bakmak", correct: false }, { id: "d", text: "Muayene etmek", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Doktordan randevum var", correctAnswer: "J'ai rendez-vous chez le médecin" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est très gentille.", options: [{ id: "a", text: "infirmière", correct: true }, { id: "b", text: "médicament", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Eczane nerede?", correctAnswer: "Où est la pharmacie?" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Se reposer", options: [{ id: "a", text: "Dinlenmek", correct: true }, { id: "b", text: "Uyumak", correct: false }, { id: "c", text: "Çalışmak", correct: false }, { id: "d", text: "Yorulmak", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce ___ est pour la toux.", options: [{ id: "a", text: "sirop", correct: true }, { id: "b", text: "comprimé", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Dinlenmeniz lazım", correctAnswer: "Vous devez vous reposer" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Le médecin va vous ___.", options: [{ id: "a", text: "soigner", correct: true }, { id: "b", text: "malade", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Tedavi terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes médicaux!" }
+];
+
+export const unit325Quiz4: Question[] = [
+    { id: 1, type: "SELECT", question: "'Guérir' ne demek?", options: [{ id: "a", text: "İyileşmek", correct: true }, { id: "b", text: "Hastalanmak", correct: false }, { id: "c", text: "Ölmek", correct: false }, { id: "d", text: "Yaralanmak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La blessure' ne demek?", options: [{ id: "a", text: "Yara", correct: true }, { id: "b", text: "Ağrı", correct: false }, { id: "c", text: "Hastalık", correct: false }, { id: "d", text: "Kaza", correct: false }] },
+    { id: 3, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'urgence", options: [{ id: "a", text: "Acil durum/Acil servis", correct: true }, { id: "b", text: "Randevu", correct: false }, { id: "c", text: "Ameliyat", correct: false }, { id: "d", text: "Muayene", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'accident' ne demek?", options: [{ id: "a", text: "Kaza", correct: true }, { id: "b", text: "Olay", correct: false }, { id: "c", text: "Kavga", correct: false }, { id: "d", text: "Sorun", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Appeler une ambulance", options: [{ id: "a", text: "Ambulans çağırmak", correct: true }, { id: "b", text: "Doktor çağırmak", correct: false }, { id: "c", text: "Polis çağırmak", correct: false }, { id: "d", text: "Taksi çağırmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Se casser' ne demek?", options: [{ id: "a", text: "Kırmak", correct: true }, { id: "b", text: "İncitmek", correct: false }, { id: "c", text: "Burkmak", correct: false }, { id: "d", text: "Kesmek", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le pansement' ne demek?", options: [{ id: "a", text: "Pansuman/Yara bandı", correct: true }, { id: "b", text: "İlaç", correct: false }, { id: "c", text: "Merhem", correct: false }, { id: "d", text: "Sargı bezi", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le sang' ne demek?", options: [{ id: "a", text: "Kan", correct: true }, { id: "b", text: "Su", correct: false }, { id: "c", text: "Ter", correct: false }, { id: "d", text: "Gözyaşı", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Hızla iyileşiyorum", correctAnswer: "Je guéris vite" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a eu un ___.", options: [{ id: "a", text: "accident", correct: true }, { id: "b", text: "urgence", correct: false }] },
+    { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je me suis coupé", options: [{ id: "a", text: "Kendimi kestim", correct: true }, { id: "b", text: "Kendimi yaktım", correct: false }, { id: "c", text: "Düştüm", correct: false }, { id: "d", text: "Vurdum", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Tousser' ne demek?", options: [{ id: "a", text: "Öksürmek", correct: true }, { id: "b", text: "Hapşırmak", correct: false }, { id: "c", text: "Kusmak", correct: false }, { id: "d", text: "Nefes almak", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Ambulans geliyor", correctAnswer: "L'ambulance arrive" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Mettez un ___ sur la blessure.", options: [{ id: "a", text: "pansement", correct: true }, { id: "b", text: "médicament", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Kolunu kırdı", correctAnswer: "Il s'est cassé le bras" },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Bon rétablissement", options: [{ id: "a", text: "Geçmiş olsun/İyi iyileşmeler", correct: true }, { id: "b", text: "İyi şanslar", correct: false }, { id: "c", text: "Tebrikler", correct: false }, { id: "d", text: "Başarılar", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une ___.", options: [{ id: "a", text: "urgence", correct: true }, { id: "b", text: "pharmacie", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Çok öksürüyor", correctAnswer: "Il tousse beaucoup" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Il perd du ___.", options: [{ id: "a", text: "sang", correct: true }, { id: "b", text: "bras", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Acil durum terimlerini öğrendik!", correctAnswer: "Nous avons appris les termes d'urgence!" }
+];

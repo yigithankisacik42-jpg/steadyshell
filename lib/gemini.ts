@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Gemini AI Servisi
+ * SteadyShell Gemini AI Servisi
  * Çoklu dil destekli AI konuşma partneri (Luna)
  */
 

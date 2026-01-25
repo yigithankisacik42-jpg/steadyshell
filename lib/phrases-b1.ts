@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Kalıp Veritabanı - İspanyolca B1
+ * SteadyShell Kalıp Veritabanı - İspanyolca B1
  * 30 Ünite (ID: 61-90), her biri için 15 kalıp
  * Curriculum ile uyumlu
  */

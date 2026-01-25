@@ -1,0 +1,232 @@
+
+// SteadyShell Okuma Parçaları - Fransızca A2 (331-360)
+// Her ünite için okuma hikayesi + sorular + kelimeler
+
+import { UnitReading } from './readings';
+
+// ===== ÜNİTE 331: GEÇMİŞ TATİLLER =====
+const unit331Reading: UnitReading = {
+    unitId: 331, title: "Geçmiş Tatiller", language: "Fransızca", level: "A2",
+    story: {
+        text: "L'été dernier, Marie et sa famille sont allés en Grèce. Ils sont restés dans un hôtel près de la mer. Ils ont visité beaucoup de sites historiques. Marie a pris beaucoup de photos. Le temps était parfait et ils se sont bien amusés. C'était des vacances inoubliables!",
+        translation: "Geçen yaz Marie ve ailesi Yunanistan'a gitti. Denizin yakınında bir otelde kaldılar. Birçok tarihi yeri ziyaret ettiler. Marie çok fotoğraf çekti. Hava mükemmeldi ve çok eğlendiler. Unutulmaz bir tatildi!"
+    },
+    questions: [
+        { id: 1, question: "Marie nereye gitti?", options: ["Fransa", "Yunanistan", "İtalya", "İspanya"], correctAnswer: "Yunanistan" },
+        { id: 2, question: "Nerede kaldılar?", options: ["Dağda", "Şehir merkezinde", "Denizin yakınında", "Köyde"], correctAnswer: "Denizin yakınında" },
+        { id: 3, question: "Hava nasıldı?", options: ["Yağmurlu", "Soğuk", "Mükemmel", "Sıcak"], correctAnswer: "Mükemmel" }
+    ],
+    vocabulary: [
+        { word: "L'été dernier", meaning: "Geçen yaz" },
+        { word: "Ils sont allés", meaning: "Gittiler" },
+        { word: "Près de", meaning: "Yakınında" },
+        { word: "Inoubliable", meaning: "Unutulmaz" }
+    ]
+};
+
+const unit332Reading: UnitReading = {
+    unitId: 332, title: "Gelecek Planları", language: "Fransızca", level: "A2",
+    story: {
+        text: "L'année prochaine, Pierre va voyager au Japon. Il va visiter Tokyo et Kyoto. Il a prévu de rester deux semaines. Il va goûter la cuisine japonaise et visiter des temples. Il a hâte de partir!",
+        translation: "Gelecek yıl Pierre Japonya'ya seyahat edecek. Tokyo ve Kyoto'yu ziyaret edecek. İki hafta kalmayı planladı. Japon mutfağını tadacak ve tapınakları gezecek. Gitmek için sabırsızlanıyor!"
+    },
+    questions: [
+        { id: 1, question: "Pierre nereye gidecek?", options: ["Çin", "Kore", "Japonya", "Vietnam"], correctAnswer: "Japonya" },
+        { id: 2, question: "Ne kadar kalacak?", options: ["Bir hafta", "İki hafta", "Bir ay", "Üç gün"], correctAnswer: "İki hafta" }
+    ],
+    vocabulary: [
+        { word: "L'année prochaine", meaning: "Gelecek yıl" },
+        { word: "Il va voyager", meaning: "Seyahat edecek" },
+        { word: "Il a prévu", meaning: "Planladı" },
+        { word: "Il a hâte", meaning: "Sabırsızlanıyor" }
+    ]
+};
+
+const unit333Reading: UnitReading = {
+    unitId: 333, title: "Sağlık ve Hastalık", language: "Fransızca", level: "A2",
+    story: {
+        text: "Sophie ne se sentait pas bien ce matin. Elle avait mal à la tête et mal à la gorge. Elle a pris sa température: elle avait de la fièvre! Elle est allée chez le médecin. Le médecin lui a dit: 'Vous avez la grippe. Vous devez vous reposer. Il faut boire beaucoup d'eau et prendre ces médicaments trois fois par jour.' Sophie a suivi les conseils du médecin. Trois jours après, elle allait beaucoup mieux!",
+        translation: "Sophie bu sabah kendini iyi hissetmiyordu. Başı ve boğazı ağrıyordu. Ateşini ölçtü: ateşi vardı! Doktora gitti. Doktor ona dedi: 'Gripsiniz. Dinlenmelisiniz. Çok su içmek ve bu ilaçları günde üç kez almak lazım.' Sophie doktorun tavsiyelerine uydu. Üç gün sonra çok daha iyiydi!"
+    },
+    questions: [
+        { id: 1, question: "Sophie'nin nesi ağrıyordu?", options: ["Kolu ve bacağı", "Başı ve boğazı", "Dişleri ve kulağı", "Karnı ve sırtı"], correctAnswer: "Başı ve boğazı" },
+        { id: 2, question: "Sophie'nin hastalığı neydi?", options: ["Nezle", "Grip", "Alerji", "Mide ağrısı"], correctAnswer: "Grip" },
+        { id: 3, question: "Doktor ne tavsiye etti?", options: ["Spor yapmak", "Dinlenmek ve su içmek", "Yemek yemek", "Çalışmaya devam etmek"], correctAnswer: "Dinlenmek ve su içmek" },
+        { id: 4, question: "İlaçları günde kaç kez alacak?", options: ["Bir kez", "İki kez", "Üç kez", "Dört kez"], correctAnswer: "Üç kez" },
+        { id: 5, question: "Sophie ne kadar sürede iyileşti?", options: ["Bir gün", "İki gün", "Üç gün", "Bir hafta"], correctAnswer: "Üç gün" }
+    ],
+    vocabulary: [
+        { word: "J'ai mal à la tête", meaning: "Başım ağrıyor" },
+        { word: "J'ai mal à la gorge", meaning: "Boğazım ağrıyor" },
+        { word: "La fièvre", meaning: "Ateş" },
+        { word: "La grippe", meaning: "Grip" },
+        { word: "Vous devez", meaning: "...malısınız" },
+        { word: "Il faut", meaning: "Lazım / Gerekiyor" },
+        { word: "Se reposer", meaning: "Dinlenmek" },
+        { word: "Prendre des médicaments", meaning: "İlaç almak" },
+        { word: "Elle allait mieux", meaning: "İyileşti / Daha iyiydi" }
+    ]
+};
+
+
+// ===== Üniteler 334-360 =====
+const unit334Reading: UnitReading = {
+    unitId: 334,
+    title: "Bankada: Yeni Bir Hesap",
+    language: "Fransızca",
+    level: "A2",
+    story: {
+        text: "M. Yılmaz est à la banque. Il parle avec la banquière, Mme Dubois.\n\n- Bonjour Madame, je voudrais ouvrir un compte courant, s'il vous plaît.\n- Bonjour Monsieur. Bien sûr. Avez-vous une pièce d'identité et un justificatif de domicile ?\n- Oui, voilà mon passeport et une facture d'électricité.\n- Merci. Pourriez-vous remplir ce formulaire ici ?\n- D'accord. J'aimerais aussi demander une carte de crédit. Est-ce possible ?\n- Oui, mais il faut d'abord signer ce contrat. Ensuite, vous recevrez votre carte par la poste dans 5 jours.\n- Parfait, merci beaucoup Madame !",
+        translation: "Bay Yılmaz bankada. Bankacı Bayan Dubois ile konuşuyor.\n\n- Merhaba Hanımefendi, vadesiz bir hesap açmak isterdim (istiyorum) lütfen.\n- Merhaba Beyefendi. Tabii ki. Kimliğiniz ve ikametgah belgeniz var mı?\n- Evet, işte pasaportum ve bir elektrik faturası.\n- Teşekkürler. Bu formu şurada doldurabilir miydiniz?\n- Tamam. Ayrıca bir kredi kartı istemek isterdim. Mümkün mü?\n- Evet, ama önce bu sözleşmeyi imzalamanız lazım. Sonra, kartınızı 5 gün içinde postayla alacaksınız.\n- Harika, çok teşekkürler Hanımefendi!"
+    },
+    questions: [
+        { id: 1, question: "M. Yılmaz ne yapmak istiyor?", options: ["Para çekmek", "Hesap açmak", "Kredi çekmek", "Para bozdurmak"], correctAnswer: "Hesap açmak" },
+        { id: 2, question: "Banka ne talep etti?", options: ["Sadece para", "Kimlik ve fatura", "Sadece pasaport", "Fotoğraf"], correctAnswer: "Kimlik ve fatura" },
+        { id: 3, question: "Kredi kartı ne zaman gelecek?", options: ["Hemen", "Yarın", "5 gün içinde", "Bir ay sonra"], correctAnswer: "5 gün içinde" }
+    ],
+    vocabulary: [
+        { word: "Je voudrais", meaning: "İsterdim / Rica ediyorum" },
+        { word: "Ouvrir un compte", meaning: "Hesap açmak" },
+        { word: "Une pièce d'identité", meaning: "Kimlik belgesi" },
+        { word: "Un justificatif", meaning: "Kanıtlayıcı belge (İkametgah)" },
+        { word: "Remplir", meaning: "Doldurmak" },
+        { word: "Pourriez-vous", meaning: "Yapabilir miydiniz?" },
+        { word: "Signer", meaning: "İmzalamak" }
+    ]
+};
+
+const unit335Reading: UnitReading = {
+    unitId: 335, title: "Postanede", language: "Fransızca", level: "A2",
+    story: { text: "Julie voulait envoyer un colis à sa grand-mère. Elle est allée à la poste. Elle a acheté des timbres et a rempli l'adresse. Le colis arrivera dans trois jours.", translation: "Julie büyükannesine paket göndermek istiyordu. Postaneye gitti. Pul aldı ve adresi yazdı. Paket üç gün içinde varacak." },
+    questions: [{ id: 1, question: "Julie ne göndermek istedi?", options: ["Mektup", "Paket", "Kart", "Para"], correctAnswer: "Paket" }],
+    vocabulary: [{ word: "Envoyer", meaning: "Göndermek" }, { word: "Le colis", meaning: "Paket" }]
+};
+
+const unit336Reading: UnitReading = {
+    unitId: 336, title: "Otel Rezervasyonu", language: "Fransızca", level: "A2",
+    story: { text: "Thomas a réservé une chambre d'hôtel en ligne. Il a choisi une chambre double avec vue sur la mer. Le petit-déjeuner était inclus. À son arrivée, la réceptionniste lui a donné la clé de la chambre 305.", translation: "Thomas internetten otel odası rezerve etti. Deniz manzaralı çift kişilik oda seçti. Kahvaltı dahildi. Geldiğinde resepsiyonist ona 305 numaralı odanın anahtarını verdi." },
+    questions: [{ id: 1, question: "Thomas ne tür oda seçti?", options: ["Tek kişilik", "Çift kişilik", "Aile odası", "Süit"], correctAnswer: "Çift kişilik" }],
+    vocabulary: [{ word: "Réserver", meaning: "Rezerve etmek" }, { word: "Vue sur la mer", meaning: "Deniz manzaralı" }]
+};
+
+const unit337Reading: UnitReading = {
+    unitId: 337, title: "Tren İstasyonunda Karmaşa", language: "Fransızca", level: "A2",
+    story: {
+        text: "Claire devait aller à Lyon pour une réunion importante. Elle est arrivée à la gare de Paris-Gare-de-Lyon en retard. Elle a couru au guichet et a demandé: 'Bonjour Monsieur, je voudrais un billet pour Lyon, le prochain train s'il vous plaît.' L'employé a répondu: 'Il y a un train dans dix minutes, mais c'est le dernier TGV de la matinée.' Claire a acheté son billet et a composté rapidement. Elle a demandé à un agent: 'De quel quai part le train pour Lyon?' Il a dit: 'Voie A, mais dépêchez-vous!' Heureusement, elle est montée dans le train juste avant la fermeture des portes.",
+        translation: "Claire önemli bir toplantı için Lyon'a gitmek zorundaydı. Paris-Gare-de-Lyon garına geç vardı. Gişeye koştu ve sordu: 'Merhaba beyefendi, Lyon için bir bilet istiyorum, sıradaki tren lütfen.' Görevli cevap verdi: 'On dakika içinde bir tren var, ama bu sabahın son hızlı treni.' Claire biletini aldı ve hızlıca damgalattı. Bir görevliye sordu: 'Lyon treni hangi perondan kalkıyor?' O da: 'A Yolu, ama acele edin!' dedi. Neyse ki, kapılar kapanmadan hemen önce trene bindi."
+    },
+    questions: [
+        { id: 1, question: "Claire nereye gitmek istiyordu?", options: ["Paris", "Lyon", "Marseille", "Nice"], correctAnswer: "Lyon" },
+        { id: 2, question: "Tren ne zaman kalkıyordu?", options: ["Bir saat sonra", "Yarın", "On dakika içinde", "Öğleden sonra"], correctAnswer: "On dakika içinde" },
+        { id: 3, question: "Claire biletini ne yaptı?", options: ["Kaybetti", "Yırttı", "Damgalattı (Composté)", "İade etti"], correctAnswer: "Damgalattı (Composté)" }
+    ],
+    vocabulary: [
+        { word: "Le guichet", meaning: "Gişe" },
+        { word: "Composter", meaning: "Bileti damgalamak" },
+        { word: "Dépêchez-vous", meaning: "Acele edin" },
+        { word: "La fermeture des portes", meaning: "Kapıların kapanması" }
+    ]
+};
+
+const unit338Reading: UnitReading = {
+    unitId: 338, title: "Kaos Günü: Fırtına", language: "Fransızca", level: "A2",
+    story: {
+        text: "Hier, c'était une journée difficile à l'aéroport. À cause d'une grande tempête, tous les vols ont été annulés. Les pistes ont été fermées par sécurité. Les passagers ont été dirigés vers les hôtels proches. Leurs bagages ont été stockés dans un endroit sûr, mais certaines valises ont été perdues. Les voyageurs étaient fâchés, mais ils ont été remboursés par la compagnie aérienne le lendemain.",
+        translation: "Dün, havaalanında zor bir gündü. Büyük bir fırtına yüzünden, tüm uçuşlar iptal edildi. Pistler güvenlik nedeniyle kapatıldı. Yolcular yakındaki otellere yönlendirildi. Bagajları güvenli bir yerde depolandı, ama bazı bavullar kayboldu. Yolcular kızgındı, ama ertesi gün havayolu şirketi tarafından paraları iade edildi."
+    },
+    questions: [
+        { id: 1, question: "Uçuşlar neden iptal edildi? (Pourquoi les vols ont été annulés?)", options: ["Grev yüzünden", "Fırtına yüzünden", "Teknik arıza", "Pilot yoktu"], correctAnswer: "Fırtına yüzünden" },
+        { id: 2, question: "Yolcular nereye yönlendirildi? (Où ont été dirigés les passagers?)", options: ["Eve", "Başka bir şehre", "Otellere", "Uçağa"], correctAnswer: "Otellere" },
+        { id: 3, question: "Yolculara ne yapıldı? (Qu'est-ce qui a été fait pour les passagers?)", options: ["Tutuklandılar", "Para iadesi yapıldı (Remboursés)", "Unutuldular", "Cezalandırıldılar"], correctAnswer: "Para iadesi yapıldı (Remboursés)" }
+    ],
+    vocabulary: [
+        { word: "Ont été annulés", meaning: "İptal edildiler (Pasif)" },
+        { word: "Ont été fermées", meaning: "Kapatıldılar (Pasif)" },
+        { word: "Ont été dirigés", meaning: "Yönlendirildiler (Pasif)" },
+        { word: "Ont été remboursés", meaning: "Paraları iade edildi (Pasif)" }
+    ]
+};
+
+const unit339Reading: UnitReading = {
+    unitId: 339, title: "Restoranda", language: "Fransızca", level: "A2",
+    story: { text: "Emma et son ami sont allés au restaurant. Le serveur leur a apporté le menu. Emma a commandé une salade comme entrée et du poulet comme plat principal. C'était délicieux! À la fin, ils ont demandé l'addition.", translation: "Emma ve arkadaşı restorana gitti. Garson onlara menüyü getirdi. Emma başlangıç olarak salata ve ana yemek olarak tavuk sipariş etti. Çok lezzetliydi! Sonunda hesabı istediler." },
+    questions: [{ id: 1, question: "Emma ne sipariş etti?", options: ["Balık", "Et", "Tavuk", "Sebze"], correctAnswer: "Tavuk" }],
+    vocabulary: [{ word: "L'entrée", meaning: "Başlangıç" }, { word: "L'addition", meaning: "Hesap" }]
+};
+
+const unit340Reading: UnitReading = {
+    unitId: 340, title: "La Mousse au Chocolat", language: "Fransızca", level: "A2",
+    story: {
+        text: "Aujourd'hui, nous préparons une mousse au chocolat ! C'est facile et délicieux. Voici la recette :\n\n1. D'abord, cassez le chocolat en morceaux et faites-le fondre au bain-marie.\n2. Ensuite, séparez les blancs et les jaunes d'œufs.\n3. Mélangez les jaunes avec un peu de sucre.\n4. Ajoutez le chocolat fondu.\n5. Montez les blancs en neige (très ferme !).\n6. Incorporez doucement les blancs au mélange.\n7. Enfin, mettez au frigo pendant 3 heures.\n\nNe touchez pas avant l'heure ! Bon appétit !",
+        translation: "Bugün çikolatalı mus yapıyoruz! Kolay ve lezzetli. İşte tarifi:\n\n1. Önce, çikolatayı parçalara ayırın (kırın) ve benmari usulü eritin.\n2. Sonra, yumurtaların beyazlarını ve sarılarını ayırın.\n3. Sarıları biraz şekerle karıştırın.\n4. Erimiş çikolatayı ekleyin.\n5. Beyazları kar haline gelene kadar çırpın (çok katı!).\n6. Beyazları yavaşça karışıma yedirin (ekleyin).\n7. Son olarak, 3 saat buzdolabına koyun.\n\nSaati gelmeden dokunmayın! Afiyet olsun!"
+    },
+    questions: [
+        { id: 1, question: "Bu tarif ne için?", options: ["Kek", "Çorba", "Çikolatalı Mus", "Salata"], correctAnswer: "Çikolatalı Mus" },
+        { id: 2, question: "Çikolatayı nasıl eritmelisiniz? (Comment faire fondre le chocolat?)", options: ["Mikrodalgada", "Benmari usulü (Au bain-marie)", "Tavada", "Fırında"], correctAnswer: "Benmari usulü (Au bain-marie)" },
+        { id: 3, question: "Buzdolabında ne kadar kalmalı?", options: ["1 saat", "30 dakika", "3 saat", "Bir gece"], correctAnswer: "3 saat" },
+        { id: 4, question: "Beyazları nasıl çırpmalısınız?", options: ["Sıvı", "Kar gibi (En neige)", "Sıcak", "Şekerli"], correctAnswer: "Kar gibi (En neige)" }
+    ],
+    vocabulary: [
+        { word: "Cassez", meaning: "Kırın (Emir)" },
+        { word: "Faites fondre", meaning: "Eritin" },
+        { word: "Séparez", meaning: "Ayırın" },
+        { word: "Montez les blancs", meaning: "Beyazları çırpın/kabartın" },
+        { word: "Le frigo", meaning: "Buzdolabı" },
+        { word: "Ne touchez pas", meaning: "Dokunmayın (Olumsuz Emir)" }
+    ]
+};
+
+// Kısa format devam
+const unit341Reading: UnitReading = { unitId: 341, title: "Alışveriş", language: "Fransızca", level: "A2", story: { text: "Sophie est allée au centre commercial. Elle a trouvé une belle robe qui était en solde. La robe coûtait 50 euros au lieu de 100. C'était une bonne affaire!", translation: "Sophie alışveriş merkezine gitti. İndirimde güzel bir elbise buldu. Elbise 100 yerine 50 euro'ydu. İyi bir fırsattı!" }, questions: [{ id: 1, question: "Elbise ne kadardı?", options: ["100 euro", "50 euro", "75 euro", "25 euro"], correctAnswer: "50 euro" }], vocabulary: [{ word: "En solde", meaning: "İndirimde" }] };
+
+const unit342Reading: UnitReading = { unitId: 342, title: "Kıyafet", language: "Fransızca", level: "A2", story: { text: "Marc cherchait un costume pour un mariage. Il a essayé plusieurs vestes. La noire lui allait très bien. Le vendeur a dit: 'Cette veste vous va à merveille!'", translation: "Marc bir düğün için takım elbise arıyordu. Birkaç ceket denedi. Siyah olan ona çok yakıştı. Satıcı dedi: 'Bu ceket size harika yakışıyor!'" }, questions: [{ id: 1, question: "Marc ne arıyordu?", options: ["Pantolon", "Takım elbise", "Gömlek", "Ayakkabı"], correctAnswer: "Takım elbise" }], vocabulary: [{ word: "Essayer", meaning: "Denemek" }] };
+
+const unit343Reading: UnitReading = { unitId: 343, title: "Ev İşleri", language: "Fransızca", level: "A2", story: { text: "Samedi matin, toute la famille a fait le ménage. Papa a passé l'aspirateur. Maman a fait la lessive. Les enfants ont rangé leurs chambres. Après, la maison était propre!", translation: "Cumartesi sabahı tüm aile temizlik yaptı. Baba elektrik süpürgesi çekti. Anne çamaşır yıkadı. Çocuklar odalarını topladılar. Sonra ev tertemizdi!" }, questions: [{ id: 1, question: "Baba ne yaptı?", options: ["Bulaşık", "Süpürge", "Çamaşır", "Yemek"], correctAnswer: "Süpürge" }], vocabulary: [{ word: "Le ménage", meaning: "Temizlik" }] };
+
+const unit344Reading: UnitReading = { unitId: 344, title: "Haberler", language: "Fransızca", level: "A2", story: { text: "Quand j'étais jeune, je lisais le journal tous les matins. Mon père regardait les informations à la télé. Maintenant, je lis les actualités sur mon téléphone.", translation: "Gençken her sabah gazete okurdum. Babam televizyonda haberleri izlerdi. Şimdi haberleri telefonumdan okuyorum." }, questions: [{ id: 1, question: "Şimdi haberleri nereden okuyor?", options: ["Gazete", "TV", "Telefon", "Radio"], correctAnswer: "Telefon" }], vocabulary: [{ word: "Quand j'étais jeune", meaning: "Gençken" }] };
+
+const unit345Reading: UnitReading = { unitId: 345, title: "TV", language: "Fransızca", level: "A2", story: { text: "Marie adore les séries policières. Elle regarde une série qui s'appelle 'Mystères de Paris'. C'est une émission qui passe tous les lundis. Elle ne rate jamais un épisode!", translation: "Marie polisiye dizileri çok seviyor. 'Paris Gizemleri' adında bir dizi izliyor. Her pazartesi yayınlanan bir program. Hiçbir bölümü kaçırmaz!" }, questions: [{ id: 1, question: "Dizi ne zaman yayınlanıyor?", options: ["Pazar", "Pazartesi", "Cuma", "Cumartesi"], correctAnswer: "Pazartesi" }], vocabulary: [{ word: "Ne rate jamais", meaning: "Hiç kaçırmaz" }] };
+
+const unit346Reading: UnitReading = { unitId: 346, title: "Sinema", language: "Fransızca", level: "A2", story: { text: "Hier, je suis allé au cinéma avec mes amis. Nous avons vu le dernier film de Jean Dupont. C'était le meilleur film de l'année! L'actrice principale était formidable.", translation: "Dün arkadaşlarımla sinemaya gittim. Jean Dupont'un son filmini izledik. Yılın en iyi filmiydi! Başrol oyuncusu harikaydı." }, questions: [{ id: 1, question: "Film nasıldı?", options: ["Kötü", "Normal", "En iyi", "Sıkıcı"], correctAnswer: "En iyi" }], vocabulary: [{ word: "Le meilleur", meaning: "En iyi" }] };
+
+const unit347Reading: UnitReading = { unitId: 347, title: "Müzik", language: "Fransızca", level: "A2", story: { text: "J'écoute de la musique depuis mon enfance. Mon groupe préféré est français. Je les écoute depuis 10 ans. La semaine prochaine, je vais aller à leur concert!", translation: "Çocukluğumdan beri müzik dinliyorum. En sevdiğim grup Fransız. Onları 10 yıldır dinliyorum. Gelecek hafta konserlerine gideceğim!" }, questions: [{ id: 1, question: "Ne zamandır dinliyor?", options: ["5 yıl", "10 yıl", "15 yıl", "20 yıl"], correctAnswer: "10 yıl" }], vocabulary: [{ word: "Depuis mon enfance", meaning: "Çocukluğumdan beri" }] };
+
+const unit348Reading: UnitReading = { unitId: 348, title: "Spor", language: "Fransızca", level: "A2", story: { text: "Lucas fait du sport trois fois par semaine. Le lundi, il joue au tennis. Le mercredi, il fait de la natation. Le vendredi, il va à la salle de sport. Il est en très bonne forme!", translation: "Lucas haftada üç kez spor yapıyor. Pazartesi tenis oynuyor. Çarşamba yüzüyor. Cuma spor salonuna gidiyor. Çok formda!" }, questions: [{ id: 1, question: "Pazartesi ne yapıyor?", options: ["Yüzme", "Tenis", "Koşu", "Futbol"], correctAnswer: "Tenis" }], vocabulary: [{ word: "Faire du sport", meaning: "Spor yapmak" }] };
+
+const unit349Reading: UnitReading = { unitId: 349, title: "Doğa", language: "Fransızca", level: "A2", story: { text: "Ce week-end, nous sommes allés faire une randonnée en montagne. Le sentier était magnifique. Nous avons vu un lac et une belle forêt. Nous y retournerons le mois prochain.", translation: "Bu hafta sonu dağda yürüyüşe gittik. Patika harikaydı. Bir göl ve güzel bir orman gördük. Gelecek ay oraya döneceğiz." }, questions: [{ id: 1, question: "Ne gördüler?", options: ["Deniz", "Göl", "Nehir", "Şelale"], correctAnswer: "Göl" }], vocabulary: [{ word: "La randonnée", meaning: "Yürüyüş" }] };
+
+const unit350Reading: UnitReading = { unitId: 350, title: "Buluşma", language: "Fransızca", level: "A2", story: { text: "Julie a appelé son amie Marie. 'Ça te dit d'aller au café cet après-midi?' Marie a répondu: 'Avec plaisir! On se retrouve à 15h au café du centre?' Julie a accepté.", translation: "Julie arkadaşı Marie'yi aradı. 'Bu öğleden sonra kafeye gitmek ister misin?' Marie cevapladı: 'Memnuniyetle! Merkezdeki kafede saat 15'te buluşalım mı?' Julie kabul etti." }, questions: [{ id: 1, question: "Saat kaçta buluşacaklar?", options: ["14:00", "15:00", "16:00", "17:00"], correctAnswer: "15:00" }], vocabulary: [{ word: "Ça te dit", meaning: "İster misin" }] };
+
+const unit351Reading: UnitReading = { unitId: 351, title: "Telefon", language: "Fransızca", level: "A2", story: { text: "Allô, bonjour! C'est Paul à l'appareil. Pourrais-je parler à Monsieur Dupont? - Il n'est pas là. Voulez-vous laisser un message? - Oui, dites-lui que je le rappellerai demain.", translation: "Alo, merhaba! Ben Paul. Bay Dupont ile görüşebilir miyim? - Burada değil. Mesaj bırakmak ister misiniz? - Evet, yarın geri arayacağımı söyleyin." }, questions: [{ id: 1, question: "Bay Dupont nerede?", options: ["Toplantıda", "Burada değil", "Yolda", "Tatilde"], correctAnswer: "Burada değil" }], vocabulary: [{ word: "À l'appareil", meaning: "Telefonda" }] };
+
+const unit352Reading: UnitReading = { unitId: 352, title: "Davet", language: "Fransızca", level: "A2", story: { text: "Samedi, c'est l'anniversaire de Marie. Elle a invité tous ses amis. La fête commence à 20h. Il y aura un gâteau et de la musique. Ce sera une super soirée!", translation: "Cumartesi Marie'nin doğum günü. Tüm arkadaşlarını davet etti. Parti saat 20'de başlıyor. Pasta ve müzik olacak. Harika bir gece olacak!" }, questions: [{ id: 1, question: "Parti saat kaçta?", options: ["18:00", "19:00", "20:00", "21:00"], correctAnswer: "20:00" }], vocabulary: [{ word: "L'anniversaire", meaning: "Doğum günü" }] };
+
+const unit353Reading: UnitReading = { unitId: 353, title: "Özür", language: "Fransızca", level: "A2", story: { text: "Pierre a téléphoné à son ami. 'Je suis vraiment désolé, je ne peux pas venir ce soir. J'ai un empêchement.' Son ami a répondu: 'Ce n'est pas grave, on se voit une autre fois!'", translation: "Pierre arkadaşını aradı. 'Gerçekten özür dilerim, bu akşam gelemiyorum. Bir engelim var.' Arkadaşı cevapladı: 'Önemli değil, başka zaman görüşürüz!'" }, questions: [{ id: 1, question: "Pierre neden gelemiyordu?", options: ["Hasta", "Engeli var", "Yorgun", "Çalışıyor"], correctAnswer: "Engeli var" }], vocabulary: [{ word: "Un empêchement", meaning: "Engel" }] };
+
+const unit354Reading: UnitReading = { unitId: 354, title: "Yol Tarifi", language: "Fransızca", level: "A2", story: { text: "Un touriste a demandé son chemin. 'Excusez-moi, où est la gare?' 'C'est facile! Allez tout droit, puis tournez à gauche au carrefour. La gare est à côté de la poste.' 'Merci beaucoup!'", translation: "Bir turist yol sordu. 'Affedersiniz, istasyon nerede?' 'Çok kolay! Düz gidin, sonra kavşakta sola dönün. İstasyon postanın yanında.' 'Çok teşekkürler!'" }, questions: [{ id: 1, question: "İstasyon nerede?", options: ["Bankada", "Postanın yanında", "Parkta", "Meydanda"], correctAnswer: "Postanın yanında" }], vocabulary: [{ word: "Le carrefour", meaning: "Kavşak" }] };
+
+const unit355Reading: UnitReading = { unitId: 355, title: "Şehir", language: "Fransızca", level: "A2", story: { text: "Lyon est une ville historique. Elle est connue pour sa gastronomie. Il y a beaucoup de restaurants et de beaux quartiers. Les Lyonnais sont très sympathiques. C'est une ville que j'adore!", translation: "Lyon tarihi bir şehir. Mutfağıyla ünlü. Çok restoran ve güzel semtler var. Lyonlular çok sempatik. Bayıldığım bir şehir!" }, questions: [{ id: 1, question: "Lyon neyle ünlü?", options: ["Müzeler", "Mutfak", "Plajlar", "Dağlar"], correctAnswer: "Mutfak" }], vocabulary: [{ word: "Connue pour", meaning: "...ile ünlü" }] };
+
+const unit356Reading: UnitReading = { unitId: 356, title: "Kültür", language: "Fransızca", level: "A2", story: { text: "En France, on fait la bise pour se saluer. C'est une coutume très française. Le nombre de bises change selon la région. En Turquie, c'est différent, on se serre la main.", translation: "Fransa'da selamlaşırken yanaktan öpüşülür. Bu çok Fransız bir gelenek. Öpücük sayısı bölgeye göre değişir. Türkiye'de farklı, el sıkışılır." }, questions: [{ id: 1, question: "Fransa'da nasıl selamlaşılır?", options: ["El sıkışarak", "Yanaktan öperek", "Baş eğerek", "El sallayarak"], correctAnswer: "Yanaktan öperek" }], vocabulary: [{ word: "La bise", meaning: "Yanaktan öpücük" }] };
+
+const unit357Reading: UnitReading = { unitId: 357, title: "Eğitim", language: "Fransızca", level: "A2", story: { text: "Marie fait des études de médecine à Paris. Elle est en troisième année. L'année dernière, elle a passé ses examens avec succès. Elle espère devenir médecin dans cinq ans.", translation: "Marie Paris'te tıp okuyor. Üçüncü sınıfta. Geçen yıl sınavlarını başarıyla geçti. Beş yıl içinde doktor olmayı umuyor." }, questions: [{ id: 1, question: "Marie ne okuyor?", options: ["Hukuk", "Tıp", "Mühendislik", "Edebiyat"], correctAnswer: "Tıp" }], vocabulary: [{ word: "Faire des études", meaning: "Okumak" }] };
+
+const unit358Reading: UnitReading = { unitId: 358, title: "İş", language: "Fransızca", level: "A2", story: { text: "Thomas cherche un emploi depuis trois mois. Il a envoyé beaucoup de CV. La semaine dernière, il a eu un entretien. L'entreprise l'a rappelé: il a été embauché!", translation: "Thomas üç aydır iş arıyor. Çok CV gönderdi. Geçen hafta bir mülakata girdi. Şirket onu geri aradı: işe alındı!" }, questions: [{ id: 1, question: "Thomas işe alındı mı?", options: ["Evet", "Hayır", "Bilmiyoruz", "Bekliyor"], correctAnswer: "Evet" }], vocabulary: [{ word: "Être embauché", meaning: "İşe alınmak" }] };
+
+const unit359Reading: UnitReading = { unitId: 359, title: "Teknoloji", language: "Fransızca", level: "A2", story: { text: "J'ai téléchargé une nouvelle application pour apprendre le français. Elle est gratuite et très pratique. Je me connecte tous les jours. J'ai déjà fait beaucoup de progrès!", translation: "Fransızca öğrenmek için yeni bir uygulama indirdim. Ücretsiz ve çok pratik. Her gün bağlanıyorum. Çoktan çok ilerleme kaydettim!" }, questions: [{ id: 1, question: "Uygulama ücretli mi?", options: ["Evet", "Hayır, ücretsiz", "Pahalı", "Bilinmiyor"], correctAnswer: "Hayır, ücretsiz" }], vocabulary: [{ word: "Télécharger", meaning: "İndirmek" }] };
+
+const unit360Reading: UnitReading = { unitId: 360, title: "A2 Final", language: "Fransızca", level: "A2", story: { text: "Félicitations! Vous avez terminé le niveau A2 de français. Vous pouvez maintenant parler de vos expériences passées, faire des projets, et vous débrouiller dans la vie quotidienne. Continuez à pratiquer et bonne chance pour le niveau B1!", translation: "Tebrikler! Fransızca A2 seviyesini tamamladınız. Artık geçmiş deneyimlerinizden bahsedebilir, plan yapabilir ve günlük hayatta idare edebilirsiniz. Pratik yapmaya devam edin ve B1 seviyesi için iyi şanslar!" }, questions: [{ id: 1, question: "Bir sonraki seviye ne?", options: ["A1", "A2", "B1", "B2"], correctAnswer: "B1" }], vocabulary: [{ word: "Félicitations", meaning: "Tebrikler" }] };
+
+// Export
+export const frenchA2Readings: UnitReading[] = [
+    unit331Reading, unit332Reading, unit333Reading, unit334Reading, unit335Reading,
+    unit336Reading, unit337Reading, unit338Reading, unit339Reading, unit340Reading,
+    unit341Reading, unit342Reading, unit343Reading, unit344Reading, unit345Reading,
+    unit346Reading, unit347Reading, unit348Reading, unit349Reading, unit350Reading,
+    unit351Reading, unit352Reading, unit353Reading, unit354Reading, unit355Reading,
+    unit356Reading, unit357Reading, unit358Reading, unit359Reading, unit360Reading
+];
+
+export function getFrenchA2ReadingForUnit(unitId: number): UnitReading | undefined {
+    return frenchA2Readings.find(r => r.unitId === unitId);
+}

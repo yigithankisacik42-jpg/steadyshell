@@ -112,10 +112,20 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const switchLanguage = (langCode: string) => {
         const lang = getLanguageByCode(langCode);
         if (lang) {
+            // Immediately update state
             setCurrentLanguage(lang);
-            // Seçilen dilin ilk seviyesini ayarla
-            if (lang.levels.length > 0) {
-                setCurrentLevel(lang.levels[0]);
+            
+            // Set first level of new language
+            const newLevel = lang.levels.length > 0 ? lang.levels[0] : null;
+            setCurrentLevel(newLevel);
+            
+            // Persist both language and level to localStorage
+            if (typeof window !== "undefined") {
+                localStorage.setItem('steadyshell_selected_language', lang.code);
+                if (newLevel) {
+                    localStorage.setItem('steadyshell_selected_level', newLevel.code);
+                }
+                console.log(`Language switched to: ${lang.code}, Level: ${newLevel?.code}`);
             }
         }
     };

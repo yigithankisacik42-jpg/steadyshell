@@ -1,4 +1,4 @@
-// LinguaFlow Kalıplar Veritabanı - Fransızca A1 (301-330)
+// SteadyShell Kalıplar Veritabanı - Fransızca A1 (301-330)
 // Her ünite için ~15 kalıp - Curriculum.ts ile senkronize
 
 export interface FrenchPhrase {
@@ -37,7 +37,7 @@ const unit301Phrases: FrenchA1UnitPhrases = {
 
 // ===== ÜNİTE 302: ALFABE VE SESLER =====
 const unit302Phrases: FrenchA1UnitPhrases = {
-    unitId: 302, title: "Alfabe ve Sesler",
+    unitId: 302, title: "Aksanlar ve Ulama",
     phrases: [
         { text: "Comment ça s'écrit?", meaning: "Bu nasıl yazılır?", pronunciation: "ko-man-sa-se-kri" },
         { text: "Pouvez-vous épeler?", meaning: "Heceleyebilir misiniz?", pronunciation: "pu-ve-vu-e-pö-le" },
@@ -59,7 +59,7 @@ const unit302Phrases: FrenchA1UnitPhrases = {
 
 // ===== ÜNİTE 303: SAYILAR =====
 const unit303Phrases: FrenchA1UnitPhrases = {
-    unitId: 303, title: "Sayılar (0-20)",
+    unitId: 303, title: "Sayılar 0-20",
     phrases: [
         { text: "Quel est votre numéro de téléphone?", meaning: "Telefon numaranız nedir?", pronunciation: "kel-e-votr-nü-me-ro-dö-te-le-fon" },
         { text: "Combien ça coûte?", meaning: "Bu ne kadar?", pronunciation: "kom-byan-sa-kut" },
@@ -81,7 +81,7 @@ const unit303Phrases: FrenchA1UnitPhrases = {
 
 // ===== ÜNİTE 304: RENKLER =====
 const unit304Phrases: FrenchA1UnitPhrases = {
-    unitId: 304, title: "Renkler",
+    unitId: 304, title: "Renkler ve Cinsiyet Uyumu",
     phrases: [
         { text: "Quelle est ta couleur préférée?", meaning: "En sevdiğin renk hangisi?", pronunciation: "kel-e-ta-ku-lör-pre-fe-re" },
         { text: "J'aime le bleu.", meaning: "Maviyi severim.", pronunciation: "jem-lö-blö" },
@@ -103,7 +103,7 @@ const unit304Phrases: FrenchA1UnitPhrases = {
 
 // ===== ÜNİTE 305: AİLE =====
 const unit305Phrases: FrenchA1UnitPhrases = {
-    unitId: 305, title: "Aile Bireyleri",
+    unitId: 305, title: "Aile ve İyelik Sıfatları",
     phrases: [
         { text: "Voici ma famille.", meaning: "İşte ailem.", pronunciation: "vua-si-ma-fa-miy" },
         { text: "J'ai deux frères et une sœur.", meaning: "İki erkek kardeşim ve bir kız kardeşim var.", pronunciation: "je-dö-frer-e-ün-sör" },
@@ -169,7 +169,7 @@ const unit307Phrases: FrenchA1UnitPhrases = {
 
 // ===== ÜNİTE 308: MESLEKLER =====
 const unit308Phrases: FrenchA1UnitPhrases = {
-    unitId: 308, title: "Meslekler",
+    unitId: 308, title: "Mesleklerde Cinsiyet",
     phrases: [
         { text: "Quelle est votre profession?", meaning: "Mesleğiniz nedir?", pronunciation: "kel-e-votr-pro-fe-syon" },
         { text: "Je suis médecin.", meaning: "Ben doktorum.", pronunciation: "jö-süi-med-sen" },
@@ -191,45 +191,40 @@ const unit308Phrases: FrenchA1UnitPhrases = {
 
 // ===== ÜNİTE 309: YİYECEKLER =====
 const unit309Phrases: FrenchA1UnitPhrases = {
-    unitId: 309, title: "Yiyecekler",
+    unitId: 309, title: "Evimiz (Yer Edatları ve Odalar)",
     phrases: [
-        { text: "J'ai faim.", meaning: "Açım.", pronunciation: "je-fen" },
-        { text: "Qu'est-ce qu'on mange?", meaning: "Ne yiyeceğiz?", pronunciation: "kes-kon-manj" },
-        { text: "Le petit-déjeuner est prêt.", meaning: "Kahvaltı hazır.", pronunciation: "lö-pö-ti-de-jö-ne-e-pre" },
-        { text: "Bon appétit!", meaning: "Afiyet olsun!", pronunciation: "bon-a-pe-ti" },
-        { text: "C'est délicieux!", meaning: "Çok lezzetli!", pronunciation: "se-de-li-syö" },
-        { text: "Je suis végétarien(ne).", meaning: "Vejetaryenim.", pronunciation: "jö-süi-ve-je-ta-ryen" },
-        { text: "Je suis allergique aux noix.", meaning: "Fındığa alerjim var.", pronunciation: "jö-süi-a-ler-jik-o-nua" },
-        { text: "Encore un peu?", meaning: "Biraz daha?", pronunciation: "an-kor-ön-pö" },
-        { text: "Non merci, je suis rassasié(e).", meaning: "Hayır teşekkürler, doydum.", pronunciation: "non-mer-si jö-süi-ra-sa-zye" },
-        { text: "Qu'est-ce que vous recommandez?", meaning: "Ne önerirsiniz?", pronunciation: "kes-kö-vu-rö-ko-man-de" },
-        { text: "Je voudrais le plat du jour.", meaning: "Günün menüsünü istiyorum.", pronunciation: "jö-vu-dre-lö-pla-dü-jur" },
-        { text: "Pouvez-vous me passer le sel?", meaning: "Tuzu uzatır mısınız?", pronunciation: "pu-ve-vu-mö-pa-se-lö-sel" },
-        { text: "C'est trop salé.", meaning: "Çok tuzlu.", pronunciation: "se-tro-sa-le" },
-        { text: "C'est épicé?", meaning: "Acılı mı?", pronunciation: "se-te-pi-se" },
-        { text: "À emporter.", meaning: "Paket için.", pronunciation: "a-am-por-te" }
+        { text: "Bienvenue chez moi!", meaning: "Evime hoş geldiniz!", pronunciation: "byan-vö-nü-şe-mua" },
+        { text: "C'est ma maison.", meaning: "Bu benim evim.", pronunciation: "se-ma-me-zon" },
+        { text: "Où est la salle de bain?", meaning: "Banyo nerede?", pronunciation: "u-e-la-sal-dö-ben" },
+        { text: "Il y a un grand jardin.", meaning: "Büyük bir bahçe var.", pronunciation: "il-ya-ön-gran-jar-den" },
+        { text: "La cuisine est moderne.", meaning: "Mutfak modern.", pronunciation: "la-küi-zin-e-mo-dern" },
+        { text: "Voici le salon.", meaning: "İşte salon.", pronunciation: "vua-si-lö-sa-lon" },
+        { text: "Ma chambre est petite.", meaning: "Odam küçük.", pronunciation: "ma-şambr-e-pö-tit" },
+        { text: "Ferme la porte, s'il te plaît.", meaning: "Kapıyı kapat lütfen.", pronunciation: "ferm-la-port sil-tö-ple" },
+        { text: "Ouvre la fenêtre.", meaning: "Pencereyi aç.", pronunciation: "uvr-la-fö-netr" },
+        { text: "Nous habitons ici.", meaning: "Biz burada yaşıyoruz.", pronunciation: "nu-za-bi-ton-i-si" }
     ]
 };
 
 // ===== ÜNİTE 310: İÇECEKLER =====
 const unit310Phrases: FrenchA1UnitPhrases = {
-    unitId: 310, title: "İçecekler",
+    unitId: 310, title: "Sınıfta (Okul)",
     phrases: [
-        { text: "J'ai soif.", meaning: "Susadım.", pronunciation: "je-suaf" },
-        { text: "Un café, s'il vous plaît.", meaning: "Bir kahve, lütfen.", pronunciation: "ön-ka-fe sil-vu-ple" },
-        { text: "Avec ou sans sucre?", meaning: "Şekerli mi şekersiz mi?", pronunciation: "a-vek-u-san-sükr" },
-        { text: "Je voudrais un thé.", meaning: "Bir çay istiyorum.", pronunciation: "jö-vu-dre-ön-te" },
-        { text: "Avec du lait, s'il vous plaît.", meaning: "Sütlü, lütfen.", pronunciation: "a-vek-dü-le sil-vu-ple" },
-        { text: "Est-ce que vous avez du jus d'orange?", meaning: "Portakal suyunuz var mı?", pronunciation: "es-kö-vu-za-ve-dü-jü-do-ranj" },
-        { text: "Un verre d'eau, s'il vous plaît.", meaning: "Bir bardak su, lütfen.", pronunciation: "ön-ver-do sil-vu-ple" },
-        { text: "L'addition, s'il vous plaît.", meaning: "Hesap, lütfen.", pronunciation: "la-di-syon sil-vu-ple" },
-        { text: "Santé!", meaning: "Şerefe!", pronunciation: "san-te" },
-        { text: "C'est ma tournée.", meaning: "Bu benden.", pronunciation: "se-ma-tur-ne" },
-        { text: "Qu'est-ce que vous buvez?", meaning: "Ne içiyorsunuz?", pronunciation: "kes-kö-vu-bü-ve" },
-        { text: "C'est trop chaud.", meaning: "Çok sıcak.", pronunciation: "se-tro-şo" },
-        { text: "Avec des glaçons.", meaning: "Buzlu.", pronunciation: "a-vek-de-gla-son" },
-        { text: "Un café décaféiné.", meaning: "Kafeinsiz kahve.", pronunciation: "ön-ka-fe-de-ka-fe-i-ne" },
-        { text: "Je voudrais payer.", meaning: "Ödemek istiyorum.", pronunciation: "jö-vu-dre-pe-ye" }
+        { text: "Ouvrez votre livre.", meaning: "Kitabınızı açın.", pronunciation: "u-vre-votr-livr" },
+        { text: "Fermez votre cahier.", meaning: "Defterinizi kapatın.", pronunciation: "fer-me-votr-ka-ye" },
+        { text: "Écoutez-moi.", meaning: "Beni dinleyin.", pronunciation: "e-ku-te-mua" },
+        { text: "Puis-je poser une question?", meaning: "Bir soru sorabilir miyim?", pronunciation: "püi-jö-po-ze-ün-kes-tyon" },
+        { text: "Je ne comprends pas.", meaning: "Anlamıyorum.", pronunciation: "jö-nö-kom-pran-pa" },
+        { text: "Comment dit-on ... en français?", meaning: "... Fransızca nasıl denir?", pronunciation: "ko-man-di-ton-an-fran-se" },
+        { text: "C'est quelle page?", meaning: "Hangi sayfa?", pronunciation: "se-kel-paj" },
+        { text: "Puis-je aller aux toilettes?", meaning: "Tuvalete gidebilir miyim?", pronunciation: "püi-ja-le-o-tua-let" },
+        { text: "Asseyez-vous.", meaning: "Oturun.", pronunciation: "a-se-ye-vu" },
+        { text: "Levez-vous.", meaning: "Ayağa kalkın.", pronunciation: "lö-ve-vu" },
+        { text: "Silence, s'il vous plaît.", meaning: "Sessizlik lütfen.", pronunciation: "si-lans-sil-vu-ple" },
+        { text: "C'est un crayon.", meaning: "Bu bir kalem.", pronunciation: "se-tön-kre-yon" },
+        { text: "J'ai oublié mon devoir.", meaning: "Ödevimi unuttum.", pronunciation: "je-u-bli-ye-mon-dö-vuar" },
+        { text: "Répétez, s'il vous plaît.", meaning: "Tekrar edin lütfen.", pronunciation: "re-pe-te-sil-vu-ple" },
+        { text: "Je suis prêt.", meaning: "Hazırım.", pronunciation: "jö-süi-pre" }
     ]
 };
 
@@ -237,391 +232,391 @@ const unit310Phrases: FrenchA1UnitPhrases = {
 function generatePhrases(unitId: number): FrenchA1UnitPhrases {
     const phraseData: { [key: number]: { title: string, phrases: FrenchPhrase[] } } = {
         311: {
-            title: "Ev ve Odalar", phrases: [
-                { text: "Bienvenue chez moi!", meaning: "Evime hoş geldiniz!", pronunciation: "byan-vö-nü-şe-mua" },
-                { text: "Fais comme chez toi.", meaning: "Evinde gibi hisset.", pronunciation: "fe-kom-şe-tua" },
-                { text: "Où est la salle de bain?", meaning: "Banyo nerede?", pronunciation: "u-e-la-sal-dö-ben" },
-                { text: "Au premier étage.", meaning: "Birinci katta.", pronunciation: "o-prö-mye-e-taj" },
-                { text: "Je cherche un appartement.", meaning: "Daire arıyorum.", pronunciation: "jö-şerş-ön-a-par-tö-man" },
-                { text: "Le loyer est cher.", meaning: "Kira pahalı.", pronunciation: "lö-lua-ye-e-şer" },
-                { text: "C'est une grande maison.", meaning: "Büyük bir ev.", pronunciation: "se-tün-grand-me-zon" },
-                { text: "J'habite au rez-de-chaussée.", meaning: "Zemin katta oturuyorum.", pronunciation: "ja-bit-o-re-dö-şo-se" },
-                { text: "Le jardin est magnifique.", meaning: "Bahçe harika.", pronunciation: "lö-jar-den-e-ma-nyi-fik" },
-                { text: "Ouvre la fenêtre.", meaning: "Pencereyi aç.", pronunciation: "uvr-la-fö-netr" },
-                { text: "Ferme la porte.", meaning: "Kapıyı kapat.", pronunciation: "ferm-la-port" },
-                { text: "Je vais déménager.", meaning: "Taşınacağım.", pronunciation: "jö-ve-de-me-na-je" },
-                { text: "C'est bien situé.", meaning: "İyi konumda.", pronunciation: "se-byan-si-tü-e" },
-                { text: "Il y a un balcon.", meaning: "Bir balkon var.", pronunciation: "il-ya-ön-bal-kon" },
-                { text: "La cuisine est équipée.", meaning: "Mutfak donanımlı.", pronunciation: "la-küi-zin-e-te-ki-pe" }
-            ]
-        },
-        312: {
-            title: "Mobilya ve Eşyalar", phrases: [
-                { text: "Range ta chambre!", meaning: "Odanı topla!", pronunciation: "ranj-ta-şambr" },
-                { text: "Assieds-toi sur le canapé.", meaning: "Kanepede otur.", pronunciation: "a-sye-tua-sür-lö-ka-na-pe" },
-                { text: "Allume la lumière.", meaning: "Işığı aç.", pronunciation: "a-lüm-la-lü-myer" },
-                { text: "Éteins la télévision.", meaning: "Televizyonu kapat.", pronunciation: "e-ten-la-te-le-vi-zyon" },
-                { text: "Le lit est confortable.", meaning: "Yatak rahat.", pronunciation: "lö-li-e-kon-for-tabl" },
-                { text: "Il y a une armoire.", meaning: "Bir dolap var.", pronunciation: "il-ya-ün-ar-muar" },
-                { text: "La table est en bois.", meaning: "Masa ahşap.", pronunciation: "la-tabl-e-tan-bua" },
-                { text: "Je dois acheter un bureau.", meaning: "Bir masa almam lazım.", pronunciation: "jö-dua-aş-te-ön-bü-ro" },
-                { text: "Mets ça dans le tiroir.", meaning: "Bunu çekmeceye koy.", pronunciation: "me-sa-dan-lö-ti-ruar" },
-                { text: "Le miroir est cassé.", meaning: "Ayna kırık.", pronunciation: "lö-mi-ruar-e-ka-se" },
-                { text: "Où est la télécommande?", meaning: "Kumanda nerede?", pronunciation: "u-e-la-te-le-ko-mand" },
-                { text: "Le frigo est vide.", meaning: "Buzdolabı boş.", pronunciation: "lö-fri-go-e-vid" },
-                { text: "Passe l'aspirateur.", meaning: "Süpürge çek.", pronunciation: "pas-las-pi-ra-tör" },
-                { text: "Fais la vaisselle.", meaning: "Bulaşıkları yıka.", pronunciation: "fe-la-ve-sel" },
-                { text: "Change les draps.", meaning: "Çarşafları değiştir.", pronunciation: "şanj-le-dra" }
-            ]
-        },
-        313: {
-            title: "Şehir ve Yerler", phrases: [
-                { text: "Excusez-moi, où est la gare?", meaning: "Affedersiniz, istasyon nerede?", pronunciation: "eks-kü-ze-mua u-e-la-gar" },
-                { text: "C'est tout droit.", meaning: "Düz gidin.", pronunciation: "se-tu-drua" },
-                { text: "Tournez à droite.", meaning: "Sağa dönün.", pronunciation: "tur-ne-a-druat" },
-                { text: "Tournez à gauche.", meaning: "Sola dönün.", pronunciation: "tur-ne-a-goş" },
-                { text: "C'est près d'ici.", meaning: "Buraya yakın.", pronunciation: "se-pre-di-si" },
-                { text: "C'est loin d'ici.", meaning: "Buradan uzak.", pronunciation: "se-luen-di-si" },
-                { text: "Je cherche une pharmacie.", meaning: "Eczane arıyorum.", pronunciation: "jö-şerş-ün-far-ma-si" },
-                { text: "Il y a une banque près d'ici?", meaning: "Yakınlarda banka var mı?", pronunciation: "il-ya-ün-bank-pre-di-si" },
-                { text: "C'est à cinq minutes à pied.", meaning: "Yürüyerek beş dakika.", pronunciation: "se-ta-senk-mi-nüt-a-pye" },
-                { text: "Prenez la première à droite.", meaning: "İlk sağdan dönün.", pronunciation: "prö-ne-la-prö-myer-a-druat" },
-                { text: "Continuez tout droit.", meaning: "Düz devam edin.", pronunciation: "kon-ti-nü-e-tu-drua" },
-                { text: "C'est en face de l'église.", meaning: "Kilisenin karşısında.", pronunciation: "se-tan-fas-dö-le-gliz" },
-                { text: "Le musée est fermé.", meaning: "Müze kapalı.", pronunciation: "lö-mü-ze-e-fer-me" },
-                { text: "À quelle heure ouvre la poste?", meaning: "Postane saat kaçta açılıyor?", pronunciation: "a-kel-ör-uvr-la-post" },
-                { text: "Je me suis perdu(e).", meaning: "Kayboldum.", pronunciation: "jö-mö-süi-per-dü" }
-            ]
-        },
-        314: {
-            title: "Ulaşım", phrases: [
-                { text: "Un billet aller-retour.", meaning: "Gidiş-dönüş bileti.", pronunciation: "ön-bi-ye-a-le-rö-tur" },
-                { text: "Le train part à quelle heure?", meaning: "Tren saat kaçta kalkıyor?", pronunciation: "lö-tren-par-a-kel-ör" },
-                { text: "Je voudrais réserver une place.", meaning: "Bir yer ayırtmak istiyorum.", pronunciation: "jö-vu-dre-re-zer-ve-ün-plas" },
-                { text: "De quel quai part le train?", meaning: "Tren hangi perondan kalkıyor?", pronunciation: "dö-kel-ke-par-lö-tren" },
-                { text: "Le métro est en grève.", meaning: "Metro grevde.", pronunciation: "lö-me-tro-e-tan-grev" },
-                { text: "Où est l'arrêt de bus?", meaning: "Otobüs durağı nerede?", pronunciation: "u-e-la-re-dö-büs" },
-                { text: "Comment aller à l'aéroport?", meaning: "Havaalanına nasıl gidilir?", pronunciation: "ko-man-a-le-a-la-e-ro-por" },
-                { text: "Je suis en retard.", meaning: "Geç kaldım.", pronunciation: "jö-süi-an-rö-tar" },
-                { text: "Il y a des embouteillages.", meaning: "Trafik var.", pronunciation: "il-ya-de-zan-bu-te-yaj" },
-                { text: "Bon voyage!", meaning: "İyi yolculuklar!", pronunciation: "bon-vua-yaj" },
-                { text: "Attachez votre ceinture.", meaning: "Kemeri bağlayın.", pronunciation: "a-ta-şe-votr-sen-tür" },
-                { text: "Prochain arrêt...", meaning: "Bir sonraki durak...", pronunciation: "pro-şen-a-re" },
-                { text: "Je descends ici.", meaning: "Burada iniyorum.", pronunciation: "jö-de-san-di-si" },
-                { text: "C'est direct?", meaning: "Aktarmasız mı?", pronunciation: "se-di-rekt" },
-                { text: "Je préfère prendre le taxi.", meaning: "Taksiyi tercih ediyorum.", pronunciation: "jö-pre-fer-prandr-lö-tak-si" }
-            ]
-        },
-        315: {
-            title: "Saat ve Zaman", phrases: [
-                { text: "Quelle heure est-il?", meaning: "Saat kaç?", pronunciation: "kel-ör-e-til" },
-                { text: "Il est huit heures.", meaning: "Saat sekiz.", pronunciation: "il-e-üit-ör" },
-                { text: "Il est midi.", meaning: "Saat on iki (öğlen).", pronunciation: "il-e-mi-di" },
-                { text: "Il est minuit.", meaning: "Gece yarısı.", pronunciation: "il-e-mi-nüi" },
-                { text: "À quelle heure?", meaning: "Saat kaçta?", pronunciation: "a-kel-ör" },
-                { text: "À neuf heures et demie.", meaning: "Dokuz buçukta.", pronunciation: "a-növ-ör-e-dö-mi" },
-                { text: "Dans dix minutes.", meaning: "On dakika içinde.", pronunciation: "dan-di-mi-nüt" },
-                { text: "Je suis en avance.", meaning: "Erken geldim.", pronunciation: "jö-süi-an-a-vans" },
-                { text: "Je suis en retard.", meaning: "Geç kaldım.", pronunciation: "jö-süi-an-rö-tar" },
-                { text: "Il est tôt.", meaning: "Erken.", pronunciation: "il-e-to" },
-                { text: "Il est tard.", meaning: "Geç oldu.", pronunciation: "il-e-tar" },
-                { text: "Rendez-vous à quelle heure?", meaning: "Randevu saat kaçta?", pronunciation: "ran-de-vu-a-kel-ör" },
-                { text: "Dépêche-toi!", meaning: "Acele et!", pronunciation: "de-peş-tua" },
-                { text: "Prends ton temps.", meaning: "Acele etme.", pronunciation: "pran-ton-tan" },
-                { text: "C'est l'heure de partir.", meaning: "Gitme vakti.", pronunciation: "se-lör-dö-par-tir" }
-            ]
-        },
-        316: {
-            title: "Hava Durumu", phrases: [
-                { text: "Quel temps fait-il?", meaning: "Hava nasıl?", pronunciation: "kel-tan-fe-til" },
-                { text: "Il fait beau.", meaning: "Hava güzel.", pronunciation: "il-fe-bo" },
-                { text: "Il fait mauvais.", meaning: "Hava kötü.", pronunciation: "il-fe-mo-ve" },
-                { text: "Il pleut.", meaning: "Yağmur yağıyor.", pronunciation: "il-plö" },
-                { text: "Il neige.", meaning: "Kar yağıyor.", pronunciation: "il-nej" },
-                { text: "Il fait chaud.", meaning: "Hava sıcak.", pronunciation: "il-fe-şo" },
-                { text: "Il fait froid.", meaning: "Hava soğuk.", pronunciation: "il-fe-frua" },
-                { text: "Il y a du soleil.", meaning: "Güneşli.", pronunciation: "il-ya-dü-so-ley" },
-                { text: "Il y a du vent.", meaning: "Rüzgarlı.", pronunciation: "il-ya-dü-van" },
-                { text: "Le ciel est nuageux.", meaning: "Gökyüzü bulutlu.", pronunciation: "lö-syel-e-nüa-jö" },
-                { text: "Prends un parapluie.", meaning: "Şemsiye al.", pronunciation: "pran-ön-pa-ra-plüi" },
-                { text: "Mets un manteau.", meaning: "Mont giy.", pronunciation: "me-ön-man-to" },
-                { text: "Il va pleuvoir.", meaning: "Yağmur yağacak.", pronunciation: "il-va-plö-vuar" },
-                { text: "La météo dit qu'il fera beau.", meaning: "Hava durumu güzel olacak diyor.", pronunciation: "la-me-te-o-di-kil-fö-ra-bo" },
-                { text: "Quelle température fait-il?", meaning: "Sıcaklık kaç derece?", pronunciation: "kel-tan-pe-ra-tür-fe-til" }
-            ]
-        },
-        317: {
-            title: "Günlük Aktiviteler", phrases: [
-                { text: "Je me réveille à sept heures.", meaning: "Yedide uyanıyorum.", pronunciation: "jö-mö-re-vey-a-set-ör" },
-                { text: "Je prends une douche.", meaning: "Duş alıyorum.", pronunciation: "jö-pran-ün-duş" },
-                { text: "Je prends le petit-déjeuner.", meaning: "Kahvaltı yapıyorum.", pronunciation: "jö-pran-lö-pö-ti-de-jö-ne" },
-                { text: "Je vais au travail.", meaning: "İşe gidiyorum.", pronunciation: "jö-ve-o-tra-vay" },
-                { text: "Je déjeune à midi.", meaning: "Öğlen yemek yiyorum.", pronunciation: "jö-de-jön-a-mi-di" },
-                { text: "Je rentre à la maison.", meaning: "Eve dönüyorum.", pronunciation: "jö-rantr-a-la-me-zon" },
-                { text: "Je fais les courses.", meaning: "Alışveriş yapıyorum.", pronunciation: "jö-fe-le-kurs" },
-                { text: "Je prépare le dîner.", meaning: "Akşam yemeği hazırlıyorum.", pronunciation: "jö-pre-par-lö-di-ne" },
-                { text: "Je regarde la télé.", meaning: "TV izliyorum.", pronunciation: "jö-rö-gard-la-te-le" },
-                { text: "Je me couche tôt.", meaning: "Erken yatıyorum.", pronunciation: "jö-mö-kuş-to" },
-                { text: "Je fais du sport.", meaning: "Spor yapıyorum.", pronunciation: "jö-fe-dü-spor" },
-                { text: "Je lis un livre.", meaning: "Kitap okuyorum.", pronunciation: "jö-li-ön-livr" },
-                { text: "Je fais le ménage.", meaning: "Ev işi yapıyorum.", pronunciation: "jö-fe-lö-me-naj" },
-                { text: "Je me repose.", meaning: "Dinleniyorum.", pronunciation: "jö-mö-rö-poz" },
-                { text: "Je vais me coucher.", meaning: "Yatmaya gidiyorum.", pronunciation: "jö-ve-mö-ku-şe" }
-            ]
-        },
-        318: {
-            title: "Hobiler", phrases: [
-                { text: "Quels sont tes hobbies?", meaning: "Hobilerin neler?", pronunciation: "kel-son-te-o-bi" },
-                { text: "J'aime lire.", meaning: "Okumayı severim.", pronunciation: "jem-lir" },
-                { text: "Je fais de la musique.", meaning: "Müzik yapıyorum.", pronunciation: "jö-fe-dö-la-mü-zik" },
-                { text: "Je joue de la guitare.", meaning: "Gitar çalıyorum.", pronunciation: "jö-ju-dö-la-gi-tar" },
-                { text: "J'adore cuisiner.", meaning: "Yemek yapmayı çok severim.", pronunciation: "ja-dor-küi-zi-ne" },
-                { text: "Je fais de la peinture.", meaning: "Resim yapıyorum.", pronunciation: "jö-fe-dö-la-pen-tür" },
-                { text: "Je collectionne les timbres.", meaning: "Pul koleksiyonu yapıyorum.", pronunciation: "jö-ko-lek-syon-le-tanbr" },
-                { text: "J'aime voyager.", meaning: "Seyahat etmeyi severim.", pronunciation: "jem-vua-ya-je" },
-                { text: "Je fais du jardinage.", meaning: "Bahçecilik yapıyorum.", pronunciation: "jö-fe-dü-jar-di-naj" },
-                { text: "Je joue aux jeux vidéo.", meaning: "Video oyunu oynuyorum.", pronunciation: "jö-ju-o-jö-vi-de-o" },
-                { text: "Je fais de la photo.", meaning: "Fotoğrafçılık yapıyorum.", pronunciation: "jö-fe-dö-la-fo-to" },
-                { text: "J'aime danser.", meaning: "Dans etmeyi severim.", pronunciation: "jem-dan-se" },
-                { text: "Je fais du vélo.", meaning: "Bisiklet sürüyorum.", pronunciation: "jö-fe-dü-ve-lo" },
-                { text: "C'est mon passe-temps préféré.", meaning: "En sevdiğim hobi.", pronunciation: "se-mon-pas-tan-pre-fe-re" },
-                { text: "Je n'ai pas le temps.", meaning: "Zamanım yok.", pronunciation: "jö-ne-pa-lö-tan" }
-            ]
-        },
-        319: {
-            title: "Duygular", phrases: [
-                { text: "Je suis content(e).", meaning: "Mutluyum.", pronunciation: "jö-süi-kon-tan(t)" },
-                { text: "Je suis triste.", meaning: "Üzgünüm.", pronunciation: "jö-süi-trist" },
-                { text: "Je suis en colère.", meaning: "Kızgınım.", pronunciation: "jö-süi-an-ko-ler" },
-                { text: "J'ai peur.", meaning: "Korkuyorum.", pronunciation: "je-pör" },
-                { text: "Je suis fatigué(e).", meaning: "Yorgunum.", pronunciation: "jö-süi-fa-ti-ge" },
-                { text: "Je suis stressé(e).", meaning: "Stressliyim.", pronunciation: "jö-süi-stre-se" },
-                { text: "Je suis inquiet/inquiète.", meaning: "Endişeliyim.", pronunciation: "jö-süi-an-kye(t)" },
-                { text: "Je suis surpris(e).", meaning: "Şaşkınım.", pronunciation: "jö-süi-sür-pri(z)" },
-                { text: "Je suis déçu(e).", meaning: "Hayal kırıklığına uğradım.", pronunciation: "jö-süi-de-sü" },
-                { text: "Je suis excité(e).", meaning: "Heyecanlıyım.", pronunciation: "jö-süi-ek-si-te" },
-                { text: "Ça ne va pas.", meaning: "İyi değilim.", pronunciation: "sa-nö-va-pa" },
-                { text: "Je me sens bien.", meaning: "Kendimi iyi hissediyorum.", pronunciation: "jö-mö-san-byan" },
-                { text: "Qu'est-ce qui ne va pas?", meaning: "Sorun ne?", pronunciation: "kes-ki-nö-va-pa" },
-                { text: "Ne t'inquiète pas.", meaning: "Endişelenme.", pronunciation: "nö-tan-kyet-pa" },
-                { text: "Je suis soulagé(e).", meaning: "Rahatladım.", pronunciation: "jö-süi-su-la-je" }
-            ]
-        },
-        320: {
-            title: "Vücut Bölümleri", phrases: [
+            title: "Avoir Mal à (Ağrısı Olmak)", phrases: [
                 { text: "J'ai mal à la tête.", meaning: "Başım ağrıyor.", pronunciation: "je-mal-a-la-tet" },
                 { text: "J'ai mal au ventre.", meaning: "Karnım ağrıyor.", pronunciation: "je-mal-o-vantr" },
                 { text: "J'ai mal aux dents.", meaning: "Dişim ağrıyor.", pronunciation: "je-mal-o-dan" },
                 { text: "J'ai mal au dos.", meaning: "Sırtım ağrıyor.", pronunciation: "je-mal-o-do" },
+                { text: "Ça fait mal.", meaning: "Acıyor.", pronunciation: "sa-fe-mal" },
+                { text: "Je suis malade.", meaning: "Hastayım.", pronunciation: "jö-süi-ma-lad" },
+                { text: "J'ai de la fièvre.", meaning: "Ateşim var.", pronunciation: "je-dö-la-fyevr" },
+                { text: "J'ai besoin d'un médecin.", meaning: "Bir doktora ihtiyacım var.", pronunciation: "je-bö-zuen-dön-med-sen" },
+                { text: "Prends ce médicament.", meaning: "Bu ilacı al.", pronunciation: "pran-sö-me-di-ka-man" },
+                { text: "Je suis fatigué.", meaning: "Yorgunum.", pronunciation: "jö-süi-fa-ti-ge" },
+                { text: "Mon nez coule.", meaning: "Burnum akıyor.", pronunciation: "mon-ne-kul" },
                 { text: "J'ai mal à la gorge.", meaning: "Boğazım ağrıyor.", pronunciation: "je-mal-a-la-gorj" },
-                { text: "Levez la main.", meaning: "Elinizi kaldırın.", pronunciation: "lö-ve-la-men" },
-                { text: "Fermez les yeux.", meaning: "Gözlerinizi kapatın.", pronunciation: "fer-me-le-zyö" },
-                { text: "Ouvrez la bouche.", meaning: "Ağzınızı açın.", pronunciation: "uv-re-la-buş" },
-                { text: "Tendez le bras.", meaning: "Kolunuzu uzatın.", pronunciation: "tan-de-lö-bra" },
-                { text: "Je me suis cassé le bras.", meaning: "Kolumu kırdım.", pronunciation: "jö-mö-süi-ka-se-lö-bra" },
-                { text: "Je me suis coupé le doigt.", meaning: "Parmağımı kestim.", pronunciation: "jö-mö-süi-ku-pe-lö-dua" },
-                { text: "J'ai le nez bouché.", meaning: "Burnum tıkalı.", pronunciation: "je-lö-ne-bu-şe" },
-                { text: "J'ai les yeux rouges.", meaning: "Gözlerim kırmızı.", pronunciation: "je-le-zyö-ruj" },
-                { text: "Il a les cheveux blonds.", meaning: "Sarı saçlı.", pronunciation: "il-a-le-şö-vö-blon" },
-                { text: "Elle a les yeux bleus.", meaning: "Mavi gözlü.", pronunciation: "el-a-le-zyö-blö" }
+                { text: "Repose-toi.", meaning: "Dinlen.", pronunciation: "rö-poz-tua" },
+                { text: "Ça va mieux.", meaning: "Daha iyiyim.", pronunciation: "sa-va-myö" },
+                { text: "Appelez une ambulance!", meaning: "Ambulans çağırın!", pronunciation: "a-pö-le-ün-an-bü-lans" }
+            ]
+        },
+        312: {
+            title: "Porter Fiili ve Giysiler", phrases: [
+                { text: "Je porte un pantalon.", meaning: "Pantolon giyiyorum.", pronunciation: "jö-port-ön-pan-ta-lon" },
+                { text: "Elle porte une robe rouge.", meaning: "O kırmızı bir elbise giyiyor.", pronunciation: "el-port-ün-rob-ruj" },
+                { text: "Mets ton manteau.", meaning: "Paltonu giy.", pronunciation: "me-ton-man-to" },
+                { text: "J'aime cette chemise.", meaning: "Bu gömleği seviyorum.", pronunciation: "jem-set-şö-miz" },
+                { text: "Ces chaussures sont confortables.", meaning: "Bu ayakkabılar rahat.", pronunciation: "se-şo-sür-son-kon-for-tabl" },
+                { text: "Quelle est ta taille?", meaning: "Bedenin ne?", pronunciation: "kel-e-ta-tay" },
+                { text: "C'est trop serré.", meaning: "Çok dar.", pronunciation: "se-tro-se-re" },
+                { text: "C'est trop large.", meaning: "Çok bol.", pronunciation: "se-tro-larj" },
+                { text: "Je cherche une jupe.", meaning: "Etek arıyorum.", pronunciation: "jö-şerş-ün-jüp" },
+                { text: "Il fait froid, mets un bonnet.", meaning: "Hava soğuk, bere tak.", pronunciation: "il-fe-frua me-ön-bo-ne" },
+                { text: "J'adore tes lunettes.", meaning: "Gözlüklerine bayıldım.", pronunciation: "ja-dor-te-lü-net" },
+                { text: "Où est mon écharpe?", meaning: "Atkım nerede?", pronunciation: "u-e-mo-ne-şarp" },
+                { text: "Je porte des baskets.", meaning: "Spor ayakkabı giyiyorum.", pronunciation: "jö-port-de-bas-ket" },
+                { text: "C'est à la mode.", meaning: "Bu moda.", pronunciation: "se-ta-la-mod" },
+                { text: "Ça te va bien.", meaning: "Sana çok yakıştı.", pronunciation: "sa-tö-va-byan" }
+            ]
+        },
+        313: {
+            title: "Partitif Artikeller (Du, De la, De l', Des)", phrases: [
+                { text: "Je mange du pain.", meaning: "Ekmek yiyorum.", pronunciation: "jö-manj-dü-pen" },
+                { text: "Je bois de l'eau.", meaning: "Su içiyorum.", pronunciation: "jö-bua-dö-lo" },
+                { text: "Tu veux du fromage?", meaning: "Peynir ister misin?", pronunciation: "tü-vö-dü-fro-maj" },
+                { text: "Je voudrais de la confiture.", meaning: "Reçel istiyorum.", pronunciation: "jö-vu-dre-dö-la-kon-fi-tür" },
+                { text: "Il mange des pâtes.", meaning: "Makarna yiyor.", pronunciation: "il-manj-de-pat" },
+                { text: "Je ne mange pas de viande.", meaning: "Et yemiyorum.", pronunciation: "jö-nö-manj-pa-dö-vyand" },
+                { text: "Passe-moi du beurre.", meaning: "Bana tereyağı uzat.", pronunciation: "pas-mua-dü-bör" },
+                { text: "C'est du poulet?", meaning: "Bu tavuk mu?", pronunciation: "se-dü-pu-le" },
+                { text: "J'aime le poisson.", meaning: "Balığı severim (Genel).", pronunciation: "jem-lö-pua-son" },
+                { text: "Je mange du poisson.", meaning: "Balık yiyorum (Miktar).", pronunciation: "jö-manj-dü-pua-son" },
+                { text: "Il y a du sucre?", meaning: "Şeker var mı?", pronunciation: "il-ya-dü-sükr" },
+                { text: "Je prends du café.", meaning: "Kahve alıyorum.", pronunciation: "jö-pran-dü-ka-fe" },
+                { text: "Elle boit du thé.", meaning: "O çay içiyor.", pronunciation: "el-bua-dü-te" },
+                { text: "C'est bon pour la santé.", meaning: "Sağlık için iyi.", pronunciation: "se-bon-pur-la-san-te" },
+                { text: "Bon appétit!", meaning: "Afiyet olsun!", pronunciation: "bon-a-pe-ti" }
+            ]
+        },
+        314: {
+            title: "İçecekler (Sipariş Verme)", phrases: [
+                { text: "Je voudrais un café.", meaning: "Bir kahve istiyorum.", pronunciation: "jö-vu-dre-ön-ka-fe" },
+                { text: "Un verre d'eau, s'il vous plaît.", meaning: "Bir bardak su lütfen.", pronunciation: "ön-ver-do-sil-vu-ple" },
+                { text: "J'ai soif.", meaning: "Susadım.", pronunciation: "je-suaf" },
+                { text: "C'est délicieux.", meaning: "Bu lezzetli.", pronunciation: "se-de-li-syö" },
+                { text: "Sans sucre, s'il vous plaît.", meaning: "Şekersiz lütfen.", pronunciation: "san-sükr-sil-vu-ple" },
+                { text: "Avec du lait.", meaning: "Sütlü.", pronunciation: "a-vek-dü-le" },
+                { text: "L'addition, s'il vous plaît.", meaning: "Hesap lütfen.", pronunciation: "la-di-syon-sil-vu-ple" },
+                { text: "C'est chaud.", meaning: "Bu sıcak.", pronunciation: "se-şo" },
+                { text: "C'est froid.", meaning: "Bu soğuk.", pronunciation: "se-frua" },
+                { text: "Santé!", meaning: "Şerefe!", pronunciation: "san-te" },
+                { text: "Un jus d'orange.", meaning: "Bir portakal suyu.", pronunciation: "ön-jü-do-ranj" },
+                { text: "Vous avez du thé?", meaning: "Çayınız var mı?", pronunciation: "vu-za-ve-dü-te" },
+                { text: "Je bois de l'eau.", meaning: "Su içiyorum.", pronunciation: "jö-bua-dö-lo" },
+                { text: "C'est bon.", meaning: "Bu iyi/güzel.", pronunciation: "se-bon" },
+                { text: "Encore un peu.", meaning: "Biraz daha.", pronunciation: "an-kor-ön-pö" }
+            ]
+        },
+        315: {
+            title: "Saatleri Söyleme (L'Heure)", phrases: [
+                { text: "Quelle heure est-il?", meaning: "Saat kaç?", pronunciation: "kel-ör-e-til" },
+                { text: "Il est trois heures.", meaning: "Saat üç.", pronunciation: "il-e-trua-zör" },
+                { text: "Il est midi.", meaning: "Saat on iki (öğlen).", pronunciation: "il-e-mi-di" },
+                { text: "Il est minuit.", meaning: "Gece yarısı.", pronunciation: "il-e-mi-nüi" },
+                { text: "Il est quatre heures et quart.", meaning: "Saat dördü çeyrek geçiyor.", pronunciation: "il-e-ka-trör-e-kar" },
+                { text: "Il est cinq heures et demie.", meaning: "Saat beş buçuk.", pronunciation: "il-e-sen-kör-e-dö-mi" },
+                { text: "Il est six heures moins le quart.", meaning: "Saat altıya çeyrek var.", pronunciation: "il-e-si-zör-muan-lö-kar" },
+                { text: "À quelle heure?", meaning: "Saat kaçta?", pronunciation: "a-kel-ör" },
+                { text: "À huit heures pile.", meaning: "Tam sekizde.", pronunciation: "a-üi-tör-pil" },
+                { text: "Je suis en retard.", meaning: "Geç kaldım.", pronunciation: "jö-süi-an-rö-tar" },
+                { text: "Tu es en avance.", meaning: "Erken geldin.", pronunciation: "tü-e-tan-a-vans" },
+                { text: "Le film commence à 20h.", meaning: "Film saat 20'de başlıyor.", pronunciation: "lö-film-ko-mans-a-ven-tör" },
+                { text: "Il est tard.", meaning: "Geç oldu.", pronunciation: "il-e-tar" },
+                { text: "Il est tôt.", meaning: "Erken.", pronunciation: "il-e-to" },
+                { text: "On se voit à 10h.", meaning: "Saat 10'da görüşürüz.", pronunciation: "on-sö-vua-a-di-zör" }
+            ]
+        },
+        316: {
+            title: "Günlük Rutin (Dönüşlü Fiiller)", phrases: [
+                { text: "Je me réveille à 7h.", meaning: "7'de uyanıyorum.", pronunciation: "jö-mö-re-vey-a-se-tör" },
+                { text: "Je me lève.", meaning: "Kalkıyorum.", pronunciation: "jö-mö-lev" },
+                { text: "Je me lave.", meaning: "Yıkanıyorum.", pronunciation: "jö-mö-lav" },
+                { text: "Je m'habille.", meaning: "Giyiniyorum.", pronunciation: "jö-ma-biy" },
+                { text: "Je me brosse les dents.", meaning: "Dişlerimi fırçalıyorum.", pronunciation: "jö-mö-bros-le-dan" },
+                { text: "Je me coiffe.", meaning: "Saçımı tarıyorum.", pronunciation: "jö-mö-kuaf" },
+                { text: "Je me prépare.", meaning: "Hazırlanıyorum.", pronunciation: "jö-mö-pre-par" },
+                { text: "Je me maquille.", meaning: "Makyaj yapıyorum.", pronunciation: "jö-mö-ma-kiy" },
+                { text: "Je me repose.", meaning: "Dinleniyorum.", pronunciation: "jö-mö-rö-poz" },
+                { text: "Je me promène.", meaning: "Yürüyüş yapıyorum.", pronunciation: "jö-mö-pro-men" },
+                { text: "Je m'amuse bien.", meaning: "İyi eğleniyorum.", pronunciation: "jö-ma-müz-byan" },
+                { text: "Je me dépêche.", meaning: "Acele ediyorum.", pronunciation: "jö-mö-de-peş" },
+                { text: "Je me couche à 23h.", meaning: "23'te yatıyorum.", pronunciation: "jö-mö-kuş-a-ven-trua-zör" },
+                { text: "Je m'endors vite.", meaning: "Hemen uyuyorum.", pronunciation: "jö-man-dor-vit" },
+                { text: "Comment tu t'appelles?", meaning: "Adın ne? (Dönüşlü)", pronunciation: "ko-man-tü-ta-pel" }
+            ]
+        },
+        317: {
+            title: "Hobiler (Faire vs Jouer)", phrases: [
+                { text: "Quels sont tes loisirs?", meaning: "Hobilerin neler?", pronunciation: "kel-son-te-lua-zir" },
+                { text: "Je joue au football.", meaning: "Futbol oynuyorum.", pronunciation: "jö-ju-o-fut-bol" },
+                { text: "Je joue du piano.", meaning: "Piyano çalıyorum.", pronunciation: "jö-ju-dü-pya-no" },
+                { text: "Je fais du sport.", meaning: "Spor yapıyorum.", pronunciation: "jö-fe-dü-spor" },
+                { text: "Je fais de la natation.", meaning: "Yüzüyorum.", pronunciation: "jö-fe-dö-la-na-ta-syon" },
+                { text: "Je joue aux échecs.", meaning: "Satranç oynuyorum.", pronunciation: "jö-ju-o-ze-şek" },
+                { text: "Je joue de la guitare.", meaning: "Gitar çalıyorum.", pronunciation: "jö-ju-dö-la-gi-tar" },
+                { text: "Je fais du vélo.", meaning: "Bisiklet sürüyorum.", pronunciation: "jö-fe-dü-ve-lo" },
+                { text: "Je joue à des jeux vidéo.", meaning: "Video oyunları oynuyorum.", pronunciation: "jö-ju-a-de-jö-vi-de-o" },
+                { text: "J'aime lire.", meaning: "Okumayı severim.", pronunciation: "jem-lir" },
+                { text: "Je regarde la télé.", meaning: "Televizyon izliyorum.", pronunciation: "jö-rö-gard-la-te-le" },
+                { text: "Je fais du shopping.", meaning: "Alışveriş yapıyorum.", pronunciation: "jö-fe-dü-şo-ping" },
+                { text: "Je sors avec mes amis.", meaning: "Arkadaşlarımla çıkıyorum.", pronunciation: "jö-sor-a-vek-me-za-mi" },
+                { text: "Je joue au tennis.", meaning: "Tenis oynuyorum.", pronunciation: "jö-ju-o-te-nis" },
+                { text: "C'est ma passion.", meaning: "Bu benim tutkum.", pronunciation: "se-ma-pa-syon" }
+            ]
+        },
+        318: {
+            title: "Hava Durumu (Le Temps)", phrases: [
+                { text: "Quel temps fait-il?", meaning: "Hava nasıl?", pronunciation: "kel-tan-fe-til" },
+                { text: "Il fait beau.", meaning: "Hava güzel.", pronunciation: "il-fe-bo" },
+                { text: "Il fait mauvais.", meaning: "Hava kötü.", pronunciation: "il-fe-mo-ve" },
+                { text: "Il fait froid.", meaning: "Hava soğuk.", pronunciation: "il-fe-frua" },
+                { text: "Il fait chaud.", meaning: "Hava sıcak.", pronunciation: "il-fe-şo" },
+                { text: "Il y a du soleil.", meaning: "Güneş var.", pronunciation: "il-ya-dü-so-ley" },
+                { text: "Il y a du vent.", meaning: "Rüzgar var.", pronunciation: "il-ya-dü-van" },
+                { text: "Il pleut.", meaning: "Yağmur yağıyor.", pronunciation: "il-plö" },
+                { text: "Il neige.", meaning: "Kar yağıyor.", pronunciation: "il-nej" },
+                { text: "C'est nuageux.", meaning: "Bulutlu.", pronunciation: "se-nüa-jö" },
+                { text: "Quelle température fait-il?", meaning: "Sıcaklık kaç derece?", pronunciation: "kel-tan-pe-ra-tür-fe-til" },
+                { text: "Il fait 20 degrés.", meaning: "Hava 20 derece.", pronunciation: "il-fe-ven-dö-gre" },
+                { text: "Il fait un temps magnifique.", meaning: "Harika bir hava var.", pronunciation: "il-fe-tön-tan-ma-nyi-fik" },
+                { text: "Il gèle.", meaning: "Don oluyor.", pronunciation: "il-jel" },
+                { text: "Prends un parapluie.", meaning: "Şemsiye al.", pronunciation: "pran-ön-pa-ra-plüi" }
+            ]
+        },
+        319: {
+            title: "Duygular ve Cinsiyet Uyumu", phrases: [
+                { text: "Je suis heureux.", meaning: "Mutluyum (Erkek).", pronunciation: "jö-süi-zö-rö" },
+                { text: "Je suis heureuse.", meaning: "Mutluyum (Kadın).", pronunciation: "jö-süi-zö-röz" },
+                { text: "Il est triste.", meaning: "O üzgün.", pronunciation: "il-e-trist" },
+                { text: "Elle est fâchée.", meaning: "O kızgın (Kadın).", pronunciation: "el-e-fa-şe" },
+                { text: "Nous sommes fatigués.", meaning: "Biz yorgunuz.", pronunciation: "nu-som-fa-ti-ge" },
+                { text: "Tu es amoureux?", meaning: "Aşık mısın?", pronunciation: "tü-e-a-mu-rö" },
+                { text: "Je suis surpris.", meaning: "Şaşırdım.", pronunciation: "jö-süi-sür-pri" },
+                { text: "Elle est inquiète.", meaning: "O endişeli.", pronunciation: "el-e-ten-kyet" },
+                { text: "Je suis désolé.", meaning: "Üzgünüm/Özür dilerim.", pronunciation: "jö-süi-de-zo-le" },
+                { text: "C'est énervant!", meaning: "Bu sinir bozucu!", pronunciation: "se-te-ner-van" },
+                { text: "J'ai peur.", meaning: "Korkuyorum.", pronunciation: "je-pör" },
+                { text: "Je suis content de te voir.", meaning: "Seni gördüğüme sevindim.", pronunciation: "jö-süi-kon-tan-dö-tö-vuar" },
+                { text: "Il est jaloux.", meaning: "O kıskanç.", pronunciation: "il-e-ja-lu" },
+                { text: "Elle est timide.", meaning: "O utangaç.", pronunciation: "el-e-ti-mid" },
+                { text: "Soyez calmes.", meaning: "Sakin olun.", pronunciation: "sua-ye-kalm" }
+            ]
+        },
+        320: {
+            title: "Emir Kipi ve Yol Tarifi (L'Impératif)", phrases: [
+                { text: "Tournez à droite.", meaning: "Sağa dönün.", pronunciation: "tur-ne-a-druat" },
+                { text: "Va tout droit!", meaning: "Dümdüz git!", pronunciation: "va-tu-drua" },
+                { text: "Écoute-moi.", meaning: "Beni dinle.", pronunciation: "e-kut-mua" },
+                { text: "Regardez ici.", meaning: "Buraya bakın.", pronunciation: "rö-gar-de-i-si" },
+                { text: "Ne parlez pas.", meaning: "Konuşmayın.", pronunciation: "nö-par-le-pa" },
+                { text: "Prends la première rue.", meaning: "İlk sokağa gir (al).", pronunciation: "pran-la-prö-myer-rü" },
+                { text: "Traversez le pont.", meaning: "Köprüyü geçin.", pronunciation: "tra-ver-se-lö-pon" },
+                { text: "C'est loin?", meaning: "Uzak mı?", pronunciation: "se-luen" },
+                { text: "C'est à côté de la banque.", meaning: "Bankanın yanında.", pronunciation: "se-ta-ko-te-dö-la-bank" },
+                { text: "Arrêtez-vous!", meaning: "Durun!", pronunciation: "a-re-te-vu" },
+                { text: "Entrez!", meaning: "Girin!", pronunciation: "an-tre" },
+                { text: "Sortez!", meaning: "Çıkın!", pronunciation: "sor-te" },
+                { text: "Allons-y!", meaning: "Hadi gidelim!", pronunciation: "a-lon-zi" },
+                { text: "Ne tourne pas à gauche.", meaning: "Sola dönme.", pronunciation: "nö-turn-pa-a-goş" },
+                { text: "Suivez-moi.", meaning: "Beni takip edin.", pronunciation: "süi-ve-mua" }
             ]
         },
         321: {
-            title: "Ulaşım", phrases: [
-                { text: "Le bus arrive dans cinq minutes.", meaning: "Otobüs beş dakikaya geliyor.", pronunciation: "lö-büs-a-riv-dan-senk-mi-nüt" },
-                { text: "Je prends le métro tous les jours.", meaning: "Her gün metro alıyorum.", pronunciation: "jö-pran-lö-me-tro-tu-le-jur" },
-                { text: "Où est la station de taxi?", meaning: "Taksi durağı nerede?", pronunciation: "u-e-la-sta-syon-dö-tak-si" },
-                { text: "Le tramway est gratuit.", meaning: "Tramvay ücretsiz.", pronunciation: "lö-tram-ve-e-gra-tüi" },
-                { text: "Tu as ton abonnement?", meaning: "Abonman kartın var mı?", pronunciation: "tü-a-ton-a-bon-man" },
-                { text: "Le vélo est écologique.", meaning: "Bisiklet çevre dostu.", pronunciation: "lö-ve-lo-e-te-ko-lo-jik" },
-                { text: "Je vais à pied.", meaning: "Yürüyerek gidiyorum.", pronunciation: "jö-ve-a-pye" },
-                { text: "Ma voiture est en panne.", meaning: "Arabam bozuldu.", pronunciation: "ma-vua-tür-e-tan-pan" },
-                { text: "Fais le plein d'essence.", meaning: "Benzin doldur.", pronunciation: "fe-lö-plen-de-sans" },
-                { text: "Je dois faire réviser ma voiture.", meaning: "Arabamı bakıma göndermem lazım.", pronunciation: "jö-dua-fer-re-vi-ze-ma-vua-tür" },
-                { text: "Où est le parking?", meaning: "Otopark nerede?", pronunciation: "u-e-lö-par-king" },
-                { text: "Il y a un péage.", meaning: "Ücretli yol var.", pronunciation: "il-ya-ön-pe-aj" },
-                { text: "Attention au feu rouge!", meaning: "Kırmızı ışığa dikkat!", pronunciation: "a-tan-syon-o-fö-ruj" },
-                { text: "Passez au feu vert.", meaning: "Yeşil ışıkta geçin.", pronunciation: "pa-se-o-fö-ver" },
-                { text: "La circulation est dense.", meaning: "Trafik yoğun.", pronunciation: "la-sir-kü-la-syon-e-dans" }
+            title: "Prendre Fiili ve Ulaşım", phrases: [
+                { text: "Je prends le bus.", meaning: "Otobüse biniyorum.", pronunciation: "jö-pran-lö-büs" },
+                { text: "Tu prends le métro?", meaning: "Metroya mı biniyorsun?", pronunciation: "tü-pran-lö-me-tro" },
+                { text: "Nous prenons le train.", meaning: "Trene biniyoruz.", pronunciation: "nu-prö-non-lö-tren" },
+                { text: "Ils prennent l'avion.", meaning: "Uçağa biniyorlar.", pronunciation: "il-pren-la-vyon" },
+                { text: "Prends le taxi.", meaning: "Taksiye bin.", pronunciation: "pran-lö-tak-si" },
+                { text: "Je vais prendre une douche.", meaning: "Duş alacağım.", pronunciation: "jö-ve-pran-drün-duş" },
+                { text: "Qu'est-ce que vous prenez?", meaning: "Ne alırsınız/içersiniz?", pronunciation: "kes-kö-vu-prö-ne" },
+                { text: "Je prends un café.", meaning: "Bir kahve alıyorum.", pronunciation: "jö-pran-ön-ka-fe" },
+                { text: "Elle prend des photos.", meaning: "Fotoğraf çekiyor.", pronunciation: "el-pran-de-fo-to" },
+                { text: "Vous prenez la voiture?", meaning: "Arabayı mı alıyorsunuz?", pronunciation: "vu-prö-ne-la-vua-tür" },
+                { text: "Je descends à la prochaine.", meaning: "Sonraki durakta iniyorum.", pronunciation: "jö-de-san-a-la-pro-şen" },
+                { text: "C'est loin à pied.", meaning: "Yürüyerek uzak.", pronunciation: "se-luen-a-pye" },
+                { text: "Le bus est complet.", meaning: "Otobüs dolu.", pronunciation: "lö-büs-e-kom-ple" },
+                { text: "J'ai raté le train.", meaning: "Treni kaçırdım.", pronunciation: "je-ra-te-lö-tren" },
+                { text: "Compostez votre billet.", meaning: "Biletinizi okutun/damgalatın.", pronunciation: "kom-pos-te-votr-bi-ye" }
             ]
         },
         322: {
-            title: "Mevsimler", phrases: [
-                { text: "Quelle saison préférez-vous?", meaning: "Hangi mevsimi tercih ediyorsunuz?", pronunciation: "kel-se-zon-pre-fe-re-vu" },
-                { text: "J'aime le printemps.", meaning: "İlkbaharı severim.", pronunciation: "jem-lö-pren-tan" },
-                { text: "En été, il fait très chaud.", meaning: "Yazın çok sıcak olur.", pronunciation: "an-e-te-il-fe-tre-şo" },
-                { text: "L'automne est magnifique.", meaning: "Sonbahar muhteşem.", pronunciation: "lo-ton-e-ma-nyi-fik" },
-                { text: "En hiver, je fais du ski.", meaning: "Kışın kayak yaparım.", pronunciation: "an-i-ver-jö-fe-dü-ski" },
+            title: "Mevsimler ve Edatlar (Au/En)", phrases: [
+                { text: "Quelle saison est-ce?", meaning: "Hangi mevsimdeyiz?", pronunciation: "kel-se-zon-es" },
+                { text: "En été, il fait chaud.", meaning: "Yazın (EN) hava sıcak.", pronunciation: "an-e-te-il-fe-şo" },
+                { text: "En hiver, il fait froid.", meaning: "Kışın (EN) hava soğuk.", pronunciation: "an-i-ver-il-fe-frua" },
+                { text: "En automne, il pleut.", meaning: "Sonbaharda (EN) yağmur yağar.", pronunciation: "an-o-ton-il-plö" },
+                { text: "Au printemps, tout est vert.", meaning: "İlkbaharda (AU) her yer yeşil.", pronunciation: "o-pren-tan-tu-te-ver" },
+                { text: "J'aime l'été.", meaning: "Yazı severim (Artikel).", pronunciation: "jem-le-te" },
+                { text: "Je pars en vacances en août.", meaning: "Ağustosta tatile gidiyorum.", pronunciation: "jö-par-an-va-kans-an-ut" },
+                { text: "C'est la saison des fleurs.", meaning: "Çiçek mevsimi.", pronunciation: "se-la-se-zon-de-flör" },
+                { text: "Il neige en hiver.", meaning: "Kışın kar yağar.", pronunciation: "il-nej-an-i-ver" },
+                { text: "J'adore le printemps.", meaning: "İlkbaharı severim.", pronunciation: "ja-dor-lö-pren-tan" },
                 { text: "Les feuilles tombent en automne.", meaning: "Sonbaharda yapraklar düşer.", pronunciation: "le-föy-tonb-an-o-ton" },
-                { text: "Il neige beaucoup en montagne.", meaning: "Dağda çok kar yağar.", pronunciation: "il-nej-bo-ku-an-mon-ta-nyö" },
-                { text: "Les fleurs poussent au printemps.", meaning: "İlkbaharda çiçekler açar.", pronunciation: "le-flör-pus-o-pren-tan" },
-                { text: "On va à la plage en été.", meaning: "Yazın plaja gideriz.", pronunciation: "on-va-a-la-plaj-an-e-te" },
-                { text: "Les jours sont courts en hiver.", meaning: "Kışın günler kısa.", pronunciation: "le-jur-son-kur-an-i-ver" },
-                { text: "C'est la saison des pluies.", meaning: "Yağmur mevsimi.", pronunciation: "se-la-se-zon-de-plüi" },
-                { text: "Le soleil se couche tôt.", meaning: "Güneş erken batıyor.", pronunciation: "lö-so-ley-sö-kuş-to" },
-                { text: "Il fait doux aujourd'hui.", meaning: "Bugün ılık.", pronunciation: "il-fe-du-o-jur-düi" },
-                { text: "La température baisse.", meaning: "Sıcaklık düşüyor.", pronunciation: "la-tan-pe-ra-tür-bes" },
-                { text: "C'est le début de l'été.", meaning: "Yazın başlangıcı.", pronunciation: "se-lö-de-bü-dö-le-te" }
+                { text: "On nage en été.", meaning: "Yazın yüzeriz.", pronunciation: "on-naj-an-e-te" },
+                { text: "Il fait doux au printemps.", meaning: "İlkbaharda hava ılıktır.", pronunciation: "il-fe-du-o-pren-tan" },
+                { text: "L'été est ma saison préférée.", meaning: "Yaz en sevdiğim mevsimdir.", pronunciation: "le-te-e-ma-se-zon-pre-fe-re" },
+                { text: "Il fait gris en automne.", meaning: "Sonbaharda hava kapalıdır.", pronunciation: "il-fe-gri-an-o-ton" }
             ]
         },
         323: {
-            title: "Doğum Günü", phrases: [
-                { text: "Joyeux anniversaire!", meaning: "Mutlu yıllar!", pronunciation: "jua-yö-za-ni-ver-ser" },
-                { text: "C'est quand ton anniversaire?", meaning: "Doğum günün ne zaman?", pronunciation: "se-kan-ton-a-ni-ver-ser" },
-                { text: "J'ai acheté un cadeau.", meaning: "Bir hediye aldım.", pronunciation: "je-aş-te-ön-ka-do" },
-                { text: "Souffle les bougies!", meaning: "Mumları üfle!", pronunciation: "sufl-le-bu-ji" },
-                { text: "Fais un vœu!", meaning: "Bir dilek tut!", pronunciation: "fe-ön-vö" },
-                { text: "On fait une fête surprise.", meaning: "Sürpriz parti yapıyoruz.", pronunciation: "on-fe-ün-fet-sür-priz" },
-                { text: "Merci pour le cadeau.", meaning: "Hediye için teşekkürler.", pronunciation: "mer-si-pur-lö-ka-do" },
-                { text: "C'est très gentil.", meaning: "Çok naziksin.", pronunciation: "se-tre-jan-ti" },
-                { text: "Le gâteau est délicieux.", meaning: "Pasta çok lezzetli.", pronunciation: "lö-ga-to-e-de-li-syö" },
-                { text: "Tous mes vœux!", meaning: "Tüm iyi dileklerimle!", pronunciation: "tu-me-vö" },
-                { text: "J'espère que ça te plaît.", meaning: "Umarım beğenirsin.", pronunciation: "jes-per-kö-sa-tö-ple" },
-                { text: "On chante ensemble!", meaning: "Birlikte şarkı söyleyelim!", pronunciation: "on-şant-an-sambl" },
-                { text: "La fête était géniale!", meaning: "Parti harikaydı!", pronunciation: "la-fet-e-te-je-nyal" },
-                { text: "Je te souhaite tout le bonheur.", meaning: "Sana tüm mutlulukları diliyorum.", pronunciation: "jö-tö-su-et-tu-lö-bo-nör" },
-                { text: "Meilleurs vœux!", meaning: "En iyi dilekler!", pronunciation: "me-yör-vö" }
+            title: "Özel Günler ve Kutlamalar", phrases: [
+                { text: "Joyeux anniversaire!", meaning: "Doğum günün kutlu olsun!", pronunciation: "jua-yö-za-ni-ver-ser" },
+                { text: "Bonne année!", meaning: "Mutlu yıllar!", pronunciation: "bo-na-ne" },
+                { text: "Joyeux Noël!", meaning: "Mutlu Noeller!", pronunciation: "jua-yö-no-el" },
+                { text: "Bonne fête!", meaning: "İyi bayramlar!", pronunciation: "bon-fet" },
+                { text: "Meilleurs vœux.", meaning: "En iyi dileklerimle.", pronunciation: "me-yör-vö" },
+                { text: "Félicitations!", meaning: "Tebrikler!", pronunciation: "fe-li-si-ta-syon" },
+                { text: "Bonne chance!", meaning: "Bol şans!", pronunciation: "bon-şans" },
+                { text: "C'est un cadeau pour toi.", meaning: "Bu senin için bir hediye.", pronunciation: "se-tön-ka-do-pur-tua" },
+                { text: "Amuse-toi bien.", meaning: "İyi eğlenceler.", pronunciation: "a-müz-tua-byan" },
+                { text: "Merci pour l'invitation.", meaning: "Davet için teşekkürler.", pronunciation: "mer-si-pur-len-vi-ta-syon" },
+                { text: "Tous mes vœux de bonheur.", meaning: "Tüm mutluluk dileklerimle.", pronunciation: "tu-me-vö-dö-bo-nör" },
+                { text: "Bravo!", meaning: "Bravo!", pronunciation: "bra-vo" },
+                { text: "Santé et bonheur.", meaning: "Sağlık ve mutluluk.", pronunciation: "san-te-e-bo-nör" },
+                { text: "C'est une surprise.", meaning: "Bu bir sürpriz.", pronunciation: "se-tün-sür-priz" },
+                { text: "À la tienne!", meaning: "Şerefine!", pronunciation: "a-la-tyen" }
             ]
         },
         324: {
-            title: "Tatil", phrases: [
+            title: "Tatil ve Seyahat", phrases: [
+                { text: "Je pars en vacances.", meaning: "Tatile gidiyorum.", pronunciation: "jö-par-an-va-kans" },
                 { text: "Bonnes vacances!", meaning: "İyi tatiller!", pronunciation: "bon-va-kans" },
-                { text: "Où vas-tu en vacances?", meaning: "Tatile nereye gidiyorsun?", pronunciation: "u-va-tü-an-va-kans" },
-                { text: "Je pars à la mer.", meaning: "Denize gidiyorum.", pronunciation: "jö-par-a-la-mer" },
-                { text: "On va à la montagne.", meaning: "Dağa gidiyoruz.", pronunciation: "on-va-a-la-mon-ta-nyö" },
-                { text: "Je réserve un hôtel.", meaning: "Otel rezervasyonu yapıyorum.", pronunciation: "jö-re-zerv-ön-o-tel" },
-                { text: "Quel beau temps!", meaning: "Ne güzel hava!", pronunciation: "kel-bo-tan" },
-                { text: "La plage est magnifique.", meaning: "Plaj muhteşem.", pronunciation: "la-plaj-e-ma-nyi-fik" },
-                { text: "J'adore bronzer.", meaning: "Güneşlenmeyi çok severim.", pronunciation: "ja-dor-bron-ze" },
-                { text: "On fait une excursion.", meaning: "Gezi yapıyoruz.", pronunciation: "on-fe-ün-eks-kür-syon" },
+                { text: "J'aime la plage.", meaning: "Plajı severim.", pronunciation: "jem-la-plaj" },
+                { text: "Je vais à l'hôtel.", meaning: "Otele gidiyorum.", pronunciation: "jö-ve-a-lo-tel" },
+                { text: "C'est un beau voyage.", meaning: "Güzel bir seyahat.", pronunciation: "se-tön-bo-vua-yaj" },
                 { text: "Je prends des photos.", meaning: "Fotoğraf çekiyorum.", pronunciation: "jö-pran-de-fo-to" },
-                { text: "Les vacances sont trop courtes.", meaning: "Tatil çok kısa.", pronunciation: "le-va-kans-son-tro-kurt" },
-                { text: "Je me détends.", meaning: "Dinleniyorum.", pronunciation: "jö-mö-de-tan" },
-                { text: "On visite des monuments.", meaning: "Anıtları geziyoruz.", pronunciation: "on-vi-zit-de-mo-nü-man" },
-                { text: "C'est les vacances d'été.", meaning: "Yaz tatili.", pronunciation: "se-le-va-kans-de-te" },
+                { text: "Il fait beau ici.", meaning: "Burada hava güzel.", pronunciation: "il-fe-bo-i-si" },
+                { text: "Je veux nager.", meaning: "Yüzmek istiyorum.", pronunciation: "jö-vö-na-je" },
+                { text: "La mer est bleue.", meaning: "Deniz mavi.", pronunciation: "la-mer-e-blö" },
+                { text: "J'achète des souvenirs.", meaning: "Hediyelik eşya alıyorum.", pronunciation: "ja-şet-de-su-vö-nir" },
+                { text: "Le soleil brille.", meaning: "Güneş parlıyor.", pronunciation: "lö-so-ley-briy" },
+                { text: "J'ai besoin de repos.", meaning: "Dinlenmeye ihtiyacım var.", pronunciation: "je-bö-zuen-dö-rö-po" },
+                { text: "On visite le musée.", meaning: "Müzeyi geziyoruz.", pronunciation: "on-vi-zit-lö-mü-ze" },
+                { text: "C'est le paradis.", meaning: "Burası cennet.", pronunciation: "se-lö-pa-ra-di" },
                 { text: "Je ne veux pas rentrer.", meaning: "Dönmek istemiyorum.", pronunciation: "jö-nö-vö-pa-ran-tre" }
             ]
         },
         325: {
-            title: "Alışveriş", phrases: [
-                { text: "Où sont les cabines d'essayage?", meaning: "Kabinler nerede?", pronunciation: "u-son-le-ka-bin-de-se-yaj" },
-                { text: "Je cherche la taille M.", meaning: "M beden arıyorum.", pronunciation: "jö-şerş-la-tay-em" },
-                { text: "Vous l'avez en bleu?", meaning: "Mavisi var mı?", pronunciation: "vu-la-ve-an-blö" },
-                { text: "C'est en solde?", meaning: "İndirimde mi?", pronunciation: "se-tan-sold" },
-                { text: "Je peux payer par carte?", meaning: "Kartla ödeyebilir miyim?", pronunciation: "jö-pö-pe-ye-par-kart" },
-                { text: "Vous avez la monnaie?", meaning: "Bozuk paranız var mı?", pronunciation: "vu-za-ve-la-mo-ne" },
+            title: "Fiyat ve Miktar Sorma (Combien)", phrases: [
+                { text: "C'est combien?", meaning: "Bu ne kadar?", pronunciation: "se-kom-byan" },
+                { text: "Combien ça coûte?", meaning: "Bu ne kadar tutuyor?", pronunciation: "kom-byan-sa-kut" },
+                { text: "Combien de frères as-tu?", meaning: "Kaç kardeşin var?", pronunciation: "kom-byan-dö-frer-a-tü" },
+                { text: "Combien de temps?", meaning: "Ne kadar zaman?", pronunciation: "kom-byan-dö-tan" },
+                { text: "Combien d'amis viennent?", meaning: "Kaç arkadaş geliyor?", pronunciation: "kom-byan-da-mi-vyen" },
+                { text: "Ça fait 10 euros.", meaning: "10 euro tutuyor.", pronunciation: "sa-fe-di-zö-ro" },
+                { text: "Je voudrais un kilo de pommes.", meaning: "Bir kilo elma istiyorum.", pronunciation: "jö-vu-dre-ön-ki-lo-dö-pom" },
                 { text: "C'est trop cher.", meaning: "Çok pahalı.", pronunciation: "se-tro-şer" },
-                { text: "Vous faites une réduction?", meaning: "İndirim yapar mısınız?", pronunciation: "vu-fet-ün-re-dük-syon" },
-                { text: "Je vais réfléchir.", meaning: "Düşüneceğim.", pronunciation: "jö-ve-re-fle-şir" },
-                { text: "Je le prends.", meaning: "Alıyorum.", pronunciation: "jö-lö-pran" },
-                { text: "Vous avez un sac?", meaning: "Poşetiniz var mı?", pronunciation: "vu-za-ve-ön-sak" },
-                { text: "C'est un cadeau?", meaning: "Hediye mi?", pronunciation: "se-tön-ka-do" },
-                { text: "Où est la caisse?", meaning: "Kasa nerede?", pronunciation: "u-e-la-kes" },
-                { text: "Les soldes commencent demain.", meaning: "İndirimler yarın başlıyor.", pronunciation: "le-sold-ko-mans-dö-men" },
-                { text: "Je fais du lèche-vitrine.", meaning: "Vitrin geziyorum.", pronunciation: "jö-fe-dü-leş-vi-trin" }
+                { text: "C'est bon marché.", meaning: "Ucuz / Hesaplı.", pronunciation: "se-bon-mar-şe" },
+                { text: "Vous avez la monnaie?", meaning: "Bozuk paranız var mı?", pronunciation: "vu-za-ve-la-mo-ne" },
+                { text: "Je peux payer par carte?", meaning: "Kartla ödeyebilir miyim?", pronunciation: "jö-pö-pe-ye-par-kart" },
+                { text: "Combien de personnes?", meaning: "Kaç kişi?", pronunciation: "kom-byan-dö-per-son" },
+                { text: "Il n'y a pas de prix.", meaning: "Fiyat yok.", pronunciation: "il-nya-pa-dö-pri" },
+                { text: "Quel est le prix?", meaning: "Fiyatı nedir?", pronunciation: "kel-e-lö-pri" },
+                { text: "Je fais des économies.", meaning: "Tasarruf yapıyorum.", pronunciation: "jö-fe-de-ze-ko-no-mi" }
             ]
         },
         326: {
-            title: "Restoranda", phrases: [
-                { text: "Une table pour deux, s'il vous plaît.", meaning: "İki kişilik masa, lütfen.", pronunciation: "ün-tabl-pur-dö-sil-vu-ple" },
-                { text: "La carte, s'il vous plaît.", meaning: "Menü lütfen.", pronunciation: "la-kart-sil-vu-ple" },
-                { text: "Quel est le plat du jour?", meaning: "Günün yemeği ne?", pronunciation: "kel-e-lö-pla-dü-jur" },
-                { text: "Je voudrais commander.", meaning: "Sipariş vermek istiyorum.", pronunciation: "jö-vu-dre-ko-man-de" },
-                { text: "Qu'est-ce que vous recommandez?", meaning: "Ne önerirsiniz?", pronunciation: "kes-kö-vu-rö-ko-man-de" },
-                { text: "Je suis végétarien(ne).", meaning: "Vejetaryenim.", pronunciation: "jö-süi-ve-je-ta-ryen" },
-                { text: "C'est trop salé.", meaning: "Çok tuzlu.", pronunciation: "se-tro-sa-le" },
-                { text: "C'est délicieux!", meaning: "Çok lezzetli!", pronunciation: "se-de-li-syö" },
+            title: "Restoranda (Au Restaurant)", phrases: [
+                { text: "Une table pour deux, s'il vous plaît.", meaning: "İki kişilik masa lütfen.", pronunciation: "ün-tabl-pur-dö-sil-vu-ple" },
+                { text: "La carte, s'il vous plaît.", meaning: "Menü lütfen (Carte).", pronunciation: "la-kart-sil-vu-ple" },
+                { text: "Je voudrais le menu.", meaning: "Fiks menüyü istiyorum.", pronunciation: "jö-vu-dre-lö-mönü" },
+                { text: "Je vais prendre le poulet.", meaning: "Tavuk alacağım.", pronunciation: "jö-ve-prandr-lö-pu-le" },
+                { text: "Une carafe d'eau, s'il vous plaît.", meaning: "Bir sürahi su lütfen (Ücretsiz).", pronunciation: "ün-ka-raf-do-sil-vu-ple" },
                 { text: "L'addition, s'il vous plaît.", meaning: "Hesap lütfen.", pronunciation: "la-di-syon-sil-vu-ple" },
-                { text: "Je peux avoir un peu plus de pain?", meaning: "Biraz daha ekmek alabilir miyim?", pronunciation: "jö-pö-a-vuar-ön-pö-plü-dö-pen" },
-                { text: "Service compris?", meaning: "Servis dahil mi?", pronunciation: "ser-vis-kon-pri" },
+                { text: "C'était très bon!", meaning: "Çok güzeldi!", pronunciation: "se-te-tre-bon" },
+                { text: "Excusez-moi, monsieur!", meaning: "Bakar mısınız beyefendi!", pronunciation: "eks-kü-ze-mua-mö-syö" },
+                { text: "Du pain, s'il vous plaît.", meaning: "Ekmek lütfen.", pronunciation: "dü-pen-sil-vu-ple" },
                 { text: "Bon appétit!", meaning: "Afiyet olsun!", pronunciation: "bon-a-pe-ti" },
-                { text: "Je voudrais réserver une table.", meaning: "Masa ayırtmak istiyorum.", pronunciation: "jö-vu-dre-re-zer-ve-ün-tabl" },
-                { text: "Avez-vous une terrasse?", meaning: "Terasınız var mı?", pronunciation: "a-ve-vu-ün-te-ras" },
-                { text: "C'était très bon.", meaning: "Çok güzeldi.", pronunciation: "se-te-tre-bon" }
+                { text: "Je suis végétarien.", meaning: "Vejetaryenim.", pronunciation: "jö-süi-ve-je-ta-ryen" },
+                { text: "Qu'est-ce que vous recommandez?", meaning: "Ne önerirsiniz?", pronunciation: "kes-kö-vu-rö-ko-man-de" },
+                { text: "C'est délicieux.", meaning: "Bu leziz.", pronunciation: "se-de-li-syö" },
+                { text: "Je n'ai pas de fourchette.", meaning: "Çatalım yok.", pronunciation: "jö-ne-pa-dö-fur-şet" },
+                { text: "Gardez la monnaie.", meaning: "Üstü kalsın.", pronunciation: "gar-de-la-mo-ne" }
             ]
         },
         327: {
-            title: "Renkler ve Sıfatlar", phrases: [
-                { text: "Cette robe est belle.", meaning: "Bu elbise güzel.", pronunciation: "set-rob-e-bel" },
-                { text: "C'est trop grand.", meaning: "Çok büyük.", pronunciation: "se-tro-gran" },
-                { text: "C'est trop petit.", meaning: "Çok küçük.", pronunciation: "se-tro-pö-ti" },
-                { text: "Je préfère le rouge.", meaning: "Kırmızıyı tercih ederim.", pronunciation: "jö-pre-fer-lö-ruj" },
-                { text: "Il est très gentil.", meaning: "Çok nazik.", pronunciation: "il-e-tre-jan-ti" },
-                { text: "C'est une vieille maison.", meaning: "Eski bir ev.", pronunciation: "se-tün-vyey-me-zon" },
-                { text: "C'est une nouvelle voiture.", meaning: "Yeni bir araba.", pronunciation: "se-tün-nu-vel-vua-tür" },
-                { text: "Le film était intéressant.", meaning: "Film ilginçti.", pronunciation: "lö-film-e-te-an-te-re-san" },
-                { text: "C'est vraiment joli.", meaning: "Gerçekten şirin.", pronunciation: "se-vre-man-jo-li" },
-                { text: "La couleur est magnifique.", meaning: "Renk muhteşem.", pronunciation: "la-ku-lör-e-ma-nyi-fik" },
-                { text: "C'est un bon livre.", meaning: "İyi bir kitap.", pronunciation: "se-tön-bon-livr" },
-                { text: "C'est une mauvaise idée.", meaning: "Kötü bir fikir.", pronunciation: "se-tün-mo-vez-i-de" },
-                { text: "Elle est très belle.", meaning: "Çok güzel (kadın).", pronunciation: "el-e-tre-bel" },
-                { text: "Il est beau.", meaning: "Yakışıklı.", pronunciation: "il-e-bo" },
-                { text: "Les couleurs sont vives.", meaning: "Renkler canlı.", pronunciation: "le-ku-lör-son-viv" }
+            title: "Karşılaştırma (Le Comparatif)", phrases: [
+                { text: "Pierre est plus grand que Marie.", meaning: "Pierre Marie'den daha uzundur.", pronunciation: "pyer-e-plü-gran-kö-ma-ri" },
+                { text: "Le train est plus rapide.", meaning: "Tren daha hızlıdır.", pronunciation: "lö-tren-e-plü-ra-pid" },
+                { text: "C'est moins cher.", meaning: "Daha ucuz.", pronunciation: "se-muan-şer" },
+                { text: "Je suis aussi fatigué que toi.", meaning: "Ben de senin kadar yorgunum.", pronunciation: "jö-süi-osi-fa-ti-ge-kö-tua" },
+                { text: "C'est meilleur!", meaning: "Bu daha iyi! (Meilleur)", pronunciation: "se-me-yör" },
+                { text: "Il est plus intelligent.", meaning: "O daha zeki.", pronunciation: "il-e-plü-zen-te-li-jan" },
+                { text: "Elle est plus belle que moi.", meaning: "O benden daha güzel.", pronunciation: "el-e-plü-bel-kö-mua" },
+                { text: "C'est pire.", meaning: "Bu daha kötü.", pronunciation: "se-pir" },
+                { text: "Tu es plus fort que lui.", meaning: "Sen ondan daha güçlüsün.", pronunciation: "tü-e-plü-for-kö-lüi" },
+                { text: "La France est plus grande.", meaning: "Fransa daha büyüktür.", pronunciation: "la-frans-e-plü-grand" },
+                { text: "C'est moins intéressant.", meaning: "Daha az ilginç.", pronunciation: "se-muan-zen-te-re-san" },
+                { text: "Il court plus vite.", meaning: "Daha hızlı koşuyor.", pronunciation: "il-kur-plü-vit" },
+                { text: "Je mange plus que toi.", meaning: "Senden daha çok yiyorum.", pronunciation: "jö-manj-plü-kö-tua" },
+                { text: "Ce livre est meilleur.", meaning: "Bu kitap daha iyi.", pronunciation: "sö-livr-e-me-yör" },
+                { text: "Le café est meilleur que le thé.", meaning: "Kahve çaydan daha iyidir.", pronunciation: "lö-ka-fe-e-me-yör-kö-lö-te" }
             ]
         },
         328: {
-            title: "Hayvanlar", phrases: [
-                { text: "Tu as un animal de compagnie?", meaning: "Evcil hayvanın var mı?", pronunciation: "tü-a-ön-a-ni-mal-dö-kon-pa-nyi" },
-                { text: "J'ai un chat.", meaning: "Bir kedim var.", pronunciation: "je-ön-şa" },
-                { text: "J'ai un chien.", meaning: "Bir köpeğim var.", pronunciation: "je-ön-şyen" },
-                { text: "Il est adorable!", meaning: "Çok tatlı!", pronunciation: "il-e-ta-do-rabl" },
-                { text: "Mon chat s'appelle Mimi.", meaning: "Kedimin adı Mimi.", pronunciation: "mon-şa-sa-pel-mi-mi" },
-                { text: "Le chien aboie.", meaning: "Köpek havlıyor.", pronunciation: "lö-şyen-a-bua" },
-                { text: "Le chat miaule.", meaning: "Kedi miyavlıyor.", pronunciation: "lö-şa-myol" },
-                { text: "J'adore les animaux.", meaning: "Hayvanları çok severim.", pronunciation: "ja-dor-le-za-ni-mo" },
-                { text: "Il faut le promener.", meaning: "Gezdirmek lazım.", pronunciation: "il-fo-lö-prom-ne" },
-                { text: "Je dois le nourrir.", meaning: "Beslemem lazım.", pronunciation: "jö-dua-lö-nu-rir" },
-                { text: "L'oiseau chante le matin.", meaning: "Kuş sabah öter.", pronunciation: "lua-zo-şant-lö-ma-ten" },
-                { text: "Au zoo, il y a des lions.", meaning: "Hayvanat bahçesinde aslanlar var.", pronunciation: "o-zo-il-ya-de-lyon" },
-                { text: "Les poissons nagent.", meaning: "Balıklar yüzüyor.", pronunciation: "le-pua-son-naj" },
-                { text: "Je n'aime pas les serpents.", meaning: "Yılanları sevmiyorum.", pronunciation: "jö-nem-pa-le-ser-pan" },
-                { text: "C'est une espèce protégée.", meaning: "Koruma altındaki tür.", pronunciation: "se-tün-es-pes-pro-te-je" }
+            title: "Hayvanlar ve Cinsiyet Kuralı", phrases: [
+                { text: "J'ai un chien.", meaning: "Bir köpeğim var (Erkek).", pronunciation: "je-ön-şyen" },
+                { text: "C'est une chatte.", meaning: "Bu bir dişi kedi.", pronunciation: "se-tün-şat" },
+                { text: "La souris est petite.", meaning: "Fare küçüktür (Her zaman Dişi/La).", pronunciation: "la-su-ri-e-pö-tit" },
+                { text: "Le lion est le roi.", meaning: "Aslan kraldır.", pronunciation: "lö-liyon-e-lö-rua" },
+                { text: "L'oiseau chante.", meaning: "Kuş ötüyor.", pronunciation: "lua-zo-şant" },
+                { text: "J'aime les chevaux.", meaning: "Atları severim.", pronunciation: "jem-le-şö-vo" },
+                { text: "La vache donne du lait.", meaning: "İnek süt verir.", pronunciation: "la-vaş-don-dü-le" },
+                { text: "Le poisson nage.", meaning: "Balık yüzüyor.", pronunciation: "lö-pua-son-naj" },
+                { text: "Attention au chien!", meaning: "Köpeğe dikkat!", pronunciation: "a-tan-syon-o-şyen" },
+                { text: "C'est un animal sauvage.", meaning: "Bu vahşi bir hayvan.", pronunciation: "se-tön-a-ni-mal-so-vaj" },
+                { text: "Mon chat est noir.", meaning: "Kedim siyah.", pronunciation: "mon-şa-e-nuar" },
+                { text: "Les animaux de compagnie.", meaning: "Evcil hayvanlar.", pronunciation: "le-za-ni-mo-dö-kon-pa-nyi" },
+                { text: "La girafe est grande.", meaning: "Zürafa büyüktür/uzundur.", pronunciation: "la-ji-raf-e-grand" },
+                { text: "Un ours mange du miel.", meaning: "Ayı bal yer.", pronunciation: "ön-urs-manj-dü-myel" },
+                { text: "J'ai peur des araignées.", meaning: "Örümceklerden korkarım.", pronunciation: "je-pör-de-za-ren-ye" }
             ]
         },
         329: {
-            title: "Teknoloji", phrases: [
-                { text: "Je n'ai plus de batterie.", meaning: "Pil bitti.", pronunciation: "jö-ne-plü-dö-ba-tri" },
-                { text: "Tu as le wifi?", meaning: "Wifi var mı?", pronunciation: "tü-a-lö-wi-fi" },
-                { text: "Quel est le mot de passe?", meaning: "Şifre ne?", pronunciation: "kel-e-lö-mo-dö-pas" },
-                { text: "Je t'envoie un email.", meaning: "Sana mail atıyorum.", pronunciation: "jö-tan-vua-ön-i-mel" },
-                { text: "Tu peux m'appeler?", meaning: "Beni arayabilir misin?", pronunciation: "tü-pö-ma-pö-le" },
-                { text: "J'ai reçu ton message.", meaning: "Mesajını aldım.", pronunciation: "je-rö-sü-ton-me-saj" },
-                { text: "L'ordinateur est en panne.", meaning: "Bilgisayar bozuk.", pronunciation: "lor-di-na-tör-e-tan-pan" },
+            title: "Teknoloji ve İletişim", phrases: [
+                { text: "J'ai un nouveau téléphone.", meaning: "Yeni bir telefonum var.", pronunciation: "je-ön-nu-vo-te-le-fon" },
+                { text: "Je surfe sur internet.", meaning: "İnternette geziniyorum.", pronunciation: "jö-sörf-sür-en-ter-net" },
+                { text: "Envoie-moi un message.", meaning: "Bana mesaj gönder.", pronunciation: "an-vua-mua-ön-me-saj" },
+                { text: "Mon ordinateur est en panne.", meaning: "Bilgisayarım bozuk.", pronunciation: "mon-or-di-na-tör-e-tan-pan" },
+                { text: "Quel est le mot de passe wifi?", meaning: "Wifi şifresi nedir?", pronunciation: "kel-e-lö-mo-dö-pas-vi-fi" },
                 { text: "Télécharge l'application.", meaning: "Uygulamayı indir.", pronunciation: "te-le-şarj-la-pli-ka-syon" },
-                { text: "Clique sur ce lien.", meaning: "Bu linke tıkla.", pronunciation: "klik-sür-sö-lyen" },
-                { text: "J'ai perdu mon téléphone.", meaning: "Telefonumu kaybettim.", pronunciation: "je-per-dü-mon-te-le-fon" },
-                { text: "Tu as un chargeur?", meaning: "Şarj alet var mı?", pronunciation: "tü-a-ön-şar-jör" },
-                { text: "Mon écran est cassé.", meaning: "Ekranım kırık.", pronunciation: "mon-e-kran-e-ka-se" },
-                { text: "Je suis sur les réseaux sociaux.", meaning: "Sosyal medyadayım.", pronunciation: "jö-süi-sür-le-re-zo-so-syo" },
-                { text: "Tu m'envoies une photo?", meaning: "Bana fotoğraf gönderir misin?", pronunciation: "tü-man-vua-ün-fo-to" },
-                { text: "C'est une bonne connexion.", meaning: "İyi bir bağlantı.", pronunciation: "se-tün-bon-ko-nek-syon" }
+                { text: "La batterie est vide.", meaning: "Pil bitti.", pronunciation: "la-ba-tri-e-vid" },
+                { text: "Je prends un selfie.", meaning: "Selfie çekiyorum.", pronunciation: "jö-pran-ön-sel-fi" },
+                { text: "C'est en ligne.", meaning: "Çevrimiçi.", pronunciation: "se-tan-lin-yö" },
+                { text: "Tu as un chargeur?", meaning: "Şarj aletin var mı?", pronunciation: "tü-a-ön-şar-jör" },
+                { text: "Je regarde une vidéo.", meaning: "Video izliyorum.", pronunciation: "jö-rö-gard-ün-vi-de-o" },
+                { text: "Clique ici.", meaning: "Buraya tıkla.", pronunciation: "klik-i-si" },
+                { text: "Ça ne marche pas.", meaning: "Çalışmıyor.", pronunciation: "sa-nö-marş-pa" },
+                { text: "J'ai reçu un email.", meaning: "Bir e-posta aldım.", pronunciation: "je-rö-sü-ön-i-meyl" },
+                { text: "Google est mon ami.", meaning: "Google benim dostum.", pronunciation: "gu-göl-e-mon-a-mi" }
             ]
         },
         330: {
-            title: "A1 Genel Tekrar", phrases: [
-                { text: "Félicitations!", meaning: "Tebrikler!", pronunciation: "fe-li-si-ta-syon" },
-                { text: "Tu as réussi!", meaning: "Başardın!", pronunciation: "tü-a-re-ü-si" },
-                { text: "Continue comme ça!", meaning: "Böyle devam et!", pronunciation: "kon-ti-nü-kom-sa" },
-                { text: "Tu parles bien français.", meaning: "Fransızca iyi konuşuyorsun.", pronunciation: "tü-parl-byan-fran-se" },
-                { text: "Tu as fait des progrès.", meaning: "İlerleme kaydettin.", pronunciation: "tü-a-fe-de-pro-gre" },
-                { text: "Je suis fier/fière de toi.", meaning: "Seninle gurur duyuyorum.", pronunciation: "jö-süi-fyer-dö-tua" },
-                { text: "Tu as beaucoup appris.", meaning: "Çok şey öğrendin.", pronunciation: "tü-a-bo-ku-a-pri" },
-                { text: "Bravo pour ton travail!", meaning: "Çalışman için tebrikler!", pronunciation: "bra-vo-pur-ton-tra-vay" },
-                { text: "Continue à pratiquer.", meaning: "Pratik yapmaya devam et.", pronunciation: "kon-ti-nü-a-pra-ti-ke" },
-                { text: "Tu es prêt(e) pour A2.", meaning: "A2 için hazırsın.", pronunciation: "tü-e-pre-pur-a-dö" },
-                { text: "Bonne chance pour la suite!", meaning: "Devamı için iyi şanslar!", pronunciation: "bon-şans-pur-la-süit" },
-                { text: "J'espère te revoir.", meaning: "Tekrar görüşmek dileğiyle.", pronunciation: "jes-per-tö-rö-vuar" },
-                { text: "À bientôt!", meaning: "Yakında görüşürüz!", pronunciation: "a-byan-to" },
-                { text: "Merci d'avoir appris avec moi.", meaning: "Benimle öğrendiğin için teşekkürler.", pronunciation: "mer-si-da-vuar-a-pri-a-vek-mua" },
-                { text: "Le français, c'est super!", meaning: "Fransızca harika!", pronunciation: "lö-fran-se-se-sü-per" }
+            title: "A1 Dilbilgisi Özeti", phrases: [
+                { text: "Je suis prêt pour A2.", meaning: "A2 için hazırım.", pronunciation: "jö-süi-pre-pur-a-dö" },
+                { text: "J'ai appris beaucoup de choses.", meaning: "Çok şey öğrendim.", pronunciation: "je-a-pri-bo-ku-dö-şoz" },
+                { text: "Le français est une belle langue.", meaning: "Fransızca güzel bir dil.", pronunciation: "lö-fran-se-e-tün-bel-lang" },
+                { text: "Je peux parler un peu.", meaning: "Biraz konuşabiliyorum.", pronunciation: "jö-pö-par-le-ön-pö" },
+                { text: "Je comprends mieux maintenant.", meaning: "Şimdi daha iyi anlıyorum.", pronunciation: "jö-kom-pran-myö-men-tö-nan" },
+                { text: "C'est facile.", meaning: "Bu kolay.", pronunciation: "se-fa-sil" },
+                { text: "C'est difficile mais amusant.", meaning: "Bu zor ama eğlenceli.", pronunciation: "se-di-fi-sil-me-a-mü-zan" },
+                { text: "J'aime étudier.", meaning: "Ders çalışmayı seviyorum.", pronunciation: "jem-e-tü-dye" },
+                { text: "Merci pour les leçons.", meaning: "Dersler için teşekkürler.", pronunciation: "mer-si-pur-le-lö-son" },
+                { text: "À la prochaine!", meaning: "Bir sonrakinde görüşmek üzere!", pronunciation: "a-la-pro-şen" },
+                { text: "Je vais continuer.", meaning: "Devam edeceğim.", pronunciation: "jö-ve-kon-ti-nü-e" },
+                { text: "Bravo à tous!", meaning: "Herkese bravo!", pronunciation: "bra-vo-a-tus" },
+                { text: "C'est la fin du niveau A1.", meaning: "A1 seviyesinin sonu.", pronunciation: "se-la-fen-dü-ni-vo-a-ön" },
+                { text: "Je veux voyager en France.", meaning: "Fransa'ya seyahat etmek istiyorum.", pronunciation: "jö-vö-vua-ya-je-an-frans" },
+                { text: "Au revoir A1, bonjour A2!", meaning: "Hoşçakal A1, Merhaba A2!", pronunciation: "o-rö-vuar-a-ön bon-jur-a-dö" }
             ]
-        }
+        },
     };
 
     // 315-330 için başlıklar (artık kullanılmıyor ama uyumluluk için bırakılıyor)
     const titles: { [key: number]: string } = {
-        315: "Saat ve Zaman", 316: "Hava Durumu", 317: "Günlük Aktiviteler",
-        318: "Hobiler", 319: "Duygular", 320: "Vücut Bölümleri",
+        315: "Saat ve Zaman", 316: "Günlük Rutin", 317: "Hobiler",
+        318: "Hava Durumu", 319: "Duygular", 320: "Şehirde Yönler",
         321: "Ulaşım", 322: "Mevsimler", 323: "Doğum Günü",
         324: "Tatil", 325: "Alışveriş", 326: "Restoranda",
         327: "Renkler ve Sıfatlar", 328: "Hayvanlar", 329: "Teknoloji",

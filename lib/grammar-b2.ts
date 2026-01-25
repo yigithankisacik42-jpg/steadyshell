@@ -1,5 +1,5 @@
 /**
- * LinguaFlow İspanyolca B2 Gramer Veritabanı
+ * SteadyShell İspanyolca B2 Gramer Veritabanı
  * 
  * B2 Seviyesi: Ünite 61-80 (20 ünite)
  * İleri düzey gramer yapıları ve kurallar

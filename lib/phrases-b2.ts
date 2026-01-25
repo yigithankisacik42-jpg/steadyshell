@@ -1,5 +1,5 @@
 /**
- * LinguaFlow İspanyolca B2 Kalıp Veritabanı
+ * SteadyShell İspanyolca B2 Kalıp Veritabanı
  * 
  * B2 Seviyesi: Ünite 61-80 (20 ünite × 8 kalıp = 160 kalıp)
  * İleri düzey akademik, profesyonel ve soyut ifadeler

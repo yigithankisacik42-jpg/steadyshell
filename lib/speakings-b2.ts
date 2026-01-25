@@ -1,5 +1,5 @@
 /**
- * LinguaFlow Konuşma Veritabanı - İspanyolca B2
+ * SteadyShell Konuşma Veritabanı - İspanyolca B2
  * Ünite 61-80 için konuşma içerikleri
  */
 
