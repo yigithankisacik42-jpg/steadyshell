@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL") // Uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // Uses direct connection
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  avatar        String?
+  
+  // Progress Data
+  totalXp       Int       @default(0)
+  level         Int       @default(1)
+  hearts        Int       @default(5)
+  streak        Int       @default(0)
+  lastActiveDate DateTime? // Stored as actual DateTime
+
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}

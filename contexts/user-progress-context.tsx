@@ -38,46 +38,73 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<UserData>(defaultUser);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Load from localStorage
+    // Load from API
     useEffect(() => {
-        const stored = localStorage.getItem(STORAGE_KEY);
-        if (stored) {
+        const fetchUser = async () => {
             try {
-                const parsed = JSON.parse(stored);
-                setUser({ ...defaultUser, ...parsed });
+                const res = await fetch("/api/user-progress");
+                if (res.ok) {
+                    const data = await res.json();
+                    setUser({
+                        name: data.name || "Gezgin",
+                        email: data.email,
+                        avatar: data.avatar || "G",
+                        totalXp: data.totalXp,
+                        streak: data.streak,
+                        lastActiveDate: data.lastActiveDate,
+                        level: data.level,
+                    });
+                } else if (res.status === 401) {
+                    // Not logged in, keep default or maybe try localStorage as fallback? 
+                    // For now, adhere to secure DB plan.
+                    console.log("User not logged in");
+                }
             } catch (e) {
-                console.error("Failed to parse user data", e);
+                console.error("Failed to fetch user data", e);
+            } finally {
+                setIsLoading(false);
             }
-        }
-        setIsLoading(false);
+        };
+
+        fetchUser();
     }, []);
 
-    // Save to localStorage whenever user changes
-    useEffect(() => {
-        if (!isLoading) {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+    const syncWithDb = async (userData: UserData) => {
+        try {
+            await fetch("/api/user-progress", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    totalXp: userData.totalXp,
+                    level: userData.level,
+                    streak: userData.streak,
+                    lastActiveDate: userData.lastActiveDate,
+                    hearts: 5 // Default for now, can add to UserData later if needed
+                }),
+            });
+        } catch (e) {
+            console.error("Failed to sync with DB", e);
         }
-    }, [user, isLoading]);
+    };
 
     const addXp = (amount: number) => {
-        setUser((prev) => ({
-            ...prev,
-            totalXp: prev.totalXp + amount,
-        }));
+        setUser((prev) => {
+            const newState = {
+                ...prev,
+                totalXp: prev.totalXp + amount,
+            };
+            syncWithDb(newState);
+            return newState;
+        });
     };
 
     const completeLesson = () => {
         const today = new Date().toISOString().split('T')[0];
 
         setUser((prev) => {
-            // Check streak
             let newStreak = prev.streak;
 
             if (prev.lastActiveDate !== today) {
-                // If last active date was yesterday, increment streak
-                // If it was before yesterday, reset to 1
-                // If it is null (first time), set to 1
-
                 if (!prev.lastActiveDate) {
                     newStreak = 1;
                 } else {
@@ -91,20 +118,30 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
                     } else if (diffDays > 1) {
                         newStreak = 1;
                     }
-                    // If diffDays is 0 (same day), do nothing to streak
                 }
             }
 
-            return {
+            const newState = {
                 ...prev,
                 streak: newStreak,
                 lastActiveDate: today,
             };
+
+            syncWithDb(newState);
+            return newState;
         });
     };
 
     const updateUser = (data: Partial<UserData>) => {
-        setUser((prev) => ({ ...prev, ...data }));
+        setUser((prev) => {
+            const newState = { ...prev, ...data };
+            // Only sync if relevant fields changed, but for simplicity sync all
+            // Or better, check if important fields are in 'data'
+            if ('totalXp' in data || 'level' in data || 'streak' in data) {
+                syncWithDb(newState);
+            }
+            return newState;
+        });
     };
 
     return (
