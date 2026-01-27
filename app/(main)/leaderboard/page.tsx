@@ -33,24 +33,22 @@ export default function LeaderboardPage() {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        const currentUserEntry = {
-            name: user.name || "Misafir",
-            avatar: user.avatar,
-            xp: user.totalXp,
-            isCurrentUser: true
+        const fetchLeaderboard = async () => {
+            try {
+                const res = await fetch("/api/leaderboard");
+                if (res.ok) {
+                    const data = await res.json();
+                    setLeaderboardData(data);
+                }
+            } catch (error) {
+                console.error("Failed to fetch leaderboard", error);
+            } finally {
+                setIsMounted(true);
+            }
         };
 
-        const allUsers = [currentUserEntry];
-        allUsers.sort((a, b) => b.xp - a.xp);
-
-        const rankedUsers = allUsers.map((u, i) => ({
-            ...u,
-            rank: i + 1
-        }));
-
-        setLeaderboardData(rankedUsers);
-        setIsMounted(true);
-    }, [user.totalXp, user.name, user.avatar]);
+        fetchLeaderboard();
+    }, [user.totalXp]); // Refresh if my XP changes
 
     if (!isMounted) return null;
 
