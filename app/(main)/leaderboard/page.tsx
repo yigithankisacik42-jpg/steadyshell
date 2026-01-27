@@ -87,106 +87,108 @@ export default function LeaderboardPage() {
             <main className="flex-1 w-full max-w-2xl mx-auto p-4 space-y-6 relative z-10">
 
                 {/* Top 3 Podium - Visual Enhancement */}
-                <div className="relative bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl p-6 shadow-xl shadow-amber-500/20 text-white overflow-hidden">
-                    <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2" />
-                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-xl transform -translate-x-1/2 translate-y-1/2" />
+                {leaderboardData.length > 0 && (
+                    <div className="relative bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl p-6 shadow-xl shadow-amber-500/20 text-white overflow-hidden">
+                        <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2" />
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-xl transform -translate-x-1/2 translate-y-1/2" />
 
-                    <div className="relative z-10 flex items-center justify-center flex-col">
-                        <Crown className="w-12 h-12 text-yellow-200 mb-3 drop-shadow-lg" />
-                        <p className="text-amber-100 font-bold text-sm uppercase tracking-wider mb-1">Haftanın Şampiyonu</p>
+                        <div className="relative z-10 flex items-center justify-center flex-col">
+                            <Crown className="w-12 h-12 text-yellow-200 mb-3 drop-shadow-lg" />
+                            <p className="text-amber-100 font-bold text-sm uppercase tracking-wider mb-1">Haftanın Şampiyonu</p>
 
-                        <div className="flex items-center gap-4 mt-4">
-                            <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl shadow-lg">
-                                {user.avatar || "👤"}
-                            </div>
-                            <div>
-                                <h2 className="text-2xl font-black">{user.name || "Misafir"}</h2>
-                                <div className="flex items-center gap-2 mt-1 text-amber-100">
-                                    <Zap className="w-4 h-4" />
-                                    <span className="font-bold">{user.totalXp.toLocaleString()} XP</span>
+                            <div className="flex items-center gap-4 mt-4">
+                                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl shadow-lg">
+                                    {leaderboardData[0].avatar || "👤"}
+
+                                    <div>
+                                        <h2 className="text-2xl font-black truncate max-w-[200px]">{leaderboardData[0].name || "Misafir"}</h2>
+                                        <div className="flex items-center gap-2 mt-1 text-amber-100">
+                                            <Zap className="w-4 h-4" />
+                                            <span className="font-bold">{leaderboardData[0].xp.toLocaleString()} XP</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                )}
 
-                {/* Leaderboard List */}
-                <div className="space-y-3">
-                    <h2 className="text-lg font-bold text-slate-800 px-1 flex items-center gap-2">
-                        <TrendingUp className="w-5 h-5 text-slate-400" />
-                        Sıralama
-                    </h2>
+                        {/* Leaderboard List */}
+                        <div className="space-y-3">
+                            <h2 className="text-lg font-bold text-slate-800 px-1 flex items-center gap-2">
+                                <TrendingUp className="w-5 h-5 text-slate-400" />
+                                Sıralama
+                            </h2>
 
-                    {leaderboardData.map((data) => {
-                        const rankStyle = getRankStyle(data.rank);
-                        return (
-                            <div
-                                key={data.rank}
-                                className={cn(
-                                    "relative flex items-center gap-4 p-4 rounded-[24px] border-b-4 transition-all duration-300 group overflow-hidden",
-                                    data.isCurrentUser
-                                        ? "bg-gradient-to-r from-indigo-50 to-violet-50 border-indigo-300 shadow-lg shadow-indigo-500/10 scale-[1.02]"
-                                        : "bg-white border-slate-200 hover:-translate-y-1 hover:shadow-lg"
-                                )}
-                            >
-                                {/* Rank Badge */}
-                                <div className={cn(
-                                    "w-12 h-12 rounded-2xl bg-gradient-to-br flex items-center justify-center font-black text-xl shadow-md shrink-0",
-                                    rankStyle.bg,
-                                    rankStyle.text,
-                                    rankStyle.shadow
-                                )}>
-                                    {data.rank}
-                                </div>
-
-                                {/* Avatar */}
-                                <div className={cn(
-                                    "w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-md shrink-0",
-                                    data.isCurrentUser
-                                        ? "bg-gradient-to-br from-indigo-500 to-violet-500 text-white"
-                                        : "bg-gradient-to-br from-slate-200 to-slate-300"
-                                )}>
-                                    {data.avatar}
-                                </div>
-
-                                {/* Name & Status */}
-                                <div className="flex-1 min-w-0">
-                                    <p className={cn(
-                                        "font-bold text-base leading-tight mb-1 flex items-center gap-2",
-                                        data.isCurrentUser ? "text-indigo-600" : "text-slate-700"
-                                    )}>
-                                        {data.name}
-                                        {data.isCurrentUser && (
-                                            <span className="px-2 py-0.5 bg-indigo-100 text-indigo-600 text-[10px] font-black rounded-lg uppercase">Sen</span>
+                            {leaderboardData.map((data) => {
+                                const rankStyle = getRankStyle(data.rank);
+                                return (
+                                    <div
+                                        key={data.rank}
+                                        className={cn(
+                                            "relative flex items-center gap-4 p-4 rounded-[24px] border-b-4 transition-all duration-300 group overflow-hidden",
+                                            data.isCurrentUser
+                                                ? "bg-gradient-to-r from-indigo-50 to-violet-50 border-indigo-300 shadow-lg shadow-indigo-500/10 scale-[1.02]"
+                                                : "bg-white border-slate-200 hover:-translate-y-1 hover:shadow-lg"
                                         )}
-                                    </p>
-                                    <div className="flex items-center gap-1.5 text-sm text-slate-400 font-medium">
-                                        <Flame className="w-4 h-4 text-orange-400" />
-                                        <span>Bu hafta aktif</span>
+                                    >
+                                        {/* Rank Badge */}
+                                        <div className={cn(
+                                            "w-12 h-12 rounded-2xl bg-gradient-to-br flex items-center justify-center font-black text-xl shadow-md shrink-0",
+                                            rankStyle.bg,
+                                            rankStyle.text,
+                                            rankStyle.shadow
+                                        )}>
+                                            {data.rank}
+                                        </div>
+
+                                        {/* Avatar */}
+                                        <div className={cn(
+                                            "w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-md shrink-0",
+                                            data.isCurrentUser
+                                                ? "bg-gradient-to-br from-indigo-500 to-violet-500 text-white"
+                                                : "bg-gradient-to-br from-slate-200 to-slate-300"
+                                        )}>
+                                            {data.avatar}
+                                        </div>
+
+                                        {/* Name & Status */}
+                                        <div className="flex-1 min-w-0">
+                                            <p className={cn(
+                                                "font-bold text-base leading-tight mb-1 flex items-center gap-2 truncate",
+                                                data.isCurrentUser ? "text-indigo-600" : "text-slate-700"
+                                            )}>
+                                                <span className="truncate max-w-[150px] sm:max-w-[200px] block">{data.name}</span>
+                                                {data.isCurrentUser && (
+                                                    <span className="px-2 py-0.5 bg-indigo-100 text-indigo-600 text-[10px] font-black rounded-lg uppercase">Sen</span>
+                                                )}
+                                            </p>
+                                            <div className="flex items-center gap-1.5 text-sm text-slate-400 font-medium">
+                                                <Flame className="w-4 h-4 text-orange-400" />
+                                                <span>Bu hafta aktif</span>
+                                            </div>
+                                        </div>
+
+                                        {/* XP & Icon */}
+                                        <div className="flex items-center gap-3 shrink-0">
+                                            {getRankIcon(data.rank)}
+                                            <div className="text-right">
+                                                <p className="font-black text-lg text-amber-500">{data.xp.toLocaleString()}</p>
+                                                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide">XP</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                );
+                            })}
+                        </div>
 
-                                {/* XP & Icon */}
-                                <div className="flex items-center gap-3 shrink-0">
-                                    {getRankIcon(data.rank)}
-                                    <div className="text-right">
-                                        <p className="font-black text-lg text-amber-500">{data.xp.toLocaleString()}</p>
-                                        <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide">XP</p>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                        {/* Info Note */}
+                        <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 text-center">
+                            <p className="text-sm text-indigo-600 font-medium">
+                                🏆 Liderlik tablosu her hafta Pazartesi günü sıfırlanır.
+                            </p>
+                        </div>
 
-                {/* Info Note */}
-                <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 text-center">
-                    <p className="text-sm text-indigo-600 font-medium">
-                        🏆 Liderlik tablosu her hafta Pazartesi günü sıfırlanır.
-                    </p>
-                </div>
-
-            </main>
+                    </main>
         </div>
     );
 }
