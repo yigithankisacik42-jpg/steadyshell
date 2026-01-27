@@ -15,6 +15,13 @@ const nextConfig = {
             },
         ],
     },
+    experimental: {
+        turbopack: {},
+    }
 };
 
-export default withPWA(nextConfig);
+if (process.env.NODE_ENV === "development") {
+    export default nextConfig;
+} else {
+    export default withPWA(nextConfig);
+}
