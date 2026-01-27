@@ -7,6 +7,7 @@ import { UserProgressProvider } from "@/contexts/user-progress-context";
 import { QuestsProvider } from "@/lib/quests-context";
 import { ServiceWorkerRegistration } from "@/components/service-worker-registration";
 import { OfflineIndicator } from "@/components/offline-indicator";
+import { AuthProvider } from "@/components/auth-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,17 +36,19 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
-        <LanguageProvider>
-          <HeartsProvider>
-            <UserProgressProvider>
-              <QuestsProvider>
-                <ServiceWorkerRegistration />
-                <OfflineIndicator />
-                {children}
-              </QuestsProvider>
-            </UserProgressProvider>
-          </HeartsProvider>
-        </LanguageProvider>
+        <AuthProvider>
+          <LanguageProvider>
+            <HeartsProvider>
+              <UserProgressProvider>
+                <QuestsProvider>
+                  <ServiceWorkerRegistration />
+                  <OfflineIndicator />
+                  {children}
+                </QuestsProvider>
+              </UserProgressProvider>
+            </HeartsProvider>
+          </LanguageProvider>
+        </AuthProvider>
       </body>
     </html>
   );
