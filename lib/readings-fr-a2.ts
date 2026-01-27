@@ -8,19 +8,27 @@ import { UnitReading } from './readings';
 const unit331Reading: UnitReading = {
     unitId: 331, title: "Geçmiş Tatiller", language: "Fransızca", level: "A2",
     story: {
-        text: "L'été dernier, Marie et sa famille sont allés en Grèce. Ils sont restés dans un hôtel près de la mer. Ils ont visité beaucoup de sites historiques. Marie a pris beaucoup de photos. Le temps était parfait et ils se sont bien amusés. C'était des vacances inoubliables!",
-        translation: "Geçen yaz Marie ve ailesi Yunanistan'a gitti. Denizin yakınında bir otelde kaldılar. Birçok tarihi yeri ziyaret ettiler. Marie çok fotoğraf çekti. Hava mükemmeldi ve çok eğlendiler. Unutulmaz bir tatildi!"
+        text: "L'été dernier, j'ai passé des vacances inoubliables à Nice avec mes deux meilleurs amis, Thomas et Sophie. Nous sommes partis en train de Paris très tôt le matin, à six heures. Le voyage en TGV a duré environ cinq heures, mais nous avons dormi un peu pendant le trajet. Quand nous sommes arrivés, le soleil brillait et il faisait très chaud. Nous avons logé dans un petit appartement au centre de la ville, près de la célèbre Promenade des Anglais. Le premier jour, nous avons nagé dans la mer Méditerranée. L'eau était bleue et rafraîchissante. Le soir, nous avons dîné dans un restaurant traditionnel et j'ai goûté la salade niçoise pour la première fois. C'était délicieux ! Le lendemain, nous avons visité le musée Matisse et nous avons marché dans le Vieux Nice. J'ai acheté des cartes postales et de l'huile d'olive pour mes parents. Malheureusement, le troisième jour, il a plu un peu dans l'après-midi, alors nous sommes allés au cinéma. Le reste de la semaine, nous avons fait beaucoup d'activités : une excursion en bateau, du shopping et des promenades sur la plage. Je suis rentré chez moi fatigué mais très heureux.",
+        translation: "Geçen yaz, en iyi iki arkadaşım Thomas ve Sophie ile Nice'de unutulmaz bir tatil geçirdim. Paris'ten trenle sabah çok erken, saat altıda yola çıktık. TGV ile yolculuk yaklaşık beş saat sürdü ama yol sırasında biraz uyuduk. Vardığımızda güneş parlıyordu ve hava çok sıcaktı. Şehir merkezinde, ünlü Promenade des Anglais'nin yakınında küçük bir dairede kaldık. İlk gün Akdeniz'de yüzdük. Su mavi ve serinleticiydi. Akşam geleneksel bir restoranda akşam yemeği yedik ve ben ilk kez Niçoise salatasının tadına baktım. Lezzetliydi! Ertesi gün Matisse müzesini ziyaret ettik ve Eski Nice'de yürüdük. Ailem için kartpostallar ve zeytinyağı satın aldım. Ne yazık ki üçüncü gün öğleden sonra biraz yağmur yağdı, bu yüzden sinemaya gittik. Haftanın geri kalanında birçok aktivite yaptık: tekne gezisi, alışveriş ve plajda yürüyüşler. Evime yorgun ama çok mutlu döndüm."
     },
-    questions: [
-        { id: 1, question: "Marie nereye gitti?", options: ["Fransa", "Yunanistan", "İtalya", "İspanya"], correctAnswer: "Yunanistan" },
-        { id: 2, question: "Nerede kaldılar?", options: ["Dağda", "Şehir merkezinde", "Denizin yakınında", "Köyde"], correctAnswer: "Denizin yakınında" },
-        { id: 3, question: "Hava nasıldı?", options: ["Yağmurlu", "Soğuk", "Mükemmel", "Sıcak"], correctAnswer: "Mükemmel" }
-    ],
     vocabulary: [
-        { word: "L'été dernier", meaning: "Geçen yaz" },
-        { word: "Ils sont allés", meaning: "Gittiler" },
-        { word: "Près de", meaning: "Yakınında" },
-        { word: "Inoubliable", meaning: "Unutulmaz" }
+        { word: "Inoubliable", meaning: "Unutulmaz" },
+        { word: "Le trajet", meaning: "Yolculuk" },
+        { word: "Loger", meaning: "Konaklamak" },
+        { word: "Goûter", meaning: "Tadına bakmak" },
+        { word: "Malheureusement", meaning: "Ne yazık ki" }
+    ],
+    questions: [
+        { id: 1, question: "Kiminle tatile gitti?", options: ["Seul", "Avec ses parents", "Avec Thomas et Sophie"], correctAnswer: "Avec Thomas et Sophie" },
+        { id: 2, question: "Nereye gittiler?", options: ["À Paris", "À Nice", "À Lyon"], correctAnswer: "À Nice" },
+        { id: 3, question: "Yolculuk ne kadar sürdü?", options: ["Cinq heures", "Six heures", "Trois heures"], correctAnswer: "Cinq heures" },
+        { id: 4, question: "Nerede kaldılar?", options: ["Dans un hôtel", "Dans un appartement", "Chez des amis"], correctAnswer: "Dans un appartement" },
+        { id: 5, question: "İlk gün ne yaptılar?", options: ["Ils ont visité un musée", "Ils ont nagé", "Ils ont fait du shopping"], correctAnswer: "Ils ont nagé" },
+        { id: 6, question: "Akşam yemeğinde ne yedi?", options: ["Une pizza", "Des pâtes", "Une salade niçoise"], correctAnswer: "Une salade niçoise" },
+        { id: 7, question: "İkinci gün hangi müzeyi gezdiler?", options: ["Le Louvre", "Le musée Matisse", "Le musée Picasso"], correctAnswer: "Le musée Matisse" },
+        { id: 8, question: "Üçüncü gün neden sinemaya gittiler?", options: ["Il a plu", "Ils étaient fatigués", "C'était la nuit"], correctAnswer: "Il a plu" },
+        { id: 9, question: "Ailesi için ne aldı?", options: ["Des vêtements", "De l'huile d'olive", "Du vin"], correctAnswer: "De l'huile d'olive" },
+        { id: 10, question: "Eve döndüğünde nasıl hissediyordu?", options: ["Triste", "Fatigué mais heureux", "Malade"], correctAnswer: "Fatigué mais heureux" }
     ]
 };
 

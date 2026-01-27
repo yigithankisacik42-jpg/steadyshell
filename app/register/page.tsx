@@ -53,37 +53,38 @@ export default function RegisterPage() {
     setIsLoading(true);
 
     try {
-      const existingUsers = JSON.parse(localStorage.getItem("steadyshell_users") || "[]");
-      const userExists = existingUsers.some((u: { email: string }) => u.email === cleanEmail);
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: cleanName,
+          email: cleanEmail,
+          password: password,
+        }),
+      });
 
-      if (userExists) {
-        setError("Bu email zaten kayıtlı");
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.message || "Kayıt işlemi başarısız");
         setIsLoading(false);
         return;
       }
 
-      const hashedPassword = await hashPassword(password);
-
-      const newUser = {
-        id: Date.now(),
-        name: cleanName,
+      // Auto login after registration
+      const result = await signIn("credentials", {
+        redirect: false,
         email: cleanEmail,
-        password: hashedPassword,
-        avatar: cleanName.charAt(0).toUpperCase(),
-        createdAt: new Date().toISOString(),
-        streak: 0,
-        totalXp: 0,
-        hearts: 5,
-        completedLessons: [],
-      };
+        password: password,
+      });
 
-      existingUsers.push(newUser);
-      localStorage.setItem("steadyshell_users", JSON.stringify(existingUsers));
+      if (result?.error) {
+        setError("Giriş yapılırken bir sorun oluştu, lütfen giriş yapın.");
+        router.push("/login");
+      } else {
+        router.push("/onboarding");
+      }
 
-      const sessionUser = { ...newUser, password: undefined };
-      localStorage.setItem("steadyshell_current_user", JSON.stringify(sessionUser));
-
-      router.push("/onboarding");
     } catch (err) {
       setError("Bir hata oluştu.");
       setIsLoading(false);

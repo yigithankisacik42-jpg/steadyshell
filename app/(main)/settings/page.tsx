@@ -10,6 +10,8 @@ import Link from "next/link";
 import { APP_CONFIG } from "@/lib/config";
 import { getStatsSummary, getWeeklyStats, formatTimeShort, type DailyStats } from "@/lib/user-stats";
 import { cn } from "@/lib/utils";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const settingsItems = [
     { icon: Bell, label: "Bildirimler", description: "Hatırlatma ve güncellemeler", href: "/settings/notifications" },
@@ -40,46 +42,73 @@ export default function SettingsPage() {
     const [weeklyStats, setWeeklyStats] = useState<DailyStats[]>([]);
     const [isMounted, setIsMounted] = useState(false);
 
+    const { data: session } = useSession();
+
     useEffect(() => {
-        const savedUser = localStorage.getItem("steadyshell_current_user");
-        if (savedUser) {
-            const parsed = JSON.parse(savedUser);
-            setUser({
-                ...defaultUser,
-                ...parsed,
-                avatar: parsed.avatar || (parsed.name ? parsed.name.charAt(0).toUpperCase() : "M"),
-            });
-            setName(parsed.name || defaultUser.name);
-            setEmail(parsed.email || defaultUser.email);
+        if (session?.user) {
+            const u = session.user;
+            // Type assertion or check if properties exist
+            setUser(prev => ({
+                ...prev,
+                name: u.name || prev.name,
+                email: u.email || prev.email,
+                avatar: u.image || (u.name ? u.name.charAt(0).toUpperCase() : prev.avatar),
+            }));
+            setName(u.name || "");
+            setEmail(u.email || "");
         }
+
         setStats(getStatsSummary());
         setWeeklyStats(getWeeklyStats());
         setIsMounted(true);
-    }, []);
+    }, [session]);
 
-    const handleSave = () => {
+    const { update } = useSession();
+    const router = useRouter();
+
+    const handleSave = async () => {
         setSaveStatus("saving");
-        setTimeout(() => {
-            const updatedUser = { ...user, name, email, avatar: name.charAt(0).toUpperCase() };
-            localStorage.setItem("steadyshell_current_user", JSON.stringify(updatedUser));
-            setUser(updatedUser);
-            const users = JSON.parse(localStorage.getItem("steadyshell_users") || "[]");
-            const userIndex = users.findIndex((u: { email: string }) => u.email === user.email);
-            if (userIndex !== -1) {
-                users[userIndex] = { ...users[userIndex], ...updatedUser };
-                localStorage.setItem("steadyshell_users", JSON.stringify(users));
+
+        try {
+            const res = await fetch("/api/user/update", {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    currentPassword,
+                    newPassword
+                })
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                alert(data.message || "Güncelleme başarısız"); // Simple alert for now, could use toast
+                setSaveStatus("idle");
+                return;
             }
-            if (newPassword && currentPassword) {
-                if (userIndex !== -1) {
-                    users[userIndex].password = newPassword;
-                    localStorage.setItem("steadyshell_users", JSON.stringify(users));
-                }
-            }
+
+            // Update local state
+            setUser(prev => ({ ...prev, name, email }));
+
+            // Update NextAuth session
+            await update({
+                ...data.user
+            });
+
             setSaveStatus("saved");
             setCurrentPassword("");
             setNewPassword("");
             setTimeout(() => setSaveStatus("idle"), 2000);
-        }, 500);
+
+            router.refresh();
+
+        } catch (error) {
+            console.error("Update error:", error);
+            setSaveStatus("idle");
+            alert("Bir hata oluştu");
+        }
     };
 
     if (!isMounted) return null;

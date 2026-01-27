@@ -3,30 +3,28 @@
  * Şifre hashleme, validasyon ve güvenlik yardımcıları
  */
 
+import bcrypt from 'bcryptjs';
+
 // ===== ŞİFRE HASHLEME =====
 
 /**
- * SHA-256 ile şifre hashle (Web Crypto API)
+ * Şifre hashle (bcrypt)
  * @param password - Düz metin şifre
- * @returns 64 karakterlik hex hash
+ * @returns Hashlenmiş şifre
  */
 export async function hashPassword(password: string): Promise<string> {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    const salt = await bcrypt.genSalt(10);
+    return bcrypt.hash(password, salt);
 }
 
 /**
- * Şifre doğrula (hash karşılaştırması)
+ * Şifre doğrula (bcrypt karşılaştırması)
  * @param password - Girilen şifre
  * @param hash - Kayıtlı hash
  * @returns Eşleşme durumu
  */
 export async function verifyPassword(password: string, hash: string): Promise<boolean> {
-    const passwordHash = await hashPassword(password);
-    return passwordHash === hash;
+    return bcrypt.compare(password, hash);
 }
 
 // ===== ŞİFRE VALİDASYONU =====
@@ -65,6 +63,7 @@ export function validatePassword(password: string): PasswordValidation {
  * @returns Temizlenmiş input
  */
 export function sanitizeInput(input: string): string {
+    if (!input) return "";
     return input
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
@@ -84,7 +83,7 @@ export function isValidEmail(email: string): boolean {
     return emailRegex.test(email);
 }
 
-// ===== RATE LIMITING =====
+// ===== RATE LIMITING (Client-side helper, should be moved to Redis/DB in prod) =====
 
 const MAX_LOGIN_ATTEMPTS = 5;
 const LOCKOUT_DURATION_MS = 15 * 60 * 1000; // 15 dakika
@@ -101,6 +100,8 @@ interface LoginAttemptData {
  * @returns Giriş yapılabilir mi?
  */
 export function checkLoginAttempts(email: string): { allowed: boolean; remainingTime: number } {
+    if (typeof window === 'undefined') return { allowed: true, remainingTime: 0 };
+
     const key = `login_attempts_${email.toLowerCase()}`;
     const stored = localStorage.getItem(key);
     const attempts: LoginAttemptData = stored
@@ -127,6 +128,8 @@ export function checkLoginAttempts(email: string): { allowed: boolean; remaining
  * @param email - Kullanıcı email
  */
 export function recordFailedAttempt(email: string): void {
+    if (typeof window === 'undefined') return;
+
     const key = `login_attempts_${email.toLowerCase()}`;
     const stored = localStorage.getItem(key);
     const attempts: LoginAttemptData = stored
@@ -149,28 +152,7 @@ export function recordFailedAttempt(email: string): void {
  * @param email - Kullanıcı email
  */
 export function clearLoginAttempts(email: string): void {
+    if (typeof window === 'undefined') return;
     const key = `login_attempts_${email.toLowerCase()}`;
     localStorage.removeItem(key);
-}
-
-// ===== OTURUM GÜVENLİĞİ =====
-
-/**
- * Oturum token oluştur (basit versiyon)
- * @returns Random session token
- */
-export function generateSessionToken(): string {
-    const array = new Uint8Array(32);
-    crypto.getRandomValues(array);
-    return Array.from(array).map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-/**
- * Tüm eski kullanıcı verilerini temizle (migration için)
- */
-export function clearLegacyUserData(): void {
-    // Eski kullanıcıları temizle (güvenlik açığı olan veriler)
-    localStorage.removeItem('steadyshell_users');
-    localStorage.removeItem('steadyshell_current_user');
-    console.log('[Security] Legacy user data cleared for security upgrade');
 }

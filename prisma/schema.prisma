@@ -13,6 +13,7 @@ model User {
   email         String    @unique
   name          String?
   avatar        String?
+  password      String? // Hashed password for credential login
   
   // Progress Data
   totalXp       Int       @default(0)

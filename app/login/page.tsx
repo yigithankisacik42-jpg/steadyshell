@@ -47,20 +47,13 @@ function LoginForm() {
     setIsLoading(true);
 
     try {
-      // LocalStorage simulation
-      const users = JSON.parse(localStorage.getItem("steadyshell_users") || "[]");
-      const user = users.find((u: { email: string }) => u.email === cleanEmail);
+      const result = await signIn("credentials", {
+        redirect: false,
+        email: cleanEmail,
+        password: password,
+      });
 
-      if (!user) {
-        recordFailedAttempt(cleanEmail);
-        setError("Email veya şifre hatalı");
-        setIsLoading(false);
-        return;
-      }
-
-      const isValidPassword = await verifyPassword(password, user.password);
-
-      if (!isValidPassword) {
+      if (result?.error) {
         recordFailedAttempt(cleanEmail);
         setError("Email veya şifre hatalı");
         setIsLoading(false);
@@ -68,9 +61,10 @@ function LoginForm() {
       }
 
       clearLoginAttempts(cleanEmail);
-      const sessionUser = { ...user, password: undefined };
-      localStorage.setItem("steadyshell_current_user", JSON.stringify(sessionUser));
       router.push("/learn");
+      // Force reload to update session state if needed, though router.push should be enough
+      router.refresh();
+
     } catch (err) {
       setError("Bir hata oluştu.");
       setIsLoading(false);
