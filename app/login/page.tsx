@@ -137,7 +137,13 @@ function LoginForm() {
               <div className="space-y-2">
                 <div className="flex justify-between items-center ml-1">
                   <Label className="text-slate-300 text-xs font-bold uppercase tracking-wider">Şifre</Label>
-                  <button type="button" className="text-indigo-400 hover:text-indigo-300 text-xs font-bold transition-colors">Unuttum?</button>
+                  <button
+                    type="button"
+                    onClick={() => alert("Şifre sıfırlama özelliği yakında eklenecektir. Lütfen support@steadyshell.com ile iletişime geçin.")}
+                    className="text-indigo-400 hover:text-indigo-300 text-xs font-bold transition-colors"
+                  >
+                    Unuttum?
+                  </button>
                 </div>
                 <div className="relative group">
                   <Key className="absolute left-4 top-3.5 w-5 h-5 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
