@@ -46,8 +46,9 @@ export async function POST(req: Request) {
 
         // Hash password and create user
         const hashedPassword = await hashPassword(password);
+        console.log(`[Register] Password hashed. Hash length: ${hashedPassword.length}, Prefix: ${hashedPassword.substring(0, 7)}`);
 
-        await db.user.create({
+        const newUser = await db.user.create({
             data: {
                 name: cleanName,
                 email: cleanEmail,
@@ -58,6 +59,8 @@ export async function POST(req: Request) {
                 streak: 0,
             }
         });
+
+        console.log(`[Register] User created: ${newUser.email}, ID: ${newUser.id}`);
 
         return NextResponse.json(
             { message: "Hesap başarıyla oluşturuldu" },
