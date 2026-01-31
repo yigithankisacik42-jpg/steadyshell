@@ -662,13 +662,151 @@ const unit356Grammar: UnitGrammar = {
 };
 
 const unit357Grammar: UnitGrammar = {
-    unitId: 357, title: "Eğitim Hayatı",
-    rules: [{ id: "fr-a2-education", title: "🎓 Eğitim Terimleri", explanation: "* Faire des études (Okumak)\n* Passer un examen (Sınava girmek)\n* Réussir/Échouer (Geçmek/Kalmak)\n* Obtenir un diplôme (Diploma almak)", examples: [{ fr: "J'ai passé mon bac l'année dernière.", tr: "Geçen yıl lise bitirme sınavına girdim." }] }]
+    unitId: 357,
+    title: "Eğitim Hayatı (La Vie Scolaire)",
+    rules: [
+        {
+            id: "fr-a2-edu-places",
+            title: "🏫 BÖLÜM 1: OKUL YERLERİ VE KİŞİLER",
+            explanation: "Okul ortamındaki temel isimler:",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe"],
+                rows: [
+                    ["L'école", "Lekol", "Okul"],
+                    ["Le lycée", "Lö lise", "Lise"],
+                    ["L'université", "Lüniversite", "Üniversite"],
+                    ["L'étudiant / L'étudiante", "Letüdyan / Letüdyant", "Üniversite Öğrencisi (E/K)"],
+                    ["L'élève", "Lelev", "Öğrenci (Genel)"],
+                    ["Le professeur", "Lö profesör", "Öğretmen"],
+                    ["La classe", "La klas", "Sınıf"],
+                    ["La bibliothèque", "La bibliyotek", "Kütüphane"],
+                    ["Le cahier", "Lö kaye", "Defter"],
+                    ["Le livre", "Lö livr", "Kitap"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-edu-verbs",
+            title: "🛠️ BÖLÜM 2: EĞİTİM FİİLLERİ",
+            explanation: "Bu fiilleri cümle içinde nasıl kullanacağını ezberle:\\n\\n**1. Apprendre (Öğrenmek)** - Okunuşu: Aprandr\\n**2. Comprendre (Anlamak)** - Okunuşu: Komprandr\\n**3. Étudier (Ders Çalışmak)** - Okunuşu: Etüdye\\n**4. Demander (Sormak/İstemek)** - Okunuşu: Dömande\\n**5. Expliquer (Açıklamak)** - Okunuşu: Eksplike",
+            examples: [
+                { fr: "J'apprends le français.", tr: "Fransızca öğreniyorum. (Japran lö franse)" },
+                { fr: "Je ne comprends pas la question.", tr: "Soruyu anlamıyorum. (Jö nö kompran pa la kestion)" },
+                { fr: "Il étudie à l'université.", tr: "O üniversitede okuyor. (İl etüdi a lüniversite)" },
+                { fr: "Je peux demander quelque chose?", tr: "Bir şey sorabilir miyim? (Jö pö dömande kelk şoz)" },
+                { fr: "Le prof explique la leçon.", tr: "Hoca dersi açıklıyor. (Lö prof eksplik la löson)" }
+            ]
+        },
+        {
+            id: "fr-a2-edu-exams",
+            title: "⚠️ BÖLÜM 3: KRİTİK SINAV TUZAĞI (Passer vs Réussir)",
+            explanation: "Türkçede 'sınavı geçtim' derken dikkatli ol! Fransızcada iki farklı anlam var:\\n\\n**PASSER un examen** = Sınava GİRMEK (henüz sonuç yok)\\n**RÉUSSIR un examen** = Sınavı GEÇMEK (başarılı olmak)\\n**RATER/ÉCHOUER** = Sınavdan KALMAK",
+            table: {
+                headers: ["Durum", "Fransızca", "Okunuşu 🔊", "Türkçe"],
+                rows: [
+                    ["Sınava Girmek", "Je vais passer un examen.", "Jö ve pase an egzamen", "Sınava gireceğim."],
+                    ["Sınavı Geçmek", "J'ai réussi l'examen.", "Je reüsi legzamen", "Sınavı geçtim (başardım)."],
+                    ["Sınavdan Kalmak", "J'ai raté l'examen.", "Je rate legzamen", "Sınavdan kaldım."]
+                ]
+            },
+            examples: [
+                { fr: "❌ J'ai passé l'examen ≠ Sınavı geçtim", tr: "⚠️ Bu 'sınava girdim' demek, 'geçtim' değil!" },
+                { fr: "✅ J'ai réussi l'examen = Sınavı geçtim", tr: "Doğru kullanım budur!" }
+            ]
+        },
+        {
+            id: "fr-a2-edu-dialogue",
+            title: "🗣️ BÖLÜM 4: ÖRNEK DİYALOG (Sınav Stresi)",
+            explanation: "**Senaryo:** Léo ve Lea matematik sınavı hakkında konuşuyor.\\n\\n**Léo:** Salut Lea, tu as bien révisé pour l'examen ?\\n🔊 *Salü Lea, tü a biyen revize pur legzamen?*\\n*(Selam Lea, sınav için iyi tekrar yaptın mı?)*\\n\\n**Lea:** Non, les maths, c'est très difficile pour moi.\\n🔊 *No, le mat, se tre difisil pur mua.*\\n*(Hayır, matematik benim için çok zor.)*\\n\\n**Léo:** Pourquoi ? Tu ne comprends pas le prof ?\\n🔊 *Purkua? Tü nö kompran pa lö prof?*\\n*(Neden? Hocayı anlamıyor musun?)*\\n\\n**Lea:** Si, je comprends le cours, mais je fais des erreurs.\\n🔊 *Si, jö kompran lö kur, me jö fe de zerör.*\\n*(Evet, dersi anlıyorum ama hatalar yapıyorum.)*\\n\\n**Léo:** On peut étudier ensemble ce soir ?\\n🔊 *On pö etüdye ansambl sö suar?*\\n*(Bu akşam beraber çalışabiliriz, olur mu?)*\\n\\n**Lea:** Merci ! J'espère que je vais réussir.\\n🔊 *Mersi! Jesper kö jö ve reüsi.*\\n*(Teşekkürler! Umarım başarırım/geçerim.)*",
+            examples: []
+        }
+    ]
 };
 
 const unit358Grammar: UnitGrammar = {
-    unitId: 358, title: "İş Hayatı",
-    rules: [{ id: "fr-a2-work", title: "💼 İş Terimleri", explanation: "* Chercher un emploi (İş aramak)\n* Postuler pour... (Başvurmak)\n* Avoir un entretien (Mülakat yapmak)\n* Travailler à temps partiel (Yarı zamanlı)", examples: [{ fr: "Je cherche un emploi à temps plein.", tr: "Tam zamanlı iş arıyorum." }] }]
+    unitId: 358,
+    title: "İş Hayatı (La Vie Professionnelle)",
+    rules: [
+        {
+            id: "fr-a2-work-terms",
+            title: "🏢 BÖLÜM 1: TEMEL TERİMLER (Ofis Sözlüğü)",
+            explanation: "Bir şirketin içindeki temel taşlar. Cinsiyetlere (Le/La) dikkat!",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe", "Cinsiyet"],
+                rows: [
+                    ["Le travail / Le boulot", "Lö travay / Lö bulo", "İş ('Boulot' günlük dildir)", "Erkek"],
+                    ["L'entreprise / La société", "Lantröpriz / La sosyete", "Şirket / Firma", "Dişi"],
+                    ["Le bureau", "Lö büro", "Ofis / Çalışma Masası", "Erkek"],
+                    ["Le patron / La patronne", "Lö patron", "Patron", "E / D"],
+                    ["Le chef", "Lö şef", "Yönetici / Şef", "Erkek"],
+                    ["Le collègue", "Lö kolleg", "İş arkadaşı", "E / D"],
+                    ["Le client", "Lö kliyan", "Müşteri", "Erkek"],
+                    ["La réunion", "La reüniyon", "Toplantı", "Dişi"],
+                    ["Le chômage", "Lö şomaj", "İşsizlik", "Erkek"],
+                    ["Le CV (Curriculum Vitae)", "Lö se-ve", "Özgeçmiş", "Erkek"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-work-verbs",
+            title: "🛠️ BÖLÜM 2: İŞ EYLEMLERİ (Fiiller)",
+            explanation: "İş hayatında en çok bu fiilleri çekeceğiz.",
+            table: {
+                headers: ["Fiil", "Anlamı", "Örnek Cümle"],
+                rows: [
+                    ["Travailler", "Çalışmak", "Je travaille chez Google. (Google'da çalışıyorum.)"],
+                    ["Gagner", "Kazanmak (Para)", "Il gagne bien sa vie. (Hayatını iyi kazanıyor.)"],
+                    ["Chercher", "Aramak (İş/Eleman)", "Je cherche un emploi. (Bir iş arıyorum.)"],
+                    ["Trouver", "Bulmak", "J'ai trouvé un travail. (Bir iş buldum.)"],
+                    ["Démissionner", "İstifa etmek", "Il va démissionner. (İstifa edecek.)"],
+                    ["Signer", "İmzalamak", "Signez le contrat, s'il vous plaît. (Sözleşmeyi imzalayın lütfen.)"]
+                ]
+            },
+            examples: [
+                { fr: "⚠️ KRİTİK AYRIM: Travailler vs Marcher", tr: "Türkçede ikisine de 'Çalışmak' diyoruz ama Fransızcada farklıdır!" },
+                { fr: "Ali travaille.", tr: "Ali çalışıyor. (İnsan = TRAVAILLER)" },
+                { fr: "L'ordinateur marche.", tr: "Bilgisayar çalışıyor. (Makine = MARCHER)" }
+            ]
+        },
+        {
+            id: "fr-a2-work-devoir",
+            title: "📐 BÖLÜM 3a: Zorunluluk Kipi - DEVOIR (Meli/Malı) 🛑",
+            explanation: "'Raporu bitirmeliyim', 'Toplantıya gitmeliyiz' demek için DEVOIR fiili kullanılır.\\n\\n**DEVOIR Çekimi (Present):**\\n* Je dois (Zorundayım)\\n* Tu dois\\n* Il/Elle doit\\n* Nous devons\\n* Vous devez\\n* Ils doivent\\n\\n**Formül:** DEVOIR (Çekimle) + FİİL (Mastar Halde)",
+            examples: [
+                { fr: "Je dois finir ce projet.", tr: "Bu projeyi bitirmeliyim." },
+                { fr: "Nous devons travailler.", tr: "Çalışmalıyız." },
+                { fr: "Tu dois envoyer le rapport.", tr: "Raporu göndermelisin." }
+            ]
+        },
+        {
+            id: "fr-a2-work-futur-proche",
+            title: "📐 BÖLÜM 3b: Yakın Gelecek - FUTUR PROCHE (Ecek/Acak) 🚀",
+            explanation: "İş planı yaparken 'Yapacağım, Gideceğim' demek için en kolay zaman budur.\\n\\n**Formül:** ALLER (Gidiyorum) + FİİL (Mastar)\\n\\n* Je vais... (Yapacağım)\\n* Tu vas... (Yapacaksın)\\n* Il/Elle va... (Yapacak)\\n* Nous allons... (Yapacağız)\\n* Vous allez... (Yapacaksınız)\\n* Ils vont... (Yapacaklar)",
+            examples: [
+                { fr: "Je vais envoyer l'email.", tr: "Maili göndereceğim." },
+                { fr: "Nous allons faire une réunion.", tr: "Bir toplantı yapacağız." },
+                { fr: "Elle va signer le contrat.", tr: "Sözleşmeyi imzalayacak." }
+            ]
+        },
+        {
+            id: "fr-a2-work-email",
+            title: "📧 BÖLÜM 4: PROFESYONEL İLETİŞİM (Mail Dili)",
+            explanation: "İş maillerinde 'Selam naber' denmez. İşte kalıplar:\\n\\n**Giriş:**\\n* Madame, / Monsieur, (Hanımefendi / Beyefendi - İsimsiz)\\n* Bonjour Monsieur Yılmaz, (Merhaba Sayın Yılmaz)\\n\\n**Gelişme:**\\n* Je vous écris pour... (...için size yazıyorum.)\\n* En pièce jointe... (Ekte...)\\n\\n**Çıkış (Kapanış):**\\n* Cordialement, (Saygılarımla / İçtenlikle) - En yaygını budur.\\n* Bien à vous, (Saygılarımla)\\n\\n⚡ **Altın Kural:** İş yerinde tanımadığın veya üstün olan herkese 'VOUS' (Siz) diye hitap et. 'Tu' (Sen) demek kabalık sayılabilir.",
+            examples: [
+                { fr: "Bonjour Monsieur Dupont,", tr: "Merhaba Sayın Dupont," },
+                { fr: "Je vous écris pour le projet.", tr: "Proje için size yazıyorum." },
+                { fr: "Cordialement,", tr: "Saygılarımla," }
+            ]
+        },
+        {
+            id: "fr-a2-work-dialogue",
+            title: "🗣️ BÖLÜM 5: ÖRNEK DİYALOG (Görev Verme)",
+            explanation: "**Senaryo:** Bir yönetici (Directeur) çalışanına (Employé) yeni bir görev veriyor.\\n\\n**Directeur:** Bonjour Ali, vous avez une minute ?\\n*(Merhaba Ali, bir dakikanız var mı?)*\\n\\n**Ali:** Oui Monsieur, bien sûr.\\n*(Evet efendim, elbette.)*\\n\\n**Directeur:** Nous devons préparer le projet 'SteadyShell'.\\n*(SteadyShell projesini hazırlamalıyız.)*\\n\\n**Ali:** D'accord. C'est pour quand ?\\n*(Tamam. Ne zaman için?)*\\n\\n**Directeur:** Pour demain. C'est très urgent !\\n*(Yarın için. Çok acil!)*\\n\\n**Ali:** Pas de problème. Je vais commencer tout de suite.\\n*(Sorun yok. Hemen başlayacağım.)*\\n\\n**Directeur:** Merci. Bon travail !\\n*(Teşekkürler. İyi çalışmalar!)*",
+            examples: []
+        }
+    ]
 };
 
 const unit359Grammar: UnitGrammar = {

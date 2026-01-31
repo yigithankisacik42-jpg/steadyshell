@@ -217,9 +217,55 @@ const unit355Reading: UnitReading = { unitId: 355, title: "Şehir", language: "F
 
 const unit356Reading: UnitReading = { unitId: 356, title: "Kültür", language: "Fransızca", level: "A2", story: { text: "En France, on fait la bise pour se saluer. C'est une coutume très française. Le nombre de bises change selon la région. En Turquie, c'est différent, on se serre la main.", translation: "Fransa'da selamlaşırken yanaktan öpüşülür. Bu çok Fransız bir gelenek. Öpücük sayısı bölgeye göre değişir. Türkiye'de farklı, el sıkışılır." }, questions: [{ id: 1, question: "Fransa'da nasıl selamlaşılır?", options: ["El sıkışarak", "Yanaktan öperek", "Baş eğerek", "El sallayarak"], correctAnswer: "Yanaktan öperek" }], vocabulary: [{ word: "La bise", meaning: "Yanaktan öpücük" }] };
 
-const unit357Reading: UnitReading = { unitId: 357, title: "Eğitim", language: "Fransızca", level: "A2", story: { text: "Marie fait des études de médecine à Paris. Elle est en troisième année. L'année dernière, elle a passé ses examens avec succès. Elle espère devenir médecin dans cinq ans.", translation: "Marie Paris'te tıp okuyor. Üçüncü sınıfta. Geçen yıl sınavlarını başarıyla geçti. Beş yıl içinde doktor olmayı umuyor." }, questions: [{ id: 1, question: "Marie ne okuyor?", options: ["Hukuk", "Tıp", "Mühendislik", "Edebiyat"], correctAnswer: "Tıp" }], vocabulary: [{ word: "Faire des études", meaning: "Okumak" }] };
+const unit357Reading: UnitReading = {
+    unitId: 357, title: "Eğitim Hayatı", language: "Fransızca", level: "A2",
+    story: {
+        text: "Léa est étudiante à l'université de Lyon. Elle étudie les mathématiques. Cette semaine, elle a un examen très important.\\n\\nHier, à la bibliothèque, elle a rencontré son ami Léo.\\n\\n- Salut Léa, tu as bien révisé pour l'examen ?\\n- Non, les maths, c'est très difficile pour moi. Je ne comprends pas tout.\\n- Pourquoi ? Le professeur n'explique pas bien ?\\n- Si, il explique bien, mais je fais beaucoup d'erreurs.\\n- On peut étudier ensemble ce soir ?\\n- D'accord, merci ! J'espère que je vais réussir.\\n\\nLe lendemain, Léa a passé l'examen. C'était difficile mais elle a bien répondu. Une semaine plus tard, les résultats sont arrivés. Léa a réussi avec 15/20 ! Elle était très contente.",
+        translation: "Léa Lyon Üniversitesi'nde öğrenci. Matematik okuyor. Bu hafta çok önemli bir sınavı var.\\n\\nDün kütüphanede arkadaşı Léo ile karşılaştı.\\n\\n- Selam Léa, sınav için iyi çalıştın mı?\\n- Hayır, matematik benim için çok zor. Her şeyi anlamıyorum.\\n- Neden? Hoca iyi anlatmıyor mu?\\n- Hayır, iyi anlatıyor ama çok hata yapıyorum.\\n- Bu akşam birlikte çalışabilir miyiz?\\n- Tamam, teşekkürler! Umarım geçerim.\\n\\nErtesi gün Léa sınava girdi. Zor ama iyi cevapladı. Bir hafta sonra sonuçlar geldi. Léa 20 üzerinden 15 ile geçti! Çok mutluydu."
+    },
+    questions: [
+        { id: 1, question: "Léa ne okuyor?", options: ["Fizik", "Matematik", "Edebiyat", "Tarih"], correctAnswer: "Matematik" },
+        { id: 2, question: "Léa nerede arkadaşı ile karşılaştı?", options: ["Kafede", "Okulda", "Kütüphanede", "Parkta"], correctAnswer: "Kütüphanede" },
+        { id: 3, question: "Léa'nın problemi ne?", options: ["Hoca iyi değil", "Çok hata yapıyor", "Derse gelmiyor", "Kitabı yok"], correctAnswer: "Çok hata yapıyor" },
+        { id: 4, question: "Léo ne teklif etti?", options: ["Film izlemek", "Birlikte çalışmak", "Yemek yemek", "Gezmeye gitmek"], correctAnswer: "Birlikte çalışmak" },
+        { id: 5, question: "Léa sınavdan kaç aldı?", options: ["10/20", "12/20", "15/20", "18/20"], correctAnswer: "15/20" }
+    ],
+    vocabulary: [
+        { word: "Étudier", meaning: "Ders çalışmak" },
+        { word: "Réviser", meaning: "Tekrar etmek" },
+        { word: "Comprendre", meaning: "Anlamak" },
+        { word: "Expliquer", meaning: "Açıklamak" },
+        { word: "Passer un examen", meaning: "Sınava girmek" },
+        { word: "Réussir", meaning: "Başarmak/Geçmek" },
+        { word: "Les résultats", meaning: "Sonuçlar" },
+        { word: "Une erreur", meaning: "Hata" }
+    ]
+};
 
-const unit358Reading: UnitReading = { unitId: 358, title: "İş", language: "Fransızca", level: "A2", story: { text: "Thomas cherche un emploi depuis trois mois. Il a envoyé beaucoup de CV. La semaine dernière, il a eu un entretien. L'entreprise l'a rappelé: il a été embauché!", translation: "Thomas üç aydır iş arıyor. Çok CV gönderdi. Geçen hafta bir mülakata girdi. Şirket onu geri aradı: işe alındı!" }, questions: [{ id: 1, question: "Thomas işe alındı mı?", options: ["Evet", "Hayır", "Bilmiyoruz", "Bekliyor"], correctAnswer: "Evet" }], vocabulary: [{ word: "Être embauché", meaning: "İşe alınmak" }] };
+const unit358Reading: UnitReading = {
+    unitId: 358, title: "İş Hayatı", language: "Fransızca", level: "A2",
+    story: {
+        text: "Thomas cherche un emploi depuis trois mois. Il a envoyé beaucoup de CV et lettres de motivation. La semaine dernière, il a eu un entretien dans une grande entreprise.\\n\\nLe directeur lui a demandé: 'Pourquoi voulez-vous travailler chez nous?' Thomas a répondu: 'Je suis très motivé et j'ai de l'expérience dans ce domaine.'\\n\\nDeux jours plus tard, l'entreprise l'a rappelé. La secrétaire a dit: 'Félicitations, vous êtes embauché! Vous devez signer le contrat lundi. Votre salaire sera de 2500 euros par mois.'\\n\\nThomas était très content. Il a téléphoné à ses parents pour leur annoncer la bonne nouvelle. Son premier jour de travail, il a rencontré ses nouveaux collègues. Son chef lui a expliqué ses responsabilités et lui a dit: 'Bienvenue dans l'équipe!'",
+        translation: "Thomas üç aydır iş arıyor. Çok CV ve motivasyon mektubu gönderdi. Geçen hafta büyük bir şirkette mülakata girdi.\\n\\nDirektör ona sordu: 'Neden bizimle çalışmak istiyorsunuz?' Thomas cevapladı: 'Çok motive biriyim ve bu alanda deneyimim var.'\\n\\nİki gün sonra şirket onu geri aradı. Sekreter dedi ki: 'Tebrikler, işe alındınız! Pazartesi sözleşmeyi imzalamalısınız. Maaşınız ayda 2500 euro olacak.'\\n\\nThomas çok mutluydu. İyi haberi vermek için ailesini aradı. İlk iş gününde yeni iş arkadaşlarıyla tanıştı. Şefi sorumluluklarını anlattı ve dedi ki: 'Ekibe hoş geldin!'"
+    },
+    questions: [
+        { id: 1, question: "Thomas ne kadar zamandır iş arıyordu?", options: ["Bir hafta", "Bir ay", "Üç ay", "Altı ay"], correctAnswer: "Üç ay" },
+        { id: 2, question: "Thomas mülakatta ne soruldu?", options: ["Ne kadar kazanmak istiyor", "Neden orada çalışmak istiyor", "Ne zaman başlayabilir", "Nerede yaşıyor"], correctAnswer: "Neden orada çalışmak istiyor" },
+        { id: 3, question: "Thomas işe alındı mı?", options: ["Evet", "Hayır", "Bekliyorlar", "Bilmiyoruz"], correctAnswer: "Evet" },
+        { id: 4, question: "Thomas'ın maaşı ne kadar?", options: ["1500 euro", "2000 euro", "2500 euro", "3000 euro"], correctAnswer: "2500 euro" },
+        { id: 5, question: "Thomas iyi haberi kime verdi?", options: ["Arkadaşlarına", "Ailesine", "Komşularına", "Öğretmenine"], correctAnswer: "Ailesine" }
+    ],
+    vocabulary: [
+        { word: "Chercher un emploi", meaning: "İş aramak" },
+        { word: "L'entretien", meaning: "Mülakat" },
+        { word: "Être embauché", meaning: "İşe alınmak" },
+        { word: "Le contrat", meaning: "Sözleşme" },
+        { word: "Le salaire", meaning: "Maaş" },
+        { word: "Le collègue", meaning: "İş arkadaşı" },
+        { word: "Le chef", meaning: "Şef/Yönetici" },
+        { word: "L'équipe", meaning: "Ekip" }
+    ]
+};
 
 const unit359Reading: UnitReading = {
     unitId: 359, title: "Teknoloji Kullanımı", language: "Fransızca", level: "A2",

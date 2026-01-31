@@ -518,19 +518,72 @@ const unit356Vocab: UnitVocabulary = {
 
 const unit357Vocab: UnitVocabulary = {
     unitId: 357, title: "Eğitim Hayatı", words: [
+        // Okul Yerleri
+        { word: "L'école", meaning: "Okul", pronunciation: "le-kol", example: "Je vais à l'école.", exampleTranslation: "Okula gidiyorum." },
+        { word: "Le lycée", meaning: "Lise", pronunciation: "lö-li-se", example: "Il est au lycée.", exampleTranslation: "O lisede." },
+        { word: "L'université", meaning: "Üniversite", pronunciation: "lü-ni-ver-si-te", example: "Elle étudie à l'université.", exampleTranslation: "O üniversitede okuyor." },
+        { word: "La classe", meaning: "Sınıf", pronunciation: "la-klas", example: "Je suis en classe.", exampleTranslation: "Sınıftayım." },
+        { word: "La bibliothèque", meaning: "Kütüphane", pronunciation: "la-bib-li-yo-tek", example: "J'étudie à la bibliothèque.", exampleTranslation: "Kütüphanede çalışıyorum." },
+
+        // Kişiler
+        { word: "L'étudiant", meaning: "Öğrenci (erkek)", pronunciation: "le-tü-dyan", example: "Il est étudiant.", exampleTranslation: "O öğrenci." },
+        { word: "L'étudiante", meaning: "Öğrenci (kadın)", pronunciation: "le-tü-dyant", example: "Elle est étudiante.", exampleTranslation: "O öğrenci (kız)." },
+        { word: "L'élève", meaning: "Öğrenci (genel)", pronunciation: "le-lev", example: "Les élèves travaillent.", exampleTranslation: "Öğrenciler çalışıyor." },
+        { word: "Le professeur", meaning: "Öğretmen", pronunciation: "lö-pro-fe-sör", example: "Le professeur explique.", exampleTranslation: "Öğretmen açıklıyor." },
+
+        // Malzemeler
+        { word: "Le cahier", meaning: "Defter", pronunciation: "lö-ka-ye", example: "J'écris dans mon cahier.", exampleTranslation: "Defterime yazıyorum." },
+        { word: "Le livre", meaning: "Kitap", pronunciation: "lö-livr", example: "Je lis un livre.", exampleTranslation: "Kitap okuyorum." },
+        { word: "Le stylo", meaning: "Tükenmez kalem", pronunciation: "lö-sti-lo", example: "Prête-moi ton stylo.", exampleTranslation: "Kalemini ödünç ver." },
+
+        // Fiiller
+        { word: "Apprendre", meaning: "Öğrenmek", pronunciation: "ap-randr", example: "J'apprends le français.", exampleTranslation: "Fransızca öğreniyorum." },
+        { word: "Comprendre", meaning: "Anlamak", pronunciation: "kom-prandr", example: "Je comprends la leçon.", exampleTranslation: "Dersi anlıyorum." },
+        { word: "Étudier", meaning: "Ders çalışmak", pronunciation: "e-tü-dye", example: "J'étudie beaucoup.", exampleTranslation: "Çok çalışıyorum." },
+        { word: "Expliquer", meaning: "Açıklamak", pronunciation: "eks-pli-ke", example: "Le prof explique bien.", exampleTranslation: "Hoca iyi açıklıyor." },
+        { word: "Réviser", meaning: "Tekrar etmek", pronunciation: "re-vi-ze", example: "Tu as révisé?", exampleTranslation: "Tekrar yaptın mı?" },
+
+        // Sınav Terimleri
+        { word: "L'examen", meaning: "Sınav", pronunciation: "leg-za-men", example: "J'ai un examen demain.", exampleTranslation: "Yarın sınavım var." },
         { word: "Le diplôme", meaning: "Diploma", pronunciation: "lö-di-plom", example: "J'ai obtenu mon diplôme.", exampleTranslation: "Diplomamı aldım." },
-        { word: "L'examen", meaning: "Sınav", pronunciation: "leg-za-men", example: "J'ai passé l'examen.", exampleTranslation: "Sınava girdim." },
+        { word: "Passer un examen", meaning: "Sınava girmek", pronunciation: "pa-se ön eg-za-men", example: "Je vais passer l'examen.", exampleTranslation: "Sınava gireceğim." },
         { word: "Réussir", meaning: "Başarmak/Geçmek", pronunciation: "re-ü-sir", example: "J'ai réussi l'examen.", exampleTranslation: "Sınavı geçtim." },
-        { word: "Échouer", meaning: "Başarısız olmak", pronunciation: "e-şu-e", example: "J'ai échoué.", exampleTranslation: "Kaldım." }
+        { word: "Rater/Échouer", meaning: "Kalmak/Başarısız olmak", pronunciation: "ra-te / e-şu-e", example: "J'ai raté l'examen.", exampleTranslation: "Sınavdan kaldım." }
     ]
 };
 
 const unit358Vocab: UnitVocabulary = {
     unitId: 358, title: "İş Hayatı", words: [
-        { word: "L'emploi", meaning: "İş", pronunciation: "lan-plua", example: "Je cherche un emploi.", exampleTranslation: "İş arıyorum." },
+        // Temel İş Terimleri
+        { word: "Le travail", meaning: "İş", pronunciation: "lö-tra-vay", example: "J'aime mon travail.", exampleTranslation: "İşimi seviyorum." },
+        { word: "Le boulot", meaning: "İş (günlük dil)", pronunciation: "lö-bu-lo", example: "C'est un bon boulot.", exampleTranslation: "İyi bir iş." },
+        { word: "L'entreprise", meaning: "Şirket", pronunciation: "lan-trö-priz", example: "L'entreprise est grande.", exampleTranslation: "Şirket büyük." },
+        { word: "La société", meaning: "Firma/Şirket", pronunciation: "la-so-sye-te", example: "Je travaille dans une société.", exampleTranslation: "Bir firmada çalışıyorum." },
+        { word: "Le bureau", meaning: "Ofis/Masa", pronunciation: "lö-bü-ro", example: "Je suis au bureau.", exampleTranslation: "Ofisteyim." },
+        { word: "Le patron", meaning: "Patron (erkek)", pronunciation: "lö-pa-tron", example: "Le patron est gentil.", exampleTranslation: "Patron kibar." },
+        { word: "La patronne", meaning: "Patron (kadın)", pronunciation: "la-pa-tron", example: "La patronne arrive.", exampleTranslation: "Patron geliyor." },
+        { word: "Le chef", meaning: "Yönetici/Şef", pronunciation: "lö-şef", example: "Mon chef est strict.", exampleTranslation: "Şefim sıkı." },
+        { word: "Le collègue", meaning: "İş arkadaşı", pronunciation: "lö-ko-leg", example: "Mon collègue m'aide.", exampleTranslation: "İş arkadaşım yardım ediyor." },
+        { word: "Le client", meaning: "Müşteri", pronunciation: "lö-kli-yan", example: "Le client attend.", exampleTranslation: "Müşteri bekliyor." },
+        { word: "La réunion", meaning: "Toplantı", pronunciation: "la-re-ü-ni-yon", example: "J'ai une réunion.", exampleTranslation: "Toplantım var." },
+        { word: "Le chômage", meaning: "İşsizlik", pronunciation: "lö-şo-maj", example: "Il est au chômage.", exampleTranslation: "O işsiz." },
         { word: "Le CV", meaning: "Özgeçmiş", pronunciation: "lö-se-ve", example: "Envoyez votre CV.", exampleTranslation: "CV'nizi gönderin." },
-        { word: "L'entretien", meaning: "Mülakat", pronunciation: "lan-trö-tyen", example: "J'ai un entretien.", exampleTranslation: "Mülakatım var." },
-        { word: "Le salaire", meaning: "Maaş", pronunciation: "lö-sa-ler", example: "Quel est le salaire?", exampleTranslation: "Maaş ne kadar?" }
+        { word: "L'entretien", meaning: "Mülakat", pronunciation: "lan-trö-tyen", example: "J'ai un entretien demain.", exampleTranslation: "Yarın mülakatım var." },
+        { word: "Le salaire", meaning: "Maaş", pronunciation: "lö-sa-ler", example: "Le salaire est bon.", exampleTranslation: "Maaş iyi." },
+        { word: "Le contrat", meaning: "Sözleşme", pronunciation: "lö-kon-tra", example: "Signez le contrat.", exampleTranslation: "Sözleşmeyi imzalayın." },
+
+        // İş Fiilleri
+        { word: "Travailler", meaning: "Çalışmak", pronunciation: "tra-va-ye", example: "Je travaille chez Google.", exampleTranslation: "Google'da çalışıyorum." },
+        { word: "Gagner", meaning: "Kazanmak (para)", pronunciation: "ga-nye", example: "Il gagne bien sa vie.", exampleTranslation: "Hayatını iyi kazanıyor." },
+        { word: "Chercher", meaning: "Aramak", pronunciation: "şer-şe", example: "Je cherche un emploi.", exampleTranslation: "İş arıyorum." },
+        { word: "Trouver", meaning: "Bulmak", pronunciation: "tru-ve", example: "J'ai trouvé un travail.", exampleTranslation: "Bir iş buldum." },
+        { word: "Démissionner", meaning: "İstifa etmek", pronunciation: "de-mi-syo-ne", example: "Il va démissionner.", exampleTranslation: "İstifa edecek." },
+        { word: "Signer", meaning: "İmzalamak", pronunciation: "si-nye", example: "Signez ici.", exampleTranslation: "Buraya imzalayın." },
+
+        // Profesyonel Kalıplar
+        { word: "Cordialement", meaning: "Saygılarımla", pronunciation: "kor-di-al-man", example: "Cordialement, Ali", exampleTranslation: "Saygılarımla, Ali" },
+        { word: "En pièce jointe", meaning: "Ekte", pronunciation: "an-pyes-jvent", example: "En pièce jointe, mon CV.", exampleTranslation: "Ekte, özgeçmişim." },
+        { word: "Bon travail", meaning: "İyi çalışmalar", pronunciation: "bon-tra-vay", example: "Merci, bon travail!", exampleTranslation: "Teşekkürler, iyi çalışmalar!" }
     ]
 };
 

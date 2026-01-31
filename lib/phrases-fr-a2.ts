@@ -385,17 +385,55 @@ const unit356Phrases: FrenchA2UnitPhrases = {
 
 const unit357Phrases: FrenchA2UnitPhrases = {
     unitId: 357, title: "Eğitim Hayatı", phrases: [
+        // Okul Hayatı
         { text: "J'étudie à l'université.", meaning: "Üniversitede okuyorum.", pronunciation: "je-tü-di-a-lü-ni-ver-si-te" },
-        { text: "J'ai passé mes examens.", meaning: "Sınavlarıma girdim.", pronunciation: "je-pa-se-me-zeg-za-men" },
-        { text: "J'ai réussi!", meaning: "Geçtim!", pronunciation: "je-re-ü-si" }
+        { text: "Il est au lycée.", meaning: "O lisede.", pronunciation: "il-e-o-li-se" },
+        { text: "J'étudie à la bibliothèque.", meaning: "Kütüphanede çalışıyorum.", pronunciation: "je-tü-di-a-la-bib-li-yo-tek" },
+
+        // Ders Çalışma
+        { text: "J'apprends le français.", meaning: "Fransızca öğreniyorum.", pronunciation: "jap-ran-lö-fran-se" },
+        { text: "Je ne comprends pas.", meaning: "Anlamıyorum.", pronunciation: "jö-nö-kom-pran-pa" },
+        { text: "Tu as bien révisé?", meaning: "İyi tekrar yaptın mı?", pronunciation: "tü-a-biyen-re-vi-ze" },
+        { text: "Le prof explique la leçon.", meaning: "Hoca dersi anlatıyor.", pronunciation: "lö-prof-eks-plik-la-lö-son" },
+        { text: "Je peux demander quelque chose?", meaning: "Bir şey sorabilir miyim?", pronunciation: "jö-pö-dö-man-de-kelk-şoz" },
+
+        // Sınav İfadeleri
+        { text: "J'ai un examen demain.", meaning: "Yarın sınavım var.", pronunciation: "je-ön-eg-za-men-dö-men" },
+        { text: "Je vais passer l'examen.", meaning: "Sınava gireceğim.", pronunciation: "jö-ve-pa-se-leg-za-men" },
+        { text: "J'ai réussi l'examen!", meaning: "Sınavı geçtim!", pronunciation: "je-re-ü-si-leg-za-men" },
+        { text: "J'ai raté l'examen.", meaning: "Sınavdan kaldım.", pronunciation: "je-ra-te-leg-za-men" },
+        { text: "J'espère que je vais réussir.", meaning: "Umarım geçerim.", pronunciation: "jes-per-kö-jö-ve-re-ü-sir" },
+
+        // Birlikte Çalışma
+        { text: "On peut étudier ensemble?", meaning: "Birlikte çalışabilir miyiz?", pronunciation: "on-pö-e-tü-dye-an-sambl" },
+        { text: "C'est très difficile pour moi.", meaning: "Benim için çok zor.", pronunciation: "se-tre-di-fi-sil-pur-mua" }
     ]
 };
 
 const unit358Phrases: FrenchA2UnitPhrases = {
     unitId: 358, title: "İş Hayatı", phrases: [
+        // İş Arama
         { text: "Je cherche un emploi.", meaning: "İş arıyorum.", pronunciation: "jö-şerş-ön-an-plua" },
+        { text: "Je cherche un emploi à temps plein.", meaning: "Tam zamanlı iş arıyorum.", pronunciation: "jö-şerş-ön-an-plua-a-tan-plen" },
+        { text: "Je travaille à temps partiel.", meaning: "Yarı zamanlı çalışıyorum.", pronunciation: "jö-tra-vay-a-tan-par-syel" },
+        { text: "J'ai trouvé un travail.", meaning: "Bir iş buldum.", pronunciation: "je-tru-ve-ön-tra-vay" },
+
+        // Mülakat
         { text: "J'ai un entretien demain.", meaning: "Yarın mülakatım var.", pronunciation: "je-ön-an-trö-tyen-dö-men" },
-        { text: "Je travaille à temps partiel.", meaning: "Yarı zamanlı çalışıyorum.", pronunciation: "jö-tra-vay-a-tan-par-syel" }
+        { text: "Signez le contrat, s'il vous plaît.", meaning: "Sözleşmeyi imzalayın lütfen.", pronunciation: "si-nye-lö-kon-tra-sil-vu-ple" },
+        { text: "Il va démissionner.", meaning: "İstifa edecek.", pronunciation: "il-va-de-mi-syo-ne" },
+
+        // İş Ortamı
+        { text: "Je travaille chez Google.", meaning: "Google'da çalışıyorum.", pronunciation: "jö-tra-vay-şe-gugl" },
+        { text: "Je suis au bureau.", meaning: "Ofisteyim.", pronunciation: "jö-süi-o-bü-ro" },
+        { text: "J'ai une réunion.", meaning: "Toplantım var.", pronunciation: "je-ün-re-ü-ni-yon" },
+        { text: "Nous devons préparer le projet.", meaning: "Projeyi hazırlamalıyız.", pronunciation: "nu-dö-von-pre-pa-re-lö-pro-je" },
+        { text: "Je vais envoyer l'email.", meaning: "Maili göndereceğim.", pronunciation: "jö-ve-an-vua-ye-li-meyl" },
+
+        // Mail Dili
+        { text: "Bonjour Monsieur,", meaning: "Merhaba Sayın Bey,", pronunciation: "bon-jur-mö-syö" },
+        { text: "Je vous écris pour...", meaning: "...için size yazıyorum.", pronunciation: "jö-vu-ze-kri-pur" },
+        { text: "Cordialement,", meaning: "Saygılarımla,", pronunciation: "kor-di-al-man" }
     ]
 };
 

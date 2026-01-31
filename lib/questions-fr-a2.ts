@@ -1608,14 +1608,220 @@ const unit356Quiz1: Question[] = [
     { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Bizde farklı", correctAnswer: "Chez nous, c'est différent" }
 ];
 
+// Unit 357 Quiz 1: Okul Terimleri
 const unit357Quiz1: Question[] = [
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Sınava girdim", correctAnswer: "J'ai passé l'examen" },
-    { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Başardım", correctAnswer: "J'ai réussi" }
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'L'école' ne demek?", options: [{ id: "a", text: "Okul", correct: true }, { id: "b", text: "Sınıf", correct: false }, { id: "c", text: "Öğretmen", correct: false }, { id: "d", text: "Kitap", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le lycée' ne demek?", options: [{ id: "a", text: "Üniversite", correct: false }, { id: "b", text: "Lise", correct: true }, { id: "c", text: "İlkokul", correct: false }, { id: "d", text: "Anaokulu", correct: false }] },
+    { id: 3, type: "SELECT", question: "'L'étudiant' ne demek?", options: [{ id: "a", text: "Öğretmen", correct: false }, { id: "b", text: "Öğrenci (üniv.)", correct: true }, { id: "c", text: "Müdür", correct: false }, { id: "d", text: "Defter", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le professeur' ne demek?", options: [{ id: "a", text: "Öğrenci", correct: false }, { id: "b", text: "Defter", correct: false }, { id: "c", text: "Öğretmen", correct: true }, { id: "d", text: "Sınıf", correct: false }] },
+    { id: 5, type: "SELECT", question: "'La bibliothèque' ne demek?", options: [{ id: "a", text: "Kitapçı", correct: false }, { id: "b", text: "Kütüphane", correct: true }, { id: "c", text: "Sınıf", correct: false }, { id: "d", text: "Kantin", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le cahier' ne demek?", options: [{ id: "a", text: "Kitap", correct: false }, { id: "b", text: "Kalem", correct: false }, { id: "c", text: "Defter", correct: true }, { id: "d", text: "Silgi", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le livre' ne demek?", options: [{ id: "a", text: "Kitap", correct: true }, { id: "b", text: "Defter", correct: false }, { id: "c", text: "Sözlük", correct: false }, { id: "d", text: "Dergi", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La classe' ne demek?", options: [{ id: "a", text: "Okul", correct: false }, { id: "b", text: "Sınıf", correct: true }, { id: "c", text: "Öğretmen", correct: false }, { id: "d", text: "Ders", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais à ___.", options: [{ id: "a", text: "l'école", correct: true }, { id: "b", text: "le école", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est au ___.", options: [{ id: "a", text: "lycée", correct: true }, { id: "b", text: "école", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "J'étudie à la ___.", options: [{ id: "a", text: "bibliothèque", correct: true }, { id: "b", text: "école", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ explique bien.", options: [{ id: "a", text: "professeur", correct: true }, { id: "b", text: "étudiant", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "J'écris dans mon ___.", options: [{ id: "a", text: "cahier", correct: true }, { id: "b", text: "livre", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je lis un ___.", options: [{ id: "a", text: "livre", correct: true }, { id: "b", text: "cahier", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Okula gidiyorum", correctAnswer: "Je vais à l'école" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "O lisede", correctAnswer: "Il est au lycée" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Üniversitede okuyorum", correctAnswer: "J'étudie à l'université" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Kütüphanede çalışıyorum", correctAnswer: "J'étudie à la bibliothèque" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Sınıftayım", correctAnswer: "Je suis en classe" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hoca dersi açıklıyor", correctAnswer: "Le prof explique la leçon" }
 ];
 
+// Unit 357 Quiz 2: Eğitim Fiilleri
+const unit357Quiz2: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Apprendre' ne demek?", options: [{ id: "a", text: "Öğrenmek", correct: true }, { id: "b", text: "Anlamak", correct: false }, { id: "c", text: "Çalışmak", correct: false }, { id: "d", text: "Okumak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Comprendre' ne demek?", options: [{ id: "a", text: "Öğrenmek", correct: false }, { id: "b", text: "Anlamak", correct: true }, { id: "c", text: "Sormak", correct: false }, { id: "d", text: "Açıklamak", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Étudier' ne demek?", options: [{ id: "a", text: "Dinlemek", correct: false }, { id: "b", text: "Ders çalışmak", correct: true }, { id: "c", text: "Yazmak", correct: false }, { id: "d", text: "Okumak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Expliquer' ne demek?", options: [{ id: "a", text: "Sormak", correct: false }, { id: "b", text: "Açıklamak", correct: true }, { id: "c", text: "Cevaplamak", correct: false }, { id: "d", text: "Dinlemek", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Demander' ne demek?", options: [{ id: "a", text: "Cevaplamak", correct: false }, { id: "b", text: "Sormak/İstemek", correct: true }, { id: "c", text: "Dinlemek", correct: false }, { id: "d", text: "Yazmak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Réviser' ne demek?", options: [{ id: "a", text: "Yazmak", correct: false }, { id: "b", text: "Tekrar etmek", correct: true }, { id: "c", text: "Silmek", correct: false }, { id: "d", text: "Okumak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'J'apprends' ne demek?", options: [{ id: "a", text: "Anlıyorum", correct: false }, { id: "b", text: "Öğreniyorum", correct: true }, { id: "c", text: "Çalışıyorum", correct: false }, { id: "d", text: "Yazıyorum", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Je ne comprends pas' ne demek?", options: [{ id: "a", text: "Öğrenmiyorum", correct: false }, { id: "b", text: "Anlamıyorum", correct: true }, { id: "c", text: "Bilmiyorum", correct: false }, { id: "d", text: "Sevmiyorum", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ le français.", options: [{ id: "a", text: "apprends", correct: true }, { id: "b", text: "comprends", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ne ___ pas la question.", options: [{ id: "a", text: "comprends", correct: true }, { id: "b", text: "apprends", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ à l'université.", options: [{ id: "a", text: "étudie", correct: true }, { id: "b", text: "apprend", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Le prof ___ la leçon.", options: [{ id: "a", text: "explique", correct: true }, { id: "b", text: "demande", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu as bien ___?", options: [{ id: "a", text: "révisé", correct: true }, { id: "b", text: "étudié", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je peux ___ quelque chose?", options: [{ id: "a", text: "demander", correct: true }, { id: "b", text: "expliquer", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Fransızca öğreniyorum", correctAnswer: "J'apprends le français" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Soruyu anlamıyorum", correctAnswer: "Je ne comprends pas la question" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Bir şey sorabilir miyim?", correctAnswer: "Je peux demander quelque chose?" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Hoca dersi açıklıyor", correctAnswer: "Le prof explique la leçon" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "İyi tekrar yaptın mı?", correctAnswer: "Tu as bien révisé?" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Çok çalışıyorum", correctAnswer: "J'étudie beaucoup" }
+];
+
+// Unit 357 Quiz 3: Sınav İfadeleri (Passer vs Réussir)
+const unit357Quiz3: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Passer un examen' ne demek?", options: [{ id: "a", text: "Sınavı geçmek", correct: false }, { id: "b", text: "Sınava girmek", correct: true }, { id: "c", text: "Sınavdan kalmak", correct: false }, { id: "d", text: "Sınavı iptal etmek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Réussir un examen' ne demek?", options: [{ id: "a", text: "Sınava girmek", correct: false }, { id: "b", text: "Sınavı geçmek (başarmak)", correct: true }, { id: "c", text: "Sınavdan kalmak", correct: false }, { id: "d", text: "Sınav yapmak", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Rater/Échouer' ne demek?", options: [{ id: "a", text: "Başarmak", correct: false }, { id: "b", text: "Kalmak/Başarısız olmak", correct: true }, { id: "c", text: "Geçmek", correct: false }, { id: "d", text: "Çalışmak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'examen' ne demek?", options: [{ id: "a", text: "Sınıf", correct: false }, { id: "b", text: "Sınav", correct: true }, { id: "c", text: "Not", correct: false }, { id: "d", text: "Ödev", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Le diplôme' ne demek?", options: [{ id: "a", text: "Sertifika", correct: false }, { id: "b", text: "Diploma", correct: true }, { id: "c", text: "Not", correct: false }, { id: "d", text: "Sınav", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Les résultats' ne demek?", options: [{ id: "a", text: "Sorular", correct: false }, { id: "b", text: "Sonuçlar", correct: true }, { id: "c", text: "Ödevler", correct: false }, { id: "d", text: "Dersler", correct: false }] },
+    { id: 7, type: "SELECT", question: "⚠️ 'J'ai passé l'examen' ne demek?", options: [{ id: "a", text: "Sınavı geçtim", correct: false }, { id: "b", text: "Sınava girdim", correct: true }, { id: "c", text: "Sınavdan kaldım", correct: false }, { id: "d", text: "Sınavı iptal ettim", correct: false }] },
+    { id: 8, type: "SELECT", question: "✅ 'J'ai réussi l'examen' ne demek?", options: [{ id: "a", text: "Sınava girdim", correct: false }, { id: "b", text: "Sınavı geçtim", correct: true }, { id: "c", text: "Sınavdan kaldım", correct: false }, { id: "d", text: "Sınavı sevdim", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais ___ un examen demain.", options: [{ id: "a", text: "passer", correct: true }, { id: "b", text: "réussir", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai ___ l'examen! (başardım)", options: [{ id: "a", text: "réussi", correct: true }, { id: "b", text: "passé", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai ___ l'examen. (kaldım)", options: [{ id: "a", text: "raté", correct: true }, { id: "b", text: "passé", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "J'espère que je vais ___.", options: [{ id: "a", text: "réussir", correct: true }, { id: "b", text: "passer", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Les ___ arrivent demain.", options: [{ id: "a", text: "résultats", correct: true }, { id: "b", text: "examens", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai obtenu mon ___.", options: [{ id: "a", text: "diplôme", correct: true }, { id: "b", text: "examen", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Yarın sınava gireceğim", correctAnswer: "Je vais passer un examen demain" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Sınavı geçtim!", correctAnswer: "J'ai réussi l'examen!" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Sınavdan kaldım", correctAnswer: "J'ai raté l'examen" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Umarım geçerim", correctAnswer: "J'espère que je vais réussir" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Diplomamı aldım", correctAnswer: "J'ai obtenu mon diplôme" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Sonuçlar geldi", correctAnswer: "Les résultats sont arrivés" }
+];
+
+// Unit 357 Quiz 4: Diyalog ve Birlikte Çalışma
+const unit357Quiz4: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'On peut étudier ensemble?' ne demek?", options: [{ id: "a", text: "Birlikte çalışabilir miyiz?", correct: true }, { id: "b", text: "Yalnız çalışabilir misin?", correct: false }, { id: "c", text: "Ders var mı?", correct: false }, { id: "d", text: "Sınav ne zaman?", correct: false }] },
+    { id: 2, type: "SELECT", question: "'C'est très difficile pour moi' ne demek?", options: [{ id: "a", text: "Çok kolay", correct: false }, { id: "b", text: "Benim için çok zor", correct: true }, { id: "c", text: "Benim için ilginç", correct: false }, { id: "d", text: "Çok sıkıcı", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Je fais des erreurs' ne demek?", options: [{ id: "a", text: "Öğreniyorum", correct: false }, { id: "b", text: "Hata yapıyorum", correct: true }, { id: "c", text: "İyi yapıyorum", correct: false }, { id: "d", text: "Anlıyorum", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Les maths' ne demek?", options: [{ id: "a", text: "Matematik", correct: true }, { id: "b", text: "Fizik", correct: false }, { id: "c", text: "Kimya", correct: false }, { id: "d", text: "Biyoloji", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Ce soir' ne demek?", options: [{ id: "a", text: "Bu sabah", correct: false }, { id: "b", text: "Bu akşam", correct: true }, { id: "c", text: "Yarın", correct: false }, { id: "d", text: "Dün", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Je suis content(e)' ne demek?", options: [{ id: "a", text: "Üzgünüm", correct: false }, { id: "b", text: "Mutluyum", correct: true }, { id: "c", text: "Yorgunum", correct: false }, { id: "d", text: "Açım", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Pourquoi?' ne demek?", options: [{ id: "a", text: "Ne zaman?", correct: false }, { id: "b", text: "Neden?", correct: true }, { id: "c", text: "Nasıl?", correct: false }, { id: "d", text: "Nerede?", correct: false }] },
+    { id: 8, type: "SELECT", question: "'D'accord' ne demek?", options: [{ id: "a", text: "Hayır", correct: false }, { id: "b", text: "Tamam", correct: true }, { id: "c", text: "Belki", correct: false }, { id: "d", text: "Bilmiyorum", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est très ___ pour moi.", options: [{ id: "a", text: "difficile", correct: true }, { id: "b", text: "facile", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je fais des ___.", options: [{ id: "a", text: "erreurs", correct: true }, { id: "b", text: "leçons", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "On peut étudier ___ ce soir?", options: [{ id: "a", text: "ensemble", correct: true }, { id: "b", text: "seul", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___, merci beaucoup!", options: [{ id: "a", text: "D'accord", correct: true }, { id: "b", text: "Non", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Le prof n'explique pas ___.", options: [{ id: "a", text: "bien", correct: true }, { id: "b", text: "mal", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle était très ___.", options: [{ id: "a", text: "contente", correct: true }, { id: "b", text: "triste", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Birlikte çalışabilir miyiz?", correctAnswer: "On peut étudier ensemble?" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Benim için çok zor", correctAnswer: "C'est très difficile pour moi" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Çok hata yapıyorum", correctAnswer: "Je fais beaucoup d'erreurs" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Umarım başarırım", correctAnswer: "J'espère que je vais réussir" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Çok mutluydu", correctAnswer: "Il/Elle était très content(e)" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Tamam, teşekkürler!", correctAnswer: "D'accord, merci!" }
+];
+
+// Unit 358 Quiz 1: Temel İş Terimleri
 const unit358Quiz1: Question[] = [
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "İş arıyorum", correctAnswer: "Je cherche un emploi" },
-    { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Mülakatım var", correctAnswer: "J'ai un entretien" }
+    // KOLAY (8 soru) - Kelime Eşleştirme
+    { id: 1, type: "SELECT", question: "'Le travail' ne demek?", options: [{ id: "a", text: "İş", correct: true }, { id: "b", text: "Maaş", correct: false }, { id: "c", text: "Patron", correct: false }, { id: "d", text: "Ofis", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le bureau' ne demek?", options: [{ id: "a", text: "Toplantı", correct: false }, { id: "b", text: "Ofis/Masa", correct: true }, { id: "c", text: "Şirket", correct: false }, { id: "d", text: "Maaş", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Le patron' ne demek?", options: [{ id: "a", text: "İş arkadaşı", correct: false }, { id: "b", text: "Müşteri", correct: false }, { id: "c", text: "Patron", correct: true }, { id: "d", text: "Şef", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le collègue' ne demek?", options: [{ id: "a", text: "İş arkadaşı", correct: true }, { id: "b", text: "Patron", correct: false }, { id: "c", text: "Müşteri", correct: false }, { id: "d", text: "Şef", correct: false }] },
+    { id: 5, type: "SELECT", question: "'La réunion' ne demek?", options: [{ id: "a", text: "Ofis", correct: false }, { id: "b", text: "Toplantı", correct: true }, { id: "c", text: "İş", correct: false }, { id: "d", text: "Mülakat", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le salaire' ne demek?", options: [{ id: "a", text: "Maaş", correct: true }, { id: "b", text: "Sözleşme", correct: false }, { id: "c", text: "İş", correct: false }, { id: "d", text: "CV", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le CV' ne demek?", options: [{ id: "a", text: "Sözleşme", correct: false }, { id: "b", text: "Özgeçmiş", correct: true }, { id: "c", text: "Maaş", correct: false }, { id: "d", text: "Mülakat", correct: false }] },
+    { id: 8, type: "SELECT", question: "'L'entreprise' ne demek?", options: [{ id: "a", text: "Şirket", correct: true }, { id: "b", text: "Ofis", correct: false }, { id: "c", text: "İş", correct: false }, { id: "d", text: "Patron", correct: false }] },
+    // ORTA (6 soru) - Boşluk Doldurma
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je travaille dans une ___.", options: [{ id: "a", text: "entreprise", correct: true }, { id: "b", text: "bureau", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Mon ___ est très gentil.", options: [{ id: "a", text: "patron", correct: true }, { id: "b", text: "travail", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai une ___ à 15h.", options: [{ id: "a", text: "réunion", correct: true }, { id: "b", text: "bureau", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Mon ___ m'aide beaucoup.", options: [{ id: "a", text: "collègue", correct: true }, { id: "b", text: "client", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est de 2500 euros.", options: [{ id: "a", text: "salaire", correct: true }, { id: "b", text: "contrat", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Envoyez votre ___.", options: [{ id: "a", text: "CV", correct: true }, { id: "b", text: "travail", correct: false }] },
+    // ZOR (6 soru) - Çeviri
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Ofisteyim", correctAnswer: "Je suis au bureau" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Toplantım var", correctAnswer: "J'ai une réunion" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Patronum kibar", correctAnswer: "Mon patron est gentil" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Büyük bir şirkette çalışıyorum", correctAnswer: "Je travaille dans une grande entreprise" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "CV'nizi gönderin", correctAnswer: "Envoyez votre CV" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Maaş ne kadar?", correctAnswer: "Quel est le salaire?" }
+];
+
+// Unit 358 Quiz 2: İş Fiilleri
+const unit358Quiz2: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Travailler' ne demek?", options: [{ id: "a", text: "Çalışmak", correct: true }, { id: "b", text: "Kazanmak", correct: false }, { id: "c", text: "Aramak", correct: false }, { id: "d", text: "Bulmak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Gagner' ne demek?", options: [{ id: "a", text: "Aramak", correct: false }, { id: "b", text: "Kazanmak", correct: true }, { id: "c", text: "İmzalamak", correct: false }, { id: "d", text: "Çalışmak", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Chercher' ne demek?", options: [{ id: "a", text: "Bulmak", correct: false }, { id: "b", text: "Aramak", correct: true }, { id: "c", text: "Kazanmak", correct: false }, { id: "d", text: "İstifa etmek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Trouver' ne demek?", options: [{ id: "a", text: "Aramak", correct: false }, { id: "b", text: "Bulmak", correct: true }, { id: "c", text: "Kayıp", correct: false }, { id: "d", text: "Çalışmak", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Démissionner' ne demek?", options: [{ id: "a", text: "İşe başlamak", correct: false }, { id: "b", text: "İstifa etmek", correct: true }, { id: "c", text: "Terfi almak", correct: false }, { id: "d", text: "İmzalamak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Signer' ne demek?", options: [{ id: "a", text: "Okumak", correct: false }, { id: "b", text: "Yazmak", correct: false }, { id: "c", text: "İmzalamak", correct: true }, { id: "d", text: "Göndermek", correct: false }] },
+    { id: 7, type: "SELECT", question: "Makine çalışıyor = ?", options: [{ id: "a", text: "La machine travaille", correct: false }, { id: "b", text: "La machine marche", correct: true }, { id: "c", text: "La machine va", correct: false }, { id: "d", text: "La machine fait", correct: false }] },
+    { id: 8, type: "SELECT", question: "Ali çalışıyor = ?", options: [{ id: "a", text: "Ali marche", correct: false }, { id: "b", text: "Ali travaille", correct: true }, { id: "c", text: "Ali va", correct: false }, { id: "d", text: "Ali fait", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ un emploi.", options: [{ id: "a", text: "cherche", correct: true }, { id: "b", text: "trouve", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai ___ un travail!", options: [{ id: "a", text: "trouvé", correct: true }, { id: "b", text: "cherché", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ bien sa vie.", options: [{ id: "a", text: "gagne", correct: true }, { id: "b", text: "travaille", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle va ___.", options: [{ id: "a", text: "démissionner", correct: true }, { id: "b", text: "signer", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "___ le contrat!", options: [{ id: "a", text: "Signez", correct: true }, { id: "b", text: "Cherchez", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ chez Google.", options: [{ id: "a", text: "travaille", correct: true }, { id: "b", text: "marche", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "İş arıyorum", correctAnswer: "Je cherche un emploi" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bir iş buldum", correctAnswer: "J'ai trouvé un travail" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Hayatını iyi kazanıyor", correctAnswer: "Il gagne bien sa vie" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sözleşmeyi imzalayın lütfen", correctAnswer: "Signez le contrat, s'il vous plaît" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "İstifa edecek", correctAnswer: "Il va démissionner" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Google'da çalışıyorum", correctAnswer: "Je travaille chez Google" }
+];
+
+// Unit 358 Quiz 3: DEVOIR ve Futur Proche
+const unit358Quiz3: Question[] = [
+    // KOLAY (8 soru) - DEVOIR Çekimi
+    { id: 1, type: "SELECT", question: "'Je dois' ne demek?", options: [{ id: "a", text: "Zorundayım", correct: true }, { id: "b", text: "Yapacağım", correct: false }, { id: "c", text: "İstiyorum", correct: false }, { id: "d", text: "Seviyorum", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Nous devons' ne demek?", options: [{ id: "a", text: "İstiyoruz", correct: false }, { id: "b", text: "Zorundayız", correct: true }, { id: "c", text: "Yapacağız", correct: false }, { id: "d", text: "Gidiyoruz", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Je vais travailler' ne demek?", options: [{ id: "a", text: "Çalışmalıyım", correct: false }, { id: "b", text: "Çalışacağım", correct: true }, { id: "c", text: "Çalışıyorum", correct: false }, { id: "d", text: "Çalıştım", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Il va partir' ne demek?", options: [{ id: "a", text: "Gitmeli", correct: false }, { id: "b", text: "Gidecek", correct: true }, { id: "c", text: "Gidiyor", correct: false }, { id: "d", text: "Gitti", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ finir ce projet.", options: [{ id: "a", text: "dois", correct: true }, { id: "b", text: "vais", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ travailler.", options: [{ id: "a", text: "devons", correct: true }, { id: "b", text: "allons", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu ___ signer le contrat.", options: [{ id: "a", text: "dois", correct: true }, { id: "b", text: "vas", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous ___ arriver à l'heure.", options: [{ id: "a", text: "devez", correct: true }, { id: "b", text: "allez", correct: false }] },
+    // ORTA (6 soru) - Futur Proche
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ envoyer l'email.", options: [{ id: "a", text: "vais", correct: true }, { id: "b", text: "dois", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle ___ signer le contrat.", options: [{ id: "a", text: "va", correct: true }, { id: "b", text: "doit", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ faire une réunion.", options: [{ id: "a", text: "allons", correct: true }, { id: "b", text: "devons", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ___ commencer demain.", options: [{ id: "a", text: "vont", correct: true }, { id: "b", text: "doivent", correct: false }] },
+    { id: 13, type: "SELECT", question: "Hangi cümle 'Zorunluluk' ifade eder?", options: [{ id: "a", text: "Je dois travailler", correct: true }, { id: "b", text: "Je vais travailler", correct: false }, { id: "c", text: "Je travaille", correct: false }, { id: "d", text: "J'ai travaillé", correct: false }] },
+    { id: 14, type: "SELECT", question: "Hangi cümle 'Gelecek' ifade eder?", options: [{ id: "a", text: "Tu dois partir", correct: false }, { id: "b", text: "Tu vas partir", correct: true }, { id: "c", text: "Tu pars", correct: false }, { id: "d", text: "Tu es parti", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bu projeyi bitirmeliyim", correctAnswer: "Je dois finir ce projet" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Çalışmalıyız", correctAnswer: "Nous devons travailler" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Maili göndereceğim", correctAnswer: "Je vais envoyer l'email" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bir toplantı yapacağız", correctAnswer: "Nous allons faire une réunion" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Raporu göndermelisin", correctAnswer: "Tu dois envoyer le rapport" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hemen başlayacağım", correctAnswer: "Je vais commencer tout de suite" }
+];
+
+// Unit 358 Quiz 4: Profesyonel İletişim ve Mülakat
+const unit358Quiz4: Question[] = [
+    // KOLAY (8 soru) - Mail Dili
+    { id: 1, type: "SELECT", question: "'Cordialement' ne demek?", options: [{ id: "a", text: "Saygılarımla", correct: true }, { id: "b", text: "Merhaba", correct: false }, { id: "c", text: "Hoşçakal", correct: false }, { id: "d", text: "İyi günler", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Bonjour Monsieur' ne demek?", options: [{ id: "a", text: "Günaydın Bay", correct: false }, { id: "b", text: "Merhaba Sayın Bey", correct: true }, { id: "c", text: "İyi akşamlar", correct: false }, { id: "d", text: "Hoş geldiniz", correct: false }] },
+    { id: 3, type: "SELECT", question: "'En pièce jointe' ne demek?", options: [{ id: "a", text: "Aşağıda", correct: false }, { id: "b", text: "Ekte", correct: true }, { id: "c", text: "Sonuç olarak", correct: false }, { id: "d", text: "Başlangıçta", correct: false }] },
+    { id: 4, type: "SELECT", question: "Resmi mailde hangi hitap kullanılır?", options: [{ id: "a", text: "Tu (sen)", correct: false }, { id: "b", text: "Vous (siz)", correct: true }, { id: "c", text: "Il (o)", correct: false }, { id: "d", text: "Nous (biz)", correct: false }] },
+    { id: 5, type: "SELECT", question: "'L'entretien' ne demek?", options: [{ id: "a", text: "Toplantı", correct: false }, { id: "b", text: "Mülakat", correct: true }, { id: "c", text: "Sunum", correct: false }, { id: "d", text: "Eğitim", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Être embauché' ne demek?", options: [{ id: "a", text: "İşe alınmak", correct: true }, { id: "b", text: "Kovulmak", correct: false }, { id: "c", text: "İstifa etmek", correct: false }, { id: "d", text: "Terfi almak", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vous ___ pour le projet.", options: [{ id: "a", text: "écris", correct: true }, { id: "b", text: "parle", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "En ___ jointe, mon CV.", options: [{ id: "a", text: "pièce", correct: true }, { id: "b", text: "partie", correct: false }] },
+    // ORTA (6 soru) - Mülakat
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai un ___ demain matin.", options: [{ id: "a", text: "entretien", correct: true }, { id: "b", text: "réunion", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous êtes ___!", options: [{ id: "a", text: "embauché", correct: true }, { id: "b", text: "travaillé", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous devez ___ le contrat lundi.", options: [{ id: "a", text: "signer", correct: true }, { id: "b", text: "envoyer", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Votre ___ sera de 2500 euros.", options: [{ id: "a", text: "salaire", correct: true }, { id: "b", text: "travail", correct: false }] },
+    { id: 13, type: "SELECT", question: "'Pourquoi voulez-vous travailler chez nous?' ne demek?", options: [{ id: "a", text: "Ne zaman başlayabilirsiniz?", correct: false }, { id: "b", text: "Neden bizimle çalışmak istiyorsunuz?", correct: true }, { id: "c", text: "Maaş beklentiniz nedir?", correct: false }, { id: "d", text: "Nerede yaşıyorsunuz?", correct: false }] },
+    { id: 14, type: "SELECT", question: "'Bon travail!' ne demek?", options: [{ id: "a", text: "İyi şanslar!", correct: false }, { id: "b", text: "İyi çalışmalar!", correct: true }, { id: "c", text: "Güle güle!", correct: false }, { id: "d", text: "Hoş geldin!", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "...için size yazıyorum", correctAnswer: "Je vous écris pour" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Yarın mülakatım var", correctAnswer: "J'ai un entretien demain" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Tebrikler, işe alındınız!", correctAnswer: "Félicitations, vous êtes embauché!" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bir dakikanız var mı?", correctAnswer: "Vous avez une minute?" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Elbette, sorun yok", correctAnswer: "Bien sûr, pas de problème" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Ekibe hoş geldiniz!", correctAnswer: "Bienvenue dans l'équipe!" }
 ];
 
 const unit359Quiz1: Question[] = [
@@ -1755,7 +1961,9 @@ export const frenchA2Quizzes: { [key: string]: Question[] } = {
     "349-1": unit349Quiz1, "349-2": unit349Quiz2, "349-3": unit349Quiz3, "349-4": unit349Quiz4,
     "350-1": unit350Quiz1, "350-2": unit350Quiz2, "350-3": unit350Quiz3, "350-4": unit350Quiz4,
     "351-1": unit351Quiz1, "352-1": unit352Quiz1, "353-1": unit353Quiz1, "354-1": unit354Quiz1,
-    "355-1": unit355Quiz1, "356-1": unit356Quiz1, "357-1": unit357Quiz1, "358-1": unit358Quiz1,
+    "355-1": unit355Quiz1, "356-1": unit356Quiz1,
+    "357-1": unit357Quiz1, "357-2": unit357Quiz2, "357-3": unit357Quiz3, "357-4": unit357Quiz4,
+    "358-1": unit358Quiz1, "358-2": unit358Quiz2, "358-3": unit358Quiz3, "358-4": unit358Quiz4,
     "359-1": unit359Quiz1, "359-2": unit359Quiz2, "359-3": unit359Quiz3, "359-4": unit359Quiz4,
     "360-1": unit360Quiz1
 };

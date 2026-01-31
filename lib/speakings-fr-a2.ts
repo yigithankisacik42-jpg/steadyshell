@@ -284,16 +284,41 @@ const unit356Speaking: UnitSpeaking = {
 };
 
 const unit357Speaking: UnitSpeaking = {
-    unitId: 357, title: "Eğitim", exercises: [
+    unitId: 357, title: "Eğitim Hayatı", exercises: [
+        // Okul ve Eğitim
         { text: "J'étudie à l'université.", translation: "Üniversitede okuyorum.", pronunciation: "je-tü-di a lü-ni-ver-si-te" },
-        { text: "J'ai réussi l'examen!", translation: "Sınavı geçtim!", pronunciation: "je re-ü-si leg-za-men" }
+        { text: "Il est au lycée.", translation: "O lisede.", pronunciation: "il e o li-se" },
+        { text: "J'apprends le français.", translation: "Fransızca öğreniyorum.", pronunciation: "jap-ran lö fran-se" },
+        { text: "Je ne comprends pas.", translation: "Anlamıyorum.", pronunciation: "jö nö kom-pran pa" },
+        { text: "Le prof explique la leçon.", translation: "Hoca dersi açıklıyor.", pronunciation: "lö prof eks-plik la lö-son" },
+        // Sınav İfadeleri
+        { text: "J'ai un examen demain.", translation: "Yarın sınavım var.", pronunciation: "je ön eg-za-men dö-men" },
+        { text: "Je vais passer l'examen.", translation: "Sınava gireceğim.", pronunciation: "jö ve pa-se leg-za-men" },
+        { text: "J'ai réussi l'examen!", translation: "Sınavı geçtim!", pronunciation: "je re-ü-si leg-za-men" },
+        { text: "J'ai raté l'examen.", translation: "Sınavdan kaldım.", pronunciation: "je ra-te leg-za-men" },
+        { text: "Tu as bien révisé?", translation: "İyi tekrar yaptın mı?", pronunciation: "tü a biyen re-vi-ze" },
+        // Diyalog
+        { text: "On peut étudier ensemble?", translation: "Birlikte çalışabilir miyiz?", pronunciation: "on pö e-tü-dye an-sambl" },
+        { text: "J'espère que je vais réussir.", translation: "Umarım geçerim.", pronunciation: "jes-per kö jö ve re-ü-sir" }
     ]
 };
 
 const unit358Speaking: UnitSpeaking = {
-    unitId: 358, title: "İş", exercises: [
+    unitId: 358, title: "İş Hayatı", exercises: [
+        // İş Arama
         { text: "Je cherche un emploi.", translation: "İş arıyorum.", pronunciation: "jö şerş ön an-plua" },
-        { text: "J'ai un entretien demain.", translation: "Yarın mülakatım var.", pronunciation: "je ön an-trö-tyen dö-men" }
+        { text: "J'ai trouvé un travail.", translation: "Bir iş buldum.", pronunciation: "je tru-ve ön tra-vay" },
+        // Mülakat
+        { text: "J'ai un entretien demain.", translation: "Yarın mülakatım var.", pronunciation: "je ön an-trö-tyen dö-men" },
+        { text: "Signez le contrat, s'il vous plaît.", translation: "Sözleşmeyi imzalayın lütfen.", pronunciation: "si-nye lö kon-tra sil vu ple" },
+        // Ofis Hayatı
+        { text: "Je travaille chez Google.", translation: "Google'da çalışıyorum.", pronunciation: "jö tra-vay şe gugl" },
+        { text: "Je suis au bureau.", translation: "Ofisteyim.", pronunciation: "jö süi o bü-ro" },
+        { text: "J'ai une réunion à 15h.", translation: "Saat 15'te toplantım var.", pronunciation: "je ün re-ü-ni-yon a kenz ör" },
+        { text: "Nous devons finir le projet.", translation: "Projeyi bitirmeliyiz.", pronunciation: "nu dö-von fi-nir lö pro-je" },
+        // Profesyonel İletişim
+        { text: "Je vais envoyer l'email.", translation: "Maili göndereceğim.", pronunciation: "jö ve an-vua-ye li-meyl" },
+        { text: "Cordialement.", translation: "Saygılarımla.", pronunciation: "kor-di-al-man" }
     ]
 };
 
