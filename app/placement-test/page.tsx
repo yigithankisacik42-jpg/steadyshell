@@ -551,29 +551,21 @@ export default function PlacementTestPage() {
 
     const calculateLevel = () => {
         let score = 0;
-        let a1Correct = 0;
-        let a2Correct = 0;
-        let b1Correct = 0;
-        let b2Correct = 0;
 
         questions.forEach((q, i) => {
             if (answers[i] === q.correct) {
                 score++;
-                if (q.level === 'A1') a1Correct++;
-                else if (q.level === 'A2') a2Correct++;
-                else if (q.level === 'B1') b1Correct++;
-                else if (q.level === 'B2') b2Correct++;
             }
         });
 
         const totalQuestions = questions.length;
-        const percentage = (score / totalQuestions) * 100;
 
-        // Seviye belirleme algoritması
-        if (percentage < 25) return { level: 'A1', levelName: 'Başlangıç', score, total: totalQuestions };
-        if (percentage < 45) return { level: 'A2', levelName: 'Temel', score, total: totalQuestions };
-        if (percentage < 70) return { level: 'B1', levelName: 'Orta', score, total: totalQuestions };
-        if (percentage < 85) return { level: 'B2', levelName: 'Orta-Üst', score, total: totalQuestions };
+        // Seviye belirleme algoritması (doğru sayısına göre)
+        // 0-4 doğru → A1, 5-8 doğru → A2, 9-13 doğru → B1, 14-16 doğru → B2, 17+ doğru → C1
+        if (score <= 4) return { level: 'A1', levelName: 'Başlangıç', score, total: totalQuestions };
+        if (score <= 8) return { level: 'A2', levelName: 'Temel', score, total: totalQuestions };
+        if (score <= 13) return { level: 'B1', levelName: 'Orta', score, total: totalQuestions };
+        if (score <= 16) return { level: 'B2', levelName: 'Orta-Üst', score, total: totalQuestions };
         return { level: 'C1', levelName: 'İleri', score, total: totalQuestions };
     };
 
@@ -605,7 +597,7 @@ export default function PlacementTestPage() {
                 date: new Date().toISOString()
             }));
         }
-        router.push('/dashboard');
+        router.push('/learn');
     };
 
     // Dil Seçimi Ekranı
@@ -735,6 +727,38 @@ export default function PlacementTestPage() {
                                 className={`h-3 rounded-full bg-gradient-to-r ${levelColors[result.level]}`}
                                 style={{ width: `${(result.score / result.total) * 100}%` }}
                             />
+                        </div>
+
+                        {/* Seviye Tablosu */}
+                        <div className="mt-6 border-t border-slate-100 pt-4">
+                            <p className="text-xs font-medium text-slate-500 mb-3">📊 Seviye Tablosu</p>
+                            <div className="space-y-2 text-sm">
+                                {[
+                                    { level: 'A1', name: 'Başlangıç', range: '0-4 doğru' },
+                                    { level: 'A2', name: 'Temel', range: '5-8 doğru' },
+                                    { level: 'B1', name: 'Orta', range: '9-13 doğru' },
+                                    { level: 'B2', name: 'Orta-Üst', range: '14-16 doğru' },
+                                    { level: 'C1', name: 'İleri', range: '17-20 doğru' },
+                                ].map((item) => (
+                                    <div
+                                        key={item.level}
+                                        className={`flex items-center justify-between p-2 rounded-lg ${result.level === item.level
+                                            ? 'bg-violet-100 border-2 border-violet-400 font-bold'
+                                            : 'bg-slate-50'
+                                            }`}
+                                    >
+                                        <span className="flex items-center gap-2">
+                                            {result.level === item.level && <span>👉</span>}
+                                            <span className={result.level === item.level ? 'text-violet-700' : 'text-slate-600'}>
+                                                {item.level} - {item.name}
+                                            </span>
+                                        </span>
+                                        <span className={result.level === item.level ? 'text-violet-700' : 'text-slate-500'}>
+                                            {item.range}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
 

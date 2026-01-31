@@ -299,8 +299,20 @@ const unit358Speaking: UnitSpeaking = {
 
 const unit359Speaking: UnitSpeaking = {
     unitId: 359, title: "Teknoloji", exercises: [
-        { text: "Je vais télécharger l'application.", translation: "Uygulamayı indireceğim.", pronunciation: "jö ve te-le-şar-je lap-li-ka-syon" },
-        { text: "Quel est le mot de passe?", translation: "Şifre ne?", pronunciation: "kel e lö mo dö pas" }
+        // Cihaz kullanımı
+        { text: "J'allume l'ordinateur.", translation: "Bilgisayarı açıyorum.", pronunciation: "ja-lüm lor-di-na-tör" },
+        { text: "Tu peux éteindre l'écran?", translation: "Ekranı kapatabilir misin?", pronunciation: "tü pö e-tendr le-kran" },
+        { text: "Ma souris ne marche pas.", translation: "Farem çalışmıyor.", pronunciation: "ma su-ri nö marş pa" },
+        // İnternet ve bağlantı
+        { text: "Je me connecte au wifi.", translation: "Wi-Fi'a bağlanıyorum.", pronunciation: "jö mö ko-nekt o wi-fi" },
+        { text: "Quel est le mot de passe?", translation: "Şifre ne?", pronunciation: "kel e lö mo dö pas" },
+        { text: "Je n'ai pas de connexion internet.", translation: "İnternet bağlantım yok.", pronunciation: "jö ne pa dö ko-nek-syon en-ter-net" },
+        // İşlemler
+        { text: "Cliquez sur le lien.", translation: "Linke tıklayın.", pronunciation: "kli-ke sür lö lyen" },
+        { text: "Je télécharge un fichier.", translation: "Dosya indiriyorum.", pronunciation: "jö te-le-şarj ön fi-şye" },
+        // Sorun çözme
+        { text: "Ça ne marche pas.", translation: "Bu çalışmıyor.", pronunciation: "sa nö marş pa" },
+        { text: "Ma batterie est vide.", translation: "Şarjım bitti.", pronunciation: "ma bat-ri e vid" }
     ]
 };
 

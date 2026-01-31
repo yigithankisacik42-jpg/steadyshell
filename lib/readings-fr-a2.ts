@@ -221,7 +221,30 @@ const unit357Reading: UnitReading = { unitId: 357, title: "Eğitim", language: "
 
 const unit358Reading: UnitReading = { unitId: 358, title: "İş", language: "Fransızca", level: "A2", story: { text: "Thomas cherche un emploi depuis trois mois. Il a envoyé beaucoup de CV. La semaine dernière, il a eu un entretien. L'entreprise l'a rappelé: il a été embauché!", translation: "Thomas üç aydır iş arıyor. Çok CV gönderdi. Geçen hafta bir mülakata girdi. Şirket onu geri aradı: işe alındı!" }, questions: [{ id: 1, question: "Thomas işe alındı mı?", options: ["Evet", "Hayır", "Bilmiyoruz", "Bekliyor"], correctAnswer: "Evet" }], vocabulary: [{ word: "Être embauché", meaning: "İşe alınmak" }] };
 
-const unit359Reading: UnitReading = { unitId: 359, title: "Teknoloji", language: "Fransızca", level: "A2", story: { text: "J'ai téléchargé une nouvelle application pour apprendre le français. Elle est gratuite et très pratique. Je me connecte tous les jours. J'ai déjà fait beaucoup de progrès!", translation: "Fransızca öğrenmek için yeni bir uygulama indirdim. Ücretsiz ve çok pratik. Her gün bağlanıyorum. Çoktan çok ilerleme kaydettim!" }, questions: [{ id: 1, question: "Uygulama ücretli mi?", options: ["Evet", "Hayır, ücretsiz", "Pahalı", "Bilinmiyor"], correctAnswer: "Hayır, ücretsiz" }], vocabulary: [{ word: "Télécharger", meaning: "İndirmek" }] };
+const unit359Reading: UnitReading = {
+    unitId: 359, title: "Teknoloji Kullanımı", language: "Fransızca", level: "A2",
+    story: {
+        text: "Ce matin, Ali a eu un problème technique au bureau. Il a allumé son ordinateur comme d'habitude, mais internet ne marchait pas. Il a demandé à son collègue Paul:\\n\\n- Pardon, internet marche chez toi?\\n- Non, je n'ai pas de connexion non plus. C'est bizarre!\\n- Tu as le mot de passe du wifi?\\n- Oui, mais le signal est très faible aujourd'hui.\\n\\nAli a essayé d'éteindre et rallumer son ordinateur. Ça n'a pas marché. Après quinze minutes, le technicien est venu. Il a branché un nouveau câble et a cliqué sur quelques paramètres. Internet a recommencé à fonctionner!\\n\\n- Voilà, c'était un problème de connexion. N'oubliez pas de sauvegarder vos fichiers régulièrement.\\n- Merci beaucoup! Maintenant je peux envoyer mes e-mails.",
+        translation: "Bu sabah Ali'nin ofiste teknik bir sorunu oldu. Her zamanki gibi bilgisayarını açtı ama internet çalışmıyordu. İş arkadaşı Paul'e sordu:\\n\\n- Pardon, sende internet çalışıyor mu?\\n- Hayır, bende de bağlantı yok. Garip!\\n- Wi-Fi şifresi sende var mı?\\n- Evet, ama bugün sinyal çok zayıf.\\n\\nAli bilgisayarını kapatıp açmayı denedi. İşe yaramadı. On beş dakika sonra teknisyen geldi. Yeni bir kablo taktı ve birkaç ayara tıkladı. İnternet tekrar çalışmaya başladı!\\n\\n- İşte oldu, bağlantı sorunu varmış. Dosyalarınızı düzenli kaydetmeyi unutmayın.\\n- Çok teşekkürler! Şimdi e-postalarımı gönderebilirim."
+    },
+    questions: [
+        { id: 1, question: "Qu'est-ce qu'Ali a fait le matin?", options: ["Il a éteint l'ordinateur", "Il a allumé l'ordinateur", "Il a téléchargé un fichier", "Il a envoyé un e-mail"], correctAnswer: "Il a allumé l'ordinateur" },
+        { id: 2, question: "Quel était le problème?", options: ["L'écran était noir", "Internet ne marchait pas", "La souris était cassée", "Le clavier ne fonctionnait pas"], correctAnswer: "Internet ne marchait pas" },
+        { id: 3, question: "Qu'est-ce qu'Ali a essayé de faire?", options: ["Télécharger internet", "Changer le mot de passe", "Éteindre et rallumer l'ordinateur", "Acheter un nouveau laptop"], correctAnswer: "Éteindre et rallumer l'ordinateur" },
+        { id: 4, question: "Qui a résolu le problème?", options: ["Ali", "Paul", "Le technicien", "Le directeur"], correctAnswer: "Le technicien" },
+        { id: 5, question: "Qu'est-ce que le technicien a conseillé?", options: ["Acheter un nouvel ordinateur", "Sauvegarder les fichiers régulièrement", "Éteindre le wifi", "Partir en vacances"], correctAnswer: "Sauvegarder les fichiers régulièrement" }
+    ],
+    vocabulary: [
+        { word: "Allumer", meaning: "Açmak (elektrik)" },
+        { word: "Éteindre", meaning: "Kapatmak (söndürmek)" },
+        { word: "La connexion", meaning: "Bağlantı" },
+        { word: "Le mot de passe", meaning: "Şifre" },
+        { word: "Le signal", meaning: "Sinyal" },
+        { word: "Brancher", meaning: "Fişe takmak" },
+        { word: "Sauvegarder", meaning: "Kaydetmek" },
+        { word: "Les fichiers", meaning: "Dosyalar" }
+    ]
+};
 
 const unit360Reading: UnitReading = { unitId: 360, title: "A2 Final", language: "Fransızca", level: "A2", story: { text: "Félicitations! Vous avez terminé le niveau A2 de français. Vous pouvez maintenant parler de vos expériences passées, faire des projets, et vous débrouiller dans la vie quotidienne. Continuez à pratiquer et bonne chance pour le niveau B1!", translation: "Tebrikler! Fransızca A2 seviyesini tamamladınız. Artık geçmiş deneyimlerinizden bahsedebilir, plan yapabilir ve günlük hayatta idare edebilirsiniz. Pratik yapmaya devam edin ve B1 seviyesi için iyi şanslar!" }, questions: [{ id: 1, question: "Bir sonraki seviye ne?", options: ["A1", "A2", "B1", "B2"], correctAnswer: "B1" }], vocabulary: [{ word: "Félicitations", meaning: "Tebrikler" }] };
 

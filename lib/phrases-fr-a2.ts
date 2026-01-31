@@ -401,9 +401,28 @@ const unit358Phrases: FrenchA2UnitPhrases = {
 
 const unit359Phrases: FrenchA2UnitPhrases = {
     unitId: 359, title: "Teknoloji Kullanımı", phrases: [
-        { text: "Je vais télécharger l'application.", meaning: "Uygulamayı indireceğim.", pronunciation: "jö-ve-te-le-şar-je-lap-li-ka-syon" },
-        { text: "Quel est le mot de passe?", meaning: "Şifre ne?", pronunciation: "kel-e-lö-mo-dö-pas" },
-        { text: "Je me connecte au wifi.", meaning: "Wi-Fi'a bağlanıyorum.", pronunciation: "jö-mö-ko-nekt-o-wi-fi" }
+        // Cihaz açma/kapama
+        { text: "J'allume l'ordinateur.", meaning: "Bilgisayarı açıyorum.", pronunciation: "ja-lüm-lor-di-na-tör" },
+        { text: "Tu peux éteindre l'écran?", meaning: "Ekranı kapatabilir misin?", pronunciation: "tü-pö-e-tendr-le-kran" },
+        { text: "Branche ton chargeur.", meaning: "Şarjını tak.", pronunciation: "branş-ton-şar-jör" },
+
+        // Wi-Fi ve Bağlantı sorunları
+        { text: "Internet marche?", meaning: "İnternet çalışıyor mu?", pronunciation: "en-ter-net-marş" },
+        { text: "Je n'ai pas de connexion.", meaning: "Bağlantım yok.", pronunciation: "jö-ne-pa-dö-ko-nek-syon" },
+        { text: "Le signal est très faible.", meaning: "Sinyal çok zayıf.", pronunciation: "lö-si-nyal-e-tre-febl" },
+        { text: "Quel est le mot de passe du wifi?", meaning: "Wi-Fi şifresi ne?", pronunciation: "kel-e-lö-mo-dö-pas-dü-wi-fi" },
+
+        // İşlemler
+        { text: "Cliquez sur le lien.", meaning: "Linke tıklayın.", pronunciation: "kli-ke-sür-lö-lyen" },
+        { text: "N'oublie pas de sauvegarder.", meaning: "Kaydetmeyi unutma.", pronunciation: "nu-bli-pa-dö-sov-gar-de" },
+        { text: "Je télécharge un fichier.", meaning: "Dosya indiriyorum.", pronunciation: "jö-te-le-şarj-ön-fi-şye" },
+        { text: "J'envoie un e-mail.", meaning: "E-posta gönderiyorum.", pronunciation: "jan-vua-ön-i-meyl" },
+
+        // Sorun çözme
+        { text: "Ça ne marche pas.", meaning: "Bu çalışmıyor.", pronunciation: "sa-nö-marş-pa" },
+        { text: "Ma batterie est vide.", meaning: "Şarjım bitti.", pronunciation: "ma-bat-ri-e-vid" },
+        { text: "L'écran est noir.", meaning: "Ekran siyah/karardı.", pronunciation: "le-kran-e-nuar" },
+        { text: "Essaie d'éteindre et rallumer.", meaning: "Kapatıp açmayı dene.", pronunciation: "e-sey-de-tendr-e-ra-lü-me" }
     ]
 };
 

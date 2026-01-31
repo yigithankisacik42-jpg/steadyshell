@@ -1619,8 +1619,112 @@ const unit358Quiz1: Question[] = [
 ];
 
 const unit359Quiz1: Question[] = [
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Uygulamayı indireceğim", correctAnswer: "Je vais télécharger l'application" },
-    { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Şifre ne?", correctAnswer: "Quel est le mot de passe?" }
+    // KOLAY (8 soru) - Temel Teknoloji Kelimeler
+    { id: 1, type: "SELECT", question: "Bilgisayar nasıl denir?", options: [{ id: "a", text: "L'ordinateur", correct: true }, { id: "b", text: "La souris", correct: false }, { id: "c", text: "Le clavier", correct: false }, { id: "d", text: "L'écran", correct: false }] },
+    { id: 2, type: "SELECT", question: "Mouse (fare) nasıl denir?", options: [{ id: "a", text: "Le clavier", correct: false }, { id: "b", text: "La souris", correct: true }, { id: "c", text: "L'écran", correct: false }, { id: "d", text: "Le fichier", correct: false }] },
+    { id: 3, type: "SELECT", question: "E-posta nasıl denir?", options: [{ id: "a", text: "Le mot de passe", correct: false }, { id: "b", text: "Le lien", correct: false }, { id: "c", text: "L'e-mail", correct: true }, { id: "d", text: "Le dossier", correct: false }] },
+    { id: 4, type: "SELECT", question: "Şifre nasıl denir?", options: [{ id: "a", text: "Le fichier", correct: false }, { id: "b", text: "Le mot de passe", correct: true }, { id: "c", text: "Le lien", correct: false }, { id: "d", text: "L'écran", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ l'ordinateur.", options: [{ id: "a", text: "allume", correct: true }, { id: "b", text: "éteins", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu ___ l'écran.", options: [{ id: "a", text: "éteins", correct: true }, { id: "b", text: "allumes", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis ___ internet.", options: [{ id: "a", text: "sur", correct: true }, { id: "b", text: "dans", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis ___ ligne.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "sur", correct: false }] },
+
+    // ORTA (6 soru) - Fiiller ve Kullanım
+    { id: 9, type: "SELECT", question: "'Dosya indirmek' nasıl denir?", options: [{ id: "a", text: "Sauvegarder", correct: false }, { id: "b", text: "Télécharger", correct: true }, { id: "c", text: "Envoyer", correct: false }, { id: "d", text: "Cliquer", correct: false }] },
+    { id: 10, type: "SELECT", question: "'Kaydetmek' nasıl denir?", options: [{ id: "a", text: "Télécharger", correct: false }, { id: "b", text: "Brancher", correct: false }, { id: "c", text: "Sauvegarder", correct: true }, { id: "d", text: "Envoyer", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "___ sur le lien! (Tıklayın!)", options: [{ id: "a", text: "Cliquez", correct: true }, { id: "b", text: "Clique", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ ton chargeur. (Şarjını tak.)", options: [{ id: "a", text: "Branche", correct: true }, { id: "b", text: "Branchez", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "N'oublie pas de ___. (Kaydetmeyi unutma.)", options: [{ id: "a", text: "sauvegarder", correct: true }, { id: "b", text: "télécharger", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ un fichier. (Dosya indiriyorum.)", options: [{ id: "a", text: "télécharge", correct: true }, { id: "b", text: "sauvegarde", correct: false }] },
+
+    // ZOR (6 soru) - Çevirme ve Diyalog
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bilgisayarı açıyorum", correctAnswer: "J'allume l'ordinateur" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bu çalışmıyor", correctAnswer: "Ça ne marche pas" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Şarjım bitti", correctAnswer: "Ma batterie est vide" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Linke tıklayın", correctAnswer: "Cliquez sur le lien" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "İnternet çalışıyor mu?", correctAnswer: "Internet marche?" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Bağlantım yok", correctAnswer: "Je n'ai pas de connexion" }
+];
+
+// Quiz 2: İnternet ve Yazılım Odaklı
+const unit359Quiz2: Question[] = [
+    // KOLAY (8 soru) - İnternet Terimleri
+    { id: 1, type: "SELECT", question: "'Le site web' ne demek?", options: [{ id: "a", text: "Web sitesi", correct: true }, { id: "b", text: "E-posta", correct: false }, { id: "c", text: "Link", correct: false }, { id: "d", text: "Dosya", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le dossier' ne demek?", options: [{ id: "a", text: "Dosya", correct: false }, { id: "b", text: "Klasör", correct: true }, { id: "c", text: "Link", correct: false }, { id: "d", text: "Şifre", correct: false }] },
+    { id: 3, type: "SELECT", question: "'L'application' ne demek?", options: [{ id: "a", text: "Ekran", correct: false }, { id: "b", text: "Uygulama", correct: true }, { id: "c", text: "Klavye", correct: false }, { id: "d", text: "Dosya", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le lien' ne demek?", options: [{ id: "a", text: "Şifre", correct: false }, { id: "b", text: "Dosya", correct: false }, { id: "c", text: "Link", correct: true }, { id: "d", text: "Ekran", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Je navigue ___ internet.", options: [{ id: "a", text: "sur", correct: true }, { id: "b", text: "en", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis ___ ligne.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "sur", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Visitez notre ___ web.", options: [{ id: "a", text: "site", correct: true }, { id: "b", text: "page", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Entrez le mot de ___.", options: [{ id: "a", text: "passe", correct: true }, { id: "b", text: "code", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "SELECT", question: "'Télécharger' ne demek?", options: [{ id: "a", text: "Kaydetmek", correct: false }, { id: "b", text: "İndirmek", correct: true }, { id: "c", text: "Göndermek", correct: false }, { id: "d", text: "Açmak", correct: false }] },
+    { id: 10, type: "SELECT", question: "'Envoyer' ne demek?", options: [{ id: "a", text: "Almak", correct: false }, { id: "b", text: "Göndermek", correct: true }, { id: "c", text: "Silmek", correct: false }, { id: "d", text: "Kaydetmek", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ un e-mail.", options: [{ id: "a", text: "envoie", correct: true }, { id: "b", text: "télécharge", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ le fichier.", options: [{ id: "a", text: "ouvre", correct: true }, { id: "b", text: "ferme", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Créez un nouveau ___.", options: [{ id: "a", text: "dossier", correct: true }, { id: "b", text: "fichier", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Cliquez sur le ___.", options: [{ id: "a", text: "lien", correct: true }, { id: "b", text: "fichier", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "E-posta gönderiyorum", correctAnswer: "J'envoie un e-mail" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Dosyayı indirin", correctAnswer: "Téléchargez le fichier" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Web sitemizi ziyaret edin", correctAnswer: "Visitez notre site web" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Yeni klasör oluşturun", correctAnswer: "Créez un nouveau dossier" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Şifreyi girin", correctAnswer: "Entrez le mot de passe" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Uygulamayı indirin", correctAnswer: "Téléchargez l'application" }
+];
+
+// Quiz 3: Fiiller ve Eylemler Odaklı
+const unit359Quiz3: Question[] = [
+    // KOLAY (8 soru) - Temel Fiiller
+    { id: 1, type: "SELECT", question: "'Allumer' ne demek?", options: [{ id: "a", text: "Kapatmak", correct: false }, { id: "b", text: "Açmak", correct: true }, { id: "c", text: "Kırmak", correct: false }, { id: "d", text: "Tamir etmek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Éteindre' ne demek?", options: [{ id: "a", text: "Açmak", correct: false }, { id: "b", text: "Kapatmak", correct: true }, { id: "c", text: "Başlatmak", correct: false }, { id: "d", text: "Yüklemek", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Cliquer' ne demek?", options: [{ id: "a", text: "Yazmak", correct: false }, { id: "b", text: "Tıklamak", correct: true }, { id: "c", text: "Silmek", correct: false }, { id: "d", text: "Kaydetmek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Brancher' ne demek?", options: [{ id: "a", text: "Çıkarmak", correct: false }, { id: "b", text: "Fişe takmak", correct: true }, { id: "c", text: "Kapatmak", correct: false }, { id: "d", text: "Açmak", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ l'ordinateur le matin.", options: [{ id: "a", text: "allume", correct: true }, { id: "b", text: "éteins", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ l'ordinateur le soir.", options: [{ id: "a", text: "éteins", correct: true }, { id: "b", text: "allume", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "___ ici pour continuer.", options: [{ id: "a", text: "Cliquez", correct: true }, { id: "b", text: "Allumez", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "___ ton câble.", options: [{ id: "a", text: "Branche", correct: true }, { id: "b", text: "Débranche", correct: false }] },
+    // ORTA (6 soru) - Emir Kipi
+    { id: 9, type: "SELECT", question: "'Allume!' hangi kişiye?", options: [{ id: "a", text: "Vous (siz)", correct: false }, { id: "b", text: "Tu (sen)", correct: true }, { id: "c", text: "Nous (biz)", correct: false }, { id: "d", text: "Il (o)", correct: false }] },
+    { id: 10, type: "SELECT", question: "'Cliquez!' hangi kişiye?", options: [{ id: "a", text: "Tu (sen)", correct: false }, { id: "b", text: "Vous (siz)", correct: true }, { id: "c", text: "Nous (biz)", correct: false }, { id: "d", text: "Il (o)", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "N'___ pas de sauvegarder!", options: [{ id: "a", text: "oublie", correct: true }, { id: "b", text: "oubliez", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ l'écran s'il vous plaît.", options: [{ id: "a", text: "Éteignez", correct: true }, { id: "b", text: "Éteins", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "___ le fichier avant de partir.", options: [{ id: "a", text: "Sauvegarde", correct: true }, { id: "b", text: "Télécharge", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___ ton chargeur!", options: [{ id: "a", text: "Branche", correct: true }, { id: "b", text: "Allume", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bilgisayarı kapat", correctAnswer: "Éteins l'ordinateur" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Buraya tıklayın", correctAnswer: "Cliquez ici" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Işığı aç", correctAnswer: "Allume la lumière" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Kaydetmeyi unutma", correctAnswer: "N'oublie pas de sauvegarder" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Şarjını tak", correctAnswer: "Branche ton chargeur" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Ekranı kapatın", correctAnswer: "Éteignez l'écran" }
+];
+
+// Quiz 4: Sorun Çözme ve Diyalog Odaklı
+const unit359Quiz4: Question[] = [
+    // KOLAY (8 soru) - Sorun Kalıpları
+    { id: 1, type: "SELECT", question: "'Ça ne marche pas' ne demek?", options: [{ id: "a", text: "Bu pahalı", correct: false }, { id: "b", text: "Bu çalışmıyor", correct: true }, { id: "c", text: "Bu yeni", correct: false }, { id: "d", text: "Bu güzel", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La batterie est vide' ne demek?", options: [{ id: "a", text: "Batarya dolu", correct: false }, { id: "b", text: "Şarj bitti", correct: true }, { id: "c", text: "Ekran kırık", correct: false }, { id: "d", text: "İnternet yok", correct: false }] },
+    { id: 3, type: "SELECT", question: "'La connexion' ne demek?", options: [{ id: "a", text: "Sinyal", correct: false }, { id: "b", text: "Bağlantı", correct: true }, { id: "c", text: "Şifre", correct: false }, { id: "d", text: "Ekran", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le signal' ne demek?", options: [{ id: "a", text: "Bağlantı", correct: false }, { id: "b", text: "Sinyal", correct: true }, { id: "c", text: "Şifre", correct: false }, { id: "d", text: "Wi-Fi", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Internet ne ___ pas.", options: [{ id: "a", text: "marche", correct: true }, { id: "b", text: "fonctionne", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Ma ___ est vide.", options: [{ id: "a", text: "batterie", correct: true }, { id: "b", text: "souris", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Le signal est très ___.", options: [{ id: "a", text: "faible", correct: true }, { id: "b", text: "fort", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Je n'ai pas de ___.", options: [{ id: "a", text: "connexion", correct: true }, { id: "b", text: "écran", correct: false }] },
+    // ORTA (6 soru) - Diyalog
+    { id: 9, type: "SELECT", question: "'Internet marche?' nasıl cevap verilir olumsuz?", options: [{ id: "a", text: "Oui, ça marche", correct: false }, { id: "b", text: "Non, ça ne marche pas", correct: true }, { id: "c", text: "Je ne sais pas", correct: false }, { id: "d", text: "Peut-être", correct: false }] },
+    { id: 10, type: "SELECT", question: "Wi-Fi sorunu için ne denir?", options: [{ id: "a", text: "L'écran est noir", correct: false }, { id: "b", text: "Je n'ai pas de connexion", correct: true }, { id: "c", text: "Le clavier est cassé", correct: false }, { id: "d", text: "La souris ne marche pas", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Essaie d'___ et rallumer.", options: [{ id: "a", text: "éteindre", correct: true }, { id: "b", text: "allumer", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est en panne.", options: [{ id: "a", text: "imprimante", correct: true }, { id: "b", text: "ordinateur", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Quel est le ___ du wifi?", options: [{ id: "a", text: "mot de passe", correct: true }, { id: "b", text: "signal", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "L'écran est ___.", options: [{ id: "a", text: "noir", correct: true }, { id: "b", text: "blanc", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Farem çalışmıyor", correctAnswer: "Ma souris ne marche pas" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Yazıcı bozuk", correctAnswer: "L'imprimante est en panne" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Wi-Fi şifresi ne?", correctAnswer: "Quel est le mot de passe du wifi?" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sinyal çok zayıf", correctAnswer: "Le signal est très faible" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Kapatıp açmayı dene", correctAnswer: "Essaie d'éteindre et rallumer" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "İnternet bağlantım yok", correctAnswer: "Je n'ai pas de connexion internet" }
 ];
 
 const unit360Quiz1: Question[] = [
@@ -1652,7 +1756,8 @@ export const frenchA2Quizzes: { [key: string]: Question[] } = {
     "350-1": unit350Quiz1, "350-2": unit350Quiz2, "350-3": unit350Quiz3, "350-4": unit350Quiz4,
     "351-1": unit351Quiz1, "352-1": unit352Quiz1, "353-1": unit353Quiz1, "354-1": unit354Quiz1,
     "355-1": unit355Quiz1, "356-1": unit356Quiz1, "357-1": unit357Quiz1, "358-1": unit358Quiz1,
-    "359-1": unit359Quiz1, "360-1": unit360Quiz1
+    "359-1": unit359Quiz1, "359-2": unit359Quiz2, "359-3": unit359Quiz3, "359-4": unit359Quiz4,
+    "360-1": unit360Quiz1
 };
 
 export function getFrenchA2Quiz(unitId: number, quizNumber: number): Question[] {

@@ -25,6 +25,7 @@ export interface UnitLecture {
     title: string;
     language: string;
     level: string;
+    videoUrl?: string;
     slides: LectureSlide[];
 }
 

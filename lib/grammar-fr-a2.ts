@@ -672,8 +672,104 @@ const unit358Grammar: UnitGrammar = {
 };
 
 const unit359Grammar: UnitGrammar = {
-    unitId: 359, title: "Teknoloji Kullanımı",
-    rules: [{ id: "fr-a2-technology", title: "💻 Teknoloji Terimleri", explanation: "* Télécharger (İndirmek)\n* Envoyer un mail (E-posta göndermek)\n* Se connecter (Bağlanmak)\n* Le mot de passe (Şifre)", examples: [{ fr: "Je vais télécharger l'application.", tr: "Uygulamayı indireceğim." }] }]
+    unitId: 359,
+    title: "Teknoloji Kullanımı (Usage Technologique)",
+    rules: [
+        {
+            id: "fr-a2-tech-hardware",
+            title: "🧱 BÖLÜM 1: TEMEL DONANIM (Cihazlar)",
+            explanation: "Masanın üzerindeki aletleri tanıyalım. Cinsiyetlere (Le/La) dikkat!\\n\\n**Erkek (Masculin):**\\n* L'ordinateur (Lordinatör) - Bilgisayar\\n* L'ordinateur portable (... portabl) - Laptop\\n* Le portable / Le smartphone (Lö portabl) - Cep Telefonu\\n* L'écran (Lekran) - Ekran\\n* Le clavier (Lö klavye) - Klavye\\n\\n**Dişi (Féminin):**\\n* La souris (La suri) - Mouse (Fare)\\n* La tablette (La tablet) - Tablet\\n* L'imprimante (Lemprimant) - Yazıcı\\n\\n💡 **İpucu:** 'Laptop' kelimesi de kullanılır ama resmi olanı **'Un portable'** dır.",
+            examples: [
+                { fr: "J'allume l'ordinateur.", tr: "Bilgisayarı açıyorum." },
+                { fr: "Ma souris ne marche pas.", tr: "Farem çalışmıyor." },
+                { fr: "L'écran est noir.", tr: "Ekran siyah." }
+            ]
+        },
+        {
+            id: "fr-a2-tech-internet",
+            title: "🌐 BÖLÜM 2: İNTERNET VE YAZILIM",
+            explanation: "Sanal dünyada kullanılan kelimeler:",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe", "Notlar 📝"],
+                rows: [
+                    ["Internet", "Enternet", "İnternet", "Baş harfi büyük"],
+                    ["Le site web", "Lö sit veb", "Web sitesi", "-"],
+                    ["L'e-mail / Le courriel", "Limeyl / Lö kuryel", "E-posta", "Courriel daha resmi"],
+                    ["Le mot de passe", "Lö mo dö pas", "Şifre", "Çok önemli!"],
+                    ["Le fichier", "Lö fişye", "Dosya", "-"],
+                    ["Le dossier", "Lö dosye", "Klasör", "-"],
+                    ["Le lien", "Lö liyen", "Link (Bağlantı)", "-"],
+                    ["L'arobase (@)", "Larobaz", "Et işareti", "Mail söylerken lazım!"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-tech-verbs-onoff",
+            title: "🛠️ BÖLÜM 3a: Açmak ve Kapatmak (Elektronik)",
+            explanation: "Kapı pencere açar gibi (Ouvrir/Fermer) kullanılmaz! Elektrikli aletler için özel fiiller vardır:\\n\\n**ALLUMER** = Açmak (Elektriği/Cihazı)\\n* J'allume l'ordinateur. (Bilgisayarı açıyorum.)\\n* Allume la lumière! (Işığı aç!)\\n\\n**ÉTEINDRE** = Kapatmak (Söndürmek)\\n* Tu éteins la télé. (TV'yi kapatıyorsun.)\\n* Éteins ton téléphone! (Telefonunu kapat!)",
+            examples: [
+                { fr: "J'allume l'ordinateur.", tr: "Bilgisayarı açıyorum." },
+                { fr: "Tu éteins la télé.", tr: "TV'yi kapatıyorsun." },
+                { fr: "N'oublie pas d'éteindre l'imprimante.", tr: "Yazıcıyı kapatmayı unutma." }
+            ]
+        },
+        {
+            id: "fr-a2-tech-verbs-other",
+            title: "🛠️ BÖLÜM 3b: Diğer Kritik Fiiller",
+            explanation: "Teknolojiyi kullanmak için gereken diğer önemli fiiller:",
+            table: {
+                headers: ["Fiil", "Anlamı", "Örnek Cümle"],
+                rows: [
+                    ["Cliquer (sur)", "Tıklamak", "Cliquez sur le lien. (Linke tıklayın.)"],
+                    ["Sauvegarder", "Kaydetmek", "N'oublie pas de sauvegarder. (Kaydetmeyi unutma.)"],
+                    ["Télécharger", "İndirmek", "Je télécharge un film. (Bir film indiriyorum.)"],
+                    ["Envoyer", "Göndermek", "J'envoie un e-mail. (Bir mail atıyorum.)"],
+                    ["Naviguer (sur)", "Sörf yapmak", "Je navigue sur internet. (İnternette geziniyorum.)"],
+                    ["Brancher", "Fişe takmak", "Branche ton chargeur. (Şarjını tak.)"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-tech-prepositions",
+            title: "📐 BÖLÜM 4a: Edatlar (Les Prépositions)",
+            explanation: "Teknolojide hangi edatı kullanacağız? Bu bölüm çok hata yapılan yerdir!\\n\\n**SUR (Üzerinde):** Ekranlı şeylerin genelde 'üzerinde' oluruz.\\n* Sur internet (İnternette) ✅\\n* Sur l'ordinateur (Bilgisayarda)\\n* Sur Facebook / Instagram\\n* Je suis sur internet. (İnternetteyim.)\\n\\n⚠️ **Asla Dans internet denmez!**\\n\\n**EN (Modlar için):**\\n* En ligne (Çevrimiçi / Online)\\n* En bas de page (Sayfanın altında)",
+            examples: [
+                { fr: "Je suis sur internet.", tr: "İnternetteyim." },
+                { fr: "Tu travailles sur l'ordinateur?", tr: "Bilgisayarda mı çalışıyorsun?" },
+                { fr: "Je suis en ligne.", tr: "Çevrimiçiyim." }
+            ]
+        },
+        {
+            id: "fr-a2-tech-imperatif",
+            title: "📐 BÖLÜM 4b: Emir Kipi (L'Impératif)",
+            explanation: "Teknoloji genelde talimatlarla çalışır. 'Tıkla, Aç, Kapat'.\\n\\nEmir kipinde 'Tu' (Sen) veya 'Vous' (Siz) öznesi düşer:\\n\\n**(Tu) Cliques → Clique !** (Tıkla!)\\n**(Vous) Cliquez → Cliquez !** (Tıklayın!)\\n**(Vous) Allumez → Allumez votre caméra !** (Kameranızı açın!)\\n\\n**ER fiillerinde -s düşer (Tu için):**\\n* Télécharge le fichier! (Dosyayı indir!)\\n* Sauvegarde ton travail! (İşini kaydet!)",
+            examples: [
+                { fr: "Cliquez sur le lien.", tr: "Linke tıklayın." },
+                { fr: "Allumez votre caméra.", tr: "Kameranızı açın." },
+                { fr: "Télécharge l'application.", tr: "Uygulamayı indir." }
+            ]
+        },
+        {
+            id: "fr-a2-tech-dialogue",
+            title: "🗣️ BÖLÜM 5: Örnek Diyalog (Sorun Çözme)",
+            explanation: "**Senaryo:** Ofiste Wi-Fi çalışmıyor.\\n\\n**Ali:** Pardon, internet marche ? \\n*(Pardon, internet çalışıyor mu?)*\\n\\n**Paul:** Non, je n'ai pas de connexion.\\n*(Hayır, bağlantım yok.)*\\n\\n**Ali:** C'est bizarre. Tu as le mot de passe ?\\n*(Garip. Şifren var mı?)*\\n\\n**Paul:** Oui, mais le signal est très faible.\\n*(Evet ama sinyal çok zayıf.)*\\n\\n**Ali:** Essaie d'éteindre et rallumer ton ordinateur.\\n*(Bilgisayarını kapatıp tekrar açmayı dene.)*\\n\\n**Paul:** D'accord, je vais essayer. Ah, ça marche maintenant !\\n*(Tamam deneyeceğim. Ah, şimdi çalışıyor!)*",
+            examples: []
+        },
+        {
+            id: "fr-a2-tech-phrases",
+            title: "🆘 HAYAT KURTARAN KALIPLAR (Bonus)",
+            explanation: "Teknolojik bir sorun yaşadığında bunları kullan:",
+            examples: [
+                { fr: "Ça ne marche pas.", tr: "Bu çalışmıyor." },
+                { fr: "Ma batterie est vide.", tr: "Şarjım bitti / Bataryam boş." },
+                { fr: "Je n'ai pas de réseau.", tr: "Şebeke yok / Çekmiyor." },
+                { fr: "L'écran est noir.", tr: "Ekran siyah / gitti." },
+                { fr: "Quelle est l'adresse de votre site ?", tr: "Sitenizin adresi nedir?" }
+            ]
+        }
+    ]
 };
 
 const unit360Grammar: UnitGrammar = {

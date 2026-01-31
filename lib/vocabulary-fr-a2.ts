@@ -536,10 +536,38 @@ const unit358Vocab: UnitVocabulary = {
 
 const unit359Vocab: UnitVocabulary = {
     unitId: 359, title: "Teknoloji Kullanımı", words: [
-        { word: "L'application", meaning: "Uygulama", pronunciation: "lap-li-ka-syon", example: "Téléchargez l'application.", exampleTranslation: "Uygulamayı indirin." },
+        // Donanım (Hardware)
+        { word: "L'ordinateur", meaning: "Bilgisayar", pronunciation: "lor-di-na-tör", example: "J'allume l'ordinateur.", exampleTranslation: "Bilgisayarı açıyorum." },
+        { word: "L'ordinateur portable", meaning: "Laptop", pronunciation: "lor-di-na-tör por-tabl", example: "Mon ordinateur portable est léger.", exampleTranslation: "Laptopum hafif." },
+        { word: "Le portable", meaning: "Cep telefonu", pronunciation: "lö-por-tabl", example: "J'ai oublié mon portable.", exampleTranslation: "Telefonumu unuttum." },
+        { word: "L'écran", meaning: "Ekran", pronunciation: "le-kran", example: "L'écran est noir.", exampleTranslation: "Ekran siyah." },
+        { word: "La souris", meaning: "Mouse (Fare)", pronunciation: "la-su-ri", example: "Ma souris ne marche pas.", exampleTranslation: "Farem çalışmıyor." },
+        { word: "Le clavier", meaning: "Klavye", pronunciation: "lö-kla-vye", example: "Le clavier est sans fil.", exampleTranslation: "Klavye kablosuz." },
+        { word: "La tablette", meaning: "Tablet", pronunciation: "la-tab-let", example: "Je lis sur ma tablette.", exampleTranslation: "Tabletimde okuyorum." },
+        { word: "L'imprimante", meaning: "Yazıcı", pronunciation: "lem-pri-mant", example: "L'imprimante est en panne.", exampleTranslation: "Yazıcı bozuk." },
+
+        // İnternet ve Yazılım
+        { word: "Le site web", meaning: "Web sitesi", pronunciation: "lö-sit-veb", example: "Visitez notre site web.", exampleTranslation: "Web sitemizi ziyaret edin." },
+        { word: "L'e-mail", meaning: "E-posta", pronunciation: "li-meyl", example: "J'envoie un e-mail.", exampleTranslation: "E-posta gönderiyorum." },
         { word: "Le mot de passe", meaning: "Şifre", pronunciation: "lö-mo-dö-pas", example: "Entrez le mot de passe.", exampleTranslation: "Şifreyi girin." },
-        { word: "Se connecter", meaning: "Bağlanmak", pronunciation: "sö-ko-nek-te", example: "Je me connecte.", exampleTranslation: "Bağlanıyorum." },
-        { word: "Partager", meaning: "Paylaşmak", pronunciation: "par-ta-je", example: "Je partage la photo.", exampleTranslation: "Fotoğrafı paylaşıyorum." }
+        { word: "Le fichier", meaning: "Dosya", pronunciation: "lö-fi-şye", example: "Téléchargez le fichier.", exampleTranslation: "Dosyayı indirin." },
+        { word: "Le dossier", meaning: "Klasör", pronunciation: "lö-do-sye", example: "Créez un nouveau dossier.", exampleTranslation: "Yeni klasör oluşturun." },
+        { word: "Le lien", meaning: "Link (Bağlantı)", pronunciation: "lö-lyen", example: "Cliquez sur le lien.", exampleTranslation: "Linke tıklayın." },
+        { word: "L'application", meaning: "Uygulama", pronunciation: "lap-li-ka-syon", example: "Téléchargez l'application.", exampleTranslation: "Uygulamayı indirin." },
+
+        // Fiiller (Eylemler)
+        { word: "Allumer", meaning: "Açmak (elektrik)", pronunciation: "a-lü-me", example: "Allume la lumière.", exampleTranslation: "Işığı aç." },
+        { word: "Éteindre", meaning: "Kapatmak (söndürmek)", pronunciation: "e-tendr", example: "Éteins l'ordinateur.", exampleTranslation: "Bilgisayarı kapat." },
+        { word: "Cliquer", meaning: "Tıklamak", pronunciation: "kli-ke", example: "Cliquez ici.", exampleTranslation: "Buraya tıklayın." },
+        { word: "Télécharger", meaning: "İndirmek", pronunciation: "te-le-şar-je", example: "Je télécharge un film.", exampleTranslation: "Film indiriyorum." },
+        { word: "Sauvegarder", meaning: "Kaydetmek", pronunciation: "sov-gar-de", example: "N'oublie pas de sauvegarder.", exampleTranslation: "Kaydetmeyi unutma." },
+        { word: "Envoyer", meaning: "Göndermek", pronunciation: "an-vua-ye", example: "J'envoie un message.", exampleTranslation: "Mesaj gönderiyorum." },
+        { word: "Se connecter", meaning: "Bağlanmak", pronunciation: "sö-ko-nek-te", example: "Je me connecte à internet.", exampleTranslation: "İnternete bağlanıyorum." },
+        { word: "Brancher", meaning: "Fişe takmak", pronunciation: "bran-şe", example: "Branche ton chargeur.", exampleTranslation: "Şarjını tak." },
+
+        // Hayat Kurtaran Kalıplar
+        { word: "Ça ne marche pas", meaning: "Bu çalışmıyor", pronunciation: "sa-nö-marş-pa", example: "Mon ordinateur, ça ne marche pas.", exampleTranslation: "Bilgisayarım çalışmıyor." },
+        { word: "La batterie", meaning: "Batarya/Şarj", pronunciation: "la-bat-ri", example: "Ma batterie est vide.", exampleTranslation: "Şarjım bitti." }
     ]
 };
 

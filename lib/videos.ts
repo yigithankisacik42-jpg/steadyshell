@@ -118,8 +118,10 @@ export const frA1Videos: UnitVideo[] = [
     { unitId: 329, youtubeId: "ludiYRNkOp4", title: "Teknoloji", level: "A1" },
 ];
 
-// Fransızca A2 Videoları
-export const frA2Videos: UnitVideo[] = [];
+// Fransızca A2 Videoları (Ünite 331-360)
+export const frA2Videos: UnitVideo[] = [
+    { unitId: 359, youtubeId: "SjN75q5e3aM", title: "Teknoloji Kullanımı", level: "A2" },
+];
 
 // ====== İNGİLİZCE VİDEOLARI ======
 export const enA1Videos: UnitVideo[] = [];

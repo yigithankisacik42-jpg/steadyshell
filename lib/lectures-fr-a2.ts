@@ -217,7 +217,32 @@ const unit355Lecture: UnitLecture = { unitId: 355, title: "Şehir", language: "F
 const unit356Lecture: UnitLecture = { unitId: 356, title: "Kültür", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Farklar 🌍", content: "En France, on...", tip: "Karşılaştırma" }, { id: 2, type: "summary", title: "Özet", points: ["Contrairement à...", "Par rapport à..."], cta: "Pratik!" }] };
 const unit357Lecture: UnitLecture = { unitId: 357, title: "Eğitim", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Okul 🎓", content: "Faire des études", tip: "Eğitim terimleri" }, { id: 2, type: "summary", title: "Özet", points: ["Passer un examen", "Réussir/Échouer"], cta: "Pratik!" }] };
 const unit358Lecture: UnitLecture = { unitId: 358, title: "İş", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Kariyer 💼", content: "Chercher un emploi", tip: "İş terimleri" }, { id: 2, type: "summary", title: "Özet", points: ["Postuler", "Entretien"], cta: "Pratik!" }] };
-const unit359Lecture: UnitLecture = { unitId: 359, title: "Teknoloji", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Dijital 💻", content: "Télécharger, Se connecter", tip: "Teknoloji terimleri" }, { id: 2, type: "summary", title: "Özet", points: ["Mot de passe", "Application"], cta: "Pratik!" }] };
+const unit359Lecture: UnitLecture = {
+    unitId: 359,
+    title: "Teknoloji Kullanımı",
+    language: "Fransızca",
+    level: "A2",
+    videoUrl: "https://youtu.be/SjN75q5e3aM",
+    slides: [
+        { id: 1, type: "intro", title: "Dijital Dünya 💻", content: "Bu derste teknoloji kullanırken ihtiyacın olan tüm Fransızca ifadeleri öğreneceksin! Bilgisayar, telefon, internet ve Wi-Fi sorunlarıyla ilgili konuşmayı öğreneceksin.", tip: "L'ordinateur = Bilgisayar, Le portable = Telefon" },
+        { id: 2, type: "vocabulary", title: "Donanım Kelimeleri 🖥️", content: "• L'ordinateur (Bilgisayar)\\n• L'écran (Ekran)\\n• La souris (Mouse)\\n• Le clavier (Klavye)\\n• L'imprimante (Yazıcı)\\n• La tablette (Tablet)" },
+        { id: 3, type: "vocabulary", title: "İnternet Terimleri 🌐", content: "• Le site web (Web sitesi)\\n• L'e-mail (E-posta)\\n• Le mot de passe (Şifre)\\n• Le fichier (Dosya)\\n• Le lien (Link)\\n• L'application (Uygulama)" },
+        {
+            id: 4, type: "grammar", title: "Allumer vs Éteindre ⚡", rules: [
+                { rule: "Allumer", explanation: "Açmak (elektrik)", examples: ["J'allume l'ordinateur", "Allume la lumière!"] },
+                { rule: "Éteindre", explanation: "Kapatmak (söndürmek)", examples: ["Éteins l'écran", "Éteignez votre portable!"] }
+            ]
+        },
+        {
+            id: 5, type: "grammar", title: "Sur vs En 📍", rules: [
+                { rule: "Sur", explanation: "Fiziksel/dijital yüzey", examples: ["Je suis sur internet", "Clique sur le bouton"] },
+                { rule: "En", explanation: "Durum/mod (halinde)", examples: ["Je suis en ligne", "En panne (bozuk)"] }
+            ]
+        },
+        { id: 6, type: "vocabulary", title: "Hayat Kurtaran Kalıplar 🆘", content: "• Ça ne marche pas! (Bu çalışmıyor!)\\n• Ma batterie est vide. (Şarjım bitti.)\\n• Je n'ai pas de connexion. (Bağlantım yok.)\\n• Quel est le mot de passe du wifi? (Wi-Fi şifresi ne?)" },
+        { id: 7, type: "summary", title: "Özet 📝", points: ["Donanım: ordinateur, écran, souris...", "Fiiller: Allumer/Éteindre, Télécharger, Sauvegarder", "Edatlar: Sur internet, En ligne", "Sorun: Ça ne marche pas!"], cta: "Şimdi teknoloji pratiği yap!" }
+    ]
+};
 const unit360Lecture: UnitLecture = { unitId: 360, title: "A2 Final", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Tebrikler! 🎉", content: "A2 seviyesini tamamladınız!", tip: "Devam edin!" }, { id: 2, type: "summary", title: "Özet", points: ["Passé Composé ✓", "Futur Proche ✓", "Imparfait ✓"], cta: "B1'e geçin!" }] };
 
 // Export
