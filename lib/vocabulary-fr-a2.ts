@@ -499,20 +499,72 @@ const unit354Vocab: UnitVocabulary = {
 };
 
 const unit355Vocab: UnitVocabulary = {
-    unitId: 355, title: "Şehir Tanıtımı", words: [
-        { word: "Le monument", meaning: "Anıt", pronunciation: "lö-mo-nü-man", example: "Visitez le monument.", exampleTranslation: "Anıtı ziyaret edin." },
-        { word: "Le quartier", meaning: "Semt", pronunciation: "lö-kar-tye", example: "Un beau quartier.", exampleTranslation: "Güzel bir semt." },
+    unitId: 355, title: "Şehir Hayatı", words: [
+        // Şehir Yerleri
+        { word: "La ville", meaning: "Şehir", pronunciation: "la-vil", example: "C'est une grande ville.", exampleTranslation: "Büyük bir şehir." },
+        { word: "La capitale", meaning: "Başkent", pronunciation: "la-ka-pi-tal", example: "Paris est la capitale.", exampleTranslation: "Paris başkent." },
+        { word: "Le quartier", meaning: "Mahalle/Semt", pronunciation: "lö-kar-tye", example: "Un beau quartier.", exampleTranslation: "Güzel bir semt." },
+        { word: "La rue", meaning: "Cadde/Sokak", pronunciation: "la-rü", example: "Dans la rue.", exampleTranslation: "Caddede." },
+        { word: "Le centre-ville", meaning: "Şehir merkezi", pronunciation: "lö-santr-vil", example: "Au centre-ville.", exampleTranslation: "Şehir merkezinde." },
+
+        // Binalar
+        { word: "Le musée", meaning: "Müze", pronunciation: "lö-mü-ze", example: "Visitez le musée.", exampleTranslation: "Müzeyi ziyaret edin." },
+        { word: "Le pont", meaning: "Köprü", pronunciation: "lö-pon", example: "Sur le pont.", exampleTranslation: "Köprüde." },
         { word: "La place", meaning: "Meydan", pronunciation: "la-plas", example: "La place centrale.", exampleTranslation: "Ana meydan." },
-        { word: "Célèbre", meaning: "Ünlü", pronunciation: "se-lebr", example: "Une ville célèbre.", exampleTranslation: "Ünlü bir şehir." }
+        { word: "La mosquée", meaning: "Cami", pronunciation: "la-mos-ke", example: "La Mosquée Bleue.", exampleTranslation: "Sultanahmet Camii." },
+        { word: "L'église", meaning: "Kilise", pronunciation: "le-gliz", example: "Une vieille église.", exampleTranslation: "Eski bir kilise." },
+        { word: "Le bâtiment", meaning: "Bina", pronunciation: "lö-ba-ti-man", example: "Un grand bâtiment.", exampleTranslation: "Büyük bir bina." },
+        { word: "Le monument", meaning: "Anıt", pronunciation: "lö-mo-nü-man", example: "Un monument historique.", exampleTranslation: "Tarihi bir anıt." },
+
+        // Sıfatlar
+        { word: "Grand(e)", meaning: "Büyük", pronunciation: "gran/grand", example: "Une grande ville.", exampleTranslation: "Büyük bir şehir." },
+        { word: "Petit(e)", meaning: "Küçük", pronunciation: "pö-ti/pö-tit", example: "Un petit village.", exampleTranslation: "Küçük bir köy." },
+        { word: "Beau/Belle", meaning: "Güzel", pronunciation: "bo/bel", example: "Une belle ville.", exampleTranslation: "Güzel bir şehir." },
+        { word: "Vieux/Vieille", meaning: "Eski/Tarihi", pronunciation: "vi-yö/vi-ey", example: "Un vieux quartier.", exampleTranslation: "Eski bir semt." },
+        { word: "Célèbre", meaning: "Ünlü", pronunciation: "se-lebr", example: "Une ville célèbre.", exampleTranslation: "Ünlü bir şehir." },
+
+        // Edatlar
+        { word: "Près de", meaning: "Yakınında", pronunciation: "pre-dö", example: "Près de la mer.", exampleTranslation: "Denize yakın." },
+        { word: "Loin de", meaning: "Uzağında", pronunciation: "luen-dö", example: "Loin du centre.", exampleTranslation: "Merkezden uzak." },
+        { word: "À côté de", meaning: "Yanında", pronunciation: "a-ko-te-dö", example: "À côté de l'hôtel.", exampleTranslation: "Otelin yanında." },
+        { word: "En face de", meaning: "Karşısında", pronunciation: "an-fas-dö", example: "En face du musée.", exampleTranslation: "Müzenin karşısında." },
+
+        // Kritik Yapılar
+        { word: "Il y a", meaning: "Vardır", pronunciation: "il-ya", example: "Il y a un parc.", exampleTranslation: "Bir park var." }
     ]
 };
 
 const unit356Vocab: UnitVocabulary = {
     unitId: 356, title: "Kültürel Farklar", words: [
-        { word: "La coutume", meaning: "Gelenek", pronunciation: "la-ku-tüm", example: "Les coutumes locales.", exampleTranslation: "Yerel gelenekler." },
+        // Temel Kavramlar
+        { word: "La culture", meaning: "Kültür", pronunciation: "la-kül-tür", example: "La culture française.", exampleTranslation: "Fransız kültürü." },
+        { word: "La coutume", meaning: "Gelenek/Adet", pronunciation: "la-ku-tüm", example: "Les coutumes locales.", exampleTranslation: "Yerel gelenekler." },
         { word: "La tradition", meaning: "Gelenek", pronunciation: "la-tra-di-syon", example: "Une belle tradition.", exampleTranslation: "Güzel bir gelenek." },
         { word: "L'habitude", meaning: "Alışkanlık", pronunciation: "la-bi-tüd", example: "C'est une habitude.", exampleTranslation: "Bu bir alışkanlık." },
-        { word: "Différent(e)", meaning: "Farklı", pronunciation: "di-fe-ran", example: "C'est très différent.", exampleTranslation: "Çok farklı." }
+
+        // Selamlaşma
+        { word: "La bise", meaning: "Yanaktan öpücük", pronunciation: "la-biz", example: "On fait la bise.", exampleTranslation: "Yanaktan öpüşüyoruz." },
+        { word: "Se serrer la main", meaning: "El sıkışmak", pronunciation: "sö-se-re-la-men", example: "On se serre la main.", exampleTranslation: "El sıkışıyoruz." },
+        { word: "Se saluer", meaning: "Selamlaşmak", pronunciation: "sö-sa-lü-e", example: "Ils se saluent.", exampleTranslation: "Selamlaşıyorlar." },
+
+        // Karşılaştırma
+        { word: "Différent(e)", meaning: "Farklı", pronunciation: "di-fe-ran", example: "C'est très différent.", exampleTranslation: "Çok farklı." },
+        { word: "Similaire", meaning: "Benzer", pronunciation: "si-mi-ler", example: "C'est similaire.", exampleTranslation: "Benzer." },
+        { word: "Pareil(le)", meaning: "Aynı", pronunciation: "pa-rey", example: "C'est pareil.", exampleTranslation: "Aynısı." },
+        { word: "Contrairement à", meaning: "...aksine", pronunciation: "kon-trer-man-a", example: "Contrairement à nous.", exampleTranslation: "Bize aksine." },
+        { word: "Par rapport à", meaning: "...ile karşılaştırıldığında", pronunciation: "par-ra-por-a", example: "Par rapport à la France.", exampleTranslation: "Fransa ile karşılaştırıldığında." },
+
+        // Ülke ve Yer
+        { word: "En France", meaning: "Fransa'da", pronunciation: "an-frans", example: "En France, on...", exampleTranslation: "Fransa'da, ..." },
+        { word: "En Turquie", meaning: "Türkiye'de", pronunciation: "an-tür-ki", example: "En Turquie, on...", exampleTranslation: "Türkiye'de, ..." },
+        { word: "Chez nous", meaning: "Bizde/Bizim evde", pronunciation: "şe-nu", example: "Chez nous, c'est différent.", exampleTranslation: "Bizde farklı." },
+        { word: "La région", meaning: "Bölge", pronunciation: "la-re-jyon", example: "Selon la région.", exampleTranslation: "Bölgeye göre." },
+
+        // Davranış
+        { word: "Poli(e)", meaning: "Kibar", pronunciation: "po-li", example: "Il est très poli.", exampleTranslation: "O çok kibar." },
+        { word: "Impoli(e)", meaning: "Kaba", pronunciation: "en-po-li", example: "C'est impoli.", exampleTranslation: "Bu kaba." },
+        { word: "Normal", meaning: "Normal", pronunciation: "nor-mal", example: "C'est normal.", exampleTranslation: "Bu normal." },
+        { word: "Bizarre", meaning: "Garip/Tuhaf", pronunciation: "bi-zar", example: "C'est bizarre!", exampleTranslation: "Bu tuhaf!" }
     ]
 };
 

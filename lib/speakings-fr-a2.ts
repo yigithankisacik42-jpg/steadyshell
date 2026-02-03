@@ -270,16 +270,44 @@ const unit354Speaking: UnitSpeaking = {
 };
 
 const unit355Speaking: UnitSpeaking = {
-    unitId: 355, title: "Şehir", exercises: [
+    unitId: 355, title: "Şehir Hayatı", exercises: [
+        // Şehir Tanıtımı
         { text: "C'est une ville historique.", translation: "Tarihi bir şehir.", pronunciation: "se tün vil is-to-rik" },
-        { text: "La gastronomie est excellente.", translation: "Mutfağı mükemmel.", pronunciation: "la gas-tro-no-mi e tek-se-lant" }
+        { text: "C'est une grande ville.", translation: "Büyük bir şehir.", pronunciation: "se tün grand vil" },
+        { text: "C'est une ville magnifique.", translation: "Muhteşem bir şehir.", pronunciation: "se tün vil ma-nyi-fik" },
+        // Il y a
+        { text: "Il y a beaucoup de monuments.", translation: "Çok anıt var.", pronunciation: "il ya bo-ku dö mo-nü-man" },
+        { text: "Il y a un parc.", translation: "Bir park var.", pronunciation: "il ya ön park" },
+        { text: "Qu'est-ce qu'il y a à voir?", translation: "Görülecek ne var?", pronunciation: "kes kil ya a vuar" },
+        // Konum
+        { text: "C'est loin d'ici?", translation: "Buradan uzak mı?", pronunciation: "se luen di-si" },
+        { text: "C'est près de la mosquée.", translation: "Caminin yakınında.", pronunciation: "se pre dö la mos-ke" },
+        { text: "C'est à côté du musée.", translation: "Müzenin yanında.", pronunciation: "se a ko-te dü mü-ze" },
+        // Turist Rehberliği
+        { text: "La gastronomie est excellente.", translation: "Mutfağı mükemmel.", pronunciation: "la gas-tro-no-mi e tek-se-lant" },
+        { text: "C'est un endroit magnifique.", translation: "Harika bir yer.", pronunciation: "se tön an-drua ma-nyi-fik" },
+        { text: "C'est à 10 minutes.", translation: "10 dakika mesafede.", pronunciation: "se a di mi-nüt" }
     ]
 };
 
 const unit356Speaking: UnitSpeaking = {
-    unitId: 356, title: "Kültür", exercises: [
+    unitId: 356, title: "Kültürel Farklar", exercises: [
+        // Selamlaşma
         { text: "En France, on fait la bise.", translation: "Fransa'da yanaktan öpüşülür.", pronunciation: "an frans on fe la biz" },
-        { text: "Chez nous, c'est différent.", translation: "Bizde farklı.", pronunciation: "şe nu se di-fe-ran" }
+        { text: "On se serre la main.", translation: "El sıkışırız.", pronunciation: "on sö ser la men" },
+        { text: "Combien de bises dans ta région?", translation: "Bölgede kaç öpücük?", pronunciation: "kon-biyen dö biz dan ta re-jyon" },
+        // Karşılaştırma
+        { text: "Chez nous, c'est différent.", translation: "Bizde farklı.", pronunciation: "şe nu se di-fe-ran" },
+        { text: "En Turquie, on fait comme ça.", translation: "Türkiye'de böyle yapıyoruz.", pronunciation: "an tür-ki on fe kom sa" },
+        { text: "C'est une coutume locale.", translation: "Yerel bir gelenek.", pronunciation: "se tün ku-tüm lo-kal" },
+        // Bölgesel
+        { text: "Ça dépend de la région.", translation: "Bölgeye bağlı.", pronunciation: "sa de-pan dö la re-jyon" },
+        { text: "Dans le sud, on fait trois bises.", translation: "Güneyde üç öpücük yapıyoruz.", pronunciation: "dan lö süd on fe trua biz" },
+        // Nezaket
+        { text: "C'est poli en France.", translation: "Fransa'da kibarca.", pronunciation: "se po-li an frans" },
+        { text: "C'est bizarre pour moi.", translation: "Bana garip geliyor.", pronunciation: "se bi-zar pur mua" },
+        { text: "C'est normal ici.", translation: "Burada normal.", pronunciation: "se nor-mal i-si" },
+        { text: "C'est la même chose.", translation: "Aynı şey.", pronunciation: "se la mem şoz" }
     ]
 };
 

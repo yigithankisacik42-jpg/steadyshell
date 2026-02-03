@@ -120,6 +120,7 @@ export const frA1Videos: UnitVideo[] = [
 
 // Fransızca A2 Videoları (Ünite 331-360)
 export const frA2Videos: UnitVideo[] = [
+    { unitId: 356, youtubeId: "2powevsF82M", title: "Kültürel Farklar", level: "A2" },
     { unitId: 359, youtubeId: "SjN75q5e3aM", title: "Teknoloji Kullanımı", level: "A2" },
 ];
 

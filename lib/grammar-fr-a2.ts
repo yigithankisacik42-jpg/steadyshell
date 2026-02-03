@@ -652,13 +652,140 @@ const unit354Grammar: UnitGrammar = {
 };
 
 const unit355Grammar: UnitGrammar = {
-    unitId: 355, title: "Şehir Tanıtımı",
-    rules: [{ id: "fr-a2-describing-places", title: "🏛️ Yer Tanımlama", explanation: "* C'est une ville qui est connue pour...\n* Il y a beaucoup de...\n* On peut visiter...\n* La ville est célèbre pour...", examples: [{ fr: "Lyon est connue pour sa gastronomie.", tr: "Lyon mutfağıyla ünlü." }] }]
+    unitId: 355,
+    title: "Şehir Hayatı (La Vie Urbaine)",
+    rules: [
+        {
+            id: "fr-a2-city-vocab",
+            title: "🏙️ BÖLÜM 1: ŞEHİR SÖZLÜĞÜ",
+            explanation: "Önce etrafımızdaki binaları tanıyalım. Cinsiyetlere (Le/La) dikkat!",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe", "Cinsiyet"],
+                rows: [
+                    ["La ville", "La vil", "Şehir", "(Dişi)"],
+                    ["La capitale", "La kapital", "Başkent", "(Dişi)"],
+                    ["Le quartier", "Lö kartiye", "Mahalle / Semt", "(Erkek)"],
+                    ["La rue", "La rü", "Cadde / Sokak", "(Dişi)"],
+                    ["Le centre-ville", "Lö santr-vil", "Şehir Merkezi", "(Erkek)"],
+                    ["Le musée", "Lö müze", "Müze", "(Erkek)"],
+                    ["Le pont", "Lö pon", "Köprü", "(Erkek)"],
+                    ["La place", "La plas", "Meydan", "(Dişi)"],
+                    ["La mosquée", "La moske", "Cami", "(Dişi)"],
+                    ["L'église", "Legliz", "Kilise", "(Dişi)"],
+                    ["Le bâtiment", "Lö batiman", "Bina", "(Erkek)"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-city-adjectives",
+            title: "🎨 BÖLÜM 2: SIFATLAR (Nasıldır?)",
+            explanation: "Şehri övmek veya yermek için gereken sıfatlar. Bunlar şehre (La ville - Dişi) göre uyum sağlar!",
+            table: {
+                headers: ["Sıfat (E/D)", "Okunuşu 🔊", "Türkçe"],
+                rows: [
+                    ["Grand / Grande", "Gran / Grand", "Büyük"],
+                    ["Petit / Petite", "Pöti / Pötit", "Küçük"],
+                    ["Beau / Belle", "Bo / Bel", "Güzel"],
+                    ["Vieux / Vieille", "Viyö / Viey", "Eski / Tarihi"],
+                    ["Moderne", "Modern", "Modern (Değişmez)"],
+                    ["Bruyant / Bruyante", "Brüyan / Brüyant", "Gürültülü"],
+                    ["Calme", "Kalm", "Sakin"],
+                    ["Célèbre", "Selebr", "Ünlü / Meşhur"]
+                ]
+            },
+            examples: [
+                { fr: "İstanbul est une grande ville.", tr: "İstanbul büyük bir şehirdir." },
+                { fr: "Paris est une ville touristique.", tr: "Paris turistik bir şehirdir." }
+            ]
+        },
+        {
+            id: "fr-a2-prepositions",
+            title: "📍 BÖLÜM 3: GRAMER (Yer Yön Tarifleri)",
+            explanation: "'Müze nerede?' dediklerinde yolu tarif etmek veya konum belirtmek için Edatlar (Prépositions) şarttır.",
+            table: {
+                headers: ["Edat", "Okunuşu 🔊", "Anlamı", "Kullanım Örneği"],
+                rows: [
+                    ["Près de", "Pre dö", "Yakınında", "Près de la mer (Denize yakın)"],
+                    ["Loin de", "Luen dö", "Uzağında", "Loin du centre (Merkezden uzak)"],
+                    ["À côté de", "A kote dö", "Yanında", "À côté de l'hôtel (Otelin yanında)"],
+                    ["En face de", "An fas dö", "Karşısında", "En face du musée (Müzenin karşısında)"],
+                    ["Dans", "Dan", "İçinde", "Dans la ville (Şehrin içinde)"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-ilya-cest",
+            title: "🏗️ BÖLÜM 4: KRİTİK YAPI (Il y a vs C'est)",
+            explanation: "Şehir tanıtırken en çok bu iki kalıp karıştırılır.\\n\\n**1. IL Y A (Vardır)**\\nBir yerde neyin bulunduğunu sayarken kullanılır.\\nFormül: IL Y A + Nesne\\n🔊 Okunuşu: İl-ya...\\n\\n**2. C'EST (Budur / O...)**\\nBir yeri tanımlarken veya fikir belirtirken kullanılır.\\nFormül: C'EST + Sıfat / İsim\\n🔊 Okunuşu: Se...",
+            examples: [
+                { fr: "A Istanbul, il y a beaucoup de mosquées.", tr: "İstanbul'da çok cami vardır." },
+                { fr: "Dans mon quartier, il y a un parc.", tr: "Mahallemde bir park var." },
+                { fr: "C'est une ville magnifique.", tr: "O muhteşem bir şehirdir." },
+                { fr: "C'est très bruyant.", tr: "Burası çok gürültülü." }
+            ]
+        },
+        {
+            id: "fr-a2-city-dialogue",
+            title: "🗣️ BÖLÜM 5: SESLİ DİYALOG (Turiste Yardım)",
+            explanation: "**Senaryo:** Pierre (Fransız Turist), İstanbul'da Ali'ye Sultanahmet'i soruyor.\\n\\n**Pierre:** Pardon monsieur, Sultanahmet, c'est loin d'ici?\\n🔊 *Pardon mösyö, Sultanahmet, se luen disi?*\\n*(Pardon beyefendi, Sultanahmet buradan uzak mı?)*\\n\\n**Ali:** Non, ce n'est pas loin. C'est à 10 minutes.\\n🔊 *No, sö ne pa luen. Se a di minüt.*\\n*(Hayır, uzak değil. 10 dakika mesafede.)*\\n\\n**Pierre:** Qu'est-ce qu'il y a à voir là-bas?\\n🔊 *Kes kil ya a vuar la-ba?*\\n*(Orada görülecek ne var?)*\\n\\n**Ali:** Il y a la Mosquée Bleue et Sainte-Sophie. C'est magnifique!\\n🔊 *İl ya la Moske Blö e Sent-Sofi. Se manyifik!*\\n*(Sultanahmet Camii ve Ayasofya var. Muhteşemdir!)*\\n\\n**Pierre:** Et le Grand Bazar?\\n🔊 *E lö Gran Bazar?*\\n*(Peki ya Kapalıçarşı?)*\\n\\n**Ali:** C'est à côté de la mosquée. C'est un endroit très historique.\\n🔊 *Se a kote dö la moske. Se an andra tre zistorik.*\\n*(Caminin yanında. Çok tarihi bir yerdir.)*",
+            examples: []
+        }
+    ]
 };
 
 const unit356Grammar: UnitGrammar = {
-    unitId: 356, title: "Kültürel Farklar",
-    rules: [{ id: "fr-a2-cultural", title: "🌍 Kültür Karşılaştırma", explanation: "* En France, on... / En Turquie, on...\n* Contrairement à... (Aksine...)\n* Par rapport à... (...ile karşılaştırıldığında)", examples: [{ fr: "En France, on fait la bise pour se saluer.", tr: "Fransa'da selamlaşırken yanaktan öpüşülür." }] }]
+    unitId: 356,
+    title: "Kültürel Farklar (Les Différences Culturelles)",
+    rules: [
+        {
+            id: "fr-a2-culture-vocab",
+            title: "🎭 BÖLÜM 1: TEMEL KÜLTÜR SÖZLÜĞÜ",
+            explanation: "Önce konuyu tartışmak için gereken kelimeler:",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe", "Notlar 📝"],
+                rows: [
+                    ["La culture", "La kültür", "Kültür", "-"],
+                    ["La différence", "La diferans", "Fark", "-"],
+                    ["La ressemblance", "La resemblans", "Benzerlik", "-"],
+                    ["La coutume", "La kutüm", "Gelenek / Adet", "Önemli kelime!"],
+                    ["L'habitude", "Labitüd", "Alışkanlık", "-"],
+                    ["Le pays", "Lö peyi", "Ülke", "Sonundaki 's' okunmaz"],
+                    ["Étranger", "Etranje", "Yabancı", "-"],
+                    ["La vie quotidienne", "La vi kotidyen", "Günlük hayat", "-"],
+                    ["La politesse", "La polites", "Nezaket", "Fransa'da çok önemli!"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-comparison-review",
+            title: "🆚 BÖLÜM 2: GRAMER TEKRARI (Karşılaştırma)",
+            explanation: "Alışveriş ünitesinde öğrendiğimiz 'Plus... que' (Daha... than) kalıbını burada kültürler için kullanacağız.\\n\\n**Formül:** Özne + Fiil + PLUS / MOINS + Sıfat + QUE + Diğer Ülke",
+            examples: [
+                { fr: "La France est plus petite que la Turquie.", tr: "Fransa, Türkiye'den daha küçüktür." },
+                { fr: "Le café turc est plus fort que le café français.", tr: "Türk kahvesi Fransız kahvesinden daha serttir." },
+                { fr: "Les gens sont aussi sympas qu'en Turquie.", tr: "İnsanlar Türkiye'deki kadar sempatiktir." }
+            ]
+        },
+        {
+            id: "fr-a2-france-turkey-diff",
+            title: "🥖 vs 🥯 BÖLÜM 3: FRANSA VE TÜRKİYE FARKLARI",
+            explanation: "İşte gerçek hayatta karşılaşacağın en büyük 3 fark:\\n\\n**1. Selamlaşma: 'La Bise' 💋**\\nFransa'da insanlar yanak yanağa öpüşür. Buna 'Faire la bise' denir.\\n• Türkiye: Biz el sıkışırız veya sarılırız.\\n• Fransa: Sarılmak çok nadirdir.\\n\\n**2. Yemek Saatleri: 'Le Dîner' 🍽️**\\nFransızlar akşam yemeğini çok geç yer.\\n• Türkiye: 19:00 civarı\\n• Fransa: 20:00 hatta 21:00\\n\\n**3. Hitap: 'Vous' vs 'Tu' 👔**\\nFransa'da tanımadığın birine 'Tu' demek kabalıktır. Her zaman 'Vous' ile başlanır.\\n• Türkiye: 'Abi/Abla' deriz, hemen samimi oluruz.\\n• Fransa: Yıllarca komşuna 'Monsieur' diyebilirsin.",
+            examples: [
+                { fr: "En France, on fait la bise pour dire bonjour.", tr: "Fransa'da merhaba demek için yanaktan öpüşülür." },
+                { fr: "Les Français mangent plus tard que les Turcs.", tr: "Fransızlar Türklerden daha geç yemek yer." },
+                { fr: "La politesse est très importante en France.", tr: "Fransa'da nezaket çok önemlidir." }
+            ]
+        },
+        {
+            id: "fr-a2-culture-dialogue",
+            title: "🗣️ BÖLÜM 4: SESLİ DİYALOG (Kültür Şoku)",
+            explanation: "**Senaryo:** Türk öğrenci (Can) ve Fransız arkadaşı (Lucas) alışkanlıkları kıyaslıyor.\\n\\n**Lucas:** Tu aimes la cuisine française, Can?\\n🔊 *Tü em la küizin franse, Can?*\\n*(Fransız mutfağını seviyor musun, Can?)*\\n\\n**Can:** Oui, mais le petit-déjeuner est très différent.\\n🔊 *Ui, me lö pöti-dejöne e tre diferan.*\\n*(Evet ama kahvaltı çok farklı.)*\\n\\n**Lucas:** Ah bon? Pourquoi?\\n🔊 *A bon? Purkua?*\\n*(Öyle mi? Neden?)*\\n\\n**Can:** En Turquie, le petit-déjeuner est plus grand qu'en France. On mange du fromage, des olives, des œufs...\\n🔊 *An Türki, lö pöti-dejöne e plü gran kan Frans. On manj dü fromaj, de zoliv, de zö...*\\n*(Türkiye'de kahvaltı Fransa'dakinden daha büyüktür. Peynir, zeytin, yumurta yeriz...)*\\n\\n**Lucas:** C'est vrai. En France, on mange juste un croissant et du café. C'est plus léger.\\n🔊 *Se vre. An Frans, on manj jüst an kruasan e dü kafe. Se plü leje.*\\n*(Doğru. Fransa'da sadece kruvasan ve kahve yeriz. O daha hafiftir.)*\\n\\n**Can:** Et vous mangez le dîner plus tard que nous!\\n🔊 *E vu manje lö dine plü tar kö nu!*\\n*(Ve siz akşam yemeğini bizden daha geç yiyorsunuz!)*",
+            examples: []
+        }
+    ]
 };
 
 const unit357Grammar: UnitGrammar = {

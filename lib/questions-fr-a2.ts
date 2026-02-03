@@ -1598,14 +1598,220 @@ const unit354Quiz1: Question[] = [
     { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Düz gidin", correctAnswer: "Allez tout droit" }
 ];
 
+// Unit 355 Quiz 1: Şehir Terimleri
 const unit355Quiz1: Question[] = [
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Tarihi bir şehir", correctAnswer: "Une ville historique" },
-    { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Mutfağıyla ünlü", correctAnswer: "Connue pour sa gastronomie" }
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'La ville' ne demek?", options: [{ id: "a", text: "Şehir", correct: true }, { id: "b", text: "Köy", correct: false }, { id: "c", text: "Ülke", correct: false }, { id: "d", text: "Bölge", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le quartier' ne demek?", options: [{ id: "a", text: "Şehir", correct: false }, { id: "b", text: "Mahalle/Semt", correct: true }, { id: "c", text: "Cadde", correct: false }, { id: "d", text: "Meydan", correct: false }] },
+    { id: 3, type: "SELECT", question: "'La mosquée' ne demek?", options: [{ id: "a", text: "Kilise", correct: false }, { id: "b", text: "Cami", correct: true }, { id: "c", text: "Müze", correct: false }, { id: "d", text: "Köprü", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le musée' ne demek?", options: [{ id: "a", text: "Cami", correct: false }, { id: "b", text: "Müze", correct: true }, { id: "c", text: "Sinema", correct: false }, { id: "d", text: "Tiyatro", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Le pont' ne demek?", options: [{ id: "a", text: "Yol", correct: false }, { id: "b", text: "Köprü", correct: true }, { id: "c", text: "Tünel", correct: false }, { id: "d", text: "Meydan", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La place' ne demek?", options: [{ id: "a", text: "Yer", correct: false }, { id: "b", text: "Meydan", correct: true }, { id: "c", text: "Park", correct: false }, { id: "d", text: "Cadde", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le centre-ville' ne demek?", options: [{ id: "a", text: "Banliyö", correct: false }, { id: "b", text: "Şehir merkezi", correct: true }, { id: "c", text: "AVM", correct: false }, { id: "d", text: "İstasyon", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le bâtiment' ne demek?", options: [{ id: "a", text: "Apartman", correct: false }, { id: "b", text: "Bina", correct: true }, { id: "c", text: "Ev", correct: false }, { id: "d", text: "Ofis", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une grande ___.", options: [{ id: "a", text: "ville", correct: true }, { id: "b", text: "quartier", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a une ___ Bleue.", options: [{ id: "a", text: "Mosquée", correct: true }, { id: "b", text: "Église", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ de Paris.", options: [{ id: "a", text: "centre-ville", correct: true }, { id: "b", text: "quartier", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Sur le ___ du Bosphore.", options: [{ id: "a", text: "pont", correct: true }, { id: "b", text: "place", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Visitez le ___.", options: [{ id: "a", text: "musée", correct: true }, { id: "b", text: "mosquée", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ principale.", options: [{ id: "a", text: "rue", correct: true }, { id: "b", text: "pont", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Tarihi bir şehir", correctAnswer: "Une ville historique" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Güzel bir semt", correctAnswer: "Un beau quartier" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Ünlü bir cami", correctAnswer: "Une mosquée célèbre" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Şehir merkezi", correctAnswer: "Le centre-ville" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Ana meydan", correctAnswer: "La place principale" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Büyük bir bina", correctAnswer: "Un grand bâtiment" }
 ];
 
+// Unit 355 Quiz 2: Şehir Sıfatları
+const unit355Quiz2: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Grand' ne demek?", options: [{ id: "a", text: "Büyük", correct: true }, { id: "b", text: "Küçük", correct: false }, { id: "c", text: "Eski", correct: false }, { id: "d", text: "Yeni", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Petit' ne demek?", options: [{ id: "a", text: "Büyük", correct: false }, { id: "b", text: "Küçük", correct: true }, { id: "c", text: "Güzel", correct: false }, { id: "d", text: "Çirkin", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Beau/Belle' ne demek?", options: [{ id: "a", text: "Çirkin", correct: false }, { id: "b", text: "Güzel", correct: true }, { id: "c", text: "Eski", correct: false }, { id: "d", text: "Yeni", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Vieux/Vieille' ne demek?", options: [{ id: "a", text: "Yeni", correct: false }, { id: "b", text: "Eski/Tarihi", correct: true }, { id: "c", text: "Modern", correct: false }, { id: "d", text: "Güzel", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Moderne' ne demek?", options: [{ id: "a", text: "Eski", correct: false }, { id: "b", text: "Modern", correct: true }, { id: "c", text: "Tarihi", correct: false }, { id: "d", text: "Antik", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Célèbre' ne demek?", options: [{ id: "a", text: "Sakin", correct: false }, { id: "b", text: "Ünlü", correct: true }, { id: "c", text: "Gürültülü", correct: false }, { id: "d", text: "Sessiz", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Calme' ne demek?", options: [{ id: "a", text: "Gürültülü", correct: false }, { id: "b", text: "Sakin", correct: true }, { id: "c", text: "Hızlı", correct: false }, { id: "d", text: "Yavaş", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Bruyant' ne demek?", options: [{ id: "a", text: "Sakin", correct: false }, { id: "b", text: "Gürültülü", correct: true }, { id: "c", text: "Sessiz", correct: false }, { id: "d", text: "Huzurlu", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une ___ ville.", options: [{ id: "a", text: "grande", correct: true }, { id: "b", text: "grand", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Une ___ église.", options: [{ id: "a", text: "vieille", correct: true }, { id: "b", text: "vieux", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Un ___ quartier.", options: [{ id: "a", text: "beau", correct: true }, { id: "b", text: "belle", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Une ville ___.", options: [{ id: "a", text: "célèbre", correct: true }, { id: "b", text: "calme", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Un endroit très ___.", options: [{ id: "a", text: "calme", correct: true }, { id: "b", text: "bruyant", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Une architecture ___.", options: [{ id: "a", text: "moderne", correct: true }, { id: "b", text: "vieille", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Büyük bir şehir", correctAnswer: "Une grande ville" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Güzel bir yer", correctAnswer: "Un bel endroit" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Eski bir kilise", correctAnswer: "Une vieille église" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sakin bir mahalle", correctAnswer: "Un quartier calme" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Ünlü bir müze", correctAnswer: "Un musée célèbre" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Modern bir bina", correctAnswer: "Un bâtiment moderne" }
+];
+
+// Unit 355 Quiz 3: Konum ve Edatlar
+const unit355Quiz3: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Près de' ne demek?", options: [{ id: "a", text: "Yakınında", correct: true }, { id: "b", text: "Uzağında", correct: false }, { id: "c", text: "Yanında", correct: false }, { id: "d", text: "Karşısında", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Loin de' ne demek?", options: [{ id: "a", text: "Yakınında", correct: false }, { id: "b", text: "Uzağında", correct: true }, { id: "c", text: "İçinde", correct: false }, { id: "d", text: "Dışında", correct: false }] },
+    { id: 3, type: "SELECT", question: "'À côté de' ne demek?", options: [{ id: "a", text: "Karşısında", correct: false }, { id: "b", text: "Yanında", correct: true }, { id: "c", text: "Arkasında", correct: false }, { id: "d", text: "Önünde", correct: false }] },
+    { id: 4, type: "SELECT", question: "'En face de' ne demek?", options: [{ id: "a", text: "Yanında", correct: false }, { id: "b", text: "Karşısında", correct: true }, { id: "c", text: "Yakınında", correct: false }, { id: "d", text: "Uzağında", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Dans' ne demek?", options: [{ id: "a", text: "Dışında", correct: false }, { id: "b", text: "İçinde", correct: true }, { id: "c", text: "Üstünde", correct: false }, { id: "d", text: "Altında", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Il y a' ne demek?", options: [{ id: "a", text: "O var", correct: false }, { id: "b", text: "Vardır", correct: true }, { id: "c", text: "Burası", correct: false }, { id: "d", text: "Orası", correct: false }] },
+    { id: 7, type: "SELECT", question: "'C'est' ne demek?", options: [{ id: "a", text: "Vardır", correct: false }, { id: "b", text: "O.../Budur", correct: true }, { id: "c", text: "Var mı", correct: false }, { id: "d", text: "Nerede", correct: false }] },
+    { id: 8, type: "SELECT", question: "'C'est loin?' ne demek?", options: [{ id: "a", text: "Yakın mı?", correct: false }, { id: "b", text: "Uzak mı?", correct: true }, { id: "c", text: "Burada mı?", correct: false }, { id: "d", text: "Nerede?", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ de la mosquée.", options: [{ id: "a", text: "près", correct: true }, { id: "b", text: "loin", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est à ___ du musée.", options: [{ id: "a", text: "côté", correct: true }, { id: "b", text: "face", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est en ___ de l'hôtel.", options: [{ id: "a", text: "face", correct: true }, { id: "b", text: "côté", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y ___ un parc.", options: [{ id: "a", text: "a", correct: true }, { id: "b", text: "est", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la ville.", options: [{ id: "a", text: "Dans", correct: true }, { id: "b", text: "Sur", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ d'ici.", options: [{ id: "a", text: "loin", correct: true }, { id: "b", text: "près", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Caminin yakınında", correctAnswer: "Près de la mosquée" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Müzenin yanında", correctAnswer: "À côté du musée" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Otelin karşısında", correctAnswer: "En face de l'hôtel" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Buradan uzak mı?", correctAnswer: "C'est loin d'ici?" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bir park var", correctAnswer: "Il y a un parc" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Şehrin içinde", correctAnswer: "Dans la ville" }
+];
+
+// Unit 355 Quiz 4: Şehir Diyaloğu ve Turizm
+const unit355Quiz4: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Qu'est-ce qu'il y a?' ne demek?", options: [{ id: "a", text: "Ne var?", correct: true }, { id: "b", text: "Nerede?", correct: false }, { id: "c", text: "Ne zaman?", correct: false }, { id: "d", text: "Nasıl?", correct: false }] },
+    { id: 2, type: "SELECT", question: "'À voir' ne demek?", options: [{ id: "a", text: "Görülecek", correct: true }, { id: "b", text: "Yapılacak", correct: false }, { id: "c", text: "Gidilecek", correct: false }, { id: "d", text: "Yenilecek", correct: false }] },
+    { id: 3, type: "SELECT", question: "'C'est magnifique' ne demek?", options: [{ id: "a", text: "Berbat", correct: false }, { id: "b", text: "Muhteşem", correct: true }, { id: "c", text: "Normal", correct: false }, { id: "d", text: "Kötü", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'endroit' ne demek?", options: [{ id: "a", text: "Zaman", correct: false }, { id: "b", text: "Yer", correct: true }, { id: "c", text: "Kişi", correct: false }, { id: "d", text: "Şey", correct: false }] },
+    { id: 5, type: "SELECT", question: "'À pied' ne demek?", options: [{ id: "a", text: "Arabayla", correct: false }, { id: "b", text: "Yürüyerek", correct: true }, { id: "c", text: "Metroyla", correct: false }, { id: "d", text: "Otobüsle", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Historique' ne demek?", options: [{ id: "a", text: "Modern", correct: false }, { id: "b", text: "Tarihi", correct: true }, { id: "c", text: "Yeni", correct: false }, { id: "d", text: "Eski", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Je vous recommande' ne demek?", options: [{ id: "a", text: "Sizi uyarıyorum", correct: false }, { id: "b", text: "Tavsiye ederim", correct: true }, { id: "c", text: "Sizi arıyorum", correct: false }, { id: "d", text: "Sizi bekliyorum", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Visiter' ne demek?", options: [{ id: "a", text: "Görmek", correct: false }, { id: "b", text: "Ziyaret etmek", correct: true }, { id: "c", text: "Kalmak", correct: false }, { id: "d", text: "Çalışmak", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Qu'est-ce qu'il y a à ___ là-bas?", options: [{ id: "a", text: "voir", correct: true }, { id: "b", text: "faire", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est à 10 minutes à ___.", options: [{ id: "a", text: "pied", correct: true }, { id: "b", text: "main", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un endroit très ___.", options: [{ id: "a", text: "historique", correct: true }, { id: "b", text: "histoire", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vous ___ de visiter.", options: [{ id: "a", text: "recommande", correct: true }, { id: "b", text: "demande", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___!", options: [{ id: "a", text: "magnifique", correct: true }, { id: "b", text: "terrible", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est excellente.", options: [{ id: "a", text: "gastronomie", correct: true }, { id: "b", text: "géographie", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Görülecek ne var?", correctAnswer: "Qu'est-ce qu'il y a à voir?" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Yürüyerek 10 dakika", correctAnswer: "À 10 minutes à pied" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Muhteşem bir yer", correctAnswer: "C'est un endroit magnifique" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Ziyaret etmenizi tavsiye ederim", correctAnswer: "Je vous recommande de visiter" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Mutfağı mükemmel", correctAnswer: "La gastronomie est excellente" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Çok tarihi bir yer", correctAnswer: "C'est un endroit très historique" }
+];
+
+// Unit 356 Quiz 1: Kültür Terimleri
 const unit356Quiz1: Question[] = [
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Fransa'da", correctAnswer: "En France" },
-    { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Bizde farklı", correctAnswer: "Chez nous, c'est différent" }
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'La culture' ne demek?", options: [{ id: "a", text: "Kültür", correct: true }, { id: "b", text: "Gelenek", correct: false }, { id: "c", text: "Alışkanlık", correct: false }, { id: "d", text: "Fark", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La coutume' ne demek?", options: [{ id: "a", text: "Kültür", correct: false }, { id: "b", text: "Gelenek/Adet", correct: true }, { id: "c", text: "Nezaket", correct: false }, { id: "d", text: "Benzerlik", correct: false }] },
+    { id: 3, type: "SELECT", question: "'La différence' ne demek?", options: [{ id: "a", text: "Benzerlik", correct: false }, { id: "b", text: "Fark", correct: true }, { id: "c", text: "Gelenek", correct: false }, { id: "d", text: "Ülke", correct: false }] },
+    { id: 4, type: "SELECT", question: "'La ressemblance' ne demek?", options: [{ id: "a", text: "Fark", correct: false }, { id: "b", text: "Benzerlik", correct: true }, { id: "c", text: "Alışkanlık", correct: false }, { id: "d", text: "Kültür", correct: false }] },
+    { id: 5, type: "SELECT", question: "'L'habitude' ne demek?", options: [{ id: "a", text: "Gelenek", correct: false }, { id: "b", text: "Alışkanlık", correct: true }, { id: "c", text: "Nezaket", correct: false }, { id: "d", text: "Yabancı", correct: false }] },
+    { id: 6, type: "SELECT", question: "'La politesse' ne demek?", options: [{ id: "a", text: "Politika", correct: false }, { id: "b", text: "Nezaket", correct: true }, { id: "c", text: "Kibarlık", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le pays' ne demek?", options: [{ id: "a", text: "Şehir", correct: false }, { id: "b", text: "Ülke", correct: true }, { id: "c", text: "Bölge", correct: false }, { id: "d", text: "Köy", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Étranger' ne demek?", options: [{ id: "a", text: "Garip", correct: false }, { id: "b", text: "Yabancı", correct: true }, { id: "c", text: "Turist", correct: false }, { id: "d", text: "Misafir", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une ___ locale.", options: [{ id: "a", text: "coutume", correct: true }, { id: "b", text: "culture", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est importante en France.", options: [{ id: "a", text: "politesse", correct: true }, { id: "b", text: "coutume", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a une grande ___ entre les cultures.", options: [{ id: "a", text: "différence", correct: true }, { id: "b", text: "ressemblance", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une ___ française.", options: [{ id: "a", text: "habitude", correct: true }, { id: "b", text: "politesse", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Quel ___ visitez-vous?", options: [{ id: "a", text: "pays", correct: true }, { id: "b", text: "ville", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ en France.", options: [{ id: "a", text: "étranger", correct: true }, { id: "b", text: "français", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Yerel bir gelenek", correctAnswer: "Une coutume locale" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Kültürel farklar", correctAnswer: "Les différences culturelles" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Nezaket çok önemli", correctAnswer: "La politesse est très importante" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Günlük hayat", correctAnswer: "La vie quotidienne" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bu bir alışkanlık", correctAnswer: "C'est une habitude" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yabancı bir ülke", correctAnswer: "Un pays étranger" }
+];
+
+// Unit 356 Quiz 2: Karşılaştırma (Plus...que)
+const unit356Quiz2: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Plus...que' ne demek?", options: [{ id: "a", text: "Daha...dan", correct: true }, { id: "b", text: "Daha az", correct: false }, { id: "c", text: "En çok", correct: false }, { id: "d", text: "Kadar", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Moins...que' ne demek?", options: [{ id: "a", text: "Daha çok", correct: false }, { id: "b", text: "Daha az...dan", correct: true }, { id: "c", text: "En az", correct: false }, { id: "d", text: "Kadar", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Aussi...que' ne demek?", options: [{ id: "a", text: "Daha çok", correct: false }, { id: "b", text: "...kadar", correct: true }, { id: "c", text: "Daha az", correct: false }, { id: "d", text: "En", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Grand' kelimesinin karşılaştırma hali?", options: [{ id: "a", text: "Plus grand", correct: true }, { id: "b", text: "Grande", correct: false }, { id: "c", text: "Grandement", correct: false }, { id: "d", text: "Grander", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Petit' kelimesinin karşılaştırma hali?", options: [{ id: "a", text: "Petite", correct: false }, { id: "b", text: "Plus petit", correct: true }, { id: "c", text: "Petitement", correct: false }, { id: "d", text: "Moins petite", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Fort' ne demek?", options: [{ id: "a", text: "Zayıf", correct: false }, { id: "b", text: "Güçlü/Sert", correct: true }, { id: "c", text: "Hafif", correct: false }, { id: "d", text: "Yumuşak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Léger' ne demek?", options: [{ id: "a", text: "Ağır", correct: false }, { id: "b", text: "Hafif", correct: true }, { id: "c", text: "Sert", correct: false }, { id: "d", text: "Büyük", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Tard' ne demek?", options: [{ id: "a", text: "Erken", correct: false }, { id: "b", text: "Geç", correct: true }, { id: "c", text: "Hızlı", correct: false }, { id: "d", text: "Yavaş", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "La France est plus petite ___ la Turquie.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "de", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Le café turc est plus ___ que le café français.", options: [{ id: "a", text: "fort", correct: true }, { id: "b", text: "léger", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Les Français mangent plus ___ que les Turcs.", options: [{ id: "a", text: "tard", correct: true }, { id: "b", text: "tôt", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Le petit-déjeuner turc est plus ___ qu'en France.", options: [{ id: "a", text: "grand", correct: true }, { id: "b", text: "petit", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Le croissant est plus ___ que le börek.", options: [{ id: "a", text: "léger", correct: true }, { id: "b", text: "lourd", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Les gens sont ___ sympas qu'en Turquie.", options: [{ id: "a", text: "aussi", correct: true }, { id: "b", text: "plus", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Fransa Türkiye'den daha küçük", correctAnswer: "La France est plus petite que la Turquie" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Türk kahvesi daha sert", correctAnswer: "Le café turc est plus fort" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Fransızlar daha geç yemek yer", correctAnswer: "Les Français mangent plus tard" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Kahvaltı daha büyük", correctAnswer: "Le petit-déjeuner est plus grand" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Daha hafif", correctAnswer: "C'est plus léger" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "İnsanlar kadar sempatik", correctAnswer: "Les gens sont aussi sympas" }
+];
+
+// Unit 356 Quiz 3: Fransa-Türkiye Farkları (La Bise, Vous/Tu)
+const unit356Quiz3: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'La bise' ne demek?", options: [{ id: "a", text: "El sıkışma", correct: false }, { id: "b", text: "Yanaktan öpücük", correct: true }, { id: "c", text: "Sarılma", correct: false }, { id: "d", text: "Selamlama", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Faire la bise' ne demek?", options: [{ id: "a", text: "El sıkışmak", correct: false }, { id: "b", text: "Yanaktan öpmek", correct: true }, { id: "c", text: "Sarılmak", correct: false }, { id: "d", text: "El sallamak", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Se serrer la main' ne demek?", options: [{ id: "a", text: "Yanaktan öpmek", correct: false }, { id: "b", text: "El sıkışmak", correct: true }, { id: "c", text: "Sarılmak", correct: false }, { id: "d", text: "Baş eğmek", correct: false }] },
+    { id: 4, type: "SELECT", question: "Paris'te kaç öpücük yapılır?", options: [{ id: "a", text: "Bir", correct: false }, { id: "b", text: "İki", correct: true }, { id: "c", text: "Üç", correct: false }, { id: "d", text: "Dört", correct: false }] },
+    { id: 5, type: "SELECT", question: "Fransa'da akşam yemeği saat kaçta?", options: [{ id: "a", text: "18:00", correct: false }, { id: "b", text: "19:00", correct: false }, { id: "c", text: "20:00-21:00", correct: true }, { id: "d", text: "17:00", correct: false }] },
+    { id: 6, type: "SELECT", question: "Fransa'da tanımadığın birine ne dersin?", options: [{ id: "a", text: "Tu", correct: false }, { id: "b", text: "Vous", correct: true }, { id: "c", text: "Abi", correct: false }, { id: "d", text: "Kardeş", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le dîner' ne demek?", options: [{ id: "a", text: "Kahvaltı", correct: false }, { id: "b", text: "Öğle yemeği", correct: false }, { id: "c", text: "Akşam yemeği", correct: true }, { id: "d", text: "Atıştırmalık", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le petit-déjeuner' ne demek?", options: [{ id: "a", text: "Akşam yemeği", correct: false }, { id: "b", text: "Kahvaltı", correct: true }, { id: "c", text: "Öğle yemeği", correct: false }, { id: "d", text: "Tatlı", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "En France, on fait la ___ pour se saluer.", options: [{ id: "a", text: "bise", correct: true }, { id: "b", text: "main", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "En Turquie, on se serre la ___.", options: [{ id: "a", text: "main", correct: true }, { id: "b", text: "bise", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ de dire 'tu' à un inconnu.", options: [{ id: "a", text: "impoli", correct: true }, { id: "b", text: "poli", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "La politesse est très ___ en France.", options: [{ id: "a", text: "importante", correct: true }, { id: "b", text: "normale", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Dans le ___, on fait trois bises.", options: [{ id: "a", text: "sud", correct: true }, { id: "b", text: "nord", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Ça ___ de la région.", options: [{ id: "a", text: "dépend", correct: true }, { id: "b", text: "change", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Fransa'da yanaktan öpüşülür", correctAnswer: "En France, on fait la bise" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Türkiye'de el sıkışılır", correctAnswer: "En Turquie, on se serre la main" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Nezaket çok önemli", correctAnswer: "La politesse est très importante" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bölgeye bağlı", correctAnswer: "Ça dépend de la région" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bizde farklı", correctAnswer: "Chez nous, c'est différent" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Güneyde üç öpücük yapılır", correctAnswer: "Dans le sud, on fait trois bises" }
+];
+
+// Unit 356 Quiz 4: Kültür Diyaloğu ve Yemek Farkları
+const unit356Quiz4: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'La cuisine' ne demek?", options: [{ id: "a", text: "Mutfak", correct: true }, { id: "b", text: "Yemek odası", correct: false }, { id: "c", text: "Restoran", correct: false }, { id: "d", text: "Sofra", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le croissant' ne demek?", options: [{ id: "a", text: "Ekmek", correct: false }, { id: "b", text: "Kruvasan", correct: true }, { id: "c", text: "Pasta", correct: false }, { id: "d", text: "Kek", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Le fromage' ne demek?", options: [{ id: "a", text: "Tereyağı", correct: false }, { id: "b", text: "Peynir", correct: true }, { id: "c", text: "Süt", correct: false }, { id: "d", text: "Yoğurt", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Les olives' ne demek?", options: [{ id: "a", text: "Salatalık", correct: false }, { id: "b", text: "Zeytinler", correct: true }, { id: "c", text: "Domates", correct: false }, { id: "d", text: "Biber", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Les œufs' ne demek?", options: [{ id: "a", text: "Ekmek", correct: false }, { id: "b", text: "Yumurtalar", correct: true }, { id: "c", text: "Bal", correct: false }, { id: "d", text: "Reçel", correct: false }] },
+    { id: 6, type: "SELECT", question: "'C'est vrai' ne demek?", options: [{ id: "a", text: "Yanlış", correct: false }, { id: "b", text: "Doğru/Gerçek", correct: true }, { id: "c", text: "Belki", correct: false }, { id: "d", text: "Bilmiyorum", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Bizarre' ne demek?", options: [{ id: "a", text: "Normal", correct: false }, { id: "b", text: "Garip/Tuhaf", correct: true }, { id: "c", text: "Güzel", correct: false }, { id: "d", text: "İlginç", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Normal' ne demek?", options: [{ id: "a", text: "Garip", correct: false }, { id: "b", text: "Normal", correct: true }, { id: "c", text: "Farklı", correct: false }, { id: "d", text: "Özel", correct: false }] },
+    // ORTA (6 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu aimes la ___ française?", options: [{ id: "a", text: "cuisine", correct: true }, { id: "b", text: "culture", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Le petit-déjeuner est très ___.", options: [{ id: "a", text: "différent", correct: true }, { id: "b", text: "pareil", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "On mange du ___, des olives.", options: [{ id: "a", text: "fromage", correct: true }, { id: "b", text: "croissant", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est plus ___ qu'en France.", options: [{ id: "a", text: "grand", correct: true }, { id: "b", text: "petit", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___! Je trouve ça bizarre.", options: [{ id: "a", text: "vrai", correct: true }, { id: "b", text: "faux", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ maintenant.", options: [{ id: "a", text: "normal", correct: true }, { id: "b", text: "bizarre", correct: false }] },
+    // ZOR (6 soru)
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Fransız mutfağını seviyor musun?", correctAnswer: "Tu aimes la cuisine française?" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Kahvaltı çok farklı", correctAnswer: "Le petit-déjeuner est très différent" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Peynir ve zeytin yiyoruz", correctAnswer: "On mange du fromage et des olives" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sadece kruvasan ve kahve", correctAnswer: "Juste un croissant et du café" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Daha hafif", correctAnswer: "C'est plus léger" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Artık normal", correctAnswer: "C'est normal maintenant" }
 ];
 
 // Unit 357 Quiz 1: Okul Terimleri
@@ -1961,7 +2167,8 @@ export const frenchA2Quizzes: { [key: string]: Question[] } = {
     "349-1": unit349Quiz1, "349-2": unit349Quiz2, "349-3": unit349Quiz3, "349-4": unit349Quiz4,
     "350-1": unit350Quiz1, "350-2": unit350Quiz2, "350-3": unit350Quiz3, "350-4": unit350Quiz4,
     "351-1": unit351Quiz1, "352-1": unit352Quiz1, "353-1": unit353Quiz1, "354-1": unit354Quiz1,
-    "355-1": unit355Quiz1, "356-1": unit356Quiz1,
+    "355-1": unit355Quiz1, "355-2": unit355Quiz2, "355-3": unit355Quiz3, "355-4": unit355Quiz4,
+    "356-1": unit356Quiz1, "356-2": unit356Quiz2, "356-3": unit356Quiz3, "356-4": unit356Quiz4,
     "357-1": unit357Quiz1, "357-2": unit357Quiz2, "357-3": unit357Quiz3, "357-4": unit357Quiz4,
     "358-1": unit358Quiz1, "358-2": unit358Quiz2, "358-3": unit358Quiz3, "358-4": unit358Quiz4,
     "359-1": unit359Quiz1, "359-2": unit359Quiz2, "359-3": unit359Quiz3, "359-4": unit359Quiz4,

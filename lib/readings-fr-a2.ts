@@ -213,9 +213,55 @@ const unit353Reading: UnitReading = { unitId: 353, title: "Özür", language: "F
 
 const unit354Reading: UnitReading = { unitId: 354, title: "Yol Tarifi", language: "Fransızca", level: "A2", story: { text: "Un touriste a demandé son chemin. 'Excusez-moi, où est la gare?' 'C'est facile! Allez tout droit, puis tournez à gauche au carrefour. La gare est à côté de la poste.' 'Merci beaucoup!'", translation: "Bir turist yol sordu. 'Affedersiniz, istasyon nerede?' 'Çok kolay! Düz gidin, sonra kavşakta sola dönün. İstasyon postanın yanında.' 'Çok teşekkürler!'" }, questions: [{ id: 1, question: "İstasyon nerede?", options: ["Bankada", "Postanın yanında", "Parkta", "Meydanda"], correctAnswer: "Postanın yanında" }], vocabulary: [{ word: "Le carrefour", meaning: "Kavşak" }] };
 
-const unit355Reading: UnitReading = { unitId: 355, title: "Şehir", language: "Fransızca", level: "A2", story: { text: "Lyon est une ville historique. Elle est connue pour sa gastronomie. Il y a beaucoup de restaurants et de beaux quartiers. Les Lyonnais sont très sympathiques. C'est une ville que j'adore!", translation: "Lyon tarihi bir şehir. Mutfağıyla ünlü. Çok restoran ve güzel semtler var. Lyonlular çok sempatik. Bayıldığım bir şehir!" }, questions: [{ id: 1, question: "Lyon neyle ünlü?", options: ["Müzeler", "Mutfak", "Plajlar", "Dağlar"], correctAnswer: "Mutfak" }], vocabulary: [{ word: "Connue pour", meaning: "...ile ünlü" }] };
+const unit355Reading: UnitReading = {
+    unitId: 355, title: "Şehir Hayatı", language: "Fransızca", level: "A2",
+    story: {
+        text: "Pierre est un touriste français qui visite Istanbul. C'est sa première fois en Turquie.\\n\\nIl demande à Ali: 'Pardon monsieur, Sultanahmet, c'est loin d'ici?'\\n\\nAli répond: 'Non, ce n'est pas loin. C'est à 10 minutes à pied.'\\n\\nPierre: 'Qu'est-ce qu'il y a à voir là-bas?'\\n\\nAli: 'Il y a la Mosquée Bleue et Sainte-Sophie. C'est magnifique! Il y a aussi beaucoup de monuments historiques.'\\n\\nPierre: 'Et le Grand Bazar?'\\n\\nAli: 'C'est à côté de la mosquée. C'est un endroit très historique. La ville est célèbre pour son histoire et sa gastronomie.'\\n\\nPierre a visité tous ces endroits. Il a adoré Istanbul!",
+        translation: "Pierre, İstanbul'u ziyaret eden Fransız bir turist. Türkiye'ye ilk kez geliyor.\\n\\nAli'ye soruyor: 'Pardon beyefendi, Sultanahmet buradan uzak mı?'\\n\\nAli cevaplıyor: 'Hayır, uzak değil. Yürüyerek 10 dakika.'\\n\\nPierre: 'Orada görülecek ne var?'\\n\\nAli: 'Sultanahmet Camii ve Ayasofya var. Muhteşem! Ayrıca çok tarihi anıt var.'\\n\\nPierre: 'Peki Kapalıçarşı?'\\n\\nAli: 'Caminin yanında. Çok tarihi bir yer. Şehir tarihi ve mutfağıyla ünlü.'\\n\\nPierre tüm bu yerleri gezdi. İstanbul'u çok sevdi!"
+    },
+    questions: [
+        { id: 1, question: "Pierre nereli?", options: ["Türk", "Fransız", "Alman", "İtalyan"], correctAnswer: "Fransız" },
+        { id: 2, question: "Sultanahmet kaç dakika uzaklıkta?", options: ["5 dakika", "10 dakika", "15 dakika", "20 dakika"], correctAnswer: "10 dakika" },
+        { id: 3, question: "Sultanahmet'te ne var?", options: ["Park ve müze", "Cami ve Ayasofya", "Restoran ve otel", "Hastane"], correctAnswer: "Cami ve Ayasofya" },
+        { id: 4, question: "Kapalıçarşı nerede?", options: ["Merkezden uzakta", "Caminin yanında", "Deniz kenarında", "Havaalanında"], correctAnswer: "Caminin yanında" },
+        { id: 5, question: "İstanbul neyle ünlü?", options: ["Plajları", "Dağları", "Tarihi ve mutfağı", "Fabrikaları"], correctAnswer: "Tarihi ve mutfağı" }
+    ],
+    vocabulary: [
+        { word: "La ville", meaning: "Şehir" },
+        { word: "La mosquée", meaning: "Cami" },
+        { word: "Le monument", meaning: "Anıt" },
+        { word: "À côté de", meaning: "Yanında" },
+        { word: "Loin de", meaning: "Uzakta" },
+        { word: "Il y a", meaning: "Var(dır)" },
+        { word: "Célèbre", meaning: "Ünlü" },
+        { word: "Magnifique", meaning: "Muhteşem" }
+    ]
+};
 
-const unit356Reading: UnitReading = { unitId: 356, title: "Kültür", language: "Fransızca", level: "A2", story: { text: "En France, on fait la bise pour se saluer. C'est une coutume très française. Le nombre de bises change selon la région. En Turquie, c'est différent, on se serre la main.", translation: "Fransa'da selamlaşırken yanaktan öpüşülür. Bu çok Fransız bir gelenek. Öpücük sayısı bölgeye göre değişir. Türkiye'de farklı, el sıkışılır." }, questions: [{ id: 1, question: "Fransa'da nasıl selamlaşılır?", options: ["El sıkışarak", "Yanaktan öperek", "Baş eğerek", "El sallayarak"], correctAnswer: "Yanaktan öperek" }], vocabulary: [{ word: "La bise", meaning: "Yanaktan öpücük" }] };
+const unit356Reading: UnitReading = {
+    unitId: 356, title: "Kültürel Farklar", language: "Fransızca", level: "A2",
+    story: {
+        text: "Mehmet est un étudiant turc qui habite à Paris. Au début, il était surpris par les coutumes françaises.\\n\\nEn France, on fait la bise pour se saluer. Le nombre de bises change selon la région: deux à Paris, trois dans le sud, parfois quatre! Mehmet trouvait ça bizarre au début.\\n\\n'Chez nous en Turquie', explique-t-il, 'on se serre la main avec les personnes qu'on ne connaît pas bien. Avec la famille et les amis proches, on peut faire la bise aussi, mais c'est différent.'\\n\\nMaintenant, Mehmet s'est habitué. Il fait la bise comme un vrai Français! 'C'est normal maintenant', dit-il. 'Chaque culture a ses traditions. C'est ça qui rend le voyage intéressant!'",
+        translation: "Mehmet Paris'te yaşayan Türk bir öğrenci. Başlangıçta Fransız geleneklerinden şaşırmıştı.\\n\\nFransa'da selamlaşırken yanaktan öpüşülür. Öpücük sayısı bölgeye göre değişir: Paris'te iki, güneyde üç, bazen dört! Mehmet başta bunu garip buluyordu.\\n\\n'Türkiye'de bizde,' diye açıklıyor, 'iyi tanımadığımız kişilerle el sıkışırız. Aile ve yakın arkadaşlarla yanaktan da öpüşebiliriz ama farklı.'\\n\\nŞimdi Mehmet alıştı. Gerçek bir Fransız gibi yanaktan öpüşüyor! 'Artık normal,' diyor. 'Her kültürün gelenekleri var. Seyahati ilginç yapan da bu!'"
+    },
+    questions: [
+        { id: 1, question: "Mehmet nereli?", options: ["Fransız", "Türk", "Alman", "İtalyan"], correctAnswer: "Türk" },
+        { id: 2, question: "Fransa'da nasıl selamlaşılır?", options: ["El sıkışarak", "Yanaktan öperek", "Baş eğerek", "Sarılarak"], correctAnswer: "Yanaktan öperek" },
+        { id: 3, question: "Paris'te kaç öpücük yapılır?", options: ["Bir", "İki", "Üç", "Dört"], correctAnswer: "İki" },
+        { id: 4, question: "Türkiye'de tanımadığın biriyle nasıl selamlaşılır?", options: ["Yanaktan öperek", "Sarılarak", "El sıkışarak", "El sallayarak"], correctAnswer: "El sıkışarak" },
+        { id: 5, question: "Mehmet şimdi ne düşünüyor?", options: ["Hala garip buluyor", "Normal buluyor", "Sevmiyor", "Yapmıyor"], correctAnswer: "Normal buluyor" }
+    ],
+    vocabulary: [
+        { word: "La bise", meaning: "Yanaktan öpücük" },
+        { word: "Se serrer la main", meaning: "El sıkışmak" },
+        { word: "La coutume", meaning: "Gelenek/Adet" },
+        { word: "Selon la région", meaning: "Bölgeye göre" },
+        { word: "Au début", meaning: "Başlangıçta" },
+        { word: "S'habituer", meaning: "Alışmak" },
+        { word: "Bizarre", meaning: "Garip/Tuhaf" },
+        { word: "Normal", meaning: "Normal" }
+    ]
+};
 
 const unit357Reading: UnitReading = {
     unitId: 357, title: "Eğitim Hayatı", language: "Fransızca", level: "A2",

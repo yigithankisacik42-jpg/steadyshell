@@ -368,18 +368,58 @@ const unit354Phrases: FrenchA2UnitPhrases = {
 };
 
 const unit355Phrases: FrenchA2UnitPhrases = {
-    unitId: 355, title: "Şehir Tanıtımı", phrases: [
+    unitId: 355, title: "Şehir Hayatı", phrases: [
+        // Şehir Tanıtımı
         { text: "C'est une ville historique.", meaning: "Tarihi bir şehir.", pronunciation: "se-tün-vil-is-to-rik" },
+        { text: "C'est une grande ville.", meaning: "Büyük bir şehir.", pronunciation: "se-tün-grand-vil" },
+        { text: "C'est une ville magnifique.", meaning: "Muhteşem bir şehir.", pronunciation: "se-tün-vil-ma-nyi-fik" },
+
+        // Il y a
         { text: "Il y a beaucoup de monuments.", meaning: "Çok anıt var.", pronunciation: "il-ya-bo-ku-dö-mo-nü-man" },
-        { text: "La gastronomie est excellente.", meaning: "Mutfağı mükemmel.", pronunciation: "la-gas-tro-no-mi-e-tek-se-lant" }
+        { text: "Il y a un parc.", meaning: "Bir park var.", pronunciation: "il-ya-ön-park" },
+        { text: "Qu'est-ce qu'il y a à voir?", meaning: "Görülecek ne var?", pronunciation: "kes-kil-ya-a-vuar" },
+
+        // Konum
+        { text: "C'est loin d'ici?", meaning: "Buradan uzak mı?", pronunciation: "se-luen-di-si" },
+        { text: "C'est près de la mosquée.", meaning: "Caminin yakınında.", pronunciation: "se-pre-dö-la-mos-ke" },
+        { text: "C'est à côté du musée.", meaning: "Müzenin yanında.", pronunciation: "se-a-ko-te-dü-mü-ze" },
+        { text: "C'est en face de l'hôtel.", meaning: "Otelin karşısında.", pronunciation: "se-an-fas-dö-lo-tel" },
+
+        // Zaman
+        { text: "C'est à 10 minutes.", meaning: "10 dakika mesafede.", pronunciation: "se-a-di-mi-nüt" },
+        { text: "C'est à 5 minutes à pied.", meaning: "Yürüyerek 5 dakika.", pronunciation: "se-a-senk-mi-nüt-a-pye" },
+
+        // Turist
+        { text: "La gastronomie est excellente.", meaning: "Mutfağı mükemmel.", pronunciation: "la-gas-tro-no-mi-e-tek-se-lant" },
+        { text: "C'est un endroit magnifique.", meaning: "Harika bir yer.", pronunciation: "se-tön-an-drua-ma-nyi-fik" },
+        { text: "Je vous recommande de visiter...", meaning: "...ziyaret etmenizi tavsiye ederim.", pronunciation: "jö-vu-rö-ko-mand-dö-vi-zi-te" }
     ]
 };
 
 const unit356Phrases: FrenchA2UnitPhrases = {
     unitId: 356, title: "Kültürel Farklar", phrases: [
+        // Selamlaşma
         { text: "En France, on fait la bise.", meaning: "Fransa'da yanaktan öpüşülür.", pronunciation: "an-frans-on-fe-la-biz" },
+        { text: "On se serre la main.", meaning: "El sıkışırız.", pronunciation: "on-sö-ser-la-men" },
+        { text: "Combien de bises?", meaning: "Kaç öpücük?", pronunciation: "kon-biyen-dö-biz" },
+
+        // Karşılaştırma
         { text: "C'est une coutume locale.", meaning: "Yerel bir gelenek.", pronunciation: "se-tün-ku-tüm-lo-kal" },
-        { text: "Chez nous, c'est différent.", meaning: "Bizde farklı.", pronunciation: "şe-nu-se-di-fe-ran" }
+        { text: "Chez nous, c'est différent.", meaning: "Bizde farklı.", pronunciation: "şe-nu-se-di-fe-ran" },
+        { text: "En Turquie, on fait comme ça.", meaning: "Türkiye'de böyle yapıyoruz.", pronunciation: "an-tür-ki-on-fe-kom-sa" },
+        { text: "C'est normal ici.", meaning: "Burada normal.", pronunciation: "se-nor-mal-i-si" },
+        { text: "C'est bizarre pour moi.", meaning: "Bana garip geliyor.", pronunciation: "se-bi-zar-pur-mua" },
+
+        // Bölgesel Farklar
+        { text: "Ça dépend de la région.", meaning: "Bölgeye bağlı.", pronunciation: "sa-de-pan-dö-la-re-jyon" },
+        { text: "Dans le sud, on...", meaning: "Güneyde, ...", pronunciation: "dan-lö-süd-on" },
+        { text: "Dans le nord, c'est différent.", meaning: "Kuzeyde farklı.", pronunciation: "dan-lö-nor-se-di-fe-ran" },
+
+        // Nezaket
+        { text: "C'est poli de...", meaning: "... yapmak kibarcadır.", pronunciation: "se-po-li-dö" },
+        { text: "C'est impoli de...", meaning: "... yapmak kabalıktır.", pronunciation: "se-en-po-li-dö" },
+        { text: "Contrairement à chez nous.", meaning: "Bizdekinin aksine.", pronunciation: "kon-trer-man-a-şe-nu" },
+        { text: "C'est la même chose.", meaning: "Aynı şey.", pronunciation: "se-la-mem-şoz" }
     ]
 };
 
