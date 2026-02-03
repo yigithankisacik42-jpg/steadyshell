@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Bot, Send, ArrowLeft, Loader2, MessageCircle, Globe, Check, Theater, Sparkles, Mic, MicOff, Volume2, VolumeX, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,29 @@ interface Message {
     content: string;
 }
 
+// Loading component for Suspense fallback
+function SceneLoading() {
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800">
+            <div className="text-center">
+                <Loader2 className="w-12 h-12 text-indigo-400 animate-spin mx-auto mb-4" />
+                <p className="text-white/60">Yükleniyor...</p>
+            </div>
+        </div>
+    );
+}
+
+// Main page wrapper with Suspense
 export default function SceneModePage() {
+    return (
+        <Suspense fallback={<SceneLoading />}>
+            <SceneContent />
+        </Suspense>
+    );
+}
+
+// Actual content component
+function SceneContent() {
     const searchParams = useSearchParams();
     const unitParam = searchParams.get('unit');
 
