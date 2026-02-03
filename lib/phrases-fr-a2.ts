@@ -344,26 +344,80 @@ const unit351Phrases: FrenchA2UnitPhrases = {
 
 const unit352Phrases: FrenchA2UnitPhrases = {
     unitId: 352, title: "Davet Etme", phrases: [
+        // Davet Etme
+        { text: "Ça te dit de manger une pizza?", meaning: "Pizza yemeye ne dersin?", pronunciation: "sa-tö-di-dö-man-je-ün-pi-za" },
+        { text: "Tu veux aller au cinéma?", meaning: "Sinemaya gitmek ister misin?", pronunciation: "tü-vö-a-le-o-si-ne-ma" },
+        { text: "On va au café ce soir?", meaning: "Bu akşam kafeye gidelim mi?", pronunciation: "on-va-o-ka-fe-sö-suar" },
+        { text: "Tu es libre ce week-end?", meaning: "Bu hafta sonu boş musun?", pronunciation: "tü-e-libr-sö-vi-kend" },
         { text: "Je t'invite à dîner.", meaning: "Seni yemeğe davet ediyorum.", pronunciation: "jö-ten-vit-a-di-ne" },
-        { text: "Tu es libre samedi?", meaning: "Cumartesi müsait misin?", pronunciation: "tü-e-libr-sam-di" },
-        { text: "Merci pour l'invitation!", meaning: "Davet için teşekkürler!", pronunciation: "mer-si-pur-len-vi-ta-syon" }
+
+        // Kabul
+        { text: "Avec plaisir!", meaning: "Memnuniyetle!", pronunciation: "a-vek-ple-zir" },
+        { text: "Oui, je veux bien!", meaning: "Evet, çok isterim!", pronunciation: "ui-jö-vö-biyen" },
+        { text: "D'accord!", meaning: "Tamam!", pronunciation: "da-kor" },
+        { text: "Bonne idée!", meaning: "İyi fikir!", pronunciation: "bon-ide" },
+        { text: "Pourquoi pas?", meaning: "Neden olmasın?", pronunciation: "pur-kua-pa" },
+
+        // Reddetme
+        { text: "Désolé, je ne peux pas.", meaning: "Üzgünüm, yapamam.", pronunciation: "de-zo-le-jö-nö-pö-pa" },
+        { text: "Je suis occupé(e).", meaning: "Meşgulüm.", pronunciation: "jö-süi-o-kü-pe" },
+        { text: "J'ai du travail.", meaning: "İşim var.", pronunciation: "je-dü-tra-vay" },
+        { text: "Peut-être une autre fois.", meaning: "Belki başka zaman.", pronunciation: "pö-tetr-ün-otr-fua" },
+        { text: "C'est gentil, mais non.", meaning: "Çok naziksin ama hayır.", pronunciation: "se-jan-ti-me-no" }
     ]
 };
 
 const unit353Phrases: FrenchA2UnitPhrases = {
     unitId: 353, title: "Özür Dileme", phrases: [
-        { text: "Je suis vraiment désolé(e).", meaning: "Gerçekten özür dilerim.", pronunciation: "jö-süi-vre-man-de-zo-le" },
+        // Özür Dileme
+        { text: "Je suis vraiment désolé(e).", meaning: "Gerçekten üzgünüm.", pronunciation: "jö-süi-vre-man-de-zo-le" },
+        { text: "Excusez-moi, je suis en retard.", meaning: "Afedersiniz, geciktim.", pronunciation: "eks-kü-ze-mua-jö-süi-an-rö-tar" },
+        { text: "Pardon, c'est ma faute.", meaning: "Özür dilerim, benim hatam.", pronunciation: "par-don-se-ma-fot" },
+        { text: "Je m'excuse sincèrement.", meaning: "İçtenlikle özür dilerim.", pronunciation: "jö-meks-küz-san-ser-man" },
+        { text: "Je regrette beaucoup.", meaning: "Çok pişmanım.", pronunciation: "jö-rö-gret-bo-ku" },
+
+        // Mazeret
         { text: "J'ai un empêchement.", meaning: "Bir engelim var.", pronunciation: "je-ön-an-peş-man" },
-        { text: "Ce n'est pas grave.", meaning: "Önemli değil.", pronunciation: "sö-ne-pa-grav" }
+        { text: "J'ai oublié!", meaning: "Unuttum!", pronunciation: "je-ub-li-ye" },
+        { text: "Je suis malade.", meaning: "Hastayım.", pronunciation: "jö-süi-ma-lad" },
+        { text: "Il y a du trafic.", meaning: "Trafik var.", pronunciation: "il-ya-dü-tra-fik" },
+        { text: "Mon réveil n'a pas sonné.", meaning: "Alarmım çalmadı.", pronunciation: "mon-re-vey-na-pa-so-ne" },
+
+        // Sebep Belirtme
+        { text: "Parce qu'il y a du trafic.", meaning: "Çünkü trafik var.", pronunciation: "pars-kil-ya-dü-tra-fik" },
+        { text: "À cause du bus.", meaning: "Otobüs yüzünden.", pronunciation: "a-koz-dü-büs" },
+
+        // Tepkiler
+        { text: "Ce n'est pas grave.", meaning: "Önemli değil.", pronunciation: "sö-ne-pa-grav" },
+        { text: "La prochaine fois, téléphonez-moi.", meaning: "Bir dahaki sefere beni arayın.", pronunciation: "la-pro-şen-fua-te-le-fo-ne-mua" },
+        { text: "C'est promis!", meaning: "Söz veriyorum!", pronunciation: "se-pro-mi" }
     ]
 };
 
 const unit354Phrases: FrenchA2UnitPhrases = {
     unitId: 354, title: "Yol Tarifi", phrases: [
+        // Yol Sorma
+        { text: "Pardon, pour aller au musée?", meaning: "Pardon, müzeye nasıl gidilir?", pronunciation: "par-don-pur-a-le-o-mü-ze" },
         { text: "Excusez-moi, je cherche...", meaning: "Affedersiniz, ... arıyorum.", pronunciation: "eks-kü-ze-mua-jö-şerş" },
-        { text: "Tournez à gauche puis à droite.", meaning: "Sola sonra sağa dönün.", pronunciation: "tur-ne-a-goş-püi-a-druat" },
-        { text: "C'est tout droit.", meaning: "Düz.", pronunciation: "se-tu-drua" },
-        { text: "C'est à 5 minutes à pied.", meaning: "Yürüyerek 5 dakika.", pronunciation: "se-ta-senk-mi-nüt-a-pye" }
+        { text: "Où est la gare, s'il vous plaît?", meaning: "Gar nerede lütfen?", pronunciation: "u-e-la-gar-sil-vu-ple" },
+        { text: "C'est loin d'ici?", meaning: "Buradan uzak mı?", pronunciation: "se-luen-di-si" },
+
+        // Yol Tarif Etme
+        { text: "Allez tout droit.", meaning: "Dümdüz gidin.", pronunciation: "a-le-tu-drua" },
+        { text: "Tournez à gauche.", meaning: "Sola dönün.", pronunciation: "tur-ne-a-goş" },
+        { text: "Tournez à droite.", meaning: "Sağa dönün.", pronunciation: "tur-ne-a-druat" },
+        { text: "Prenez la première rue.", meaning: "Birinci sokağa girin.", pronunciation: "prö-ne-la-prö-myer-rü" },
+        { text: "Continuez jusqu'au feu.", meaning: "Işıklara kadar devam edin.", pronunciation: "kon-ti-nü-e-jüs-ko-fö" },
+        { text: "Traversez le pont.", meaning: "Köprüyü geçin.", pronunciation: "tra-ver-se-lö-pon" },
+
+        // Mesafe
+        { text: "C'est à 5 minutes à pied.", meaning: "Yürüyerek 5 dakika.", pronunciation: "se-ta-senk-mi-nüt-a-pye" },
+        { text: "C'est tout près.", meaning: "Çok yakın.", pronunciation: "se-tu-pre" },
+        { text: "C'est un peu loin.", meaning: "Biraz uzak.", pronunciation: "se-tön-pö-luen" },
+
+        // Bağlaçlı Cümleler
+        { text: "Allez tout droit, puis tournez à gauche.", meaning: "Düz gidin, sonra sola dönün.", pronunciation: "a-le-tu-drua-püi-tur-ne-a-goş" },
+        { text: "C'est en face de la poste.", meaning: "Postanın karşısında.", pronunciation: "se-tan-fas-dö-la-post" }
     ]
 };
 

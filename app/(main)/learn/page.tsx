@@ -214,6 +214,27 @@ export default function LearnPage() {
                                             />
                                         </div>
                                     </div>
+
+                                    {/* AI Practice Button - All supported practice units */}
+                                    {((unit.id >= 352 && unit.id <= 359) || // FR A2
+                                        (unit.id >= 301 && unit.id <= 320) || // FR A1
+                                        (unit.id >= 1 && unit.id <= 20) ||    // ES A1
+                                        (unit.id >= 31 && unit.id <= 50)) && ( // ES A2
+                                            <Link href={`/scene?unit=${unit.id}&lang=${currentLanguage.code}&level=${currentLevel?.code || 'A1'}`} className="block mt-4">
+                                                <div className="flex items-center justify-between p-4 bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-200 rounded-2xl hover:border-violet-400 hover:shadow-lg hover:shadow-violet-100 transition-all group cursor-pointer">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-10 h-10 bg-violet-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-violet-200">
+                                                            <MessageCircle className="w-5 h-5" />
+                                                        </div>
+                                                        <div>
+                                                            <p className="font-bold text-violet-800 text-sm">Luna ile Pratik Yap</p>
+                                                            <p className="text-xs text-violet-600/70">Bu ünitenin kalıplarını AI ile çalış</p>
+                                                        </div>
+                                                    </div>
+                                                    <ChevronRight className="w-5 h-5 text-violet-400 group-hover:translate-x-1 transition-transform" />
+                                                </div>
+                                            </Link>
+                                        )}
                                 </div>
 
                                 {/* Lesson Path (Vertical) */}

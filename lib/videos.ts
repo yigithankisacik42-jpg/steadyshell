@@ -120,7 +120,12 @@ export const frA1Videos: UnitVideo[] = [
 
 // Fransızca A2 Videoları (Ünite 331-360)
 export const frA2Videos: UnitVideo[] = [
+    { unitId: 352, youtubeId: "e-4m5QkP-4M", title: "Davet Etme", level: "A2" },
+    { unitId: 353, youtubeId: "OB4LFXFWe_g", title: "Özür Dileme", level: "A2" },
+    { unitId: 355, youtubeId: "m83JDXvCnSk", title: "Şehir Hayatı", level: "A2" },
     { unitId: 356, youtubeId: "2powevsF82M", title: "Kültürel Farklar", level: "A2" },
+    { unitId: 357, youtubeId: "1702J1hKz3w", title: "Eğitim Hayatı", level: "A2" },
+    { unitId: 358, youtubeId: "qWqYV7Pyf8s", title: "İş Hayatı", level: "A2" },
     { unitId: 359, youtubeId: "SjN75q5e3aM", title: "Teknoloji Kullanımı", level: "A2" },
 ];
 

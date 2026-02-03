@@ -207,11 +207,80 @@ const unit350Reading: UnitReading = { unitId: 350, title: "Buluşma", language: 
 
 const unit351Reading: UnitReading = { unitId: 351, title: "Telefon", language: "Fransızca", level: "A2", story: { text: "Allô, bonjour! C'est Paul à l'appareil. Pourrais-je parler à Monsieur Dupont? - Il n'est pas là. Voulez-vous laisser un message? - Oui, dites-lui que je le rappellerai demain.", translation: "Alo, merhaba! Ben Paul. Bay Dupont ile görüşebilir miyim? - Burada değil. Mesaj bırakmak ister misiniz? - Evet, yarın geri arayacağımı söyleyin." }, questions: [{ id: 1, question: "Bay Dupont nerede?", options: ["Toplantıda", "Burada değil", "Yolda", "Tatilde"], correctAnswer: "Burada değil" }], vocabulary: [{ word: "À l'appareil", meaning: "Telefonda" }] };
 
-const unit352Reading: UnitReading = { unitId: 352, title: "Davet", language: "Fransızca", level: "A2", story: { text: "Samedi, c'est l'anniversaire de Marie. Elle a invité tous ses amis. La fête commence à 20h. Il y aura un gâteau et de la musique. Ce sera une super soirée!", translation: "Cumartesi Marie'nin doğum günü. Tüm arkadaşlarını davet etti. Parti saat 20'de başlıyor. Pasta ve müzik olacak. Harika bir gece olacak!" }, questions: [{ id: 1, question: "Parti saat kaçta?", options: ["18:00", "19:00", "20:00", "21:00"], correctAnswer: "20:00" }], vocabulary: [{ word: "L'anniversaire", meaning: "Doğum günü" }] };
+const unit352Reading: UnitReading = {
+    unitId: 352, title: "Davet Etme", language: "Fransızca", level: "A2",
+    story: {
+        text: "Paul veut inviter son amie Marie à un concert ce week-end.\\n\\nPaul: Salut Marie! Tu es libre samedi soir?\\n\\nMarie: Salut Paul! Oui, pourquoi?\\n\\nPaul: Ça te dit d'aller au concert de Tarkan?\\n\\nMarie: Ah, Tarkan! C'est une très bonne idée! C'est à quelle heure?\\n\\nPaul: Le concert commence à 20 heures.\\n\\nMarie: Super! Avec plaisir!\\n\\nPaul: Génial! On se retrouve devant la salle de concert à 19h30?\\n\\nMarie: D'accord! Merci pour l'invitation!\\n\\nPaul: De rien! À samedi!",
+        translation: "Paul bu hafta sonu arkadaşı Marie'yi konsere davet etmek istiyor.\\n\\nPaul: Selam Marie! Cumartesi akşamı boş musun?\\n\\nMarie: Selam Paul! Evet, neden?\\n\\nPaul: Tarkan konserine gitmeye ne dersin?\\n\\nMarie: Ah, Tarkan! Bu çok iyi bir fikir! Saat kaçta?\\n\\nPaul: Konser saat 20'de başlıyor.\\n\\nMarie: Süper! Memnuniyetle!\\n\\nPaul: Harika! Saat 19:30'da konser salonunun önünde buluşalım mı?\\n\\nMarie: Tamam! Davet için teşekkürler!\\n\\nPaul: Rica ederim! Cumartesiye görüşürüz!"
+    },
+    questions: [
+        { id: 1, question: "Paul Marie'yi nereye davet ediyor?", options: ["Sinemaya", "Kafeye", "Konsere", "Restorana"], correctAnswer: "Konsere" },
+        { id: 2, question: "Konser ne zaman?", options: ["Cuma akşamı", "Cumartesi akşamı", "Pazar öğleden sonra", "Pazartesi"], correctAnswer: "Cumartesi akşamı" },
+        { id: 3, question: "Konser saat kaçta başlıyor?", options: ["18:00", "19:00", "20:00", "21:00"], correctAnswer: "20:00" },
+        { id: 4, question: "Marie'nin cevabı ne?", options: ["Hayır", "Belki", "Memnuniyetle", "Bilmiyorum"], correctAnswer: "Memnuniyetle" },
+        { id: 5, question: "Nerede buluşacaklar?", options: ["Evde", "Kafede", "Metroda", "Konser salonu önünde"], correctAnswer: "Konser salonu önünde" }
+    ],
+    vocabulary: [
+        { word: "Tu es libre?", meaning: "Boş musun?" },
+        { word: "Ça te dit de...?", meaning: "...e ne dersin?" },
+        { word: "Avec plaisir!", meaning: "Memnuniyetle!" },
+        { word: "C'est à quelle heure?", meaning: "Saat kaçta?" },
+        { word: "On se retrouve", meaning: "Buluşalım" },
+        { word: "Merci pour l'invitation", meaning: "Davet için teşekkürler" },
+        { word: "De rien", meaning: "Rica ederim" },
+        { word: "À samedi!", meaning: "Cumartesiye görüşürüz!" }
+    ]
+};
 
-const unit353Reading: UnitReading = { unitId: 353, title: "Özür", language: "Fransızca", level: "A2", story: { text: "Pierre a téléphoné à son ami. 'Je suis vraiment désolé, je ne peux pas venir ce soir. J'ai un empêchement.' Son ami a répondu: 'Ce n'est pas grave, on se voit une autre fois!'", translation: "Pierre arkadaşını aradı. 'Gerçekten özür dilerim, bu akşam gelemiyorum. Bir engelim var.' Arkadaşı cevapladı: 'Önemli değil, başka zaman görüşürüz!'" }, questions: [{ id: 1, question: "Pierre neden gelemiyordu?", options: ["Hasta", "Engeli var", "Yorgun", "Çalışıyor"], correctAnswer: "Engeli var" }], vocabulary: [{ word: "Un empêchement", meaning: "Engel" }] };
+const unit353Reading: UnitReading = {
+    unitId: 353, title: "Özür Dileme", language: "Fransızca", level: "A2",
+    story: {
+        text: "Ce matin, Léa est arrivée en retard au bureau. Son patron, Monsieur Dupont, l'attendait.\\n\\nM. Dupont: Léa, vous êtes en retard! La réunion a commencé il y a 30 minutes!\\n\\nLéa: Je suis vraiment désolée, Monsieur. À cause du bus, je n'ai pas pu arriver à l'heure. Il n'est pas venu.\\n\\nM. Dupont: C'est la deuxième fois cette semaine!\\n\\nLéa: Je sais, c'est ma faute. J'aurais dû partir plus tôt. C'est promis, la prochaine fois je prendrai le métro.\\n\\nM. Dupont: D'accord. Mais téléphonez-moi si vous avez un problème!\\n\\nLéa: Oui, Monsieur. Je vous prie de m'excuser encore une fois.\\n\\nM. Dupont: Ce n'est pas grave pour cette fois. Allez, entrez, on continue la réunion.",
+        translation: "Bu sabah Léa ofise geç geldi. Patronu Bay Dupont onu bekliyordu.\\n\\nBay Dupont: Léa, geç kaldınız! Toplantı 30 dakika önce başladı!\\n\\nLéa: Gerçekten çok üzgünüm, efendim. Otobüs yüzünden zamanında gelemedim. Gelmedi.\\n\\nBay Dupont: Bu hafta ikinci kez!\\n\\nLéa: Biliyorum, benim hatam. Daha erken çıkmalıydım. Söz veriyorum, bir dahaki sefere metro ile geleceğim.\\n\\nBay Dupont: Tamam. Ama bir sorununuz olursa beni arayın!\\n\\nLéa: Evet, efendim. Bir kez daha özür dilerim.\\n\\nBay Dupont: Bu sefer önemli değil. Haydi, girin, toplantıya devam ediyoruz."
+    },
+    questions: [
+        { id: 1, question: "Léa neden geç kaldı?", options: ["Hasta", "Otobüs gelmedi", "Uyuya kaldı", "Trafik"], correctAnswer: "Otobüs gelmedi" },
+        { id: 2, question: "Bu hafta kaçıncı kez geç kaldı?", options: ["Birinci", "İkinci", "Üçüncü", "Dördüncü"], correctAnswer: "İkinci" },
+        { id: 3, question: "Léa bir dahaki sefere ne yapacak?", options: ["Taksi alacak", "Metro ile gelecek", "Erken yatacak", "İşe gelmeyecek"], correctAnswer: "Metro ile gelecek" },
+        { id: 4, question: "Patron ne istedi?", options: ["İstifa etsin", "Para cezası", "Sorun olursa araması", "Eve gitmesi"], correctAnswer: "Sorun olursa araması" },
+        { id: 5, question: "Patronun tepkisi nasıldı?", options: ["Çok kızgın", "Affetti", "Kovdu", "Umursamadı"], correctAnswer: "Affetti" }
+    ],
+    vocabulary: [
+        { word: "En retard", meaning: "Geç" },
+        { word: "À cause de", meaning: "...yüzünden" },
+        { word: "C'est ma faute", meaning: "Benim hatam" },
+        { word: "C'est promis", meaning: "Söz veriyorum" },
+        { word: "Téléphonez-moi", meaning: "Beni arayın" },
+        { word: "Je vous prie de m'excuser", meaning: "Özür dilerim" },
+        { word: "Ce n'est pas grave", meaning: "Önemli değil" },
+        { word: "La prochaine fois", meaning: "Bir dahaki sefere" }
+    ]
+};
 
-const unit354Reading: UnitReading = { unitId: 354, title: "Yol Tarifi", language: "Fransızca", level: "A2", story: { text: "Un touriste a demandé son chemin. 'Excusez-moi, où est la gare?' 'C'est facile! Allez tout droit, puis tournez à gauche au carrefour. La gare est à côté de la poste.' 'Merci beaucoup!'", translation: "Bir turist yol sordu. 'Affedersiniz, istasyon nerede?' 'Çok kolay! Düz gidin, sonra kavşakta sola dönün. İstasyon postanın yanında.' 'Çok teşekkürler!'" }, questions: [{ id: 1, question: "İstasyon nerede?", options: ["Bankada", "Postanın yanında", "Parkta", "Meydanda"], correctAnswer: "Postanın yanında" }], vocabulary: [{ word: "Le carrefour", meaning: "Kavşak" }] };
+const unit354Reading: UnitReading = {
+    unitId: 354, title: "Yol Tarifi", language: "Fransızca", level: "A2",
+    story: {
+        text: "Alex est un touriste anglais à Paris. Il cherche le musée du Louvre mais il est perdu.\\n\\nAlex: 'Pardon madame, pour aller au musée du Louvre, s'il vous plaît?'\\n\\nMadame: 'Bien sûr! C'est facile. Allez tout droit jusqu'au feu rouge.'\\n\\nAlex: 'D'accord, et après?'\\n\\nMadame: 'Au feu, tournez à droite. Continuez tout droit pendant 5 minutes.'\\n\\nAlex: 'C'est loin d'ici?'\\n\\nMadame: 'Non, c'est à 10 minutes à pied. Vous allez traverser un pont sur la Seine. Le musée est en face, vous ne pouvez pas le manquer!'\\n\\nAlex: 'Merci beaucoup, madame!'\\n\\nMadame: 'Je vous en prie. Bonne visite!'\\n\\nAlex a suivi les indications. Il a trouvé le Louvre facilement. C'était magnifique!",
+        translation: "Alex, Paris'te İngiliz bir turist. Louvre müzesini arıyor ama kaybolmuş.\\n\\nAlex: 'Pardon hanımefendi, Louvre müzesine nasıl gidilir lütfen?'\\n\\nHanımefendi: 'Tabii ki! Çok kolay. Kırmızı ışığa kadar dümdüz gidin.'\\n\\nAlex: 'Tamam, sonra ne yapayım?'\\n\\nHanımefendi: 'Işıklarda sağa dönün. 5 dakika düz devam edin.'\\n\\nAlex: 'Buradan uzak mı?'\\n\\nHanımefendi: 'Hayır, yürüyerek 10 dakika. Seine üzerinde bir köprü geçeceksiniz. Müze karşıda, kaçırmanız imkansız!'\\n\\nAlex: 'Çok teşekkür ederim hanımefendi!'\\n\\nHanımefendi: 'Rica ederim. İyi geziler!'\\n\\nAlex talimatları takip etti. Louvre'u kolayca buldu. Muhteşemdi!"
+    },
+    questions: [
+        { id: 1, question: "Alex nereli?", options: ["Fransız", "İngiliz", "Alman", "İspanyol"], correctAnswer: "İngiliz" },
+        { id: 2, question: "Nereyi arıyor?", options: ["Eyfel Kulesi", "Louvre Müzesi", "Notre Dame", "Şanzelize"], correctAnswer: "Louvre Müzesi" },
+        { id: 3, question: "Işıklarda ne yapmalı?", options: ["Sola dön", "Sağa dön", "Düz git", "Dur"], correctAnswer: "Sağa dön" },
+        { id: 4, question: "Müze kaç dakika uzakta?", options: ["5 dakika", "10 dakika", "15 dakika", "20 dakika"], correctAnswer: "10 dakika" },
+        { id: 5, question: "Neyin üzerinden geçecek?", options: ["Tünel", "Köprü", "Park", "Meydan"], correctAnswer: "Köprü" }
+    ],
+    vocabulary: [
+        { word: "Tout droit", meaning: "Dümdüz" },
+        { word: "Le feu rouge", meaning: "Kırmızı ışık" },
+        { word: "Tournez à droite", meaning: "Sağa dönün" },
+        { word: "Traverser", meaning: "Geçmek" },
+        { word: "Le pont", meaning: "Köprü" },
+        { word: "En face", meaning: "Karşıda" },
+        { word: "C'est loin?", meaning: "Uzak mı?" },
+        { word: "À pied", meaning: "Yürüyerek" }
+    ]
+};
 
 const unit355Reading: UnitReading = {
     unitId: 355, title: "Şehir Hayatı", language: "Fransızca", level: "A2",

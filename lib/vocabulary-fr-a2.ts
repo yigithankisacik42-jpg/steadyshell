@@ -473,28 +473,100 @@ const unit351Vocab: UnitVocabulary = {
 
 const unit352Vocab: UnitVocabulary = {
     unitId: 352, title: "Davet Etme", words: [
-        { word: "L'invitation", meaning: "Davet", pronunciation: "len-vi-ta-syon", example: "Merci pour l'invitation.", exampleTranslation: "Davet için teşekkürler." },
+        // Davet Kalıpları
+        { word: "Ça te dit de...?", meaning: "Sana uyar mı? / Ne dersin?", pronunciation: "sa-tö-di-dö", example: "Ça te dit de manger une pizza?", exampleTranslation: "Pizza yemeye ne dersin?" },
+        { word: "Tu veux...?", meaning: "İster misin?", pronunciation: "tü-vö", example: "Tu veux aller au cinéma?", exampleTranslation: "Sinemaya gitmek ister misin?" },
+        { word: "On va...?", meaning: "Gidelim mi?", pronunciation: "on-va", example: "On va au café?", exampleTranslation: "Kafeye gidelim mi?" },
         { word: "Inviter", meaning: "Davet etmek", pronunciation: "en-vi-te", example: "Je t'invite à dîner.", exampleTranslation: "Seni yemeğe davet ediyorum." },
+        { word: "L'invitation", meaning: "Davet", pronunciation: "len-vi-ta-syon", example: "Merci pour l'invitation.", exampleTranslation: "Davet için teşekkürler." },
+        { word: "Tu es libre?", meaning: "Boş musun?", pronunciation: "tü-e-libr", example: "Tu es libre ce week-end?", exampleTranslation: "Bu hafta sonu boş musun?" },
+
+        // Kabul
+        { word: "Avec plaisir!", meaning: "Zevkle! / Memnuniyetle!", pronunciation: "a-vek-ple-zir", example: "Avec plaisir!", exampleTranslation: "Memnuniyetle!" },
+        { word: "Je veux bien", meaning: "Çok isterim", pronunciation: "jö-vö-biyen", example: "Oui, je veux bien.", exampleTranslation: "Evet, çok isterim." },
+        { word: "D'accord", meaning: "Tamam", pronunciation: "da-kor", example: "D'accord, j'arrive!", exampleTranslation: "Tamam, geliyorum!" },
+        { word: "Bonne idée!", meaning: "İyi fikir!", pronunciation: "bon-ide", example: "C'est une bonne idée!", exampleTranslation: "Bu iyi bir fikir!" },
+        { word: "Pourquoi pas?", meaning: "Neden olmasın?", pronunciation: "pur-kua-pa", example: "Pourquoi pas?", exampleTranslation: "Neden olmasın?" },
+
+        // Reddetme
+        { word: "Je ne peux pas", meaning: "Yapamam", pronunciation: "jö-nö-pö-pa", example: "Désolé, je ne peux pas.", exampleTranslation: "Üzgünüm, yapamam." },
+        { word: "Je suis occupé(e)", meaning: "Meşgulüm", pronunciation: "jö-süi-o-kü-pe", example: "Je suis occupé ce soir.", exampleTranslation: "Bu akşam meşgulüm." },
+        { word: "J'ai du travail", meaning: "İşim var", pronunciation: "je-dü-tra-vay", example: "J'ai du travail demain.", exampleTranslation: "Yarın işim var." },
+        { word: "Une autre fois", meaning: "Başka zaman", pronunciation: "ün-otr-fua", example: "Peut-être une autre fois.", exampleTranslation: "Belki başka zaman." },
+
+        // Etkinlikler
         { word: "La fête", meaning: "Parti", pronunciation: "la-fet", example: "C'est une fête surprise.", exampleTranslation: "Sürpriz parti." },
-        { word: "L'anniversaire", meaning: "Doğum günü", pronunciation: "la-ni-ver-ser", example: "Joyeux anniversaire!", exampleTranslation: "Doğum günün kutlu olsun!" }
+        { word: "L'anniversaire", meaning: "Doğum günü", pronunciation: "la-ni-ver-ser", example: "Joyeux anniversaire!", exampleTranslation: "Doğum günün kutlu olsun!" },
+        { word: "Le concert", meaning: "Konser", pronunciation: "lö-kon-ser", example: "On va au concert?", exampleTranslation: "Konsere gidelim mi?" },
+        { word: "Le cinéma", meaning: "Sinema", pronunciation: "lö-si-ne-ma", example: "Tu veux aller au cinéma?", exampleTranslation: "Sinemaya gitmek ister misin?" },
+        { word: "Le week-end", meaning: "Hafta sonu", pronunciation: "lö-vi-kend", example: "Ce week-end.", exampleTranslation: "Bu hafta sonu." }
     ]
 };
 
 const unit353Vocab: UnitVocabulary = {
     unitId: 353, title: "Özür Dileme", words: [
+        // Temel Özür Kelimeleri
+        { word: "Pardon", meaning: "Pardon / Afedersiniz", pronunciation: "par-don", example: "Pardon, je suis en retard.", exampleTranslation: "Pardon, geciktim." },
+        { word: "Excusez-moi", meaning: "Bakar mısınız", pronunciation: "eks-kü-ze-mua", example: "Excusez-moi, je cherche...", exampleTranslation: "Bakar mısınız, arıyorum..." },
+        { word: "Désolé / Désolée", meaning: "Üzgünüm", pronunciation: "de-zo-le", example: "Je suis vraiment désolé.", exampleTranslation: "Gerçekten üzgünüm." },
         { word: "S'excuser", meaning: "Özür dilemek", pronunciation: "seks-kü-ze", example: "Je m'excuse.", exampleTranslation: "Özür dilerim." },
-        { word: "Pardonner", meaning: "Affetmek", pronunciation: "par-do-ne", example: "Pardonnez-moi.", exampleTranslation: "Beni affedin." },
+        { word: "C'est ma faute", meaning: "Benim hatam", pronunciation: "se-ma-fot", example: "C'est ma faute, pardon.", exampleTranslation: "Benim hatam, özür dilerim." },
+        { word: "Je regrette", meaning: "Pişmanım", pronunciation: "jö-rö-gret", example: "Je regrette beaucoup.", exampleTranslation: "Çok pişmanım." },
+
+        // Mazeret Kelimeleri
         { word: "L'empêchement", meaning: "Engel", pronunciation: "lan-peş-man", example: "J'ai un empêchement.", exampleTranslation: "Bir engelim var." },
-        { word: "Annuler", meaning: "İptal etmek", pronunciation: "a-nü-le", example: "Je dois annuler.", exampleTranslation: "İptal etmem gerekiyor." }
+        { word: "Oublier", meaning: "Unutmak", pronunciation: "ub-li-ye", example: "J'ai oublié!", exampleTranslation: "Unuttum!" },
+        { word: "En retard", meaning: "Geç (kalmak)", pronunciation: "an-rö-tar", example: "Je suis en retard.", exampleTranslation: "Geç kaldım." },
+        { word: "Le problème", meaning: "Sorun/Problem", pronunciation: "lö-prob-lem", example: "J'ai un problème.", exampleTranslation: "Bir sorunum var." },
+        { word: "Malade", meaning: "Hasta", pronunciation: "ma-lad", example: "Je suis malade.", exampleTranslation: "Hastayım." },
+        { word: "Le trafic", meaning: "Trafik", pronunciation: "lö-tra-fik", example: "Il y a du trafic.", exampleTranslation: "Trafik var." },
+        { word: "Le réveil", meaning: "Alarm/Çalar saat", pronunciation: "lö-re-vey", example: "Mon réveil n'a pas sonné.", exampleTranslation: "Alarmım çalmadı." },
+        { word: "Annuler", meaning: "İptal etmek", pronunciation: "a-nü-le", example: "Je dois annuler.", exampleTranslation: "İptal etmem gerekiyor." },
+
+        // Sebep Bağlaçları
+        { word: "Parce que", meaning: "Çünkü", pronunciation: "pars-kö", example: "Parce qu'il y a du trafic.", exampleTranslation: "Çünkü trafik var." },
+        { word: "À cause de", meaning: "...yüzünden", pronunciation: "a-koz-dö", example: "À cause du bus.", exampleTranslation: "Otobüs yüzünden." },
+        { word: "Car", meaning: "Zira", pronunciation: "kar", example: "Car je suis malade.", exampleTranslation: "Zira hastayım." },
+
+        // Tepkiler
+        { word: "Pardonner", meaning: "Affetmek", pronunciation: "par-do-ne", example: "Pardonnez-moi.", exampleTranslation: "Beni affedin." },
+        { word: "Ce n'est pas grave", meaning: "Önemli değil", pronunciation: "sö-ne-pa-grav", example: "Ce n'est pas grave!", exampleTranslation: "Önemli değil!" },
+        { word: "La prochaine fois", meaning: "Bir dahaki sefere", pronunciation: "la-pro-şen-fua", example: "La prochaine fois, appelle-moi.", exampleTranslation: "Bir dahaki sefere beni ara." }
     ]
 };
 
 const unit354Vocab: UnitVocabulary = {
     unitId: 354, title: "Yol Tarifi", words: [
+        // Yol İşaretleri
+        { word: "Le feu (rouge)", meaning: "Trafik ışığı", pronunciation: "lö-fö-ruj", example: "Après le feu.", exampleTranslation: "Işıklardan sonra." },
+        { word: "Le carrefour", meaning: "Kavşak", pronunciation: "lö-kar-fur", example: "Au carrefour.", exampleTranslation: "Kavşakta." },
+        { word: "Le rond-point", meaning: "Döner kavşak", pronunciation: "lö-ron-puan", example: "Au rond-point.", exampleTranslation: "Göbekte." },
+        { word: "Le pont", meaning: "Köprü", pronunciation: "lö-pon", example: "Traversez le pont.", exampleTranslation: "Köprüyü geçin." },
+        { word: "Le passage piéton", meaning: "Yaya geçidi", pronunciation: "lö-pa-saj-pye-ton", example: "Au passage piéton.", exampleTranslation: "Yaya geçidinde." },
+        { word: "Le coin", meaning: "Köşe", pronunciation: "lö-kuen", example: "Au coin de la rue.", exampleTranslation: "Sokağın köşesinde." },
+        { word: "Le bout", meaning: "Son/Uç", pronunciation: "lö-bu", example: "Au bout de la rue.", exampleTranslation: "Sokağın sonunda." },
+
+        // Yön Fiilleri
         { word: "Tourner", meaning: "Dönmek", pronunciation: "tur-ne", example: "Tournez à gauche.", exampleTranslation: "Sola dönün." },
         { word: "Continuer", meaning: "Devam etmek", pronunciation: "kon-ti-nü-e", example: "Continuez tout droit.", exampleTranslation: "Düz devam edin." },
-        { word: "Le carrefour", meaning: "Kavşak", pronunciation: "lö-kar-fur", example: "Au carrefour.", exampleTranslation: "Kavşakta." },
-        { word: "Le feu", meaning: "Trafik ışığı", pronunciation: "lö-fö", example: "Après le feu.", exampleTranslation: "Işıklardan sonra." }
+        { word: "Traverser", meaning: "Geçmek", pronunciation: "tra-ver-se", example: "Traversez le pont.", exampleTranslation: "Köprüyü geçin." },
+        { word: "Prendre", meaning: "Almak/Girmek", pronunciation: "pran-dr", example: "Prenez la première rue.", exampleTranslation: "Birinci sokağa girin." },
+        { word: "Aller", meaning: "Gitmek", pronunciation: "a-le", example: "Allez tout droit.", exampleTranslation: "Düz gidin." },
+
+        // Yönler
+        { word: "À gauche", meaning: "Sola", pronunciation: "a-goş", example: "Tournez à gauche.", exampleTranslation: "Sola dönün." },
+        { word: "À droite", meaning: "Sağa", pronunciation: "a-druat", example: "Tournez à droite.", exampleTranslation: "Sağa dönün." },
+        { word: "Tout droit", meaning: "Dümdüz", pronunciation: "tu-drua", example: "Allez tout droit.", exampleTranslation: "Düz gidin." },
+
+        // Sıra Sayıları
+        { word: "La première", meaning: "Birinci (dişi)", pronunciation: "la-prö-myer", example: "La première rue.", exampleTranslation: "Birinci sokak." },
+        { word: "La deuxième", meaning: "İkinci", pronunciation: "la-dö-zyem", example: "La deuxième rue.", exampleTranslation: "İkinci sokak." },
+        { word: "La troisième", meaning: "Üçüncü", pronunciation: "la-trua-zyem", example: "La troisième rue.", exampleTranslation: "Üçüncü sokak." },
+
+        // Bağlaçlar
+        { word: "Puis", meaning: "Sonra", pronunciation: "püi", example: "Puis tournez.", exampleTranslation: "Sonra dönün." },
+        { word: "Ensuite", meaning: "Ardından", pronunciation: "an-suit", example: "Ensuite, continuez.", exampleTranslation: "Ardından devam edin." },
+        { word: "Jusqu'à", meaning: "...e kadar", pronunciation: "jüs-ka", example: "Jusqu'au feu.", exampleTranslation: "Işıklara kadar." }
     ]
 };
 

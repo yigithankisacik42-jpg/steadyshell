@@ -249,23 +249,72 @@ const unit351Speaking: UnitSpeaking = {
 };
 
 const unit352Speaking: UnitSpeaking = {
-    unitId: 352, title: "Davet", exercises: [
-        { text: "Je t'invite à dîner.", translation: "Seni yemeğe davet ediyorum.", pronunciation: "jö ten-vit a di-ne" },
-        { text: "Avec plaisir!", translation: "Memnuniyetle!", pronunciation: "a-vek ple-zir" }
+    unitId: 352, title: "Davet Etme", exercises: [
+        // Davet Kalıpları
+        { text: "Ça te dit de manger une pizza?", translation: "Pizza yemeye ne dersin?", pronunciation: "sa tö di dö man-je ün pi-za" },
+        { text: "Tu veux aller au cinéma?", translation: "Sinemaya gitmek ister misin?", pronunciation: "tü vö a-le o si-ne-ma" },
+        { text: "On va au café ce soir?", translation: "Bu akşam kafeye gidelim mi?", pronunciation: "on va o ka-fe sö suar" },
+        { text: "Tu es libre ce week-end?", translation: "Bu hafta sonu boş musun?", pronunciation: "tü e libr sö vi-kend" },
+
+        // Kabul
+        { text: "Avec plaisir!", translation: "Memnuniyetle!", pronunciation: "a-vek ple-zir" },
+        { text: "Oui, je veux bien!", translation: "Evet, çok isterim!", pronunciation: "ui jö vö biyen" },
+        { text: "Bonne idée!", translation: "İyi fikir!", pronunciation: "bon ide" },
+        { text: "Pourquoi pas?", translation: "Neden olmasın?", pronunciation: "pur-kua pa" },
+
+        // Reddetme
+        { text: "Désolé, je ne peux pas.", translation: "Üzgünüm, yapamam.", pronunciation: "de-zo-le jö nö pö pa" },
+        { text: "Je suis occupé.", translation: "Meşgulüm.", pronunciation: "jö süi o-kü-pe" },
+        { text: "J'ai du travail.", translation: "İşim var.", pronunciation: "je dü tra-vay" },
+        { text: "Peut-être une autre fois.", translation: "Belki başka zaman.", pronunciation: "pö-tetr ün otr fua" }
     ]
 };
 
 const unit353Speaking: UnitSpeaking = {
-    unitId: 353, title: "Özür", exercises: [
-        { text: "Je suis vraiment désolé.", translation: "Gerçekten özür dilerim.", pronunciation: "jö süi vre-man de-zo-le" },
-        { text: "Ce n'est pas grave.", translation: "Önemli değil.", pronunciation: "sö ne pa grav" }
+    unitId: 353, title: "Özür Dileme", exercises: [
+        // Özür Dileme
+        { text: "Je suis vraiment désolé.", translation: "Gerçekten üzgünüm.", pronunciation: "jö süi vre-man de-zo-le" },
+        { text: "Excusez-moi, je suis en retard.", translation: "Afedersiniz, geciktim.", pronunciation: "eks-kü-ze mua jö süi an rö-tar" },
+        { text: "Pardon, c'est ma faute.", translation: "Özür dilerim, benim hatam.", pronunciation: "par-don se ma fot" },
+        { text: "Je m'excuse sincèrement.", translation: "İçtenlikle özür dilerim.", pronunciation: "jö meks-küz san-ser-man" },
+
+        // Mazeret
+        { text: "J'ai un empêchement.", translation: "Bir engelim var.", pronunciation: "je an am-peş-man" },
+        { text: "J'ai oublié!", translation: "Unuttum!", pronunciation: "je ub-li-ye" },
+        { text: "Je suis malade.", translation: "Hastayım.", pronunciation: "jö süi ma-lad" },
+        { text: "Il y a du trafic.", translation: "Trafik var.", pronunciation: "il ya dü tra-fik" },
+
+        // Sebep Belirtme
+        { text: "À cause du bus.", translation: "Otobüs yüzünden.", pronunciation: "a koz dü büs" },
+        { text: "Parce que je suis malade.", translation: "Çünkü hastayım.", pronunciation: "pars kö jö süi ma-lad" },
+
+        // Tepkiler
+        { text: "Ce n'est pas grave.", translation: "Önemli değil.", pronunciation: "sö ne pa grav" },
+        { text: "C'est promis!", translation: "Söz veriyorum!", pronunciation: "se pro-mi" }
     ]
 };
 
 const unit354Speaking: UnitSpeaking = {
-    unitId: 354, title: "Yön", exercises: [
+    unitId: 354, title: "Yol Tarifi", exercises: [
+        // Yol Sorma
+        { text: "Pardon, pour aller au musée?", translation: "Pardon, müzeye nasıl gidilir?", pronunciation: "par-don pur a-le o mü-ze" },
+        { text: "Où est la gare, s'il vous plaît?", translation: "Gar nerede lütfen?", pronunciation: "u e la gar sil vu ple" },
+        { text: "C'est loin d'ici?", translation: "Buradan uzak mı?", pronunciation: "se luen di-si" },
+
+        // Yol Tarif Etme
+        { text: "Allez tout droit.", translation: "Dümdüz gidin.", pronunciation: "a-le tu drua" },
         { text: "Tournez à gauche.", translation: "Sola dönün.", pronunciation: "tur-ne a goş" },
-        { text: "C'est tout droit.", translation: "Düz.", pronunciation: "se tu drua" }
+        { text: "Tournez à droite.", translation: "Sağa dönün.", pronunciation: "tur-ne a druat" },
+        { text: "Prenez la première rue.", translation: "Birinci sokağa girin.", pronunciation: "prö-ne la prö-myer rü" },
+        { text: "Continuez jusqu'au feu.", translation: "Işıklara kadar devam edin.", pronunciation: "kon-ti-nü-e jüs-ko fö" },
+
+        // Mesafe
+        { text: "C'est à 5 minutes à pied.", translation: "Yürüyerek 5 dakika.", pronunciation: "se ta senk mi-nüt a pye" },
+        { text: "C'est tout près.", translation: "Çok yakın.", pronunciation: "se tu pre" },
+
+        // Bağlaçlı
+        { text: "Puis, tournez à gauche.", translation: "Sonra sola dönün.", pronunciation: "püi tur-ne a goş" },
+        { text: "C'est en face de la poste.", translation: "Postanın karşısında.", pronunciation: "se tan fas dö la post" }
     ]
 };
 

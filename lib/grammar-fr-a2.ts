@@ -637,18 +637,214 @@ const unit351Grammar: UnitGrammar = {
 };
 
 const unit352Grammar: UnitGrammar = {
-    unitId: 352, title: "Davet Etme",
-    rules: [{ id: "fr-a2-inviter", title: "🎉 Davet Kalıpları", explanation: "* Je t'invite à... (Seni davet ediyorum)\n* Tu es libre...? (Müsait misin?)\n* Avec plaisir! (Memnuniyetle!)", examples: [{ fr: "Je t'invite à mon anniversaire samedi.", tr: "Cumartesi doğum günüme davetlisin." }] }]
+    unitId: 352,
+    title: "Davet Etme (Inviter)",
+    rules: [
+        {
+            id: "fr-a2-invitation-patterns",
+            title: "🗣️ BÖLÜM 1: DAVET KALIPLARI (Nasıl Sorulur?)",
+            explanation: "Birine 'Yapalım mı? Gidelim mi?' demenin 3 altın yolu vardır:\\n\\n**1. 'Ça te dit de...?' (Sana uyar mı? / Ne dersin?) ⭐**\\nEn popüler, en günlük ve en 'Fransız' kalıptır.\\nKalıp: Ça te dit de + Fiil?\\n🔊 Sa tö di dö...\\n\\n**2. 'Tu veux...?' (İster misin?)**\\nDaha düz ve net bir sorudur.\\nKalıp: Tu veux + Fiil?\\n🔊 Tü vö...\\n\\n**3. 'On va...?' (Gidelim mi?)**\\n'Nous' yerine 'On' kullanarak yapılan teklif. Çok samimidir.\\nKalıp: On va + Yer?\\n🔊 On va...",
+            examples: [
+                { fr: "Ça te dit de manger une pizza?", tr: "Pizza yemeye ne dersin?" },
+                { fr: "Tu veux aller au cinéma?", tr: "Sinemaya gitmek ister misin?" },
+                { fr: "On va au café ce soir?", tr: "Bu akşam kafeye gidelim mi?" }
+            ]
+        },
+        {
+            id: "fr-a2-accepting",
+            title: "✅ BÖLÜM 2: KABUL ETMEK (Accepter)",
+            explanation: "Davet geldi, peki nasıl 'Evet' diyeceğiz?",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe"],
+                rows: [
+                    ["Oui, je veux bien.", "Ui, jö vö biyen", "Evet, çok isterim."],
+                    ["Avec plaisir!", "Avek plezir", "Zevkle! / Memnuniyetle!"],
+                    ["D'accord.", "Dakor", "Tamam / Olur."],
+                    ["Bonne idée!", "Bon ide", "İyi fikir!"],
+                    ["Pourquoi pas?", "Purkua pa", "Neden olmasın?"],
+                    ["C'est super!", "Se süper", "Bu süper!"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-refusing",
+            title: "❌ BÖLÜM 3: REDDETMEK (Refuser)",
+            explanation: "Kibarca 'Hayır' demek bir sanattır. Asla sadece 'Non' deme, kaba olur!",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe"],
+                rows: [
+                    ["Désolé, je ne peux pas.", "Dezole, jö nö pö pa", "Üzgünüm, yapamam."],
+                    ["Je suis occupé(e).", "Jö süi zoküpe", "Meşgulüm."],
+                    ["C'est gentil, mais non.", "Se janti, me no", "Çok naziksin ama hayır."],
+                    ["J'ai du travail.", "Je dü travay", "İşim var."],
+                    ["Peut-être une autre fois.", "Pötetr ün otr fua", "Belki başka zaman."]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-conditionnel",
+            title: "📐 BÖLÜM 4: GRAMER (Kibarlık Kipi - Conditionnel)",
+            explanation: "Patronunu veya müşterini davet ederken 'Tu veux?' (İster misin?) demek biraz sert kaçabilir.\\nBunun yerine 'İsterdiniz' (Would you like) kalıbını kullanırız.\\n\\n**Fiil: VOULOIR (İstemek)**\\n* Samimi: Tu veux venir? (Gelmek ister misin?)\\n* Kibar: Tu voudrais venir? (Gelmek ister miydin?)\\n* Resmi: Voudriez-vous venir? (Gelmek ister miydiniz?)\\n🔊 Vudriye-vu vönir?",
+            examples: [
+                { fr: "Tu veux venir?", tr: "Gelmek ister misin? (Samimi)" },
+                { fr: "Tu voudrais venir?", tr: "Gelmek ister miydin? (Kibar)" },
+                { fr: "Voudriez-vous venir?", tr: "Gelmek ister miydiniz? (Resmi)" }
+            ]
+        },
+        {
+            id: "fr-a2-invitation-dialogue",
+            title: "🗣️ BÖLÜM 5: SESLİ DİYALOG (Hafta Sonu Planı)",
+            explanation: "**Senaryo:** Paul, arkadaşı Marie'yi konsere davet ediyor.\\n\\n**Paul:** Salut Marie! Tu es libre ce week-end?\\n🔊 *Salü Marie! Tü e libr sö wikend?*\\n*(Selam Marie! Bu hafta sonu boş musun?)*\\n\\n**Marie:** Salut! Oui, pourquoi?\\n🔊 *Salü! Ui, purkua?*\\n*(Selam! Evet, neden?)*\\n\\n**Paul:** Ça te dit d'aller au concert de Tarkan?\\n🔊 *Sa tö di dale o konser dö Tarkan?*\\n*(Tarkan konserine gitmeye ne dersin?)*\\n\\n**Marie:** Ah, Tarkan! C'est une très bonne idée! C'est quand?\\n🔊 *A, Tarkan! Se tün tre bon ide! Se kan?*\\n*(Ah, Tarkan! Bu çok iyi bir fikir! Ne zaman?)*\\n\\n**Paul:** Samedi soir, à 20 heures.\\n🔊 *Samdi suar, a ven-tör.*\\n*(Cumartesi akşamı, saat 20'de.)*\\n\\n**Marie:** Avec plaisir! On se retrouve où?\\n🔊 *Avek plezir! On sö rötrüv u?*\\n*(Zevkle! Nerede buluşuyoruz?)*",
+            examples: []
+        }
+    ]
 };
 
 const unit353Grammar: UnitGrammar = {
-    unitId: 353, title: "Özür Dileme",
-    rules: [{ id: "fr-a2-excuses", title: "😔 Özür ve Mazeret", explanation: "* Je suis désolé(e), mais...\n* Excusez-moi, j'ai un empêchement.\n* Ce n'est pas grave. (Önemli değil.)", examples: [{ fr: "Je suis vraiment désolé, je ne peux pas venir.", tr: "Gerçekten özür dilerim, gelemiyorum." }] }]
+    unitId: 353,
+    title: "Özür Dileme (S'excuser)",
+    rules: [
+        {
+            id: "fr-a2-apology-words",
+            title: "🙏 BÖLÜM 1: TEMEL ÖZÜR KELİMELERİ",
+            explanation: "Durumun ciddiyetine göre hangi kelimeyi seçeceğiz?",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe", "Kullanım Yeri"],
+                rows: [
+                    ["Pardon", "Pardon", "Pardon / Afedersiniz", "Çarpışınca, söz kesince (Hafif)"],
+                    ["Excusez-moi", "Eksküze mua", "İzninizle / Bakar mısınız", "Birine soru sormadan önce"],
+                    ["Désolé / Désolée", "Dezole", "Üzgünüm", "Bir hata yaptığında (Duygu içerir)"],
+                    ["Je m'excuse", "Jö mekskuz", "Özür dilerim", "Daha resmi ve ciddi"],
+                    ["C'est ma faute", "Se ma fot", "Benim hatam", "Suçu üstlenirken"],
+                    ["Je regrette", "Jö rögret", "Pişmanım / Üzgünüm", "Çok resmi durumlarda"]
+                ]
+            },
+            examples: [
+                { fr: "Pardon, je ne vous ai pas vu.", tr: "Pardon, sizi görmedim." },
+                { fr: "Je suis vraiment désolé.", tr: "Gerçekten üzgünüm." }
+            ]
+        },
+        {
+            id: "fr-a2-excuses",
+            title: "🛠️ BÖLÜM 2: MAZERET BİLDİRMEK",
+            explanation: "Özür diledik, peki neden hata yaptık? İşte en popüler A2 mazeretleri:",
+            table: {
+                headers: ["Cümle", "Okunuşu 🔊", "Anlamı"],
+                rows: [
+                    ["J'ai oublié.", "Je ubliye", "Unuttum."],
+                    ["Je suis en retard.", "Jö süi an rötar", "Geciktim."],
+                    ["J'ai un problème.", "Je an problem", "Bir sorunum var."],
+                    ["Je suis malade.", "Jö süi malad", "Hastayım."],
+                    ["Il y a du trafic.", "İl ya dü trafik", "Trafik var."],
+                    ["Mon réveil n'a pas sonné.", "Mon revey na pa sone", "Alarmım çalmadı."]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-cause-conjunctions",
+            title: "📐 BÖLÜM 3: GRAMER (Sebep Bağlaçları)",
+            explanation: "Mazeret sunarken 'Çünkü' veya '...yüzünden' demek zorundayız:\\n\\n**1. PARCE QUE (Çünkü)**\\nEn yaygın bağlaç. Kendisinden sonra tam cümle gelir.\\n\\n**2. À CAUSE DE (Yüzünden)**\\nOlumsuz sebep belirtir. Kendisinden sonra isim gelir.\\n\\n**3. CAR (Zira)**\\nYazı dilinde veya resmi maillerde kullanılır.",
+            examples: [
+                { fr: "Je suis en retard parce qu'il y a du trafic.", tr: "Geciktim çünkü trafik var." },
+                { fr: "Je suis en retard à cause du trafic.", tr: "Trafik yüzünden geciktim." },
+                { fr: "Je ne peux pas venir car je suis malade.", tr: "Gelemem zira hastayım." }
+            ]
+        },
+        {
+            id: "fr-a2-apology-dialogue",
+            title: "🗣️ BÖLÜM 4: SESLİ DİYALOG (Toplantıya Geç Kalmak)",
+            explanation: "**Senaryo:** Léa, patronu M. Dupont'a geç kaldığı için açıklama yapıyor.\\n\\n**M. Dupont:** Léa, vous êtes en retard! La réunion a commencé.\\n🔊 *Léa, vu zet an rötar! La reüniyon a komanse.*\\n*(Léa, geç kaldınız! Toplantı başladı.)*\\n\\n**Léa:** Je suis vraiment désolée, Monsieur.\\n🔊 *Jö süi vreman dezole, Mösyö.*\\n*(Gerçekten çok üzgünüm, efendim.)*\\n\\n**M. Dupont:** Pourquoi êtes-vous en retard?\\n🔊 *Purkua et-vu an rötar?*\\n*(Neden geç kaldınız?)*\\n\\n**Léa:** À cause du bus. Il n'est pas venu.\\n🔊 *A koz dü büs. İl ne pa vönü.*\\n*(Otobüs yüzünden. Gelmedi.)*\\n\\n**M. Dupont:** D'accord, mais la prochaine fois, téléphonez-moi!\\n🔊 *Dakor, me la proşen fua, telefone-mua!*\\n*(Tamam ama bir dahaki sefere bana telefon edin!)*\\n\\n**Léa:** Oui, c'est promis. Excusez-moi encore.\\n🔊 *Ui, se promi. Eksküze-mua ankor.*\\n*(Evet, söz. Tekrar kusura bakmayın.)*",
+            examples: []
+        }
+    ]
 };
 
 const unit354Grammar: UnitGrammar = {
-    unitId: 354, title: "Yol Tarifi",
-    rules: [{ id: "fr-a2-directions", title: "🗺️ Yön Tarifleri", explanation: "* Tournez à gauche/droite.\n* Allez tout droit.\n* Prenez la première rue.\n* C'est à côté de...", examples: [{ fr: "Tournez à gauche après le feu.", tr: "Işıklardan sonra sola dönün." }] }]
+    unitId: 354,
+    title: "Yol Tarifi (L'Itinéraire)",
+    rules: [
+        {
+            id: "fr-a2-directions-warning",
+            title: "⚠️ KRİTİK UYARI: 'SAĞ' vs 'DÜZ'",
+            explanation: "Bu iki kelimeyi karıştırırsan turistleri yanlış yere gönderirsin!\\n\\n**Tout droit** = Dümdüz (Hiç sapmadan devam et)\\n🔊 Okunuşu: Tu drua\\n\\n**À droite** = Sağa (Sağ tarafa dön)\\n🔊 Okunuşu: A druat (Sonundaki 't' hafif basılarak okunur!)\\n\\n**Fark:** 'Düz' derken O sesi (Drua), 'Sağ' derken A sesi (Druat) baskındır.",
+            examples: [
+                { fr: "Allez tout droit.", tr: "Dümdüz gidin." },
+                { fr: "Tournez à droite.", tr: "Sağa dönün." }
+            ]
+        },
+        {
+            id: "fr-a2-road-vocab",
+            title: "🚦 BÖLÜM 1: YOL SÖZLÜĞÜ",
+            explanation: "Trafikte veya sokakta göreceğin nesneler:",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe"],
+                rows: [
+                    ["Le feu (rouge)", "Lö fö (ruj)", "Trafik Işığı"],
+                    ["Le carrefour", "Lö karfur", "Kavşak / Dört yol"],
+                    ["Le rond-point", "Lö ron-puan", "Göbek / Döner Kavşak"],
+                    ["Le pont", "Lö pon", "Köprü"],
+                    ["Le passage piéton", "Lö pasaj piyeton", "Yaya Geçidi"],
+                    ["Le coin", "Lö kuen", "Köşe"],
+                    ["Le bout", "Lö bu", "Son / Uç (Sokağın sonu)"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-imperative-verbs",
+            title: "🏃 BÖLÜM 2: ANA FİİLLER (Emir Kipi)",
+            explanation: "Yol tarif ederken kibar olmak için VOUS (Siz) çekimi kullanılır:\\n\\n**1. Aller (Gitmek):** Allez tout droit. → Dümdüz gidiniz.\\n**2. Tourner (Dönmek):** Tournez à gauche/droite. → Sola/Sağa dönünüz.\\n**3. Prendre (Almak):** Prenez la première rue. → Birinci sokağı alınız.\\n**4. Traverser (Geçmek):** Traversez le pont. → Köprüyü geçiniz.\\n**5. Continuer (Devam):** Continuez jusqu'au feu. → Işıklara kadar devam ediniz.",
+            examples: [
+                { fr: "Allez tout droit.", tr: "Dümdüz gidiniz." },
+                { fr: "Tournez à gauche.", tr: "Sola dönünüz." },
+                { fr: "Prenez le bus.", tr: "Otobüse bininiz." },
+                { fr: "Traversez le pont.", tr: "Köprüyü geçiniz." },
+                { fr: "Continuez jusqu'au feu.", tr: "Işıklara kadar devam ediniz." }
+            ]
+        },
+        {
+            id: "fr-a2-ordinal-numbers",
+            title: "📍 BÖLÜM 3: SIRA SAYILARI",
+            explanation: "'İkinci sokaktan dön' demek için sayıları sıraya koymamız lazım:",
+            table: {
+                headers: ["Sıra", "Dişi (Sokak için)", "Okunuşu"],
+                rows: [
+                    ["1.", "La première", "La prömiyer"],
+                    ["2.", "La deuxième", "La döziyem"],
+                    ["3.", "La troisième", "La truaziyem"]
+                ]
+            },
+            examples: [
+                { fr: "Prenez la deuxième rue à droite.", tr: "Sağdaki ikinci sokağa girin." }
+            ]
+        },
+        {
+            id: "fr-a2-conjunctions",
+            title: "🔗 BÖLÜM 4: BAĞLAÇLAR",
+            explanation: "Robot gibi konuşmamak için cümleleri bağlarız:",
+            table: {
+                headers: ["Kelime", "Okunuşu 🔊", "Anlamı"],
+                rows: [
+                    ["Puis", "Püi", "Sonra"],
+                    ["Ensuite", "Ansuit", "Daha sonra / Ardından"],
+                    ["Après", "Apre", "Sonra"],
+                    ["Jusqu'à", "Jüska", "...-e kadar (Çok önemli!)"]
+                ]
+            },
+            examples: [
+                { fr: "Allez tout droit, puis tournez à gauche.", tr: "Düz gidin, sonra sola dönün." }
+            ]
+        },
+        {
+            id: "fr-a2-directions-dialogue",
+            title: "🗣️ BÖLÜM 5: SESLİ DİYALOG (Turist ve Yerli)",
+            explanation: "**Senaryo:** Turist (Alex), müzeye gitmek istiyor.\\n\\n**Alex:** Pardon madame, pour aller au musée, s'il vous plaît?\\n🔊 *Pardon madam, pur ale o müze, sil vu ple?*\\n*(Pardon hanımefendi, müzeye gitmek için lütfen?)*\\n\\n**Madame:** C'est facile. Allez tout droit jusqu'au feu.\\n🔊 *Se fasil. Ale tu drua jüsko fö.*\\n*(Kolay. Işıklara kadar dümdüz gidin.)*\\n\\n**Alex:** D'accord, et après?\\n🔊 *Dakor, e apre?*\\n*(Tamam, ya sonra?)*\\n\\n**Madame:** Au feu, tournez à droite.\\n🔊 *O fö, turne a druat.*\\n*(Işıklarda, sağa dönün.)*\\n\\n**Alex:** C'est tout?\\n*(Hepsi bu mu?)*\\n\\n**Madame:** Non, traversez le pont. Le musée est en face.\\n🔊 *No, traverse lö pon. Lö müze e an fas.*\\n*(Hayır, köprüyü geçin. Müze karşıdadır.)*",
+            examples: []
+        }
+    ]
 };
 
 const unit355Grammar: UnitGrammar = {

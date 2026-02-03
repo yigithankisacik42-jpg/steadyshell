@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Bot, Send, ArrowLeft, Loader2, MessageCircle, Globe, Check, Theater, Sparkles, Mic, MicOff, Volume2, VolumeX, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -22,6 +23,9 @@ interface Message {
 }
 
 export default function SceneModePage() {
+    const searchParams = useSearchParams();
+    const unitParam = searchParams.get('unit');
+
     const [selectedLang, setSelectedLang] = useState<string>('');
     const [selectedLevel, setSelectedLevel] = useState<string>('');
     const [selectedScene, setSelectedScene] = useState<Scene | null>(null);
@@ -30,6 +34,7 @@ export default function SceneModePage() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputValue, setInputValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [hasAutoStarted, setHasAutoStarted] = useState(false);
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -45,6 +50,52 @@ export default function SceneModePage() {
         isSupported: speechSupported,
         error: speechError
     } = useSpeech(selectedLang || 'es');
+
+    // Auto-start unit practice if unit parameter is provided
+    useEffect(() => {
+        if (unitParam && !hasAutoStarted) {
+            const unitId = parseInt(unitParam);
+            const langParam = searchParams.get('lang');
+            const levelParam = searchParams.get('level');
+
+            // Determine category based on unit ID
+            let categoryId = '';
+            let lang = langParam || 'es';
+            let level = levelParam || 'A1';
+
+            if (unitId >= 352 && unitId <= 359) {
+                categoryId = 'fr-a2-practice';
+                lang = 'fr';
+                level = 'A2';
+            } else if (unitId >= 301 && unitId <= 320) {
+                categoryId = 'fr-a1-practice';
+                lang = 'fr';
+                level = 'A1';
+            } else if (unitId >= 1 && unitId <= 20) {
+                categoryId = 'es-a1-practice';
+                lang = 'es';
+                level = 'A1';
+            } else if (unitId >= 31 && unitId <= 50) {
+                categoryId = 'es-a2-practice';
+                lang = 'es';
+                level = 'A2';
+            }
+
+            if (categoryId) {
+                const category = SCENE_CATEGORIES.find(c => c.id === categoryId);
+                const scene = category?.scenes.find(s => s.id === `unit-${unitId}`);
+
+                if (scene) {
+                    setSelectedLang(lang);
+                    setSelectedLevel(level);
+                    setHasAutoStarted(true);
+                    setTimeout(() => {
+                        startScene(scene);
+                    }, 100);
+                }
+            }
+        }
+    }, [unitParam, hasAutoStarted]);
 
     useEffect(() => {
         if (transcript && !isListening) {
