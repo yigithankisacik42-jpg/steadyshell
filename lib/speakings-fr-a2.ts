@@ -236,15 +236,47 @@ const unit349Speaking: UnitSpeaking = {
 
 const unit350Speaking: UnitSpeaking = {
     unitId: 350, title: "Buluşma", exercises: [
-        { text: "Ça te dit de sortir?", translation: "Çıkmak ister misin?", pronunciation: "sa tö di dö sor-tir" },
-        { text: "On se retrouve où?", translation: "Nerede buluşalım?", pronunciation: "on sö rö-truv u" }
+        // Teklif Etme
+        { text: "Ça te dit de sortir ce soir?", translation: "Bu akşam çıkmak ister misin?", pronunciation: "sa tö di dö sor-tir sö suar" },
+        { text: "Tu veux prendre un café?", translation: "Kahve içmek ister misin?", pronunciation: "tü vö prandr ön ka-fe" },
+        { text: "On va au cinéma demain?", translation: "Yarın sinemaya gidelim mi?", pronunciation: "on va o si-ne-ma dö-man" },
+
+        // Buluşma Yeri
+        { text: "On se retrouve où?", translation: "Nerede buluşalım?", pronunciation: "on sö rö-truv u" },
+        { text: "Devant le café à 15h?", translation: "Kafenin önünde saat 15'te?", pronunciation: "dö-van lö ka-fe a kenz ör" },
+
+        // Kabul
+        { text: "Avec plaisir!", translation: "Memnuniyetle!", pronunciation: "a-vek ple-zir" },
+        { text: "Oui, bonne idée!", translation: "Evet, iyi fikir!", pronunciation: "ui bon ide" },
+        { text: "Je suis libre ce soir.", translation: "Bu akşam müsaitim.", pronunciation: "jö süi libr sö suar" },
+
+        // Red
+        { text: "Désolé, je suis occupé.", translation: "Üzgünüm, meşgulüm.", pronunciation: "de-zo-le jö süi o-kü-pe" },
+        { text: "Peut-être une autre fois.", translation: "Belki başka zaman.", pronunciation: "pö-tetr ün otr fua" }
     ]
 };
 
 const unit351Speaking: UnitSpeaking = {
     unitId: 351, title: "Telefon", exercises: [
-        { text: "Allô, c'est Marie.", translation: "Alo, ben Marie.", pronunciation: "a-lo se ma-ri" },
-        { text: "Ne quittez pas.", translation: "Kapatmayın.", pronunciation: "nö ki-te pa" }
+        // Açılış
+        { text: "Allô, bonjour!", translation: "Alo, merhaba!", pronunciation: "a-lo bon-jur" },
+        { text: "C'est Paul à l'appareil.", translation: "Ben Paul (telefonda).", pronunciation: "se pol a la-pa-rey" },
+
+        // Birini İsteme
+        { text: "Je voudrais parler à Marie.", translation: "Marie ile konuşmak istiyorum.", pronunciation: "jö vu-dre par-le a ma-ri" },
+        { text: "Est-ce que Pierre est là?", translation: "Pierre orada mı?", pronunciation: "es-kö pyer e la" },
+
+        // Bekletme
+        { text: "Ne quittez pas.", translation: "Hatta kalın.", pronunciation: "nö ki-te pa" },
+        { text: "Un instant, s'il vous plaît.", translation: "Bir saniye lütfen.", pronunciation: "an ens-tan sil vu ple" },
+
+        // Sorunlar
+        { text: "Je vous entends mal.", translation: "Sizi kötü duyuyorum.", pronunciation: "jö vu zan-tan mal" },
+        { text: "Ça coupe.", translation: "Ses kesiliyor.", pronunciation: "sa kup" },
+        { text: "Je vous rappelle.", translation: "Sizi geri ararım.", pronunciation: "jö vu ra-pel" },
+
+        // Mesaj
+        { text: "Voulez-vous laisser un message?", translation: "Mesaj bırakmak ister misiniz?", pronunciation: "vu-le vu le-se an me-saj" }
     ]
 };
 

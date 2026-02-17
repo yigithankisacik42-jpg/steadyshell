@@ -203,9 +203,47 @@ const unit348Reading: UnitReading = { unitId: 348, title: "Spor", language: "Fra
 
 const unit349Reading: UnitReading = { unitId: 349, title: "Doğa", language: "Fransızca", level: "A2", story: { text: "Ce week-end, nous sommes allés faire une randonnée en montagne. Le sentier était magnifique. Nous avons vu un lac et une belle forêt. Nous y retournerons le mois prochain.", translation: "Bu hafta sonu dağda yürüyüşe gittik. Patika harikaydı. Bir göl ve güzel bir orman gördük. Gelecek ay oraya döneceğiz." }, questions: [{ id: 1, question: "Ne gördüler?", options: ["Deniz", "Göl", "Nehir", "Şelale"], correctAnswer: "Göl" }], vocabulary: [{ word: "La randonnée", meaning: "Yürüyüş" }] };
 
-const unit350Reading: UnitReading = { unitId: 350, title: "Buluşma", language: "Fransızca", level: "A2", story: { text: "Julie a appelé son amie Marie. 'Ça te dit d'aller au café cet après-midi?' Marie a répondu: 'Avec plaisir! On se retrouve à 15h au café du centre?' Julie a accepté.", translation: "Julie arkadaşı Marie'yi aradı. 'Bu öğleden sonra kafeye gitmek ister misin?' Marie cevapladı: 'Memnuniyetle! Merkezdeki kafede saat 15'te buluşalım mı?' Julie kabul etti." }, questions: [{ id: 1, question: "Saat kaçta buluşacaklar?", options: ["14:00", "15:00", "16:00", "17:00"], correctAnswer: "15:00" }], vocabulary: [{ word: "Ça te dit", meaning: "İster misin" }] };
+const unit350Reading: UnitReading = {
+    unitId: 350, title: "Buluşma", language: "Fransızca", level: "A2",
+    story: {
+        text: "Julie envoie un message à son amie Marie.\\n\\nJulie: Salut Marie! Ça te dit d'aller au café cet après-midi?\\n\\nMarie: Salut! Oui, avec plaisir! Tu es libre à quelle heure?\\n\\nJulie: Je finis le travail à 14h. On se retrouve à 15h?\\n\\nMarie: Parfait! On va au café du centre ou au nouveau café près du parc?\\n\\nJulie: Le nouveau café! J'ai entendu dire qu'ils font de bons gâteaux.\\n\\nMarie: Super! On se retrouve devant le café alors?\\n\\nJulie: D'accord! À tout à l'heure!\\n\\nMarie: À plus!",
+        translation: "Julie arkadaşı Marie'ye mesaj atıyor.\\n\\nJulie: Selam Marie! Bu öğleden sonra kafeye gitmek ister misin?\\n\\nMarie: Selam! Evet, memnuniyetle! Saat kaçta müsaitsin?\\n\\nJulie: İşi 14'te bitiriyorum. 15'te buluşalım mı?\\n\\nMarie: Mükemmel! Merkezdeki kafeye mi yoksa parkın yanındaki yeni kafeye mi gidelim?\\n\\nJulie: Yeni kafe! Güzel pastalar yaptıklarını duydum.\\n\\nMarie: Süper! O zaman kafenin önünde buluşalım mı?\\n\\nJulie: Tamam! Sonra görüşürüz!\\n\\nMarie: Görüşürüz!"
+    },
+    questions: [
+        { id: 1, question: "Saat kaçta buluşacaklar?", options: ["14:00", "15:00", "16:00", "17:00"], correctAnswer: "15:00" },
+        { id: 2, question: "Julie işi saat kaçta bitirecek?", options: ["13:00", "14:00", "15:00", "16:00"], correctAnswer: "14:00" },
+        { id: 3, question: "Hangi kafeye gidecekler?", options: ["Merkezdeki kafe", "Yeni kafe", "Eski kafe", "Parkın içindeki kafe"], correctAnswer: "Yeni kafe" },
+        { id: 4, question: "Yeni kafede ne varmış?", options: ["Güzel müzik", "Güzel pastalar", "Güzel manzara", "Güzel kahve"], correctAnswer: "Güzel pastalar" },
+        { id: 5, question: "Nerede buluşacaklar?", options: ["Park önünde", "İş yerinde", "Kafenin önünde", "Evde"], correctAnswer: "Kafenin önünde" }
+    ],
+    vocabulary: [
+        { word: "Ça te dit", meaning: "İster misin / Ne dersin" },
+        { word: "Avec plaisir", meaning: "Memnuniyetle" },
+        { word: "On se retrouve", meaning: "Buluşalım" }
+    ]
+};
 
-const unit351Reading: UnitReading = { unitId: 351, title: "Telefon", language: "Fransızca", level: "A2", story: { text: "Allô, bonjour! C'est Paul à l'appareil. Pourrais-je parler à Monsieur Dupont? - Il n'est pas là. Voulez-vous laisser un message? - Oui, dites-lui que je le rappellerai demain.", translation: "Alo, merhaba! Ben Paul. Bay Dupont ile görüşebilir miyim? - Burada değil. Mesaj bırakmak ister misiniz? - Evet, yarın geri arayacağımı söyleyin." }, questions: [{ id: 1, question: "Bay Dupont nerede?", options: ["Toplantıda", "Burada değil", "Yolda", "Tatilde"], correctAnswer: "Burada değil" }], vocabulary: [{ word: "À l'appareil", meaning: "Telefonda" }] };
+const unit351Reading: UnitReading = {
+    unitId: 351, title: "Telefon", language: "Fransızca", level: "A2",
+    story: {
+        text: "M. Martin appelle le bureau de M. Dubois.\\n\\nSecrétaire: Bonjour, entreprise TechSolutions, Clara à l'appareil.\\n\\nM. Martin: Bonjour Madame. Ici Jean Martin de la société ABC. Pourrais-je parler à Monsieur Dubois, s'il vous plaît?\\n\\nSecrétaire: Un instant, Monsieur Martin, je vous le passe... (Quelques secondes plus tard) Je suis désolée, sa ligne est occupée. Voulez-vous laisser un message?\\n\\nM. Martin: Oui, s'il vous plaît. Dites-lui que j'ai envoyé les documents par email. C'est urgent.\\n\\nSecrétaire: Très bien, c'est noté. Autre chose?\\n\\nM. Martin: Non, c'est tout. Pouvez-vous lui demander de me rappeler?\\n\\nSecrétaire: Bien sûr. Il a votre numéro?\\n\\nM. Martin: Oui, il l'a. Merci beaucoup, bonne journée.\\n\\nSecrétaire: Bonne journée Monsieur, au revoir.",
+        translation: "Bay Martin, Bay Dubois'nın ofisini arıyor.\\n\\nSekreter: Merhaba, TechSolutions şirketi, telefondaki Clara.\\n\\nBay Martin: Merhaba Hanımefendi. Burası ABC şirketinden Jean Martin. Bay Dubois ile görüşebilir miyim lütfen?\\n\\nSekreter: Bir saniye Bay Martin, sizi bağlıyorum... (Birkaç saniye sonra) Üzgünüm, hattı meşgul. Mesaj bırakmak ister misiniz?\\n\\nBay Martin: Evet, lütfen. Ona belgeleri e-posta ile gönderdiğimi söyleyin. Bu acil.\\n\\nSekreter: Pekala, not alındı. Başka bir şey?\\n\\nBay Martin: Hayır, hepsi bu. Beni geri aramasını rica edebilir misiniz?\\n\\nSekreter: Tabii ki. Numaranız onda var mı?\\n\\nBay Martin: Evet, var. Çok teşekkürler, iyi günler.\\n\\nSekreter: İyi günler efendim, hoşça kalın."
+    },
+    questions: [
+        { id: 1, question: "Telefondaki sekreterin adı ne?", options: ["Marie", "Clara", "Sophie", "Julie"], correctAnswer: "Clara" },
+        { id: 2, question: "Bay Martin kiminle görüşmek istiyor?", options: ["Müdürle", "Clara ile", "Bay Dubois ile", "Sekreterle"], correctAnswer: "Bay Dubois ile" },
+        { id: 3, question: "Neden görüşemiyorlar?", options: ["Toplantıda", "Yemekte", "Ofiste değil", "Hattı meşgul"], correctAnswer: "Hattı meşgul" },
+        { id: 4, question: "Mesaj nedir?", options: ["Toplantı iptal", "Belgeler gönderildi", "Geç kalacak", "Yarın arayacak"], correctAnswer: "Belgeler gönderildi" },
+        { id: 5, question: "Bay Martin ne istiyor?", options: ["Geri aranmak", "Randevu almak", "Ofise gelmek", "Beklemek"], correctAnswer: "Geri aranmak" }
+    ],
+    vocabulary: [
+        { word: "L'entreprise", meaning: "Şirket" },
+        { word: "À l'appareil", meaning: "Telefonda" },
+        { word: "La ligne est occupée", meaning: "Hat meşgul" },
+        { word: "Noter", meaning: "Not almak" },
+        { word: "Rappeler", meaning: "Geri aramak" }
+    ]
+};
 
 const unit352Reading: UnitReading = {
     unitId: 352, title: "Davet Etme", language: "Fransızca", level: "A2",

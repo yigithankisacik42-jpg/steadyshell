@@ -209,7 +209,28 @@ const unit347Lecture: UnitLecture = { unitId: 347, title: "Müzik", language: "F
 const unit348Lecture: UnitLecture = { unitId: 348, title: "Spor", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "FAIRE / JOUER 🏃", content: "Spor yapmak", tip: "du, au ayrımı" }, { id: 2, type: "summary", title: "Özet", points: ["Faire DU = aktivite", "Jouer AU = top"], cta: "Pratik!" }] };
 const unit349Lecture: UnitLecture = { unitId: 349, title: "Doğa", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Y ve EN 📍", content: "Yer zamirleri", tip: "à/de + yer" }, { id: 2, type: "summary", title: "Özet", points: ["Y = orada (à + yer)", "EN = oradan (de + yer)"], cta: "Pratik!" }] };
 const unit350Lecture: UnitLecture = { unitId: 350, title: "Buluşma", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Teklif 💬", content: "Ça te dit de...?", tip: "Proposer" }, { id: 2, type: "summary", title: "Özet", points: ["On pourrait...", "Si on allait...?"], cta: "Pratik!" }] };
-const unit351Lecture: UnitLecture = { unitId: 351, title: "Telefon", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Telefon 📞", content: "Allô, c'est... à l'appareil", tip: "Telefon kalıpları" }, { id: 2, type: "summary", title: "Özet", points: ["Ne quittez pas", "Je vous rappelle"], cta: "Pratik!" }] };
+const unit351Lecture: UnitLecture = {
+    unitId: 351, title: "Telefon Görüşmesi", language: "Fransızca", level: "A2",
+    videoUrl: "https://youtu.be/wtbJKBKTpPA",
+    slides: [
+        { id: 1, type: "intro", title: "Telefon İpuçları 📞", content: "Bu derste telefonda nasıl profesyonelce konuşacağımızı, kendimizi tanıtmayı ve birini telefona istemeyi öğreneceğiz.", tip: "Telefonda 'Je suis' yerine 'C'est' kullanılır!" },
+        { id: 2, type: "vocabulary", title: "Temel Terimler 📱", content: "• Allô = Alo (Sadece telefonda!)\\n• Le portable = Cep telefonu\\n• Le réseau = Şebeke\\n• La messagerie = Sesli posta" },
+        {
+            id: 3, type: "grammar", title: "Birini İsteme Kalıpları 🗣️", rules: [
+                { rule: "Je voudrais parler à...", explanation: "...ile görüşmek istiyorum (Kibar)", examples: ["Je voudrais parler à M. Dupont"] },
+                { rule: "Est-ce que... est là?", explanation: "...orada mı? (Standart)", examples: ["Est-ce que Marie est là?"] }
+            ]
+        },
+        {
+            id: 4, type: "grammar", title: "Bekletme ve Aktarma ⏳", rules: [
+                { rule: "Ne quittez pas", explanation: "Hatta kalın / Ayrılmayın", examples: ["Ne quittez pas, s'il vous plaît"] },
+                { rule: "Je vous le passe", explanation: "Sizi ona bağlıyorum", examples: ["Un instant, je vous le passe"] }
+            ]
+        },
+        { id: 5, type: "vocabulary", title: "Sorun Çözme ⚠️", content: "Hat kötü olduğunda:\\n• Je vous entends mal (Sizi kötü duyuyorum)\\n• Ça coupe (Ses kesiliyor)\\n• Pouvez-vous répéter? (Tekrar edebilir misiniz?)" },
+        { id: 6, type: "summary", title: "Özet 📝", points: ["Kendini tanıt: C'est [İsim]", "İste: Je voudrais parler à...", "Beklet: Ne quittez pas", "Sorun: Ça coupe"], cta: "Şimdi arama yapalım!" }
+    ]
+};
 const unit352Lecture: UnitLecture = { unitId: 352, title: "Davet", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Davet 🎉", content: "Je t'invite à...", tip: "Inviter" }, { id: 2, type: "summary", title: "Özet", points: ["Tu es libre...?", "Avec plaisir!"], cta: "Pratik!" }] };
 const unit353Lecture: UnitLecture = { unitId: 353, title: "Özür", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Özür 😔", content: "Je suis désolé(e)", tip: "S'excuser" }, { id: 2, type: "summary", title: "Özet", points: ["J'ai un empêchement", "Ce n'est pas grave"], cta: "Pratik!" }] };
 const unit354Lecture: UnitLecture = { unitId: 354, title: "Yol Tarifi", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Yönler 🗺️", content: "Tournez à gauche", tip: "Directions" }, { id: 2, type: "summary", title: "Özet", points: ["Tout droit = Düz", "À côté de = Yanında"], cta: "Pratik!" }] };

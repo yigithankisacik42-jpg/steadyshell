@@ -452,22 +452,64 @@ const unit349Vocab: UnitVocabulary = {
 
 const unit350Vocab: UnitVocabulary = {
     unitId: 350, title: "Arkadaş Buluşması", words: [
+        // Buluşma Terimleri
         { word: "Le rendez-vous", meaning: "Randevu/Buluşma", pronunciation: "lö-ran-de-vu", example: "On a rendez-vous à 15h.", exampleTranslation: "Saat 15'te buluşuyoruz." },
         { word: "Se retrouver", meaning: "Buluşmak", pronunciation: "sö-rö-tru-ve", example: "On se retrouve où?", exampleTranslation: "Nerede buluşalım?" },
+        { word: "Se voir", meaning: "Görüşmek", pronunciation: "sö-vuar", example: "On se voit demain?", exampleTranslation: "Yarın görüşelim mi?" },
         { word: "Proposer", meaning: "Teklif etmek", pronunciation: "pro-po-ze", example: "Je te propose un café.", exampleTranslation: "Sana kahve teklif ediyorum." },
+        { word: "Sortir", meaning: "Dışarı çıkmak", pronunciation: "sor-tir", example: "Tu veux sortir ce soir?", exampleTranslation: "Bu akşam çıkmak ister misin?" },
+
+        // Kabul ve Red
         { word: "Accepter", meaning: "Kabul etmek", pronunciation: "ak-sep-te", example: "J'accepte avec plaisir.", exampleTranslation: "Memnuniyetle kabul ediyorum." },
-        { word: "Refuser", meaning: "Reddetmek", pronunciation: "rö-fü-ze", example: "Je dois refuser.", exampleTranslation: "Reddetmek zorundayım." }
+        { word: "Refuser", meaning: "Reddetmek", pronunciation: "rö-fü-ze", example: "Je dois refuser.", exampleTranslation: "Reddetmek zorundayım." },
+        { word: "Libre", meaning: "Müsait/Boş", pronunciation: "libr", example: "Tu es libre demain?", exampleTranslation: "Yarın müsait misin?" },
+        { word: "Occupé(e)", meaning: "Meşgul", pronunciation: "o-kü-pe", example: "Je suis occupé ce soir.", exampleTranslation: "Bu akşam meşgulüm." },
+        { word: "Disponible", meaning: "Müsait", pronunciation: "dis-po-nibl", example: "Es-tu disponible samedi?", exampleTranslation: "Cumartesi müsait misin?" },
+
+        // Zaman İfadeleri
+        { word: "Ce soir", meaning: "Bu akşam", pronunciation: "sö-suar", example: "On sort ce soir?", exampleTranslation: "Bu akşam çıkalım mı?" },
+        { word: "Cet après-midi", meaning: "Bu öğleden sonra", pronunciation: "set-a-pre-mi-di", example: "Je suis libre cet après-midi.", exampleTranslation: "Bu öğleden sonra müsaitim." },
+        { word: "Ce week-end", meaning: "Bu hafta sonu", pronunciation: "sö-vi-kend", example: "Ça te dit ce week-end?", exampleTranslation: "Bu hafta sonu nasıl?" },
+        { word: "La semaine prochaine", meaning: "Gelecek hafta", pronunciation: "la-sö-men-pro-şen", example: "On se voit la semaine prochaine.", exampleTranslation: "Gelecek hafta görüşelim." },
+
+        // Aktiviteler
+        { word: "Prendre un café", meaning: "Kahve içmek", pronunciation: "prandr-ön-ka-fe", example: "On prend un café?", exampleTranslation: "Kahve içelim mi?" },
+        { word: "Aller au cinéma", meaning: "Sinemaya gitmek", pronunciation: "a-le-o-si-ne-ma", example: "Tu veux aller au cinéma?", exampleTranslation: "Sinemaya gitmek ister misin?" },
+        { word: "Manger ensemble", meaning: "Birlikte yemek", pronunciation: "man-je-an-sambl", example: "On mange ensemble?", exampleTranslation: "Birlikte yemek yiyelim mi?" },
+        { word: "Se promener", meaning: "Gezinmek", pronunciation: "sö-prom-ne", example: "On se promène au parc?", exampleTranslation: "Parkta gezelim mi?" },
+        { word: "Faire une fête", meaning: "Parti vermek", pronunciation: "fer-ün-fet", example: "Je fais une fête samedi.", exampleTranslation: "Cumartesi parti veriyorum." },
+        { word: "S'amuser", meaning: "Eğlenmek", pronunciation: "sa-mü-ze", example: "On va bien s'amuser!", exampleTranslation: "Çok eğleneceğiz!" }
     ]
 };
 
 // ===== ÜNİTE 351-360 =====
 const unit351Vocab: UnitVocabulary = {
     unitId: 351, title: "Telefon Görüşmesi", words: [
+        // Temel Telefon Kelimeleri
+        { word: "Allô", meaning: "Alo", pronunciation: "a-lo", example: "Allô, bonjour!", exampleTranslation: "Alo, merhaba!" },
+        { word: "Le portable", meaning: "Cep telefonu", pronunciation: "lö-por-tabl", example: "Mon portable sonne.", exampleTranslation: "Cep telefonum çalıyor." },
+        { word: "Le numéro", meaning: "Numara", pronunciation: "lö-nü-me-ro", example: "Quel est ton numéro?", exampleTranslation: "Numaran ne?" },
+        { word: "Un appel", meaning: "Bir arama", pronunciation: "an-a-pel", example: "J'ai un appel.", exampleTranslation: "Bir aramam var." },
+        { word: "La messagerie", meaning: "Sesli posta", pronunciation: "la-me-saj-ri", example: "Laissez un message après le bip.", exampleTranslation: "Bipten sonra mesaj bırakın." },
+        { word: "Le réseau", meaning: "Şebeke", pronunciation: "lö-re-zo", example: "Je n'ai pas de réseau.", exampleTranslation: "Şebekem yok." },
+        { word: "Sonner", meaning: "Çalmak", pronunciation: "so-ne", example: "Le téléphone sonne.", exampleTranslation: "Telefon çalıyor." },
+        { word: "Décrocher", meaning: "Telefonu açmak", pronunciation: "de-kro-şe", example: "Décrochez le téléphone.", exampleTranslation: "Telefonu açın." },
+        { word: "Raccrocher", meaning: "Telefonu kapatmak", pronunciation: "ra-kro-şe", example: "Ne raccrochez pas.", exampleTranslation: "Kapatmayın." },
         { word: "Appeler", meaning: "Aramak", pronunciation: "a-pö-le", example: "Je t'appelle demain.", exampleTranslation: "Yarın seni arıyorum." },
+
+        // Görüşme Kalıpları
         { word: "Rappeler", meaning: "Geri aramak", pronunciation: "ra-pö-le", example: "Je vous rappelle.", exampleTranslation: "Sizi geri arayacağım." },
-        { word: "Laisser un message", meaning: "Mesaj bırakmak", pronunciation: "le-se-ön-me-saj", example: "Laissez un message.", exampleTranslation: "Mesaj bırakın." },
-        { word: "Décrocher", meaning: "Açmak", pronunciation: "de-kro-şe", example: "Décrochez le téléphone.", exampleTranslation: "Telefonu açın." },
-        { word: "Raccrocher", meaning: "Kapatmak", pronunciation: "ra-kro-şe", example: "Ne raccrochez pas.", exampleTranslation: "Kapatmayın." }
+        { word: "Laisser un message", meaning: "Mesaj bırakmak", pronunciation: "le-se-ön-me-saj", example: "Voulez-vous laisser un message?", exampleTranslation: "Mesaj bırakmak ister misiniz?" },
+        { word: "Ne quittez pas", meaning: "Hatta kalın", pronunciation: "nö-ki-te-pa", example: "Ne quittez pas, je vous passe.", exampleTranslation: "Hatta kalın, sizi bağlıyorum." },
+        { word: "C'est de la part de qui?", meaning: "Kimin adına?", pronunciation: "se-dö-la-par-dö-ki", example: "C'est de la part de qui?", exampleTranslation: "Kim arıyor?" },
+        { word: "À l'appareil", meaning: "Telefonda (konuşan)", pronunciation: "a-la-pa-rey", example: "C'est Pierre à l'appareil.", exampleTranslation: "Telefondaki Pierre." },
+
+        // Sorun ve Durum
+        { word: "La ligne est occupée", meaning: "Hat meşgul", pronunciation: "la-liny-e-o-kü-pe", example: "Désolé, la ligne est occupée.", exampleTranslation: "Üzgünüm, hat meşgul." },
+        { word: "Je vous entends mal", meaning: "Sizi kötü duyuyorum", pronunciation: "jö-vu-zan-tan-mal", example: "Je vous entends très mal.", exampleTranslation: "Sizi çok kötü duyuyorum." },
+        { word: "Ça coupe", meaning: "Ses kesiliyor", pronunciation: "sa-kup", example: "Ça coupe, je te rappelle.", exampleTranslation: "Ses kesiliyor, seni geri arayayım." },
+        { word: "Parlez plus lentement", meaning: "Daha yavaş konuşun", pronunciation: "par-le-plü-lant-man", example: "Parlez plus lentement, s'il vous plaît.", exampleTranslation: "Daha yavaş konuşun lütfen." },
+        { word: "Répéter", meaning: "Tekrar etmek", pronunciation: "re-pe-te", example: "Pouvez-vous répéter?", exampleTranslation: "Tekrar edebilir misiniz?" }
     ]
 };
 

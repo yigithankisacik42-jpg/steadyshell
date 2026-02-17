@@ -623,18 +623,139 @@ const unit349Grammar: UnitGrammar = {
 
 const unit350Grammar: UnitGrammar = {
     unitId: 350, title: "Arkadaş Buluşması",
-    rules: [{
-        id: "fr-a2-proposer", title: "💬 Teklif Kalıpları",
-        explanation: "* On pourrait... (Yapabilirdik...)\n* Ça te dit de...? (... ister misin?)\n* Si on allait...? (... gitsek mi?)\n* Qu'est-ce que tu en penses? (Ne dersin?)",
-        examples: [{ fr: "Ça te dit d'aller au cinéma?", tr: "Sinemaya gitmek ister misin?" }]
-    }]
+    rules: [
+        {
+            id: "fr-a2-proposer",
+            title: "🗣️ BÖLÜM 1: TEKLİF ETMEK (Proposer)",
+            explanation: "Fransızcada arkadaşına 'Sinemaya gidelim mi?' demenin en doğal yolu 'ON' (Biz) kullanmaktır.\\n\\n**1. 'On va...?' (Gidelim mi?)**\\nEn basit ve yaygın kalıptır.\\n• On va au cinéma? (Sinemaya gidelim mi?)\\n• On va boire un verre? (Bir şeyler içmeye gidelim mi?)\\n\\n**2. 'Tu as envie de...?' (Canın istiyor mu?)**\\nKarşı tarafın isteğini sorar.\\n• Tu as envie de marcher? (Yürümek ister misin?)\\n\\n**3. 'Ça te dit?' (Sana uyar mı?)**\\n• On mange une pizza, ça te dit? (Pizza yiyelim, sana uyar mı?)",
+            examples: [
+                { fr: "On va au cinéma?", tr: "Sinemaya gidelim mi?" },
+                { fr: "Tu as envie d'aller au parc?", tr: "Parka gitmek ister misin?" },
+                { fr: "On mange une pizza, ça te dit?", tr: "Pizza yiyelim, sana uyar mı?" }
+            ]
+        },
+        {
+            id: "fr-a2-repondre",
+            title: "✅ BÖLÜM 2: YANIT VERMEK (Répondre)",
+            explanation: "**KABUL:**\\n• Génial! (Harika!)\\n• D'accord, ça marche. (Tamam, olur.)\\n• Allons-y! (Hadi gidelim!)\\n\\n**KARARSIZ:**\\n• Bof, je ne sais pas. (Pff, bilmiyorum.)\\n\\n**RED:**\\n• Je ne peux pas, j'ai du travail. (Yapamam, işim var.)\\n• Non, je n'ai pas envie. (Hayır, canım istemiyor.)",
+            examples: [
+                { fr: "Génial! Allons-y!", tr: "Harika! Hadi gidelim!" },
+                { fr: "D'accord, ça marche.", tr: "Tamam, olur." },
+                { fr: "Bof, je ne sais pas.", tr: "Pff, bilmiyorum." },
+                { fr: "Je ne peux pas, j'ai du travail.", tr: "Yapamam, işim var." }
+            ]
+        },
+        {
+            id: "fr-a2-rendez-vous",
+            title: "📍 BÖLÜM 3: DETAYLARI KONUŞMAK (Rendez-vous)",
+            explanation: "**YER (Où?):**\\n• On se retrouve où? (Nerede buluşuyoruz?)\\n• Devant le cinéma. (Sinemanın önünde.)\\n• Chez moi. (Benim evimde.)\\n\\n**ZAMAN (Quand / À quelle heure?):**\\n• On se voit à quelle heure? (Saat kaçta görüşüyoruz?)\\n• Vers 20 heures. (Saat 20:00 civarı.)\\n• Ce soir / Demain. (Bu akşam / Yarın.)",
+            examples: [
+                { fr: "On se retrouve où?", tr: "Nerede buluşuyoruz?" },
+                { fr: "Devant le métro, vers 19 heures.", tr: "Metronun önünde, saat 19 civarı." },
+                { fr: "Chez moi, ce soir.", tr: "Benim evimde, bu akşam." }
+            ]
+        }
+    ]
 };
 
 // ===== ÜNİTE 351-360: Son 10 Ünite =====
 const unit351Grammar: UnitGrammar = {
-    unitId: 351, title: "Telefon Görüşmesi",
-    rules: [{ id: "fr-a2-au-telephone", title: "📞 Telefon Kalıpları", explanation: "* Allô, c'est... à l'appareil.\n* Pourrais-je parler à...?\n* Ne quittez pas. (Kapatmayın.)", examples: [{ fr: "Pourrais-je parler à Monsieur Dupont?", tr: "Bay Dupont ile görüşebilir miyim?" }] }]
+    unitId: 351,
+    title: "Telefon Görüşmesi (Au Téléphone)",
+    rules: [
+        {
+            id: "fr-a2-phone-vocab",
+            title: "📱 BÖLÜM 1: TEMEL TELEFON KELİMELERİ",
+            explanation: "Telefon ekranında veya ayarlarında göreceğin terimler:",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe", "Notlar 📝"],
+                rows: [
+                    ["Allô ?", "Alo?", "Alo?", "Sadece telefonda kullanılır!"],
+                    ["Le portable", "Lö portabl", "Cep Telefonu", "-"],
+                    ["Le numéro", "Lö nümero", "Numara", "-"],
+                    ["Un appel", "An apel", "Bir arama / Çağrı", "-"],
+                    ["La messagerie", "La mesajri", "Sesli Posta / Telesekreter", "-"],
+                    ["Le réseau", "Lö rezo", "Şebeke / Hat", "'Reseau yok' = Çekmiyor"],
+                    ["Sonner", "Sone", "Çalmak (Telefon)", "-"],
+                    ["Décrocher", "Dekroşe", "Telefonu açmak", "-"],
+                    ["Raccrocher", "Rakroşe", "Telefonu kapatmak", "-"]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-phone-intro",
+            title: "🗣️ BÖLÜM 2: KENDİNİ TANITMA (Se présenter)",
+            explanation: "**⚠️ KRİTİK FARK:** Telefonda 'Ben Yiğithan' derken **'Je suis...'** kullanılmaz!\\n\\n**Telefonda:** C'est + isim → *C'est Yiğithan.* (Ben Yiğithan.)\\n**Yüz yüze:** Je suis + isim → *Je suis Yiğithan.* (Ben Yiğithan.)\\n\\n**Neden?** Telefonda karşı taraf sizi görmüyor. Ses bir 'şey' olarak algılanıyor, bu yüzden 'C'est' (Bu...) kullanılır.\\n\\n**Diğer kalıplar:**\\n• **... à l'appareil** = ...telefonda\\n  *Marie à l'appareil.* (Telefondaki Marie.)\\n• **Ici + isim** = Burada...\\n  *Ici Pierre.* (Burada Pierre.)",
+            examples: [
+                { fr: "Allô, c'est Yiğithan.", tr: "Alo, ben Yiğithan." },
+                { fr: "Bonjour, Yiğithan à l'appareil.", tr: "Merhaba, telefondaki Yiğithan." },
+                { fr: "Ici Pierre de la société Dupont.", tr: "Burada Dupont şirketinden Pierre." }
+            ]
+        },
+        {
+            id: "fr-a2-asking-someone",
+            title: "📞 BÖLÜM 3: BİRİNİ İSTEMEK (Demander quelqu'un)",
+            explanation: "**Yapı:** Je voudrais + fiil mastarı\\n\\n**Kalıplar:**\\n• Je voudrais parler à... (... ile konuşmak istiyorum)\\n• Est-ce que ... est là? (... orada mı?)\\n• Pourrais-je parler à...? (... ile konuşabilir miyim?) - Daha kibar\\n\\n💡 'Je voudrais' (isterdim) 'Je veux'dan (istiyorum) daha kibar!",
+            examples: [
+                { fr: "Je voudrais parler à Monsieur Yılmaz, s'il vous plaît.", tr: "Bay Yılmaz ile görüşmek istiyorum lütfen." },
+                { fr: "Est-ce que Paul est là?", tr: "Paul orada mı?" },
+                { fr: "Pourrais-je parler au directeur?", tr: "Müdürle görüşebilir miyim?" }
+            ]
+        },
+        {
+            id: "fr-a2-call-handling",
+            title: "⏳ BÖLÜM 4: BEKLETMEK VE AKTARMAK",
+            explanation: "Ofis ortamı için çok önemli kalıplar:",
+            table: {
+                headers: ["Fransızca", "Okunuşu 🔊", "Türkçe"],
+                rows: [
+                    ["Ne quittez pas.", "Nö kite pa", "Ayrılmayın (Hatta kalın)."],
+                    ["Un instant, s'il vous plaît.", "An enstan, sil vu ple", "Bir saniye lütfen."],
+                    ["Je vous le passe.", "Jö vu lö pas", "Sizi ona bağlıyorum."],
+                    ["La ligne est occupée.", "La liny e oküpe", "Hat meşgul."],
+                    ["C'est de la part de qui?", "Se dö la par dö ki", "Kimin adına? / Kim arıyor?"]
+                ]
+            },
+            examples: [
+                { fr: "Un instant, je vous le passe.", tr: "Bir saniye, sizi bağlıyorum." },
+                { fr: "Désolé, il est en ligne.", tr: "Üzgünüm, şu an başka hatta." }
+            ]
+        },
+        {
+            id: "fr-a2-phone-problems",
+            title: "⚠️ BÖLÜM 5: HAT SORUNLARI (Problèmes)",
+            explanation: "Hat kötü olduğunda veya anlamadığında bunları kullan:",
+            table: {
+                headers: ["Durum", "Fransızca", "Okunuşu 🔊", "Türkçe"],
+                rows: [
+                    ["Hat kötü", "Je vous entends très mal.", "Jö vu zantan tre mal", "Sizi çok kötü duyuyorum."],
+                    ["Ses kesiliyor", "Ça coupe.", "Sa kup", "Ses kesiliyor."],
+                    ["Tekrar et", "Pardon? Vous pouvez répéter?", "Pardon? Vu puve repete?", "Pardon? Tekrar edebilir misiniz?"],
+                    ["Yavaş konuş", "Parlez plus lentement, s'il vous plaît.", "Parle plü lantman, sil vu ple", "Daha yavaş konuşun lütfen."]
+                ]
+            },
+            examples: []
+        },
+        {
+            id: "fr-a2-indirect-pronouns",
+            title: "📐 BÖLÜM 6: GRAMER (Dolaylı Nesne Zamirleri)",
+            explanation: "**'Je vous le passe'** cümlesini anlamak için zamirler:\\n\\n**Zamirler:**\\n• **le** = onu (erkek)\\n• **la** = onu (kadın)\\n• **vous** = size\\n• **lui** = ona\\n\\n**Cümlede sıralama:** Özne + *dolaylı* + *doğrudan* + fiil\\n\\n| Fransızca | Açıklama | Türkçe |\\n|-----------|----------|--------|\\n| Je vous le passe. | size + onu | Sizi ona bağlıyorum. |\\n| Je lui passe un message. | ona | Ona mesaj iletiyorum. |",
+            examples: [
+                { fr: "Je vous le passe.", tr: "Sizi ona (erkek) bağlıyorum." },
+                { fr: "Je vous la passe.", tr: "Sizi ona (kadın) bağlıyorum." },
+                { fr: "Je lui laisse un message.", tr: "Ona mesaj bırakıyorum." }
+            ]
+        },
+        {
+            id: "fr-a2-phone-dialogue",
+            title: "🗣️ BÖLÜM 7: SESLİ DİYALOG (İş Görüşmesi)",
+            explanation: "**Senaryo:** Müşteri (Pierre), ofisi arıyor. Sekreter (Aslı) cevaplıyor.\\n\\n**Sekreter:** Steadyshell, bonjour.\\n🔊 *Steadyshell, bonjur.*\\n*(Steadyshell, iyi günler.)*\\n\\n**Pierre:** Bonjour, je voudrais parler à Yiğithan, s'il vous plaît.\\n🔊 *Bonjur, jö vudre parle a Yiğithan, sil vu ple.*\\n*(Merhaba, Yiğithan ile görüşmek istiyorum lütfen.)*\\n\\n**Sekreter:** C'est de la part de qui?\\n🔊 *Se dö la par dö ki?*\\n*(Kimin adına?)*\\n\\n**Pierre:** C'est Pierre Dupont.\\n🔊 *Se Pierre Dupont.*\\n*(Ben Pierre Dupont.)*\\n\\n**Sekreter:** Un instant, Monsieur Dupont. Je vous le passe.\\n🔊 *An enstan, Mösyö Dupont. Jö vu lö pas.*\\n*(Bir saniye Bay Dupont. Sizi bağlıyorum.)*\\n\\n*(Biraz bekledikten sonra)*\\n\\n**Sekreter:** Désolée, il est en ligne. Vous voulez laisser un message?\\n🔊 *Dezole, il e an liny. Vu vule lese an mesaj?*\\n*(Üzgünüm, şu an başka hatta. Mesaj bırakmak ister misiniz?)*\\n\\n**Pierre:** Non merci, je vais rappeler plus tard.\\n🔊 *No mersi, jö ve raple plü tar.*\\n*(Hayır teşekkürler, daha sonra tekrar arayacağım.)*",
+            examples: []
+        }
+    ]
 };
+
 
 const unit352Grammar: UnitGrammar = {
     unitId: 352,

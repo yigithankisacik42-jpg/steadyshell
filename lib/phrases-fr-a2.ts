@@ -325,20 +325,56 @@ const unit349Phrases: FrenchA2UnitPhrases = {
 
 const unit350Phrases: FrenchA2UnitPhrases = {
     unitId: 350, title: "Arkadaş Buluşması", phrases: [
+        // Teklif Etme
         { text: "Ça te dit de sortir?", meaning: "Çıkmak ister misin?", pronunciation: "sa-tö-di-dö-sor-tir" },
+        { text: "Tu veux prendre un café?", meaning: "Kahve içmek ister misin?", pronunciation: "tü-vö-prandr-ön-ka-fe" },
+        { text: "On va au cinéma?", meaning: "Sinemaya gidelim mi?", pronunciation: "on-va-o-si-ne-ma" },
+        { text: "Ça te dit d'aller au resto?", meaning: "Restorana gitmeye ne dersin?", pronunciation: "sa-tö-di-da-le-o-res-to" },
+        { text: "Tu es libre ce soir?", meaning: "Bu akşam müsait misin?", pronunciation: "tü-e-libr-sö-suar" },
+
+        // Buluşma Detayları
         { text: "On se retrouve où?", meaning: "Nerede buluşalım?", pronunciation: "on-sö-rö-truv-u" },
+        { text: "À quelle heure?", meaning: "Saat kaçta?", pronunciation: "a-kel-ör" },
+        { text: "On se voit devant le café.", meaning: "Kafenin önünde buluşalım.", pronunciation: "on-sö-vua-dö-van-lö-ka-fe" },
+        { text: "Je passe te chercher.", meaning: "Seni almaya gelirim.", pronunciation: "jö-pas-tö-şer-şe" },
+
+        // Kabul
+        { text: "Avec plaisir!", meaning: "Memnuniyetle!", pronunciation: "a-vek-ple-zir" },
         { text: "Je suis libre ce soir.", meaning: "Bu akşam müsaitim.", pronunciation: "jö-süi-libr-sö-suar" },
-        { text: "Avec plaisir!", meaning: "Memnuniyetle!", pronunciation: "a-vek-ple-zir" }
+        { text: "Bonne idée!", meaning: "İyi fikir!", pronunciation: "bon-ide" },
+
+        // Reddetme
+        { text: "Désolé, je suis occupé.", meaning: "Üzgünüm, meşgulüm.", pronunciation: "de-zo-le-jö-süi-o-kü-pe" },
+        { text: "J'ai un empêchement.", meaning: "Engelim var.", pronunciation: "je-ön-an-peş-man" },
+        { text: "Peut-être une autre fois.", meaning: "Belki başka zaman.", pronunciation: "pö-tetr-ün-otr-fua" }
     ]
 };
 
 // ===== ÜNİTE 351-360 =====
 const unit351Phrases: FrenchA2UnitPhrases = {
     unitId: 351, title: "Telefon Görüşmesi", phrases: [
-        { text: "Allô, c'est Marie à l'appareil.", meaning: "Alo, ben Marie.", pronunciation: "a-lo-se-ma-ri-a-la-pa-rey" },
-        { text: "Pourrais-je parler à...?", meaning: "... ile görüşebilir miyim?", pronunciation: "pu-re-jö-par-le-a" },
-        { text: "Ne quittez pas.", meaning: "Kapatmayın.", pronunciation: "nö-ki-te-pa" },
-        { text: "Je vous rappelle.", meaning: "Sizi geri ararım.", pronunciation: "jö-vu-ra-pel" }
+        // Açılış ve Tanıtma
+        { text: "Allô, bonjour!", meaning: "Alo, merhaba!", pronunciation: "a-lo-bon-jur" },
+        { text: "C'est Yiğithan à l'appareil.", meaning: "Ben Yiğithan (telefonda).", pronunciation: "se-yi-it-an-a-la-pa-rey" },
+        { text: "Ici Pierre de la société Dupont.", meaning: "Burada Dupont şirketinden Pierre.", pronunciation: "i-si-pyer-dö-la-so-si-e-te-dü-pon" },
+
+        // Birini İstemek
+        { text: "Je voudrais parler à Monsieur Dupont.", meaning: "Bay Dupont ile görüşmek istiyorum.", pronunciation: "jö-vu-dre-par-le-a-mö-syö-dü-pon" },
+        { text: "Est-ce que Marie est là?", meaning: "Marie orada mı?", pronunciation: "es-kö-ma-ri-e-la" },
+        { text: "Pourrais-je parler au directeur?", meaning: "Müdürle görüşebilir miyim?", pronunciation: "pu-re-jö-par-le-o-di-rek-tör" },
+
+        // Bekletme ve Aktarma
+        { text: "Ne quittez pas.", meaning: "Hatta kalın.", pronunciation: "nö-ki-te-pa" },
+        { text: "Un instant, s'il vous plaît.", meaning: "Bir saniye lütfen.", pronunciation: "an-ens-tan-sil-vu-ple" },
+        { text: "Je vous le passe.", meaning: "Sizi ona bağlıyorum.", pronunciation: "jö-vu-lö-pas" },
+        { text: "C'est de la part de qui?", meaning: "Kimin adına? / Kim arıyor?", pronunciation: "se-dö-la-par-dö-ki" },
+
+        // Sorunlar
+        { text: "Je vous entends très mal.", meaning: "Sizi çok kötü duyuyorum.", pronunciation: "jö-vu-zan-tan-tre-mal" },
+        { text: "Ça coupe.", meaning: "Ses kesiliyor.", pronunciation: "sa-kup" },
+        { text: "Parlez plus lentement, s'il vous plaît.", meaning: "Daha yavaş konuşun lütfen.", pronunciation: "par-le-plü-lant-man-sil-vu-ple" },
+        { text: "Je vais rappeler plus tard.", meaning: "Daha sonra tekrar arayacağım.", pronunciation: "jö-ve-ra-pö-le-plü-tar" },
+        { text: "Voulez-vous laisser un message?", meaning: "Mesaj bırakmak ister misiniz?", pronunciation: "vu-le-vu-le-se-ön-me-saj" }
     ]
 };
 
