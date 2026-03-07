@@ -40,7 +40,7 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
     const recognitionRef = useRef<any>(null);
     const synthRef = useRef<SpeechSynthesis | null>(null);
 
-    // Browser desteği kontrolü
+    // Browser desteği kontrolü ve sesleri yükleme
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -51,6 +51,16 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
                 setError('Tarayıcınız ses özelliklerini desteklemiyor. Chrome veya Edge kullanın.');
             } else {
                 synthRef.current = synth;
+
+                // Chrome'da seslerin yüklenmesi asenkrondur. 
+                // Boş gelmesini engellemek için önceden çağırıyoruz ve event dinliyoruz.
+                const loadVoices = () => {
+                    synth.getVoices();
+                };
+                loadVoices();
+                if (synth.onvoiceschanged !== undefined) {
+                    synth.onvoiceschanged = loadVoices;
+                }
             }
         }
     }, []);
@@ -66,7 +76,7 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
             recognition.lang = LANGUAGE_CODES[languageCode] || 'es-ES';
             recognition.continuous = false;
             recognition.interimResults = true;
-            recognition.maxAlternatives = 1;
+            recognition.maxAlternatives = 3; // Daha iyi alternatifleri denemesi için
 
             recognition.onstart = () => {
                 setIsListening(true);
@@ -75,9 +85,19 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
             };
 
             recognition.onresult = (event) => {
-                const result = event.results[event.results.length - 1];
-                const text = result[0].transcript;
-                setTranscript(text);
+                let finalTranscript = '';
+                let interimTranscript = '';
+
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        finalTranscript += event.results[i][0].transcript;
+                    } else {
+                        interimTranscript += event.results[i][0].transcript;
+                    }
+                }
+
+                // Final varsa onu set et, yoksa interimi set et ki UI'da canlı dalgalanma görünsün.
+                setTranscript(finalTranscript || interimTranscript);
             };
 
             recognition.onerror = (event) => {
@@ -131,44 +151,59 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
             }
         }
 
+        // Emojileri temizle (TTS bazı emojileri kelime olarak okur)
+        cleanText = cleanText.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '');
+
         const utterance = new SpeechSynthesisUtterance(cleanText);
-        utterance.lang = LANGUAGE_CODES[languageCode] || 'es-ES';
-        utterance.rate = 0.9; // Biraz yavaş (öğrenme için)
-        utterance.pitch = 1;
+        const targetLang = LANGUAGE_CODES[languageCode] || 'es-ES';
+        utterance.lang = targetLang;
+
+        // Rate'i 1.0 (normal) hızına veya dil öğrenmeye uygun 0.95'e çekmek kaliteyi artırır. Çok yavaşlarsa robotikleşir.
+        utterance.rate = 0.95;
+        utterance.pitch = 1.05; // Biraz daha samimi ve neşeli bir ton (-1 ile 2 arası, 1 = normal)
 
         // Dile uygun en kaliteli sesi bul
         const voices = synthRef.current.getVoices();
-        const targetLang = LANGUAGE_CODES[languageCode] || 'es-ES';
         const langPrefix = targetLang.split('-')[0];
 
-        // Dile ait tüm sesleri bul
-        const langVoices = voices.filter(v => v.lang.startsWith(langPrefix));
+        // 1. Önce tam dil kodu eşleşenleri bul (örn: fr-FR)
+        let exactVoices = voices.filter(v => v.lang === targetLang || v.lang.replace('_', '-') === targetLang);
+
+        // Eğer tam eşleşme yoksa o dilin ailesindeki tüm sesleri bul (örn: tüm 'fr' başlayanlar)
+        const langVoices = exactVoices.length > 0 ? exactVoices : voices.filter(v => v.lang.startsWith(langPrefix));
 
         if (langVoices.length > 0) {
-            // 1. Google/Premium/Online/Natural seslerini önceliklendir (En iyi kalite)
+            // Telaffuzu en iyi olan servisleri önceliklendir (Google, Neural gibi) ve kadın sesi tercih et ("Female")
             const premiumVoice = langVoices.find(v =>
-                v.name.includes('Google') ||
-                v.name.includes('Premium') ||
-                v.name.includes('Online') ||
-                v.name.includes('Natural')
+                (v.name.includes('Google') || v.name.includes('Neural') || v.name.includes('Premium') || v.name.includes('Online'))
             );
 
-            // 2. Microsoft seslerini ikinci planda tut
+            // Eğer premium bulunamadıysa, Microsoft'un yerel kaliteli seslerine bak (örn: Microsoft Hortense Desktop)
             const microsoftVoice = langVoices.find(v => v.name.includes('Microsoft'));
 
-            // Ses ataması
+            // iOS/MacOS için Siri/Apple kalite seslerini yakalamaya çalış
+            const appleVoice = langVoices.find(v => v.name.includes('Thomas') || v.name.includes('Amelie') || v.name.includes('Monica') || v.name.includes('Daniel') || v.name.includes('Jorge'));
+
+            // Ses ataması (Premium > Apple/Siri > Microsoft > Standart)
             if (premiumVoice) {
                 utterance.voice = premiumVoice;
+            } else if (appleVoice) {
+                utterance.voice = appleVoice;
             } else if (microsoftVoice) {
                 utterance.voice = microsoftVoice;
             } else {
                 utterance.voice = langVoices[0]; // İlk bulduğunu kullan
             }
+
+            console.log("Seçilen TTS Sesi:", utterance.voice.name, utterance.voice.lang);
         }
 
         utterance.onstart = () => setIsSpeaking(true);
         utterance.onend = () => setIsSpeaking(false);
-        utterance.onerror = () => setIsSpeaking(false);
+        utterance.onerror = (e) => {
+            console.error("Speech Synthesis Error:", e);
+            setIsSpeaking(false);
+        };
 
         synthRef.current.speak(utterance);
     }, [languageCode]);

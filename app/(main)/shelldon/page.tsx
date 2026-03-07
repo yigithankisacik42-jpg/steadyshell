@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle, Check, Loader2 } from "lucide-react";
+import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle, Check, Loader2, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ShelldonAvatar } from "@/components/shelldon-avatar";
-import { SHELLDON_SCENARIOS, buildShelldonPrompt, buildFeedbackPrompt, type ShelldonScenario } from "@/lib/shelldon-ai";
+import { SHELLDON_SCENARIOS, buildShelldonPrompt, buildFeedbackPrompt, buildHintPrompt, type ShelldonScenario } from "@/lib/shelldon-ai";
 import { useSpeech } from "@/lib/use-speech";
 import { useUserProgress } from "@/contexts/user-progress-context";
 
@@ -45,6 +45,9 @@ export default function ShelldonPage() {
     const [feedback, setFeedback] = useState<FeedbackData | null>(null);
     const [showTextInput, setShowTextInput] = useState(false);
     const [userLevel] = useState("A1");
+    // Yeni stateler (Hint)
+    const [isLoadingHint, setIsLoadingHint] = useState(false);
+    const [currentHint, setCurrentHint] = useState<string | null>(null);
 
     const messagesContainerRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -138,6 +141,7 @@ export default function ShelldonPage() {
         if (!messageText || isLoading || !selectedScenario) return;
 
         setInputValue("");
+        setCurrentHint(null);
         setShelldonState("thinking");
         setIsLoading(true);
 
@@ -173,7 +177,16 @@ export default function ShelldonPage() {
             const aiMsg: Message = { role: "assistant", content: aiMessage };
             setMessages((prev) => [...prev, aiMsg]);
             setCurrentBubbleText(aiMessage);
-            setShelldonState("speaking");
+
+            // Duygu analizi (basit emoji kontrolü)
+            if (aiMessage.includes("✅") || aiMessage.includes("Bravo") || aiMessage.includes("Harika") || aiMessage.includes("Parfait") || aiMessage.includes("Excelente") || aiMessage.includes("Excellent") || aiMessage.includes("Très bien") || aiMessage.includes("Muy bien") || aiMessage.includes("Very good")) {
+                setShelldonState("happy");
+            } else if (aiMessage.includes("?") && !aiMessage.includes("✅")) {
+                setShelldonState("speaking"); // Normal soru soruyor
+            } else {
+                setShelldonState("speaking");
+            }
+
             speak(aiMessage);
 
             // Max tura ulaşıldıysa bitir
@@ -231,6 +244,38 @@ export default function ShelldonPage() {
             }
         } catch {
             setFeedback({ score: 75, grammar: "İyi gidiyorsun!", vocabulary: "Kelime dağarcığını geliştir.", tip: "Daha uzun cümleler kur." });
+        }
+    };
+
+    // === İPUCU AL ===
+    const handleGetHint = async () => {
+        if (!selectedScenario || isLoading || isLoadingHint) return;
+
+        setIsLoadingHint(true);
+        try {
+            const userMsgs = messages.map(m => `${m.role === 'user' ? 'Kullanıcı' : 'Shelldon'}: ${m.content}`).join("\n");
+            const hintPrompt = buildHintPrompt(selectedLang, selectedScenario.titleTr, userMsgs);
+
+            const response = await fetch("/api/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    model: "llama-3.3-70b-versatile",
+                    messages: [
+                        { role: "system", content: "Sen sadece istenen ipucunu (tek cümlelik Türkçe ve hedef dil çevirisiyle veya doğrudan) veren bir asistansın. Açıklama yapma." },
+                        { role: "user", content: hintPrompt },
+                    ],
+                }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setCurrentHint(data.choices?.[0]?.message?.content || "Bir hata oluştu.");
+            }
+        } catch {
+            setCurrentHint("İpucu alınamadı.");
+        } finally {
+            setIsLoadingHint(false);
         }
     };
 
@@ -437,21 +482,47 @@ export default function ShelldonPage() {
                     {/* Mesaj Geçmişi (küçük, kaydırılabilir) */}
                     <div
                         ref={messagesContainerRef}
-                        className="flex-1 w-full max-w-lg px-6 overflow-y-auto space-y-2 pb-4"
+                        className="flex-1 w-full max-w-lg px-6 overflow-y-auto space-y-3 pb-4 scroll-smooth"
                     >
                         {messages.slice(0, -1).map((msg, i) => (
                             <div
                                 key={i}
                                 className={cn(
-                                    "text-xs px-3 py-2 rounded-xl max-w-[85%]",
+                                    "text-sm px-4 py-2.5 rounded-2xl max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 shadow-sm",
                                     msg.role === "user"
-                                        ? "bg-emerald-500 text-white ml-auto"
-                                        : "bg-slate-100 text-slate-600"
+                                        ? "bg-emerald-500 text-white ml-auto rounded-br-sm"
+                                        : "bg-white text-slate-700 border border-slate-100 rounded-bl-sm"
                                 )}
                             >
                                 {msg.content}
                             </div>
                         ))}
+
+                        {/* Canlı Dinleme Balonu */}
+                        {isListening && transcript && (
+                            <div className="text-sm px-4 py-2.5 rounded-2xl max-w-[85%] bg-emerald-500/80 text-white ml-auto rounded-br-sm animate-pulse shadow-sm">
+                                {transcript}
+                                <span className="inline-block w-1 h-4 ml-1 align-middle bg-white/70 animate-bounce" />
+                            </div>
+                        )}
+
+                        {/* İpucu Gösterimi */}
+                        {currentHint && (
+                            <div className="flex flex-col items-center gap-2 mt-4 animate-in fade-in zoom-in-95 duration-300">
+                                <div className="bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium px-4 py-3 rounded-2xl max-w-[90%] shadow-sm relative">
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-100 text-amber-600 p-1.5 rounded-full border border-amber-200">
+                                        <Lightbulb className="w-3.5 h-3.5" />
+                                    </div>
+                                    <p className="mt-1 text-center">{currentHint}</p>
+                                    <button
+                                        onClick={() => handleSendMessage(currentHint)}
+                                        className="mt-2 w-full bg-amber-200 text-amber-900 py-1.5 rounded-xl font-bold hover:bg-amber-300 transition-colors"
+                                    >
+                                        Bunu Söyle
+                                    </button>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -480,11 +551,21 @@ export default function ShelldonPage() {
                         )}
 
                         {/* Mikrofon + Input */}
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-2">
+                            {/* İpucu Butonu */}
+                            <button
+                                onClick={handleGetHint}
+                                disabled={isLoading || isLoadingHint || isListening}
+                                className="p-3 text-amber-500 hover:bg-amber-50 rounded-2xl transition-all disabled:opacity-50 border border-transparent hover:border-amber-200"
+                                title="İpucu Al"
+                            >
+                                {isLoadingHint ? <Loader2 className="w-5 h-5 animate-spin" /> : <Lightbulb className="w-5 h-5" />}
+                            </button>
+
                             {/* Yazı/Mikrofon toggle */}
                             <button
                                 onClick={() => setShowTextInput(!showTextInput)}
-                                className="p-2 text-slate-400 hover:text-emerald-600 transition-colors"
+                                className="p-3 text-slate-400 hover:bg-slate-50 hover:text-emerald-600 rounded-2xl transition-all border border-transparent hover:border-slate-200"
                             >
                                 <MessageCircle className="w-5 h-5" />
                             </button>

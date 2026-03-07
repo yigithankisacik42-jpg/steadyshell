@@ -188,3 +188,21 @@ grammar: Türkçe, tek cümle
 vocabulary: Türkçe, tek cümle  
 tip: Türkçe, tek cümle`;
 }
+
+// === İPUCU (HINT) ===
+export function buildHintPrompt(
+    language: string,
+    scenarioTitle: string,
+    conversationHistory: string
+): string {
+    const lang = LANG_NAMES[language] || LANG_NAMES.fr;
+
+    return `Aşağıdaki konuşma geçmişini ve senaryoyu incele. Kullanıcı sıradaki cümleyi kurmakta zorlanıyor.
+Senaryo: ${scenarioTitle}
+
+Geçmiş:
+${conversationHistory}
+
+Kullanıcının ${lang.tr} dilinde söyleyebileceği mantıklı, kısa ve doğal 1 adet örnek cümle (ipucu) oluştur.
+SADECE cümleyi yaz. Tırnak içine alma, Türkçe açıklama yapma.`;
+}
