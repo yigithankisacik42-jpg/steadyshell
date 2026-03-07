@@ -14,6 +14,11 @@ export async function GET() {
         // Fetch top 50 users by XP
         const users = await db.user.findMany({
             take: 50,
+            where: {
+                totalXp: {
+                    gt: 0 // Sadece aktif/puanı olan kullanıcıları göster
+                }
+            },
             orderBy: {
                 totalXp: 'desc',
             },

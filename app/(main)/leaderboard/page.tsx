@@ -98,15 +98,17 @@ export default function LeaderboardPage() {
                             <Crown className="w-12 h-12 text-yellow-200 mb-3 drop-shadow-lg" />
                             <p className="text-amber-100 font-bold text-sm uppercase tracking-wider mb-1">Haftanın Şampiyonu</p>
 
-                            <div className="flex items-center gap-4 mt-4">
-                                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl shadow-lg">
+                            <div className="flex items-center gap-4 mt-4 w-full px-4 sm:px-8">
+                                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl shadow-lg shrink-0">
                                     {champion.avatar || "👤"}
                                 </div>
-                                <div>
-                                    <h2 className="text-2xl font-black truncate max-w-[200px]">{champion.name || "Misafir"}</h2>
+                                <div className="flex-1 min-w-0">
+                                    <h2 className="text-2xl font-black truncate w-full text-left" title={champion.name || "Misafir"}>
+                                        {champion.name || "Misafir"}
+                                    </h2>
                                     <div className="flex items-center gap-2 mt-1 text-amber-100">
-                                        <Zap className="w-4 h-4" />
-                                        <span className="font-bold">{champion.xp.toLocaleString()} XP</span>
+                                        <Zap className="w-4 h-4 shrink-0" />
+                                        <span className="font-bold truncate">{champion.xp.toLocaleString()} XP</span>
                                     </div>
                                 </div>
                             </div>
@@ -154,12 +156,12 @@ export default function LeaderboardPage() {
                                 </div>
 
                                 {/* Name & Status */}
-                                <div className="flex-1 min-w-0">
+                                <div className="flex-1 min-w-0 max-w-[60%] sm:max-w-full">
                                     <p className={cn(
                                         "font-bold text-base leading-tight mb-1 flex items-center gap-2",
                                         data.isCurrentUser ? "text-indigo-600" : "text-slate-700"
                                     )}>
-                                        <span className="truncate max-w-[120px] sm:max-w-[180px] inline-block overflow-hidden">{data.name}</span>
+                                        <span className="truncate flex-1 display-block" title={data.name}>{data.name}</span>
                                         {data.isCurrentUser && (
                                             <span className="px-2 py-0.5 bg-indigo-100 text-indigo-600 text-[10px] font-black rounded-lg uppercase shrink-0">Sen</span>
                                         )}
