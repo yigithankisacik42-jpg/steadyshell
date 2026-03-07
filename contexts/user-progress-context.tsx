@@ -55,8 +55,6 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
                         level: data.level,
                     });
                 } else if (res.status === 401) {
-                    // Not logged in, keep default or maybe try localStorage as fallback? 
-                    // For now, adhere to secure DB plan.
                     console.log("User not logged in");
                 }
             } catch (e) {
@@ -69,41 +67,52 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
         fetchUser();
     }, []);
 
-    const syncWithDb = async (userData: UserData) => {
-        try {
-            await fetch("/api/user-progress", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    totalXp: userData.totalXp,
-                    level: userData.level,
-                    streak: userData.streak,
-                    lastActiveDate: userData.lastActiveDate,
-                    hearts: 5 // Default for now, can add to UserData later if needed
-                }),
-            });
-        } catch (e) {
-            console.error("Failed to sync with DB", e);
-        }
-    };
-
+    // --- GÜVENLİ: Sunucuya delta XP gönder ---
     const addXp = (amount: number) => {
-        setUser((prev) => {
-            const newState = {
-                ...prev,
-                totalXp: prev.totalXp + amount,
-            };
-            syncWithDb(newState);
-            return newState;
-        });
+        // Optimistic update (UI hemen güncellenir)
+        setUser((prev) => ({
+            ...prev,
+            totalXp: prev.totalXp + amount,
+        }));
+
+        // Sunucuya gönder — sunucu doğrulayacak
+        fetch("/api/user-progress", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                action: "add_xp",
+                amount: amount,
+            }),
+        })
+            .then((res) => {
+                if (res.ok) return res.json();
+                throw new Error("XP sync failed");
+            })
+            .then((data) => {
+                // Sunucudan dönen gerçek değerlerle güncelle
+                setUser((prev) => ({
+                    ...prev,
+                    totalXp: data.totalXp,
+                    level: data.level,
+                }));
+            })
+            .catch((e) => {
+                console.error("Failed to sync XP with server", e);
+                // Optimistic update'i geri al
+                setUser((prev) => ({
+                    ...prev,
+                    totalXp: Math.max(0, prev.totalXp - amount),
+                }));
+            });
     };
 
+    // --- GÜVENLİ: Ders tamamlama — streak sunucu tarafında hesaplanır ---
     const completeLesson = () => {
         const today = new Date().toISOString().split('T')[0];
 
+        // Optimistic update
         setUser((prev) => {
             let newStreak = prev.streak;
-
             if (prev.lastActiveDate !== today) {
                 if (!prev.lastActiveDate) {
                     newStreak = 1;
@@ -120,26 +129,57 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
                     }
                 }
             }
-
-            const newState = {
+            return {
                 ...prev,
                 streak: newStreak,
                 lastActiveDate: today,
             };
-
-            syncWithDb(newState);
-            return newState;
         });
+
+        // Sunucuya gönder
+        fetch("/api/user-progress", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                action: "complete_lesson",
+            }),
+        })
+            .then((res) => {
+                if (res.ok) return res.json();
+                throw new Error("Lesson sync failed");
+            })
+            .then((data) => {
+                // Sunucudan dönen gerçek değerlerle güncelle
+                setUser((prev) => ({
+                    ...prev,
+                    streak: data.streak,
+                    lastActiveDate: data.lastActiveDate,
+                }));
+            })
+            .catch((e) => {
+                console.error("Failed to sync lesson with server", e);
+            });
     };
 
     const updateUser = (data: Partial<UserData>) => {
         setUser((prev) => {
             const newState = { ...prev, ...data };
-            // Only sync if relevant fields changed, but for simplicity sync all
-            // Or better, check if important fields are in 'data'
-            if ('totalXp' in data || 'level' in data || 'streak' in data) {
-                syncWithDb(newState);
+
+            // XP değişikliği varsa sunucuya delta olarak gönder
+            if ('totalXp' in data && data.totalXp !== undefined) {
+                const delta = data.totalXp - prev.totalXp;
+                if (delta > 0) {
+                    fetch("/api/user-progress", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            action: "add_xp",
+                            amount: delta,
+                        }),
+                    }).catch((e) => console.error("Failed to sync updateUser XP", e));
+                }
             }
+
             return newState;
         });
     };

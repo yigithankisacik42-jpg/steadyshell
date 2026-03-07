@@ -121,17 +121,49 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
         // Önce varsa mevcut sesi durdur
         synthRef.current.cancel();
 
-        const utterance = new SpeechSynthesisUtterance(text);
+        // Metni temizle: Türkçe açıklamaları (💡, ✨ vb.) filtrele
+        let cleanText = text;
+        const delimiters = ['💡', '✨', '📝', '❌', '✅', '\n\nTürkçe:', '\n\nNot:'];
+
+        for (const delimiter of delimiters) {
+            if (cleanText.includes(delimiter)) {
+                cleanText = cleanText.split(delimiter)[0].trim();
+            }
+        }
+
+        const utterance = new SpeechSynthesisUtterance(cleanText);
         utterance.lang = LANGUAGE_CODES[languageCode] || 'es-ES';
         utterance.rate = 0.9; // Biraz yavaş (öğrenme için)
         utterance.pitch = 1;
 
-        // Dile uygun ses bul
+        // Dile uygun en kaliteli sesi bul
         const voices = synthRef.current.getVoices();
         const targetLang = LANGUAGE_CODES[languageCode] || 'es-ES';
-        const voice = voices.find(v => v.lang.startsWith(targetLang.split('-')[0]));
-        if (voice) {
-            utterance.voice = voice;
+        const langPrefix = targetLang.split('-')[0];
+
+        // Dile ait tüm sesleri bul
+        const langVoices = voices.filter(v => v.lang.startsWith(langPrefix));
+
+        if (langVoices.length > 0) {
+            // 1. Google/Premium/Online/Natural seslerini önceliklendir (En iyi kalite)
+            const premiumVoice = langVoices.find(v =>
+                v.name.includes('Google') ||
+                v.name.includes('Premium') ||
+                v.name.includes('Online') ||
+                v.name.includes('Natural')
+            );
+
+            // 2. Microsoft seslerini ikinci planda tut
+            const microsoftVoice = langVoices.find(v => v.name.includes('Microsoft'));
+
+            // Ses ataması
+            if (premiumVoice) {
+                utterance.voice = premiumVoice;
+            } else if (microsoftVoice) {
+                utterance.voice = microsoftVoice;
+            } else {
+                utterance.voice = langVoices[0]; // İlk bulduğunu kullan
+            }
         }
 
         utterance.onstart = () => setIsSpeaking(true);

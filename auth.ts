@@ -3,6 +3,7 @@ import Google from "next-auth/providers/google"
 import Credentials from "next-auth/providers/credentials"
 import { verifyPassword } from "@/lib/security"
 import { db } from "@/lib/db"
+import { checkLoginRateLimit } from "@/lib/rate-limit"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
     providers: [
@@ -19,13 +20,22 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             name: "Credentials",
             credentials: {
                 email: { label: "Email", type: "email" },
-                password: { label: "Password", type: "password" }
+                password: { label: "Password", type: "password" },
+                clientIp: { label: "Client IP", type: "text" }
             },
             async authorize(credentials) {
                 if (!credentials?.email || !credentials?.password) return null;
 
                 const email = credentials.email as string;
                 const password = credentials.password as string;
+                const clientIp = (credentials.clientIp as string) || "unknown";
+
+                // 🔒 Server-side rate limiting
+                const rateLimitResult = checkLoginRateLimit(clientIp);
+                if (!rateLimitResult.success) {
+                    console.warn(`[Auth] 🚫 Rate limit exceeded for IP: ${clientIp}`);
+                    throw new Error(`Çok fazla deneme! ${rateLimitResult.resetIn} saniye bekleyin.`);
+                }
 
                 try {
                     console.log("[Auth] Attempting login for:", email);
@@ -70,6 +80,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             }
         })
     ],
+    session: {
+        strategy: "jwt",
+    },
     callbacks: {
         authorized({ auth, request: { nextUrl } }) {
             const isLoggedIn = !!auth?.user
@@ -84,10 +97,23 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             }
             return true
         },
+        async jwt({ token, user }) {
+            // user is only passed on initial sign-in
+            if (user) {
+                token.sub = user.id;
+                token.name = user.name;
+                token.email = user.email;
+                token.picture = user.image;
+            }
+            return token;
+        },
         async session({ session, token }) {
             if (token.sub && session.user) {
                 session.user.id = token.sub;
             }
+            if (token.name) session.user.name = token.name;
+            if (token.email) session.user.email = token.email;
+            if (token.picture) session.user.image = token.picture;
             return session;
         }
     },

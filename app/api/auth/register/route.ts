@@ -1,9 +1,27 @@
 import { NextResponse } from "next/server";
 import { hashPassword, validatePassword, isValidEmail, sanitizeInput } from "@/lib/security";
 import { db } from "@/lib/db";
+import { checkRegisterRateLimit, getClientIP } from "@/lib/rate-limit";
 
 export async function POST(req: Request) {
     try {
+        // 🔒 Server-side rate limiting
+        const clientIp = getClientIP(req);
+        const rateLimitResult = checkRegisterRateLimit(clientIp);
+        if (!rateLimitResult.success) {
+            console.warn(`[Register] 🚫 Rate limit exceeded for IP: ${clientIp}`);
+            return NextResponse.json(
+                { message: `Çok fazla kayıt denemesi. ${Math.ceil(rateLimitResult.resetIn / 60)} dakika sonra tekrar deneyin.` },
+                {
+                    status: 429,
+                    headers: {
+                        "Retry-After": String(rateLimitResult.resetIn),
+                        "X-RateLimit-Remaining": String(rateLimitResult.remaining),
+                    }
+                }
+            );
+        }
+
         const body = await req.json();
         const { name, email, password } = body;
 
@@ -46,7 +64,6 @@ export async function POST(req: Request) {
 
         // Hash password and create user
         const hashedPassword = await hashPassword(password);
-        console.log(`[Register] Password hashed. Hash length: ${hashedPassword.length}, Prefix: ${hashedPassword.substring(0, 7)}`);
 
         const newUser = await db.user.create({
             data: {

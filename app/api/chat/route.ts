@@ -1,10 +1,37 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { auth } from "@/auth";
+import { checkChatRateLimit, getClientIP } from "@/lib/rate-limit";
 
 // API anahtarı güvenli şekilde sunucu tarafında (sadece .env.local'dan)
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 export async function POST(request: NextRequest) {
     try {
+        // 🔒 Auth kontrolü — sadece giriş yapmış kullanıcılar
+        const session = await auth();
+        if (!session?.user) {
+            return NextResponse.json(
+                { error: "Oturum açmanız gerekiyor" },
+                { status: 401 }
+            );
+        }
+
+        // 🔒 Server-side rate limiting
+        const clientIp = getClientIP(request);
+        const rateLimitResult = checkChatRateLimit(clientIp);
+        if (!rateLimitResult.success) {
+            return NextResponse.json(
+                { error: `Çok fazla istek. ${rateLimitResult.resetIn} saniye bekleyin.` },
+                {
+                    status: 429,
+                    headers: {
+                        "Retry-After": String(rateLimitResult.resetIn),
+                        "X-RateLimit-Remaining": String(rateLimitResult.remaining),
+                    }
+                }
+            );
+        }
+
         const body = await request.json();
         const { messages, model = "llama-3.3-70b-versatile" } = body;
 

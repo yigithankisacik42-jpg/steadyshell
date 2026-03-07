@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Trophy, Bot, Theater, User } from "lucide-react";
+import { Home, Trophy, Bot, Theater, User, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
     { href: "/learn", icon: Home, label: "Ana" },
+    { href: "/shelldon", icon: MessageCircle, label: "Shelldon" },
     { href: "/scene", icon: Theater, label: "Sahne" },
     { href: "/ai-tutor", icon: Bot, label: "Luna" },
-    { href: "/leaderboard", icon: Trophy, label: "Sıralama" },
     { href: "/settings", icon: User, label: "Profil" },
 ];
 

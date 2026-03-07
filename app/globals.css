@@ -95,3 +95,59 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* === SHELLDON AVATAR ANİMASYONLARI === */
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+@keyframes squint {
+  0% { transform: scaleY(1); }
+  100% { transform: scaleY(0.4); }
+}
+
+@keyframes mouthOpen {
+  0%, 100% { ry: 2px; rx: 4px; }
+  50% { ry: 5px; rx: 6px; }
+}
+
+@keyframes shellPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes shellGlow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.15); }
+}
+
+@keyframes headTilt {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes lookUp {
+  0%, 100% { cy: 58; }
+  50% { cy: 55; }
+}
+
+@keyframes waveLeft {
+  0%, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(-35deg); }
+}
+
+@keyframes waveRight {
+  0%, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(40deg); }
+}
+
+@keyframes soundWave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.5); }
+}
+
+@keyframes soundBar {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}

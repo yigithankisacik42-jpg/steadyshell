@@ -415,7 +415,7 @@ function SceneContent() {
                                     ? "bg-violet-600 text-white rounded-tr-sm"
                                     : "bg-white/10 text-white border border-white/10 rounded-tl-sm"
                             )}>
-                                <p className="whitespace-pre-wrap leading-relaxed font-medium">{message.content}</p>
+                                <p className="whitespace-pre-wrap leading-relaxed font-medium text-white">{message.content}</p>
 
                                 {message.role === 'assistant' && speechSupported && (
                                     <div className="mt-3 pt-3 border-t border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">

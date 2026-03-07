@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, AlertCircle, Shield, Key, Mail, Gamepad2, ArrowRight } from "lucide-react";
-import { verifyPassword, checkLoginAttempts, recordFailedAttempt, clearLoginAttempts } from "@/lib/security";
+import { checkLoginAttempts, recordFailedAttempt, clearLoginAttempts } from "@/lib/login-security";
 import { signIn } from "next-auth/react";
 
 function LoginForm() {
