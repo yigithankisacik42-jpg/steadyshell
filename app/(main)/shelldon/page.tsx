@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle, Check, Loader2, Lightbulb } from "lucide-react";
+import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle, Check, Loader2, Lightbulb, CheckCircle2, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -45,9 +45,10 @@ export default function ShelldonPage() {
     const [feedback, setFeedback] = useState<FeedbackData | null>(null);
     const [showTextInput, setShowTextInput] = useState(false);
     const [userLevel] = useState("A1");
-    // Yeni stateler (Hint)
+    // Yeni stateler (Hint & Görevler)
     const [isLoadingHint, setIsLoadingHint] = useState(false);
     const [currentHint, setCurrentHint] = useState<string | null>(null);
+    const [completedObjectives, setCompletedObjectives] = useState<number[]>([]);
 
     const messagesContainerRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -99,6 +100,7 @@ export default function ShelldonPage() {
         setTurnCount(0);
         setIsFinished(false);
         setFeedback(null);
+        setCompletedObjectives([]);
 
         try {
             const systemPrompt = buildShelldonPrompt(selectedLang, userLevel, scenario);
@@ -121,7 +123,21 @@ export default function ShelldonPage() {
             }
 
             const data = await response.json();
-            const aiMessage = data.choices?.[0]?.message?.content || "Merhaba! 🐢";
+            const raw = data.choices?.[0]?.message?.content || "";
+            let aiMessage = "Merhaba! 🐢";
+            
+            // Try parsing JSON response
+            try {
+                const cleanJson = raw.replace(/```json?\n?/g, "").replace(/```/g, "").trim();
+                const parsed = JSON.parse(cleanJson);
+                if (parsed.message) aiMessage = parsed.message;
+                if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
+                    setCompletedObjectives(parsed.completedObjectives);
+                }
+            } catch (e) {
+                // Eğer AI JSON döndürmediyse düz metni al
+                aiMessage = raw;
+            }
 
             setMessages([{ role: "assistant", content: aiMessage }]);
             setCurrentBubbleText(aiMessage);
@@ -172,7 +188,28 @@ export default function ShelldonPage() {
             }
 
             const data = await response.json();
-            const aiMessage = data.choices?.[0]?.message?.content || "Devam edelim!";
+            const raw = data.choices?.[0]?.message?.content || "";
+            let aiMessage = "Devam edelim!";
+            let newCompletedObj: number[] = [];
+
+            // Try parsing JSON response
+            try {
+                const cleanJson = raw.replace(/```json?\n?/g, "").replace(/```/g, "").trim();
+                const parsed = JSON.parse(cleanJson);
+                if (parsed.message) aiMessage = parsed.message;
+                if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
+                    newCompletedObj = parsed.completedObjectives;
+                }
+            } catch (e) {
+                // fallback
+                aiMessage = raw;
+            }
+
+            // Objeleri güncelle (önceki tamamlananları tut, yenileri ekle, unique yap)
+            setCompletedObjectives(prev => {
+                const merged = [...prev, ...newCompletedObj];
+                return Array.from(new Set(merged));
+            });
 
             const aiMsg: Message = { role: "assistant", content: aiMessage };
             setMessages((prev) => [...prev, aiMsg]);
@@ -456,13 +493,49 @@ export default function ShelldonPage() {
                         />
                     </div>
 
+                    {/* Görevler (Checklist) */}
+                    {selectedScenario.objectives && selectedScenario.objectives[selectedLang] && (
+                        <div className="w-full max-w-lg px-6 mb-4 animate-in fade-in slide-in-from-top-4 duration-500">
+                            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-emerald-100 shadow-sm">
+                                <h3 className="text-xs font-black text-slate-400 uppercase tracking-wider mb-3 flex items-center justify-between">
+                                    <span>Hedefler</span>
+                                    <span className="text-emerald-500 bg-emerald-50 px-2 py-0.5 rounded-full text-[10px]">
+                                        {completedObjectives.length} / {selectedScenario.objectives[selectedLang].length}
+                                    </span>
+                                </h3>
+                                <div className="space-y-2.5">
+                                    {selectedScenario.objectives[selectedLang].map((obj, i) => {
+                                        const isCompleted = completedObjectives.includes(i);
+                                        return (
+                                            <div key={i} className="flex items-start gap-3 group">
+                                                <div className="mt-0.5 shrink-0 transition-colors duration-300">
+                                                    {isCompleted ? (
+                                                        <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                                                    ) : (
+                                                        <Circle className="w-5 h-5 text-slate-300 group-hover:text-emerald-200 transition-colors" />
+                                                    )}
+                                                </div>
+                                                <p className={cn(
+                                                    "text-sm transition-all duration-300",
+                                                    isCompleted ? "text-slate-400 line-through decoration-slate-300" : "text-slate-700 font-medium"
+                                                )}>
+                                                    {obj}
+                                                </p>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                     {/* Konuşma Balonu */}
                     <div className="px-6 w-full max-w-lg mb-4">
                         {currentBubbleText && (
                             <div className="bg-white rounded-2xl px-5 py-4 shadow-lg border border-emerald-100 relative">
                                 {/* Üçgen */}
                                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-emerald-100 rotate-45" />
-                                <p className="text-slate-700 font-medium leading-relaxed text-sm relative z-10">
+                                <p className="text-slate-700 font-medium leading-relaxed text-sm relative z-10 whitespace-pre-wrap">
                                     {currentBubbleText}
                                 </p>
                                 {/* Dinle butonu */}
@@ -494,7 +567,7 @@ export default function ShelldonPage() {
                                         : "bg-white text-slate-700 border border-slate-100 rounded-bl-sm"
                                 )}
                             >
-                                {msg.content}
+                                <div className="whitespace-pre-wrap leading-relaxed">{msg.content}</div>
                             </div>
                         ))}
 

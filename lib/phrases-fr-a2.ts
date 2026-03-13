@@ -769,39 +769,6 @@ const unit340Phrases: FrenchA2UnitPhrases = {
     {
       text: "D'abord, épluchez les pommes de terre.",
       meaning: "Önce patatesleri soyun.",
-      pronunciation: "da-bor-e-plü-şe-le-pom-dö-ter",
-    },
-    {
-      text: "Ensuite, coupez les légumes.",
-      meaning: "Sonra sebzeleri doğrayın.",
-      pronunciation: "an-süit-ku-pe-le-le-güm",
-    },
-    {
-      text: "Mélangez bien les ingrédients.",
-      meaning: "Malzemeleri iyice karıştırın.",
-      pronunciation: "me-lan-je-byan-le-zen-gre-dyan",
-    },
-    {
-      text: "Ajoutez un peu de sel.",
-      meaning: "Biraz tuz ekleyin.",
-      pronunciation: "a-ju-te-ön-pö-dö-sel",
-    },
-    {
-      text: "Laissez cuire 20 minutes.",
-      meaning: "20 dakika pişmeye bırakın.",
-      pronunciation: "le-se-küir-ven-mi-nüt",
-    },
-
-    // Yemek Zamanı
-    { text: "C'est prêt!", meaning: "Hazır!", pronunciation: "se-pre" },
-    {
-      text: "À table!",
-      meaning: "Sofraya! / Yemek hazır!",
-      pronunciation: "a-tabl",
-    },
-    {
-      text: "Bon appétit!",
-      meaning: "Afiyet olsun!",
       pronunciation: "bo-na-pe-ti",
     },
     {
@@ -828,29 +795,54 @@ const unit341Phrases: FrenchA2UnitPhrases = {
   title: "Alışveriş Diyaloğu",
   phrases: [
     {
-      text: "C'est combien?",
-      meaning: "Ne kadar?",
-      pronunciation: "se-kom-byan",
+      text: "Ce pantalon est plus cher que ce t-shirt.",
+      meaning: "Bu pantolon, bu tişörtten daha pahalıdır.",
+      pronunciation: "sö-pan-ta-lon-e-plü-şer-kö-sö-ti-şört",
     },
     {
-      text: "C'est trop cher.",
-      meaning: "Çok pahalı.",
-      pronunciation: "se-tro-şer",
+      text: "Cette veste est moins grande que ce pull.",
+      meaning: "Bu ceket, bu kazaktan daha az büyüktür.",
+      pronunciation: "set-vest-e-muen-grand-kö-sö-pül",
     },
     {
-      text: "Vous avez moins cher?",
-      meaning: "Daha ucuz var mı?",
-      pronunciation: "vu-za-ve-muen-şer",
+      text: "Ces chaussures sont aussi confortables que ces baskets.",
+      meaning: "Bu ayakkabılar, bu spor ayakkabılar kadar rahattır.",
+      pronunciation: "se-şo-sür-son-o-si-kon-for-tabl-kö-se-bas-ket",
     },
     {
-      text: "Je peux avoir une réduction?",
-      meaning: "İndirim yapabilir misiniz?",
-      pronunciation: "jö-pö-a-vuar-ün-re-dük-syon",
+      text: "C'est meilleur que l'autre.",
+      meaning: "Bu, diğerinden daha iyi.",
+      pronunciation: "se-me-yör-kö-lotr",
     },
     {
-      text: "C'est en solde.",
-      meaning: "İndirimde.",
-      pronunciation: "se-tan-sold",
+      text: "Laquelle tu préfères ?",
+      meaning: "Hangisini tercih edersin?",
+      pronunciation: "la-kel-tü-pre-fer",
+    },
+    {
+      text: "Je pense que la veste noire est plus élégante.",
+      meaning: "Bence siyah ceket daha şık.",
+      pronunciation: "jö-pans-kö-la-vest-nuar-e-plü-ze-le-gant",
+    },
+    {
+      text: "Oui, mais elle est aussi plus chère !",
+      meaning: "Evet, ama aynı zamanda daha pahalı!",
+      pronunciation: "ui-me-el-e-o-si-plü-şer",
+    },
+    {
+      text: "La veste bleue est moins chère.",
+      meaning: "Mavi ceket daha az pahalı (daha ucuz).",
+      pronunciation: "la-vest-blö-e-muen-şer",
+    },
+    {
+      text: "Tu as raison, j'achète la bleue !",
+      meaning: "Haklısın, maviyi satın alıyorum!",
+      pronunciation: "tü-a-re-zon-ja-şet-la-blö",
+    },
+    {
+      text: "Est-ce qu'il y a une réduction ?",
+      meaning: "İndirim var mı?",
+      pronunciation: "es-kil-i-a-ün-re-dük-syon",
     },
   ],
 };
@@ -860,29 +852,54 @@ const unit342Phrases: FrenchA2UnitPhrases = {
   title: "Kıyafet Alışverişi",
   phrases: [
     {
-      text: "Je peux essayer?",
-      meaning: "Deneyebilir miyim?",
-      pronunciation: "jö-pö-e-se-ye",
+      text: "Je peux essayer ce pull ?",
+      meaning: "Bu kazağı deneyebilir miyim?",
+      pronunciation: "jö-pö-e-se-ye-sö-pül",
     },
     {
-      text: "Quelle taille faites-vous?",
+      text: "Quelle taille faites-vous ?",
       meaning: "Bedeniniz ne?",
       pronunciation: "kel-tay-fet-vu",
     },
     {
-      text: "C'est trop serré.",
-      meaning: "Çok dar.",
-      pronunciation: "se-tro-se-re",
+      text: "Je cherche une robe noire.",
+      meaning: "Siyah bir elbise arıyorum.",
+      pronunciation: "jö-şerş-ün-rob-nuar",
     },
     {
-      text: "Vous l'avez en bleu?",
+      text: "Cette robe vous va très bien !",
+      meaning: "Bu elbise size çok yakışıyor!",
+      pronunciation: "set-rob-vu-va-tre-biyen",
+    },
+    {
+      text: "Ça coûte combien ?",
+      meaning: "Ne kadar tutuyor?",
+      pronunciation: "sa-kut-kon-biyen",
+    },
+    {
+      text: "Je paie par carte.",
+      meaning: "Kartla ödüyorum.",
+      pronunciation: "jö-pey-par-kart",
+    },
+    {
+      text: "J'achète ce pantalon et cette chemise.",
+      meaning: "Bu pantolonu ve bu gömleği satın alıyorum.",
+      pronunciation: "jaşet-sö-panta-lon-e-set-şömiz",
+    },
+    {
+      text: "Vous l'avez en bleu ?",
       meaning: "Mavisi var mı?",
       pronunciation: "vu-la-ve-an-blö",
     },
     {
-      text: "Ça vous va très bien!",
-      meaning: "Size çok yakışıyor!",
-      pronunciation: "sa-vu-va-tre-byan",
+      text: "C'est parfait, je le prends !",
+      meaning: "Mükemmel, alıyorum!",
+      pronunciation: "se-par-fe-jö-lö-pran",
+    },
+    {
+      text: "Où est la cabine d'essayage ?",
+      meaning: "Giyinme kabini nerede?",
+      pronunciation: "u-e-la-ka-bin-de-se-yaj",
     },
   ],
 };
@@ -894,7 +911,7 @@ const unit343Phrases: FrenchA2UnitPhrases = {
     {
       text: "Je viens de faire le ménage.",
       meaning: "Az önce temizlik yaptım.",
-      pronunciation: "jö-vyen-dö-fer-lö-me-naj",
+      pronunciation: "jö-viyen-dö-fer-lö-me-naj",
     },
     {
       text: "C'est ton tour de faire la vaisselle.",
@@ -902,7 +919,7 @@ const unit343Phrases: FrenchA2UnitPhrases = {
       pronunciation: "se-ton-tur-dö-fer-la-ve-sel",
     },
     {
-      text: "Range ta chambre!",
+      text: "Range ta chambre !",
       meaning: "Odanı topla!",
       pronunciation: "ranj-ta-şanbr",
     },
@@ -910,6 +927,36 @@ const unit343Phrases: FrenchA2UnitPhrases = {
       text: "J'ai passé l'aspirateur.",
       meaning: "Süpürge çektim.",
       pronunciation: "je-pa-se-las-pi-ra-tör",
+    },
+    {
+      text: "Tu viens de faire la lessive ?",
+      meaning: "Az önce çamaşır mı yıkadın?",
+      pronunciation: "tü-viyen-dö-fer-la-le-siv",
+    },
+    {
+      text: "Il vient de passer l'aspirateur.",
+      meaning: "O az önce süpürge çekti.",
+      pronunciation: "il-viyen-dö-pa-se-las-pi-ra-tör",
+    },
+    {
+      text: "La maison est propre maintenant.",
+      meaning: "Ev şimdi temiz.",
+      pronunciation: "la-me-zon-e-propr-ment-nan",
+    },
+    {
+      text: "Je vais faire le lit.",
+      meaning: "Yatağı yapacağım.",
+      pronunciation: "jö-ve-fer-lö-li",
+    },
+    {
+      text: "Nous venons de nettoyer la cuisine.",
+      meaning: "Az önce mutfağı temizledik.",
+      pronunciation: "nu-vö-non-dö-ne-tua-ye-la-küi-zin",
+    },
+    {
+      text: "Tu peux repasser les chemises ?",
+      meaning: "Gömlekleri ütüleyebilir misin?",
+      pronunciation: "tü-pö-rö-pa-se-le-şö-miz",
     },
   ],
 };
@@ -919,17 +966,17 @@ const unit344Phrases: FrenchA2UnitPhrases = {
   title: "Günlük Haberler",
   phrases: [
     {
-      text: "Tu as vu les infos?",
+      text: "Tu as vu les infos ?",
       meaning: "Haberleri gördün mü?",
       pronunciation: "tü-a-vü-le-zen-fo",
     },
     {
-      text: "Qu'est-ce qui s'est passé?",
+      text: "Qu'est-ce qui s'est passé ?",
       meaning: "Ne oldu?",
       pronunciation: "kes-ki-se-pa-se",
     },
     {
-      text: "C'est incroyable!",
+      text: "C'est incroyable !",
       meaning: "İnanılmaz!",
       pronunciation: "se-ten-krua-yabl",
     },
@@ -937,6 +984,36 @@ const unit344Phrases: FrenchA2UnitPhrases = {
       text: "J'ai lu dans le journal.",
       meaning: "Gazetede okudum.",
       pronunciation: "je-lü-dan-lö-jur-nal",
+    },
+    {
+      text: "La météo était terrible hier soir.",
+      meaning: "Dün akşam hava durumu berbattı.",
+      pronunciation: "la-me-te-o-e-te-te-ribl-iyer-suar",
+    },
+    {
+      text: "Il y avait beaucoup de vent.",
+      meaning: "Çok rüzgar vardı.",
+      pronunciation: "il-ya-ve-bo-ku-dö-van",
+    },
+    {
+      text: "Les gens regardaient les infos.",
+      meaning: "İnsanlar haberleri izliyordu.",
+      pronunciation: "le-jan-rö-gar-de-le-zen-fo",
+    },
+    {
+      text: "Je parlais avec les gens.",
+      meaning: "İnsanlarla konuşuyordum.",
+      pronunciation: "jö-par-le-a-vek-le-jan",
+    },
+    {
+      text: "Ils étaient très stressés !",
+      meaning: "Çok stresliydiler!",
+      pronunciation: "ilz-e-te-tre-stre-se",
+    },
+    {
+      text: "Quand j'étais jeune, je lisais le journal.",
+      meaning: "Gençken gazete okurdum.",
+      pronunciation: "kan-je-te-jön-jö-li-ze-lö-jur-nal",
     },
   ],
 };
@@ -946,24 +1023,34 @@ const unit345Phrases: FrenchA2UnitPhrases = {
   title: "TV Programları",
   phrases: [
     {
-      text: "Qu'est-ce qu'il y a à la télé?",
-      meaning: "TV'de ne var?",
-      pronunciation: "kes-kil-ya-a-la-te-le",
+      text: "Passe-moi la télécommande, s'il te plaît.",
+      meaning: "Lütfen bana kumandayı uzat.",
+      pronunciation: "pas-mua-la-te-le-ko-mand, sil-tö-ple",
     },
     {
-      text: "Change de chaîne.",
-      meaning: "Kanal değiştir.",
-      pronunciation: "şanj-dö-şen",
+      text: "Pourquoi ? L'émission qui commence est très bien.",
+      meaning: "Neden? Başlayan program çok iyi.",
+      pronunciation: "pur-kua ? le-mi-syon ki komans e tre biyen",
     },
     {
-      text: "J'adore cette série.",
-      meaning: "Bu diziye bayılıyorum.",
-      pronunciation: "ja-dor-set-se-ri",
+      text: "Non, c'est le présentateur que je déteste ! Il parle trop.",
+      meaning: "Hayır, bu benim nefret ettiğim sunucu! Çok konuşuyor.",
+      pronunciation: "non, se lö pre-zan-ta-tör kö jö de-test ! il parl tro",
     },
     {
-      text: "C'est à quelle heure?",
-      meaning: "Saat kaçta?",
-      pronunciation: "se-ta-kel-ör",
+      text: "Alors, on regarde les infos ?",
+      meaning: "Öyleyse haberleri mi izleyelim?",
+      pronunciation: "a-lor, on rö-gard le zen-fo ?",
+    },
+    {
+      text: "D'accord. Mets la chaîne que tu préfères.",
+      meaning: "Tamam. Senin tercih ettiğin kanalı aç.",
+      pronunciation: "da-kor. me la şen kö tü pre-fer",
+    },
+    {
+      text: "Super. C'est une chaîne qui donne de bonnes nouvelles.",
+      meaning: "Süper. Bu, iyi haberler veren bir kanal.",
+      pronunciation: "sü-per. se tün şen ki don dö bon nu-vel",
     },
   ],
 };

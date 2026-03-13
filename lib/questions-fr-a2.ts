@@ -1015,342 +1015,603 @@ const unit339Quiz4: Question[] = [
 ];
 
 const unit340Quiz1: Question[] = [
-    // KOLAY (8 Soru) - Temel Malzemeler
-    { id: 1, type: "SELECT", question: "'Le sel' ne demek?", options: [{ id: "a", text: "Tuz", correct: true }, { id: "b", text: "Şeker", correct: false }, { id: "c", text: "Un", correct: false }, { id: "d", text: "Yağ", correct: false }] },
-    { id: 2, type: "SELECT", question: "'Le sucre' ne demek?", options: [{ id: "a", text: "Şeker", correct: true }, { id: "b", text: "Tuz", correct: false }, { id: "c", text: "Biber", correct: false }, { id: "d", text: "Süt", correct: false }] },
-    { id: 3, type: "SELECT", question: "'L'huile' ne demek?", options: [{ id: "a", text: "Yağ", correct: true }, { id: "b", text: "Su", correct: false }, { id: "c", text: "Sirke", correct: false }, { id: "d", text: "Süt", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Passe-moi le ___.", options: [{ id: "a", text: "sel", correct: true }, { id: "b", text: "selle", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut du ___.", options: [{ id: "a", text: "sucre", correct: true }, { id: "b", text: "sel", correct: false }] },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "De la farine", options: [{ id: "a", text: "Un", correct: true }, { id: "b", text: "Şeker", correct: false }, { id: "c", text: "Tuz", correct: false }, { id: "d", text: "Pirinç", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Le poivre' ne demek?", options: [{ id: "a", text: "Karabiber", correct: true }, { id: "b", text: "Tuz", correct: false }, { id: "c", text: "Şeker", correct: false }, { id: "d", text: "Kimyon", correct: false }] },
-    { id: 8, type: "SELECT", question: "'Le beurre' ne demek?", options: [{ id: "a", text: "Tereyağı", correct: true }, { id: "b", text: "Peynir", correct: false }, { id: "c", text: "Yoğurt", correct: false }, { id: "d", text: "Kaymak", correct: false }] },
+    // KOLAY (8 Soru) - Mutfak Fiilleri ve Kelimeleri
+    { id: 1, type: "SELECT", question: "'Couper' ne demek?", options: [{ id: "a", text: "Kesmek / Doğramak", correct: true }, { id: "b", text: "Yıkamak", correct: false }, { id: "c", text: "Karıştırmak", correct: false }, { id: "d", text: "Eklemek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Laver' ne demek?", options: [{ id: "a", text: "Kesmek", correct: false }, { id: "b", text: "İzlemek", correct: false }, { id: "c", text: "Yıkamak", correct: true }, { id: "d", text: "Eklemek", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Les tomates' ne demek?", options: [{ id: "a", text: "Soğanlar", correct: false }, { id: "b", text: "Domatesler", correct: true }, { id: "c", text: "Sebzeler", correct: false }, { id: "d", text: "Patatesler", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Mélange la ___.", options: [{ id: "a", text: "sauce", correct: true }, { id: "b", text: "saucisse", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Ajoute le ___.", options: [{ id: "a", text: "sel", correct: true }, { id: "b", text: "sucre", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les oignons", options: [{ id: "a", text: "Soğanlar", correct: true }, { id: "b", text: "Sarımsaklar", correct: false }, { id: "c", text: "Domatesler", correct: false }, { id: "d", text: "Biberler", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Pleurer' fiilinin anlamı nedir?", options: [{ id: "a", text: "Gülmek", correct: false }, { id: "b", text: "Ağlamak", correct: true }, { id: "c", text: "Bağırmak", correct: false }, { id: "d", text: "Konuşmak", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La casserole' ne anlama gelir?", options: [{ id: "a", text: "Tencere", correct: true }, { id: "b", text: "Tava", correct: false }, { id: "c", text: "Fırın", correct: false }, { id: "d", text: "Kaşık", correct: false }] },
 
-    // ORTA (7 Soru) - Mutfak Eylemleri
-    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Soğanları doğrayın", correctAnswer: "Coupez les oignons" },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Tuz ekleyin", correctAnswer: "Ajoutez du sel" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Faites ___ l'eau.", options: [{ id: "a", text: "bouillir", correct: true }, { id: "b", text: "bouilli", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ le tout.", options: [{ id: "a", text: "Mélangez", correct: true }, { id: "b", text: "Mélanger", correct: false }] },
-    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Faire cuire au four", options: [{ id: "a", text: "Fırında pişirmek", correct: true }, { id: "b", text: "Tavada pişirmek", correct: false }, { id: "c", text: "Haşlamak", correct: false }, { id: "d", text: "Kızartmak", correct: false }] },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___ les pommes de terre.", options: [{ id: "a", text: "Épluchez", correct: true }, { id: "b", text: "Éplucher", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "İyice karıştırın", correctAnswer: "Mélangez bien" },
+    // ORTA (7 Soru) - Emir Kipi Mantığı ("Tu" Formu)
+    { id: 9, type: "SELECT", question: "Emir kipinde 'Sen' (Tu) formunda -ER bitimli fiillerin sonundaki hangi harf DÜŞER?", options: [{ id: "a", text: "e", correct: false }, { id: "b", text: "r", correct: false }, { id: "c", text: "s", correct: true }, { id: "d", text: "t", correct: false }] },
+    { id: 10, type: "SELECT", question: "Hangi cümle DOĞRU bir emir cümlesidir? (Sen kes)", options: [{ id: "a", text: "Coupes les tomates !", correct: false }, { id: "b", text: "Coupe les tomates !", correct: true }, { id: "c", text: "Tu coupes les tomates !", correct: false }, { id: "d", text: "Couper les tomates !", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Sebzeleri yıka!", correctAnswer: "Lave les légumes !" },
+    { id: 12, type: "FILL_BLANK", question: "Doldur (-ER fiil, 'Sen' emiri):", sentence: "___ la télé !", options: [{ id: "a", text: "Regarde", correct: true }, { id: "b", text: "Regardes", correct: false }] },
+    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Mélange le sel", options: [{ id: "a", text: "Tuzu karıştır (Sen)", correct: true }, { id: "b", text: "Tuzu karıştırın (Siz)", correct: false }, { id: "c", text: "Tuzu karıştırıyoruz", correct: false }, { id: "d", text: "Tuzu ekle", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___ des tomates ! (Domates ekle!)", options: [{ id: "a", text: "Ajoute", correct: true }, { id: "b", text: "Ajoutes", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Akşam yemeğini ye!", correctAnswer: "Mange le dîner !" },
 
-    // ZOR (5 Soru) - Tarif
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Kısık ateşte pişirin", correctAnswer: "Faites cuire à feu doux" },
-    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "10 dakika bekletin", correctAnswer: "Laissez reposer 10 minutes" },
-    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Versez le mélange dans un ___.", options: [{ id: "a", text: "moule", correct: true }, { id: "b", text: "moulé", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Fırını önceden ısıtın", correctAnswer: "Préchauffez le four" },
-    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Sıcak servis yapın", correctAnswer: "Servez chaud" }
+    // ZOR (5 Soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Büyük asistanı çağır!", correctAnswer: "Appelle le grand assistant !" },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la porte du four ! (Fırın kapısını aç!)", options: [{ id: "a", text: "Ouvre", correct: true }, { id: "b", text: "Ouvres", correct: false }] },
+    { id: 18, type: "SELECT", question: "'Ne pleure pas !' ne anlama gelir?", options: [{ id: "a", text: "Ağla!", correct: false }, { id: "b", text: "Ağlıyorsun", correct: false }, { id: "c", text: "Ağlama!", correct: true }, { id: "d", text: "Ağlamayalım!", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Televizyon izleme!", correctAnswer: "Ne regarde pas la télé !" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Her şeyi tencereye koy!", correctAnswer: "Mets tout dans la casserole !" }
 ];
 
 const unit340Quiz2: Question[] = [
-    // KOLAY (8 Soru) - Mutfak Eşyaları
-    { id: 1, type: "SELECT", question: "'La casserole' ne demek?", options: [{ id: "a", text: "Tencere", correct: true }, { id: "b", text: "Tava", correct: false }, { id: "c", text: "Tabak", correct: false }, { id: "d", text: "Kaşık", correct: false }] },
-    { id: 2, type: "SELECT", question: "'La poêle' ne demek?", options: [{ id: "a", text: "Tava", correct: true }, { id: "b", text: "Tencere", correct: false }, { id: "c", text: "Fırın", correct: false }, { id: "d", text: "Bıçak", correct: false }] },
-    { id: 3, type: "SELECT", question: "'Le four' ne demek?", options: [{ id: "a", text: "Fırın", correct: true }, { id: "b", text: "Ocak", correct: false }, { id: "c", text: "Dolap", correct: false }, { id: "d", text: "Masa", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Mets la ___ sur le feu.", options: [{ id: "a", text: "casserole", correct: true }, { id: "b", text: "table", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Ouvre le ___.", options: [{ id: "a", text: "frigo", correct: true }, { id: "b", text: "frit", correct: false }] },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Un couteau pointu", options: [{ id: "a", text: "Sivri bir bıçak", correct: true }, { id: "b", text: "Kör bir bıçak", correct: false }, { id: "c", text: "Büyük bir bıçak", correct: false }, { id: "d", text: "Küçük bir bıçak", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Le bol' ne demek?", options: [{ id: "a", text: "Kase", correct: true }, { id: "b", text: "Bardak", correct: false }, { id: "c", text: "Şişe", correct: false }, { id: "d", text: "Tabak", correct: false }] },
-    { id: 8, type: "SELECT", question: "'La cuillère' ne demek?", options: [{ id: "a", text: "Kaşık", correct: true }, { id: "b", text: "Çatal", correct: false }, { id: "c", text: "Bıçak", correct: false }, { id: "d", text: "Kepçe", correct: false }] },
+    // KOLAY (8 Soru) - Mutfak Eşyaları ve Kelimeleri
+    { id: 1, type: "SELECT", question: "'Le four' ne demek?", options: [{ id: "a", text: "Fırın", correct: true }, { id: "b", text: "Tencere", correct: false }, { id: "c", text: "Kase", correct: false }, { id: "d", text: "Masa", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le bol' ne demek?", options: [{ id: "a", text: "Tabak", correct: false }, { id: "b", text: "Kase", correct: true }, { id: "c", text: "Kaşık", correct: false }, { id: "d", text: "Tava", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Sucré' ne demek?", options: [{ id: "a", text: "Tuzlu", correct: false }, { id: "b", text: "Acı", correct: false }, { id: "c", text: "Tatlı / Şekerli", correct: true }, { id: "d", text: "Ekşi", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Le dîner est ___ ! (Akşam yemeği hazır!)", options: [{ id: "a", text: "prêt", correct: true }, { id: "b", text: "près", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ ! (Bu lezzetli!)", options: [{ id: "a", text: "délicieux", correct: true }, { id: "b", text: "salé", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ensuite, on mange", options: [{ id: "a", text: "Sonra / Ardından yiyoruz", correct: true }, { id: "b", text: "Önce yiyoruz", correct: false }, { id: "c", text: "Şimdi yiyoruz", correct: false }, { id: "d", text: "Asla yemiyoruz", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Salé' ne demek?", options: [{ id: "a", text: "Tatlı", correct: false }, { id: "b", text: "Tuzlu", correct: true }, { id: "c", text: "Sıcak", correct: false }, { id: "d", text: "Soğuk", correct: false }] },
+    { id: 8, type: "SELECT", question: "Hangi kelime 'Sebzeler' anlamına gelir?", options: [{ id: "a", text: "Les fruits", correct: false }, { id: "b", text: "Les oignons", correct: false }, { id: "c", text: "Les tomates", correct: false }, { id: "d", text: "Les légumes", correct: true }] },
 
-    // ORTA (7 Soru) - Kullanım
-    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Tencereyi kapağıyla kapatın", correctAnswer: "Couvrez la casserole" },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Tavayı yağlayın", correctAnswer: "Huilez la poêle" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Utilisez une ___ en bois.", options: [{ id: "a", text: "cuillère", correct: true }, { id: "b", text: "couteau", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Lavez les ___.", options: [{ id: "a", text: "légumes", correct: true }, { id: "b", text: "légume", correct: false }] },
-    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Râper le fromage", options: [{ id: "a", text: "Peyniri rendelemek", correct: true }, { id: "b", text: "Peyniri kesmek", correct: false }, { id: "c", text: "Peyniri eritmek", correct: false }, { id: "d", text: "Peyniri yemek", correct: false }] },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Battez les ___.", options: [{ id: "a", text: "œufs", correct: true }, { id: "b", text: "œuf", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bulaşıkları yıkayın", correctAnswer: "Faites la vaisselle" },
+    // ORTA (7 Soru) - Emir Kipi Mantığı ("Vous" ve "Nous" Formları)
+    { id: 9, type: "SELECT", question: "'Nous' (Biz) formunda emir verirken (Hadi yapalım) fiilin sonu nasıl biter?", options: [{ id: "a", text: "-e", correct: false }, { id: "b", text: "-ez", correct: false }, { id: "c", text: "-ons", correct: true }, { id: "d", text: "-ent", correct: false }] },
+    { id: 10, type: "SELECT", question: "Hangi cümle 'Hadi yiyelim!' anlamına gelir?", options: [{ id: "a", text: "Mangez !", correct: false }, { id: "b", text: "Vous mangez !", correct: false }, { id: "c", text: "Mangeons !", correct: true }, { id: "d", text: "Mange !", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Lütfen sebzeleri kesin! (Siz/Kibar)", correctAnswer: "Coupez les légumes, s'il vous plaît !" },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ dans la casserole ! (Tencereye ekleyin! - Siz)", options: [{ id: "a", text: "Ajoutez", correct: true }, { id: "b", text: "Ajoute", correct: false }] },
+    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ne mélangez pas tout", options: [{ id: "a", text: "Her şeyi karıştırmayın (Siz)", correct: true }, { id: "b", text: "Her şeyi karıştırma (Sen)", correct: false }, { id: "c", text: "Her şeyi karıştırın (Siz)", correct: false }, { id: "d", text: "Hadi her şeyi karıştıralım", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la télé ce soir ! (Hadi bu akşam TV izleyelim!)", options: [{ id: "a", text: "Regardons", correct: true }, { id: "b", text: "Regardez", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hadi sebzeleri yıkayalım!", correctAnswer: "Lavons les légumes !" },
 
-    // ZOR (5 Soru) - Teknikler
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Suyunu süzün", correctAnswer: "Égouttez l'eau" },
-    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Köpürtün", correctAnswer: "Faites mousser" },
-    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Coupez en petits ___.", options: [{ id: "a", text: "morceaux", correct: true }, { id: "b", text: "bouts", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Altın rengi olana kadar pişirin", correctAnswer: "Faites cuire jusqu'à ce que ce soit doré" },
-    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Kaynatmayın", correctAnswer: "Ne faites pas bouillir" }
+    // ZOR (5 Soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Domatesleri kesmeyin! (Siz)", correctAnswer: "Ne coupez pas les tomates !" },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "___ le dîner dans le four ! (Siz - Akşam yemeğini fırına koyun!)", options: [{ id: "a", text: "Mettez", correct: true }, { id: "b", text: "Mets", correct: false }] },
+    { id: 18, type: "SELECT", question: "Hangi cümle YANLIŞTIR?", options: [{ id: "a", text: "Mangeons le dîner !", correct: false }, { id: "b", text: "Regarde le four !", correct: false }, { id: "c", text: "Ne pleures pas !", correct: true }, { id: "d", text: "Ajoutez le sel !", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Ağlamayalım!", correctAnswer: "Ne pleurons pas !" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hadi tuzu tencereye ekleyelim!", correctAnswer: "Ajoutons le sel dans la casserole !" }
 ];
 
 const unit340Quiz3: Question[] = [
-    // KOLAY (8 Soru) - Tatlar
-    { id: 1, type: "SELECT", question: "'Sucré' ne demek?", options: [{ id: "a", text: "Tatlı / Şekerli", correct: true }, { id: "b", text: "Tuzlu", correct: false }, { id: "c", text: "Acı", correct: false }, { id: "d", text: "Ekşi", correct: false }] },
-    { id: 2, type: "SELECT", question: "'Salé' ne demek?", options: [{ id: "a", text: "Tuzlu", correct: true }, { id: "b", text: "Tatlı", correct: false }, { id: "c", text: "Acı", correct: false }, { id: "d", text: "Ekşi", correct: false }] },
-    { id: 3, type: "SELECT", question: "'Amer' ne demek?", options: [{ id: "a", text: "Acı (Kahve gibi)", correct: true }, { id: "b", text: "Tatlı", correct: false }, { id: "c", text: "Ekşi", correct: false }, { id: "d", text: "Tuzlu", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce gâteau est très ___.", options: [{ id: "a", text: "sucré", correct: true }, { id: "b", text: "salé", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime le goût ___.", options: [{ id: "a", text: "épicé", correct: true }, { id: "b", text: "épice", correct: false }] },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est trop salé", options: [{ id: "a", text: "Bu çok tuzlu", correct: true }, { id: "b", text: "Bu çok tatlı", correct: false }, { id: "c", text: "Bu çok acı", correct: false }, { id: "d", text: "Bu çok ekşi", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Acide' ne demek?", options: [{ id: "a", text: "Ekşi / Asitli", correct: true }, { id: "b", text: "Tatlı", correct: false }, { id: "c", text: "Tuzlu", correct: false }, { id: "d", text: "Acı", correct: false }] },
-    { id: 8, type: "SELECT", question: "'Frais' ne demek?", options: [{ id: "a", text: "Taze / Serin", correct: true }, { id: "b", text: "Bayat", correct: false }, { id: "c", text: "Sıcak", correct: false }, { id: "d", text: "Pişmiş", correct: false }] },
+    // KOLAY (8 Soru) - Kelimeler ve Anlamlar
+    { id: 1, type: "SELECT", question: "'Le dîner' ne demek?", options: [{ id: "a", text: "Kahvaltı", correct: false }, { id: "b", text: "Öğle yemeği", correct: false }, { id: "c", text: "Akşam yemeği", correct: true }, { id: "d", text: "Tatlı", correct: false }] },
+    { id: 2, type: "SELECT", question: "Aşağıdakilerden hangisi bir eylem (fiil) DEĞİLDİR?", options: [{ id: "a", text: "Couper", correct: false }, { id: "b", text: "Regarder", correct: false }, { id: "c", text: "Mélanger", correct: false }, { id: "d", text: "La casserole", correct: true }] },
+    { id: 3, type: "SELECT", question: "'Un peu de' ne anlama gelir?", options: [{ id: "a", text: "Çok fazla", correct: false }, { id: "b", text: "Hiç", correct: false }, { id: "c", text: "Biraz", correct: true }, { id: "d", text: "Her zaman", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "La sauce est très ___ ! (Tatlı)", options: [{ id: "a", text: "sucrée", correct: true }, { id: "b", text: "salée", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Passe-moi le ___ ! (Kase)", options: [{ id: "a", text: "bol", correct: true }, { id: "b", text: "four", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est délicieux", options: [{ id: "a", text: "Bu çok lezzetli", correct: true }, { id: "b", text: "Bu çok kötü", correct: false }, { id: "c", text: "Bu çok tuzlu", correct: false }, { id: "d", text: "Bu çok şekerli", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Lentement' ne demek?", options: [{ id: "a", text: "Hızlıca", correct: false }, { id: "b", text: "Yavaşça", correct: true }, { id: "c", text: "Çok kötü", correct: false }, { id: "d", text: "Harika", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Trop vite' ne demek?", options: [{ id: "a", text: "Çok yavaş", correct: false }, { id: "b", text: "Çok hızlı", correct: true }, { id: "c", text: "Yeterince", correct: false }, { id: "d", text: "Çok az", correct: false }] },
 
-    // ORTA (7 Soru) - Tanımlama
-    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Çok lezzetli", correctAnswer: "C'est délicieux" },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Tadı yok", correctAnswer: "Ça n'a pas de goût" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "La sauce est ___.", options: [{ id: "a", text: "épicée", correct: true }, { id: "b", text: "épicé", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un plat ___.", options: [{ id: "a", text: "traditionnel", correct: true }, { id: "b", text: "tradition", correct: false }] },
-    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça sent bon", options: [{ id: "a", text: "Güzel kokuyor", correct: true }, { id: "b", text: "Kötü kokuyor", correct: false }, { id: "c", text: "Tadı güzel", correct: false }, { id: "d", text: "Tadı kötü", correct: false }] },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il manque du ___.", options: [{ id: "a", text: "sel", correct: true }, { id: "b", text: "selle", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Çok baharatlı", correctAnswer: "C'est très épicé" },
+    // ORTA (7 Soru) - Olumsuz Emir ve Karışık Pratik
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Çok hızlı karıştırma! (Sen)", correctAnswer: "Ne mélange pas trop vite !" },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Tuz eklemeyin! (Siz)", correctAnswer: "N'ajoutez pas de sel !" },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas le dîner ! (Sen - Yeme!)", options: [{ id: "a", text: "mange", correct: true }, { id: "b", text: "mangons", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ les oignons ! (Siz - Doğrayın!)", options: [{ id: "a", text: "Coupez", correct: true }, { id: "b", text: "Coupons", correct: false }] },
+    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ne regarde pas", options: [{ id: "a", text: "İzleme / Bakma (Sen)", correct: true }, { id: "b", text: "İzlemeyin (Siz)", correct: false }, { id: "c", text: "İzlemeyelim", correct: false }, { id: "d", text: "Lütfen izle", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas dans le four ! (Siz - Fırına koymayın!)", options: [{ id: "a", text: "mettez", correct: true }, { id: "b", text: "mets", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hadi sebzeleri karıştırmayalım!", correctAnswer: "Ne mélangeons pas les légumes !" },
 
-    // ZOR (5 Soru) - Detaylı Tatlar
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Hafif bir tat", correctAnswer: "Un goût léger" },
-    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Bu meyve ekşi", correctAnswer: "Ce fruit est acide" },
-    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "La texture est ___.", options: [{ id: "a", text: "crémeuse", correct: true }, { id: "b", text: "crème", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Ağızda eriyor", correctAnswer: "Ça fond dans la bouche" },
-    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Biraz daha tuz ekle", correctAnswer: "Ajoute un peu plus de sel" }
+    // ZOR (5 Soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Önce, domatesleri iyi yıka!", correctAnswer: "D'abord, lave bien les tomates !" },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "___ les garçons ! (Sen - Garsonları çağır!)", options: [{ id: "a", text: "Appelle", correct: true }, { id: "b", text: "Appelles", correct: false }] },
+    { id: 18, type: "SELECT", question: "Aşağıdaki emir cümlelerinden hangisi dilbilgisi açısından YANLIŞTIR?", options: [{ id: "a", text: "Laves bien les tomates !", correct: true }, { id: "b", text: "Ne pleure pas !", correct: false }, { id: "c", text: "Mélangeons la sauce !", correct: false }, { id: "d", text: "Regardez le chef !", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Sosu yavaşça karıştır! (Sen)", correctAnswer: "Mélange la sauce lentement !" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hadi yemeği kaseye koyalım!", correctAnswer: "Mettons le repas dans le bol !" }
 ];
 
 const unit340Quiz4: Question[] = [
-    // KOLAY (8 Soru) - Karışık Mutfak
-    { id: 1, type: "SELECT", question: "'Le chef' ne demek?", options: [{ id: "a", text: "Aşçıbaşı / Şef", correct: true }, { id: "b", text: "Garson", correct: false }, { id: "c", text: "Müdür", correct: false }, { id: "d", text: "Patron", correct: false }] },
-    { id: 2, type: "SELECT", question: "'La cuisine' ne demek?", options: [{ id: "a", text: "Mutfak / Yemek pişirme", correct: true }, { id: "b", text: "Salon", correct: false }, { id: "c", text: "Banyo", correct: false }, { id: "d", text: "Bahçe", correct: false }] },
-    { id: 3, type: "SELECT", question: "'Le repas' ne demek?", options: [{ id: "a", text: "Öğün / Yemek", correct: true }, { id: "b", text: "Kahvaltı", correct: false }, { id: "c", text: "Tatlı", correct: false }, { id: "d", text: "İçecek", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime faire la ___.", options: [{ id: "a", text: "cuisine", correct: true }, { id: "b", text: "cuisinier", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ma ___ préférée.", options: [{ id: "a", text: "recette", correct: true }, { id: "b", text: "reçu", correct: false }] },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Mettre la table", options: [{ id: "a", text: "Masayı kurmak", correct: true }, { id: "b", text: "Masayı toplamak", correct: false }, { id: "c", text: "Masayı silmek", correct: false }, { id: "d", text: "Masayı taşımak", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Gouter' ne demek?", options: [{ id: "a", text: "Tatmak", correct: true }, { id: "b", text: "Yemek", correct: false }, { id: "c", text: "İçmek", correct: false }, { id: "d", text: "Pişirmek", correct: false }] },
-    { id: 8, type: "SELECT", question: "'Préparer' ne demek?", options: [{ id: "a", text: "Hazırlamak", correct: true }, { id: "b", text: "Yemek", correct: false }, { id: "c", text: "Almak", correct: false }, { id: "d", text: "Vermemek", correct: false }] },
+    // KOLAY (8 Soru) - Genel İfadeler
+    { id: 1, type: "SELECT", question: "'Surtout' ne demek?", options: [{ id: "a", text: "Asla", correct: false }, { id: "b", text: "Belki", correct: false }, { id: "c", text: "Özellikle", correct: true }, { id: "d", text: "Bazen", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Finalement' ne anlama gelir?", options: [{ id: "a", text: "İlk olarak", correct: false }, { id: "b", text: "Son olarak", correct: true }, { id: "c", text: "Her zaman", correct: false }, { id: "d", text: "Hiçbir zaman", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Allons-y !' ne demek?", options: [{ id: "a", text: "Hadi gidelim / başlayalım!", correct: true }, { id: "b", text: "Durun!", correct: false }, { id: "c", text: "Bilmiyorum", correct: false }, { id: "d", text: "Olsun", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "___, ce sera fantastique ! (Bu akşam)", options: [{ id: "a", text: "Ce soir", correct: true }, { id: "b", text: "Ce matin", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Coupe les ___, mais ne pleure pas ! (Soğanları)", options: [{ id: "a", text: "oignons", correct: true }, { id: "b", text: "tomates", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Du poivre", options: [{ id: "a", text: "Biraz karabiber", correct: true }, { id: "b", text: "Biraz tuz", correct: false }, { id: "c", text: "Biraz şeker", correct: false }, { id: "d", text: "Biraz su", correct: false }] },
+    { id: 7, type: "SELECT", question: "Hangi kelime 'Tencere' demektir?", options: [{ id: "a", text: "La casserole", correct: true }, { id: "b", text: "Le bol", correct: false }, { id: "c", text: "Le four", correct: false }, { id: "d", text: "Le sel", correct: false }] },
+    { id: 8, type: "SELECT", question: "Hangi emir formu 'Biz' (Nous) için kullanılır?", options: [{ id: "a", text: "Mangez", correct: false }, { id: "b", text: "Mange", correct: false }, { id: "c", text: "Mangeons", correct: true }, { id: "d", text: "Mangent", correct: false }] },
 
-    // ORTA (7 Soru)
-    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Yemek hazır", correctAnswer: "Le repas est prêt" },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Bulaşık makinesini boşalt", correctAnswer: "Vide le lave-vaisselle" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu cuisines ___.", options: [{ id: "a", text: "bien", correct: true }, { id: "b", text: "bon", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est une spécialité ___.", options: [{ id: "a", text: "locale", correct: true }, { id: "b", text: "local", correct: false }] },
-    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une pincée de sel", options: [{ id: "a", text: "Bir tutam tuz", correct: true }, { id: "b", text: "Bir kaşık tuz", correct: false }, { id: "c", text: "Bir paket tuz", correct: false }, { id: "d", text: "Bir kilo tuz", correct: false }] },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut ___ les ingrédients.", options: [{ id: "a", text: "peser", correct: true }, { id: "b", text: "pesé", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Fırın kapağını açma", correctAnswer: "N'ouvre pas la porte du four" },
+    // ORTA (7 Soru) - Karışık Emirler ve Cümle Kurma
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Lütfen bana biraz tuz ekleyin (Siz)", correctAnswer: "Ajoutez un peu de sel, s'il vous plaît" },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Televizyonu kapatın! (Siz)", correctAnswer: "Fermez la télé !" },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas les légumes dans le four ! (Sen - Yıkama!)", options: [{ id: "a", text: "lave", correct: true }, { id: "b", text: "lavez", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ tout le dîner ! (Sen - Yeme!)", options: [{ id: "a", text: "Ne mange pas", correct: true }, { id: "b", text: "Ne mangez pas", correct: false }] },
+    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ouvrons beaucoup", options: [{ id: "a", text: "Hadi çok açalım", correct: true }, { id: "b", text: "Hadi çok kapatalım", correct: false }, { id: "c", text: "Hadi çok yiyelim", correct: false }, { id: "d", text: "Hadi çok uyuyalım", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___-moi s'il te plaît. (Sen - Beni ara/çağır)", options: [{ id: "a", text: "Appelle", correct: true }, { id: "b", text: "Appelez", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hadi tencereyi yıkayalım!", correctAnswer: "Lavons la casserole !" },
 
-    // ZOR (5 Soru)
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Yemeği yaktım", correctAnswer: "J'ai brûlé le repas" },
-    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Bu tarif çok kolay", correctAnswer: "Cette recette est très facile" },
-    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai besoin d'un ___ de cuisine.", options: [{ id: "a", text: "robot", correct: true }, { id: "b", text: "machine", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Malzemeler taze olmalı", correctAnswer: "Les ingrédients doivent être frais" },
-    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Aşçılık kursuna gidiyorum", correctAnswer: "Je prends des cours de cuisine" }
+    // ZOR (5 Soru) - Kompleks Emirler ve Kelimeler
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Soğanları çok hızlı kesme!", correctAnswer: "Ne coupe pas les oignons trop vite !" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Masayı kurmaları için garsonları çağır!", correctAnswer: "Appelle les garçons pour mettre la table !" },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la sauce lentement, surtout pas trop vite ! (Siz - Karıştırın)", options: [{ id: "a", text: "Mélangez", correct: true }, { id: "b", text: "Mélange", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bu yemeği izlemeyelim!", correctAnswer: "Ne regardons pas ce dîner !" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Her şeyi bitir! (Sen - Finir)", correctAnswer: "Finis tout !" }
 ];
 
 // Üniteler 341-360
 
 // UNIT 341: Karşılaştırmalar (Comparisons)
+// UNIT 341: Karşılaştırma & Alışveriş Adjektifleri (Comparatif)
+// Quiz 1: KOLAY (20 Soru) - Sıfat Sözlüğü ve Karşılaştırma Temelleri
 const unit341Quiz1: Question[] = [
-    // KOLAY (8 Soru) - Temel Yapılar
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Daha pahalı", correctAnswer: "Plus cher" },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ cher que l'autre.", options: [{ id: "a", text: "moins", correct: true }, { id: "b", text: "plus de", correct: false }] },
-    { id: 3, type: "SELECT", question: "'Aussi grand que' ne demek?", options: [{ id: "a", text: "Kadar büyük", correct: true }, { id: "b", text: "Daha büyük", correct: false }, { id: "c", text: "Daha az büyük", correct: false }, { id: "d", text: "En büyük", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est plus ___ que toi.", options: [{ id: "a", text: "rapide", correct: true }, { id: "b", text: "rapidement", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Daha az güzel", correctAnswer: "Moins beau" },
-    { id: 6, type: "SELECT", question: "'Plus intelligent' ne demek?", options: [{ id: "a", text: "Daha zeki", correct: true }, { id: "b", text: "Daha az zeki", correct: false }, { id: "c", text: "Zeki kadar", correct: false }, { id: "d", text: "En zeki", correct: false }] },
-    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___ gentille que sa sœur.", options: [{ id: "a", text: "aussi", correct: true }, { id: "b", text: "autant", correct: false }] },
-    { id: 8, type: "TRANSLATE", question: "Çevir:", hint: "Benim kadar", correctAnswer: "Aussi que moi" }
+    { id: 1, type: "SELECT", question: "'Cher' ne demek?", options: [{ id: "a", text: "Ucuz", correct: false }, { id: "b", text: "Pahalı", correct: true }, { id: "c", text: "Büyük", correct: false }, { id: "d", text: "Küçük", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Bon marché' ne demek?", options: [{ id: "a", text: "Pahalı", correct: false }, { id: "b", text: "Taze", correct: false }, { id: "c", text: "Ucuz", correct: true }, { id: "d", text: "Büyük", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Joli' ne demek?", options: [{ id: "a", text: "Çirkin", correct: false }, { id: "b", text: "Güzel", correct: true }, { id: "c", text: "Büyük", correct: false }, { id: "d", text: "Rahat", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Petit' ne demek?", options: [{ id: "a", text: "Büyük", correct: false }, { id: "b", text: "Şık", correct: false }, { id: "c", text: "Küçük", correct: true }, { id: "d", text: "Yeni", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Grand' ne demek?", options: [{ id: "a", text: "Büyük", correct: true }, { id: "b", text: "Küçük", correct: false }, { id: "c", text: "Şık", correct: false }, { id: "d", text: "Rahat", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Plus' ne anlama gelir?", options: [{ id: "a", text: "Daha az", correct: false }, { id: "b", text: "Daha / Daha fazla", correct: true }, { id: "c", text: "Kadar", correct: false }, { id: "d", text: "Hiç", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Moins' ne anlama gelir?", options: [{ id: "a", text: "Daha fazla", correct: false }, { id: "b", text: "Kadar", correct: false }, { id: "c", text: "Daha az", correct: true }, { id: "d", text: "Çok", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Aussi' ne anlama gelir?", options: [{ id: "a", text: "Daha fazla", correct: false }, { id: "b", text: "Daha az", correct: false }, { id: "c", text: "Kadar (Eşitlik)", correct: true }, { id: "d", text: "Asla", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Daha pahalı", correctAnswer: "Plus cher" },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Daha ucuz (Daha az pahalı)", correctAnswer: "Moins cher" },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Kadar güzel", correctAnswer: "Aussi beau" },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ cher que l'autre.", options: [{ id: "a", text: "moins", correct: true }, { id: "b", text: "moindre", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___ grande que lui. (Daha uzun/büyük)", options: [{ id: "a", text: "plus", correct: true }, { id: "b", text: "aussi", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le t-shirt est ___ grand que le pull. (Daha az büyük)", options: [{ id: "a", text: "moins", correct: true }, { id: "b", text: "aussi", correct: false }] },
+    { id: 15, type: "SELECT", question: "'Aussi grand que' ne demek?", options: [{ id: "a", text: "Daha büyük", correct: false }, { id: "b", text: "Kadar büyük", correct: true }, { id: "c", text: "Daha az büyük", correct: false }, { id: "d", text: "En büyük", correct: false }] },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Daha az güzel", correctAnswer: "Moins beau" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Daha rahat", correctAnswer: "Plus confortable" },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce pantalon est ___ bon marché que l'autre.", options: [{ id: "a", text: "plus", correct: true }, { id: "b", text: "très", correct: false }] },
+    { id: 19, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est moins cher", options: [{ id: "a", text: "Bu daha ucuz (az pahalı)", correct: true }, { id: "b", text: "Bu daha pahalı", correct: false }, { id: "c", text: "Bu çok pahalı", correct: false }, { id: "d", text: "Bu kadar ucuz", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Daha şık", correctAnswer: "Plus élégant" }
 ];
 
+// Quiz 2: ORTA (20 Soru) - Formül: Ürün + Est + Terazi + Que
 const unit341Quiz2: Question[] = [
-    // ORTA (7 Soru) - Karşılaştırma Cümleleri
-    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce livre est ___ que le film.", options: [{ id: "a", text: "meilleur", correct: true }, { id: "b", text: "bon", correct: false }] },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Pierre, Marie'den daha uzun", correctAnswer: "Pierre est plus grand que Marie" },
-    { id: 11, type: "SELECT", question: "Hangi cümle doğru?", options: [{ id: "a", text: "Elle chante mieux que moi.", correct: true }, { id: "b", text: "Elle chante bon que moi.", correct: false }, { id: "c", text: "Elle chante meilleur que moi.", correct: false }, { id: "d", text: "Elle chante bien que moi.", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Il travaille ___ toi.", options: [{ id: "a", text: "plus que", correct: true }, { id: "b", text: "plus de", correct: false }] },
-    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Daha iyi şarkı söylüyorlar", correctAnswer: "Ils chantent mieux" },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ intéressant.", options: [{ id: "a", text: "moins", correct: true }, { id: "b", text: "moindre", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Daha az çalışıyorsun", correctAnswer: "Tu travailles moins" }
+    { id: 1, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce livre est plus intéressant ___ le film.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Pierre, Marie'den daha uzundur", correctAnswer: "Pierre est plus grand que Marie" },
+    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette veste est moins ___ que l'autre.", options: [{ id: "a", text: "chère", correct: true }, { id: "b", text: "cher", correct: false }] },
+    { id: 4, type: "TRANSLATE", question: "Çevir:", hint: "Bu elbise diğerinden daha güzel", correctAnswer: "Cette robe est plus jolie que l'autre" },
+    { id: 5, type: "SELECT", question: "Hangi cümle doğru?", options: [{ id: "a", text: "Il est plus grand que moi.", correct: true }, { id: "b", text: "Il est plus grand de moi.", correct: false }, { id: "c", text: "Il est plus grand comme moi.", correct: false }, { id: "d", text: "Il est grand que moi.", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Mon sac est ___ lourd que le tien. (kadar)", options: [{ id: "a", text: "aussi", correct: true }, { id: "b", text: "autant", correct: false }] },
+    { id: 7, type: "TRANSLATE", question: "Çevir:", hint: "Bu ayakkabılar o ayakkabılar kadar rahat", correctAnswer: "Ces chaussures sont aussi confortables que ces chaussures-là" },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Paris est ___ grand que Lyon.", options: [{ id: "a", text: "plus", correct: true }, { id: "b", text: "très", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Benim kazağım seninkinden daha az pahalı", correctAnswer: "Mon pull est moins cher que le tien" },
+    { id: 10, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cette robe est aussi belle que l'autre", options: [{ id: "a", text: "Bu elbise diğeri kadar güzel", correct: true }, { id: "b", text: "Bu elbise diğerinden daha güzel", correct: false }, { id: "c", text: "Bu elbise diğerinden daha az güzel", correct: false }, { id: "d", text: "Bu elbise çok güzel", correct: false }] },
+    { id: 11, type: "SELECT", question: "'Moins élégant que' ne demek?", options: [{ id: "a", text: "-den daha az şık", correct: true }, { id: "b", text: "-den daha şık", correct: false }, { id: "c", text: "kadar şık", correct: false }, { id: "d", text: "çok şık", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce chat est ___ gros que le chien.", options: [{ id: "a", text: "moins", correct: true }, { id: "b", text: "peu", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bu araba diğerinden daha hızlı", correctAnswer: "Cette voiture est plus rapide que l'autre" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Elles sont ___ intelligentes que leurs frères.", options: [{ id: "a", text: "aussi", correct: true }, { id: "b", text: "autant", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bu tişört bu kazaktan daha ucuzdur", correctAnswer: "Ce t-shirt est moins cher que ce pull" },
+    { id: 16, type: "SELECT", question: "Çoğul bir kelimeyle (Ces chaussures) hangi fiil çekimi kullanılır?", options: [{ id: "a", text: "sont", correct: true }, { id: "b", text: "est", correct: false }, { id: "c", text: "ont", correct: false }, { id: "d", text: "sommes", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Hangisini tercih edersin?", correctAnswer: "Laquelle tu préfères?" },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Le pantalon est plus cher ___ le t-shirt.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bu ceket ondan daha şık", correctAnswer: "Cette veste est plus élégante qu'elle" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Evet, ama aynı zamanda daha pahalı", correctAnswer: "Oui, mais elle est aussi plus chère" }
 ];
 
+// Quiz 3: ZOR (20 Soru) - İstisna (Meilleur) ve Karmaşık Yapılar
 const unit341Quiz3: Question[] = [
-    // ZOR (5 Soru) - Bon/Meilleur & Bien/Mieux
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bu pasta diğerinden daha iyi", correctAnswer: "Ce gâteau est meilleur que l'autre" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je me sens ___ aujourd'hui.", options: [{ id: "a", text: "mieux", correct: true }, { id: "b", text: "meilleur", correct: false }] },
-    { id: 18, type: "SELECT", question: "'Pire' ne demek?", options: [{ id: "a", text: "Daha kötü", correct: true }, { id: "b", text: "Daha iyi", correct: false }, { id: "c", text: "Kötü", correct: false }, { id: "d", text: "En kötü", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Durum dünden daha kötü", correctAnswer: "La situation est pire qu'hier" },
-    { id: 20, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu cuisines ___ que ton frère.", options: [{ id: "a", text: "bien mieux", correct: true }, { id: "b", text: "bon mieux", correct: false }] }
+    { id: 1, type: "SELECT", question: "'Daha iyi' demek için hangi kelime kullanılır?", options: [{ id: "a", text: "Meilleur", correct: true }, { id: "b", text: "Plus bon", correct: false }, { id: "c", text: "Plus bien", correct: false }, { id: "d", text: "Mieux bon", correct: false }] },
+    { id: 2, type: "SELECT", question: "Hangisi YANLIŞTIR?", options: [{ id: "a", text: "C'est plus bon.", correct: true }, { id: "b", text: "C'est meilleur.", correct: false }, { id: "c", text: "C'est plus cher.", correct: false }, { id: "d", text: "C'est moins grand.", correct: false }] },
+    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "Bu, diğerinden daha iyi", correctAnswer: "C'est meilleur que l'autre" },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette chemise est ___ que l'autre t-shirt.", options: [{ id: "a", text: "meilleure", correct: true }, { id: "b", text: "plus bonne", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Pire' ne demek?", options: [{ id: "a", text: "Daha kötü", correct: true }, { id: "b", text: "Daha iyi", correct: false }, { id: "c", text: "Çok pahalı", correct: false }, { id: "d", text: "Daha büyük", correct: false }] },
+    { id: 6, type: "TRANSLATE", question: "Çevir:", hint: "Durum dünden daha kötü", correctAnswer: "La situation est pire qu'hier" },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Ces chaussures sont ___ grandes que les autres.", options: [{ id: "a", text: "aussi", correct: true }, { id: "b", text: "autant", correct: false }] },
+    { id: 8, type: "TRANSLATE", question: "Çevir:", hint: "Mavi kaban daha iyi bir seçenek", correctAnswer: "Le manteau bleu est la meilleure option" },
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce restaurant est ___ que le café.", options: [{ id: "a", text: "meilleur", correct: true }, { id: "b", text: "mieux", correct: false }] },
+    { id: 10, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est la meilleure option", options: [{ id: "a", text: "Bu daha iyi bir seçenek", correct: true }, { id: "b", text: "Bu daha kötü bir seçenek", correct: false }, { id: "c", text: "Bu daha pahalı bir seçenek", correct: false }, { id: "d", text: "Bu daha ucuz bir seçenek", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Bence siyah ceket daha şık", correctAnswer: "Je pense que la veste noire est plus élégante" },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Ton idée est ___ que la mienne. (daha kötü)", options: [{ id: "a", text: "pire", correct: true }, { id: "b", text: "plus mauvaise", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bu kitap diğerinden daha ilginç", correctAnswer: "Ce livre est plus intéressant que l'autre" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Haklısın, maviyi alıyorum: Tu as raison, j'___ la bleue!", options: [{ id: "a", text: "achète", correct: true }, { id: "b", text: "cherche", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "O kış için daha iyi", correctAnswer: "Il est meilleur pour l'hiver" },
+    { id: 16, type: "SELECT", question: "'Plus chaud' ne anlama gelir?", options: [{ id: "a", text: "Daha sıcak", correct: true }, { id: "b", text: "Daha ucuz", correct: false }, { id: "c", text: "Daha iyi", correct: false }, { id: "d", text: "Daha şık", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Kırmızı olan siyah kadar pahalı", correctAnswer: "Le rouge est aussi cher que le noir" },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Ces fruits sont ___ que les légumes. (daha iyi)", options: [{ id: "a", text: "meilleurs", correct: true }, { id: "b", text: "plus bons", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bu pasta diğerinden daha iyi", correctAnswer: "Ce gâteau est meilleur que l'autre" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Daha az şık, ama daha rahat", correctAnswer: "Moins élégant, mais plus confortable" }
 ];
 
+// Quiz 4: KARIŞIK DEĞERLENDİRME (20 Soru) - Alışveriş & Karşılaştırmalar Genel Tekrar
 const unit341Quiz4: Question[] = [
-    // KARIŞIK (8 Soru)
-    { id: 1, type: "SELECT", question: "'Plus vite' ne demek?", options: [{ id: "a", text: "Daha hızlı", correct: true }, { id: "b", text: "Daha yavaş", correct: false }, { id: "c", text: "Hızlıca", correct: false }, { id: "d", text: "En hızlı", correct: false }] },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Ton vélo est ___ lourd que le mien.", options: [{ id: "a", text: "plus", correct: true }, { id: "b", text: "le plus", correct: false }] },
-    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "O benden daha yaşlı", correctAnswer: "Il est plus âgé que moi" },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ cher ici.", options: [{ id: "a", text: "aussi", correct: true }, { id: "b", text: "aussi que", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Daha iyi anlıyorum", correctAnswer: "Je comprends mieux" },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est moins loin", options: [{ id: "a", text: "Daha az uzak", correct: true }, { id: "b", text: "Daha uzak", correct: false }, { id: "c", text: "Çok uzak", correct: false }, { id: "d", text: "En uzak", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Autant de' ne için kullanılır?", options: [{ id: "a", text: "Miktar karşılaştırması", correct: true }, { id: "b", text: "Sıfat karşılaştırması", correct: false }, { id: "c", text: "Zarf karşılaştırması", correct: false }, { id: "d", text: "Fiil çekimi", correct: false }] },
-    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Il a ___ livres que moi.", options: [{ id: "a", text: "autant de", correct: true }, { id: "b", text: "aussi de", correct: false }] }
+    { id: 1, type: "SELECT", question: "'Plus cher' ne demek?", options: [{ id: "a", text: "Daha pahalı", correct: true }, { id: "b", text: "Daha ucuz", correct: false }, { id: "c", text: "Daha şık", correct: false }, { id: "d", text: "En pahalı", correct: false }] },
+    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Ton vélo est ___ lourd que le mien.", options: [{ id: "a", text: "plus", correct: true }, { id: "b", text: "très", correct: false }] },
+    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "O (adam) benden daha yaşlı", correctAnswer: "Il est plus âgé que moi" },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ grand ici.", options: [{ id: "a", text: "moins", correct: true }, { id: "b", text: "aussi que", correct: false }] },
+    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Bu gömlek çok büyük", correctAnswer: "Cette chemise est trop grande" },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ce pantalon est plus cher que ce t-shirt", options: [{ id: "a", text: "Bu pantolon, bu tişörtten daha pahalıdır", correct: true }, { id: "b", text: "Bu tişört, bu pantolondan daha pahalıdır", correct: false }, { id: "c", text: "Bu pantolon, bu tişört kadar pahalıdır", correct: false }, { id: "d", text: "Bu pantolon, bu tişörtten daha ucuzdur", correct: false }] },
+    { id: 7, type: "SELECT", question: "Hangi sıfat 'Şık' anlamına gelir?", options: [{ id: "a", text: "Élégant", correct: true }, { id: "b", text: "Confortable", correct: false }, { id: "c", text: "Joli", correct: false }, { id: "d", text: "Petit", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "La pomme est ___ chère que l'orange.", options: [{ id: "a", text: "moins", correct: true }, { id: "b", text: "moindre", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bu ayakkabılar rahat", correctAnswer: "Ces chaussures sont confortables" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ que je pensais! (Düşündüğümden daha kötü)", options: [{ id: "a", text: "pire", correct: true }, { id: "b", text: "meilleur", correct: false }] },
+    { id: 11, type: "SELECT", question: "Karşılaştırmada eşitlik belirtmek için hangisi kullanılır?", options: [{ id: "a", text: "Aussi ... que", correct: true }, { id: "b", text: "Plus ... que", correct: false }, { id: "c", text: "Moins ... que", correct: false }, { id: "d", text: "Très ... que", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___ gentille que sa sœur. (Kadar)", options: [{ id: "a", text: "aussi", correct: true }, { id: "b", text: "autant", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Mavi ceket daha az pahalı", correctAnswer: "La veste bleue est moins chère" },
+    { id: 14, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est meilleur que l'autre", options: [{ id: "a", text: "Bu, diğerinden daha iyi", correct: true }, { id: "b", text: "Bu, diğerinden daha kötü", correct: false }, { id: "c", text: "Bu, diğerinden daha pahalı", correct: false }, { id: "d", text: "Bu, diğerinden daha ucuz", correct: false }] },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce manteau est ___ cher. (çok)", options: [{ id: "a", text: "très", correct: true }, { id: "b", text: "plus", correct: false }] },
+    { id: 16, type: "SELECT", question: "'Plus bon' yerine ne demeliyiz?", options: [{ id: "a", text: "Meilleur", correct: true }, { id: "b", text: "Mieux", correct: false }, { id: "c", text: "Pire", correct: false }, { id: "d", text: "Aussi bon", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "İndirim var mı?", correctAnswer: "Est-ce qu'il y a une réduction?" },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce t-shirt est ___ petit.", options: [{ id: "a", text: "trop", correct: true }, { id: "b", text: "pire", correct: false }] },
+    { id: 19, type: "SELECT", question: "'Bon marché' kelimesinin zıttı nedir?", options: [{ id: "a", text: "Cher", correct: true }, { id: "b", text: "Petit", correct: false }, { id: "c", text: "Joli", correct: false }, { id: "d", text: "Grand", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Sonunda, maviyi alıyorum!", correctAnswer: "Finalement, je prends le bleu!" }
 ];
 
-// UNIT 342: İşaret Sıfatları (Demonstrative Adjectives)
+// UNIT 342: Kıyafet Alışverişi & İşaret Sıfatları (Ce/Cette/Ces/Cet)
+// Quiz 1: KOLAY (20 Soru) - Kıyafet Kelime Hazinesi & Temel İşaret Sıfatları
 const unit342Quiz1: Question[] = [
-    // KOLAY (8 Soru) - Ce, Cet, Cette, Ces
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Bu elbise", correctAnswer: "Cette robe" },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "___ pantalon est beau.", options: [{ id: "a", text: "Ce", correct: true }, { id: "b", text: "Cette", correct: false }] },
-    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "___ homme est gentil.", options: [{ id: "a", text: "Cet", correct: true }, { id: "b", text: "Ce", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "___ femmes sont intelligentes.", options: [{ id: "a", text: "Ces", correct: true }, { id: "b", text: "Cettes", correct: false }] },
-    { id: 5, type: "SELECT", question: "'Ce livre' ne demek?", options: [{ id: "a", text: "Bu kitap", correct: true }, { id: "b", text: "Şu kitaplar", correct: false }, { id: "c", text: "Hangi kitap", correct: false }, { id: "d", text: "Bir kitap", correct: false }] },
-    { id: 6, type: "SELECT", question: "'Ces enfants' ne demek?", options: [{ id: "a", text: "Bu çocuklar", correct: true }, { id: "b", text: "Çocuk", correct: false }, { id: "c", text: "Bizim çocuklar", correct: false }, { id: "d", text: "O çocuk", correct: false }] },
-    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Regarde ___ animal.", options: [{ id: "a", text: "cet", correct: true }, { id: "b", text: "ce", correct: false }] },
-    { id: 8, type: "TRANSLATE", question: "Çevir:", hint: "Bu ev", correctAnswer: "Cette maison" }
+    { id: 1, type: "SELECT", question: "'Le pantalon' ne demek?", options: [{ id: "a", text: "Gömlek", correct: false }, { id: "b", text: "Pantolon", correct: true }, { id: "c", text: "Elbise", correct: false }, { id: "d", text: "Ceket", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La chemise' ne demek?", options: [{ id: "a", text: "Kazak", correct: false }, { id: "b", text: "Pantolon", correct: false }, { id: "c", text: "Gömlek", correct: true }, { id: "d", text: "Elbise", correct: false }] },
+    { id: 3, type: "SELECT", question: "'La robe' ne demek?", options: [{ id: "a", text: "Elbise", correct: true }, { id: "b", text: "Ceket", correct: false }, { id: "c", text: "Gömlek", correct: false }, { id: "d", text: "Kazak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le pull' ne demek?", options: [{ id: "a", text: "Kazak", correct: true }, { id: "b", text: "Tişört", correct: false }, { id: "c", text: "Pantolon", correct: false }, { id: "d", text: "Ayakkabı", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Les chaussures' ne demek?", options: [{ id: "a", text: "Çoraplar", correct: false }, { id: "b", text: "Ayakkabılar", correct: true }, { id: "c", text: "Eldiven", correct: false }, { id: "d", text: "Şapkalar", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Acheter' ne demek?", options: [{ id: "a", text: "Satın almak", correct: true }, { id: "b", text: "Denemek", correct: false }, { id: "c", text: "Aramak", correct: false }, { id: "d", text: "Ödemek", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Essayer' ne demek?", options: [{ id: "a", text: "Ödemek", correct: false }, { id: "b", text: "Denemek", correct: true }, { id: "c", text: "Satın almak", correct: false }, { id: "d", text: "Aramak", correct: false }] },
+    { id: 8, type: "SELECT", question: "Erkek kelimeler için hangi işaret sıfatı kullanılır?", options: [{ id: "a", text: "CE", correct: true }, { id: "b", text: "CETTE", correct: false }, { id: "c", text: "CES", correct: false }, { id: "d", text: "CET", correct: false }] },
+    { id: 9, type: "SELECT", question: "Dişi kelimeler için hangi işaret sıfatı kullanılır?", options: [{ id: "a", text: "CE", correct: false }, { id: "b", text: "CETTE", correct: true }, { id: "c", text: "CES", correct: false }, { id: "d", text: "CET", correct: false }] },
+    { id: 10, type: "SELECT", question: "Çoğul kelimeler için hangi işaret sıfatı kullanılır?", options: [{ id: "a", text: "CE", correct: false }, { id: "b", text: "CETTE", correct: false }, { id: "c", text: "CES", correct: true }, { id: "d", text: "CET", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "___ pantalon est beau.", options: [{ id: "a", text: "Ce", correct: true }, { id: "b", text: "Cette", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ robe est rouge.", options: [{ id: "a", text: "Cette", correct: true }, { id: "b", text: "Ce", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "___ chaussures sont noires.", options: [{ id: "a", text: "Ces", correct: true }, { id: "b", text: "Ce", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "J'achète ___ pull.", options: [{ id: "a", text: "ce", correct: true }, { id: "b", text: "cette", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bu elbise", correctAnswer: "Cette robe" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bu pantolon", correctAnswer: "Ce pantalon" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Bu ayakkabılar", correctAnswer: "Ces chaussures" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bu kazak", correctAnswer: "Ce pull" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bu gömlek", correctAnswer: "Cette chemise" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Bu ceket", correctAnswer: "Cette veste" }
 ];
 
+// Quiz 2: ORTA (20 Soru) - CET Kuralı & Alışveriş Fiilleri
 const unit342Quiz2: Question[] = [
-    // ORTA (7 Soru) - Cinsiyet ve Sesli Harf
-    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime bien ___ acteur.", options: [{ id: "a", text: "cet", correct: true }, { id: "b", text: "cette", correct: false }] },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Bu ağaç çok yaşlı", correctAnswer: "Cet arbre est très vieux" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "___ amie est sympa.", options: [{ id: "a", text: "Cette", correct: true }, { id: "b", text: "Cet", correct: false }] },
-    { id: 12, type: "SELECT", question: "Hangisi doğru?", options: [{ id: "a", text: "Cet hôtel", correct: true }, { id: "b", text: "Ce hôtel", correct: false }, { id: "c", text: "Cette hôtel", correct: false }, { id: "d", text: "Ces hôtel", correct: false }] },
-    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Je prends ___ chaussures.", options: [{ id: "a", text: "ces", correct: true }, { id: "b", text: "ses", correct: false }] },
-    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Bu fikir ilginç", correctAnswer: "Cette idée est intéressante" },
-    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "___ problème est difficile.", options: [{ id: "a", text: "Ce", correct: true }, { id: "b", text: "Cet", correct: false }] }
+    { id: 1, type: "SELECT", question: "Sesli harfle başlayan erkek kelimeler için hangisi kullanılır?", options: [{ id: "a", text: "CET", correct: true }, { id: "b", text: "CE", correct: false }, { id: "c", text: "CETTE", correct: false }, { id: "d", text: "CES", correct: false }] },
+    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "___ homme est gentil.", options: [{ id: "a", text: "Cet", correct: true }, { id: "b", text: "Ce", correct: false }] },
+    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "___ anorak est chaud.", options: [{ id: "a", text: "Cet", correct: true }, { id: "b", text: "Ce", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "___ amie est sympa.", options: [{ id: "a", text: "Cette", correct: true }, { id: "b", text: "Cet", correct: false }] },
+    { id: 5, type: "SELECT", question: "Hangisi doğru?", options: [{ id: "a", text: "Cet hôtel", correct: true }, { id: "b", text: "Ce hôtel", correct: false }, { id: "c", text: "Cette hôtel", correct: false }, { id: "d", text: "Ces hôtel", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ ce pantalon. (arıyorum)", options: [{ id: "a", text: "cherche", correct: true }, { id: "b", text: "achète", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ cette robe. (satın alıyorum)", options: [{ id: "a", text: "achète", correct: true }, { id: "b", text: "essaie", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ ce pull. (deniyorum)", options: [{ id: "a", text: "essaie", correct: true }, { id: "b", text: "achète", correct: false }] },
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ ces chaussures. (ödüyorum)", options: [{ id: "a", text: "paie", correct: true }, { id: "b", text: "cherche", correct: false }] },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Bu kazağı deneyebilir miyim?", correctAnswer: "Je peux essayer ce pull?" },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Bu pantolonu arıyorum", correctAnswer: "Je cherche ce pantalon" },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "Bu elbiseyi satın alıyorum", correctAnswer: "J'achète cette robe" },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bu ayakkabıları ödüyorum", correctAnswer: "Je paie ces chaussures" },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je prends ___ chaussures.", options: [{ id: "a", text: "ces", correct: true }, { id: "b", text: "ses", correct: false }] },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "___ problème est difficile.", options: [{ id: "a", text: "Ce", correct: true }, { id: "b", text: "Cet", correct: false }] },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'achète cette chemise", options: [{ id: "a", text: "Bu gömleği satın alıyorum", correct: true }, { id: "b", text: "Bu gömleği deniyorum", correct: false }, { id: "c", text: "Bu gömleği arıyorum", correct: false }, { id: "d", text: "Bu gömleği ödüyorum", correct: false }] },
+    { id: 17, type: "SELECT", question: "'Ça coûte combien?' ne demek?", options: [{ id: "a", text: "Ne kadar tutuyor?", correct: true }, { id: "b", text: "Nerede?", correct: false }, { id: "c", text: "Hangisi?", correct: false }, { id: "d", text: "Ne zaman?", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Kartla ödüyorum", correctAnswer: "Je paie par carte" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bu montu deniyorum", correctAnswer: "J'essaie cet anorak" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Ne kadar tutuyor?", correctAnswer: "Ça coûte combien?" }
 ];
 
+// Quiz 3: ZOR (20 Soru) - -ci/-là Ayrımı & Karmaşık Cümleler
 const unit342Quiz3: Question[] = [
-    // ZOR (5 Soru) - -ci ve -là
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bu günlerde", correctAnswer: "Ces jours-ci" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Je préfère cette robe-___.", options: [{ id: "a", text: "là", correct: true }, { id: "b", text: "ci", correct: false }] },
-    { id: 18, type: "SELECT", question: "'Ce matin-là' ne demek?", options: [{ id: "a", text: "O sabah (geçmişte)", correct: true }, { id: "b", text: "Bu sabah (bugün)", correct: false }, { id: "c", text: "Yarın sabah", correct: false }, { id: "d", text: "Her sabah", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Şu adam (uzaktaki)", correctAnswer: "Cet homme-là" },
-    { id: 20, type: "FILL_BLANK", question: "Doldur:", sentence: "Prends ce crayon-___.", options: [{ id: "a", text: "ci", correct: true }, { id: "b", text: "la", correct: false }] }
+    { id: 1, type: "SELECT", question: "'-ci' eki neyi belirtir?", options: [{ id: "a", text: "Yakın olan (bu)", correct: true }, { id: "b", text: "Uzak olan (şu)", correct: false }, { id: "c", text: "Geçmişteki", correct: false }, { id: "d", text: "Gelecekteki", correct: false }] },
+    { id: 2, type: "SELECT", question: "'-là' eki neyi belirtir?", options: [{ id: "a", text: "Uzak olan (şu / o)", correct: true }, { id: "b", text: "Yakın olan (bu)", correct: false }, { id: "c", text: "Çoğul", correct: false }, { id: "d", text: "Tekil", correct: false }] },
+    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "Bu günlerde", correctAnswer: "Ces jours-ci" },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Je préfère cette robe-___.", options: [{ id: "a", text: "là", correct: true }, { id: "b", text: "ci", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Ce matin-là' ne demek?", options: [{ id: "a", text: "O sabah (geçmişte)", correct: true }, { id: "b", text: "Bu sabah (bugün)", correct: false }, { id: "c", text: "Yarın sabah", correct: false }, { id: "d", text: "Her sabah", correct: false }] },
+    { id: 6, type: "TRANSLATE", question: "Çevir:", hint: "Şu adam (uzaktaki)", correctAnswer: "Cet homme-là" },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Prends ce crayon-___.", options: [{ id: "a", text: "ci", correct: true }, { id: "b", text: "la", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime bien ___ acteur.", options: [{ id: "a", text: "cet", correct: true }, { id: "b", text: "cette", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bu ağaç çok yaşlı", correctAnswer: "Cet arbre est très vieux" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "___ idée est intéressante.", options: [{ id: "a", text: "Cette", correct: true }, { id: "b", text: "Ce", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Bu bilgisayar çalışmıyor", correctAnswer: "Cet ordinateur ne marche pas" },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "Bu kuş", correctAnswer: "Cet oiseau" },
+    { id: 13, type: "SELECT", question: "Hangisi yanlış?", options: [{ id: "a", text: "Ce amie", correct: true }, { id: "b", text: "Cet ami", correct: false }, { id: "c", text: "Cette amie", correct: false }, { id: "d", text: "Ces amis", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___ histoire est vraie.", options: [{ id: "a", text: "Cette", correct: true }, { id: "b", text: "Cet", correct: false }] },
+    { id: 15, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ce soir", options: [{ id: "a", text: "Bu akşam", correct: true }, { id: "b", text: "O akşam", correct: false }, { id: "c", text: "Dün akşam", correct: false }, { id: "d", text: "Yarın akşam", correct: false }] },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bu fikir ilginç", correctAnswer: "Cette idée est intéressante" },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "J'achète ___ t-shirt et ___ robe.", options: [{ id: "a", text: "ce / cette", correct: true }, { id: "b", text: "cette / ce", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bu tişörtü ve bu ayakkabıları satın alıyorum", correctAnswer: "J'achète ce t-shirt et ces chaussures" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Regardez ___ photos.", options: [{ id: "a", text: "ces", correct: true }, { id: "b", text: "ses", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Bu mükemmel. Ve ayrıca bu beyaz gömleği istiyorum.", correctAnswer: "C'est parfait. Et je voudrais aussi cette chemise blanche." }
 ];
 
+// Quiz 4: KARIŞIK DEĞERLENDİRME (20 Soru) - Kıyafet + İşaret Sıfatları + Alışveriş Genel Tekrar
 const unit342Quiz4: Question[] = [
-    // KARIŞIK (8 Soru)
-    { id: 1, type: "SELECT", question: "'Cet étudiant' ne demek?", options: [{ id: "a", text: "Bu öğrenci (erkek)", correct: true }, { id: "b", text: "Bu öğrenci (kadın)", correct: false }, { id: "c", text: "Öğrenciler", correct: false }, { id: "d", text: "Bir öğrenci", correct: false }] },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Regardez ___ photos.", options: [{ id: "a", text: "ces", correct: true }, { id: "b", text: "ses", correct: false }] },
-    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "Bu bilgisayar çalışmıyor", correctAnswer: "Ce sordinateur ne marche pas" },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "___ histoire est vraie.", options: [{ id: "a", text: "Cette", correct: true }, { id: "b", text: "Cet", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Bu kuş", correctAnswer: "Cet oiseau" },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ce soir", options: [{ id: "a", text: "Bu akşam", correct: true }, { id: "b", text: "O akşam", correct: false }, { id: "c", text: "Dün akşam", correct: false }, { id: "d", text: "Yarın akşam", correct: false }] },
-    { id: 7, type: "SELECT", question: "Hangisi yanlış?", options: [{ id: "a", text: "Ce amie", correct: true }, { id: "b", text: "Cet ami", correct: false }, { id: "c", text: "Cette amie", correct: false }, { id: "d", text: "Ces amis", correct: false }] },
-    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime ___ couleurs.", options: [{ id: "a", text: "ces", correct: true }, { id: "b", text: "ce", correct: false }] }
+    { id: 1, type: "SELECT", question: "'La veste' ne demek?", options: [{ id: "a", text: "Ceket", correct: true }, { id: "b", text: "Kazak", correct: false }, { id: "c", text: "Pantolon", correct: false }, { id: "d", text: "Elbise", correct: false }] },
+    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Je cherche ___ pull bleu.", options: [{ id: "a", text: "ce", correct: true }, { id: "b", text: "cette", correct: false }] },
+    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "Bu elbise size çok yakışıyor", correctAnswer: "Cette robe vous va très bien" },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "___ veste est parfaite.", options: [{ id: "a", text: "Cette", correct: true }, { id: "b", text: "Ce", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Payer' ne demek?", options: [{ id: "a", text: "Ödemek", correct: true }, { id: "b", text: "Denemek", correct: false }, { id: "c", text: "Satın almak", correct: false }, { id: "d", text: "Aramak", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça coûte combien", options: [{ id: "a", text: "Ne kadar tutuyor?", correct: true }, { id: "b", text: "Nerede?", correct: false }, { id: "c", text: "Ne zaman?", correct: false }, { id: "d", text: "Kim?", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ cette chemise blanche.", options: [{ id: "a", text: "achète", correct: true }, { id: "b", text: "essaie", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Cet étudiant' ne demek?", options: [{ id: "a", text: "Bu öğrenci (erkek)", correct: true }, { id: "b", text: "Bu öğrenci (kadın)", correct: false }, { id: "c", text: "Öğrenciler", correct: false }, { id: "d", text: "Bir öğrenci", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Mükemmel, alıyorum!", correctAnswer: "C'est parfait, je le prends!" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je paie ___ carte.", options: [{ id: "a", text: "par", correct: true }, { id: "b", text: "pour", correct: false }] },
+    { id: 11, type: "SELECT", question: "'Chercher' ne demek?", options: [{ id: "a", text: "Aramak", correct: true }, { id: "b", text: "Ödemek", correct: false }, { id: "c", text: "Denemek", correct: false }, { id: "d", text: "Satın almak", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "J'essaie ___ anorak.", options: [{ id: "a", text: "cet", correct: true }, { id: "b", text: "ce", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Giyinme kabini nerede?", correctAnswer: "Où est la cabine d'essayage?" },
+    { id: 14, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je cherche un pull", options: [{ id: "a", text: "Bir kazak arıyorum", correct: true }, { id: "b", text: "Bir kazak satın alıyorum", correct: false }, { id: "c", text: "Bir kazak deniyorum", correct: false }, { id: "d", text: "Bir kazak ödüyorum", correct: false }] },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime ___ couleurs.", options: [{ id: "a", text: "ces", correct: true }, { id: "b", text: "ce", correct: false }] },
+    { id: 16, type: "SELECT", question: "'La cabine d'essayage' ne demek?", options: [{ id: "a", text: "Giyinme kabini", correct: true }, { id: "b", text: "Kasa", correct: false }, { id: "c", text: "Vitrin", correct: false }, { id: "d", text: "Raf", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Bu kazak ve bu gömlek. 80 euro tutuyor.", correctAnswer: "Ce pull et cette chemise. Ça coûte 80 euros." },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Regardez ___ pull bleu.", options: [{ id: "a", text: "ce", correct: true }, { id: "b", text: "cette", correct: false }] },
+    { id: 19, type: "SELECT", question: "'Pantalon' kelimesinin cinsiyeti nedir?", options: [{ id: "a", text: "Erkek (Le)", correct: true }, { id: "b", text: "Dişi (La)", correct: false }, { id: "c", text: "Çoğul (Les)", correct: false }, { id: "d", text: "Belirsiz", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Bu pantolonu ve bu gömleği satın alıyorum", correctAnswer: "J'achète ce pantalon et cette chemise" }
 ];
 
-// UNIT 343: Yakın Geçmiş (Recent Past - Venir de)
+// UNIT 343: Ev İşleri & Yakın Geçmiş (Venir de)
+// Quiz 1: KOLAY (20 Soru) - Ev İşleri Kelime Hazinesi & Temel Venir de
 const unit343Quiz1: Question[] = [
-    // KOLAY (8 Soru) - Venir de + Infinitif
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Az önce yedim", correctAnswer: "Je viens de manger" },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ de partir.", options: [{ id: "a", text: "vient", correct: true }, { id: "b", text: "va", correct: false }] },
-    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ d'arriver.", options: [{ id: "a", text: "venons", correct: true }, { id: "b", text: "allons", correct: false }] },
-    { id: 4, type: "SELECT", question: "'Tu viens de finir?' ne demek?", options: [{ id: "a", text: "Az önce mi bitirdin?", correct: true }, { id: "b", text: "Bitirecek misin?", correct: false }, { id: "c", text: "Bitiriyor musun?", correct: false }, { id: "d", text: "Bitirmek ister misin?", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Az önce aradılar", correctAnswer: "Ils viennent d'appeler" },
-    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Elles viennent ___ sortir.", options: [{ id: "a", text: "de", correct: true }, { id: "b", text: "à", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Je viens de me réveiller' ne demek?", options: [{ id: "a", text: "Az önce uyandım", correct: true }, { id: "b", text: "Şimdi uyanıyorum", correct: false }, { id: "c", text: "Uyanacağım", correct: false }, { id: "d", text: "Uyanmak üzereyim", correct: false }] },
-    { id: 8, type: "TRANSLATE", question: "Çevir:", hint: "Az önce gördüm", correctAnswer: "Je viens de voir" }
+    { id: 1, type: "SELECT", question: "'Le ménage' ne demek?", options: [{ id: "a", text: "Yemek", correct: false }, { id: "b", text: "Temizlik", correct: true }, { id: "c", text: "Alışveriş", correct: false }, { id: "d", text: "Spor", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Faire la vaisselle' ne demek?", options: [{ id: "a", text: "Bulaşık yıkamak", correct: true }, { id: "b", text: "Çamaşır yıkamak", correct: false }, { id: "c", text: "Yemek yapmak", correct: false }, { id: "d", text: "Ütü yapmak", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Faire la lessive' ne demek?", options: [{ id: "a", text: "Bulaşık yıkamak", correct: false }, { id: "b", text: "Çamaşır yıkamak", correct: true }, { id: "c", text: "Süpürge çekmek", correct: false }, { id: "d", text: "Yatağı toplamak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Faire le lit' ne demek?", options: [{ id: "a", text: "Yatağı toplamak", correct: true }, { id: "b", text: "Temizlik yapmak", correct: false }, { id: "c", text: "Ütü yapmak", correct: false }, { id: "d", text: "Çamaşır yıkamak", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Passer l'aspirateur' ne demek?", options: [{ id: "a", text: "Ütü yapmak", correct: false }, { id: "b", text: "Bulaşık yıkamak", correct: false }, { id: "c", text: "Süpürge çekmek", correct: true }, { id: "d", text: "Yatağı toplamak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Repasser' ne demek?", options: [{ id: "a", text: "Ütü yapmak", correct: true }, { id: "b", text: "Temizlemek", correct: false }, { id: "c", text: "Yıkamak", correct: false }, { id: "d", text: "Toplamak", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Ranger' ne demek?", options: [{ id: "a", text: "Temizlemek", correct: false }, { id: "b", text: "Toplamak / Düzenlemek", correct: true }, { id: "c", text: "Yıkamak", correct: false }, { id: "d", text: "Süpürmek", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Venir de' ne anlama gelir?", options: [{ id: "a", text: "Az önce (bir şey yapmak)", correct: true }, { id: "b", text: "Yapacak olmak", correct: false }, { id: "c", text: "Yapmak istemek", correct: false }, { id: "d", text: "Yapabiliyor olmak", correct: false }] },
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je fais le ___.", options: [{ id: "a", text: "ménage", correct: true }, { id: "b", text: "lessive", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je passe l'___.", options: [{ id: "a", text: "aspirateur", correct: true }, { id: "b", text: "vaisselle", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ de faire la vaisselle.", options: [{ id: "a", text: "vient", correct: true }, { id: "b", text: "va", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ de faire le ménage.", options: [{ id: "a", text: "viens", correct: true }, { id: "b", text: "vais", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "___ ta chambre !", options: [{ id: "a", text: "Range", correct: true }, { id: "b", text: "Ranges", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "La maison est ___.", options: [{ id: "a", text: "propre", correct: true }, { id: "b", text: "ménage", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Temizlik yapıyorum", correctAnswer: "Je fais le ménage" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bulaşık yıkıyorum", correctAnswer: "Je fais la vaisselle" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Süpürge çekiyorum", correctAnswer: "Je passe l'aspirateur" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Odanı topla!", correctAnswer: "Range ta chambre!" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Az önce temizlik yaptım", correctAnswer: "Je viens de faire le ménage" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Gömlekleri ütülüyorum", correctAnswer: "Je repasse les chemises" }
 ];
 
+// Quiz 2: ORTA (20 Soru) - Venir Çekimleri & Formül Uygulaması
 const unit343Quiz2: Question[] = [
-    // ORTA (7 Soru) - Çekimler ve Yapı
-    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous ___ de comprendre.", options: [{ id: "a", text: "venez", correct: true }, { id: "b", text: "venons", correct: false }] },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Tren az önce kalktı", correctAnswer: "Le train vient de partir" },
-    { id: 11, type: "SELECT", question: "Hangisi 'Yakın Geçmiş'?", options: [{ id: "a", text: "Je viens de parler", correct: true }, { id: "b", text: "J'ai parlé", correct: false }, { id: "c", text: "Je vais parler", correct: false }, { id: "d", text: "Je parle", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "On ___ de rentrer.", options: [{ id: "a", text: "vient", correct: true }, { id: "b", text: "viennent", correct: false }] },
-    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Az önce bitirdik", correctAnswer: "Nous venons de finir" },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu ___ de le dire.", options: [{ id: "a", text: "viens", correct: true }, { id: "b", text: "vient", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Mektup az önce geldi", correctAnswer: "La lettre vient d'arriver" }
+    { id: 1, type: "SELECT", question: "'Venir de' formülünde ikinci fiil nasıl kullanılır?", options: [{ id: "a", text: "Mastar (yalın) haliyle", correct: true }, { id: "b", text: "Çekimli haliyle", correct: false }, { id: "c", text: "Geçmiş zaman haliyle", correct: false }, { id: "d", text: "Gelecek zaman haliyle", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Je viens' fiilinin okunuşu nedir?", options: [{ id: "a", text: "Jö viyen", correct: true }, { id: "b", text: "Jö ven", correct: false }, { id: "c", text: "Jö vön", correct: false }, { id: "d", text: "Jö vine", correct: false }] },
+    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu ___ de faire le lit.", options: [{ id: "a", text: "viens", correct: true }, { id: "b", text: "vient", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ de passer l'aspirateur.", options: [{ id: "a", text: "vient", correct: true }, { id: "b", text: "viens", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ de faire la lessive.", options: [{ id: "a", text: "venons", correct: true }, { id: "b", text: "venez", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous ___ de ranger la chambre.", options: [{ id: "a", text: "venez", correct: true }, { id: "b", text: "venons", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ___ de nettoyer la cuisine.", options: [{ id: "a", text: "viennent", correct: true }, { id: "b", text: "vient", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Elles viennent ___ faire la vaisselle.", options: [{ id: "a", text: "de", correct: true }, { id: "b", text: "à", correct: false }] },
+    { id: 9, type: "SELECT", question: "'Tu viens de finir?' ne demek?", options: [{ id: "a", text: "Az önce mi bitirdin?", correct: true }, { id: "b", text: "Bitirecek misin?", correct: false }, { id: "c", text: "Bitiriyor musun?", correct: false }, { id: "d", text: "Bitirmek ister misin?", correct: false }] },
+    { id: 10, type: "SELECT", question: "Hangisi 'Yakın Geçmiş'?", options: [{ id: "a", text: "Je viens de parler", correct: true }, { id: "b", text: "J'ai parlé", correct: false }, { id: "c", text: "Je vais parler", correct: false }, { id: "d", text: "Je parle", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Az önce yatağımı topladım", correctAnswer: "Je viens de faire mon lit" },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "O az önce süpürge çekti", correctAnswer: "Il vient de passer l'aspirateur" },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Az önce bulaşıkları yıkadın", correctAnswer: "Tu viens de faire la vaisselle" },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Az önce çamaşır yıkadık", correctAnswer: "Nous venons de faire la lessive" },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "On ___ de rentrer.", options: [{ id: "a", text: "vient", correct: true }, { id: "b", text: "viennent", correct: false }] },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Tren az önce kalktı", correctAnswer: "Le train vient de partir" },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je viens de faire le ménage", options: [{ id: "a", text: "Az önce temizlik yaptım", correct: true }, { id: "b", text: "Temizlik yapacağım", correct: false }, { id: "c", text: "Temizlik yapıyorum", correct: false }, { id: "d", text: "Temizlik yaptım", correct: false }] },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est à ton ___ de faire la vaisselle.", options: [{ id: "a", text: "tour", correct: true }, { id: "b", text: "fois", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Mektup az önce geldi", correctAnswer: "La lettre vient d'arriver" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Az önce bitirdik", correctAnswer: "Nous venons de finir" }
 ];
 
+// Quiz 3: ZOR (20 Soru) - D' Apostrophe, Dönüşlü Fiiller & Karmaşık Cümleler
 const unit343Quiz3: Question[] = [
-    // ZOR (5 Soru) - Dönüşlü Fiiller ve Zamirler
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Az önce yıkandım", correctAnswer: "Je viens de me laver" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle vient de ___ lever.", options: [{ id: "a", text: "se", correct: true }, { id: "b", text: "me", correct: false }] },
-    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous venons de ___ rencontrer.", options: [{ id: "a", text: "nous", correct: true }, { id: "b", text: "vous", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Onu az önce yaptım", correctAnswer: "Je viens de le faire" },
-    { id: 20, type: "SELECT", question: "Doğru sıralama hangisi?", options: [{ id: "a", text: "Je viens de l'acheter", correct: true }, { id: "b", text: "Je viens l'acheter de", correct: false }, { id: "c", text: "Je le viens d'acheter", correct: false }, { id: "d", text: "Je viens de acheter le", correct: false }] }
+    { id: 1, type: "SELECT", question: "Hangi durumda 'de' → 'd'' olur?", options: [{ id: "a", text: "Fiil sesli harfle başlarsa", correct: true }, { id: "b", text: "Fiil sessiz harfle başlarsa", correct: false }, { id: "c", text: "Her zaman", correct: false }, { id: "d", text: "Asla değişmez", correct: false }] },
+    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Je viens ___ arriver.", options: [{ id: "a", text: "d'", correct: true }, { id: "b", text: "de", correct: false }] },
+    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle vient ___ écouter la musique.", options: [{ id: "a", text: "d'", correct: true }, { id: "b", text: "de", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils viennent ___ faire le ménage.", options: [{ id: "a", text: "de", correct: true }, { id: "b", text: "d'", correct: false }] },
+    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Az önce yıkandım", correctAnswer: "Je viens de me laver" },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle vient de ___ lever.", options: [{ id: "a", text: "se", correct: true }, { id: "b", text: "me", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous venons de ___ rencontrer.", options: [{ id: "a", text: "nous", correct: true }, { id: "b", text: "vous", correct: false }] },
+    { id: 8, type: "TRANSLATE", question: "Çevir:", hint: "Onu az önce yaptım", correctAnswer: "Je viens de le faire" },
+    { id: 9, type: "SELECT", question: "Doğru sıralama hangisi?", options: [{ id: "a", text: "Je viens de l'acheter", correct: true }, { id: "b", text: "Je viens l'acheter de", correct: false }, { id: "c", text: "Je le viens d'acheter", correct: false }, { id: "d", text: "Je viens de acheter le", correct: false }] },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Az önce aradılar", correctAnswer: "Ils viennent d'appeler" },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Le bébé vient de ___.", options: [{ id: "a", text: "s'endormir", correct: true }, { id: "b", text: "dormir se", correct: false }] },
+    { id: 12, type: "SELECT", question: "'Le film vient de commencer' ne demek?", options: [{ id: "a", text: "Film az önce başladı", correct: true }, { id: "b", text: "Film başlıyor", correct: false }, { id: "c", text: "Film başlayacak", correct: false }, { id: "d", text: "Film bitti", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Az önce müziği dinledim", correctAnswer: "Je viens d'écouter la musique" },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Bebek az önce uyudu", correctAnswer: "Le bébé vient de s'endormir" },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "Hugo vient ___ passer l'aspirateur.", options: [{ id: "a", text: "de", correct: true }, { id: "b", text: "d'", correct: false }] },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "Lucas vient ___ repasser les chemises.", options: [{ id: "a", text: "de", correct: true }, { id: "b", text: "d'", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Nous venons de faire la lessive", options: [{ id: "a", text: "Az önce çamaşır yıkadık", correct: true }, { id: "b", text: "Çamaşır yıkayacağız", correct: false }, { id: "c", text: "Çamaşır yıkıyoruz", correct: false }, { id: "d", text: "Çamaşır yıkadık", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Az önce kahve içtim", correctAnswer: "Je viens de boire du café" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu ___ de le dire.", options: [{ id: "a", text: "viens", correct: true }, { id: "b", text: "vient", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Az önce gördüm", correctAnswer: "Je viens de voir" }
 ];
 
+// Quiz 4: KARIŞIK DEĞERLENDİRME (20 Soru) - Ev İşleri + Venir de Genel Tekrar
 const unit343Quiz4: Question[] = [
-    // KARIŞIK (8 Soru)
-    { id: 1, type: "SELECT", question: "'Le film vient de commencer' ne demek?", options: [{ id: "a", text: "Film az önce başladı", correct: true }, { id: "b", text: "Film başlıyor", correct: false }, { id: "c", text: "Film başlayacak", correct: false }, { id: "d", text: "Film bitti", correct: false }] },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ___ de gagner.", options: [{ id: "a", text: "viennent", correct: true }, { id: "b", text: "venez", correct: false }] },
-    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "Az önce kahve içtim", correctAnswer: "Je viens de boire du café" },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous ___ de lire ce livre?", options: [{ id: "a", text: "venez", correct: true }, { id: "b", text: "allez", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Bebek az önce uyudu", correctAnswer: "Le bébé vient de s'endormir" },
+    { id: 1, type: "SELECT", question: "Fransızcada ev işlerinin çoğu hangi fiille kurulur?", options: [{ id: "a", text: "FAIRE", correct: true }, { id: "b", text: "ÊTRE", correct: false }, { id: "c", text: "ALLER", correct: false }, { id: "d", text: "AVOIR", correct: false }] },
+    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ de faire le lit.", options: [{ id: "a", text: "viens", correct: true }, { id: "b", text: "vais", correct: false }] },
+    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "Senin sıran", correctAnswer: "C'est à ton tour" },
+    { id: 4, type: "SELECT", question: "Hangi fiil 'Yakın Geçmiş' için kullanılır?", options: [{ id: "a", text: "Venir + de", correct: true }, { id: "b", text: "Aller + de", correct: false }, { id: "c", text: "Être + de", correct: false }, { id: "d", text: "Avoir + de", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ___ de gagner.", options: [{ id: "a", text: "viennent", correct: true }, { id: "b", text: "venez", correct: false }] },
     { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "On vient de partir", options: [{ id: "a", text: "Az önce çıktık", correct: true }, { id: "b", text: "Çıkıyoruz", correct: false }, { id: "c", text: "Çıkacağız", correct: false }, { id: "d", text: "Çıkmak istiyoruz", correct: false }] },
-    { id: 7, type: "SELECT", question: "Hangi fiil kullanılır?", options: [{ id: "a", text: "Venir + de", correct: true }, { id: "b", text: "Aller + de", correct: false }, { id: "c", text: "Être + de", correct: false }, { id: "d", text: "Avoir + de", correct: false }] },
-    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Je viens ___ faire.", options: [{ id: "a", text: "de le", correct: true }, { id: "b", text: "du", correct: false }] }
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous ___ de lire ce livre?", options: [{ id: "a", text: "venez", correct: true }, { id: "b", text: "allez", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Je viens de me réveiller' ne demek?", options: [{ id: "a", text: "Az önce uyandım", correct: true }, { id: "b", text: "Şimdi uyanıyorum", correct: false }, { id: "c", text: "Uyanacağım", correct: false }, { id: "d", text: "Uyanmak üzereyim", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Az önce bulaşıkları yıkadım", correctAnswer: "Je viens de faire la vaisselle" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Hugo vient de ___ l'aspirateur.", options: [{ id: "a", text: "passer", correct: true }, { id: "b", text: "passé", correct: false }] },
+    { id: 11, type: "SELECT", question: "'Propre' ne demek?", options: [{ id: "a", text: "Temiz", correct: true }, { id: "b", text: "Kirli", correct: false }, { id: "c", text: "Büyük", correct: false }, { id: "d", text: "Küçük", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Lucas vient de ___ les chambres.", options: [{ id: "a", text: "ranger", correct: true }, { id: "b", text: "rangé", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Ev şimdi temiz", correctAnswer: "La maison est propre maintenant" },
+    { id: 14, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est à ton tour de faire la vaisselle", options: [{ id: "a", text: "Bulaşık yıkama sırası sende", correct: true }, { id: "b", text: "Bulaşıkları yıka", correct: false }, { id: "c", text: "Bulaşık yıkadım", correct: false }, { id: "d", text: "Bulaşık yıkayacağım", correct: false }] },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "Je viens ___ écouter la radio.", options: [{ id: "a", text: "d'", correct: true }, { id: "b", text: "de", correct: false }] },
+    { id: 16, type: "SELECT", question: "'Faire la lessive' ne demek?", options: [{ id: "a", text: "Çamaşır yıkamak", correct: true }, { id: "b", text: "Bulaşık yıkamak", correct: false }, { id: "c", text: "Ütü yapmak", correct: false }, { id: "d", text: "Temizlik yapmak", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "O az önce gömlekleri ütüledi", correctAnswer: "Elle vient de repasser les chemises" },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle vient de ___ la cuisine.", options: [{ id: "a", text: "nettoyer", correct: true }, { id: "b", text: "nettoyé", correct: false }] },
+    { id: 19, type: "SELECT", question: "'Venir de' formülünde ikinci fiil çekimlenir mi?", options: [{ id: "a", text: "Hayır, mastar haliyle kalır", correct: true }, { id: "b", text: "Evet, çekimlenir", correct: false }, { id: "c", text: "Bazen", correct: false }, { id: "d", text: "Sadece 'nous' ile", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Az önce yatağımı topladım. Dinleneceğim.", correctAnswer: "Je viens de faire mon lit. Je vais me reposer." }
 ];
 
-// UNIT 344: İmparfait vs Geçmiş Zaman (Imparfait vs Passé Composé)
+// UNIT 344: Günlük Haberler & Imparfait (Sürekli Geçmiş Zaman)
+// Quiz 1: KOLAY (20 Soru) - Haber Kelime Hazinesi & Temel Imparfait
 const unit344Quiz1: Question[] = [
-    // KOLAY (8 Soru) - İmparfait Çekimleri
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Gençken", correctAnswer: "Quand j'étais jeune" },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ beau hier.", options: [{ id: "a", text: "faisait", correct: true }, { id: "b", text: "fait", correct: false }] },
-    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ 10 ans.", options: [{ id: "a", text: "avais", correct: true }, { id: "b", text: "ai", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ à la plage chaque été.", options: [{ id: "a", text: "allions", correct: true }, { id: "b", text: "sommes allés", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Eskiden", correctAnswer: "Autrefois" },
-    { id: 6, type: "SELECT", question: "'Je voulais' ne demek?", options: [{ id: "a", text: "İstiyordum", correct: true }, { id: "b", text: "İstedim", correct: false }, { id: "c", text: "İsterim", correct: false }, { id: "d", text: "İsteyeceğim", correct: false }] },
-    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu ___ toujours content.", options: [{ id: "a", text: "étais", correct: true }, { id: "b", text: "as été", correct: false }] },
-    { id: 8, type: "TRANSLATE", question: "Çevir:", hint: "Yağmur yağıyordu", correctAnswer: "Il pleuvait" }
+    { id: 1, type: "SELECT", question: "'Les actualités' ne demek?", options: [{ id: "a", text: "Reklamlar", correct: false }, { id: "b", text: "Haberler", correct: true }, { id: "c", text: "Diziler", correct: false }, { id: "d", text: "Filmler", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le journal' ne demek?", options: [{ id: "a", text: "Dergi", correct: false }, { id: "b", text: "Gazete", correct: true }, { id: "c", text: "Kitap", correct: false }, { id: "d", text: "Mektup", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Le / La journaliste' ne demek?", options: [{ id: "a", text: "Yazar", correct: false }, { id: "b", text: "Öğretmen", correct: false }, { id: "c", text: "Gazeteci", correct: true }, { id: "d", text: "Doktor", correct: false }] },
+    { id: 4, type: "SELECT", question: "'L'article' ne demek?", options: [{ id: "a", text: "Makale", correct: true }, { id: "b", text: "Gazete", correct: false }, { id: "c", text: "Haber", correct: false }, { id: "d", text: "Başlık", correct: false }] },
+    { id: 5, type: "SELECT", question: "'La météo' ne demek?", options: [{ id: "a", text: "Metro", correct: false }, { id: "b", text: "Hava durumu", correct: true }, { id: "c", text: "Müzik", correct: false }, { id: "d", text: "Spor haberleri", correct: false }] },
+    { id: 6, type: "SELECT", question: "'L'accident' ne demek?", options: [{ id: "a", text: "Kaza", correct: true }, { id: "b", text: "Olay", correct: false }, { id: "c", text: "Haber", correct: false }, { id: "d", text: "Fırtına", correct: false }] },
+    { id: 7, type: "SELECT", question: "'L'événement' ne demek?", options: [{ id: "a", text: "Kaza", correct: false }, { id: "b", text: "Toplantı", correct: false }, { id: "c", text: "Olay / Etkinlik", correct: true }, { id: "d", text: "Başlık", correct: false }] },
+    { id: 8, type: "SELECT", question: "Imparfait Türkçede hangi ekle karşılanır?", options: [{ id: "a", text: "-yordu / -erdi", correct: true }, { id: "b", text: "-ecek / -acak", correct: false }, { id: "c", text: "-mış / -miş", correct: false }, { id: "d", text: "-yor / -iyor", correct: false }] },
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ les actualités. (izliyorum)", options: [{ id: "a", text: "regarde", correct: true }, { id: "b", text: "regardais", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ les actualités. (izliyordum)", options: [{ id: "a", text: "regardais", correct: true }, { id: "b", text: "regarde", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Mon père lisait le ___ chaque matin.", options: [{ id: "a", text: "journal", correct: true }, { id: "b", text: "météo", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ était terrible hier.", options: [{ id: "a", text: "météo", correct: true }, { id: "b", text: "journal", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y ___ un accident.", options: [{ id: "a", text: "avait", correct: true }, { id: "b", text: "a", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ parlait à la télé.", options: [{ id: "a", text: "journaliste", correct: true }, { id: "b", text: "journal", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Haberleri izliyorum", correctAnswer: "Je regarde les actualités" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Gazete okuyorum", correctAnswer: "Je lis le journal" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Hava durumu", correctAnswer: "La météo" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Büyük bir olay", correctAnswer: "Un grand événement" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bir makale okudum", correctAnswer: "J'ai lu un article" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Haberleri gördün mü?", correctAnswer: "Tu as vu les infos?" }
 ];
 
+// Quiz 2: ORTA (20 Soru) - Imparfait Çekimleri & Formülü
 const unit344Quiz2: Question[] = [
-    // ORTA (7 Soru) - PC vs İmparfait Seçimi
-    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Pendant que je dormais, tu ___.", options: [{ id: "a", text: "es arrivé", correct: true }, { id: "b", text: "arrivais", correct: false }] },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Televizyon izliyordum", correctAnswer: "Je regardais la télé" },
-    { id: 11, type: "SELECT", question: "Hangisi 'betimleme' (description) için kullanılır?", options: [{ id: "a", text: "Imparfait", correct: true }, { id: "b", text: "Passé Composé", correct: false }, { id: "c", text: "Futur", correct: false }, { id: "d", text: "Présent", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Soudain, le téléphone ___.", options: [{ id: "a", text: "a sonné", correct: true }, { id: "b", text: "sonnait", correct: false }] },
-    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Her pazar giderdik", correctAnswer: "Nous allions chaque dimanche" },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ froid ce jour-là.", options: [{ id: "a", text: "faisait", correct: true }, { id: "b", text: "a fait", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Aniden düştü", correctAnswer: "Soudain il est tombé" }
+    { id: 1, type: "SELECT", question: "Imparfait yapmak için hangi adım önce gelir?", options: [{ id: "a", text: "Fiilin NOUS çekimini bul", correct: true }, { id: "b", text: "Sıfatı bul", correct: false }, { id: "c", text: "İsmi bul", correct: false }, { id: "d", text: "Fiilin JE çekimini bul", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Nous regardons' fiilinden Imparfait kökü ne olur?", options: [{ id: "a", text: "regard-", correct: true }, { id: "b", text: "regardons-", correct: false }, { id: "c", text: "regarder-", correct: false }, { id: "d", text: "regardai-", correct: false }] },
+    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "Je regard___ la télé. (izliyordum)", options: [{ id: "a", text: "ais", correct: true }, { id: "b", text: "ons", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu regard___ les infos.", options: [{ id: "a", text: "ais", correct: true }, { id: "b", text: "ait", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Il regard___ le journal.", options: [{ id: "a", text: "ait", correct: true }, { id: "b", text: "ais", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous regard___.", options: [{ id: "a", text: "ions", correct: true }, { id: "b", text: "aient", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous regard___.", options: [{ id: "a", text: "iez", correct: true }, { id: "b", text: "ions", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils regard___.", options: [{ id: "a", text: "aient", correct: true }, { id: "b", text: "ais", correct: false }] },
+    { id: 9, type: "SELECT", question: "Je, Tu, Il, Ils eklerinin okunuşu nasıldır?", options: [{ id: "a", text: "Hepsi aynı: '-e' sesi", correct: true }, { id: "b", text: "Hepsi farklı", correct: false }, { id: "c", text: "Je ve Tu aynı, diğerleri farklı", correct: false }, { id: "d", text: "Hiçbiri aynı değil", correct: false }] },
+    { id: 10, type: "SELECT", question: "ÊTRE fiilinin Imparfait kökü nedir?", options: [{ id: "a", text: "ét-", correct: true }, { id: "b", text: "êtr-", correct: false }, { id: "c", text: "som-", correct: false }, { id: "d", text: "av-", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "J'___ malade hier. (hastaydım)", options: [{ id: "a", text: "étais", correct: true }, { id: "b", text: "suis", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ un bon journaliste.", options: [{ id: "a", text: "était", correct: true }, { id: "b", text: "est", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ à la maison.", options: [{ id: "a", text: "étions", correct: true }, { id: "b", text: "sommes", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ___ très stressés.", options: [{ id: "a", text: "étaient", correct: true }, { id: "b", text: "sont", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "İzliyordum", correctAnswer: "Je regardais" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "O iyi bir gazeteciydi", correctAnswer: "Il était un bon journaliste" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Çok rüzgar vardı", correctAnswer: "Il y avait beaucoup de vent" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Gençken", correctAnswer: "Quand j'étais jeune" },
+    { id: 19, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je regardais la télé", options: [{ id: "a", text: "TV izliyordum", correct: true }, { id: "b", text: "TV izliyorum", correct: false }, { id: "c", text: "TV izleyeceğim", correct: false }, { id: "d", text: "TV izledim", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yağmur yağıyordu", correctAnswer: "Il pleuvait" }
 ];
 
+// Quiz 3: ZOR (20 Soru) - Imparfait vs Passé Composé & Hikaye
 const unit344Quiz3: Question[] = [
-    // ZOR (5 Soru) - Karışık Hikaye
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Yemek yapıyordum", correctAnswer: "Je faisais la cuisine" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Quand je l'ai vu, il ___ un livre.", options: [{ id: "a", text: "lisait", correct: true }, { id: "b", text: "a lu", correct: false }] },
-    { id: 18, type: "SELECT", question: "Hangisi 'tamamlanmış eylem'?", options: [{ id: "a", text: "J'ai fini", correct: true }, { id: "b", text: "Je finissais", correct: false }, { id: "c", text: "Je finis", correct: false }, { id: "d", text: "Je vais finir", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Dışarıdayken başladı", correctAnswer: "Ça a commencé quand j'étais dehors" },
-    { id: 20, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle ___ triste parce qu'elle avait perdu.", options: [{ id: "a", text: "était", correct: true }, { id: "b", text: "a été", correct: false }] }
+    { id: 1, type: "SELECT", question: "Imparfait ne zaman kullanılır?", options: [{ id: "a", text: "Geçmişteki durum, alışkanlık, devam eden eylem", correct: true }, { id: "b", text: "Tek seferlik tamamlanmış eylem", correct: false }, { id: "c", text: "Gelecekte olacak eylem", correct: false }, { id: "d", text: "Şimdiki zaman", correct: false }] },
+    { id: 2, type: "SELECT", question: "Passé Composé ne zaman kullanılır?", options: [{ id: "a", text: "Tamamlanmış, tek seferlik eylem", correct: true }, { id: "b", text: "Geçmişteki alışkanlık", correct: false }, { id: "c", text: "Durum/Manzara", correct: false }, { id: "d", text: "Devam eden eylem", correct: false }] },
+    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "Pendant que je dormais, le téléphone ___.", options: [{ id: "a", text: "a sonné", correct: true }, { id: "b", text: "sonnait", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ beau quand nous sommes sortis.", options: [{ id: "a", text: "faisait", correct: true }, { id: "b", text: "a fait", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Soudain, un chien ___.", options: [{ id: "a", text: "est sorti", correct: true }, { id: "b", text: "sortait", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Quand je l'ai vu, il ___ un livre.", options: [{ id: "a", text: "lisait", correct: true }, { id: "b", text: "a lu", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Soudain' (aniden) hangi zamanla birlikte gelir?", options: [{ id: "a", text: "Passé Composé", correct: true }, { id: "b", text: "Imparfait", correct: false }, { id: "c", text: "Her ikisi", correct: false }, { id: "d", text: "Hiçbiri", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Chaque jour' (her gün) hangi zamanla birlikte gelir?", options: [{ id: "a", text: "Imparfait", correct: true }, { id: "b", text: "Passé Composé", correct: false }, { id: "c", text: "Futur", correct: false }, { id: "d", text: "Présent", correct: false }] },
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ à la plage chaque été.", options: [{ id: "a", text: "allions", correct: true }, { id: "b", text: "sommes allés", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Hier, il ___ neiger tout à coup.", options: [{ id: "a", text: "a commencé à", correct: true }, { id: "b", text: "commençait à", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Televizyon izliyordum", correctAnswer: "Je regardais la télé" },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "Aniden düştü", correctAnswer: "Soudain il est tombé" },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Her pazar giderdik", correctAnswer: "Nous allions chaque dimanche" },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Yemek yapıyordum", correctAnswer: "Je faisais la cuisine" },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle ___ triste parce qu'elle avait perdu.", options: [{ id: "a", text: "était", correct: true }, { id: "b", text: "a été", correct: false }] },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "Les gens ___ les infos quand la tempête a commencé.", options: [{ id: "a", text: "regardaient", correct: true }, { id: "b", text: "ont regardé", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il neigeait et il faisait froid", options: [{ id: "a", text: "Kar yağıyordu ve soğuktu", correct: true }, { id: "b", text: "Kar yağdı ve soğuk oldu", correct: false }, { id: "c", text: "Kar yağacak ve soğuk olacak", correct: false }, { id: "d", text: "Kar yağıyor ve soğuk", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Dışarıdayken başladı", correctAnswer: "Ça a commencé quand j'étais dehors" },
+    { id: 19, type: "SELECT", question: "Hangisi 'tamamlanmış eylem'?", options: [{ id: "a", text: "J'ai fini", correct: true }, { id: "b", text: "Je finissais", correct: false }, { id: "c", text: "Je finis", correct: false }, { id: "d", text: "Je vais finir", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Kar yağıyordu ve soğuktu", correctAnswer: "Il neigeait et il faisait froid" }
 ];
 
+// Quiz 4: KARIŞIK DEĞERLENDİRME (20 Soru) - Kelime + Imparfait + PC Genel Tekrar
 const unit344Quiz4: Question[] = [
-    // KARIŞIK (8 Soru)
     { id: 1, type: "SELECT", question: "'C'était super' ne demek?", options: [{ id: "a", text: "Harikaydı", correct: true }, { id: "b", text: "Harika", correct: false }, { id: "c", text: "Harika olacak", correct: false }, { id: "d", text: "Harika oldu", correct: false }] },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Avant, j'___ à Paris.", options: [{ id: "a", text: "habitais", correct: true }, { id: "b", text: "habité", correct: false }] },
+    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Avant, j'___ à Paris.", options: [{ id: "a", text: "habitais", correct: true }, { id: "b", text: "ai habité", correct: false }] },
     { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "Çok yorgundum", correctAnswer: "J'étais très fatigué" },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Tout à coup, un chien ___.", options: [{ id: "a", text: "est sorti", correct: true }, { id: "b", text: "sortait", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Kar yağıyordu ve soğuktu", correctAnswer: "Il neigeait et il faisait froid" },
+    { id: 4, type: "SELECT", question: "'Il a bu un café' hangi zaman?", options: [{ id: "a", text: "Passé Composé", correct: true }, { id: "b", text: "Imparfait", correct: false }, { id: "c", text: "Présent", correct: false }, { id: "d", text: "Futur", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ le train tous les matins.", options: [{ id: "a", text: "prenions", correct: true }, { id: "b", text: "avons pris", correct: false }] },
     { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quand j'étudiais", options: [{ id: "a", text: "Ben ders çalışırken", correct: true }, { id: "b", text: "Ben ders çalışacağım", correct: false }, { id: "c", text: "Ben ders çalıştım", correct: false }, { id: "d", text: "Ben ders çalışıyorum", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Il a bu un café' hangi zaman?", options: [{ id: "a", text: "Passé Composé", correct: true }, { id: "b", text: "Imparfait", correct: false }, { id: "c", text: "Présent", correct: false }, { id: "d", text: "Futur", correct: false }] },
-    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ le train tous les matins.", options: [{ id: "a", text: "prenions", correct: true }, { id: "b", text: "avons pris", correct: false }] }
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Marc ___ les informations à la télé.", options: [{ id: "a", text: "présentait", correct: true }, { id: "b", text: "a présenté", correct: false }] },
+    { id: 8, type: "SELECT", question: "'La météo était terrible' hangi zaman?", options: [{ id: "a", text: "Imparfait", correct: true }, { id: "b", text: "Passé Composé", correct: false }, { id: "c", text: "Présent", correct: false }, { id: "d", text: "Futur", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "İnsanlar haberleri izliyordu", correctAnswer: "Les gens regardaient les infos" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y ___ beaucoup de vent.", options: [{ id: "a", text: "avait", correct: true }, { id: "b", text: "a eu", correct: false }] },
+    { id: 11, type: "SELECT", question: "ÊTRE fiilinin Imparfait 'nous' çekimi nedir?", options: [{ id: "a", text: "Nous étions", correct: true }, { id: "b", text: "Nous sommes", correct: false }, { id: "c", text: "Nous étaient", correct: false }, { id: "d", text: "Nous étais", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Tout à coup, un chien ___.", options: [{ id: "a", text: "est sorti", correct: true }, { id: "b", text: "sortait", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Gazeteci insanlarla konuşuyordu", correctAnswer: "Le journaliste parlait avec les gens" },
+    { id: 14, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il y avait un accident", options: [{ id: "a", text: "Bir kaza vardı", correct: true }, { id: "b", text: "Bir kaza var", correct: false }, { id: "c", text: "Bir kaza oldu", correct: false }, { id: "d", text: "Bir kaza olacak", correct: false }] },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "Quand j'___ jeune, je lisais beaucoup.", options: [{ id: "a", text: "étais", correct: true }, { id: "b", text: "ai été", correct: false }] },
+    { id: 16, type: "SELECT", question: "Hangisi Imparfait eki DEĞİLDİR?", options: [{ id: "a", text: "-é", correct: true }, { id: "b", text: "-ais", correct: false }, { id: "c", text: "-ait", correct: false }, { id: "d", text: "-ions", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Dün akşam hava durumu berbattı", correctAnswer: "Hier soir la météo était terrible" },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Les gens ___ inquiets.", options: [{ id: "a", text: "étaient", correct: true }, { id: "b", text: "ont été", correct: false }] },
+    { id: 19, type: "SELECT", question: "'Nous kökü + ekler' formülüne uymayan tek fiil hangisidir?", options: [{ id: "a", text: "ÊTRE", correct: true }, { id: "b", text: "AVOIR", correct: false }, { id: "c", text: "ALLER", correct: false }, { id: "d", text: "FAIRE", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Evinizde kalın, fırtına devam edecek", correctAnswer: "Restez chez vous, la tempête va continuer" }
 ];
 
-// UNIT 345: İlgi Zamirleri (Qui/Que) (Relative Pronouns)
+// UNIT 345: TV Programları & İlgi Zamirleri (Qui/Que)
+// Quiz 1: KOLAY (20 Soru) - TV Kelime Hazinesi & Temel Qui/Que
 const unit345Quiz1: Question[] = [
-    // KOLAY (8 Soru) - Qui ve Que Ayrımı
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "İzlediğim film", correctAnswer: "Le film que je regarde" },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un programme ___ est populaire.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
-    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "L'homme ___ parle.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Le livre ___ tu lis.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
-    { id: 5, type: "SELECT", question: "'Qui' neyin yerini tutar?", options: [{ id: "a", text: "Özne (Subject)", correct: true }, { id: "b", text: "Nesne (Object)", correct: false }, { id: "c", text: "Yer", correct: false }, { id: "d", text: "Zaman", correct: false }] },
-    { id: 6, type: "SELECT", question: "'Que' neyin yerini tutar?", options: [{ id: "a", text: "Nesne (Object)", correct: true }, { id: "b", text: "Özne (Subject)", correct: false }, { id: "c", text: "Yer", correct: false }, { id: "d", text: "Zaman", correct: false }] },
-    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "J'aime les gens ___ sont gentils.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
-    { id: 8, type: "TRANSLATE", question: "Çevir:", hint: "Yediğim elma", correctAnswer: "La pomme que je mange" }
+    { id: 1, type: "SELECT", question: "'La télévision' ne demek?", options: [{ id: "a", text: "Telefon", correct: false }, { id: "b", text: "Televizyon", correct: true }, { id: "c", text: "Telgraf", correct: false }, { id: "d", text: "Tablet", correct: false }] },
+    { id: 2, type: "SELECT", question: "'La télécommande' ne demek?", options: [{ id: "a", text: "Televizyon", correct: false }, { id: "b", text: "Uzaktan kumanda", correct: true }, { id: "c", text: "Telefon", correct: false }, { id: "d", text: "Anten", correct: false }] },
+    { id: 3, type: "SELECT", question: "'La chaîne' ne demek?", options: [{ id: "a", text: "Reklam", correct: false }, { id: "b", text: "Program", correct: false }, { id: "c", text: "Kanal", correct: true }, { id: "d", text: "Dizi", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Les informations' ne demek?", options: [{ id: "a", text: "Haberler", correct: true }, { id: "b", text: "Reklamlar", correct: false }, { id: "c", text: "Diziler", correct: false }, { id: "d", text: "Filmler", correct: false }] },
+    { id: 5, type: "SELECT", question: "'La série' ne demek?", options: [{ id: "a", text: "Film", correct: false }, { id: "b", text: "Belgesel", correct: false }, { id: "c", text: "Dizi", correct: true }, { id: "d", text: "Reklam", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le documentaire' ne demek?", options: [{ id: "a", text: "Dizi", correct: false }, { id: "b", text: "Belgesel", correct: true }, { id: "c", text: "Komedi", correct: false }, { id: "d", text: "Haber", correct: false }] },
+    { id: 7, type: "SELECT", question: "'L'émission' ne demek?", options: [{ id: "a", text: "TV Programı / Yayın", correct: true }, { id: "b", text: "Uzaktan kumanda", correct: false }, { id: "c", text: "Kanal", correct: false }, { id: "d", text: "Anten", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le présentateur' ne demek?", options: [{ id: "a", text: "Yönetmen", correct: false }, { id: "b", text: "Oyuncu", correct: false }, { id: "c", text: "Sunucu", correct: true }, { id: "d", text: "Seyirci", correct: false }] },
+    { id: 9, type: "SELECT", question: "'La publicité' ne demek?", options: [{ id: "a", text: "Haber", correct: false }, { id: "b", text: "Reklam", correct: true }, { id: "c", text: "Dizi", correct: false }, { id: "d", text: "Belgesel", correct: false }] },
+    { id: 10, type: "SELECT", question: "'Regarder' fiili ne anlama gelir?", options: [{ id: "a", text: "Dinlemek", correct: false }, { id: "b", text: "İzlemek", correct: true }, { id: "c", text: "Okumak", correct: false }, { id: "d", text: "Yazmak", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ la télé le soir.", options: [{ id: "a", text: "regarde", correct: true }, { id: "b", text: "écoute", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Passe-moi la ___.", options: [{ id: "a", text: "télécommande", correct: true }, { id: "b", text: "chaîne", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Change de ___, s'il te plaît.", options: [{ id: "a", text: "chaîne", correct: true }, { id: "b", text: "télé", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Les ___ commencent à 20 heures.", options: [{ id: "a", text: "informations", correct: true }, { id: "b", text: "publicités", correct: false }] },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "Je déteste les ___.", options: [{ id: "a", text: "publicités", correct: true }, { id: "b", text: "chaînes", correct: false }] },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "TV izliyorum", correctAnswer: "Je regarde la télé" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Kumandayı ver", correctAnswer: "Passe-moi la télécommande" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Kanal değiştir", correctAnswer: "Change de chaîne" },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bu programı seviyorum", correctAnswer: "J'aime cette émission" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Haberleri izleyelim", correctAnswer: "Regardons les informations" }
 ];
 
+// Quiz 2: ORTA (20 Soru) - QUI ve QUE Temelleri & TV Bağlamı
 const unit345Quiz2: Question[] = [
-    // ORTA (7 Soru) - Birleştirme
-    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est la voiture ___ j'ai achetée.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Beni güldüren arkadaş", correctAnswer: "L'ami qui me fait rire" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "La maison ___ est là-bas.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
-    { id: 12, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "Le chien qui aboie", correct: true }, { id: "b", text: "Le chien que aboie", correct: false }, { id: "c", text: "Le chien qui j'aboie", correct: false }, { id: "d", text: "Chien qui aboie", correct: false }] },
-    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Sevdiğim şarkı", correctAnswer: "La chanson que j'aime" },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est toi ___ as gagné?", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Burada çalışan kadın", correctAnswer: "La femme qui travaille ici" }
+    { id: 1, type: "SELECT", question: "'Qui' neyin yerini tutar?", options: [{ id: "a", text: "Özne (Subject)", correct: true }, { id: "b", text: "Nesne (Object)", correct: false }, { id: "c", text: "Yer", correct: false }, { id: "d", text: "Zaman", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Que' neyin yerini tutar?", options: [{ id: "a", text: "Nesne (Object)", correct: true }, { id: "b", text: "Özne (Subject)", correct: false }, { id: "c", text: "Yer", correct: false }, { id: "d", text: "Zaman", correct: false }] },
+    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un programme ___ est populaire.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "L'émission ___ je regarde est géniale.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Le présentateur ___ parle est drôle.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "La série ___ j'adore commence ce soir.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Le documentaire ___ passe à la télé parle de la nature.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est la publicité ___ je déteste.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 9, type: "SELECT", question: "'L'homme qui parle' - burada 'qui' neden kullanılır?", options: [{ id: "a", text: "L'homme özne, parle fiil → QUI", correct: true }, { id: "b", text: "L'homme nesne → QUE", correct: false }, { id: "c", text: "Rastgele seçilir", correct: false }, { id: "d", text: "Her zaman qui kullanılır", correct: false }] },
+    { id: 10, type: "SELECT", question: "'Le film que je regarde' - burada 'que' neden kullanılır?", options: [{ id: "a", text: "Le film nesne, je özne → QUE", correct: true }, { id: "b", text: "Le film özne → QUI", correct: false }, { id: "c", text: "Fiilden önce hep que gelir", correct: false }, { id: "d", text: "Film kelimesiyle que kullanılır", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "İzlediğim dizi", correctAnswer: "La série que je regarde" },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "Konuşan sunucu", correctAnswer: "Le présentateur qui parle" },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Sevdiğim program", correctAnswer: "L'émission que j'aime" },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Saat 20'de başlayan program", correctAnswer: "L'émission qui commence à 20 heures" },
+    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "La chaîne ___ diffuse ce programme est TF1.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est le programme ___ nous regardons chaque soir.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 17, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'émission qui commence", options: [{ id: "a", text: "Başlayan program", correct: true }, { id: "b", text: "İzlediğim program", correct: false }, { id: "c", text: "Biten program", correct: false }, { id: "d", text: "Sevdiğim program", correct: false }] },
+    { id: 18, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "Le documentaire qui parle de la nature", correct: true }, { id: "b", text: "Le documentaire que parle de la nature", correct: false }, { id: "c", text: "Le documentaire qui je parle", correct: false }, { id: "d", text: "Le documentaire que est intéressant", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Nefret ettiğim reklam", correctAnswer: "La publicité que je déteste" },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Doğa hakkında konuşan belgesel", correctAnswer: "Le documentaire qui parle de la nature" }
 ];
 
+// Quiz 3: ZOR (20 Soru) - Karmaşık QUI/QUE, Qu' Elision & TV Diyalogları
 const unit345Quiz3: Question[] = [
-    // ZOR (5 Soru) - Sesli harf çakışması (Qu')
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Ona verdiğim hediye", correctAnswer: "Le cadeau que je lui ai donné" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "La fille ___ habite ici.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "qu'", correct: false }] },
-    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce ___ il dit est vrai.", options: [{ id: "a", text: "qu'", correct: true }, { id: "b", text: "qui", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Seni bekleyen kişi", correctAnswer: "La personne qui t'attend" },
-    { id: 20, type: "SELECT", question: "Hangi durumda 'Que' -> 'Qu'' olur?", options: [{ id: "a", text: "Sesli harften önce", correct: true }, { id: "b", text: "Sessiz harften önce", correct: false }, { id: "c", text: "Her zaman", correct: false }, { id: "d", text: "Asla", correct: false }] }
+    { id: 1, type: "SELECT", question: "Hangi durumda 'Que' → 'Qu'' olur?", options: [{ id: "a", text: "Sesli harften önce", correct: true }, { id: "b", text: "Sessiz harften önce", correct: false }, { id: "c", text: "Her zaman", correct: false }, { id: "d", text: "Asla değişmez", correct: false }] },
+    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est l'émission ___ il regarde tous les soirs.", options: [{ id: "a", text: "qu'", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "Le présentateur ___ on voit aux informations est célèbre.", options: [{ id: "a", text: "qu'", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "La série ___ a gagné le prix est fantastique.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "qu'", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est la télécommande ___ Antoine cherche.", options: [{ id: "a", text: "qu'", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "Le documentaire ___ elle adore parle des animaux.", options: [{ id: "a", text: "qu'", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 7, type: "SELECT", question: "'C'est lui qui a changé de chaîne' - 'qui' burada ne yapar?", options: [{ id: "a", text: "Özneyi (lui) fiille bağlar", correct: true }, { id: "b", text: "Nesneyi bağlar", correct: false }, { id: "c", text: "Soru sorar", correct: false }, { id: "d", text: "Yer belirtir", correct: false }] },
+    { id: 8, type: "SELECT", question: "'C'est l'émission qu'il préfère' - neden 'qu'' kullanılır?", options: [{ id: "a", text: "que + il → qu'il (sesli harf çakışması)", correct: true }, { id: "b", text: "Özne olduğu için", correct: false }, { id: "c", text: "Émission dişil olduğu için", correct: false }, { id: "d", text: "Préférer fiili özel olduğu için", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Onun izlediği dizi çok uzun", correctAnswer: "La série qu'il regarde est très longue" },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Haberlerde konuşan kadın gazeteci", correctAnswer: "La journaliste qui parle aux informations" },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Nefret ettiğimiz reklam tekrar başladı", correctAnswer: "La publicité que nous détestons a recommencé" },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "Her akşam yayınlanan program", correctAnswer: "L'émission qui passe tous les soirs" },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Les séries ___ passent le soir sont intéressantes.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Les publicités ___ nous voyons sont ennuyeuses.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 15, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "C'est l'émission qu'elle aime", correct: true }, { id: "b", text: "C'est l'émission que elle aime", correct: false }, { id: "c", text: "C'est l'émission qui elle aime", correct: false }, { id: "d", text: "C'est l'émission qu'aime elle", correct: false }] },
+    { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est le documentaire qu'il adore", options: [{ id: "a", text: "Bayıldığı belgesel bu", correct: true }, { id: "b", text: "Belgesel başlıyor", correct: false }, { id: "c", text: "Nefret ettiği belgesel", correct: false }, { id: "d", text: "Belgesel güzel", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Kanal değiştiren kişi Antoine", correctAnswer: "La personne qui change de chaîne est Antoine" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Sevmediğim sunucu çok konuşuyor", correctAnswer: "Le présentateur que je n'aime pas parle trop" },
+    { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est le meilleur programme ___ j'ai vu cette semaine.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 20, type: "FILL_BLANK", question: "Doldur:", sentence: "Le film ___ commence à 21h est un film d'action.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] }
 ];
 
+// Quiz 4: KARIŞIK DEĞERLENDİRME (20 Soru) - Tüm TV Kelime + QUI/QUE Genel Tekrar
 const unit345Quiz4: Question[] = [
-    // KARIŞIK (8 Soru)
-    { id: 1, type: "SELECT", question: "'L'étudiant que je vois' cümlesindeki 'que' neyin yerine geçer?", options: [{ id: "a", text: "L'étudiant", correct: true }, { id: "b", text: "Je", correct: false }, { id: "c", text: "Vois", correct: false }, { id: "d", text: "Okul", correct: false }] },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un acteur ___ joue bien.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
-    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "Gördüğün adam", correctAnswer: "L'homme que tu vois" },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "La lettre ___ est arrivée.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Yaptığım kek", correctAnswer: "Le gâteau que j'ai fait" },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est lui qui a fait ça", options: [{ id: "a", text: "Bunu yapan o", correct: true }, { id: "b", text: "Bunu ona yaptım", correct: false }, { id: "c", text: "Bunu o yaptı", correct: false }, { id: "d", text: "Bunu biz yaptık", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Qui' den sonra ne gelir?", options: [{ id: "a", text: "Fiil", correct: true }, { id: "b", text: "Özne", correct: false }, { id: "c", text: "Sıfat", correct: false }, { id: "d", text: "Zarf", correct: false }] },
-    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Les photos ___ tu as prises.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] }
+    { id: 1, type: "SELECT", question: "'La télé' hangi kelimenin kısaltmasıdır?", options: [{ id: "a", text: "La télécommande", correct: false }, { id: "b", text: "La télévision", correct: true }, { id: "c", text: "Le téléphone", correct: false }, { id: "d", text: "Le télégramme", correct: false }] },
+    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "L'émission ___ passe ce soir est un documentaire.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "İzlediğim belgesel çok güzel", correctAnswer: "Le documentaire que je regarde est très beau" },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est la série ___ tout le monde aime.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Qui' den sonra ne gelir?", options: [{ id: "a", text: "Fiil (eylem)", correct: true }, { id: "b", text: "Özne (kişi)", correct: false }, { id: "c", text: "Sıfat", correct: false }, { id: "d", text: "Edat", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Que' den sonra ne gelir?", options: [{ id: "a", text: "Özne (kişi)", correct: true }, { id: "b", text: "Fiil (eylem)", correct: false }, { id: "c", text: "Sıfat", correct: false }, { id: "d", text: "Edat", correct: false }] },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Passe-moi la télécommande", options: [{ id: "a", text: "Bana kumandayı uzat", correct: true }, { id: "b", text: "Kanalı değiştir", correct: false }, { id: "c", text: "TV'yi kapat", correct: false }, { id: "d", text: "Haberleri aç", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Le présentateur ___ je n'aime pas parle trop.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Başlayan program benim favorim", correctAnswer: "L'émission qui commence est ma préférée" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un documentaire ___ parle de la nature.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Bayıldığım dizi saat 20'de başlıyor", correctAnswer: "La série que j'adore commence à 20 heures" },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "La publicité ___ nous détestons est très longue.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 13, type: "SELECT", question: "Hangi cümle dilbilgisine uygun?", options: [{ id: "a", text: "Le programme qui commence", correct: true }, { id: "b", text: "Le programme que commence", correct: false }, { id: "c", text: "Le programme qui je commence", correct: false }, { id: "d", text: "Le programme que est bon", correct: false }] },
+    { id: 14, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La série que j'adore", options: [{ id: "a", text: "Bayıldığım dizi", correct: true }, { id: "b", text: "İzlediğim film", correct: false }, { id: "c", text: "Sevdiğim müzik", correct: false }, { id: "d", text: "Nefret ettiğim reklam", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Haberlerde konuşan adam kim?", correctAnswer: "Qui est l'homme qui parle aux informations?" },
+    { id: 16, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est la chaîne ___ diffuse les meilleurs documentaires.", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Onun seçtiği film çok sıkıcı", correctAnswer: "Le film qu'il a choisi est très ennuyeux" },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Les informations ___ je regarde sont à 20 heures.", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "qui", correct: false }] },
+    { id: 19, type: "SELECT", question: "'L'émission qu'elle regarde' cümlesinde neden 'qu'' kullanılır?", options: [{ id: "a", text: "que + elle → qu'elle (sesli harf birleşimi)", correct: true }, { id: "b", text: "Émission dişil olduğu için", correct: false }, { id: "c", text: "Elle özne olduğu için", correct: false }, { id: "d", text: "Regarder fiili özel olduğu için", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Bu akşam TV'de ne var?", correctAnswer: "Qu'est-ce qu'il y a ce soir à la télé?" }
 ];
 
 // UNIT 346: Üstünlük Derecesi (Superlatives)

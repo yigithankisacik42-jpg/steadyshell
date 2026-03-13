@@ -680,24 +680,129 @@ const unit339Grammar: UnitGrammar = {
   ],
 };
 
-// ===== ÜNİTE 340: YEMEK TARİFİ =====
 const unit340Grammar: UnitGrammar = {
   unitId: 340,
-  title: "Emir Kipi (Impératif)",
+  title: "Yemek Tarifi",
   rules: [
     {
-      id: "fr-a2-imperatif",
-      title: "👨‍🍳 Emir Kipi Yapısı",
+      id: "fr-a2-cooking-verbs",
+      title: "🧅 BÖLÜM 1: MUTFAK FİİLLERİ SÖZLÜĞÜ (Malzemeler)",
       explanation:
-        "Tariflerde ve emirlerde kullanılır. Üç form vardır:\n\n**TU formu:** Fiil kökü (ER fiillerinde -s düşer!)\n* Mélange! (Karıştır!) - Mélanger\n* Coupe! (Kes!) - Couper\n\n**NOUS formu:** -ons ile biter\n* Mélangeons! (Karıştıralım!)\n\n**VOUS formu:** -ez ile biter\n* Mélangez! (Karıştırın!)\n\n**Düzensizler:**\n* Être: Sois, Soyons, Soyez\n* Avoir: Aie, Ayons, Ayez",
+        "Önce yemek yaparken en çok kullanacağımız \"Hareketleri\" (Fiilleri) cebe atalım.",
+      table: {
+        headers: ["Fransızca Fiil (Mastar)", "Okunuşu 🔊", "Türkçe Anlamı"],
+        rows: [
+          ["Couper", "Ku-pe", "Kesmek / Doğramak"],
+          ["Laver", "La-ve", "Yıkamak"],
+          ["Mélanger", "Me-lan-je", "Karıştırmak"],
+          ["Ajouter", "A-ju-te", "Eklemek"],
+          ["Manger", "Man-je", "Yemek (yemek)"],
+          ["Regarder", "Rö-gar-de", "Bakmak / İzlemek"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-imperatif-logic",
+      title: "✂️ BÖLÜM 2: EMİR KİPİ MANTIĞI (Kelimeleri Çöpe At!)",
+      explanation:
+        "Fransızcada normal bir cümle kurarken hep \"Je, Tu, Il...\" (Ben, Sen, O) derdik. Emir kipinin BİRİNCİ ALTIN KURALI şudur:\n\n" +
+        "**👉 Şahıs zamirlerini (Tu, Nous, Vous) çöpe at!**\n\n" +
+        "Sadece 3 kişiye emir verebiliriz:\n" +
+        "**Tu** (Sen) → \"Yap, Kes, Yıka\"\n" +
+        "**Nous** (Biz) → \"Hadi yapalım, keselim\" (Teklif/Ortak emir)\n" +
+        "**Vous** (Siz) → \"Yapın, Kesin, Yıkayın\" (Kibar veya çoğul)",
       examples: [
         {
-          fr: "Coupez les légumes en petits morceaux.",
-          tr: "Sebzeleri küçük parçalara kesin.",
+          fr: "Tu regardes la télé.",
+          tr: "(Normal) Sen televizyon izliyorsun.",
         },
-        { fr: "Mélangez bien la pâte.", tr: "Hamuru iyice karıştırın." },
-        { fr: "Laissez cuire pendant 20 minutes.", tr: "20 dakika pişirin." },
+        {
+          fr: "Regarde la télé !",
+          tr: "(Emir) Televizyon izle! (Gördün mü, 'Tu' kelimesi uçtu gitti!)",
+        },
       ],
+    },
+    {
+      id: "fr-a2-imperatif-drop-s",
+      title: "🚨 BÖLÜM 3: İKİNCİ ALTIN KURAL (Düşen 'S' Harfi)",
+      explanation:
+        "Burası Fransızca öğrenenlerin %90'ının hata yaptığı yerdir koç, buraya çok dikkat et!\n\n" +
+        "Fransızcada sonu **-ER** ile biten fiillerde (Yukarıdaki mutfak fiillerinin hepsi öyledir), \"Sen\" (Tu) çekiminin sonunda her zaman bir \"S\" harfi vardır. (Tu coupes = Sen kesiyorsun).\n\n" +
+        "👉 Emir kipi yaparken, o sondaki **\"S\" harfi de ÇÖPE GİDER!**",
+      examples: [
+        {
+          fr: "Tu coupes",
+          tr: "(Normal) Sen kesiyorsun",
+        },
+        {
+          fr: "Coupe !",
+          tr: "(Emir) Kes! (S harfi uçtu!)",
+        },
+      ],
+    },
+    {
+      id: "fr-a2-imperatif-conjugation",
+      title: "🧮 BÖLÜM 4: LEGO ZAMANI (Fiilleri Emir Kipinde Çekiyoruz)",
+      explanation:
+        "Hadi Couper (Kesmek) fiilini tezgaha yatırıp emir kipine sokalım:\n\n" +
+        "Hemen başka bir fiille (Laver - Yıkamak) pratik yapalım:\n" +
+        "* Lave les tomates ! → 🔊 Lav le to-mat! (Domatesleri yıka!)\n" +
+        "* Lavons les tomates ! → 🔊 La-von le to-mat! (Domatesleri yıkayalım!)\n" +
+        "* Lavez les tomates ! → 🔊 La-ve le to-mat! (Domatesleri yıkayın!)",
+      table: {
+        headers: ["Şahıs (Gizli)", "Emir Kipi Çekimi", "Okunuşu 🔊", "Türkçe Anlamı", "Kural"],
+        rows: [
+          ["(Tu - Sen)", "Coupe !", "Kup!", "Kes!", "'Tu' atıldı, sondaki 'S' atıldı."],
+          ["(Nous - Biz)", "Coupons !", "Ku-pon!", "Keselim!", "Sadece 'Nous' atıldı."],
+          ["(Vous - Siz)", "Coupez !", "Ku-pe!", "Kesin(iz)!", "Sadece 'Vous' atıldı."],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-imperatif-negative",
+      title: "🛑 BÖLÜM 5: OLUMSUZ EMİR (Yapma!)",
+      explanation:
+        "\"Kesme, Karıştırma!\" demek de çok basittir. Fiilin önüne **NE**, arkasına **PAS** koyarsın.",
+      examples: [
+        {
+          fr: "Coupe ! → Ne coupe pas !",
+          tr: "(Kes!) → (Kesme!) 🔊 Nö kup pa!",
+        },
+        {
+          fr: "Mélangez ! → Ne mélangez pas !",
+          tr: "(Karıştırın!) → (Karıştırmayın!) 🔊 Nö me-lan-je pa!",
+        },
+      ],
+    },
+    {
+      id: "fr-a2-imperatif-dialogue",
+      title: "🗣️ BÖLÜM 6: SESLİ DİYALOG (Mutfakta Şef ve Yamağı)",
+      explanation:
+        "Senaryo: Paris'te ünlü bir restorandasın. Şef (Le Chef) mutfakta yardımcısına (L'assistant) tarif veriyor.\n\n" +
+        "**Şef:** Ali, lave les légumes, s'il te plaît !\n" +
+        "🔊 Ali, lav le le-güm, sil tö ple!\n" +
+        "_(Ali, sebzeleri yıka, lütfen!)_\n\n" +
+        "**Asistan:** Oui, Chef ! Et après ?\n" +
+        "🔊 Ui, Şef! E a-pre?\n" +
+        "_(Evet Şef! Peki sonra?)_\n\n" +
+        "**Şef:** Coupe les tomates et les oignons. Mais ne pleure pas !\n" +
+        "🔊 Kup le to-mat e le zon-yon. Me nö plör pa!\n" +
+        "_(Domatesleri ve soğanları kes/doğra. Ama ağlama!) (Pleurer = Ağlamak)_\n\n" +
+        "**Asistan:** D'accord. Je mets tout dans le bol ?\n" +
+        "🔊 Da-kor. Jö me tu dan lö bol?\n" +
+        "_(Tamam. Her şeyi kaseye mi koyuyorum?)_\n\n" +
+        "**Şef:** Oui ! Ensuite, ajoute le sel et mélange !\n" +
+        "🔊 Ui! An-sü-it, a-jut lö sel e me-lanj!\n" +
+        "_(Evet! Ardından tuzu ekle ve karıştır!)_\n\n" +
+        "**Asistan:** C'est prêt !\n" +
+        "🔊 Se pre!\n" +
+        "_(Hazır!)_\n\n" +
+        "**Şef:** Parfait. Maintenant, mangeons !\n" +
+        "🔊 Par-fe. Men-tö-nan, man-jon!\n" +
+        "_(Mükemmel. Şimdi, yiyelim (hadi yiyelim)!)_",
+      examples: [],
     },
   ],
 };
@@ -708,16 +813,105 @@ const unit341Grammar: UnitGrammar = {
   title: "Alışveriş Diyaloğu",
   rules: [
     {
-      id: "fr-a2-comparatif",
-      title: "📊 Karşılaştırma (Comparatif)",
+      id: "fr-a2-adj-vocab",
+      title: "🏷️ BÖLÜM 1: SIFAT SÖZLÜĞÜ (Terazinin Ağırlıkları)",
       explanation:
-        "Plus/Moins/Aussi + sıfat + QUE\n\n* Plus cher que (Daha pahalı)\n* Moins grand que (Daha az büyük)\n* Aussi bon que (Eşit iyi)",
+        "Önce kıyafetleri eleştirmek için gereken kelimeleri (Sıfatları) cebe atalım.",
+      table: {
+        headers: ["Fransızca Sıfat", "Okunuşu 🔊", "Türkçe Anlamı"],
+        rows: [
+          ["Cher", "Şer", "Pahalı"],
+          ["Bon marché", "Bon marşe", "Ucuz (Uygun fiyatlı)"],
+          ["Grand", "Gran", "Büyük"],
+          ["Petit", "Pöti", "Küçük"],
+          ["Joli / Beau", "Joli / Bo", "Güzel"],
+          ["Confortable", "Konfortabl", "Rahat"],
+          ["Élégant", "Elegan", "Şık"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-comparatif-formulas",
+      title: "⚖️ BÖLÜM 2: TERAZİ FORMÜLÜ (Daha / Daha Az / Kadar)",
+      explanation:
+        "Karşılaştırma yapmak için terazinin 3 farklı ayarı vardır.\n\n" +
+        "**1. PLUS ... QUE (+ Daha ... -den)**\n" +
+        "Bir şeyin diğerinden \"Daha fazla\" olduğunu anlatır.\n" +
+        "Kalıp: **PLUS** (plü) + Sıfat + **QUE** (kö)\n" +
+        "→ Plus cher que... (Plü şer kö...) = ...-den daha pahalı.\n\n" +
+        "**2. MOINS ... QUE (- Daha az ... -den)**\n" +
+        "Bir şeyin diğerinden \"Daha az\" olduğunu anlatır.\n" +
+        "Kalıp: **MOINS** (muen) + Sıfat + **QUE** (kö)\n" +
+        "→ Moins grand que... (Muen gran kö...) = ...-den daha az büyük.\n\n" +
+        "**3. AUSSI ... QUE (= ... Kadar ...)**\n" +
+        "İki şeyin eşit olduğunu anlatır.\n" +
+        "Kalıp: **AUSSI** (osi) + Sıfat + **QUE** (kö)\n" +
+        "→ Aussi joli que... (Osi joli kö...) = ... kadar güzel.",
+      examples: [],
+    },
+    {
+      id: "fr-a2-comparatif-assembly",
+      title: "🏗️ BÖLÜM 3: PARÇALARI BİRLEŞTİRME (Lego Zamanı)",
+      explanation:
+        "Geçen dersteki \"Bu (Ce/Cette)\" kelimeleriyle terazimizi birleştirelim.\n\n" +
+        "**Formül:** 1. Ürün + **EST** (dır/dir) + Terazi (Plus/Moins/Aussi) + Sıfat + **QUE** + 2. Ürün\n\n" +
+        "(Not: Çoğul kelimelerde \"est\" yerine **\"sont\"** (onlar ...dır) kullanılır.)",
+      table: {
+        headers: ["Fransızca Tam Cümle", "Okunuşu 🔊", "Türkçe Çevirisi"],
+        rows: [
+          ["Ce pantalon est plus cher que ce t-shirt.", "Sö pantalon e plü şer kö sö ti-şört.", "Bu pantolon, bu tişörtten daha pahalıdır."],
+          ["Cette veste est moins grande que ce pull.", "Set vest e muen grand kö sö pül.", "Bu ceket, bu kazaktan daha az büyüktür."],
+          ["Ces chaussures sont aussi confortables que ces baskets.", "Se şosür son osi konfortabl kö se basket.", "Bu ayakkabılar, bu spor ayakkabılar kadar rahattır."],
+        ],
+      },
       examples: [
         {
           fr: "Ce produit est moins cher que l'autre.",
           tr: "Bu ürün diğerinden daha ucuz.",
         },
       ],
+    },
+    {
+      id: "fr-a2-meilleur-exception",
+      title: "🚨 BÖLÜM 4: HAYAT KURTARAN İSTİSNA (Daha İyi)",
+      explanation:
+        "Tıpkı Türkçede \"En iyisi\" derken \"En güzeli\" demediğimiz gibi, Fransızcada da \"Daha iyi\" demek için özel bir kelime vardır.\n\n" +
+        "❌ **\"Plus bon\" ASLA denmez!**\n" +
+        "✅ Onun yerine şu kelime kullanılır:\n\n" +
+        "**Meilleur** (Daha iyi) → 🔊 Meyör",
+      examples: [
+        {
+          fr: "Cette chemise est meilleure.",
+          tr: "Bu gömlek daha iyi.",
+        },
+        {
+          fr: "C'est meilleur que l'autre.",
+          tr: "Bu, diğerinden daha iyi.",
+        },
+      ],
+    },
+    {
+      id: "fr-a2-comparatif-dialogue",
+      title: "🗣️ BÖLÜM 5: FİNAL DİYALOĞU (İki Ürün Arasında Kalmak)",
+      explanation:
+        "Senaryo: Arkadaşınla (Ali) mağazadasın. İki ceket arasında kaldın.\n\n" +
+        "**Sen:** Ali, regarde cette veste noire et cette veste bleue. Laquelle tu préfères ?\n" +
+        "🔊 Ali, rögard set vest nuar e set vest blö. Lakel tü prefer?\n" +
+        "_(Ali, bu siyah cekete ve bu mavi cekete bak. Hangisini tercih edersin?)_\n\n" +
+        "**Ali:** Je pense que la veste noire est plus élégante que la veste bleue.\n" +
+        "🔊 Jö pans kö la vest nuar e plü zelegan kö la vest blö.\n" +
+        "_(Bence siyah ceket, mavi ceketten daha şık.)_\n\n" +
+        "**Sen:** Oui, mais elle est aussi plus chère ! (100 euros).\n" +
+        "🔊 Ui, me el e osi plü şer! Sö öro.\n" +
+        "_(Evet, ama aynı zamanda daha pahalı!)_\n\n" +
+        "**Ali:** C'est vrai. La veste bleue est moins chère, et elle est aussi confortable.\n" +
+        "🔊 Se vre. La vest blö e muen şer, e el e osi konfortabl.\n" +
+        "_(Bu doğru. Mavi ceket daha az pahalı (daha ucuz) ve o da aynı derecede rahat.)_\n\n" +
+        "**Sen:** Tu as raison. J'achète la bleue !\n" +
+        "🔊 Tü a rezon. Jaşet la blö!\n" +
+        "_(Haklısın. Maviyi satın alıyorum!)_",
+      examples: [],
     },
   ],
 };
@@ -727,16 +921,110 @@ const unit342Grammar: UnitGrammar = {
   title: "Kıyafet Alışverişi",
   rules: [
     {
-      id: "fr-a2-demonstratifs",
-      title: "👉 İşaret Sıfatları (Ce, Cette, Ces)",
+      id: "fr-a2-clothing-vocab",
+      title: "👕 BÖLÜM 1: VİTRİNDEKİ MALZEMELER (Kıyafetler)",
       explanation:
-        "* Ce (Erkek tekil): Ce pantalon\n* Cette (Dişi tekil): Cette robe\n* Ces (Çoğul): Ces chaussures",
+        "Önce neleri alacağımızı bilelim. Kelimelerin başındaki Le/La (Erkek/Dişi) ayrımı hayati önem taşır, çünkü parmağımızla işaret ederken kuralı bu belirleyecek!",
+      table: {
+        headers: ["Fransızca", "Okunuşu 🔊", "Türkçe Anlamı", "Cinsiyet"],
+        rows: [
+          ["Le pantalon", "Lö pantalon", "Pantolon", "(Erkek)"],
+          ["Le pull", "Lö pül", "Kazak", "(Erkek)"],
+          ["Le t-shirt", "Lö ti-şört", "Tişört", "(Erkek)"],
+          ["La chemise", "La şömiz", "Gömlek", "(Dişi)"],
+          ["La robe", "La rob", "Elbise", "(Dişi)"],
+          ["La veste", "La vest", "Ceket", "(Dişi)"],
+          ["Les chaussures", "Le şosür", "Ayakkabılar", "(Çoğul)"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-shopping-verbs",
+      title: "🛠️ BÖLÜM 2: ALIŞVERİŞ MOTORLARI (Kritik Fiiller)",
+      explanation:
+        "Vitrine bakmak yetmez, o ürünü \"denemek\" ve \"satın almak\" lazım. İşte en çok kullanacağın 4 ana fiil ve \"Ben (Je)\" çekimleri:\n\n" +
+        "(Ekstra Bilgi: Ürünün fiyatını sormak için **Coûter** (Kute - Tutmak/Fiyatı olmak) fiili kullanılır.\n" +
+        "→ **Ça coûte combien ?** = Ne kadar tutuyor?)",
+      table: {
+        headers: ["Fiil (Mastar)", "Okunuşu", "Türkçe Anlamı", "\"Ben\" (Je) Çekimi", "Okunuşu 🔊"],
+        rows: [
+          ["Acheter", "Aşöte", "Satın almak", "J'achète", "Jaşet"],
+          ["Essayer", "Eseye", "Denemek", "J'essaie", "Jesey"],
+          ["Chercher", "Şerşe", "Aramak", "Je cherche", "Jö şerş"],
+          ["Payer", "Peye", "Ödemek", "Je paie", "Jö pey"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-demonstratifs-detailed",
+      title: "👉 BÖLÜM 3: İŞARET PARMAĞI (Bu / Şu / Bunlar)",
+      explanation:
+        "Türkçede her şeye \"Bu\" deyip geçeriz. Fransızlar ise işaret ederken kelimenin cinsiyetine bakar. İşte işin sırrı olan 4 kelime:\n\n" +
+        "**1. CE (Erkekler İçin \"Bu\")**\n" +
+        "Kelime Le (Erkek) ise **CE** (Sö) kullanırız.\n" +
+        "→ **Ce pantalon** (Bu pantolon) 🔊 Sö pantalon\n\n" +
+        "**2. CETTE (Dişiler İçin \"Bu\")**\n" +
+        "Kelime La (Dişi) ise **CETTE** (Set) kullanırız.\n" +
+        "→ **Cette chemise** (Bu gömlek) 🔊 Set şömiz\n\n" +
+        "**3. CES (Çoğullar İçin \"Bunlar / Bu\")**\n" +
+        "Kelime çoğulsa (sonunda genelde -s varsa), erkek veya dişi fark etmez, **CES** (Se) kullanırız.\n" +
+        "→ **Ces chaussures** (Bu ayakkabılar) 🔊 Se şosür\n\n" +
+        "🚨 **4. CET (Sesli Harfle Başlayan Erkekler İçin)**\n" +
+        "Fransızlar iki sesli harfin yan yana gelmesini sevmez. Kelime Erkekse (Le) ama A, E, I, O, U ile başlıyorsa araya bir 't' koyarız.\n" +
+        "→ Un anorak (Kışlık mont - Erkek) → **Cet anorak** (Bu mont) 🔊 Set anorak",
+      examples: [],
+    },
+    {
+      id: "fr-a2-demonstratifs-formula",
+      title: "🏗️ BÖLÜM 4: TÜM PARÇALARI BİRLEŞTİRME (Lego Zamanı)",
+      explanation:
+        "Şimdi formülü kuruyoruz: **FİİL + İŞARET SIFATI + KIYAFET**",
+      table: {
+        headers: ["Tam Cümle (Fransızca)", "Okunuşu 🔊", "Türkçe Çevirisi", "Mantığı"],
+        rows: [
+          ["Je cherche ce pantalon.", "Jö şerş sö pantalon.", "Bu pantolonu arıyorum.", "Pantalon erkek → CE"],
+          ["J'achète cette robe.", "Jaşet set rob.", "Bu elbiseyi satın alıyorum.", "Robe dişi → CETTE"],
+          ["J'essaie cet anorak.", "Jesey set anorak.", "Bu montu deniyorum.", "Anorak erkek + sesli → CET"],
+          ["Je paie ces chaussures.", "Jö pey se şosür.", "Bu ayakkabıları ödüyorum.", "Ayakkabılar çoğul → CES"],
+        ],
+      },
       examples: [
         {
           fr: "Cette robe vous va très bien.",
           tr: "Bu elbise size çok yakışıyor.",
         },
       ],
+    },
+    {
+      id: "fr-a2-clothing-dialogue",
+      title: "🗣️ BÖLÜM 5: FİNAL DİYALOĞU (Mağazada Kusursuz Şov)",
+      explanation:
+        "Öğrendiğimiz her şeyi gerçek bir mağaza (Le magasin) senaryosunda kullanalım.\n\n" +
+        "**Satıcı:** Bonjour Monsieur, je peux vous aider ?\n" +
+        "🔊 Bonjur Mösyö, jö pö vu zede?\n" +
+        "_(Merhaba beyefendi, size yardım edebilir miyim?)_\n\n" +
+        "**Sen:** Oui, bonjour. Je cherche un pull.\n" +
+        "🔊 Ui, bonjur. Jö şerş an pül.\n" +
+        "_(Evet, merhaba. Bir kazak arıyorum.)_\n\n" +
+        "**Satıcı:** Regardez ce pull bleu. Vous aimez ?\n" +
+        "🔊 Rögarde sö pül blö. Vu zeme?\n" +
+        "_(Bu mavi kazağa bakın. Beğendiniz mi?)_\n\n" +
+        "**Sen:** Oui, c'est très beau. Je peux essayer ce pull ?\n" +
+        "🔊 Ui, se tre bo. Jö pö eseye sö pül?\n" +
+        "_(Evet, çok güzel. Bu kazağı deneyebilir miyim?)_\n\n" +
+        "_(Kabinden çıkarsın)_\n\n" +
+        "**Sen:** C'est parfait. Et je voudrais aussi cette chemise blanche.\n" +
+        "🔊 Se parfe. E jö vudre osi set şömiz blanş.\n" +
+        "_(Bu mükemmel. Ve ayrıca bu beyaz gömleği istiyorum.)_\n\n" +
+        "**Satıcı:** Très bien. Ce pull et cette chemise. Ça coûte 80 euros.\n" +
+        "🔊 Tre biyen. Sö pül e set şömiz. Sa kut katrö-van öro.\n" +
+        "_(Çok iyi. Bu kazak ve bu gömlek. 80 euro tutuyor.)_\n\n" +
+        "**Sen:** D'accord. Je paie par carte.\n" +
+        "🔊 Dakor. Jö pey par kart.\n" +
+        "_(Tamam. Kartla ödüyorum.)_",
+      examples: [],
     },
   ],
 };
@@ -746,13 +1034,99 @@ const unit343Grammar: UnitGrammar = {
   title: "Ev İşleri",
   rules: [
     {
-      id: "fr-a2-venir-de",
-      title: "⏱️ Venir de + Infinitif (Az önce)",
+      id: "fr-a2-housework-vocab",
+      title: "🧹 BÖLÜM 1: EV İŞLERİ SÖZLÜĞÜ (Malzemeler)",
       explanation:
-        "Az önce yapılan eylemler için:\n* Je viens de nettoyer. (Az önce temizledim.)\n* Elle vient de partir. (Az önce gitti.)",
+        "Fransızcada ev işlerinin %90'ı \"FAIRE\" (Yapmak) fiiliyle kurulur. Spor ünitesinden bu fiile zaten alışkınsın koç!",
+      table: {
+        headers: ["Fransızca", "Okunuşu 🔊", "Türkçe Anlamı"],
+        rows: [
+          ["Le ménage", "Lö menaj", "Temizlik"],
+          ["Faire le ménage", "Fer lö menaj", "Temizlik yapmak"],
+          ["Faire la vaisselle", "Fer la vesel", "Bulaşık yıkamak"],
+          ["Faire la lessive", "Fer la lesiv", "Çamaşır yıkamak"],
+          ["Faire le lit", "Fer lö li", "Yatağı toplamak / yapmak"],
+          ["Passer l'aspirateur", "Pase laspiratör", "Elektrikli süpürge yapmak"],
+          ["Repasser", "Röpase", "Ütü yapmak"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-venir-de-concept",
+      title: "⏳ BÖLÜM 2: \"VENIR DE\" MANTIĞI NEDİR?",
+      explanation:
+        "Türkçede \"Az önce / Yeni\" anlamı katar. Eylemi tam şu saniyeden bir veya birkaç dakika önce bitirdiğini anlatır.\n\n" +
+        "**İşin Sırrı (Kelime Anlamı):**\n" +
+        "\"Venir\", Fransızcada \"Gelmek\" demektir. \"De\" ise \"-den/-dan\" demektir.\n" +
+        "Fransızlar \"Az önce bulaşıkları yıkadım\" demezler. Şöyle derler:\n" +
+        "👉 \"Bulaşıkları yıkamak-**tan** geliyorum.\" (Yani o eylemi daha yeni bitirip buraya geldim).\n\n" +
+        "🎯 **Altın Kural:** Formüldeki ikinci fiil (yani asıl iş) **ASLA ÇEKİMLENMEZ**. Sözlükteki yalın (mastar) haliyle kalır. Bu senin için inanılmaz bir kolaylıktır!",
+      examples: [],
+    },
+    {
+      id: "fr-a2-venir-conjugation",
+      title: "🧮 BÖLÜM 3: VENİR FİİLİ ÇEKİMİ (Motoru Çalıştır)",
+      explanation:
+        "Formülü kurmak için sadece VENIR (Gelmek) fiilini şimdiki zamanda çekmeyi bileceğiz. Bu biraz düzensizdir, bunu ezberliyoruz:",
+      table: {
+        headers: ["Özne", "Venir Çekimi", "Okunuşu 🔊"],
+        rows: [
+          ["Je", "viens", "Jö viyen"],
+          ["Tu", "viens", "Tü viyen"],
+          ["Il / Elle", "vient", "İl / El viyen"],
+          ["Nous", "venons", "Nu vönon"],
+          ["Vous", "venez", "Vu vöne"],
+          ["Ils / Elles", "viennent", "İl / El viyen"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-venir-de-formula",
+      title: "🏗️ BÖLÜM 4: FORMÜLÜ BİRLEŞTİRME (Lego Zamanı)",
+      explanation:
+        "Şimdi parçaları birleştiriyoruz:\n\n" +
+        "**Formül:** ÖZNE + VENIR (Çekimli) + DE + FİİL (Yalın/Mastar)\n\n" +
+        "**Adım Adım Yapalım:**\n" +
+        "* **Özne:** Je (Ben)\n" +
+        "* **Venir çekimi:** viens (viyen)\n" +
+        "* **Bağlaç:** de (dö)\n" +
+        "* **Asıl iş:** faire le lit (Yatağı toplamak)\n" +
+        "* **Sonuç:** **Je viens de faire le lit.**\n" +
+        "* 🔊 Jö viyen dö fer lö li.\n" +
+        "* **Anlamı:** Az önce yatağı topladım. (Yatağı toplamaktan geliyorum).\n\n" +
+        "⚠️ **Küçük Sesli Harf Tuzağı:** Eğer asıl fiil sesli harfle başlarsa (Mesela écouter - dinlemek), \"DE\" kelimesinin 'e'si düşer ve **D'** olur.\n" +
+        "* Je viens **d'**écouter la musique. (Az önce müziği dinledim.)",
       examples: [
-        { fr: "Je viens de faire le ménage.", tr: "Az önce temizlik yaptım." },
+        {
+          fr: "Tu viens de faire la vaisselle.",
+          tr: "Az önce bulaşıkları yıkadın. (🔊 Tü viyen dö fer la vesel)",
+        },
+        {
+          fr: "Il vient de passer l'aspirateur.",
+          tr: "O az önce süpürge yaptı. (🔊 İl viyen dö pase laspiratör)",
+        },
       ],
+    },
+    {
+      id: "fr-a2-housework-dialogue",
+      title: "🗣️ BÖLÜM 5: SESLİ DİYALOG (Ev Arkadaşı Kavgası)",
+      explanation:
+        "**Senaryo:** İki ev arkadaşı (Hugo ve Lucas) cumartesi temizliği için tartışıyor.\n\n" +
+        "**Hugo:** Lucas, tu peux faire la vaisselle, s'il te plaît ?\n" +
+        "🔊 Lükas, tü pö fer la vesel, sil tö ple?\n" +
+        "_(Lucas, bulaşıkları yıkayabilir misin, lütfen?)_\n\n" +
+        "**Lucas:** Mais non ! Je viens de faire la vaisselle ! C'est à ton tour.\n" +
+        "🔊 Me no! Jö viyen dö fer la vesel! Se a ton tur.\n" +
+        "_(Yok artık! Ben az önce bulaşıkları yıkadım! Senin sıran.)_\n\n" +
+        "**Hugo:** D'accord, d'accord. Je vais faire le ménage.\n" +
+        "🔊 Dakor, dakor. Jö ve fer lö menaj.\n" +
+        "_(Tamam, tamam. Ben temizlik yapacağım.)_\n\n" +
+        "**Lucas:** Super. Moi, je viens de faire mon lit. Je vais me reposer.\n" +
+        "🔊 Süper. Mua, jö viyen dö fer mon li. Jö ve mö röpoze.\n" +
+        "_(Süper. Ben az önce yatağımı topladım. Dinleneceğim.)_",
+      examples: [],
     },
   ],
 };
@@ -762,16 +1136,125 @@ const unit344Grammar: UnitGrammar = {
   title: "Günlük Haberler",
   rules: [
     {
-      id: "fr-a2-imparfait-intro",
-      title: "📰 Imparfait (Sürekli Geçmiş) - Giriş",
+      id: "fr-a2-news-vocab",
+      title: "🗞️ BÖLÜM 1: HABERLER SÖZLÜĞÜ (Malzemeler)",
+      explanation: "Önce gazetecilik kelimelerimizi cebimize koyalım.",
+      table: {
+        headers: ["Fransızca", "Okunuşu 🔊", "Türkçe Anlamı"],
+        rows: [
+          ["Les actualités / Les infos", "Le zaktüalite / Le zenfo", "Haberler (Güncel olaylar)"],
+          ["Le journal", "Lö jurnal", "Gazete / Haber bülteni"],
+          ["Le / La journaliste", "Lö / La jurnalist", "Gazeteci"],
+          ["L'article (m)", "Lartikl", "Makale / Yazı"],
+          ["La météo", "La meteo", "Hava durumu"],
+          ["L'accident (m)", "Laksidan", "Kaza"],
+          ["L'événement (m)", "Levenman", "Olay / Etkinlik"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-imparfait-concept",
+      title: "⏳ BÖLÜM 2: IMPARFAIT MANTIĞI NEDİR?",
       explanation:
-        "Geçmişteki durumlar ve alışkanlıklar için:\n\n**Formül:** Nous kökü + -ais, -ais, -ait, -ions, -iez, -aient\n* Parler → Parl- → Je parlais",
+        "Türkçedeki \"-yordu\" veya \"-erdi\" ekidir.\n\n" +
+        "🔹 Çocukken çok çikolata yiyerdim. (Geçmişteki alışkanlık)\n" +
+        "🔹 Dün akşam gazete okuyordum. (Geçmişte devam eden eylem)\n" +
+        "🔹 Hava çok güzeldi. (Geçmişteki durum/manzara)\n\n" +
+        "💡 **Eğer bir olayın fotoğrafını çekiyorsan, o Imparfait'dir!**",
+      examples: [],
+    },
+    {
+      id: "fr-a2-imparfait-formation",
+      title: "🛠️ BÖLÜM 3: IMPARFAIT NASIL YAPILIR? (3 Adımlı Formül)",
+      explanation:
+        "Fransızcada Imparfait yapmak bir Lego oyunu gibidir ve kuralı çok sabittir. Sadece 3 adımda her fiili geçmişe atabilirsin.\n\n" +
+        "**Örnek Fiil: REGARDER (İzlemek)**\n\n" +
+        "**Adım 1:** Fiilin \"NOUS\" (Biz) çekimini bul.\n" +
+        "→ Nous regard**ons** (Biz izliyoruz)\n\n" +
+        "**Adım 2:** Sondaki \"ONS\" ekini çöpe at. Elinde kalan \"KÖK\"tür.\n" +
+        "→ regard~~ons~~ → Kökümüz: **regard-**\n\n" +
+        "**Adım 3:** Sihirli Imparfait eklerini bu köke yapıştır!\n\n" +
+        "İşte o sihirli ekler ve okunuşları:",
+      table: {
+        headers: ["Özne", "Ek", "Okunuşu 🔊"],
+        rows: [
+          ["Je", "-ais", "-e"],
+          ["Tu", "-ais", "-e"],
+          ["Il/Elle/On", "-ait", "-e"],
+          ["Nous", "-ions", "-iyon"],
+          ["Vous", "-iez", "-iye"],
+          ["Ils/Elles", "-aient", "-e"],
+        ],
+      },
       examples: [
         {
-          fr: "Quand j'étais jeune, je lisais beaucoup.",
-          tr: "Gençken çok okurdum.",
+          fr: "🧠 KOÇUN MUAZZAM TAKTİĞİ:",
+          tr: "Fark ettin mi? Je, Tu, Il, Elle, Ils, Elles... Bunların hepsinin sonundaki eklerin yazılışı farklı olsa da okunuşu tamamen aynıdır! (\"-e\" sesi). Yani konuşurken hata yapma ihtimalin neredeyse SIFIRDIR! Sadece Nous ve Vous farklı okunur.",
         },
       ],
+    },
+    {
+      id: "fr-a2-imparfait-regarder",
+      title: "📋 BÖLÜM 4: FİİL ÇEKİMİ (Regarder = İzlemek)",
+      explanation: "Hadi formülü uygulayalım:",
+      table: {
+        headers: ["Özne", "Imparfait Çekimi", "Okunuşu 🔊", "Türkçe Anlamı"],
+        rows: [
+          ["Je", "regardais", "Jö rögarde", "İzliyordum"],
+          ["Tu", "regardais", "Tü rögarde", "İzliyordun"],
+          ["Il / Elle", "regardait", "İl / El rögarde", "İzliyordu"],
+          ["Nous", "regardions", "Nu rögardiyon", "İzliyorduk"],
+          ["Vous", "regardiez", "Vu rögardiye", "İzliyordunuz"],
+          ["Ils / Elles", "regardaient", "İl / El rögarde", "İzliyorlardı"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-imparfait-etre",
+      title: "🚨 BÖLÜM 5: TEK İSTİSNA (ÊTRE = Olmak)",
+      explanation:
+        "Fransızcada her zaman bir çıkıntı vardır. \"Nous\" kuralına uymayan **TEK BİR FİİL** vardır: **ÊTRE** (Olmak). \"İdim / ...-dı\" demek için kullanılır (Güzeldi, hastaydım, evdeydim).\n\n" +
+        "Bunun kökünü ezbere bileceksin: Kök **\"ét-\"** (et- diye okunur).\n" +
+        "Sonrasına aynı sihirli ekleri getiriyoruz:",
+      table: {
+        headers: ["Özne", "ÊTRE Çekimi", "Okunuşu 🔊", "Türkçe Anlamı"],
+        rows: [
+          ["Je", "j'étais", "Jete", "Ben ... idim / ...-dım"],
+          ["Tu", "tu étais", "Tü ete", "Sen ... idin"],
+          ["Il/Elle", "il/elle était", "İl/El ete", "O ... idi"],
+          ["Nous", "nous étions", "Nuz etiyon", "Biz ... idik"],
+          ["Vous", "vous étiez", "Vuz etiye", "Siz ... idiniz"],
+          ["Ils/Elles", "ils/elles étaient", "İlz/Elz ete", "Onlar ... idiler"],
+        ],
+      },
+      examples: [
+        {
+          fr: "Il était un bon journaliste.",
+          tr: "O, iyi bir gazeteciydi. (🔊 İl ete an bon jurnalist)",
+        },
+      ],
+    },
+    {
+      id: "fr-a2-imparfait-dialogue",
+      title: "🗣️ BÖLÜM 6: SESLİ DİYALOG (Olay Yeri Haberi)",
+      explanation:
+        "**Senaryo:** Bir gazeteci (Marc), dün akşamki fırtınayı canlı yayında anlatıyor. Olayın \"manzarasını\" çizdiği için hep Imparfait kullanıyor.\n\n" +
+        "**Sunucu:** Marc, que se passait-il hier soir ?\n" +
+        "🔊 Mark, kö sö pase-til iyer suar?\n" +
+        "_(Marc, dün akşam ne oluyordu?)_\n\n" +
+        "**Marc (Gazeteci):** Hier soir, la météo était terrible.\n" +
+        "🔊 İyer suar, la meteo ete terribl.\n" +
+        "_(Dün akşam hava durumu berbattı.)_\n\n" +
+        "**Sunucu:** Les gens regardaient les infos ?\n" +
+        "🔊 Le jan rögarde le zenfo?\n" +
+        "_(İnsanlar haberleri mi izliyordu?)_\n\n" +
+        "**Marc:** Oui. Il y avait beaucoup de vent. Je parlais avec les gens. Ils étaient très stressés !\n" +
+        "🔊 Ui. İl y ave boku dö van. Jö parle avek le jan. İlz ete tre strese!\n" +
+        "_(Evet. Çok rüzgar vardı. İnsanlarla konuşuyordum. Çok stresliydiler!)_\n\n" +
+        "_(Not: \"Il y a\" = vardır. \"Il y avait\" = vardı)_",
+      examples: [],
     },
   ],
 };
@@ -781,16 +1264,77 @@ const unit345Grammar: UnitGrammar = {
   title: "Televizyon Programları",
   rules: [
     {
-      id: "fr-a2-relative-qui-que",
-      title: "🔗 İlgi Zamirleri: QUI ve QUE",
-      explanation:
-        "* QUI = özne (who/which - özne olarak)\n* QUE = nesne (whom/which - nesne olarak)\n\nL'émission qui passe → Yayınlanan program\nLe film que je regarde → İzlediğim film",
+      id: "fr-a2-tv-vocab",
+      title: "📡 BÖLÜM 1: EKRAN SÖZLÜĞÜ (Malzemeler)",
+      explanation: "Televizyon karşısında en çok kullanacağın kelimeler. Hepsini sesli oku!",
+      table: {
+        headers: ["Fransızca Kelime", "Okunuşu 🔊", "Türkçe Anlamı"],
+        rows: [
+          ["La télévision (La télé)", "La televizyon (La tele)", "Televizyon"],
+          ["La télécommande", "La telekomand", "Uzaktan Kumanda"],
+          ["La chaîne", "La şen", "Kanal (TV Kanalı)"],
+          ["Les informations (Les infos)", "Le zenformasyon (Le zenfo)", "Haberler"],
+          ["La série", "La seri", "Dizi"],
+          ["Le documentaire", "Lö dokümantehr", "Belgesel"],
+          ["L'émission", "Lemisyon", "TV Programı / Yayın"],
+          ["Le présentateur", "Lö prezantatör", "Sunucu (Erkek)"],
+          ["La publicité (La pub)", "La püblisite (La püb)", "Reklam"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-tv-verbs",
+      title: "🛠️ BÖLÜM 2: FİİLLER (Eylemler)",
+      explanation: "Cümle kurmak için bu eylemlere ihtiyacımız olacak.",
+      table: {
+        headers: ["Fiil", "Okunuşu 🔊", "Anlamı", "Çekimli Örnek (Okunuş)"],
+        rows: [
+          ["Regarder", "Rögarde", "İzlemek", "Je regarde (Jö rögard) - İzliyorum"],
+          ["Aimer", "Eme", "Sevmek", "J'aime (Jem) - Seviyorum"],
+          ["Détester", "Deteste", "Nefret etmek", "Je déteste (Jö detest) - Nefret ediyorum"],
+          ["Commencer", "Komanse", "Başlamak", "Il commence (İl komans) - O başlıyor"],
+          ["Parler", "Parle", "Konuşmak", "Il parle (İl parl) - O konuşuyor"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-qui",
+      title: '🔗 BÖLÜM 3: "QUI" YAPIŞTIRICISI (Yapan / Olan)',
+      explanation: "QUI (Ki diye okunur), arkasından gelen eylemi YAPAN kişinin veya nesnenin yerini tutar. Türkçedeki \"-an / -en\" ekidir (Başlayan, Konuşan).\n\n🎯 **Altın Kural:**\nEğer boşluktan veya yapıştırıcıdan hemen sonra bir FİİL (Eylem) geliyorsa, o kelime kesinlikle QUI'dir.\n\n**Formül:** İsim + QUI + FİİL\n\nAdım Adım Cümle Kurulumu:\n* **İsim:** La série (Dizi) -> 🔊 La seri\n* **Fiil:** commence à 20h. (Saat 20'de başlıyor.) -> 🔊 komans a ven-tör\n* **Birleştir (QUI ile):** La série QUI commence à 20h.\n* **Türkçesi:** Saat 20'de başlayan dizi.\n* **Tam Okunuşu:** 🔊 La seri ki komans a ven-tör.",
       examples: [
-        {
-          fr: "C'est une série qui est très populaire.",
-          tr: "Çok popüler bir dizi.",
-        },
+        { fr: "Le présentateur qui parle vite.", tr: "Hızlı konuşan sunucu. (Lö prezantatör ki parl vit)" },
+        { fr: "Le documentaire qui est intéressant.", tr: "İlginç olan belgesel. (Lö dokümantehr ki e zenteresan)" },
       ],
+    },
+    {
+      id: "fr-a2-que",
+      title: '🔗 BÖLÜM 4: "QUE" YAPIŞTIRICISI (Yapılan / Edilen)',
+      explanation: "QUE (Kö diye okunur), eylemden ETKİLENEN şeyin yerini tutar. Türkçedeki \"-dığım / -diğim\" ekidir (İzlediğim, Sevdiğim).\n\n🎯 **Altın Kural:**\nEğer boşluktan veya yapıştırıcıdan hemen sonra bir ŞAHIS veya İSİM (Je, Tu, Ali, Mon père...) geliyorsa, o kelime kesinlikle QUE'dir.\n\n**Formül:** İsim + QUE + ŞAHIS/ÖZNE\n\nAdım Adım Cümle Kurulumu:\n* **İsim:** L'émission (Program) -> 🔊 Lemisyon\n* **Şahıs + Fiil:** tu regardes. (sen izliyorsun.) -> 🔊 tü rögard\n* **Birleştir (QUE ile):** L'émission QUE tu regardes.\n* **Türkçesi:** Senin izlediğin program.\n* **Tam Okunuşu:** 🔊 Lemisyon kö tü rögard.\n\n⚠️ **HAYAT KURTARAN İSTİSNA (Çarpmayı Önleme):**\nFransızcada iki sesli harf yan yana gelmeyi sevmez. Eğer QUE kelimesinden sonra sesli harfle başlayan bir kelime (örneğin il, elle, on veya j'aime) gelirse, QUE kelimesinin sonundaki 'e' düşer ve kesme işareti alır: QU' (K diye okunur).\n* Le film **qu'**il aime. (Onun sevdiği film.) -> 🔊 Lö film kil em.\n* La série **qu'**elle regarde. (Onun izlediği dizi.) -> 🔊 La seri kel rögard.\n*(Dikkat: QUI kelimesinin 'i'si ASLA düşmez! \"Qu'il\" hep QUE'den gelir)*",
+      examples: [
+        { fr: "La chaîne que je préfère.", tr: "Benim tercih ettiğim kanal. (La şen kö jö prefer)" },
+        { fr: "La publicité que nous détestons.", tr: "Bizim nefret ettiğimiz reklam. (La püblisite kö nu deteston)" },
+      ],
+    },
+    {
+      id: "fr-a2-qui-que-table",
+      title: "🆚 BÖLÜM 5: BEYNE KAZIMA TABLOSU (Karşılaştırma)",
+      explanation: "Koç, bu tabloyu zihnine fotoğraf gibi çek.",
+      table: {
+        headers: ["Yapıştırıcı", "Okunuşu", "Formül", "Türkçesi", "Örnek", "Okunuşu 🔊"],
+        rows: [
+          ["QUI", "Ki", "İsim + QUI + FİİL", "Yapan / Olan", "Le film qui commence", "Lö film ki komans"],
+          ["QUE", "Kö", "İsim + QUE + ŞAHIS", "Yaptığım / Sevdiğim", "Le film que je regarde", "Lö film kö jö rögard"],
+        ]
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-tv-dialogue",
+      title: "🗣️ BÖLÜM 6: FİNAL DİYALOĞU (Kanepede Kumanda Savaşı)",
+      explanation: "**Paul:** Passe-moi la télécommande, s'il te plaît.\n🔊 Pas-mua la telekomand, sil tö ple.\n(Lütfen bana kumandayı uzat.)\n\n**Marc:** Pourquoi ? L'émission QUI commence est très bien.\n🔊 Purkua? Lemisyon Kİ komans e tre biyen.\n(Neden? BaşlayAN program çok iyi.)\n\n**Paul:** Non, c'est le présentateur QUE je déteste ! Il parle trop.\n🔊 No, se lö prezantatör KÖ jö detest! İl parl tro.\n(Hayır, bu benim nefret ettiĞİM sunucu! Çok konuşuyor.)\n\n**Marc:** Alors, on regarde les infos ?\n🔊 Alor, on rögard le zenfo?\n(Öyleyse haberleri mi izleyelim?)\n\n**Paul:** D'accord. Mets la chaîne QUE tu préfères.\n🔊 Dakor. Me la şen KÖ tü prefer.\n(Tamam. Senin tercih ettiĞİN kanalı aç.)\n\n**Marc:** Super. C'est une chaîne QUI donne de bonnes nouvelles.\n🔊 Süper. Se tün şen Kİ don dö bon nuvel.\n(Süper. Bu, iyi haberler verEN bir kanal.)",
+      examples: [],
     },
   ],
 };

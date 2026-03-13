@@ -545,36 +545,6 @@ const unit340Speaking: UnitSpeaking = {
       pronunciation: "a-lon dan la küi-zin",
     },
     {
-      text: "Coupez le pain, s'il vous plaît.",
-      translation: "Ekmeği kesin lütfen. (Vous)",
-      pronunciation: "ku-pe lö pen sil vu ple",
-    },
-    {
-      text: "Ne touche pas le four !",
-      translation: "Fırına dokunma! (Negatif)",
-      pronunciation: "nö tuş pa lö fur",
-    },
-    {
-      text: "Lave-toi les mains.",
-      translation: "Ellerini yıka. (Dönüşlü)",
-      pronunciation: "lav tua le men",
-    },
-    {
-      text: "Sois prudent avec le couteau.",
-      translation: "Bıçakla dikkatli ol. (Être - düzensiz)",
-      pronunciation: "sua prü-dan a-vek lö ku-to",
-    },
-    {
-      text: "Aie de la patience.",
-      translation: "Sabırlı ol. (Avoir - düzensiz)",
-      pronunciation: "ey dö la pa-syans",
-    },
-    {
-      text: "Ne parle pas la bouche pleine.",
-      translation: "Ağzın doluyken konuşma.",
-      pronunciation: "nö parl pa la buş plen",
-    },
-    {
       text: "Goûte cette sauce.",
       translation: "Bu sosun tadına bak.",
       pronunciation: "gut set sos",
@@ -590,90 +560,285 @@ const unit340Speaking: UnitSpeaking = {
 // ===== Üniteler 341-360 (Kısa format) =====
 const unit341Speaking: UnitSpeaking = {
   unitId: 341,
-  title: "Fiyat Sorma",
+  title: "Karşılaştırma Yapma",
   exercises: [
     {
-      text: "C'est combien?",
-      translation: "Ne kadar?",
-      pronunciation: "se kom-byan",
+      text: "Ce t-shirt est moins cher que ce pull.",
+      translation: "Bu tişört, bu kazaktan daha ucuzdur.",
+      pronunciation: "sö ti-şört e muen şer kö sö pül",
     },
     {
-      text: "C'est trop cher.",
-      translation: "Çok pahalı.",
-      pronunciation: "se tro şer",
+      text: "La veste noire est plus élégante.",
+      translation: "Siyah ceket daha şık.",
+      pronunciation: "la vest nuar e plü ze-le-gant",
     },
     {
-      text: "Vous avez moins cher?",
-      translation: "Daha ucuz var mı?",
-      pronunciation: "vu za-ve muen şer",
+      text: "Cette robe est aussi belle que l'autre.",
+      translation: "Bu elbise diğeri kadar güzel.",
+      pronunciation: "set rob e o-si bel kö lotr",
+    },
+    {
+      text: "C'est meilleur que l'autre option.",
+      translation: "Bu diğer seçenekten daha iyi.",
+      pronunciation: "se me-yör kö lotr op-syon",
+    },
+    {
+      text: "Ces chaussures sont plus confortables.",
+      translation: "Bu ayakkabılar daha rahat.",
+      pronunciation: "se şo-sür son plü kon-for-tabl",
+    },
+    {
+      text: "Mon pantalon est moins grand que le tien.",
+      translation: "Benim pantolonum seninkinden daha az büyük.",
+      pronunciation: "mon pan-ta-lon e muen gran kö lö ti-yen",
+    },
+    {
+      text: "Laquelle tu préfères ?",
+      translation: "Hangisini tercih edersin?",
+      pronunciation: "la-kel tü pre-fer",
+    },
+    {
+      text: "Tu as raison, j'achète la bleue !",
+      translation: "Haklısın, maviyi satın alıyorum!",
+      pronunciation: "tü a re-zon, ja-şet la blö",
+    },
+    {
+      text: "Elle est aussi chère que le manteau.",
+      translation: "O (dişi), kaban kadar pahalı.",
+      pronunciation: "el e o-si şer kö lö man-to",
+    },
+    {
+      text: "C'est pire que ce que je pensais.",
+      translation: "Bu düşündüğümden daha kötü.",
+      pronunciation: "se pir kö sö kö jö pan-se",
     },
   ],
 };
 
 const unit342Speaking: UnitSpeaking = {
   unitId: 342,
-  title: "Deneme",
+  title: "Kıyafet Alışverişi",
   exercises: [
     {
-      text: "Je peux essayer?",
-      translation: "Deneyebilir miyim?",
-      pronunciation: "jö pö e-se-ye",
+      text: "Je cherche un pull.",
+      translation: "Bir kazak arıyorum.",
+      pronunciation: "jö şerş an pül",
     },
     {
-      text: "Ça vous va très bien!",
-      translation: "Size çok yakışıyor!",
-      pronunciation: "sa vu va tre byan",
+      text: "Je peux essayer ce pull ?",
+      translation: "Bu kazağı deneyebilir miyim?",
+      pronunciation: "jö pö e-se-ye sö pül",
+    },
+    {
+      text: "Cette robe vous va très bien !",
+      translation: "Bu elbise size çok yakışıyor!",
+      pronunciation: "set rob vu va tre biyen",
+    },
+    {
+      text: "Ça coûte combien ?",
+      translation: "Ne kadar tutuyor?",
+      pronunciation: "sa kut kon-biyen",
+    },
+    {
+      text: "J'achète cette chemise blanche.",
+      translation: "Bu beyaz gömleği satın alıyorum.",
+      pronunciation: "jaşet set şö-miz blanş",
+    },
+    {
+      text: "Je paie par carte.",
+      translation: "Kartla ödüyorum.",
+      pronunciation: "jö pey par kart",
+    },
+    {
+      text: "Où est la cabine d'essayage ?",
+      translation: "Giyinme kabini nerede?",
+      pronunciation: "u e la ka-bin de-se-yaj",
+    },
+    {
+      text: "Je paie ces chaussures.",
+      translation: "Bu ayakkabıları ödüyorum.",
+      pronunciation: "jö pey se şo-sür",
+    },
+    {
+      text: "Ce pantalon est trop serré.",
+      translation: "Bu pantolon çok dar.",
+      pronunciation: "sö pan-ta-lon e tro se-re",
+    },
+    {
+      text: "C'est parfait, je le prends !",
+      translation: "Mükemmel, alıyorum!",
+      pronunciation: "se par-fe jö lö pran",
     },
   ],
 };
 
 const unit343Speaking: UnitSpeaking = {
   unitId: 343,
-  title: "Temizlik",
+  title: "Ev İşleri",
   exercises: [
     {
       text: "Je viens de faire le ménage.",
       translation: "Az önce temizlik yaptım.",
-      pronunciation: "jö vyen dö fer lö me-naj",
+      pronunciation: "jö viyen dö fer lö me-naj",
     },
     {
-      text: "Range ta chambre!",
+      text: "Range ta chambre !",
       translation: "Odanı topla!",
       pronunciation: "ranj ta şanbr",
+    },
+    {
+      text: "Tu viens de faire la vaisselle ?",
+      translation: "Az önce bulaşık mı yıkadın?",
+      pronunciation: "tü viyen dö fer la ve-sel",
+    },
+    {
+      text: "Il vient de passer l'aspirateur.",
+      translation: "O az önce süpürge çekti.",
+      pronunciation: "il viyen dö pa-se las-pi-ra-tör",
+    },
+    {
+      text: "Nous venons de faire la lessive.",
+      translation: "Az önce çamaşır yıkadık.",
+      pronunciation: "nu vö-non dö fer la le-siv",
+    },
+    {
+      text: "C'est à ton tour de faire le lit.",
+      translation: "Yatağı toplama sırası sende.",
+      pronunciation: "se a ton tur dö fer lö li",
+    },
+    {
+      text: "Elle vient de repasser les chemises.",
+      translation: "O az önce gömlekleri ütüledi.",
+      pronunciation: "el viyen dö rö-pa-se le şö-miz",
+    },
+    {
+      text: "La maison est propre maintenant.",
+      translation: "Ev şimdi temiz.",
+      pronunciation: "la me-zon e propr ment-nan",
+    },
+    {
+      text: "Je viens de nettoyer la cuisine.",
+      translation: "Az önce mutfağı temizledim.",
+      pronunciation: "jö viyen dö ne-tua-ye la küi-zin",
+    },
+    {
+      text: "Vous venez de ranger la chambre ?",
+      translation: "Az önce odayı mı topladınız?",
+      pronunciation: "vu vö-ne dö ran-je la şanbr",
     },
   ],
 };
 
 const unit344Speaking: UnitSpeaking = {
   unitId: 344,
-  title: "Haber",
+  title: "Günlük Haberler",
   exercises: [
     {
-      text: "Tu as vu les infos?",
-      translation: "Haberleri gördün mü?",
-      pronunciation: "tü a vü le zen-fo",
+      text: "Tu as vu les infos hier soir ?",
+      translation: "Dün akşam haberleri gördün mü?",
+      pronunciation: "tü a vü le zen-fo iyer suar",
     },
     {
-      text: "Qu'est-ce qui s'est passé?",
+      text: "Qu'est-ce qui s'est passé ?",
       translation: "Ne oldu?",
       pronunciation: "kes ki se pa-se",
+    },
+    {
+      text: "La météo était terrible.",
+      translation: "Hava durumu berbattı.",
+      pronunciation: "la me-te-o e-te te-ribl",
+    },
+    {
+      text: "Il y avait beaucoup de vent.",
+      translation: "Çok rüzgar vardı.",
+      pronunciation: "il ya-ve bo-ku dö van",
+    },
+    {
+      text: "Les gens regardaient les informations.",
+      translation: "İnsanlar haberleri izliyordu.",
+      pronunciation: "le jan rö-gar-de le zen-for-ma-syon",
+    },
+    {
+      text: "Je parlais avec les habitants.",
+      translation: "Sakinlerle konuşuyordum.",
+      pronunciation: "jö par-le a-vek le za-bi-tan",
+    },
+    {
+      text: "Quand j'étais jeune, je lisais le journal.",
+      translation: "Gençken gazete okurdum.",
+      pronunciation: "kan je-te jön jö li-ze lö jur-nal",
+    },
+    {
+      text: "Ils étaient très stressés !",
+      translation: "Çok stresliydiler!",
+      pronunciation: "ilz e-te tre stre-se",
+    },
+    {
+      text: "Il neigeait et il faisait froid.",
+      translation: "Kar yağıyordu ve soğuktu.",
+      pronunciation: "il ne-je e il fö-ze frua",
+    },
+    {
+      text: "Nous regardions la télé tous les soirs.",
+      translation: "Her akşam TV izliyorduk.",
+      pronunciation: "nu rö-gar-diyon la te-le tu le suar",
     },
   ],
 };
 
 const unit345Speaking: UnitSpeaking = {
   unitId: 345,
-  title: "TV",
+  title: "TV Programları",
   exercises: [
     {
-      text: "Qu'est-ce qu'il y a à la télé?",
-      translation: "TV'de ne var?",
-      pronunciation: "kes kil ya a la te-le",
+      text: "Passe-moi la télécommande, s'il te plaît.",
+      translation: "Lütfen bana kumandayı uzat.",
+      pronunciation: "pas-mua la te-le-ko-mand sil tö ple",
     },
     {
-      text: "Change de chaîne.",
-      translation: "Kanal değiştir.",
-      pronunciation: "şanj dö şen",
+      text: "Change de chaîne, je déteste ce présentateur.",
+      translation: "Kanalı değiştir, bu sunucudan nefret ediyorum.",
+      pronunciation: "şanj dö şen jö de-test sö pre-zan-ta-tör",
+    },
+    {
+      text: "L'émission qui passe à la télé est géniale.",
+      translation: "Televizyonda yayınlanan program harika.",
+      pronunciation: "le-mi-syon ki pas a la te-le e je-nyal",
+    },
+    {
+      text: "C'est le documentaire que je veux regarder.",
+      translation: "İzlemek istediğim belgesel bu.",
+      pronunciation: "se lö do-kü-man-ter kö jö vö rö-gar-de",
+    },
+    {
+      text: "La série que j'adore commence à vingt heures.",
+      translation: "Bayıldığım dizi saat yirmide başlıyor.",
+      pronunciation: "la se-ri kö ja-dor ko-mans a ven tör",
+    },
+    {
+      text: "Qui est l'homme qui parle aux informations?",
+      translation: "Haberlerde konuşan adam kim?",
+      pronunciation: "ki e lom ki parl o zen-for-ma-syon",
+    },
+    {
+      text: "C'est la publicité que je déteste le plus.",
+      translation: "En çok nefret ettiğim reklam bu.",
+      pronunciation: "se la püb-li-si-te kö jö de-test lö plüs",
+    },
+    {
+      text: "Le film qu'ils ont choisi est très ennuyeux.",
+      translation: "Seçtikleri film çok sıkıcı.",
+      pronunciation: "lö film kil zon şua-zi e tre zan-nüi-yö",
+    },
+    {
+      text: "La télécommande est l'objet qui sert à changer de chaîne.",
+      translation: "Kumanda, kanal değiştirmeye yarayan nesnedir.",
+      pronunciation: "la te-le-ko-mand e lob-je ki ser a şan-je dö şen",
+    },
+    {
+      text: "Qu'est-ce qu'il y a ce soir à la télé?",
+      translation: "Bu akşam TV'de ne var?",
+      pronunciation: "kes kil ya sö suar a la te-le",
     },
   ],
 };
