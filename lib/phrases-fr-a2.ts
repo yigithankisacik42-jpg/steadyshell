@@ -526,7 +526,7 @@ const unit336Phrases: FrenchA2UnitPhrases = {
 
 const unit337Phrases: FrenchA2UnitPhrases = {
   unitId: 337,
-  title: "Tren İstasyonunda (Soru Sorma)",
+  title: "Tren İstasyonunda",
   phrases: [
     // Temel İstekler (Je voudrais...)
     {
@@ -814,7 +814,7 @@ const unit340Phrases: FrenchA2UnitPhrases = {
     {
       text: "D'abord, épluchez les pommes de terre.",
       meaning: "Önce patatesleri soyun.",
-      pronunciation: "bo-na-pe-ti",
+      pronunciation: "da-bor e-plü-şe le pom dö ter",
     },
     {
       text: "Coupez les tomates.",
@@ -924,6 +924,31 @@ const unit341Phrases: FrenchA2UnitPhrases = {
       meaning: "İndirim var mı?",
       pronunciation: "es-kil-i-a-ün-re-dük-syon",
     },
+    {
+      text: "C'est trop cher pour moi.",
+      meaning: "Bu benim için çok pahalı.",
+      pronunciation: "se-tro-şer-pur-mua",
+    },
+    {
+      text: "Tu as une taille plus grande ?",
+      meaning: "Daha büyük bedeni var mı?",
+      pronunciation: "tü-a-ün-tay-plü-grand",
+    },
+    {
+      text: "Cette couleur est moins jolie.",
+      meaning: "Bu renk daha az güzel.",
+      pronunciation: "set-ku-lör-e-muen-jo-li",
+    },
+    {
+      text: "Il y a une réduction aujourd'hui.",
+      meaning: "Bugün indirim var.",
+      pronunciation: "il-ya-ün-re-dük-syon-o-juir-düi",
+    },
+    {
+      text: "Je compare les prix.",
+      meaning: "Fiyatları karşılaştırıyorum.",
+      pronunciation: "jö-kom-par-le-pri",
+    },
   ],
 };
 
@@ -980,6 +1005,31 @@ const unit342Phrases: FrenchA2UnitPhrases = {
       text: "Où est la cabine d'essayage ?",
       meaning: "Giyinme kabini nerede?",
       pronunciation: "u-e-la-ka-bin-de-se-yaj",
+    },
+    {
+      text: "Je voudrais un t-shirt blanc.",
+      meaning: "Beyaz bir tişört istiyorum.",
+      pronunciation: "jö-vudre-ön-ti-şört-blan",
+    },
+    {
+      text: "Vous avez cette jupe en rouge ?",
+      meaning: "Bu etek kırmızı var mı?",
+      pronunciation: "vu-za-ve-set-jüp-an-ruj",
+    },
+    {
+      text: "Je cherche un manteau pour l'hiver.",
+      meaning: "Kış için bir kaban arıyorum.",
+      pronunciation: "jö-şerş-ön-man-to-pur-li-ver",
+    },
+    {
+      text: "Quelle est ma pointure ?",
+      meaning: "Ayakkabı numaram kaç?",
+      pronunciation: "kel-e-ma-puan-tür",
+    },
+    {
+      text: "Je passe à la caisse.",
+      meaning: "Kasaya geçiyorum.",
+      pronunciation: "jö-pas-a-la-kes",
     },
   ],
 };
@@ -1038,6 +1088,31 @@ const unit343Phrases: FrenchA2UnitPhrases = {
       meaning: "Gömlekleri ütüleyebilir misin?",
       pronunciation: "tü-pö-rö-pa-se-le-şö-miz",
     },
+    {
+      text: "Il faut sortir la poubelle.",
+      meaning: "Çöpü dışarı çıkarmak lazım.",
+      pronunciation: "il-fo-sor-tir-la-pu-bel",
+    },
+    {
+      text: "Je balaie le sol de la cuisine.",
+      meaning: "Mutfağın zeminini süpürüyorum.",
+      pronunciation: "jö-ba-le-lö-sol-dö-la-küi-zin",
+    },
+    {
+      text: "Il y a de la poussière partout.",
+      meaning: "Her yerde toz var.",
+      pronunciation: "il-ya-dö-la-pu-syer-par-tu",
+    },
+    {
+      text: "Peux-tu nettoyer la salle de bain ?",
+      meaning: "Banyoyu temizleyebilir misin?",
+      pronunciation: "pö-tü-ne-tua-ye-la-sal-de-ben",
+    },
+    {
+      text: "On lave le sol avec la serpillière.",
+      meaning: "Zemini paspasla yıkıyoruz.",
+      pronunciation: "on-lav-lö-sol-a-vek-la-ser-pi-yer",
+    },
   ],
 };
 
@@ -1095,12 +1170,37 @@ const unit344Phrases: FrenchA2UnitPhrases = {
       meaning: "Gençken gazete okurdum.",
       pronunciation: "kan-je-te-jön-jö-li-ze-lö-jur-nal",
     },
+    {
+      text: "J'écoute les infos à la radio.",
+      meaning: "Radyodan haberleri dinliyorum.",
+      pronunciation: "je-kut-le-zen-fo-a-la-ra-dyo",
+    },
+    {
+      text: "Ils annoncent une tempête pour demain.",
+      meaning: "Yarın için fırtına duyuruyorlar.",
+      pronunciation: "il-za-nons-tün-tan-pet-pur-dö-men",
+    },
+    {
+      text: "Le reportage est en direct.",
+      meaning: "Haber dosyası canlı yayında.",
+      pronunciation: "lö-rö-por-taj-e-an-di-rek",
+    },
+    {
+      text: "La une du journal est choquante.",
+      meaning: "Gazetenin manşeti şok edici.",
+      pronunciation: "la-ün-dü-jur-nal-e-şo-kant",
+    },
+    {
+      text: "La télévision parle de l'accident.",
+      meaning: "Televizyon kazadan bahsediyor.",
+      pronunciation: "la-te-le-viz-yon-parl-dö-lak-si-dan",
+    },
   ],
 };
 
 const unit345Phrases: FrenchA2UnitPhrases = {
   unitId: 345,
-  title: "TV Programları",
+  title: "Televizyon Programları",
   phrases: [
     {
       text: "Passe-moi la télécommande, s'il te plaît.",
@@ -1131,6 +1231,51 @@ const unit345Phrases: FrenchA2UnitPhrases = {
       text: "Super. C'est une chaîne qui donne de bonnes nouvelles.",
       meaning: "Süper. Bu, iyi haberler veren bir kanal.",
       pronunciation: "sü-per. se tün şen ki don dö bon nu-vel",
+    },
+    {
+      text: "Qu'est-ce qu'on regarde ce soir ?",
+      meaning: "Bu akşam ne izliyoruz?",
+      pronunciation: "kes-kö-kö-rö-gard-sö-suar",
+    },
+    {
+      text: "Le film commence après les infos.",
+      meaning: "Film haberlerden sonra başlıyor.",
+      pronunciation: "lö-film-ko-mans-a-pre-le-zen-fo",
+    },
+    {
+      text: "Change de chaîne, s'il te plaît.",
+      meaning: "Kanal değiştir, lütfen.",
+      pronunciation: "şanj-dö-şen-sil-tö-ple",
+    },
+    {
+      text: "J'aime les dessins animés.",
+      meaning: "Çizgi filmleri severim.",
+      pronunciation: "jem-le-de-san-za-ni-me",
+    },
+    {
+      text: "La météo passe à 19h.",
+      meaning: "Hava durumu saat 19'da geçiyor.",
+      pronunciation: "la-me-te-o-pas-a-di-zön-ör",
+    },
+    {
+      text: "Ce programme est en direct.",
+      meaning: "Bu program canlı yayında.",
+      pronunciation: "sö-pro-gram-e-an-di-rek",
+    },
+    {
+      text: "On fait un peu de zapping ?",
+      meaning: "Biraz kanal kanal gezelim mi?",
+      pronunciation: "on-fe-ön-pö-dö-za-ping",
+    },
+    {
+      text: "Ce documentaire est très intéressant.",
+      meaning: "Bu belgesel çok ilginç.",
+      pronunciation: "sö-do-kü-man-ter-e-tre-zen-te-re-san",
+    },
+    {
+      text: "Je préfère cette chaîne.",
+      meaning: "Bu kanalı tercih ederim.",
+      pronunciation: "jö-pre-fer-set-şen",
     },
   ],
 };
@@ -1189,6 +1334,31 @@ const unit346Phrases: FrenchA2UnitPhrases = {
       meaning: "Film saat kaçta başlıyor?",
       pronunciation: "lö film komans a kel ör",
     },
+    {
+      text: "On achète les billets à l'entrée.",
+      meaning: "Biletleri girişte alıyoruz.",
+      pronunciation: "on-a-şet-le-bi-ye-a-lan-tre",
+    },
+    {
+      text: "La séance est à 21h.",
+      meaning: "Seans saat 21'de.",
+      pronunciation: "la-se-ans-e-a-ven-te-ön-ör",
+    },
+    {
+      text: "Le scénario est bien écrit.",
+      meaning: "Senaryo iyi yazılmış.",
+      pronunciation: "lö-se-na-ryo-e-biyen-e-kri",
+    },
+    {
+      text: "Je préfère les films de science-fiction.",
+      meaning: "Bilim kurgu filmlerini tercih ederim.",
+      pronunciation: "jö-pre-fer-le-film-dö-syans-fik-syon",
+    },
+    {
+      text: "Il y a des sous-titres en français.",
+      meaning: "Fransızca altyazılar var.",
+      pronunciation: "il-ya-de-su-titr-an-fran-se",
+    },
   ],
 };
 
@@ -1245,6 +1415,31 @@ const unit347Phrases: FrenchA2UnitPhrases = {
       text: "On va au concert ce soir?",
       meaning: "Bu akşam konsere gidelim mi?",
       pronunciation: "on-va-o-kon-ser-sö-suar",
+    },
+    {
+      text: "J'écoute du jazz le soir.",
+      meaning: "Akşamları caz dinlerim.",
+      pronunciation: "je-kut-dü-jaz-lö-suar",
+    },
+    {
+      text: "Elle chante très bien.",
+      meaning: "O çok iyi şarkı söylüyor.",
+      pronunciation: "el-şant-tre-biyen",
+    },
+    {
+      text: "On va à un concert demain.",
+      meaning: "Yarın konsere gidiyoruz.",
+      pronunciation: "on-va-a-ön-kon-ser-dö-men",
+    },
+    {
+      text: "Ce groupe sort un nouvel album.",
+      meaning: "Bu grup yeni bir albüm çıkarıyor.",
+      pronunciation: "sö-grup-sor-ön-nu-vel-al-bom",
+    },
+    {
+      text: "Le rythme est trop rapide.",
+      meaning: "Ritim çok hızlı.",
+      pronunciation: "lö-ritm-e-tro-ra-pid",
     },
   ],
 };
@@ -1307,39 +1502,37 @@ const unit348Phrases: FrenchA2UnitPhrases = {
       meaning: "Antrenmana gitmeliyim.",
       pronunciation: "jö-dua-za-le-a-lan-tren-man",
     },
+    {
+      text: "Je vais à la salle de sport deux fois par semaine.",
+      meaning: "Haftada iki kez spor salonuna gidiyorum.",
+      pronunciation: "jö-ve-a-la-sal-dö-spor-dö-foa-par-se-men",
+    },
+    {
+      text: "Nous avons un match samedi.",
+      meaning: "Cumartesi bir maçımız var.",
+      pronunciation: "nu-za-von-ön-maç-sa-me-di",
+    },
+    {
+      text: "Il s'entraîne pour la course.",
+      meaning: "Koşu için antrenman yapıyor.",
+      pronunciation: "il-san-tren-pur-la-kurs",
+    },
+    {
+      text: "Elle fait de la musculation.",
+      meaning: "O, vücut geliştirme yapıyor.",
+      pronunciation: "el-fe-dö-la-müs-kü-las-yon",
+    },
+    {
+      text: "Ils ont perdu hier, mais ils progressent.",
+      meaning: "Dün kaybettiler, ama ilerliyorlar.",
+      pronunciation: "il-zon-per-dü-iyer-me-il-pro-gres",
+    },
   ],
 };
 
 const unit349Phrases: FrenchA2UnitPhrases = {
   unitId: 349,
   title: "Doğa Gezisi",
-  phrases: [
-    {
-      text: "On fait une randonnée?",
-      meaning: "Yürüyüşe çıkalım mı?",
-      pronunciation: "on-fe-ün-ran-do-ne",
-    },
-    {
-      text: "La vue est magnifique!",
-      meaning: "Manzara harika!",
-      pronunciation: "la-vü-e-ma-nyi-fik",
-    },
-    {
-      text: "On monte la tente ici.",
-      meaning: "Çadırı buraya kuralım.",
-      pronunciation: "on-mont-la-tant-i-si",
-    },
-    {
-      text: "Attention au sentier!",
-      meaning: "Patikaya dikkat!",
-      pronunciation: "a-tan-syon-o-san-tye",
-    },
-  ],
-};
-
-const unit350Phrases: FrenchA2UnitPhrases = {
-  unitId: 350,
-  title: "Arkadaş Buluşması",
   phrases: [
     // Doğa ve Piknik Teklifleri
     {
@@ -1416,6 +1609,88 @@ const unit350Phrases: FrenchA2UnitPhrases = {
       text: "C'est un super pique-nique!",
       meaning: "Bu harika bir piknik!",
       pronunciation: "se-tön-sü-per-pik-nik",
+    },
+  ],
+};
+
+const unit350Phrases: FrenchA2UnitPhrases = {
+  unitId: 350,
+  title: "Arkadaş Buluşması",
+  phrases: [
+    {
+      text: "On va au cinéma?",
+      meaning: "Sinemaya gidelim mi?",
+      pronunciation: "on-va-o-si-ne-ma",
+    },
+    {
+      text: "On va boire un verre?",
+      meaning: "Bir şeyler içmeye gidelim mi?",
+      pronunciation: "on-va-buar-en-ver",
+    },
+    {
+      text: "Tu as envie de marcher?",
+      meaning: "Yürümek ister misin?",
+      pronunciation: "tü-a-an-vi dö mar-şe",
+    },
+    {
+      text: "Ça te dit?",
+      meaning: "Sana uyar mı?",
+      pronunciation: "sa-tö-di",
+    },
+    {
+      text: "On mange une pizza, ça te dit?",
+      meaning: "Pizza yiyelim, sana uyar mı?",
+      pronunciation: "on-manj-ün-pi-tsa-sa-tö-di",
+    },
+    {
+      text: "Génial!",
+      meaning: "Harika!",
+      pronunciation: "je-ni-yal",
+    },
+    {
+      text: "D'accord, ça marche.",
+      meaning: "Tamam, olur.",
+      pronunciation: "da-kor-sa-marş",
+    },
+    {
+      text: "Allons-y!",
+      meaning: "Hadi gidelim!",
+      pronunciation: "a-lon-zi",
+    },
+    {
+      text: "Avec plaisir!",
+      meaning: "Memnuniyetle!",
+      pronunciation: "a-vek-ple-zir",
+    },
+    {
+      text: "Bof, je ne sais pas.",
+      meaning: "Pff, bilmiyorum.",
+      pronunciation: "bof-jö-nö-se-pa",
+    },
+    {
+      text: "Je ne peux pas, j'ai du travail.",
+      meaning: "Yapamam, işim var.",
+      pronunciation: "jö-nö-pö-pa-je-dü-tra-vay",
+    },
+    {
+      text: "Désolé, je suis occupé.",
+      meaning: "Üzgünüm, meşgulüm.",
+      pronunciation: "de-zo-le-jö-süi-zo-kü-pe",
+    },
+    {
+      text: "Peut-être une autre fois.",
+      meaning: "Belki başka zaman.",
+      pronunciation: "pö-tetr-ün-otr-fua",
+    },
+    {
+      text: "On se retrouve où?",
+      meaning: "Nerede buluşuyoruz?",
+      pronunciation: "on-sö-rö-truv-u",
+    },
+    {
+      text: "On se voit à quelle heure?",
+      meaning: "Saat kaçta görüşüyoruz?",
+      pronunciation: "on-sö-vua-a-kel-ör",
     },
   ],
 };
@@ -1761,7 +2036,7 @@ const unit354Phrases: FrenchA2UnitPhrases = {
 
 const unit355Phrases: FrenchA2UnitPhrases = {
   unitId: 355,
-  title: "Şehir Hayatı",
+  title: "Şehir Tanıtımı",
   phrases: [
     // Şehir Tanıtımı
     {
@@ -2211,19 +2486,79 @@ const unit360Phrases: FrenchA2UnitPhrases = {
   title: "A2 Genel Tekrar",
   phrases: [
     {
-      text: "Félicitations, vous avez terminé!",
-      meaning: "Tebrikler, bitirdiniz!",
-      pronunciation: "fe-li-si-ta-syon-vu-za-ve-ter-mi-ne",
+      text: "Je ne comprends pas.",
+      meaning: "Anlamıyorum.",
+      pronunciation: "jö-nö-kon-pran-pa",
+    },
+    {
+      text: "Pouvez-vous répéter?",
+      meaning: "Tekrar eder misiniz?",
+      pronunciation: "pu-ve-vu re-pe-te",
+    },
+    {
+      text: "Je voudrais réserver.",
+      meaning: "Rezervasyon yapmak istiyorum.",
+      pronunciation: "jö-vu-dre re-zer-ve",
+    },
+    {
+      text: "On se retrouve à 18 heures.",
+      meaning: "Saat 18'de buluşuyoruz.",
+      pronunciation: "on-sö-rö-truv-a-di-zötör",
+    },
+    {
+      text: "L'addition, s'il vous plaît.",
+      meaning: "Hesap lütfen.",
+      pronunciation: "la-di-syon sil vu ple",
+    },
+    {
+      text: "Je suis fatigué.",
+      meaning: "Yorgunum.",
+      pronunciation: "jö-süi-fa-ti-ge",
+    },
+    {
+      text: "Je suis disponible ce week-end.",
+      meaning: "Bu hafta sonu müsaitim.",
+      pronunciation: "jö-süi-dis-po-ni-bl sö wikend",
+    },
+    {
+      text: "C'est important.",
+      meaning: "Bu önemli.",
+      pronunciation: "se-tan-por-tan",
+    },
+    {
+      text: "Pas de problème.",
+      meaning: "Sorun değil.",
+      pronunciation: "pa-dö-pro-blem",
+    },
+    {
+      text: "Merci pour tout.",
+      meaning: "Her şey için teşekkürler.",
+      pronunciation: "mer-si-pur-tu",
+    },
+    {
+      text: "Ça va?",
+      meaning: "Nasılsın?",
+      pronunciation: "sa-va",
+    },
+    {
+      text: "Je vais bien.",
+      meaning: "İyiyim.",
+      pronunciation: "jö-ve-byen",
+    },
+    {
+      text: "À bientôt!",
+      meaning: "Görüşürüz!",
+      pronunciation: "a-byen-to",
+    },
+    {
+      text: "Bonne chance!",
+      meaning: "İyi şanslar!",
+      pronunciation: "bon-şans",
     },
     {
       text: "Continuez à pratiquer!",
       meaning: "Pratik yapmaya devam edin!",
-      pronunciation: "kon-ti-nü-e-a-pra-ti-ke",
-    },
-    {
-      text: "Bonne continuation!",
-      meaning: "Başarılar!",
-      pronunciation: "bon-kon-ti-nü-a-syon",
+      pronunciation: "kon-ti-nü-e a pra-ti-ke",
     },
   ],
 };

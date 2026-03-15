@@ -16,7 +16,7 @@ interface UnitSpeaking {
 // ===== ÜNİTE 331: GEÇMİŞ TATİLLER =====
 const unit331Speaking: UnitSpeaking = {
   unitId: 331,
-  title: "Tatil Anlatımı",
+  title: "Geçmiş Tatiller",
   exercises: [
     {
       text: "J'ai passé de bonnes vacances.",
@@ -73,7 +73,7 @@ const unit331Speaking: UnitSpeaking = {
 
 const unit332Speaking: UnitSpeaking = {
   unitId: 332,
-  title: "Plan Yapma",
+  title: "Gelecek Planları",
   exercises: [
     {
       text: "Je vais voyager cet été.",
@@ -130,7 +130,7 @@ const unit332Speaking: UnitSpeaking = {
 
 const unit333Speaking: UnitSpeaking = {
   unitId: 333,
-  title: "Doktor Ziyareti",
+  title: "Sağlık ve Hastalık",
   exercises: [
     // Şikayet cümleleri
     {
@@ -215,7 +215,7 @@ const unit333Speaking: UnitSpeaking = {
 
 const unit334Speaking: UnitSpeaking = {
   unitId: 334,
-  title: "Banka İşlemleri",
+  title: "Bankada",
   exercises: [
     {
       text: "Je voudrais ouvrir un compte.",
@@ -272,7 +272,7 @@ const unit334Speaking: UnitSpeaking = {
 
 const unit335Speaking: UnitSpeaking = {
   unitId: 335,
-  title: "Posta ve Miktarlar",
+  title: "Postanede",
   exercises: [
     {
       text: "Je voudrais envoyer ce colis.",
@@ -329,7 +329,7 @@ const unit335Speaking: UnitSpeaking = {
 
 const unit336Speaking: UnitSpeaking = {
   unitId: 336,
-  title: "Otel ve Koşullar",
+  title: "Otel Rezervasyonu",
   exercises: [
     {
       text: "J'ai une réservation au nom de Martin.",
@@ -386,7 +386,7 @@ const unit336Speaking: UnitSpeaking = {
 
 const unit337Speaking: UnitSpeaking = {
   unitId: 337,
-  title: "Tren Bileti Alma",
+  title: "Tren İstasyonunda",
   exercises: [
     {
       text: "Un aller-retour pour Paris, s'il vous plaît.",
@@ -443,7 +443,7 @@ const unit337Speaking: UnitSpeaking = {
 
 const unit338Speaking: UnitSpeaking = {
   unitId: 338,
-  title: "Havaalanı",
+  title: "Havaalanında",
   exercises: [
     {
       text: "Le vol a été annulé à cause de la tempête.",
@@ -500,7 +500,7 @@ const unit338Speaking: UnitSpeaking = {
 
 const unit339Speaking: UnitSpeaking = {
   unitId: 339,
-  title: "Restoran Siparişi",
+  title: "Restoranda Sipariş",
   exercises: [
     {
       text: "Le menu, s'il vous plaît.",
@@ -557,7 +557,7 @@ const unit339Speaking: UnitSpeaking = {
 
 const unit340Speaking: UnitSpeaking = {
   unitId: 340,
-  title: "Tarif Anlatma",
+  title: "Yemek Tarifi",
   exercises: [
     {
       text: "Mange ta soupe !",
@@ -615,7 +615,7 @@ const unit340Speaking: UnitSpeaking = {
 // ===== Üniteler 341-360 (Kısa format) =====
 const unit341Speaking: UnitSpeaking = {
   unitId: 341,
-  title: "Karşılaştırma Yapma",
+  title: "Alışveriş Diyaloğu",
   exercises: [
     {
       text: "Ce t-shirt est moins cher que ce pull.",
@@ -843,7 +843,7 @@ const unit344Speaking: UnitSpeaking = {
 
 const unit345Speaking: UnitSpeaking = {
   unitId: 345,
-  title: "TV Programları",
+  title: "Televizyon Programları",
   exercises: [
     {
       text: "Passe-moi la télécommande, s'il te plaît.",
@@ -1082,26 +1082,8 @@ const unit348Speaking: UnitSpeaking = {
 
 const unit349Speaking: UnitSpeaking = {
   unitId: 349,
-  title: "Doğa",
+  title: "Doğa Gezisi",
   exercises: [
-    {
-      text: "On fait une randonnée?",
-      translation: "Yürüyüşe çıkalım mı?",
-      pronunciation: "on fe ün ran-do-ne",
-    },
-    {
-      text: "La vue est magnifique!",
-      translation: "Manzara harika!",
-      pronunciation: "la vü e ma-nyi-fik",
-    },
-  ],
-};
-
-const unit350Speaking: UnitSpeaking = {
-  unitId: 350,
-  title: "Doğa ve Piknik (Arkadaş Buluşması)",
-  exercises: [
-    // Doğa Teklifleri
     {
       text: "Tu as envie d'aller à la forêt?",
       translation: "Ormana gitmek ister misin?",
@@ -1122,8 +1104,6 @@ const unit350Speaking: UnitSpeaking = {
       translation: "Burası güzel bir yer.",
       pronunciation: "se tön bel an-drua",
     },
-
-    // Zamirler (Y / EN)
     {
       text: "On y va?",
       translation: "Oraya gidelim mi?",
@@ -1157,9 +1137,66 @@ const unit350Speaking: UnitSpeaking = {
   ],
 };
 
+const unit350Speaking: UnitSpeaking = {
+  unitId: 350,
+  title: "Arkadaş Buluşması",
+  exercises: [
+    {
+      text: "On va au cinéma?",
+      translation: "Sinemaya gidelim mi?",
+      pronunciation: "on va o si-ne-ma",
+    },
+    {
+      text: "Tu as envie de marcher?",
+      translation: "Yürümek ister misin?",
+      pronunciation: "tü a an-vi dö mar-şe",
+    },
+    {
+      text: "Ça te dit?",
+      translation: "Sana uyar mı?",
+      pronunciation: "sa tö di",
+    },
+    {
+      text: "Je suis libre ce soir.",
+      translation: "Bu akşam müsaitim.",
+      pronunciation: "jö süi libr sö suar",
+    },
+    {
+      text: "Je suis occupé aujourd'hui.",
+      translation: "Bugün meşgulüm.",
+      pronunciation: "jö süi o-kü-pe o-jur-düi",
+    },
+    {
+      text: "On se retrouve où?",
+      translation: "Nerede buluşuyoruz?",
+      pronunciation: "on sö rö-truv u",
+    },
+    {
+      text: "Devant le métro.",
+      translation: "Metronun önünde.",
+      pronunciation: "dö-van lö me-tro",
+    },
+    {
+      text: "On se voit à quelle heure?",
+      translation: "Saat kaçta görüşüyoruz?",
+      pronunciation: "on sö vua a kel ör",
+    },
+    {
+      text: "D'accord, ça marche.",
+      translation: "Tamam, olur.",
+      pronunciation: "da-kor sa marş",
+    },
+    {
+      text: "Avec plaisir!",
+      translation: "Memnuniyetle!",
+      pronunciation: "a-vek ple-zir",
+    },
+  ],
+};
+
 const unit351Speaking: UnitSpeaking = {
   unitId: 351,
-  title: "Telefon",
+  title: "Telefon Görüşmesi",
   exercises: [
     // Açılış
     {
@@ -1445,7 +1482,7 @@ const unit354Speaking: UnitSpeaking = {
 
 const unit355Speaking: UnitSpeaking = {
   unitId: 355,
-  title: "Şehir Hayatı",
+  title: "Şehir Tanıtımı",
   exercises: [
     // Şehir Tanıtımı
     {
@@ -1718,7 +1755,7 @@ const unit358Speaking: UnitSpeaking = {
 
 const unit359Speaking: UnitSpeaking = {
   unitId: 359,
-  title: "Teknoloji",
+  title: "Teknoloji Kullanımı",
   exercises: [
     // Cihaz kullanımı
     {
@@ -1779,17 +1816,57 @@ const unit359Speaking: UnitSpeaking = {
 
 const unit360Speaking: UnitSpeaking = {
   unitId: 360,
-  title: "A2 Final",
+  title: "A2 Genel Tekrar",
   exercises: [
     {
-      text: "Félicitations!",
-      translation: "Tebrikler!",
-      pronunciation: "fe-li-si-ta-syon",
+      text: "Je ne comprends pas.",
+      translation: "Anlamıyorum.",
+      pronunciation: "jö-nö-kon-pran-pa",
     },
     {
-      text: "Continuez à pratiquer!",
-      translation: "Pratik yapmaya devam edin!",
-      pronunciation: "kon-ti-nü-e a pra-ti-ke",
+      text: "Pouvez-vous répéter?",
+      translation: "Tekrar eder misiniz?",
+      pronunciation: "pu-ve-vu re-pe-te",
+    },
+    {
+      text: "Je suis disponible.",
+      translation: "Müsaitim.",
+      pronunciation: "jö-süi-dis-po-ni-bl",
+    },
+    {
+      text: "Je suis fatigué.",
+      translation: "Yorgunum.",
+      pronunciation: "jö-süi-fa-ti-ge",
+    },
+    {
+      text: "On se retrouve à 18 heures.",
+      translation: "Saat 18'de buluşuyoruz.",
+      pronunciation: "on-sö-rö-truv-a-di-zötör",
+    },
+    {
+      text: "L'addition, s'il vous plaît.",
+      translation: "Hesap lütfen.",
+      pronunciation: "la-di-syon sil vu ple",
+    },
+    {
+      text: "Je voudrais réserver.",
+      translation: "Rezervasyon yapmak istiyorum.",
+      pronunciation: "jö-vu-dre re-zer-ve",
+    },
+    {
+      text: "Pas de problème.",
+      translation: "Sorun değil.",
+      pronunciation: "pa-dö-pro-blem",
+    },
+    {
+      text: "Merci pour tout.",
+      translation: "Her şey için teşekkürler.",
+      pronunciation: "mer-si-pur-tu",
+    },
+    {
+      text: "À bientôt!",
+      translation: "Görüşürüz!",
+      pronunciation: "a-byen-to",
     },
   ],
 };

@@ -7,7 +7,7 @@ import { UnitGrammar } from "./grammar";
 // ===== ÜNİTE 331: GEÇMİŞ TATİLLER =====
 const unit331Grammar: UnitGrammar = {
   unitId: 331,
-  title: "Passé Composé - Temel Mantık",
+  title: "Geçmiş Tatiller",
   rules: [
     {
       id: "fr-a2-pc-logic",
@@ -66,7 +66,7 @@ const unit331Grammar: UnitGrammar = {
 // ===== ÜNİTE 332: GELECEK PLANLARI =====
 const unit332Grammar: UnitGrammar = {
   unitId: 332,
-  title: "Futur Proche - Yakın Gelecek",
+  title: "Gelecek Planları",
   rules: [
     {
       id: "fr-a2-fp-step1",
@@ -140,7 +140,7 @@ const unit332Grammar: UnitGrammar = {
 // ===== ÜNİTE 333: SAĞLIK VE HASTALIK =====
 const unit333Grammar: UnitGrammar = {
   unitId: 333,
-  title: "Sağlık ve Zorunluluk (Santé et Obligation)",
+  title: "Sağlık ve Hastalık",
   rules: [
     {
       id: "fr-a2-avoir-pain",
@@ -294,7 +294,7 @@ const unit333Grammar: UnitGrammar = {
 // ===== ÜNİTE 334: BANKADA =====
 const unit334Grammar: UnitGrammar = {
   unitId: 334,
-  title: "Bankada: Kibarlık ve Resmiyet",
+  title: "Bankada",
   rules: [
     {
       id: "fr-a2-polite-phrases",
@@ -352,7 +352,7 @@ const unit334Grammar: UnitGrammar = {
 // ===== ÜNİTE 335: POSTANEDE =====
 const unit335Grammar: UnitGrammar = {
   unitId: 335,
-  title: "Miktar Zarfları ve Ölçüler",
+  title: "Postanede",
   rules: [
     {
       id: "fr-a2-quantifiers-basic",
@@ -449,7 +449,7 @@ const unit335Grammar: UnitGrammar = {
 // ===== ÜNİTE 336: OTEL REZERVASYONU =====
 const unit336Grammar: UnitGrammar = {
   unitId: 336,
-  title: "Koşul Cümleleri (Les Si)",
+  title: "Otel Rezervasyonu",
   rules: [
     {
       id: "fr-a2-si-basic",
@@ -522,7 +522,7 @@ const unit336Grammar: UnitGrammar = {
 // ===== ÜNİTE 337: TREN İSTASYONUNDA =====
 const unit337Grammar: UnitGrammar = {
   unitId: 337,
-  title: "Soru Sorma Sanatı (Inversion)",
+  title: "Tren İstasyonunda",
   rules: [
     {
       id: "fr-a2-inversion-basic",
@@ -590,7 +590,7 @@ const unit337Grammar: UnitGrammar = {
 // ===== ÜNİTE 338: HAVAALANINDA =====
 const unit338Grammar: UnitGrammar = {
   unitId: 338,
-  title: "Edilgen Yapı (Voix Passive)",
+  title: "Havaalanında",
   rules: [
     {
       id: "fr-a2-passive-logic",
@@ -658,7 +658,7 @@ const unit338Grammar: UnitGrammar = {
 // ===== ÜNİTE 339: RESTORANDA SİPARİŞ =====
 const unit339Grammar: UnitGrammar = {
   unitId: 339,
-  title: "Restoranda Sipariş - Zamir Kısayolu",
+  title: "Restoranda Sipariş",
   rules: [
     {
       id: "fr-a2-restaurant-pronouns-table",
@@ -957,7 +957,7 @@ const unit341Grammar: UnitGrammar = {
       ],
     },
     {
-      id: "fr-a2-meilleur-exception",
+      id: "fr-a2-comparatif-meilleur-exception",
       title: "🚨 BÖLÜM 4: HAYAT KURTARAN İSTİSNA (Daha İyi)",
       explanation:
         "Tıpkı Türkçede \"En iyisi\" derken \"En güzeli\" demediğimiz gibi, Fransızcada da \"Daha iyi\" demek için özel bir kelime vardır.\n\n" +
@@ -1425,7 +1425,7 @@ const unit345Grammar: UnitGrammar = {
 
 const unit346Grammar: UnitGrammar = {
   unitId: 346,
-  title: "Sinema ve Filmler (Le Superlatif)",
+  title: "Sinema ve Filmler",
   rules: [
     {
       id: "fr-a2-cinema-vocab",
@@ -1687,25 +1687,6 @@ const unit349Grammar: UnitGrammar = {
   title: "Doğa Gezisi",
   rules: [
     {
-      id: "fr-a2-en-y-pronouns",
-      title: "📍 Yer Zamirleri: Y ve EN",
-      explanation:
-        "* Y = orada (à + yer): Je vais à Paris → J'y vais\n* EN = oradan (de + yer): Je reviens de la forêt → J'en reviens",
-      examples: [
-        {
-          fr: "La montagne? J'y vais demain.",
-          tr: "Dağ mı? Yarın oraya gidiyorum.",
-        },
-      ],
-    },
-  ],
-};
-
-const unit350Grammar: UnitGrammar = {
-  unitId: 350,
-  title: "Arkadaş Buluşması",
-  rules: [
-    {
       id: "fr-a2-nature-vocab",
       title: "🌲 BÖLÜM 1: DOĞA SÖZLÜĞÜ (La Nature)",
       explanation: "Önce nereye gideceğimizi bilelim.",
@@ -1776,10 +1757,88 @@ const unit350Grammar: UnitGrammar = {
   ],
 };
 
+const unit350Grammar: UnitGrammar = {
+  unitId: 350,
+  title: "Arkadaş Buluşması",
+  rules: [
+    {
+      id: "fr-a2-meet-propose",
+      title: "🗣️ BÖLÜM 1: TEKLİF ETMEK (Proposer)",
+      explanation:
+        "Arkadaşına teklif yaparken en doğal kalıplar:\n\n* **On va ... ?** → On va au cinéma?\n* **Tu as envie de ... ?** → Tu as envie de marcher?\n* **Ça te dit ?** → On mange une pizza, ça te dit?",
+      examples: [
+        { fr: "On va boire un verre ?", tr: "Bir şeyler içmeye gidelim mi?" },
+        { fr: "Ça te dit ce soir ?", tr: "Bu akşam sana uyar mı?" },
+      ],
+    },
+    {
+      id: "fr-a2-meet-accept",
+      title: "✅ BÖLÜM 2: KABUL ETMEK (Accepter)",
+      explanation: "Pozitif cevaplar için kısa ve doğal kalıplar:",
+      table: {
+        headers: ["Fransızca", "Okunuşu 🔊", "Türkçe"],
+        rows: [
+          ["Génial !", "Jeniyal", "Harika!"],
+          ["D'accord, ça marche.", "Dakor, sa marş", "Tamam, olur."],
+          ["Allons-y !", "Alon-zi", "Hadi gidelim!"],
+          ["Avec plaisir !", "Avek plezir", "Memnuniyetle!"],
+          ["Bonne idée !", "Bon ide", "İyi fikir!"],
+          ["Pourquoi pas ?", "Purkua pa", "Neden olmasın?"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-meet-refuse",
+      title: "❌ BÖLÜM 3: REDDETMEK (Refuser)",
+      explanation: "Nazik ve doğal reddetme kalıpları:",
+      table: {
+        headers: ["Fransızca", "Okunuşu 🔊", "Türkçe"],
+        rows: [
+          ["Bof, je ne sais pas.", "Bof, jö nö se pa", "Pff, bilmiyorum."],
+          ["Je ne peux pas, j'ai du travail.", "Jö nö pö pa, jö dü travay", "Yapamam, işim var."],
+          ["Non, je n'ai pas envie.", "No, jö ne pa zanvi", "Hayır, canım istemiyor."],
+          ["Désolé, je suis occupé.", "Dezole, jö süi zoküpe", "Üzgünüm, meşgulüm."],
+          ["Peut-être une autre fois.", "Pötetr ün otr fua", "Belki başka zaman."],
+          ["J'ai un empêchement.", "Je ön anpeşman", "Engelim var."],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-meet-details",
+      title: "📍 BÖLÜM 4: DETAYLARI KONUŞMAK",
+      explanation: "Yer ve zaman için temel sorular ve cevaplar:",
+      table: {
+        headers: ["Durum", "Fransızca", "Okunuşu 🔊", "Türkçe"],
+        rows: [
+          ["Yer", "On se retrouve où ?", "On sö rötrüv u", "Nerede buluşuyoruz?"],
+          ["Yer", "Devant le cinéma.", "Dövan lö sinema", "Sinemanın önünde."],
+          ["Yer", "Chez moi.", "Şe mua", "Benim evimde."],
+          ["Yer", "Devant le métro.", "Dövan lö metro", "Metronun önünde."],
+          ["Zaman", "On se voit à quelle heure ?", "On sö vua a kel ör", "Saat kaçta görüşüyoruz?"],
+          ["Zaman", "Vers 20 heures.", "Ver ven-tör", "Saat 20 civarı."],
+          ["Zaman", "Ce soir.", "Sö suar", "Bu akşam."],
+          ["Zaman", "Demain.", "Dömen", "Yarın."],
+          ["Zaman", "Ce week-end.", "Sö wikend", "Bu hafta sonu."],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-meet-dialogue",
+      title: "🗣️ BÖLÜM 5: SESLİ DİYALOG (Plan Yapma)",
+      explanation:
+        "**Thomas:** Salut Julie ! Qu'est-ce que tu fais ce week-end?\n🔊 Salü Julie! Kes kö tü fe sö wikend?\n_(Selam Julie! Bu hafta sonu ne yapıyorsun?)_\n\n**Julie:** Rien de spécial. Je suis libre.\n🔊 Riyen dö spesyal. Jö süi libr.\n_(Özel bir şey yok. Boşum.)_\n\n**Thomas:** On va au restaurant italien?\n🔊 On va o restoran italyen?\n_(İtalyan restoranına gidelim mi?)_\n\n**Julie:** Mmm, bof. Je n'ai pas très faim. Tu as envie d'aller au cinéma plutôt?\n🔊 Mmm, bof. Jö ne pa tre fen. Tü a anvi dale o sinema plüto?\n_(Pek aç değilim. Onun yerine sinemaya gitmek ister misin?)_\n\n**Thomas:** Bonne idée! On se retrouve où?\n🔊 Bon ide! On sö rötrüv u?\n_(İyi fikir! Nerede buluşuyoruz?)_\n\n**Julie:** Devant le métro, vers 19 heures?\n🔊 Dövan lö metro, ver diz-növ ör?\n_(Metronun önünde, 19:00 civarı?)_\n\n**Thomas:** Ça marche! À plus!\n🔊 Sa marş! A plüs!\n_(Olur! Görüşürüz!)_",
+      examples: [],
+    },
+  ],
+};
+
 // ===== ÜNİTE 351-360: Son 10 Ünite =====
 const unit351Grammar: UnitGrammar = {
   unitId: 351,
-  title: "Telefon Görüşmesi (Au Téléphone)",
+  title: "Telefon Görüşmesi",
   rules: [
     {
       id: "fr-a2-phone-vocab",
@@ -1918,7 +1977,7 @@ const unit351Grammar: UnitGrammar = {
 
 const unit352Grammar: UnitGrammar = {
   unitId: 352,
-  title: "Davet Etme (Inviter)",
+  title: "Davet Etme",
   rules: [
     {
       id: "fr-a2-invitation-patterns",
@@ -2000,7 +2059,7 @@ const unit352Grammar: UnitGrammar = {
 
 const unit353Grammar: UnitGrammar = {
   unitId: 353,
-  title: "Özür Dileme (S'excuser)",
+  title: "Özür Dileme",
   rules: [
     {
       id: "fr-a2-apology-words",
@@ -2096,7 +2155,7 @@ const unit353Grammar: UnitGrammar = {
 
 const unit354Grammar: UnitGrammar = {
   unitId: 354,
-  title: "Yol Tarifi (L'Itinéraire)",
+  title: "Yol Tarifi",
   rules: [
     {
       id: "fr-a2-directions-warning",
@@ -2191,7 +2250,7 @@ const unit354Grammar: UnitGrammar = {
 
 const unit355Grammar: UnitGrammar = {
   unitId: 355,
-  title: "Şehir Hayatı (La Vie Urbaine)",
+  title: "Şehir Tanıtımı",
   rules: [
     {
       id: "fr-a2-city-vocab",
@@ -2302,7 +2361,7 @@ const unit355Grammar: UnitGrammar = {
 
 const unit356Grammar: UnitGrammar = {
   unitId: 356,
-  title: "Kültürel Farklar (Les Différences Culturelles)",
+  title: "Kültürel Farklar",
   rules: [
     {
       id: "fr-a2-culture-vocab",
@@ -2376,7 +2435,7 @@ const unit356Grammar: UnitGrammar = {
 
 const unit357Grammar: UnitGrammar = {
   unitId: 357,
-  title: "Eğitim Hayatı (La Vie Scolaire)",
+  title: "Eğitim Hayatı",
   rules: [
     {
       id: "fr-a2-edu-places",
@@ -2482,7 +2541,7 @@ const unit357Grammar: UnitGrammar = {
 
 const unit358Grammar: UnitGrammar = {
   unitId: 358,
-  title: "İş Hayatı (La Vie Professionnelle)",
+  title: "İş Hayatı",
   rules: [
     {
       id: "fr-a2-work-terms",
@@ -2611,7 +2670,7 @@ const unit358Grammar: UnitGrammar = {
 
 const unit359Grammar: UnitGrammar = {
   unitId: 359,
-  title: "Teknoloji Kullanımı (Usage Technologique)",
+  title: "Teknoloji Kullanımı",
   rules: [
     {
       id: "fr-a2-tech-hardware",

@@ -541,9 +541,9 @@ const unit341Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Thomas veut acheter un cadeau pour son frère. Il est dans un grand magasin et il regarde les manteaux. Il y a un manteau noir et un manteau bleu. Le manteau noir est très élégant, mais il coûte 150 euros. Le manteau bleu est moins élégant, mais il est plus confortable et il est moins cher (90 euros).\\n\\nThomas parle à la vendeuse. 'Je pense que le noir est plus joli que le bleu,' dit Thomas. La vendeuse répond : 'Oui, mais le bleu est meilleur pour l'hiver, il est plus chaud.' Thomas réfléchit. Le rouge est aussi cher que le noir. Finalement, il décide : 'Tu as raison, le manteau bleu est la meilleure option. Je prends le bleu !'",
+    text: "Thomas veut acheter un cadeau pour son frère. Il est dans un grand magasin et il regarde les manteaux. Il y a un manteau noir et un manteau bleu. Le manteau noir est très élégant, mais il coûte 150 euros. Le manteau bleu est moins élégant, mais il est plus confortable et il est moins cher (90 euros).\\n\\nThomas parle à la vendeuse. 'Je pense que le noir est plus joli que le bleu,' dit Thomas. La vendeuse répond : 'Oui, mais le bleu est meilleur pour l'hiver, il est plus chaud.' Thomas réfléchit. Le rouge est aussi cher que le noir. Il demande s'il y a une réduction, mais la vendeuse dit non. Finalement, il décide : 'Tu as raison, le manteau bleu est la meilleure option. Je prends le bleu !' Il paie par carte.",
     translation:
-      "Thomas erkek kardeşi için bir hediye almak istiyor. O büyük bir mağazada ve kabanlara bakıyor. Siyah bir kaban ve mavi bir kaban var. Siyah kaban çok şık, ama 150 euro tutuyor. Mavi kaban daha az şık, ama daha rahat ve daha ucuz (90 euro).\\n\\nThomas satıcıyla konuşuyor. Thomas, 'Bence siyah olan maviden daha güzel,' diyor. Satıcı cevap veriyor: 'Evet, ama mavi olan kış için daha iyi, o daha sıcak.' Thomas düşünüyor. Kırmızı olan siyah kadar pahalı. Sonunda karar veriyor: 'Haklısın, mavi kaban daha iyi bir seçenek. Maviyi alıyorum!'",
+      "Thomas erkek kardeşi için bir hediye almak istiyor. O büyük bir mağazada ve kabanlara bakıyor. Siyah bir kaban ve mavi bir kaban var. Siyah kaban çok şık, ama 150 euro tutuyor. Mavi kaban daha az şık, ama daha rahat ve daha ucuz (90 euro).\\n\\nThomas satıcıyla konuşuyor. Thomas, 'Bence siyah olan maviden daha güzel,' diyor. Satıcı cevap veriyor: 'Evet, ama mavi olan kış için daha iyi, o daha sıcak.' Thomas düşünüyor. Kırmızı olan siyah kadar pahalı. İndirim var mı diye soruyor, ama satıcı yok diyor. Sonunda karar veriyor: 'Haklısın, mavi kaban en iyi seçenek. Maviyi alıyorum!' Kartla ödüyor.",
   },
   questions: [
     {
@@ -594,6 +594,23 @@ const unit341Reading: UnitReading = {
       options: ["Daha ucuz", "Daha sıcak", "Daha büyük", "Daha pahalı"],
       correctAnswer: "Daha sıcak",
     },
+    {
+      id: 9,
+      question: "Thomas indirim var mı diye soruyor mu?",
+      options: [
+        "Evet, soruyor",
+        "Hayır, sormuyor",
+        "İndirim olduğunu söylüyor",
+        "Mağazadan çıkıyor",
+      ],
+      correctAnswer: "Evet, soruyor",
+    },
+    {
+      id: 10,
+      question: "Thomas nasıl ödüyor?",
+      options: ["Nakit", "Kartla", "Çekle", "Ödemiyor"],
+      correctAnswer: "Kartla",
+    },
   ],
   vocabulary: [
     { word: "Un manteau", meaning: "Bir kaban" },
@@ -611,9 +628,9 @@ const unit342Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Samedi après-midi, Sophie est allée dans un magasin de vêtements. Elle cherchait un cadeau pour l'anniversaire de sa mère. D'abord, elle a regardé les robes. 'Cette robe rouge est très belle,' a dit la vendeuse. Mais Sophie a répondu : 'Non merci, je cherche quelque chose de plus simple.'\\n\\nEnsuite, Sophie a vu une chemise blanche. 'Je peux essayer cette chemise ?' a-t-elle demandé. La vendeuse lui a montré la cabine d'essayage. Après, Sophie a aussi choisi ce pull bleu. 'Ça coûte combien ?' a demandé Sophie. 'Cette chemise coûte 35 euros et ce pull coûte 45 euros,' a répondu la vendeuse. Sophie a dit : 'Parfait ! J'achète cette chemise et ce pull. Je paie par carte.'",
+    text: "Samedi après-midi, Sophie est allée dans un magasin de vêtements. Elle cherchait un cadeau pour l'anniversaire de sa mère. D'abord, elle a regardé les robes. 'Cette robe rouge est très belle,' a dit la vendeuse. Mais Sophie a répondu : 'Non merci, je cherche quelque chose de plus simple.'\\n\\nEnsuite, Sophie a vu une chemise blanche. 'Je peux essayer cette chemise ?' a-t-elle demandé. La vendeuse lui a montré la cabine d'essayage. Sophie demande si la chemise existe en bleu, mais il n'y a que du blanc. Après, Sophie a aussi choisi ce pull bleu. 'Ça coûte combien ?' a demandé Sophie. 'Cette chemise coûte 35 euros et ce pull coûte 45 euros,' a répondu la vendeuse. Sophie a dit : 'Parfait ! J'achète cette chemise et ce pull. Je passe à la caisse et je paie par carte.'",
     translation:
-      "Cumartesi öğleden sonra Sophie bir giyim mağazasına gitti. Annesinin doğum günü için hediye arıyordu. Önce elbiselere baktı. 'Bu kırmızı elbise çok güzel,' dedi satıcı. Ama Sophie cevap verdi: 'Hayır teşekkürler, daha basit bir şey arıyorum.'\\n\\nSonra Sophie beyaz bir gömlek gördü. 'Bu gömleği deneyebilir miyim?' diye sordu. Satıcı ona giyinme kabinini gösterdi. Ardından Sophie bu mavi kazağı da seçti. 'Ne kadar tutuyor?' diye sordu Sophie. 'Bu gömlek 35 euro ve bu kazak 45 euro,' diye cevap verdi satıcı. Sophie dedi: 'Mükemmel! Bu gömleği ve bu kazağı satın alıyorum. Kartla ödüyorum.'",
+      "Cumartesi öğleden sonra Sophie bir giyim mağazasına gitti. Annesinin doğum günü için hediye arıyordu. Önce elbiselere baktı. 'Bu kırmızı elbise çok güzel,' dedi satıcı. Ama Sophie cevap verdi: 'Hayır teşekkürler, daha basit bir şey arıyorum.'\\n\\nSonra Sophie beyaz bir gömlek gördü. 'Bu gömleği deneyebilir miyim?' diye sordu. Satıcı ona giyinme kabinini gösterdi. Sophie gömleğin mavisi var mı diye soruyor, ama sadece beyaz var. Ardından Sophie bu mavi kazağı da seçti. 'Ne kadar tutuyor?' diye sordu Sophie. 'Bu gömlek 35 euro ve bu kazak 45 euro,' diye cevap verdi satıcı. Sophie dedi: 'Mükemmel! Bu gömleği ve bu kazağı satın alıyorum. Kasaya geçiyorum ve kartla ödüyorum.'",
   },
   questions: [
     {
@@ -664,6 +681,18 @@ const unit342Reading: UnitReading = {
       options: ["Chemise erkek kelimedir", "Chemise dişi kelimedir", "Chemise çoğuldur", "Sesli harfle başlar"],
       correctAnswer: "Chemise dişi kelimedir",
     },
+    {
+      id: 9,
+      question: "Sophie gömleğin hangi rengi var mı diye soruyor?",
+      options: ["Mavi", "Siyah", "Kırmızı", "Yeşil"],
+      correctAnswer: "Mavi",
+    },
+    {
+      id: 10,
+      question: "Sophie nerede ödüyor?",
+      options: ["Kabinde", "Kasada", "Evde", "Dışarıda"],
+      correctAnswer: "Kasada",
+    },
   ],
   vocabulary: [
     { word: "Le magasin de vêtements", meaning: "Giyim mağazası" },
@@ -681,9 +710,9 @@ const unit343Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Samedi matin, Hugo et Lucas ont décidé de faire le ménage. Hugo vient de passer l'aspirateur dans le salon. Lucas vient de faire la vaisselle dans la cuisine. Après, Hugo a dit : 'C'est ton tour de faire la lessive !' Mais Lucas a répondu : 'Non ! Je viens de faire la vaisselle ! C'est à ton tour !'\\n\\nFinalement, Hugo a fait la lessive et Lucas a rangé les chambres. Ensuite, Lucas a repassé les chemises. Hugo a nettoyé la salle de bain. À midi, la maison était propre. Ils étaient fatigués mais contents. Hugo a dit : 'Super ! Je vais me reposer maintenant !'",
+    text: "Samedi matin, Hugo et Lucas ont décidé de faire le ménage. Hugo vient de passer l'aspirateur dans le salon. Lucas vient de faire la vaisselle dans la cuisine. Après, Hugo a dit : 'C'est ton tour de faire la lessive !' Mais Lucas a répondu : 'Non ! Je viens de faire la vaisselle ! C'est à ton tour !'\\n\\nFinalement, Hugo a fait la lessive et Lucas a rangé les chambres. Ensuite, Lucas a repassé les chemises. Hugo a nettoyé la salle de bain. Lucas a sorti la poubelle et Hugo a balayé la cuisine. À midi, la maison était propre. Ils étaient fatigués mais contents. Hugo a dit : 'Super ! Je vais me reposer maintenant !'",
     translation:
-      "Cumartesi sabahı, Hugo ve Lucas temizlik yapmaya karar verdiler. Hugo az önce salonda süpürge çekti. Lucas az önce mutfakta bulaşıkları yıkadı. Sonra Hugo dedi: 'Çamaşır yıkama sırası sende!' Ama Lucas cevap verdi: 'Hayır! Ben az önce bulaşıkları yıkadım! Senin sıran!'\\n\\nSonunda Hugo çamaşır yıkadı ve Lucas odaları topladı. Ardından Lucas gömlekleri ütüledi. Hugo banyoyu temizledi. Öğle vakti ev tertemizdi. Yorgun ama mutluydular. Hugo dedi: 'Süper! Şimdi dinleneceğim!'",
+      "Cumartesi sabahı, Hugo ve Lucas temizlik yapmaya karar verdiler. Hugo az önce salonda süpürge çekti. Lucas az önce mutfakta bulaşıkları yıkadı. Sonra Hugo dedi: 'Çamaşır yıkama sırası sende!' Ama Lucas cevap verdi: 'Hayır! Ben az önce bulaşıkları yıkadım! Senin sıran!'\\n\\nSonunda Hugo çamaşır yıkadı ve Lucas odaları topladı. Ardından Lucas gömlekleri ütüledi. Hugo banyoyu temizledi. Lucas çöpü dışarı çıkardı ve Hugo mutfağı süpürdü. Öğle vakti ev tertemizdi. Yorgun ama mutluydular. Hugo dedi: 'Süper! Şimdi dinleneceğim!'",
   },
   questions: [
     {
@@ -739,6 +768,18 @@ const unit343Reading: UnitReading = {
       options: ["Yemek yapmak", "Dinlenmek", "Alışveriş yapmak", "Dışarı çıkmak"],
       correctAnswer: "Dinlenmek",
     },
+    {
+      id: 9,
+      question: "Çöpü kim dışarı çıkardı?",
+      options: ["Hugo", "Lucas", "İkisi birlikte", "Kimse"],
+      correctAnswer: "Lucas",
+    },
+    {
+      id: 10,
+      question: "Hugo mutfakta ne yaptı?",
+      options: ["Bulaşık yıkadı", "Süpürdü", "Ütü yaptı", "Yemek yaptı"],
+      correctAnswer: "Süpürdü",
+    },
   ],
   vocabulary: [
     { word: "Décider", meaning: "Karar vermek" },
@@ -756,9 +797,9 @@ const unit344Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Hier soir, Marc, un journaliste, présentait les informations à la télévision. La météo était terrible. Il y avait beaucoup de vent et il pleuvait très fort. Les gens regardaient les actualités chez eux. Ils étaient inquiets.\\n\\nMarc parlait avec les habitants du quartier. Une femme disait : 'Quand j'étais enfant, il n'y avait pas de tempêtes comme ça !' Un homme lisait le journal et écoutait la radio en même temps.\\n\\nÀ la fin de l'émission, Marc a dit : 'Restez chez vous, la tempête va continuer.' Tout le monde regardait la télé et attendait la fin de la pluie.",
+    text: "Hier soir, Marc, un journaliste, présentait les informations à la télévision. La météo était terrible. Il y avait beaucoup de vent et il pleuvait très fort. Les gens regardaient les actualités chez eux. Ils étaient inquiets.\\n\\nMarc parlait avec les habitants du quartier. Une femme disait : 'Quand j'étais enfant, il n'y avait pas de tempêtes comme ça !' Un homme lisait le journal et écoutait la radio en même temps. La radio annonçait une tempête encore plus forte, et un reportage était en direct.\\n\\nÀ la fin de l'émission, Marc a dit : 'Restez chez vous, la tempête va continuer.' Tout le monde regardait la télé et attendait la fin de la pluie.",
     translation:
-      "Dün akşam, bir gazeteci olan Marc, televizyonda haberleri sunuyordu. Hava durumu berbattı. Çok rüzgar vardı ve çok şiddetli yağmur yağıyordu. İnsanlar evlerinde haberleri izliyorlardı. Endişeliydiler.\\n\\nMarc mahalle sakinleriyle konuşuyordu. Bir kadın diyordu: 'Çocukken böyle fırtınalar yoktu!' Bir adam hem gazete okuyor hem de aynı anda radyo dinliyordu.\\n\\nProgramın sonunda Marc dedi: 'Evinizde kalın, fırtına devam edecek.' Herkes televizyon izliyor ve yağmurun bitmesini bekliyordu.",
+      "Dün akşam, bir gazeteci olan Marc, televizyonda haberleri sunuyordu. Hava durumu berbattı. Çok rüzgar vardı ve çok şiddetli yağmur yağıyordu. İnsanlar evlerinde haberleri izliyorlardı. Endişeliydiler.\\n\\nMarc mahalle sakinleriyle konuşuyordu. Bir kadın diyordu: 'Çocukken böyle fırtınalar yoktu!' Bir adam hem gazete okuyor hem de aynı anda radyo dinliyordu. Radyo daha da güçlü bir fırtına duyuruyor ve bir haber dosyası canlı yayınlanıyordu.\\n\\nProgramın sonunda Marc dedi: 'Evinizde kalın, fırtına devam edecek.' Herkes televizyon izliyor ve yağmurun bitmesini bekliyordu.",
   },
   questions: [
     {
@@ -824,6 +865,23 @@ const unit344Reading: UnitReading = {
       options: ["Güneşi", "Yağmurun bitmesini", "Sabahı", "Marc'ı"],
       correctAnswer: "Yağmurun bitmesini",
     },
+    {
+      id: 9,
+      question: "Radyo ne duyuruyordu?",
+      options: [
+        "Hava düzeldi",
+        "Daha güçlü bir fırtına",
+        "Güneşli bir gün",
+        "Yağmur bitti",
+      ],
+      correctAnswer: "Daha güçlü bir fırtına",
+    },
+    {
+      id: 10,
+      question: "Reportaj nasıldı?",
+      options: ["Önceden çekilmişti", "Canlıydı", "Yoktu", "Kısa bir reklamdı"],
+      correctAnswer: "Canlıydı",
+    },
   ],
   vocabulary: [
     { word: "La tempête", meaning: "Fırtına" },
@@ -841,9 +899,9 @@ const unit345Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Ce soir, Antoine et Sophie sont devant la télévision.\\n\\nAntoine : 'Où est la télécommande ? L'émission qui commence à 20h est mon programme préféré.'\\n\\nSophie : 'Je déteste cette émission ! C'est le présentateur que je n'aime pas. Il parle trop.'\\n\\nAntoine : 'Alors, on regarde le documentaire qui parle de la nature ?'\\n\\nSophie : 'Oui, bonne idée ! C'est un documentaire que j'adore.'\\n\\nPendant le documentaire, il y a une publicité.\\n\\nSophie : 'Oh non, c'est la publicité que nous détestons !'\\n\\nAntoine prend la télécommande et change de chaîne. 'Regardons les informations en attendant,' dit-il.\\n\\nIls aiment regarder la télévision ensemble, même s'ils ne sont pas toujours d'accord sur le choix de la chaîne.",
+    text: "Ce soir, Antoine et Sophie sont devant la télévision.\\n\\nAntoine : 'Où est la télécommande ? L'émission qui commence à 20h est mon programme préféré.'\\n\\nSophie : 'Je déteste cette émission ! C'est le présentateur que je n'aime pas. Il parle trop.'\\n\\nAntoine : 'Alors, on regarde le documentaire qui parle de la nature ?'\\n\\nSophie : 'Oui, bonne idée ! C'est un documentaire que j'adore.' Elle aime aussi les dessins animés, mais ce soir elle préfère le documentaire.\\n\\nPendant le documentaire, il y a une publicité.\\n\\nSophie : 'Oh non, c'est la publicité que nous détestons !'\\n\\nAntoine prend la télécommande et change de chaîne. 'Regardons les informations en attendant,' dit-il. Le documentaire commence après les informations.\\n\\nIls aiment regarder la télévision ensemble, même s'ils ne sont pas toujours d'accord sur le choix de la chaîne.",
     translation:
-      "Bu akşam, Antoine ve Sophie televizyonun karşısındalar.\\n\\nAntoine: 'Uzaktan kumanda nerede? Saat 20'de başlayan program benim en sevdiğim program.'\\n\\nSophie: 'Bu programdan nefret ediyorum! Sevmediğim kişi sunucu. Çok konuşuyor.'\\n\\nAntoine: 'Öyleyse doğa hakkında konuşan belgeseli mi izleyelim?'\\n\\nSophie: 'Evet, iyi fikir! Bu benim bayıldığım bir belgesel.'\\n\\nBelgesel sırasında bir reklam olur.\\n\\nSophie: 'Oh hayır, bu bizim nefret ettiğimiz reklam!'\\n\\nAntoine kumandayı alır ve kanal değiştirir. 'O arada haberleri izleyelim,' der.\\n\\nKanal seçimi konusunda her zaman aynı fikirde olmasalar da birlikte televizyon izlemeyi severler.",
+      "Bu akşam, Antoine ve Sophie televizyonun karşısındalar.\\n\\nAntoine: 'Uzaktan kumanda nerede? Saat 20'de başlayan program benim en sevdiğim program.'\\n\\nSophie: 'Bu programdan nefret ediyorum! Sevmediğim kişi sunucu. Çok konuşuyor.'\\n\\nAntoine: 'Öyleyse doğa hakkında konuşan belgeseli mi izleyelim?'\\n\\nSophie: 'Evet, iyi fikir! Bu benim bayıldığım bir belgesel.' Ayrıca çizgi filmleri de sever ama bu akşam belgeseli tercih ediyor.\\n\\nBelgesel sırasında bir reklam olur.\\n\\nSophie: 'Oh hayır, bu bizim nefret ettiğimiz reklam!'\\n\\nAntoine kumandayı alır ve kanal değiştirir. 'O arada haberleri izleyelim,' der. Belgesel haberlerden sonra başlıyor.\\n\\nKanal seçimi konusunda her zaman aynı fikirde olmasalar da birlikte televizyon izlemeyi severler.",
   },
   questions: [
     {
@@ -899,6 +957,18 @@ const unit345Reading: UnitReading = {
       options: ["Haberler", "Doğa belgeselleri", "Reklam", "Televizyon kumandası"],
       correctAnswer: "Reklam",
     },
+    {
+      id: 9,
+      question: "Belgesel ne zaman başlıyor?",
+      options: ["Haberlerden sonra", "Haberlerden önce", "Gece yarısı", "Hiç başlamıyor"],
+      correctAnswer: "Haberlerden sonra",
+    },
+    {
+      id: 10,
+      question: "Sophie hangi tür programları sever?",
+      options: ["Sadece haberler", "Çizgi filmler", "Spor programları", "Yemek programları"],
+      correctAnswer: "Çizgi filmler",
+    },
   ],
   vocabulary: [
     { word: "La télécommande", meaning: "Uzaktan Kumanda" },
@@ -916,9 +986,9 @@ const unit346Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Hier soir, je suis allé au cinéma avec ma meilleure amie, Sophie. Nous avons regardé le dernier film d'action de notre réalisateur préféré. C’était le film le plus long de l'année, mais aussi le plus excitant ! L'acteur principal est très célèbre. Pour moi, c'est le meilleur acteur du monde. Son rôle dans ce documentaire... ah non, dans ce film d'action, était incroyable. Après le film, nous avons parlé des scènes. Sophie a dit : \"C'est la meilleure comédie que j'ai vue !\" Attends, une comédie ? Non, c'était un film d'action ! Mais il y avait en effet beaucoup de scènes amusantes. Le scénario était peut-être le moins original, mais la musique était la plus belle. Finalement, nous sommes d'accord : c'est le meilleur film de cette semaine.",
+    text: "Hier soir, je suis allé au cinéma avec ma meilleure amie, Sophie. Nous avons regardé le dernier film d'action de notre réalisateur préféré. La séance était à 21h et la salle était pleine. C’était le film le plus long de l'année, mais aussi le plus excitant ! L'acteur principal est très célèbre. Pour moi, c'est le meilleur acteur du monde. Son rôle dans ce documentaire... ah non, dans ce film d'action, était incroyable. Après le film, nous avons parlé des scènes. Sophie a dit : \"C'est la meilleure comédie que j'ai vue !\" Attends, une comédie ? Non, c'était un film d'action ! Mais il y avait en effet beaucoup de scènes amusantes. Le scénario était peut-être le moins original, mais la musique était la plus belle. Finalement, nous sommes d'accord : c'est le meilleur film de cette semaine.",
     translation:
-      "Dün akşam en yakın arkadaşım Sophie ile sinemaya gittim. En sevdiğimiz yönetmenin son aksiyon filmini izledik. Yılın en uzun filmiydi ama aynı zamanda en heyecanlısıydı! Başrol oyuncusu çok ünlü. Bence dünyanın en iyi oyuncusu. Bu belgeseldeki... ah hayır, bu aksiyon filmindeki rolü inanılmazdı. Filmden sonra sahneler hakkında konuştuk. Sophie dedi ki: 'İzlediğim en iyi komediydi!' Bekle, bir komedi mi? Hayır, bu bir aksiyon filmiydi! Ama gerçekten de birçok eğlenceli sahne vardı. Senaryo belki de en az orijinal olanıydı ama müzik en güzeliydi. Sonuç olarak aynı fikirdeyiz: bu haftanın en iyi filmi.",
+      "Dün akşam en yakın arkadaşım Sophie ile sinemaya gittim. En sevdiğimiz yönetmenin son aksiyon filmini izledik. Seans saat 21'deydi ve salon doluydu. Yılın en uzun filmiydi ama aynı zamanda en heyecanlısıydı! Başrol oyuncusu çok ünlü. Bence dünyanın en iyi oyuncusu. Bu belgeseldeki... ah hayır, bu aksiyon filmindeki rolü inanılmazdı. Filmden sonra sahneler hakkında konuştuk. Sophie dedi ki: 'İzlediğim en iyi komediydi!' Bekle, bir komedi mi? Hayır, bu bir aksiyon filmiydi! Ama gerçekten de birçok eğlenceli sahne vardı. Senaryo belki de en az orijinal olanıydı ama müzik en güzeliydi. Sonuç olarak aynı fikirdeyiz: bu haftanın en iyi filmi.",
   },
   questions: [
     {
@@ -969,6 +1039,18 @@ const unit346Reading: UnitReading = {
       options: ["Le film était ennuyeux", "C'est le pire film", "C'est le meilleur film de cette semaine", "Ils détestent le réalisateur"],
       correctAnswer: "C'est le meilleur film de cette semaine",
     },
+    {
+      id: 9,
+      question: "À quelle heure était la séance ?",
+      options: ["19h", "20h", "21h", "22h"],
+      correctAnswer: "21h",
+    },
+    {
+      id: 10,
+      question: "Comment était la salle ?",
+      options: ["Vide", "Calme", "Pleine", "Petite"],
+      correctAnswer: "Pleine",
+    },
   ],
   vocabulary: [
     { word: "Le réalisateur", meaning: "Yönetmen" },
@@ -985,9 +1067,9 @@ const unit347Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Moi, c'est Léa. J'adore la musique ! Depuis mon enfance, j'écoute beaucoup de genres différents : de la pop, de la musique classique et du jazz. Mais mon style préféré est le rock. Je joue du piano depuis dix ans et, l'année dernière, j'ai commencé à apprendre la guitare. Hier soir, je suis allée à un concert avec mon meilleur ami, Hugo. Nous écoutons le même groupe de rock depuis l'année 2022. Le concert a commencé à 20h00 dans une grande salle de ma ville. Le chanteur du groupe a une voix magnifique et le batteur joue très bien de la batterie ! Pendant le concert, nous avons chanté toutes nos chansons préférées. À la fin, le groupe a joué son nouvel album. C'était une soirée incroyable. Maintenant, j'ai envie de former un petit groupe de rock avec mes amis.",
+    text: "Moi, c'est Léa. J'adore la musique ! Depuis mon enfance, j'écoute beaucoup de genres différents : de la pop, de la musique classique et du jazz. Mais mon style préféré est le rock. Je joue du piano depuis dix ans et, l'année dernière, j'ai commencé à apprendre la guitare. Hier soir, je suis allée à un concert avec mon meilleur ami, Hugo. Nous écoutons le même groupe de rock depuis l'année 2022. Le concert a commencé à 20h00 dans une grande salle de ma ville. Le chanteur du groupe a une voix magnifique et le batteur joue très bien de la batterie ! Pendant le concert, nous avons chanté toutes nos chansons préférées. À la fin, le groupe a joué son nouvel album. Après le concert, nous avons acheté leur nouvel album. C'était une soirée incroyable. Maintenant, j'ai envie de former un petit groupe de rock avec mes amis.",
     translation:
-      "Ben Léa. Müziğe bayılıyorum! Çocukluğumdan beri birçok farklı tür dinliyorum: pop, klasik müzik ve caz. Ama en sevdiğim tarz rock. On yıldır piyano çalıyorum ve geçen yıl gitar öğrenmeye başladım. Dün akşam, en yakın arkadaşım Hugo ile bir konsere gittim. İkimiz de aynı rock grubunu 2022 yılından beri dinliyoruz. Konser saat 20:00'de şehrimdeki büyük bir salonda başladı. Grubun şarkıcısının harika bir sesi var ve baterist çok iyi bateri çalıyor! Konser boyunca favori şarkılarımızın hepsini söyledik. Sonunda, grup yeni albümünü çaldı. İnanılmaz bir akşamdı. Şimdi arkadaşlarımla küçük bir rock grubu kurmak istiyorum.",
+      "Ben Léa. Müziğe bayılıyorum! Çocukluğumdan beri birçok farklı tür dinliyorum: pop, klasik müzik ve caz. Ama en sevdiğim tarz rock. On yıldır piyano çalıyorum ve geçen yıl gitar öğrenmeye başladım. Dün akşam, en yakın arkadaşım Hugo ile bir konsere gittim. İkimiz de aynı rock grubunu 2022 yılından beri dinliyoruz. Konser saat 20:00'de şehrimdeki büyük bir salonda başladı. Grubun şarkıcısının harika bir sesi var ve baterist çok iyi bateri çalıyor! Konser boyunca favori şarkılarımızın hepsini söyledik. Sonunda, grup yeni albümünü çaldı. Konserden sonra yeni albümlerini satın aldık. İnanılmaz bir akşamdı. Şimdi arkadaşlarımla küçük bir rock grubu kurmak istiyorum.",
   },
   questions: [
     {
@@ -1038,6 +1120,18 @@ const unit347Reading: UnitReading = {
       options: ["Former un groupe de rock", "Acheter un piano", "Ne plus écouter de musique"],
       correctAnswer: "Former un groupe de rock",
     },
+    {
+      id: 9,
+      question: "Konser saat kaçta başladı?",
+      options: ["19:00", "20:00", "21:00", "22:00"],
+      correctAnswer: "20:00",
+    },
+    {
+      id: 10,
+      question: "Konserden sonra ne aldılar?",
+      options: ["Bilet", "Yeni albüm", "Müzik aleti", "Tişört"],
+      correctAnswer: "Yeni albüm",
+    },
   ],
   vocabulary: [
     { word: "Depuis l'enfance", meaning: "Çocukluğumdan beri" },
@@ -1054,9 +1148,9 @@ const unit348Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Lucas est très actif et il adore le sport. Il fait du sport presque tous les jours. Le week-end, il joue au football avec son équipe et il veut toujours gagner le match. En semaine, il préfère les activités individuelles. Le mercredi, il fait de la natation à la piscine. Le vendredi, il fait du vélo dans la forêt avec son père. Grâce à ça, il est en très bonne forme physique !",
+    text: "Lucas est très actif et il adore le sport. Il fait du sport presque tous les jours. Le week-end, il joue au football avec son équipe et il veut toujours gagner le match. En semaine, il préfère les activités individuelles. Le mardi, il fait de la musculation au gymnase. Le mercredi, il fait de la natation à la piscine. Le jeudi, il fait du jogging au parc. Le vendredi, il fait du vélo dans la forêt avec son père. Il s'entraîne aussi pour un petit match de basket avec ses amis, mais il n'aime pas le tennis. Grâce à ça, il est en très bonne forme physique !",
     translation:
-      "Lucas çok aktiftir ve sporu çok sever. Neredeyse her gün spor yapar. Hafta sonları takımıyla futbol oynar ve her zaman maçı kazanmak ister. Hafta içi bireysel aktiviteleri tercih eder. Çarşamba günleri havuzda yüzüyor (yüzme yapıyor). Cuma günleri babasıyla ormanda bisiklete biniyor (bisiklet yapıyor). Bu sayede fiziksel olarak çok iyi formda!",
+      "Lucas çok aktiftir ve sporu çok sever. Neredeyse her gün spor yapar. Hafta sonları takımıyla futbol oynar ve her zaman maçı kazanmak ister. Hafta içi bireysel aktiviteleri tercih eder. Salı günleri spor salonunda vücut geliştirme yapar. Çarşamba günleri havuzda yüzüyor (yüzme yapıyor). Perşembe günleri parkta koşu yapar. Cuma günleri babasıyla ormanda bisiklete biniyor (bisiklet yapıyor). Ayrıca arkadaşlarıyla küçük bir basket maçı için antrenman yapar ama tenisi sevmez. Bu sayede fiziksel olarak çok iyi formda!",
   },
   questions: [
     {
@@ -1083,6 +1177,47 @@ const unit348Reading: UnitReading = {
       options: ["Arkadaşıyla", "Annesiyle", "Kardeşiyle", "Babasıyla"],
       correctAnswer: "Babasıyla",
     },
+    {
+      id: 5,
+      question: "Lucas hafta içi neyi tercih ediyor?",
+      options: [
+        "Takım sporlarını",
+        "Bireysel aktiviteleri",
+        "Hiç spor yapmıyor",
+        "Sadece tenis",
+      ],
+      correctAnswer: "Bireysel aktiviteleri",
+    },
+    {
+      id: 6,
+      question: "Salı günleri ne yapıyor?",
+      options: ["Yüzme", "Vücut geliştirme", "Tenis", "Basketbol"],
+      correctAnswer: "Vücut geliştirme",
+    },
+    {
+      id: 7,
+      question: "Perşembe günleri ne yapıyor?",
+      options: ["Koşu (jogging)", "Futbol", "Voleybol", "Kayak"],
+      correctAnswer: "Koşu (jogging)",
+    },
+    {
+      id: 8,
+      question: "Lucas tenis hakkında ne düşünüyor?",
+      options: ["Çok seviyor", "Sevmiyor", "Hiç denemedi", "Sadece izliyor"],
+      correctAnswer: "Sevmiyor",
+    },
+    {
+      id: 9,
+      question: "Lucas basket için ne yapıyor?",
+      options: ["Antrenman yapıyor", "Sadece izliyor", "Hiç bahsetmiyor", "Tenis oynuyor"],
+      correctAnswer: "Antrenman yapıyor",
+    },
+    {
+      id: 10,
+      question: "Bu aktiviteler sonucunda Lucas'ın durumu nasıl?",
+      options: ["Çok iyi formda", "Çok yorgun", "Hasta", "Kötü"],
+      correctAnswer: "Çok iyi formda",
+    },
   ],
   vocabulary: [
     { word: "Très actif", meaning: "Çok aktif" },
@@ -1093,27 +1228,6 @@ const unit348Reading: UnitReading = {
 
 const unit349Reading: UnitReading = {
   unitId: 349,
-  title: "Doğa",
-  language: "Fransızca",
-  level: "A2",
-  story: {
-    text: "Ce week-end, nous sommes allés faire une randonnée en montagne. Le sentier était magnifique. Nous avons vu un lac et une belle forêt. Nous y retournerons le mois prochain.",
-    translation:
-      "Bu hafta sonu dağda yürüyüşe gittik. Patika harikaydı. Bir göl ve güzel bir orman gördük. Gelecek ay oraya döneceğiz.",
-  },
-  questions: [
-    {
-      id: 1,
-      question: "Ne gördüler?",
-      options: ["Deniz", "Göl", "Nehir", "Şelale"],
-      correctAnswer: "Göl",
-    },
-  ],
-  vocabulary: [{ word: "La randonnée", meaning: "Yürüyüş" }],
-};
-
-const unit350Reading: UnitReading = {
-  unitId: 350,
   title: "Ormanda Piknik",
   language: "Fransızca",
   level: "A2",
@@ -1166,6 +1280,57 @@ const unit350Reading: UnitReading = {
     { word: "On y va", meaning: "Oraya gidiyoruz" },
     { word: "J'en ai préparé", meaning: "Ondan hazırladım" },
     { word: "Sous un arbre", meaning: "Bir ağacın altında" },
+  ],
+};
+
+const unit350Reading: UnitReading = {
+  unitId: 350,
+  title: "Arkadaşlarla Buluşma",
+  language: "Fransızca",
+  level: "A2",
+  story: {
+    text: "Ce week-end, Thomas veut voir son amie Julie. Il lui écrit : \"On va au cinéma ce soir ?\" Julie répond : \"Je suis libre, mais je préfère le restaurant.\" Ils décident de se retrouver devant le métro à 19 heures. Thomas apporte les billets, et Julie propose de boire un verre après le film. Finalement, ils sont d'accord et se voient à l'heure.",
+    translation:
+      "Bu hafta sonu Thomas arkadaşı Julie'yi görmek istiyor. Ona yazar: \"Bu akşam sinemaya gidelim mi?\" Julie cevap verir: \"Müsaitim ama restoranı tercih ederim.\" Saat 19.00'da metronun önünde buluşmaya karar verirler. Thomas biletleri getirir, Julie de filmden sonra bir şeyler içmeyi önerir. Sonunda anlaşırlar ve zamanında buluşurlar.",
+  },
+  questions: [
+    {
+      id: 1,
+      question: "Thomas kiminle buluşmak istiyor?",
+      options: ["Marie", "Julie", "Clara", "Sophie"],
+      correctAnswer: "Julie",
+    },
+    {
+      id: 2,
+      question: "Thomas ne öneriyor?",
+      options: ["Restoran", "Sinema", "Piknik", "Müze"],
+      correctAnswer: "Sinema",
+    },
+    {
+      id: 3,
+      question: "Julie neyi tercih ediyor?",
+      options: ["Restoran", "Kafe", "Park", "Kütüphane"],
+      correctAnswer: "Restoran",
+    },
+    {
+      id: 4,
+      question: "Nerede buluşuyorlar?",
+      options: ["Devant le métro", "Au cinéma", "Au parc", "Chez Julie"],
+      correctAnswer: "Devant le métro",
+    },
+    {
+      id: 5,
+      question: "Saat kaçta buluşuyorlar?",
+      options: ["18 heures", "19 heures", "20 heures", "21 heures"],
+      correctAnswer: "19 heures",
+    },
+  ],
+  vocabulary: [
+    { word: "Le rendez-vous", meaning: "Buluşma" },
+    { word: "Se retrouver", meaning: "Buluşmak" },
+    { word: "Être libre", meaning: "Müsait olmak" },
+    { word: "Devant", meaning: "Önünde" },
+    { word: "Les billets", meaning: "Biletler" },
   ],
 };
 
@@ -1728,19 +1893,49 @@ const unit360Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Félicitations! Vous avez terminé le niveau A2 de français. Vous pouvez maintenant parler de vos expériences passées, faire des projets, et vous débrouiller dans la vie quotidienne. Continuez à pratiquer et bonne chance pour le niveau B1!",
+    text: "Félicitations! Vous avez terminé le niveau A2 de français. Vous pouvez maintenant parler de vos expériences passées, faire des projets et vous débrouiller au quotidien. L'objectif est de pratiquer un peu chaque jour: réviser, écouter et parler. Votre prochain rendez-vous est le niveau B1. Bonne chance et à bientôt!",
     translation:
-      "Tebrikler! Fransızca A2 seviyesini tamamladınız. Artık geçmiş deneyimlerinizden bahsedebilir, plan yapabilir ve günlük hayatta idare edebilirsiniz. Pratik yapmaya devam edin ve B1 seviyesi için iyi şanslar!",
+      "Tebrikler! Fransızca A2 seviyesini tamamladınız. Artık geçmiş deneyimlerinizden bahsedebilir, plan yapabilir ve günlük hayatta idare edebilirsiniz. Amaç her gün biraz pratik yapmak: tekrar etmek, dinlemek ve konuşmak. Bir sonraki randevunuz B1 seviyesidir. İyi şanslar ve görüşmek üzere!",
   },
   questions: [
     {
       id: 1,
-      question: "Bir sonraki seviye ne?",
+      question: "Hangi seviyeyi tamamladılar?",
+      options: ["A1", "A2", "B1", "B2"],
+      correctAnswer: "A2",
+    },
+    {
+      id: 2,
+      question: "Şimdi ne yapabiliyorlar?",
+      options: ["Sadece selamlaşmak", "Günlük hayatta idare etmek", "Sadece yazmak", "Hiç konuşmamak"],
+      correctAnswer: "Günlük hayatta idare etmek",
+    },
+    {
+      id: 3,
+      question: "Metin neyi öneriyor?",
+      options: ["Hiç pratik yapmamak", "Her gün biraz pratik yapmak", "Sadece okumak", "Sadece yazmak"],
+      correctAnswer: "Her gün biraz pratik yapmak",
+    },
+    {
+      id: 4,
+      question: "Bir sonraki seviye nedir?",
       options: ["A1", "A2", "B1", "B2"],
       correctAnswer: "B1",
     },
+    {
+      id: 5,
+      question: "Metin sonunda ne diyor?",
+      options: ["Hoşça kal", "İyi şanslar ve görüşmek üzere", "Sadece teşekkürler", "Yarın görüşürüz"],
+      correctAnswer: "İyi şanslar ve görüşmek üzere",
+    },
   ],
-  vocabulary: [{ word: "Félicitations", meaning: "Tebrikler" }],
+  vocabulary: [
+    { word: "Réviser", meaning: "Tekrar etmek" },
+    { word: "Pratiquer", meaning: "Pratik yapmak" },
+    { word: "Au quotidien", meaning: "Günlük hayatta" },
+    { word: "Rendez-vous", meaning: "Randevu / Buluşma" },
+    { word: "Niveau", meaning: "Seviye" },
+  ],
 };
 
 // Export

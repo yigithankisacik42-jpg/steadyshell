@@ -1652,8 +1652,6 @@ const unit346Quiz2: Question[] = [
     { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est le film ___ plus long.", options: [{ id: "a", text: "le", correct: true }, { id: "b", text: "de", correct: false }] },
     { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Bu hayvan dünyanın en büyüğüdür", correctAnswer: "Cet animal est le plus grand du monde" },
     { id: 11, type: "SELECT", question: "Hangi cümle doğrudur?", options: [{ id: "a", text: "Marie est la plus belle.", correct: true }, { id: "b", text: "Marie est le plus belle.", correct: false }, { id: "c", text: "Marie est la très belle.", correct: false }, { id: "d", text: "Marie est la moins beau.", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Le chat est ___ plus petit que le chien.", options: [{ id: "a", text: "le", correct: false }, { id: "b", text: "[Boş bırakınız - Sadece karşılaştırmada 'plus' kullanılır]", correct: true }] }, // Trick question replaced
-    // Wait, replacing trick question to avoid confusion. Let's use a clear superlative.
     { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est le garçon ___ plus intelligent.", options: [{ id: "a", text: "le", correct: true }, { id: "b", text: "la", correct: false }] },
     { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "En sıcak yaz", correctAnswer: "L'été le plus chaud" },
     { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "La fille ___ moins timide.", options: [{ id: "a", text: "la", correct: true }, { id: "b", text: "le", correct: false }] },
@@ -1694,8 +1692,6 @@ const unit346Quiz4: Question[] = [
     { id: 1, type: "SELECT", question: "'Senaryo en az orijinal olanı' cümlesinin çevirisi nedir?", options: [{ id: "a", text: "Le scénario est très original.", correct: false }, { id: "b", text: "Le scénario est le plus original.", correct: false }, { id: "c", text: "Le scénario est le moins original.", correct: true }, { id: "d", text: "C'est un scénario original.", correct: false }] },
     { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est l'actrice la ___ célèbre.", options: [{ id: "a", text: "plus", correct: true }, { id: "b", text: "moins de", correct: false }] },
     { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "En sevdiğim film bir belgesel", correctAnswer: "Mon film préféré est un documentaire" },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est la ___ film de l'année. (Dikkat: Film eril!)", options: [{ id: "a", text: "meilleur", correct: false }, { id: "b", text: "Le meilleur", correct: true }] }, // Re-formatted as multiple choice
-    // Reformat question 4 properly
     { id: 4, type: "SELECT", question: "Boşluğa ne gelmelidir? 'C'est ___ film de l'année.'", options: [{ id: "a", text: "la meilleure", correct: false }, { id: "b", text: "le meilleur", correct: true }, { id: "c", text: "les meilleurs", correct: false }, { id: "d", text: "le plus bon", correct: false }] },
     { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "O en yetenekli yönetmen", correctAnswer: "Il est le réalisateur le plus talentueux" },
     { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une comédie amusante", options: [{ id: "a", text: "Eğlenceli bir komedi", correct: true }, { id: "b", text: "Korkunç bir film", correct: false }, { id: "c", text: "Uzun bir belgesel", correct: false }, { id: "d", text: "Harika bir senaryo", correct: false }] },
@@ -1910,52 +1906,8 @@ const unit348Quiz4: Question[] = [
 ];
 
 // UNIT 349: Zamirler (Y ve En)
+// Unit 349 Quiz 1: Doğa ve Piknik (Kelime Bilgisi)
 const unit349Quiz1: Question[] = [
-    // KOLAY (8 Soru) - Y
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Oraya gidiyorum", correctAnswer: "J'y vais" },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu vas à Paris? Oui, j'___ vais.", options: [{ id: "a", text: "y", correct: true }, { id: "b", text: "en", correct: false }] },
-    { id: 3, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ habite.", options: [{ id: "a", text: "y", correct: true }, { id: "b", text: "en", correct: false }] },
-    { id: 4, type: "SELECT", question: "'Y' zamiri neyi karşılar?", options: [{ id: "a", text: "Yer (à + yer)", correct: true }, { id: "b", text: "Miktar (de + miktar)", correct: false }, { id: "c", text: "Kişi", correct: false }, { id: "d", text: "Özne", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle pense à son examen? Oui, elle ___ pense.", options: [{ id: "a", text: "y", correct: true }, { id: "b", text: "en", correct: false }] },
-    { id: 6, type: "TRANSLATE", question: "Çevir:", hint: "Oraya gitme", correctAnswer: "N'y va pas" },
-    { id: 7, type: "SELECT", question: "'On y va!' ne demek?", options: [{ id: "a", text: "Hadi gidelim!", correct: true }, { id: "b", text: "Gitmiyoruz", correct: false }, { id: "c", text: "Geldik", correct: false }, { id: "d", text: "O gitti", correct: false }] },
-    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ sommes.", options: [{ id: "a", text: "y", correct: true }, { id: "b", text: "en", correct: false }] }
-];
-
-const unit349Quiz2: Question[] = [
-    // ORTA (7 Soru) - En
-    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu veux du pain? Oui, j'___ veux.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "y", correct: false }] },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Ondan korkuyor", correctAnswer: "Il en a peur" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "La montagne? J'___ reviens.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "y", correct: false }] },
-    { id: 12, type: "SELECT", question: "'En' zamiri neyi karşılar?", options: [{ id: "a", text: "Miktar (de...) / Yer (de...)", correct: true }, { id: "b", text: "Yer (à...)", correct: false }, { id: "c", text: "Kişi (à...)", correct: false }, { id: "d", text: "Özne", correct: false }] },
-    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Combien de pommes as-tu? J'___ ai trois.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "y", correct: false }] },
-    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Onun hakkında konuşuyoruz", correctAnswer: "Nous en parlons" },
-    { id: 15, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ mange beaucoup.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "y", correct: false }] }
-];
-
-const unit349Quiz3: Question[] = [
-    // ZOR (5 Soru) - Y vs En Ayrımı
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Oraya koy", correctAnswer: "Mets-le y (Mets-y-le)" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu viens de Paris? Oui, j'___ viens.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "y", correct: false }] },
-    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu vas à Paris? Oui, j'___ vais.", options: [{ id: "a", text: "y", correct: true }, { id: "b", text: "en", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Hiç yok", correctAnswer: "Il n'y en a pas" },
-    { id: 20, type: "SELECT", question: "Hangisi doğru?", options: [{ id: "a", text: "Il y en a trois", correct: true }, { id: "b", text: "Il en y a trois", correct: false }, { id: "c", text: "Il y a en trois", correct: false }, { id: "d", text: "y en a trois", correct: false }] }
-];
-
-const unit349Quiz4: Question[] = [
-    // KARIŞIK (8 Soru)
-    { id: 1, type: "SELECT", question: "'Vas-y!' ne demek?", options: [{ id: "a", text: "Git! / Başla!", correct: true }, { id: "b", text: "Dur!", correct: false }, { id: "c", text: "Gel!", correct: false }, { id: "d", text: "Bekle!", correct: false }] },
-    { id: 2, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai besoin de temps. J'___ ai besoin.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "y", correct: false }] },
-    { id: 3, type: "TRANSLATE", question: "Çevir:", hint: "İlgileniyorum (ona)", correctAnswer: "Je m'y intéresse" },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Du café? Il n'y ___ a plus.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "y", correct: false }] },
-    { id: 5, type: "TRANSLATE", question: "Çevir:", hint: "Orada mısın?", correctAnswer: "Es-tu là? / Y es-tu?" },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'en suis sûr", options: [{ id: "a", text: "Ondan eminim", correct: true }, { id: "b", text: "Oraya eminim", correct: false }, { id: "c", text: "Eminim", correct: false }, { id: "d", text: "Bilmiyorum", correct: false }] },
-    { id: 7, type: "SELECT", question: "Hangisi yer belirtir?", options: [{ id: "a", text: "Y", correct: true }, { id: "b", text: "En", correct: false }, { id: "c", text: "Le", correct: false }, { id: "d", text: "Lui", correct: false }] },
-    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne t'___ fais pas.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "y", correct: false }] }
-];
-
-// Unit 350 Quiz 1: Doğa ve Piknik (Kelime Bilgisi)
-const unit350Quiz1: Question[] = [
     // KOLAY (8 soru) - Temel Doğa Kelimeleri
     { id: 1, type: "SELECT", question: "'L'arbre' ne demek?", options: [{ id: "a", text: "Ağaç", correct: true }, { id: "b", text: "Çiçek", correct: false }, { id: "c", text: "Yaprak", correct: false }, { id: "d", text: "Çimen", correct: false }] },
     { id: 2, type: "SELECT", question: "'La forêt' ne demek?", options: [{ id: "a", text: "Deniz", correct: false }, { id: "b", text: "Ova", correct: false }, { id: "c", text: "Orman", correct: true }, { id: "d", text: "Göl", correct: false }] },
@@ -1983,8 +1935,8 @@ const unit350Quiz1: Question[] = [
     { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Doğada vakit geçirmeyi seviyorum.", correctAnswer: "J'aime passer du temps dans la nature." }
 ];
 
-// Unit 350 Quiz 2: 'Y' Zamiri (Oraya / Orada)
-const unit350Quiz2: Question[] = [
+// Unit 349 Quiz 2: 'Y' Zamiri (Oraya / Orada)
+const unit349Quiz2: Question[] = [
     // KOLAY (8 soru) - Kurallar ve Basit Çeviriler
     { id: 1, type: "SELECT", question: "'Y' zamiri cümlede genellikle neyin yerine geçer?", options: [{ id: "a", text: "Bir kişinin", correct: false }, { id: "b", text: "Bir yerin/konumun (à, dans vb. ile)", correct: true }, { id: "c", text: "Bir zamanın", correct: false }, { id: "d", text: "Bir nesnenin", correct: false }] },
     { id: 2, type: "SELECT", question: "'On y va' ne demek?", options: [{ id: "a", text: "Oraya gidiyoruz / gidelim", correct: true }, { id: "b", text: "Biz gidiyoruz", correct: false }, { id: "c", text: "Oradan geliyoruz", correct: false }, { id: "d", text: "Orayı görüyoruz", correct: false }] },
@@ -2012,8 +1964,8 @@ const unit350Quiz2: Question[] = [
     { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Orada piknik yapacağız.", correctAnswer: "Nous allons y faire un pique-nique." }
 ];
 
-// Unit 350 Quiz 3: 'EN' Zamiri (Ondan / Oradan)
-const unit350Quiz3: Question[] = [
+// Unit 349 Quiz 3: 'EN' Zamiri (Ondan / Oradan)
+const unit349Quiz3: Question[] = [
     // KOLAY (8 soru) - Kurallar ve Basit Çeviriler
     { id: 1, type: "SELECT", question: "'EN' zamiri genellikle hangi edatla (preposition) başlayan yapıların yerine geçer?", options: [{ id: "a", text: "À (yer/yön)", correct: false }, { id: "b", text: "De (miktar/ayrılma)", correct: true }, { id: "c", text: "Pour (için)", correct: false }, { id: "d", text: "Avec (ile)", correct: false }] },
     { id: 2, type: "SELECT", question: "'J'en veux' ne demek?", options: [{ id: "a", text: "Oraya gitmek istiyorum", correct: false }, { id: "b", text: "Seni istiyorum", correct: false }, { id: "c", text: "Ondan istiyorum", correct: true }, { id: "d", text: "Orada olmak istiyorum", correct: false }] },
@@ -2041,8 +1993,8 @@ const unit350Quiz3: Question[] = [
     { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Ondan yemelisin.", correctAnswer: "Tu dois en manger." }
 ];
 
-// Unit 350 Quiz 4: Genel Karışık (Doğa, Zamirler, Piknik)
-const unit350Quiz4: Question[] = [
+// Unit 349 Quiz 4: Genel Karışık (Doğa, Zamirler, Piknik)
+const unit349Quiz4: Question[] = [
     // KOLAY (8 soru) - Karışık İlgili Kavramlar
     { id: 1, type: "SELECT", question: "'Apporter' ne demek?", options: [{ id: "a", text: "Getirmek", correct: true }, { id: "b", text: "Götürmek", correct: false }, { id: "c", text: "Seyretmek", correct: false }, { id: "d", text: "Uyumak", correct: false }] },
     { id: 2, type: "SELECT", question: "'Boisson' ne demek?", options: [{ id: "a", text: "İçecek", correct: true }, { id: "b", text: "Yiyecek", correct: false }, { id: "c", text: "Tatlı", correct: false }, { id: "d", text: "Kitap", correct: false }] },
@@ -2068,6 +2020,122 @@ const unit350Quiz4: Question[] = [
     { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle aime la forêt, elle ___ va souvent.", options: [{ id: "a", text: "y", correct: true }, { id: "b", text: "la", correct: false }] },
     { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Kuşlar ağaçta şarkı söylüyor.", correctAnswer: "Les oiseaux chantent dans l'arbre." },
     { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Biz doğada dinleniyoruz.", correctAnswer: "Nous nous reposons dans la nature." }
+];
+
+// Unit 350 Quiz 1: Arkadaş Buluşması (Temel Kelimeler)
+const unit350Quiz1: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Le rendez-vous' ne demek?", options: [{ id: "a", text: "Buluşma", correct: true }, { id: "b", text: "Davetiye", correct: false }, { id: "c", text: "Masa", correct: false }, { id: "d", text: "Bilet", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Se retrouver' ne demek?", options: [{ id: "a", text: "Buluşmak", correct: true }, { id: "b", text: "Kaybolmak", correct: false }, { id: "c", text: "Aramak", correct: false }, { id: "d", text: "Beklemek", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Proposer' ne demek?", options: [{ id: "a", text: "Teklif etmek", correct: true }, { id: "b", text: "Reddetmek", correct: false }, { id: "c", text: "Ödemek", correct: false }, { id: "d", text: "Ayrılmak", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Refuser' ne demek?", options: [{ id: "a", text: "Reddetmek", correct: true }, { id: "b", text: "Kabul etmek", correct: false }, { id: "c", text: "Gecikmek", correct: false }, { id: "d", text: "Önermek", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Libre' ne demek?", options: [{ id: "a", text: "Müsait / Boş", correct: true }, { id: "b", text: "Meşgul", correct: false }, { id: "c", text: "Yorgun", correct: false }, { id: "d", text: "Aç", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Occupé' ne demek?", options: [{ id: "a", text: "Meşgul", correct: true }, { id: "b", text: "Boş", correct: false }, { id: "c", text: "Aç", correct: false }, { id: "d", text: "Hazır", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le week-end' ne demek?", options: [{ id: "a", text: "Hafta sonu", correct: true }, { id: "b", text: "Hafta içi", correct: false }, { id: "c", text: "Ay sonu", correct: false }, { id: "d", text: "Yarın", correct: false }] },
+    { id: 8, type: "LISTENING", question: "Duyduğunu seç:", audioText: "On va au cinéma", options: [{ id: "a", text: "Sinemaya gidelim mi?", correct: true }, { id: "b", text: "Sinemadan geliyorum", correct: false }, { id: "c", text: "Sinemaya gidiyorum", correct: false }, { id: "d", text: "Sinema nerede?", correct: false }] },
+
+    // ORTA (7 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "On se ___ où?", options: [{ id: "a", text: "retrouve", correct: true }, { id: "b", text: "retrouves", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Tu es ___ ce soir?", options: [{ id: "a", text: "libre", correct: true }, { id: "b", text: "occupé", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis ___ aujourd'hui.", options: [{ id: "a", text: "occupé", correct: true }, { id: "b", text: "libre", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "On va ___ un verre?", options: [{ id: "a", text: "boire", correct: true }, { id: "b", text: "manger", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Bu akşam görüşüyoruz.", correctAnswer: "On se voit ce soir." },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Yarın buluşuyoruz.", correctAnswer: "On se retrouve demain." },
+    { id: 15, type: "SELECT", question: "Hangisi 'Saat kaçta görüşüyoruz?' anlamına gelir?", options: [{ id: "a", text: "On se voit à quelle heure ?", correct: true }, { id: "b", text: "On se retrouve où ?", correct: false }, { id: "c", text: "On va où ?", correct: false }, { id: "d", text: "On se voit demain ?", correct: false }] },
+
+    // ZOR (5 soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Metronun önünde buluşuyoruz.", correctAnswer: "On se retrouve devant le métro." },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Saat 19 civarı.", correctAnswer: "Vers 19 heures." },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Restorana gidelim mi?", correctAnswer: "On va au restaurant?" },
+    { id: 19, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "Je suis libre ce soir.", correct: true }, { id: "b", text: "Je libre suis ce soir.", correct: false }, { id: "c", text: "Je suis ce soir libre?", correct: false }, { id: "d", text: "Libre je suis ce soir.", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Planımız var.", correctAnswer: "On a un plan." }
+];
+
+// Unit 350 Quiz 2: Teklif ve Cevaplar
+const unit350Quiz2: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Ça te dit?' ne demek?", options: [{ id: "a", text: "Sana uyar mı?", correct: true }, { id: "b", text: "Nereye gidiyoruz?", correct: false }, { id: "c", text: "Neden olmasın?", correct: false }, { id: "d", text: "Bu ne?", correct: false }] },
+    { id: 2, type: "SELECT", question: "'D'accord, ça marche.' ne demek?", options: [{ id: "a", text: "Tamam, olur.", correct: true }, { id: "b", text: "Hayır, olmaz.", correct: false }, { id: "c", text: "Bilmiyorum.", correct: false }, { id: "d", text: "Nerede?", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Avec plaisir!' ne demek?", options: [{ id: "a", text: "Memnuniyetle!", correct: true }, { id: "b", text: "Belki başka zaman.", correct: false }, { id: "c", text: "İşim var.", correct: false }, { id: "d", text: "Şimdi olmaz.", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Bonne idée!' ne demek?", options: [{ id: "a", text: "İyi fikir!", correct: true }, { id: "b", text: "Kötü fikir!", correct: false }, { id: "c", text: "Hiçbir fikir yok.", correct: false }, { id: "d", text: "Bilmiyorum.", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Bof, je ne sais pas.' ne demek?", options: [{ id: "a", text: "Pff, bilmiyorum.", correct: true }, { id: "b", text: "Harika!", correct: false }, { id: "c", text: "Tamamdır.", correct: false }, { id: "d", text: "Hemen gel.", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Allons-y", options: [{ id: "a", text: "Hadi gidelim!", correct: true }, { id: "b", text: "Geri dönelim.", correct: false }, { id: "c", text: "Bekleyelim.", correct: false }, { id: "d", text: "Gitme.", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Je ne peux pas.' ne demek?", options: [{ id: "a", text: "Yapamam.", correct: true }, { id: "b", text: "Yapabilirim.", correct: false }, { id: "c", text: "Yapmıyorum.", correct: false }, { id: "d", text: "Yapmak isterim.", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Je suis occupé.' ne demek?", options: [{ id: "a", text: "Meşgulüm.", correct: true }, { id: "b", text: "Boşum.", correct: false }, { id: "c", text: "Mutluyum.", correct: false }, { id: "d", text: "Üzgünüm.", correct: false }] },
+
+    // ORTA (7 soru)
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Neden olmasın?", correctAnswer: "Pourquoi pas?" },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Yapamam, işim var.", correctAnswer: "Je ne peux pas, j'ai du travail." },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Désolé, je suis ___.", options: [{ id: "a", text: "occupé", correct: true }, { id: "b", text: "libre", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Peut-être une autre ___.", options: [{ id: "a", text: "fois", correct: true }, { id: "b", text: "heure", correct: false }] },
+    { id: 13, type: "SELECT", question: "Hangi cevap kabul cümlesidir?", options: [{ id: "a", text: "D'accord, ça marche.", correct: true }, { id: "b", text: "Je ne peux pas.", correct: false }, { id: "c", text: "Bof, je ne sais pas.", correct: false }, { id: "d", text: "Je suis occupé.", correct: false }] },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Harika!", correctAnswer: "Génial!" },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Pek aç değilim.", correctAnswer: "Je n'ai pas très faim." },
+
+    // ZOR (5 soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Sinemaya gitmek ister misin?", correctAnswer: "Tu as envie d'aller au cinéma?" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Pizza yiyelim, sana uyar mı?", correctAnswer: "On mange une pizza, ça te dit?" },
+    { id: 18, type: "SELECT", question: "Nazik bir ret hangisi?", options: [{ id: "a", text: "Peut-être une autre fois.", correct: true }, { id: "b", text: "Allons-y!", correct: false }, { id: "c", text: "Génial!", correct: false }, { id: "d", text: "D'accord.", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "İyi fikir, hadi gidelim!", correctAnswer: "Bonne idée, allons-y!" },
+    { id: 20, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ pas envie.", options: [{ id: "a", text: "n'ai", correct: true }, { id: "b", text: "ne suis", correct: false }] }
+];
+
+// Unit 350 Quiz 3: Yer ve Zaman
+const unit350Quiz3: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Devant' ne demek?", options: [{ id: "a", text: "Önünde", correct: true }, { id: "b", text: "Arkasında", correct: false }, { id: "c", text: "İçinde", correct: false }, { id: "d", text: "Üstünde", correct: false }] },
+    { id: 2, type: "SELECT", question: "'À quelle heure?' ne demek?", options: [{ id: "a", text: "Saat kaçta?", correct: true }, { id: "b", text: "Nerede?", correct: false }, { id: "c", text: "Kimle?", correct: false }, { id: "d", text: "Neden?", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Ce soir' ne demek?", options: [{ id: "a", text: "Bu akşam", correct: true }, { id: "b", text: "Bu sabah", correct: false }, { id: "c", text: "Bugün", correct: false }, { id: "d", text: "Yarın", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Demain' ne demek?", options: [{ id: "a", text: "Yarın", correct: true }, { id: "b", text: "Bugün", correct: false }, { id: "c", text: "Dün", correct: false }, { id: "d", text: "Bu akşam", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Le métro' ne demek?", options: [{ id: "a", text: "Metro", correct: true }, { id: "b", text: "Otobüs", correct: false }, { id: "c", text: "Tren", correct: false }, { id: "d", text: "Bilet", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Devant le cinéma", options: [{ id: "a", text: "Sinemanın önünde", correct: true }, { id: "b", text: "Sinemanın içinde", correct: false }, { id: "c", text: "Sinemanın arkasında", correct: false }, { id: "d", text: "Sinemaya gidiyoruz", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "On se retrouve ___ le métro.", options: [{ id: "a", text: "devant", correct: true }, { id: "b", text: "derrière", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "On se voit ___ 19 heures.", options: [{ id: "a", text: "à", correct: true }, { id: "b", text: "de", correct: false }] },
+
+    // ORTA (7 soru)
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Nerede buluşuyoruz?", correctAnswer: "On se retrouve où?" },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Sinemanın önünde.", correctAnswer: "Devant le cinéma." },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Bu hafta sonu.", correctAnswer: "Ce week-end." },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "On se voit à quelle ___ ?", options: [{ id: "a", text: "heure", correct: true }, { id: "b", text: "place", correct: false }] },
+    { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "On se retrouve ___ ?", options: [{ id: "a", text: "où", correct: true }, { id: "b", text: "quand", correct: false }] },
+    { id: 14, type: "SELECT", question: "Hangi ifade zaman sorar?", options: [{ id: "a", text: "À quelle heure?", correct: true }, { id: "b", text: "On se retrouve où?", correct: false }, { id: "c", text: "Devant le métro.", correct: false }, { id: "d", text: "Chez moi.", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Saat 20 civarı.", correctAnswer: "Vers 20 heures." },
+
+    // ZOR (5 soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bu akşam metronun önünde buluşalım.", correctAnswer: "On se retrouve devant le métro ce soir." },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Yarın görüşemem.", correctAnswer: "Je ne peux pas demain." },
+    { id: 18, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "On se voit ce soir.", correct: true }, { id: "b", text: "On se voit où ce soir?", correct: false }, { id: "c", text: "On se soir voit.", correct: false }, { id: "d", text: "On ce soir voit.", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Benim evimde.", correctAnswer: "Chez moi." },
+    { id: 20, type: "FILL_BLANK", question: "Doldur:", sentence: "On se retrouve ___ moi.", options: [{ id: "a", text: "chez", correct: true }, { id: "b", text: "devant", correct: false }] }
+];
+
+// Unit 350 Quiz 4: Genel Karışık
+const unit350Quiz4: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Le restaurant' ne demek?", options: [{ id: "a", text: "Restoran", correct: true }, { id: "b", text: "Sinema", correct: false }, { id: "c", text: "Park", correct: false }, { id: "d", text: "Müze", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Un verre' ne demek?", options: [{ id: "a", text: "Bir şeyler içmek", correct: true }, { id: "b", text: "Bir masa", correct: false }, { id: "c", text: "Bir bilet", correct: false }, { id: "d", text: "Bir menü", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Le rendez-vous' ne demek?", options: [{ id: "a", text: "Buluşma", correct: true }, { id: "b", text: "Alışveriş", correct: false }, { id: "c", text: "Tatil", correct: false }, { id: "d", text: "Sürpriz", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "On ___ au cinéma?", options: [{ id: "a", text: "va", correct: true }, { id: "b", text: "vas", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis ___ ce soir.", options: [{ id: "a", text: "libre", correct: true }, { id: "b", text: "occupé", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "On se retrouve demain", options: [{ id: "a", text: "Yarın buluşuyoruz.", correct: true }, { id: "b", text: "Bu akşam buluşuyoruz.", correct: false }, { id: "c", text: "Orada mıyız?", correct: false }, { id: "d", text: "Hemen gel.", correct: false }] },
+    { id: 7, type: "SELECT", question: "Hangisi tekliftir?", options: [{ id: "a", text: "On va au cinéma?", correct: true }, { id: "b", text: "Je suis occupé.", correct: false }, { id: "c", text: "À quelle heure?", correct: false }, { id: "d", text: "Chez moi.", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Ça marche' ne demek?", options: [{ id: "a", text: "Olur", correct: true }, { id: "b", text: "Olmaz", correct: false }, { id: "c", text: "Yarın", correct: false }, { id: "d", text: "Belki", correct: false }] },
+
+    // ORTA (7 soru)
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Metronun önünde buluşuyoruz.", correctAnswer: "On se retrouve devant le métro." },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Meşgulüm.", correctAnswer: "Je suis occupé." },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ occupé.", options: [{ id: "a", text: "suis", correct: true }, { id: "b", text: "es", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "On se voit ___ 20 heures.", options: [{ id: "a", text: "vers", correct: true }, { id: "b", text: "sur", correct: false }] },
+    { id: 13, type: "SELECT", question: "Doğru cevap hangisi?", options: [{ id: "a", text: "Oui, je suis libre.", correct: true }, { id: "b", text: "Oui, je suis occupé.", correct: false }, { id: "c", text: "Oui, je suis demain.", correct: false }, { id: "d", text: "Oui, je suis métro.", correct: false }] },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Bir planımız var.", correctAnswer: "On a un plan." },
+    { id: 15, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ça te dit", options: [{ id: "a", text: "Sana uyar mı?", correct: true }, { id: "b", text: "Sana söylüyorum", correct: false }, { id: "c", text: "Neden olmasın?", correct: false }, { id: "d", text: "Bu akşam", correct: false }] },
+
+    // ZOR (5 soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bu akşam sinemaya gidelim mi?", correctAnswer: "On va au cinéma ce soir?" },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Belki başka zaman.", correctAnswer: "Peut-être une autre fois." },
+    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "___ se retrouve où?", options: [{ id: "a", text: "On", correct: true }, { id: "b", text: "Je", correct: false }] },
+    { id: 19, type: "SELECT", question: "Hangi cümle reddetme?", options: [{ id: "a", text: "Je ne peux pas, j'ai du travail.", correct: true }, { id: "b", text: "Génial!", correct: false }, { id: "c", text: "D'accord, ça marche.", correct: false }, { id: "d", text: "Allons-y!", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Saat kaçta görüşüyoruz?", correctAnswer: "On se voit à quelle heure?" }
 ];
 
 // Unit 351 Quiz 1: Temel Telefon Kelimeleri
@@ -3044,8 +3112,115 @@ const unit359Quiz4: Question[] = [
 ];
 
 const unit360Quiz1: Question[] = [
-    { id: 1, type: "TRANSLATE", question: "Çevir:", hint: "Tebrikler", correctAnswer: "Félicitations" },
-    { id: 2, type: "TRANSLATE", question: "Çevir:", hint: "Devam edin", correctAnswer: "Continuez" }
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'L'aéroport' ne demek?", options: [{ id: "a", text: "Havaalanı", correct: true }, { id: "b", text: "Otel", correct: false }, { id: "c", text: "Restoran", correct: false }, { id: "d", text: "Gara", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le billet' ne demek?", options: [{ id: "a", text: "Bilet", correct: true }, { id: "b", text: "Bavul", correct: false }, { id: "c", text: "Pasaport", correct: false }, { id: "d", text: "Taksi", correct: false }] },
+    { id: 3, type: "SELECT", question: "'La valise' ne demek?", options: [{ id: "a", text: "Valiz", correct: true }, { id: "b", text: "Cüzdan", correct: false }, { id: "c", text: "Bilet", correct: false }, { id: "d", text: "Sırt çantası", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le train' ne demek?", options: [{ id: "a", text: "Tren", correct: true }, { id: "b", text: "Otobüs", correct: false }, { id: "c", text: "Uçak", correct: false }, { id: "d", text: "Vapur", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Réserver' ne demek?", options: [{ id: "a", text: "Rezervasyon yapmak", correct: true }, { id: "b", text: "İptal etmek", correct: false }, { id: "c", text: "Ödemek", correct: false }, { id: "d", text: "İstemek", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je voudrais réserver", options: [{ id: "a", text: "Rezervasyon yapmak istiyorum", correct: true }, { id: "b", text: "Sormak istiyorum", correct: false }, { id: "c", text: "Aramak istiyorum", correct: false }, { id: "d", text: "Beklemek istiyorum", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le voyage' ne demek?", options: [{ id: "a", text: "Yolculuk", correct: true }, { id: "b", text: "Buluşma", correct: false }, { id: "c", text: "Yemek", correct: false }, { id: "d", text: "Ödev", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Le passeport' ne demek?", options: [{ id: "a", text: "Pasaport", correct: true }, { id: "b", text: "Bilet", correct: false }, { id: "c", text: "Kimlik", correct: false }, { id: "d", text: "Para", correct: false }] },
+
+    // ORTA (7 soru)
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ partir demain.", options: [{ id: "a", text: "vais", correct: true }, { id: "b", text: "va", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Où est la ___ ?", options: [{ id: "a", text: "gare", correct: true }, { id: "b", text: "garer", correct: false }] },
+    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Uçak gecikti.", correctAnswer: "L'avion a du retard." },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "Tren saat kaçta?", correctAnswer: "Le train est à quelle heure?" },
+    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Où est la sortie?", options: [{ id: "a", text: "Çıkış nerede?", correct: true }, { id: "b", text: "Giriş nerede?", correct: false }, { id: "c", text: "Bilet nerede?", correct: false }, { id: "d", text: "Otel nerede?", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Je cherche mon ___.", options: [{ id: "a", text: "billet", correct: true }, { id: "b", text: "bille", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Bir bilet alıyorum.", correctAnswer: "J'achète un billet." },
+
+    // ZOR (5 soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Bagajımı kaybettim.", correctAnswer: "J'ai perdu ma valise." },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Pasaport kontrolü nerede?", correctAnswer: "Où est le contrôle des passeports?" },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Gelecek ay tatile gideceğim.", correctAnswer: "Le mois prochain, je vais partir en vacances." },
+    { id: 19, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "Je vais à la gare.", correct: true }, { id: "b", text: "Je vais la gare.", correct: false }, { id: "c", text: "Je gare à la.", correct: false }, { id: "d", text: "Je vais gare.", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yolculuk uzundu.", correctAnswer: "Le voyage était long." }
+];
+
+const unit360Quiz2: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Le menu' ne demek?", options: [{ id: "a", text: "Menü", correct: true }, { id: "b", text: "Hesap", correct: false }, { id: "c", text: "Masa", correct: false }, { id: "d", text: "Bilet", correct: false }] },
+    { id: 2, type: "SELECT", question: "'L'addition' ne demek?", options: [{ id: "a", text: "Hesap", correct: true }, { id: "b", text: "Kasa", correct: false }, { id: "c", text: "Yemek", correct: false }, { id: "d", text: "Bilet", correct: false }] },
+    { id: 3, type: "SELECT", question: "'La table' ne demek?", options: [{ id: "a", text: "Masa", correct: true }, { id: "b", text: "Sandalyeler", correct: false }, { id: "c", text: "Kapı", correct: false }, { id: "d", text: "Menü", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le serveur' ne demek?", options: [{ id: "a", text: "Garson", correct: true }, { id: "b", text: "Aşçı", correct: false }, { id: "c", text: "Müşteri", correct: false }, { id: "d", text: "Kasiyer", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Commander' ne demek?", options: [{ id: "a", text: "Sipariş vermek", correct: true }, { id: "b", text: "Ödemek", correct: false }, { id: "c", text: "Beklemek", correct: false }, { id: "d", text: "Gitmek", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'addition, s'il vous plaît", options: [{ id: "a", text: "Hesap lütfen", correct: true }, { id: "b", text: "Menü lütfen", correct: false }, { id: "c", text: "Su lütfen", correct: false }, { id: "d", text: "Fatura lütfen", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le prix' ne demek?", options: [{ id: "a", text: "Fiyat", correct: true }, { id: "b", text: "İndirim", correct: false }, { id: "c", text: "Bilet", correct: false }, { id: "d", text: "Masa", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Cher' ne demek?", options: [{ id: "a", text: "Pahalı", correct: true }, { id: "b", text: "Ucuz", correct: false }, { id: "c", text: "Lezzetli", correct: false }, { id: "d", text: "Hızlı", correct: false }] },
+
+    // ORTA (7 soru)
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Menü lütfen.", correctAnswer: "Le menu, s'il vous plaît." },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Günün yemeği nedir?", correctAnswer: "Quel est le plat du jour?" },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ une salade.", options: [{ id: "a", text: "prends", correct: true }, { id: "b", text: "prend", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est trop ___.", options: [{ id: "a", text: "cher", correct: true }, { id: "b", text: "chère", correct: false }] },
+    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je voudrais payer par carte", options: [{ id: "a", text: "Kartla ödemek istiyorum", correct: true }, { id: "b", text: "Nakit ödemek istiyorum", correct: false }, { id: "c", text: "Ödeme yapmak istemiyorum", correct: false }, { id: "d", text: "Kartım yok", correct: false }] },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Bu çok lezzetli.", correctAnswer: "C'est délicieux." },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "İndirim var mı?", correctAnswer: "Est-ce qu'il y a une réduction?" },
+
+    // ZOR (5 soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Hesabı bölüşelim.", correctAnswer: "Partageons l'addition." },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Bunu ben ısmarlıyorum.", correctAnswer: "C'est moi qui invite." },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Servis çok yavaş.", correctAnswer: "Le service est très lent." },
+    { id: 19, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "Je voudrais commander.", correct: true }, { id: "b", text: "Je voudrais commande.", correct: false }, { id: "c", text: "Je voudrai commander.", correct: false }, { id: "d", text: "Je voulais commande.", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Fiyatlar çok yüksek.", correctAnswer: "Les prix sont très élevés." }
+];
+
+const unit360Quiz3: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Appeler' ne demek?", options: [{ id: "a", text: "Aramak", correct: true }, { id: "b", text: "Beklemek", correct: false }, { id: "c", text: "Ödemek", correct: false }, { id: "d", text: "Gitmek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Le téléphone' ne demek?", options: [{ id: "a", text: "Telefon", correct: true }, { id: "b", text: "Televizyon", correct: false }, { id: "c", text: "Bilgisayar", correct: false }, { id: "d", text: "Kamera", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Inviter' ne demek?", options: [{ id: "a", text: "Davet etmek", correct: true }, { id: "b", text: "Reddetmek", correct: false }, { id: "c", text: "Aramak", correct: false }, { id: "d", text: "Beklemek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Désolé' ne demek?", options: [{ id: "a", text: "Üzgünüm", correct: true }, { id: "b", text: "Mutluyum", correct: false }, { id: "c", text: "Hazırım", correct: false }, { id: "d", text: "Boşum", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Malade' ne demek?", options: [{ id: "a", text: "Hasta", correct: true }, { id: "b", text: "Yorgun", correct: false }, { id: "c", text: "Aç", correct: false }, { id: "d", text: "Kızgın", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis occupé", options: [{ id: "a", text: "Meşgulüm", correct: true }, { id: "b", text: "Müsaitim", correct: false }, { id: "c", text: "Yorgunum", correct: false }, { id: "d", text: "Açım", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le docteur' ne demek?", options: [{ id: "a", text: "Doktor", correct: true }, { id: "b", text: "Öğretmen", correct: false }, { id: "c", text: "Garson", correct: false }, { id: "d", text: "Sürücü", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Rendez-vous' ne demek?", options: [{ id: "a", text: "Buluşma / Randevu", correct: true }, { id: "b", text: "Bilet", correct: false }, { id: "c", text: "Yol", correct: false }, { id: "d", text: "Kural", correct: false }] },
+
+    // ORTA (7 soru)
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Seni arıyorum.", correctAnswer: "Je t'appelle." },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Müsait değilim.", correctAnswer: "Je suis occupé." },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ malade.", options: [{ id: "a", text: "suis", correct: true }, { id: "b", text: "es", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "On se retrouve ___ le métro.", options: [{ id: "a", text: "devant", correct: true }, { id: "b", text: "dans", correct: false }] },
+    { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Kendimi iyi hissetmiyorum.", correctAnswer: "Je ne me sens pas bien." },
+    { id: 14, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Allô?", options: [{ id: "a", text: "Alo?", correct: true }, { id: "b", text: "Teşekkürler", correct: false }, { id: "c", text: "Görüşürüz", correct: false }, { id: "d", text: "Günaydın", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Sana uyar mı?", correctAnswer: "Ça te dit?" },
+
+    // ZOR (5 soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Doktordan randevu almak istiyorum.", correctAnswer: "Je voudrais prendre rendez-vous chez le médecin." },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Bu akşam müsait misin?", correctAnswer: "Tu es libre ce soir?" },
+    { id: 18, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "Je dois appeler le docteur.", correct: true }, { id: "b", text: "Je dois appeler le docteure.", correct: false }, { id: "c", text: "Je dois appelle le docteur.", correct: false }, { id: "d", text: "Je dois appel le docteur.", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Ben özür dilerim.", correctAnswer: "Je suis désolé." },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Yarın konuşalım.", correctAnswer: "On se parle demain." }
+];
+
+const unit360Quiz4: Question[] = [
+    // KOLAY (8 soru)
+    { id: 1, type: "SELECT", question: "'Hier' ne demek?", options: [{ id: "a", text: "Dün", correct: true }, { id: "b", text: "Yarın", correct: false }, { id: "c", text: "Bugün", correct: false }, { id: "d", text: "Bu akşam", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Demain' ne demek?", options: [{ id: "a", text: "Yarın", correct: true }, { id: "b", text: "Dün", correct: false }, { id: "c", text: "Bugün", correct: false }, { id: "d", text: "Şimdi", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Toujours' ne demek?", options: [{ id: "a", text: "Her zaman", correct: true }, { id: "b", text: "Asla", correct: false }, { id: "c", text: "Bazen", correct: false }, { id: "d", text: "Nadiren", correct: false }] },
+    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ au cinéma hier.", options: [{ id: "a", text: "suis allé", correct: true }, { id: "b", text: "vais", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ manger.", options: [{ id: "a", text: "allons", correct: true }, { id: "b", text: "va", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Ne ... pas' neyi gösterir?", options: [{ id: "a", text: "Olumsuzluk", correct: true }, { id: "b", text: "Soru", correct: false }, { id: "c", text: "Emir", correct: false }, { id: "d", text: "Şart", correct: false }] },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "On y va", options: [{ id: "a", text: "Hadi gidelim", correct: true }, { id: "b", text: "Geri dönelim", correct: false }, { id: "c", text: "Oraya gel", correct: false }, { id: "d", text: "Bekleyelim", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Il n'y en a pas' ne demek?", options: [{ id: "a", text: "Hiç yok", correct: true }, { id: "b", text: "Var", correct: false }, { id: "c", text: "Çok var", correct: false }, { id: "d", text: "Biraz var", correct: false }] },
+
+    // ORTA (7 soru)
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Dün hastaydım.", correctAnswer: "J'étais malade hier." },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Yarın geliyorum.", correctAnswer: "Je viens demain." },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ne ___ pas.", options: [{ id: "a", text: "comprends", correct: true }, { id: "b", text: "comprend", correct: false }] },
+    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle ___ une lettre.", options: [{ id: "a", text: "a envoyé", correct: true }, { id: "b", text: "envoyer", correct: false }] },
+    { id: 13, type: "SELECT", question: "Doğru soru hangisi?", options: [{ id: "a", text: "Où est la gare?", correct: true }, { id: "b", text: "Où la gare est?", correct: false }, { id: "c", text: "Où est la est gare?", correct: false }, { id: "d", text: "Où gare est la?", correct: false }] },
+    { id: 14, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je voudrais commander", options: [{ id: "a", text: "Sipariş vermek istiyorum", correct: true }, { id: "b", text: "Sipariş veriyorum", correct: false }, { id: "c", text: "Siparişi bekliyorum", correct: false }, { id: "d", text: "Siparişi iptal ediyorum", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hadi başlayalım.", correctAnswer: "Allons-y." },
+
+    // ZOR (5 soru)
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Oraya gitmek istiyorum.", correctAnswer: "Je veux y aller." },
+    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Ondan biraz almak istiyorum.", correctAnswer: "Je veux en prendre un peu." },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Bunu dün yaptık.", correctAnswer: "Nous avons fait ça hier." },
+    { id: 19, type: "SELECT", question: "Doğru cümle hangisi?", options: [{ id: "a", text: "Je ne vais pas venir.", correct: true }, { id: "b", text: "Je vais ne pas venir.", correct: false }, { id: "c", text: "Je pas vais venir.", correct: false }, { id: "d", text: "Je venir pas vais.", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Lütfen tekrar et.", correctAnswer: "Répète, s'il te plaît." }
 ];
 
 // Quiz Map
@@ -3079,7 +3254,7 @@ export const frenchA2Quizzes: { [key: string]: Question[] } = {
     "357-1": unit357Quiz1, "357-2": unit357Quiz2, "357-3": unit357Quiz3, "357-4": unit357Quiz4,
     "358-1": unit358Quiz1, "358-2": unit358Quiz2, "358-3": unit358Quiz3, "358-4": unit358Quiz4,
     "359-1": unit359Quiz1, "359-2": unit359Quiz2, "359-3": unit359Quiz3, "359-4": unit359Quiz4,
-    "360-1": unit360Quiz1
+    "360-1": unit360Quiz1, "360-2": unit360Quiz2, "360-3": unit360Quiz3, "360-4": unit360Quiz4
 };
 
 export function getFrenchA2Quiz(unitId: number, quizNumber: number): Question[] {

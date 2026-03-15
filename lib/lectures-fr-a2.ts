@@ -6,7 +6,7 @@ import { UnitLecture, LectureSlide } from './lectures';
 
 // ===== ÜNİTE 331: GEÇMİŞ TATİLLER =====
 const unit331Lecture: UnitLecture = {
-    unitId: 331, title: "Passé Composé - Geçmiş Zaman", language: "Fransızca", level: "A2",
+    unitId: 331, title: "Geçmiş Tatiller", language: "Fransızca", level: "A2",
     slides: [
         { id: 1, type: "intro", title: "Geçmiş Zamanı Öğreniyoruz! ⏰", content: "A2 seviyesine hoş geldiniz! Bu derste Passé Composé ile geçmişte tamamlanmış eylemleri anlatmayı öğreneceğiz.", tip: "Passé Composé = AVOIR/ÊTRE + Geçmiş Ortaç" },
         { id: 2, type: "vocabulary", title: "AVOIR ile Çekim", content: "Çoğu fiil AVOIR ile çekilir:\n\n• J'ai mangé = Yedim\n• Tu as visité = Ziyaret ettin\n• Il a travaillé = Çalıştı\n• J'ai passé de bonnes vacances\n• Nous avons visité Paris" },
@@ -21,7 +21,7 @@ const unit331Lecture: UnitLecture = {
 };
 
 const unit332Lecture: UnitLecture = {
-    unitId: 332, title: "Futur Proche - Yakın Gelecek", language: "Fransızca", level: "A2",
+    unitId: 332, title: "Gelecek Planları", language: "Fransızca", level: "A2",
     slides: [
         { id: 1, type: "intro", title: "Geleceği Planlamak 🔮", content: "Yakın gelecekteki planlarınızı anlatmak için Futur Proche kullanacağız.", tip: "ALLER + Mastar Fiil = Gelecek" },
         { id: 2, type: "vocabulary", title: "Formül", content: "ALLER fiilini şimdiki zamanda çek + Mastar fiil ekle:\n\n• Je vais partir = Gideceğim\n• Tu vas manger = Yiyeceksin\n• Nous allons voyager = Seyahat edeceğiz" },
@@ -36,7 +36,7 @@ const unit332Lecture: UnitLecture = {
 };
 
 const unit333Lecture: UnitLecture = {
-    unitId: 333, title: "Sağlık ve Doktorda", language: "Fransızca", level: "A2",
+    unitId: 333, title: "Sağlık ve Hastalık", language: "Fransızca", level: "A2",
     slides: [
         { id: 1, type: "intro", title: "Doktorda 🏥", content: "Sağlık sorunlarınızı anlatmayı ve doktor önerilerini anlamayı öğreneceğiz.", tip: "J'ai mal à... = Ağrım var..." },
         { id: 2, type: "vocabulary", title: "Şikayet Etme", content: "• J'ai mal à la tête = Başım ağrıyor\n• J'ai de la fièvre = Ateşim var\n• Je tousse = Öksürüyorum\n• Je suis fatigué = Yorgunum" },
@@ -83,7 +83,7 @@ const unit337Lecture: UnitLecture = {
 };
 
 const unit338Lecture: UnitLecture = {
-    unitId: 338, title: "Havaalanında - Edilgen Yapı", language: "Fransızca", level: "A2", slides: [
+    unitId: 338, title: "Havaalanında", language: "Fransızca", level: "A2", slides: [
         {
             id: 1, type: "intro", title: "Mantık Nedir? (Yönetmen Koltuğu) 🎬",
             content: "Bir film çektiğini düşün. Kamerayı kime odaklayacaksın?\n\n• **Etken (Aktif):** Kamera 'İşi Yapan' üzerindedir. (Ahmet elmayı yiyor.)\n• **Edilgen (Pasif):** Kamera 'İşten Etkilenen' üzerindedir. (Elma, Ahmet tarafından yeniliyor.)",
@@ -146,7 +146,7 @@ const unit339Lecture: UnitLecture = {
 };
 
 const unit340Lecture: UnitLecture = {
-    unitId: 340, title: "Yemek Tarifi ve Emir Kipi", language: "Fransızca", level: "A2", slides: [
+    unitId: 340, title: "Yemek Tarifi", language: "Fransızca", level: "A2", slides: [
         { id: 1, type: "intro", title: "Şef Olalım! 👨‍🍳", content: "Mutfakta şef sensin! Bu derste Fransızca emir kipini (L'Impératif) en ince detayına kadar öğreneceğiz. Kurallar başta karışık gelebilir ama aslında çok mantıklı.", tip: "KURAL 1: Cümlede Tu, Nous, Vous kelimeleri ASLA yazılmaz! Sadece fiil söylenir." },
         {
             id: 2, type: "grammar", title: "1. Kime Emir Verilir? 🎯",
@@ -199,16 +199,16 @@ const unit340Lecture: UnitLecture = {
 };
 
 // ===== Üniteler 341-360 =====
-const unit341Lecture: UnitLecture = { unitId: 341, title: "Alışveriş", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Karşılaştırma 📊", content: "Plus... que, Moins... que, Aussi... que", tip: "Comparatif" }, { id: 2, type: "summary", title: "Özet", points: ["Plus = Daha fazla", "Moins = Daha az"], cta: "Pratik!" }] };
-const unit342Lecture: UnitLecture = { unitId: 342, title: "Kıyafet", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "İşaret Sıfatları 👉", content: "Ce, Cette, Ces", tip: "Demonstratifs" }, { id: 2, type: "summary", title: "Özet", points: ["Ce = Erkek", "Cette = Dişi", "Ces = Çoğul"], cta: "Pratik!" }] };
+const unit341Lecture: UnitLecture = { unitId: 341, title: "Alışveriş Diyaloğu", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Karşılaştırma 📊", content: "Plus... que, Moins... que, Aussi... que", tip: "Comparatif" }, { id: 2, type: "summary", title: "Özet", points: ["Plus = Daha fazla", "Moins = Daha az"], cta: "Pratik!" }] };
+const unit342Lecture: UnitLecture = { unitId: 342, title: "Kıyafet Alışverişi", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "İşaret Sıfatları 👉", content: "Ce, Cette, Ces", tip: "Demonstratifs" }, { id: 2, type: "summary", title: "Özet", points: ["Ce = Erkek", "Cette = Dişi", "Ces = Çoğul"], cta: "Pratik!" }] };
 const unit343Lecture: UnitLecture = { unitId: 343, title: "Ev İşleri", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Venir de ⏱️", content: "Az önce yapılan eylemler", tip: "Passé récent" }, { id: 2, type: "summary", title: "Özet", points: ["Venir de + Mastar = Az önce"], cta: "Pratik!" }] };
-const unit344Lecture: UnitLecture = { unitId: 344, title: "Haberler", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Imparfait 📰", content: "Sürekli geçmiş", tip: "Alışkanlıklar" }, { id: 2, type: "summary", title: "Özet", points: ["Nous kökü + -ais, -ait..."], cta: "Pratik!" }] };
-const unit345Lecture: UnitLecture = { unitId: 345, title: "TV", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "QUI ve QUE 🔗", content: "İlgi zamirleri", tip: "Relative pronouns" }, { id: 2, type: "summary", title: "Özet", points: ["QUI = özne", "QUE = nesne"], cta: "Pratik!" }] };
-const unit346Lecture: UnitLecture = { unitId: 346, title: "Sinema", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Superlatif 🏆", content: "En iyi/kötü", tip: "Le plus, Le moins" }, { id: 2, type: "summary", title: "Özet", points: ["Le/La plus + sıfat"], cta: "Pratik!" }] };
-const unit347Lecture: UnitLecture = { unitId: 347, title: "Müzik", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "DEPUIS ⏳", content: "...den beri", tip: "Devam eden eylemler" }, { id: 2, type: "summary", title: "Özet", points: ["Depuis + süre = Şimdiki zaman"], cta: "Pratik!" }] };
-const unit348Lecture: UnitLecture = { unitId: 348, title: "Spor", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "FAIRE / JOUER 🏃", content: "Spor yapmak", tip: "du, au ayrımı" }, { id: 2, type: "summary", title: "Özet", points: ["Faire DU = aktivite", "Jouer AU = top"], cta: "Pratik!" }] };
-const unit349Lecture: UnitLecture = { unitId: 349, title: "Doğa", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Y ve EN 📍", content: "Yer zamirleri", tip: "à/de + yer" }, { id: 2, type: "summary", title: "Özet", points: ["Y = orada (à + yer)", "EN = oradan (de + yer)"], cta: "Pratik!" }] };
-const unit350Lecture: UnitLecture = { unitId: 350, title: "Buluşma", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Teklif 💬", content: "Ça te dit de...?", tip: "Proposer" }, { id: 2, type: "summary", title: "Özet", points: ["On pourrait...", "Si on allait...?"], cta: "Pratik!" }] };
+const unit344Lecture: UnitLecture = { unitId: 344, title: "Günlük Haberler", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Imparfait 📰", content: "Sürekli geçmiş", tip: "Alışkanlıklar" }, { id: 2, type: "summary", title: "Özet", points: ["Nous kökü + -ais, -ait..."], cta: "Pratik!" }] };
+const unit345Lecture: UnitLecture = { unitId: 345, title: "Televizyon Programları", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "QUI ve QUE 🔗", content: "İlgi zamirleri", tip: "Relative pronouns" }, { id: 2, type: "summary", title: "Özet", points: ["QUI = özne", "QUE = nesne"], cta: "Pratik!" }] };
+const unit346Lecture: UnitLecture = { unitId: 346, title: "Sinema ve Filmler", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Superlatif 🏆", content: "En iyi/kötü", tip: "Le plus, Le moins" }, { id: 2, type: "summary", title: "Özet", points: ["Le/La plus + sıfat"], cta: "Pratik!" }] };
+const unit347Lecture: UnitLecture = { unitId: 347, title: "Müzik Zevkleri", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "DEPUIS ⏳", content: "...den beri", tip: "Devam eden eylemler" }, { id: 2, type: "summary", title: "Özet", points: ["Depuis + süre = Şimdiki zaman"], cta: "Pratik!" }] };
+const unit348Lecture: UnitLecture = { unitId: 348, title: "Spor Aktiviteleri", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "FAIRE / JOUER 🏃", content: "Spor yapmak", tip: "du, au ayrımı" }, { id: 2, type: "summary", title: "Özet", points: ["Faire DU = aktivite", "Jouer AU = top"], cta: "Pratik!" }] };
+const unit349Lecture: UnitLecture = { unitId: 349, title: "Doğa Gezisi", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Y ve EN 📍", content: "Yer zamirleri", tip: "à/de + yer" }, { id: 2, type: "summary", title: "Özet", points: ["Y = orada (à + yer)", "EN = oradan (de + yer)"], cta: "Pratik!" }] };
+const unit350Lecture: UnitLecture = { unitId: 350, title: "Arkadaş Buluşması", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Teklif 💬", content: "Ça te dit de...?", tip: "Proposer" }, { id: 2, type: "summary", title: "Özet", points: ["On pourrait...", "Si on allait...?"], cta: "Pratik!" }] };
 const unit351Lecture: UnitLecture = {
     unitId: 351, title: "Telefon Görüşmesi", language: "Fransızca", level: "A2",
     videoUrl: "https://youtu.be/wtbJKBKTpPA",
@@ -231,13 +231,13 @@ const unit351Lecture: UnitLecture = {
         { id: 6, type: "summary", title: "Özet 📝", points: ["Kendini tanıt: C'est [İsim]", "İste: Je voudrais parler à...", "Beklet: Ne quittez pas", "Sorun: Ça coupe"], cta: "Şimdi arama yapalım!" }
     ]
 };
-const unit352Lecture: UnitLecture = { unitId: 352, title: "Davet", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Davet 🎉", content: "Je t'invite à...", tip: "Inviter" }, { id: 2, type: "summary", title: "Özet", points: ["Tu es libre...?", "Avec plaisir!"], cta: "Pratik!" }] };
-const unit353Lecture: UnitLecture = { unitId: 353, title: "Özür", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Özür 😔", content: "Je suis désolé(e)", tip: "S'excuser" }, { id: 2, type: "summary", title: "Özet", points: ["J'ai un empêchement", "Ce n'est pas grave"], cta: "Pratik!" }] };
+const unit352Lecture: UnitLecture = { unitId: 352, title: "Davet Etme", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Davet 🎉", content: "Je t'invite à...", tip: "Inviter" }, { id: 2, type: "summary", title: "Özet", points: ["Tu es libre...?", "Avec plaisir!"], cta: "Pratik!" }] };
+const unit353Lecture: UnitLecture = { unitId: 353, title: "Özür Dileme", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Özür 😔", content: "Je suis désolé(e)", tip: "S'excuser" }, { id: 2, type: "summary", title: "Özet", points: ["J'ai un empêchement", "Ce n'est pas grave"], cta: "Pratik!" }] };
 const unit354Lecture: UnitLecture = { unitId: 354, title: "Yol Tarifi", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Yönler 🗺️", content: "Tournez à gauche", tip: "Directions" }, { id: 2, type: "summary", title: "Özet", points: ["Tout droit = Düz", "À côté de = Yanında"], cta: "Pratik!" }] };
-const unit355Lecture: UnitLecture = { unitId: 355, title: "Şehir", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Tanıtım 🏛️", content: "C'est une ville qui...", tip: "Describing places" }, { id: 2, type: "summary", title: "Özet", points: ["Il y a beaucoup de...", "Célèbre pour..."], cta: "Pratik!" }] };
-const unit356Lecture: UnitLecture = { unitId: 356, title: "Kültür", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Farklar 🌍", content: "En France, on...", tip: "Karşılaştırma" }, { id: 2, type: "summary", title: "Özet", points: ["Contrairement à...", "Par rapport à..."], cta: "Pratik!" }] };
-const unit357Lecture: UnitLecture = { unitId: 357, title: "Eğitim", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Okul 🎓", content: "Faire des études", tip: "Eğitim terimleri" }, { id: 2, type: "summary", title: "Özet", points: ["Passer un examen", "Réussir/Échouer"], cta: "Pratik!" }] };
-const unit358Lecture: UnitLecture = { unitId: 358, title: "İş", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Kariyer 💼", content: "Chercher un emploi", tip: "İş terimleri" }, { id: 2, type: "summary", title: "Özet", points: ["Postuler", "Entretien"], cta: "Pratik!" }] };
+const unit355Lecture: UnitLecture = { unitId: 355, title: "Şehir Tanıtımı", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Tanıtım 🏛️", content: "C'est une ville qui...", tip: "Describing places" }, { id: 2, type: "summary", title: "Özet", points: ["Il y a beaucoup de...", "Célèbre pour..."], cta: "Pratik!" }] };
+const unit356Lecture: UnitLecture = { unitId: 356, title: "Kültürel Farklar", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Farklar 🌍", content: "En France, on...", tip: "Karşılaştırma" }, { id: 2, type: "summary", title: "Özet", points: ["Contrairement à...", "Par rapport à..."], cta: "Pratik!" }] };
+const unit357Lecture: UnitLecture = { unitId: 357, title: "Eğitim Hayatı", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Okul 🎓", content: "Faire des études", tip: "Eğitim terimleri" }, { id: 2, type: "summary", title: "Özet", points: ["Passer un examen", "Réussir/Échouer"], cta: "Pratik!" }] };
+const unit358Lecture: UnitLecture = { unitId: 358, title: "İş Hayatı", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Kariyer 💼", content: "Chercher un emploi", tip: "İş terimleri" }, { id: 2, type: "summary", title: "Özet", points: ["Postuler", "Entretien"], cta: "Pratik!" }] };
 const unit359Lecture: UnitLecture = {
     unitId: 359,
     title: "Teknoloji Kullanımı",
@@ -264,7 +264,7 @@ const unit359Lecture: UnitLecture = {
         { id: 7, type: "summary", title: "Özet 📝", points: ["Donanım: ordinateur, écran, souris...", "Fiiller: Allumer/Éteindre, Télécharger, Sauvegarder", "Edatlar: Sur internet, En ligne", "Sorun: Ça ne marche pas!"], cta: "Şimdi teknoloji pratiği yap!" }
     ]
 };
-const unit360Lecture: UnitLecture = { unitId: 360, title: "A2 Final", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Tebrikler! 🎉", content: "A2 seviyesini tamamladınız!", tip: "Devam edin!" }, { id: 2, type: "summary", title: "Özet", points: ["Passé Composé ✓", "Futur Proche ✓", "Imparfait ✓"], cta: "B1'e geçin!" }] };
+const unit360Lecture: UnitLecture = { unitId: 360, title: "A2 Genel Tekrar", language: "Fransızca", level: "A2", slides: [{ id: 1, type: "intro", title: "Tebrikler! 🎉", content: "A2 seviyesini tamamladınız!", tip: "Devam edin!" }, { id: 2, type: "summary", title: "Özet", points: ["Passé Composé ✓", "Futur Proche ✓", "Imparfait ✓"], cta: "B1'e geçin!" }] };
 
 // Export
 export const frenchA2Lectures: UnitLecture[] = [
