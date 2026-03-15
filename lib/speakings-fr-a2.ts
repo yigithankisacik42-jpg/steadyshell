@@ -550,6 +550,36 @@ const unit340Speaking: UnitSpeaking = {
       pronunciation: "gut set sos",
     },
     {
+      text: "Lave bien les légumes.",
+      translation: "Sebzeleri iyice yıka.",
+      pronunciation: "lav byen le le-güm",
+    },
+    {
+      text: "Coupe les tomates et les oignons.",
+      translation: "Domatesleri ve soğanları kes.",
+      pronunciation: "kup le to-mat e le zon-yon",
+    },
+    {
+      text: "Ajoute du poivre.",
+      translation: "Karabiber ekle.",
+      pronunciation: "a-jut du pwa-vr",
+    },
+    {
+      text: "Mélange doucement.",
+      translation: "Yavaşça karıştır.",
+      pronunciation: "me-lanj dus-man",
+    },
+    {
+      text: "Verse un peu d'eau.",
+      translation: "Biraz su dök.",
+      pronunciation: "vers en pö do",
+    },
+    {
+      text: "Servez chaud.",
+      translation: "Sıcak servis edin.",
+      pronunciation: "ser-ve şo",
+    },
+    {
       text: "Bon appétit à tous !",
       translation: "Herkese afiyet olsun!",
       pronunciation: "bo na-pe-ti a tus",

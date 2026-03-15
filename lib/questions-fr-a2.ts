@@ -1015,115 +1015,115 @@ const unit339Quiz4: Question[] = [
 ];
 
 const unit340Quiz1: Question[] = [
-    // KOLAY (8 Soru) - Mutfak Fiilleri ve Kelimeleri
-    { id: 1, type: "SELECT", question: "'Couper' ne demek?", options: [{ id: "a", text: "Kesmek / Doğramak", correct: true }, { id: "b", text: "Yıkamak", correct: false }, { id: "c", text: "Karıştırmak", correct: false }, { id: "d", text: "Eklemek", correct: false }] },
-    { id: 2, type: "SELECT", question: "'Laver' ne demek?", options: [{ id: "a", text: "Kesmek", correct: false }, { id: "b", text: "İzlemek", correct: false }, { id: "c", text: "Yıkamak", correct: true }, { id: "d", text: "Eklemek", correct: false }] },
-    { id: 3, type: "SELECT", question: "'Les tomates' ne demek?", options: [{ id: "a", text: "Soğanlar", correct: false }, { id: "b", text: "Domatesler", correct: true }, { id: "c", text: "Sebzeler", correct: false }, { id: "d", text: "Patatesler", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Mélange la ___.", options: [{ id: "a", text: "sauce", correct: true }, { id: "b", text: "saucisse", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Ajoute le ___.", options: [{ id: "a", text: "sel", correct: true }, { id: "b", text: "sucre", correct: false }] },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les oignons", options: [{ id: "a", text: "Soğanlar", correct: true }, { id: "b", text: "Sarımsaklar", correct: false }, { id: "c", text: "Domatesler", correct: false }, { id: "d", text: "Biberler", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Pleurer' fiilinin anlamı nedir?", options: [{ id: "a", text: "Gülmek", correct: false }, { id: "b", text: "Ağlamak", correct: true }, { id: "c", text: "Bağırmak", correct: false }, { id: "d", text: "Konuşmak", correct: false }] },
-    { id: 8, type: "SELECT", question: "'La casserole' ne anlama gelir?", options: [{ id: "a", text: "Tencere", correct: true }, { id: "b", text: "Tava", correct: false }, { id: "c", text: "Fırın", correct: false }, { id: "d", text: "Kaşık", correct: false }] },
+    // KOLAY (8 Soru) - Temel Kelimeler
+    { id: 1, type: "SELECT", question: "'Cuisiner' ne demek?", options: [{ id: "a", text: "Yemek pişirmek", correct: true }, { id: "b", text: "Kesmek", correct: false }, { id: "c", text: "Yıkamak", correct: false }, { id: "d", text: "Servis etmek", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Éplucher' ne demek?", options: [{ id: "a", text: "Soymak", correct: true }, { id: "b", text: "Karıştırmak", correct: false }, { id: "c", text: "Eklemek", correct: false }, { id: "d", text: "Pişirmek", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Couper' ne demek?", options: [{ id: "a", text: "Kesmek / Doğramak", correct: true }, { id: "b", text: "Tadına bakmak", correct: false }, { id: "c", text: "Servis etmek", correct: false }, { id: "d", text: "Dökmek", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Le four' ne demek?", options: [{ id: "a", text: "Fırın", correct: true }, { id: "b", text: "Tencere", correct: false }, { id: "c", text: "Kase", correct: false }, { id: "d", text: "Kaşık", correct: false }] },
+    { id: 5, type: "SELECT", question: "'La casserole' ne demek?", options: [{ id: "a", text: "Tencere", correct: true }, { id: "b", text: "Fırın", correct: false }, { id: "c", text: "Tabak", correct: false }, { id: "d", text: "Bıçak", correct: false }] },
+    { id: 6, type: "SELECT", question: "'Le bol' ne demek?", options: [{ id: "a", text: "Kase", correct: true }, { id: "b", text: "Kaşık", correct: false }, { id: "c", text: "Tava", correct: false }, { id: "d", text: "Masa", correct: false }] },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les légumes", options: [{ id: "a", text: "Sebzeler", correct: true }, { id: "b", text: "Domatesler", correct: false }, { id: "c", text: "Soğanlar", correct: false }, { id: "d", text: "Meyveler", correct: false }] },
+    { id: 8, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le sel", options: [{ id: "a", text: "Tuz", correct: true }, { id: "b", text: "Şeker", correct: false }, { id: "c", text: "Su", correct: false }, { id: "d", text: "Karabiber", correct: false }] },
 
-    // ORTA (7 Soru) - Emir Kipi Mantığı ("Tu" Formu)
-    { id: 9, type: "SELECT", question: "Emir kipinde 'Sen' (Tu) formunda -ER bitimli fiillerin sonundaki hangi harf DÜŞER?", options: [{ id: "a", text: "e", correct: false }, { id: "b", text: "r", correct: false }, { id: "c", text: "s", correct: true }, { id: "d", text: "t", correct: false }] },
-    { id: 10, type: "SELECT", question: "Hangi cümle DOĞRU bir emir cümlesidir? (Sen kes)", options: [{ id: "a", text: "Coupes les tomates !", correct: false }, { id: "b", text: "Coupe les tomates !", correct: true }, { id: "c", text: "Tu coupes les tomates !", correct: false }, { id: "d", text: "Couper les tomates !", correct: false }] },
-    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Sebzeleri yıka!", correctAnswer: "Lave les légumes !" },
-    { id: 12, type: "FILL_BLANK", question: "Doldur (-ER fiil, 'Sen' emiri):", sentence: "___ la télé !", options: [{ id: "a", text: "Regarde", correct: true }, { id: "b", text: "Regardes", correct: false }] },
-    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Mélange le sel", options: [{ id: "a", text: "Tuzu karıştır (Sen)", correct: true }, { id: "b", text: "Tuzu karıştırın (Siz)", correct: false }, { id: "c", text: "Tuzu karıştırıyoruz", correct: false }, { id: "d", text: "Tuzu ekle", correct: false }] },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___ des tomates ! (Domates ekle!)", options: [{ id: "a", text: "Ajoute", correct: true }, { id: "b", text: "Ajoutes", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Akşam yemeğini ye!", correctAnswer: "Mange le dîner !" },
+    // ORTA (7 Soru) - Temel Emirler ve Cümleler
+    { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Ajoute le ___.", options: [{ id: "a", text: "sel", correct: true }, { id: "b", text: "sucre", correct: false }] },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "Mélange la ___.", options: [{ id: "a", text: "sauce", correct: true }, { id: "b", text: "soupe", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "___ les tomates !", options: [{ id: "a", text: "Coupe", correct: true }, { id: "b", text: "Coupez", correct: false }] },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "Sebzeleri yıka!", correctAnswer: "Lave les légumes !" },
+    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Servez chaud", options: [{ id: "a", text: "Sıcak servis edin", correct: true }, { id: "b", text: "Soğuk servis edin", correct: false }, { id: "c", text: "Hemen yiyin", correct: false }, { id: "d", text: "Hemen karıştırın", correct: false }] },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Tadına bak.", correctAnswer: "Goûte." },
+    { id: 15, type: "SELECT", question: "Konuşma: 'Herkese afiyet olsun!'", options: [{ id: "a", text: "Bon appétit à tous !", correct: true }, { id: "b", text: "Bonsoir à tous !", correct: false }, { id: "c", text: "Bon voyage !", correct: false }, { id: "d", text: "À bientôt !", correct: false }] },
 
     // ZOR (5 Soru)
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Büyük asistanı çağır!", correctAnswer: "Appelle le grand assistant !" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la porte du four ! (Fırın kapısını aç!)", options: [{ id: "a", text: "Ouvre", correct: true }, { id: "b", text: "Ouvres", correct: false }] },
-    { id: 18, type: "SELECT", question: "'Ne pleure pas !' ne anlama gelir?", options: [{ id: "a", text: "Ağla!", correct: false }, { id: "b", text: "Ağlıyorsun", correct: false }, { id: "c", text: "Ağlama!", correct: true }, { id: "d", text: "Ağlamayalım!", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Televizyon izleme!", correctAnswer: "Ne regarde pas la télé !" },
-    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Her şeyi tencereye koy!", correctAnswer: "Mets tout dans la casserole !" }
+    { id: 16, type: "SELECT", question: "Doğru emir cümlesi (Sen) hangisi?", options: [{ id: "a", text: "Coupe les oignons !", correct: true }, { id: "b", text: "Coupes les oignons !", correct: false }, { id: "c", text: "Coupez les oignons !", correct: false }, { id: "d", text: "Tu coupe les oignons !", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas le four !", options: [{ id: "a", text: "touche", correct: true }, { id: "b", text: "touchez", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "20 dakika pişirin.", correctAnswer: "Faites cuire 20 minutes." },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Yavaşça karıştır.", correctAnswer: "Mélange doucement." },
+    { id: 20, type: "SELECT", question: "Eşleştir: 'Délicieux' hangi anlama gelir?", options: [{ id: "a", text: "Lezzetli", correct: true }, { id: "b", text: "Tuzlu", correct: false }, { id: "c", text: "Tatlı", correct: false }, { id: "d", text: "Hazır", correct: false }] }
 ];
 
 const unit340Quiz2: Question[] = [
-    // KOLAY (8 Soru) - Mutfak Eşyaları ve Kelimeleri
-    { id: 1, type: "SELECT", question: "'Le four' ne demek?", options: [{ id: "a", text: "Fırın", correct: true }, { id: "b", text: "Tencere", correct: false }, { id: "c", text: "Kase", correct: false }, { id: "d", text: "Masa", correct: false }] },
-    { id: 2, type: "SELECT", question: "'Le bol' ne demek?", options: [{ id: "a", text: "Tabak", correct: false }, { id: "b", text: "Kase", correct: true }, { id: "c", text: "Kaşık", correct: false }, { id: "d", text: "Tava", correct: false }] },
-    { id: 3, type: "SELECT", question: "'Sucré' ne demek?", options: [{ id: "a", text: "Tuzlu", correct: false }, { id: "b", text: "Acı", correct: false }, { id: "c", text: "Tatlı / Şekerli", correct: true }, { id: "d", text: "Ekşi", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Le dîner est ___ ! (Akşam yemeği hazır!)", options: [{ id: "a", text: "prêt", correct: true }, { id: "b", text: "près", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ ! (Bu lezzetli!)", options: [{ id: "a", text: "délicieux", correct: true }, { id: "b", text: "salé", correct: false }] },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ensuite, on mange", options: [{ id: "a", text: "Sonra / Ardından yiyoruz", correct: true }, { id: "b", text: "Önce yiyoruz", correct: false }, { id: "c", text: "Şimdi yiyoruz", correct: false }, { id: "d", text: "Asla yemiyoruz", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Salé' ne demek?", options: [{ id: "a", text: "Tatlı", correct: false }, { id: "b", text: "Tuzlu", correct: true }, { id: "c", text: "Sıcak", correct: false }, { id: "d", text: "Soğuk", correct: false }] },
-    { id: 8, type: "SELECT", question: "Hangi kelime 'Sebzeler' anlamına gelir?", options: [{ id: "a", text: "Les fruits", correct: false }, { id: "b", text: "Les oignons", correct: false }, { id: "c", text: "Les tomates", correct: false }, { id: "d", text: "Les légumes", correct: true }] },
+    // KOLAY (8 Soru) - Kalıplar ve Güvenlik
+    { id: 1, type: "SELECT", question: "'Mets ton tablier.' ne demek?", options: [{ id: "a", text: "Önlüğünü tak.", correct: true }, { id: "b", text: "Ellerini yıka.", correct: false }, { id: "c", text: "Bıçağa dikkat et.", correct: false }, { id: "d", text: "Fırına dokunma.", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Fais attention au couteau!' ne demek?", options: [{ id: "a", text: "Bıçağa dikkat et!", correct: true }, { id: "b", text: "Tencereyi getir!", correct: false }, { id: "c", text: "Bulaşık yıka!", correct: false }, { id: "d", text: "Masayı kur!", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Passe-moi le pain, s'il te plaît.' ne demek?", options: [{ id: "a", text: "Bana ekmeği uzat lütfen.", correct: true }, { id: "b", text: "Bana tuzu uzat lütfen.", correct: false }, { id: "c", text: "Ekmek yeme.", correct: false }, { id: "d", text: "Ekmek alabilir miyim?", correct: false }] },
+    { id: 4, type: "SELECT", question: "'C'est vraiment délicieux.' ne demek?", options: [{ id: "a", text: "Gerçekten çok lezzetli.", correct: true }, { id: "b", text: "Gerçekten çok tuzlu.", correct: false }, { id: "c", text: "Gerçekten çok tatlı.", correct: false }, { id: "d", text: "Çok hazır.", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Qui va faire la vaisselle?' ne demek?", options: [{ id: "a", text: "Bulaşığı kim yıkayacak?", correct: true }, { id: "b", text: "Yemek kim yapacak?", correct: false }, { id: "c", text: "Kim domates doğrayacak?", correct: false }, { id: "d", text: "Kim masayı kuracak?", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Lave-toi les mains", options: [{ id: "a", text: "Ellerini yıka.", correct: true }, { id: "b", text: "Önlüğünü tak.", correct: false }, { id: "c", text: "Bıçağı koy.", correct: false }, { id: "d", text: "Masayı kur.", correct: false }] },
+    { id: 7, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ajoutez du sel", options: [{ id: "a", text: "Tuz ekleyin.", correct: true }, { id: "b", text: "Şeker ekleyin.", correct: false }, { id: "c", text: "Su dökün.", correct: false }, { id: "d", text: "Sosu karıştırın.", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Goûtez la sauce.' ne demek?", options: [{ id: "a", text: "Sosun tadına bakın.", correct: true }, { id: "b", text: "Sosu karıştırın.", correct: false }, { id: "c", text: "Sosu dökün.", correct: false }, { id: "d", text: "Sosu servis edin.", correct: false }] },
 
-    // ORTA (7 Soru) - Emir Kipi Mantığı ("Vous" ve "Nous" Formları)
-    { id: 9, type: "SELECT", question: "'Nous' (Biz) formunda emir verirken (Hadi yapalım) fiilin sonu nasıl biter?", options: [{ id: "a", text: "-e", correct: false }, { id: "b", text: "-ez", correct: false }, { id: "c", text: "-ons", correct: true }, { id: "d", text: "-ent", correct: false }] },
-    { id: 10, type: "SELECT", question: "Hangi cümle 'Hadi yiyelim!' anlamına gelir?", options: [{ id: "a", text: "Mangez !", correct: false }, { id: "b", text: "Vous mangez !", correct: false }, { id: "c", text: "Mangeons !", correct: true }, { id: "d", text: "Mange !", correct: false }] },
-    { id: 11, type: "TRANSLATE", question: "Çevir:", hint: "Lütfen sebzeleri kesin! (Siz/Kibar)", correctAnswer: "Coupez les légumes, s'il vous plaît !" },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ dans la casserole ! (Tencereye ekleyin! - Siz)", options: [{ id: "a", text: "Ajoutez", correct: true }, { id: "b", text: "Ajoute", correct: false }] },
-    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ne mélangez pas tout", options: [{ id: "a", text: "Her şeyi karıştırmayın (Siz)", correct: true }, { id: "b", text: "Her şeyi karıştırma (Sen)", correct: false }, { id: "c", text: "Her şeyi karıştırın (Siz)", correct: false }, { id: "d", text: "Hadi her şeyi karıştıralım", correct: false }] },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la télé ce soir ! (Hadi bu akşam TV izleyelim!)", options: [{ id: "a", text: "Regardons", correct: true }, { id: "b", text: "Regardez", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hadi sebzeleri yıkayalım!", correctAnswer: "Lavons les légumes !" },
+    // ORTA (7 Soru) - Siz/Nous Emirleri
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Lütfen sebzeleri kesin! (Siz)", correctAnswer: "Coupez les légumes, s'il vous plaît !" },
+    { id: 10, type: "FILL_BLANK", question: "Doldur:", sentence: "___ les pommes de terre. (Siz)", options: [{ id: "a", text: "Épluchez", correct: true }, { id: "b", text: "Épluche", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "___ un peu d'eau. (Siz)", options: [{ id: "a", text: "Versez", correct: true }, { id: "b", text: "Verse", correct: false }] },
+    { id: 12, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ne touchez pas le four", options: [{ id: "a", text: "Fırına dokunmayın.", correct: true }, { id: "b", text: "Fırına dokunun.", correct: false }, { id: "c", text: "Fırını açın.", correct: false }, { id: "d", text: "Fırını kapatın.", correct: false }] },
+    { id: 13, type: "SELECT", question: "Hangi cümle 'Hadi mutfağa gidelim!' anlamına gelir?", options: [{ id: "a", text: "Allons dans la cuisine !", correct: true }, { id: "b", text: "Aller dans la cuisine !", correct: false }, { id: "c", text: "Va dans la cuisine !", correct: false }, { id: "d", text: "Allons à la cuisine ?", correct: false }] },
+    { id: 14, type: "TRANSLATE", question: "Çevir:", hint: "Sıcak servis edin.", correctAnswer: "Servez chaud." },
+    { id: 15, type: "SELECT", question: "Eşleştir: 'Prêt(e)' hangi anlama gelir?", options: [{ id: "a", text: "Hazır", correct: true }, { id: "b", text: "Tuzlu", correct: false }, { id: "c", text: "Pişmiş", correct: false }, { id: "d", text: "Yavaşça", correct: false }] },
 
     // ZOR (5 Soru)
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Domatesleri kesmeyin! (Siz)", correctAnswer: "Ne coupez pas les tomates !" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "___ le dîner dans le four ! (Siz - Akşam yemeğini fırına koyun!)", options: [{ id: "a", text: "Mettez", correct: true }, { id: "b", text: "Mets", correct: false }] },
-    { id: 18, type: "SELECT", question: "Hangi cümle YANLIŞTIR?", options: [{ id: "a", text: "Mangeons le dîner !", correct: false }, { id: "b", text: "Regarde le four !", correct: false }, { id: "c", text: "Ne pleures pas !", correct: true }, { id: "d", text: "Ajoutez le sel !", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Ağlamayalım!", correctAnswer: "Ne pleurons pas !" },
-    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hadi tuzu tencereye ekleyelim!", correctAnswer: "Ajoutons le sel dans la casserole !" }
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Domatesleri ve soğanları kesin.", correctAnswer: "Coupez les tomates et les oignons." },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "___ bien. (Siz - Karıştırın)", options: [{ id: "a", text: "Mélangez", correct: true }, { id: "b", text: "Mélange", correct: false }] },
+    { id: 18, type: "SELECT", question: "Doğru olumsuz emir (Siz) hangisi?", options: [{ id: "a", text: "Ne coupez pas les tomates !", correct: true }, { id: "b", text: "Ne coupe pas les tomates !", correct: false }, { id: "c", text: "Ne coupez les tomates pas !", correct: false }, { id: "d", text: "Ne coupez pas tomates !", correct: false }] },
+    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bıçağa dikkat et!", correctAnswer: "Fais attention au couteau !" },
+    { id: 20, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Faites cuire vingt minutes", options: [{ id: "a", text: "20 dakika pişirin", correct: true }, { id: "b", text: "20 dakika bekleyin", correct: false }, { id: "c", text: "20 dakika kesin", correct: false }, { id: "d", text: "20 dakika karıştırın", correct: false }] }
 ];
 
 const unit340Quiz3: Question[] = [
-    // KOLAY (8 Soru) - Kelimeler ve Anlamlar
-    { id: 1, type: "SELECT", question: "'Le dîner' ne demek?", options: [{ id: "a", text: "Kahvaltı", correct: false }, { id: "b", text: "Öğle yemeği", correct: false }, { id: "c", text: "Akşam yemeği", correct: true }, { id: "d", text: "Tatlı", correct: false }] },
-    { id: 2, type: "SELECT", question: "Aşağıdakilerden hangisi bir eylem (fiil) DEĞİLDİR?", options: [{ id: "a", text: "Couper", correct: false }, { id: "b", text: "Regarder", correct: false }, { id: "c", text: "Mélanger", correct: false }, { id: "d", text: "La casserole", correct: true }] },
-    { id: 3, type: "SELECT", question: "'Un peu de' ne anlama gelir?", options: [{ id: "a", text: "Çok fazla", correct: false }, { id: "b", text: "Hiç", correct: false }, { id: "c", text: "Biraz", correct: true }, { id: "d", text: "Her zaman", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "La sauce est très ___ ! (Tatlı)", options: [{ id: "a", text: "sucrée", correct: true }, { id: "b", text: "salée", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Passe-moi le ___ ! (Kase)", options: [{ id: "a", text: "bol", correct: true }, { id: "b", text: "four", correct: false }] },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est délicieux", options: [{ id: "a", text: "Bu çok lezzetli", correct: true }, { id: "b", text: "Bu çok kötü", correct: false }, { id: "c", text: "Bu çok tuzlu", correct: false }, { id: "d", text: "Bu çok şekerli", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Lentement' ne demek?", options: [{ id: "a", text: "Hızlıca", correct: false }, { id: "b", text: "Yavaşça", correct: true }, { id: "c", text: "Çok kötü", correct: false }, { id: "d", text: "Harika", correct: false }] },
-    { id: 8, type: "SELECT", question: "'Trop vite' ne demek?", options: [{ id: "a", text: "Çok yavaş", correct: false }, { id: "b", text: "Çok hızlı", correct: true }, { id: "c", text: "Yeterince", correct: false }, { id: "d", text: "Çok az", correct: false }] },
+    // KOLAY (8 Soru) - Tat ve Fiiller
+    { id: 1, type: "SELECT", question: "'Salé' ne demek?", options: [{ id: "a", text: "Tuzlu", correct: true }, { id: "b", text: "Tatlı", correct: false }, { id: "c", text: "Sıcak", correct: false }, { id: "d", text: "Soğuk", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Sucré' ne demek?", options: [{ id: "a", text: "Şekerli / Tatlı", correct: true }, { id: "b", text: "Tuzlu", correct: false }, { id: "c", text: "Acı", correct: false }, { id: "d", text: "Ekşi", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Délicieux' ne demek?", options: [{ id: "a", text: "Lezzetli", correct: true }, { id: "b", text: "Hazır", correct: false }, { id: "c", text: "Yavaş", correct: false }, { id: "d", text: "Keskin", correct: false }] },
+    { id: 4, type: "SELECT", question: "'Goûter' ne demek?", options: [{ id: "a", text: "Tadına bakmak", correct: true }, { id: "b", text: "Püre yapmak", correct: false }, { id: "c", text: "Servis etmek", correct: false }, { id: "d", text: "Dökmek", correct: false }] },
+    { id: 5, type: "SELECT", question: "'Servir' ne demek?", options: [{ id: "a", text: "Servis etmek", correct: true }, { id: "b", text: "Kesmek", correct: false }, { id: "c", text: "Yıkamak", correct: false }, { id: "d", text: "Soymak", correct: false }] },
+    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le dîner est prêt", options: [{ id: "a", text: "Akşam yemeği hazır", correct: true }, { id: "b", text: "Akşam yemeği tuzlu", correct: false }, { id: "c", text: "Akşam yemeği geç", correct: false }, { id: "d", text: "Akşam yemeği yok", correct: false }] },
+    { id: 7, type: "FILL_BLANK", question: "Doldur:", sentence: "Le dîner est ___.", options: [{ id: "a", text: "prêt", correct: true }, { id: "b", text: "près", correct: false }] },
+    { id: 8, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ !", options: [{ id: "a", text: "délicieux", correct: true }, { id: "b", text: "salé", correct: false }] },
 
-    // ORTA (7 Soru) - Olumsuz Emir ve Karışık Pratik
-    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Çok hızlı karıştırma! (Sen)", correctAnswer: "Ne mélange pas trop vite !" },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Tuz eklemeyin! (Siz)", correctAnswer: "N'ajoutez pas de sel !" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas le dîner ! (Sen - Yeme!)", options: [{ id: "a", text: "mange", correct: true }, { id: "b", text: "mangons", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ les oignons ! (Siz - Doğrayın!)", options: [{ id: "a", text: "Coupez", correct: true }, { id: "b", text: "Coupons", correct: false }] },
-    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ne regarde pas", options: [{ id: "a", text: "İzleme / Bakma (Sen)", correct: true }, { id: "b", text: "İzlemeyin (Siz)", correct: false }, { id: "c", text: "İzlemeyelim", correct: false }, { id: "d", text: "Lütfen izle", correct: false }] },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas dans le four ! (Siz - Fırına koymayın!)", options: [{ id: "a", text: "mettez", correct: true }, { id: "b", text: "mets", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hadi sebzeleri karıştırmayalım!", correctAnswer: "Ne mélangeons pas les légumes !" },
+    // ORTA (7 Soru) - Ünite Kelimeleri ve Cümleler
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Bu çok tuzlu.", correctAnswer: "C'est trop salé." },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Bu çok tatlı.", correctAnswer: "C'est trop sucré." },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Ajoute du ___.", options: [{ id: "a", text: "poivre", correct: true }, { id: "b", text: "sucre", correct: false }] },
+    { id: 12, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Mélange lentement", options: [{ id: "a", text: "Yavaşça karıştır", correct: true }, { id: "b", text: "Hızlıca karıştır", correct: false }, { id: "c", text: "Tuz ekle", correct: false }, { id: "d", text: "Sosu dök", correct: false }] },
+    { id: 13, type: "SELECT", question: "Eşleştir: 'Lentement' ne demek?", options: [{ id: "a", text: "Yavaşça", correct: true }, { id: "b", text: "Hızlıca", correct: false }, { id: "c", text: "Sessizce", correct: false }, { id: "d", text: "Asla", correct: false }] },
+    { id: 14, type: "SELECT", question: "Doğru cümleyi seç (Sen):", options: [{ id: "a", text: "Goûte la sauce.", correct: true }, { id: "b", text: "Goûtes la sauce.", correct: false }, { id: "c", text: "Goûtez la sauce.", correct: false }, { id: "d", text: "Goûter la sauce.", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Tencereye koy.", correctAnswer: "Mets dans la casserole." },
 
-    // ZOR (5 Soru)
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Önce, domatesleri iyi yıka!", correctAnswer: "D'abord, lave bien les tomates !" },
-    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "___ les garçons ! (Sen - Garsonları çağır!)", options: [{ id: "a", text: "Appelle", correct: true }, { id: "b", text: "Appelles", correct: false }] },
-    { id: 18, type: "SELECT", question: "Aşağıdaki emir cümlelerinden hangisi dilbilgisi açısından YANLIŞTIR?", options: [{ id: "a", text: "Laves bien les tomates !", correct: true }, { id: "b", text: "Ne pleure pas !", correct: false }, { id: "c", text: "Mélangeons la sauce !", correct: false }, { id: "d", text: "Regardez le chef !", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Sosu yavaşça karıştır! (Sen)", correctAnswer: "Mélange la sauce lentement !" },
-    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Hadi yemeği kaseye koyalım!", correctAnswer: "Mettons le repas dans le bol !" }
+    // ZOR (5 Soru) - Okuma Metni Bilgileri
+    { id: 16, type: "SELECT", question: "Hikaye nerede geçiyor?", options: [{ id: "a", text: "Paris'te bir mutfakta", correct: true }, { id: "b", text: "Lyon'da bir pazarda", correct: false }, { id: "c", text: "Okulda", correct: false }, { id: "d", text: "Sokakta", correct: false }] },
+    { id: 17, type: "SELECT", question: "Şefin asistanının adı nedir?", options: [{ id: "a", text: "Julien", correct: true }, { id: "b", text: "Thomas", correct: false }, { id: "c", text: "Pierre", correct: false }, { id: "d", text: "Marc", correct: false }] },
+    { id: 18, type: "SELECT", question: "Sos için neler ekleniyor?", options: [{ id: "a", text: "Tuz ve karabiber", correct: true }, { id: "b", text: "Süt ve un", correct: false }, { id: "c", text: "Sadece tuz", correct: false }, { id: "d", text: "Sadece biber", correct: false }] },
+    { id: 19, type: "SELECT", question: "Akşam yemeği saat kaçta başlıyor?", options: [{ id: "a", text: "20.00", correct: true }, { id: "b", text: "18.00", correct: false }, { id: "c", text: "19.00", correct: false }, { id: "d", text: "21.00", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Garsonları masayı kurmaları için çağır!", correctAnswer: "Appelle les garçons pour mettre la table !" }
 ];
 
 const unit340Quiz4: Question[] = [
-    // KOLAY (8 Soru) - Genel İfadeler
-    { id: 1, type: "SELECT", question: "'Surtout' ne demek?", options: [{ id: "a", text: "Asla", correct: false }, { id: "b", text: "Belki", correct: false }, { id: "c", text: "Özellikle", correct: true }, { id: "d", text: "Bazen", correct: false }] },
-    { id: 2, type: "SELECT", question: "'Finalement' ne anlama gelir?", options: [{ id: "a", text: "İlk olarak", correct: false }, { id: "b", text: "Son olarak", correct: true }, { id: "c", text: "Her zaman", correct: false }, { id: "d", text: "Hiçbir zaman", correct: false }] },
-    { id: 3, type: "SELECT", question: "'Allons-y !' ne demek?", options: [{ id: "a", text: "Hadi gidelim / başlayalım!", correct: true }, { id: "b", text: "Durun!", correct: false }, { id: "c", text: "Bilmiyorum", correct: false }, { id: "d", text: "Olsun", correct: false }] },
-    { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "___, ce sera fantastique ! (Bu akşam)", options: [{ id: "a", text: "Ce soir", correct: true }, { id: "b", text: "Ce matin", correct: false }] },
-    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Coupe les ___, mais ne pleure pas ! (Soğanları)", options: [{ id: "a", text: "oignons", correct: true }, { id: "b", text: "tomates", correct: false }] },
-    { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Du poivre", options: [{ id: "a", text: "Biraz karabiber", correct: true }, { id: "b", text: "Biraz tuz", correct: false }, { id: "c", text: "Biraz şeker", correct: false }, { id: "d", text: "Biraz su", correct: false }] },
-    { id: 7, type: "SELECT", question: "Hangi kelime 'Tencere' demektir?", options: [{ id: "a", text: "La casserole", correct: true }, { id: "b", text: "Le bol", correct: false }, { id: "c", text: "Le four", correct: false }, { id: "d", text: "Le sel", correct: false }] },
-    { id: 8, type: "SELECT", question: "Hangi emir formu 'Biz' (Nous) için kullanılır?", options: [{ id: "a", text: "Mangez", correct: false }, { id: "b", text: "Mange", correct: false }, { id: "c", text: "Mangeons", correct: true }, { id: "d", text: "Mangent", correct: false }] },
+    // KOLAY (8 Soru) - Genel Tekrar
+    { id: 1, type: "SELECT", question: "'Le four' ne demek?", options: [{ id: "a", text: "Fırın", correct: true }, { id: "b", text: "Tencere", correct: false }, { id: "c", text: "Kase", correct: false }, { id: "d", text: "Bıçak", correct: false }] },
+    { id: 2, type: "SELECT", question: "'Célèbre' ne demek?", options: [{ id: "a", text: "Ünlü", correct: true }, { id: "b", text: "Yavaş", correct: false }, { id: "c", text: "Hazır", correct: false }, { id: "d", text: "Lezzetli", correct: false }] },
+    { id: 3, type: "SELECT", question: "Eşleştir: 'Surtout' ne demek?", options: [{ id: "a", text: "Özellikle", correct: true }, { id: "b", text: "Bazen", correct: false }, { id: "c", text: "Hiçbir zaman", correct: false }, { id: "d", text: "Daha sonra", correct: false }] },
+    { id: 4, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Coupe les tomates", options: [{ id: "a", text: "Domatesleri kes.", correct: true }, { id: "b", text: "Domatesleri yıka.", correct: false }, { id: "c", text: "Domatesleri soy.", correct: false }, { id: "d", text: "Domatesleri ekle.", correct: false }] },
+    { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "___ du sel.", options: [{ id: "a", text: "Ajoute", correct: true }, { id: "b", text: "Ajoutes", correct: false }] },
+    { id: 6, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la sauce.", options: [{ id: "a", text: "Goûte", correct: true }, { id: "b", text: "Goûtes", correct: false }] },
+    { id: 7, type: "SELECT", question: "Konuşma kalıbı: 'Herkese afiyet olsun!'", options: [{ id: "a", text: "Bon appétit à tous !", correct: true }, { id: "b", text: "Bonsoir à tous !", correct: false }, { id: "c", text: "Bon voyage !", correct: false }, { id: "d", text: "À bientôt !", correct: false }] },
+    { id: 8, type: "SELECT", question: "'Prêt(e)' ne demek?", options: [{ id: "a", text: "Hazır", correct: true }, { id: "b", text: "Tuzlu", correct: false }, { id: "c", text: "Pişmiş", correct: false }, { id: "d", text: "Yavaş", correct: false }] },
 
-    // ORTA (7 Soru) - Karışık Emirler ve Cümle Kurma
-    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Lütfen bana biraz tuz ekleyin (Siz)", correctAnswer: "Ajoutez un peu de sel, s'il vous plaît" },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Televizyonu kapatın! (Siz)", correctAnswer: "Fermez la télé !" },
-    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas les légumes dans le four ! (Sen - Yıkama!)", options: [{ id: "a", text: "lave", correct: true }, { id: "b", text: "lavez", correct: false }] },
-    { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "___ tout le dîner ! (Sen - Yeme!)", options: [{ id: "a", text: "Ne mange pas", correct: true }, { id: "b", text: "Ne mangez pas", correct: false }] },
-    { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ouvrons beaucoup", options: [{ id: "a", text: "Hadi çok açalım", correct: true }, { id: "b", text: "Hadi çok kapatalım", correct: false }, { id: "c", text: "Hadi çok yiyelim", correct: false }, { id: "d", text: "Hadi çok uyuyalım", correct: false }] },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "___-moi s'il te plaît. (Sen - Beni ara/çağır)", options: [{ id: "a", text: "Appelle", correct: true }, { id: "b", text: "Appelez", correct: false }] },
-    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Hadi tencereyi yıkayalım!", correctAnswer: "Lavons la casserole !" },
+    // ORTA (7 Soru)
+    { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Ellerini yıka!", correctAnswer: "Lave-toi les mains !" },
+    { id: 10, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Mets ton tablier", options: [{ id: "a", text: "Önlüğünü tak.", correct: true }, { id: "b", text: "Ellerini yıka.", correct: false }, { id: "c", text: "Sosu karıştır.", correct: false }, { id: "d", text: "Masayı kur.", correct: false }] },
+    { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas le four !", options: [{ id: "a", text: "touche", correct: true }, { id: "b", text: "touchez", correct: false }] },
+    { id: 12, type: "TRANSLATE", question: "Çevir:", hint: "Bana ekmeği uzat lütfen.", correctAnswer: "Passe-moi le pain, s'il te plaît." },
+    { id: 13, type: "SELECT", question: "Hangi cümle 'Hadi başlayalım!' anlamına gelir?", options: [{ id: "a", text: "Allons-y !", correct: true }, { id: "b", text: "Allons-y ?", correct: false }, { id: "c", text: "Aller-y !", correct: false }, { id: "d", text: "Allons !", correct: false }] },
+    { id: 14, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Servez chaud", options: [{ id: "a", text: "Sıcak servis edin.", correct: true }, { id: "b", text: "Soğuk servis edin.", correct: false }, { id: "c", text: "Hemen yiyin.", correct: false }, { id: "d", text: "Sosu dökün.", correct: false }] },
+    { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Sosu iyice karıştırın.", correctAnswer: "Mélangez bien la sauce." },
 
-    // ZOR (5 Soru) - Kompleks Emirler ve Kelimeler
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Soğanları çok hızlı kesme!", correctAnswer: "Ne coupe pas les oignons trop vite !" },
-    { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "Masayı kurmaları için garsonları çağır!", correctAnswer: "Appelle les garçons pour mettre la table !" },
-    { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la sauce lentement, surtout pas trop vite ! (Siz - Karıştırın)", options: [{ id: "a", text: "Mélangez", correct: true }, { id: "b", text: "Mélange", correct: false }] },
-    { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Bu yemeği izlemeyelim!", correctAnswer: "Ne regardons pas ce dîner !" },
-    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Her şeyi bitir! (Sen - Finir)", correctAnswer: "Finis tout !" }
+    // ZOR (5 Soru)
+    { id: 16, type: "SELECT", question: "Doğru olumsuz emir (Sen) hangisi?", options: [{ id: "a", text: "Ne touche pas le four !", correct: true }, { id: "b", text: "Ne touche le four pas !", correct: false }, { id: "c", text: "Ne touchez pas le four !", correct: false }, { id: "d", text: "Ne touche pas le four ?", correct: false }] },
+    { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "___ les légumes ! (Siz)", options: [{ id: "a", text: "Lavez", correct: true }, { id: "b", text: "Lave", correct: false }] },
+    { id: 18, type: "TRANSLATE", question: "Çevir:", hint: "Soğanları çok hızlı kesme!", correctAnswer: "Ne coupe pas les oignons trop vite !" },
+    { id: 19, type: "SELECT", question: "Şef karıştırma hakkında ne diyor?", options: [{ id: "a", text: "Yavaşça, çok hızlı değil.", correct: true }, { id: "b", text: "Hızlıca karıştır.", correct: false }, { id: "c", text: "Karıştırma.", correct: false }, { id: "d", text: "Sadece tuz ekle.", correct: false }] },
+    { id: 20, type: "TRANSLATE", question: "Çevir:", hint: "Bu akşam harika olacak.", correctAnswer: "Ce soir sera fantastique." }
 ];
 
 // Üniteler 341-360

@@ -400,9 +400,9 @@ const unit340Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Le matin, le célèbre chef Pierre est dans sa cuisine à Paris avec son assistant, Julien. Ils préparent le grand dîner de ce soir. Le chef donne ses instructions : 'Julien, d'abord, lave bien tous ces légumes ! Ensuite, coupe les tomates et les oignons, mais ne pleure pas !' Julien répond : 'Oui, Chef. Et la sauce ?' Le chef dit : 'Pour la sauce, ajoute un peu de sel, du poivre, et mélange lentement. Surtout, ne mélange pas trop vite ! Finalement, appelle les garçons pour mettre la table. Ce soir sera fantastique. Allons-y !'",
+    text: "Le matin, le célèbre chef Pierre est dans sa cuisine à Paris avec son assistant, Julien. Ils préparent le grand dîner de ce soir. Le chef donne ses instructions : 'Julien, d'abord, lave bien tous ces légumes ! Ensuite, coupe les tomates et les oignons, mais ne pleure pas !' Julien répond : 'Oui, Chef. Et la sauce ?' Le chef dit : 'Pour la sauce, ajoute un peu de sel, du poivre, et mélange lentement. Surtout, ne mélange pas trop vite !' Avant l'arrivée des invités, ils ajoutent des herbes et goûtent la sauce. Le dîner commence à 20h. Finalement, appelle les garçons pour mettre la table. Ce soir sera fantastique. Allons-y !'",
     translation:
-      "Sabah, ünlü şef Pierre Paris'teki mutfağında asistanı Julien ile birlikte. Bu akşamın büyük yemeğini hazırlıyorlar. Şef talimatlarını veriyor: 'Julien, ilk olarak bu sebzelerin hepsini iyi yıka! Ardından domatesleri ve soğanları kes, ama ağlama!' Julien cevap veriyor: 'Evet, Şef. Peki ya sos?' Şef diyor ki: 'Sos için biraz tuz, biber ekle ve yavaşça karıştır. Özellikle çok hızlı karıştırma! Son olarak masayı kurmaları için garsonları çağır. Bu akşam harika olacak. Hadi gidelim (başlayalım)!'",
+      "Sabah, ünlü şef Pierre Paris'teki mutfağında asistanı Julien ile birlikte. Bu akşamın büyük yemeğini hazırlıyorlar. Şef talimatlarını veriyor: 'Julien, ilk olarak bu sebzelerin hepsini iyi yıka! Ardından domatesleri ve soğanları kes, ama ağlama!' Julien cevap veriyor: 'Evet, Şef. Peki ya sos?' Şef diyor ki: 'Sos için biraz tuz, biber ekle ve yavaşça karıştır. Özellikle çok hızlı karıştırma!' Misafirler gelmeden önce otlar ekleyip sosun tadına bakıyorlar. Akşam yemeği saat 20.00'de başlıyor. Son olarak masayı kurmaları için garsonları çağır. Bu akşam harika olacak. Hadi gidelim (başlayalım)!'",
   },
   questions: [
     {
@@ -452,6 +452,18 @@ const unit340Reading: UnitReading = {
       question: "Metindeki 'Allons-y' kelimesi hangi şahıs emir formudur?",
       options: ["Tu (Sen)", "Nous (Biz)", "Vous (Siz)", "Il (O)"],
       correctAnswer: "Nous (Biz)",
+    },
+    {
+      id: 9,
+      question: "Misafirler gelmeden önce ne yapıyorlar?",
+      options: ["Masayı kuruyorlar", "Sosu çöpe atıyorlar", "Otlar ekleyip tadına bakıyorlar", "Sebzeleri yıkıyorlar"],
+      correctAnswer: "Otlar ekleyip tadına bakıyorlar",
+    },
+    {
+      id: 10,
+      question: "Akşam yemeği saat kaçta başlıyor?",
+      options: ["18.00", "19.00", "20.00", "21.00"],
+      correctAnswer: "20.00",
     },
   ],
   vocabulary: [

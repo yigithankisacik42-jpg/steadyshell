@@ -1659,13 +1659,6 @@ const unit340Vocab: UnitVocabulary = {
       exampleTranslation: "Bir tencerede.",
     },
     {
-      word: "Pleurer",
-      meaning: "Ağlamak",
-      pronunciation: "plö-re",
-      example: "Ne pleure pas !",
-      exampleTranslation: "Ağlama!",
-    },
-    {
       word: "Les tomates",
       meaning: "Domatesler",
       pronunciation: "le-to-mat",
@@ -1706,13 +1699,6 @@ const unit340Vocab: UnitVocabulary = {
       pronunciation: "pre",
       example: "Le dîner est prêt !",
       exampleTranslation: "Akşam yemeği hazır!",
-    },
-    {
-      word: "Ensuite",
-      meaning: "Ardından / Sonra",
-      pronunciation: "an-sü-it",
-      example: "Ensuite, on mange.",
-      exampleTranslation: "Ardından yiyoruz.",
     },
     {
       word: "Délicieux/Délicieuse",

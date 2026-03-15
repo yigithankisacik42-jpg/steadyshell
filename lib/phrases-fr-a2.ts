@@ -772,6 +772,41 @@ const unit340Phrases: FrenchA2UnitPhrases = {
       pronunciation: "bo-na-pe-ti",
     },
     {
+      text: "Coupez les tomates.",
+      meaning: "Domatesleri doğrayın.",
+      pronunciation: "ku-pe le to-mat",
+    },
+    {
+      text: "Ajoutez du sel.",
+      meaning: "Tuz ekleyin.",
+      pronunciation: "a-ju-te du sel",
+    },
+    {
+      text: "Mélangez bien.",
+      meaning: "İyice karıştırın.",
+      pronunciation: "me-lan-je byan",
+    },
+    {
+      text: "Versez un peu d'eau.",
+      meaning: "Biraz su dökün.",
+      pronunciation: "ver-sez un pö do",
+    },
+    {
+      text: "Faites cuire 20 minutes.",
+      meaning: "20 dakika pişirin.",
+      pronunciation: "fet küir van minüt",
+    },
+    {
+      text: "Goûtez la sauce.",
+      meaning: "Sosun tadına bakın.",
+      pronunciation: "gu-te la sos",
+    },
+    {
+      text: "Servez chaud.",
+      meaning: "Sıcak servis edin.",
+      pronunciation: "ser-ve şo",
+    },
+    {
       text: "Passe-moi le pain, s'il te plaît.",
       meaning: "Bana ekmeği uzat lütfen.",
       pronunciation: "pas-mua-lö-pen-sil-tö-ple",
