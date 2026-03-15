@@ -658,24 +658,108 @@ const unit338Grammar: UnitGrammar = {
 // ===== ÜNİTE 339: RESTORANDA SİPARİŞ =====
 const unit339Grammar: UnitGrammar = {
   unitId: 339,
-  title: "Pronoms COD (Doğrudan Nesne Zamirleri)",
+  title: "Restoranda Sipariş - Zamir Kısayolu",
   rules: [
     {
-      id: "fr-a2-cod-pronouns",
-      title: "👆 COD Zamirleri: me, te, le, la, nous, vous, les",
+      id: "fr-a2-restaurant-pronouns-table",
+      title: "🧲 BÖLÜM 1: ZAMİRLER SÖZLÜĞÜ (Kısayol Tuşları)",
       explanation:
-        "Doğrudan nesneyi tekrar etmemek için zamirler kullanılır:\n\n* **Le** (onu - erkek): Je prends le plat. → Je **le** prends.\n* **La** (onu - dişi): Je veux la salade. → Je **la** veux.\n* **Les** (onları): Je commande les desserts. → Je **les** commande.\n\n**Konum:** Zamirler fiilden ÖNCE gelir!\n* Je le veux. ✅\n* Je veux le. ❌",
-      examples: [
-        { fr: "Le menu? Je le regarde.", tr: "Menü mü? Bakıyorum." },
-        {
-          fr: "La carte des vins? Je la voudrais.",
-          tr: "Şarap listesi mi? İsterdim.",
-        },
-        {
-          fr: "Les hors-d'œuvre? Je les recommande.",
-          tr: "Mezeler mi? Tavsiye ederim.",
-        },
-      ],
+        "Önce kimi/neyi kastettiğimizi bilelim. Bu tabloyu adın gibi ezberlemelisin koç!",
+      table: {
+        headers: ["Fransızca Zamir", "Okunuşu 🔊", "Türkçe Anlamı"],
+        rows: [
+          ["Me", "Mö", "Beni"],
+          ["Te", "Tö", "Seni"],
+          ["Le", "Lö", "Onu (Erkek / Le ile başlayanlar)"],
+          ["La", "La", "Onu (Dişi / La ile başlayanlar)"],
+          ["Nous", "Nu", "Bizi"],
+          ["Vous", "Vu", "Sizi"],
+          ["Les", "Le", "Onları (Çoğul / Les ile başlayanlar)"],
+        ],
+      },
+      examples: [],
+    },
+    {
+      id: "fr-a2-restaurant-pronouns-order",
+      title: "📍 BÖLÜM 2: ALTIN KURAL (Nereye Koyacağız?)",
+      explanation:
+        "İngilizcede \"I eat it\" (Ben yerim onu) deriz, yani kelime sona gider.\n" +
+        "Ama Fransızca bu konuda TÜRKÇE İLE BİREBİR AYNIDIR! 😍\n\n" +
+        "Zamir her zaman FİİLDEN (Eylemden) HEMEN ÖNCE gelir!\n" +
+        "**Formül:** ÖZNE + ZAMİR + FİİL\n\n" +
+        "Türkçe Mantığı: Ben + Onu + Yiyorum.\n" +
+        "Fransızca Mantığı: Je + Le + Mange. (🔊 Jö lö manj.)",
+      examples: [],
+    },
+    {
+      id: "fr-a2-restaurant-pronouns-lego",
+      title: "🧩 Adım Adım Lego Birleştirme",
+      explanation:
+        "**Örnek 1: Erkek bir kelime (Le pantalon - Pantolon)**\n" +
+        "Uzun cümle: J'achète le pantalon. (Pantolonu satın alıyorum.)\n" +
+        "\"Pantolon\" erkek olduğu için yerine LE (onu) gelir.\n" +
+        "Kısa cümle: Je le regarde. (Ben onu izliyorum.)\n" +
+        "🔊 Jö lö rögard.\n\n" +
+        "**Örnek 2: Dişi bir kelime (La pomme - Elma)**\n" +
+        "Uzun cümle: Tu manges la pomme. (Elmayı yiyorsun.)\n" +
+        "\"Elma\" dişi olduğu için yerine LA (onu) gelir.\n" +
+        "Kısa cümle: Tu la manges. (Sen onu yiyorsun.)\n" +
+        "🔊 Tü la manj.\n\n" +
+        "**Örnek 3: Çoğul bir kelime (Les tomates - Domatesler)**\n" +
+        "Uzun cümle: Il coupe les tomates. (O, domatesleri kesiyor.)\n" +
+        "\"Domatesler\" çoğul olduğu için yerine LES (onları) gelir.\n" +
+        "Kısa cümle: Il les coupe. (O onları kesiyor.)\n" +
+        "🔊 İl le kup.",
+      examples: [],
+    },
+    {
+      id: "fr-a2-restaurant-pronouns-traps",
+      title: "🚨 BÖLÜM 3: HAYAT KURTARAN 2 UYARI",
+      explanation:
+        "Koç, burası çok önemli, bütün tuzaklar burada gizli:\n\n" +
+        "**Tuzak 1: Çarpışma Kuralı (M', T', L')**\n" +
+        "Eğer fiil sesli harfle (A, E, I, O, U) veya 'H' harfiyle başlıyorsa; Me, Te, Le, La kelimelerindeki sesli harf düşer ve kesme işareti gelir!\n" +
+        "Je le aime → **YANLIŞ**\n" +
+        "Je **l'**aime → **DOĞRU** (🔊 Jö lem)\n" +
+        "Il **m'**écoute. (O beni dinliyor.) → (🔊 İl mekut)\n" +
+        "Je **t'**attends. (Ben seni bekliyorum.) → (🔊 Jö tatend)\n\n" +
+        "**Tuzak 2: LE/LA/LES Makale mi, Zamir mi?**\n" +
+        "Nasıl ayırt edeceğiz? Çok basit:\n" +
+        "Arkasında **İSİM** varsa = \"Belirteçtir\". (Örn: Le livre = Kitap)\n" +
+        "Arkasında **FİİL** varsa = \"Onu/Onları\" demektir. (Örn: Je le lis = Ben onu okuyorum)",
+      examples: [],
+    },
+    {
+      id: "fr-a2-restaurant-dialogue",
+      title: "🗣️ BÖLÜM 4: SESLİ DİYALOG (Yemek Masasında)",
+      explanation:
+        "Senaryo: İki arkadaş (Marie ve Paul) az önce senin tarifinle yaptıkları yemeği yiyorlar.\n\n" +
+        "**Marie:** Cette soupe est délicieuse ! Tu **l'**aimes ?\n" +
+        "🔊 Set sup e delisyöz! Tü lem?\n" +
+        "(Bu çorba (dişi) lezzetli! Sen onu seviyor musun?)\n\n" +
+        "**Paul:** Oui, je la trouve très bonne. Qui a fait ça ?\n" +
+        "🔊 Ui, jö la truv tre bon. Ki a fe sa?\n" +
+        "(Evet, ben onu çok iyi buluyorum. Bunu kim yaptı?)\n\n" +
+        "**Marie:** C'est Yiğithan ! Il nous invite souvent pour manger.\n" +
+        "🔊 Se Yiğithan! İl nuz envit suvan pur manje.\n" +
+        "(Yiğithan! O yemek için bizi sık sık davet eder.)\n\n" +
+        "**Paul:** Ah, super. Et les légumes ? Tu les manges ?\n" +
+        "🔊 A, süper. E le legüm? Tü le manj?\n" +
+        "(Ah, süper. Peki sebzeleri (çoğul)? Sen onları yiyor musun?)\n\n" +
+        "**Marie:** Non, je ne les aime pas. Je te donne mon assiette !\n" +
+        "🔊 No, jö nö le zem pa. Jö tö don mon asyet!\n" +
+        "(Hayır, ben onları sevmiyorum. Tabağımı sana veriyorum!)",
+      examples: [],
+    },
+    {
+      id: "fr-a2-restaurant-task",
+      title: "🚀 KOÇUN KISAYOL GÖREVİ (Şimdi Sen Bağlıyorsun)",
+      explanation:
+        "Dostum, cümleleri kısaltma sanatını öğrendin. Şimdi senin bu \"Lego\" parçalarını doğru yere koyup koyamadığını test edelim.\n\n" +
+        "Şu iki cümleyi çevir ve yüksek sesle oku:\n" +
+        "• \"Ben seni seviyorum.\" (İpucu: Je + seni + aimer. Sesli harf çarpışmasına dikkat!)\n" +
+        "• \"Ben onu (erkek bir şeyi, mesela 'le pantolon') satın alıyorum.\" (İpucu: Je + onu + acheter. Yine sesli harf çarpışması var!)",
+      examples: [],
     },
   ],
 };

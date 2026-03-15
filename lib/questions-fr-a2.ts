@@ -910,12 +910,12 @@ const unit339Quiz1: Question[] = [
     { id: 4, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est occupé.", options: [{ id: "a", text: "serveur", correct: true }, { id: "b", text: "service", correct: false }] },
     { id: 5, type: "FILL_BLANK", question: "Doldur:", sentence: "Donnez-moi la ___.", options: [{ id: "a", text: "carte", correct: true }, { id: "b", text: "carton", correct: false }] },
     { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une table pour deux", options: [{ id: "a", text: "İki kişilik masa", correct: true }, { id: "b", text: "Üç kişilik masa", correct: false }, { id: "c", text: "Tek kişilik masa", correct: false }, { id: "d", text: "Dört kişilik masa", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Le menu' ne demek?", options: [{ id: "a", text: "Menü (Günün menüsü)", correct: true }, { id: "b", text: "Liste", correct: false }, { id: "c", text: "Fiyat", correct: false }, { id: "d", text: "Yemek", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Le menu' ne demek?", options: [{ id: "a", text: "Menü", correct: true }, { id: "b", text: "Liste", correct: false }, { id: "c", text: "Fiyat", correct: false }, { id: "d", text: "Yemek", correct: false }] },
     { id: 8, type: "SELECT", question: "'L'entrée' ne demek?", options: [{ id: "a", text: "Başlangıç yemeği", correct: true }, { id: "b", text: "Ana yemek", correct: false }, { id: "c", text: "Tatlı", correct: false }, { id: "d", text: "İçecek", correct: false }] },
 
     // ORTA (7 Soru) - Sipariş Verme
     { id: 9, type: "TRANSLATE", question: "Çevir:", hint: "Sipariş vermek istiyorum", correctAnswer: "Je voudrais commander" },
-    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Günün menüsü nedir?", correctAnswer: "Quel est le menu du jour?" },
+    { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Günün yemeği nedir?", correctAnswer: "Quel est le plat du jour?" },
     { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Comme entrée, je ___ une salade.", options: [{ id: "a", text: "prends", correct: true }, { id: "b", text: "prend", correct: false }] },
     { id: 12, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous avez ___?", options: [{ id: "a", text: "choisi", correct: true }, { id: "b", text: "choisir", correct: false }] },
     { id: 13, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je prendrai le poulet", options: [{ id: "a", text: "Tavuğu alacağım", correct: true }, { id: "b", text: "Et alacağım", correct: false }, { id: "c", text: "Balık alacağım", correct: false }, { id: "d", text: "Sebze alacağım", correct: false }] },
@@ -923,7 +923,7 @@ const unit339Quiz1: Question[] = [
     { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Masa rezervasyonu yaptım", correctAnswer: "J'ai réservé une table" },
 
     // ZOR (5 Soru) - Diyalog
-    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Ne önerirsiniz?", correctAnswer: "Qu'est-ce que vous nous conseillez?" },
+    { id: 16, type: "TRANSLATE", question: "Çevir:", hint: "Ne önerirsiniz?", correctAnswer: "Qu'est-ce que vous recommandez?" },
     { id: 17, type: "TRANSLATE", question: "Çevir:", hint: "az pişmiş lütfen", correctAnswer: "Saignant s'il vous plaît" },
     { id: 18, type: "FILL_BLANK", question: "Doldur:", sentence: "Avez-vous une table en ___?", options: [{ id: "a", text: "terrasse", correct: true }, { id: "b", text: "terra", correct: false }] },
     { id: 19, type: "TRANSLATE", question: "Çevir:", hint: "Garsonu çağırabilir misin?", correctAnswer: "Peux-tu appeler le serveur?" },

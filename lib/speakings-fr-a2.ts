@@ -527,6 +527,31 @@ const unit339Speaking: UnitSpeaking = {
       translation: "Çok lezzetli!",
       pronunciation: "se de-li-syö",
     },
+    {
+      text: "Nous sommes prêts à commander.",
+      translation: "Sipariş vermeye hazırız.",
+      pronunciation: "nu som pre a ko-man-de",
+    },
+    {
+      text: "Une table pour deux, s'il vous plaît.",
+      translation: "İki kişilik bir masa, lütfen.",
+      pronunciation: "ün tabl pur dö sil vu ple",
+    },
+    {
+      text: "Je prends une salade.",
+      translation: "Bir salata alıyorum.",
+      pronunciation: "jö pran ün sa-lad",
+    },
+    {
+      text: "Sans oignons, s'il vous plaît.",
+      translation: "Soğansız, lütfen.",
+      pronunciation: "san zo-nyon sil vu ple",
+    },
+    {
+      text: "Je peux payer par carte?",
+      translation: "Kartla ödeyebilir miyim?",
+      pronunciation: "jö pö pe-ye par kart",
+    },
   ],
 };
 

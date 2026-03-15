@@ -376,21 +376,79 @@ const unit339Reading: UnitReading = {
   language: "Fransızca",
   level: "A2",
   story: {
-    text: "Emma et son ami sont allés au restaurant. Le serveur leur a apporté le menu. Emma a commandé une salade comme entrée et du poulet comme plat principal. C'était délicieux! À la fin, ils ont demandé l'addition.",
+    text: "Emma et son ami sont allés au restaurant ce soir. Le serveur leur a apporté le menu et une carafe d'eau. Emma a commandé une salade comme entrée et du poulet comme plat principal. Son ami a choisi le plat du jour et une boisson. Ils ont partagé un dessert au chocolat. Le repas était délicieux, mais le service était un peu lent. À la fin, ils ont demandé l'addition et ont payé par carte.",
     translation:
-      "Emma ve arkadaşı restorana gitti. Garson onlara menüyü getirdi. Emma başlangıç olarak salata ve ana yemek olarak tavuk sipariş etti. Çok lezzetliydi! Sonunda hesabı istediler.",
+      "Emma ve arkadaşı bu akşam restorana gitti. Garson onlara menüyü ve bir sürahi suyu getirdi. Emma başlangıç olarak salata ve ana yemek olarak tavuk sipariş etti. Arkadaşı günün yemeğini ve bir içecek seçti. Çikolatalı bir tatlı paylaştılar. Yemek lezzetliydi ama servis biraz yavaştı. Sonunda hesabı istediler ve kartla ödediler.",
   },
   questions: [
     {
       id: 1,
-      question: "Emma ne sipariş etti?",
+      question: "Emma ve arkadaşı nereye gitti?",
+      options: ["Sinemaya", "Restorana", "Okula", "Parka"],
+      correctAnswer: "Restorana",
+    },
+    {
+      id: 2,
+      question: "Garson ne getirdi?",
+      options: ["Tatlı ve kahve", "Menü ve su sürahisi", "Sadece tatlı", "Hesap"],
+      correctAnswer: "Menü ve su sürahisi",
+    },
+    {
+      id: 3,
+      question: "Emma başlangıç olarak ne sipariş etti?",
+      options: ["Çorba", "Salata", "Tatlı", "Balık"],
+      correctAnswer: "Salata",
+    },
+    {
+      id: 4,
+      question: "Emma ana yemek olarak ne sipariş etti?",
       options: ["Balık", "Et", "Tavuk", "Sebze"],
       correctAnswer: "Tavuk",
     },
+    {
+      id: 5,
+      question: "Arkadaşı ne seçti?",
+      options: ["Günün yemeği", "Sadece salata", "Sandviç", "Çorba"],
+      correctAnswer: "Günün yemeği",
+    },
+    {
+      id: 6,
+      question: "Arkadaşı ne aldı?",
+      options: ["Bir içecek", "Hiçbir şey", "Sadece tatlı", "Sadece ekmek"],
+      correctAnswer: "Bir içecek",
+    },
+    {
+      id: 7,
+      question: "Tatlıyı nasıl aldılar?",
+      options: ["Paylaştılar", "Hiç almadılar", "Ayrı ayrı aldılar", "Sadece Emma aldı"],
+      correctAnswer: "Paylaştılar",
+    },
+    {
+      id: 8,
+      question: "Yemek nasıldı?",
+      options: ["Kötüydü", "Lezzetliydi", "Soğuktu", "Tuzsuzdu"],
+      correctAnswer: "Lezzetliydi",
+    },
+    {
+      id: 9,
+      question: "Servis nasıldı?",
+      options: ["Çok hızlıydı", "Biraz yavaştı", "Yoktu", "Çok pahalıydı"],
+      correctAnswer: "Biraz yavaştı",
+    },
+    {
+      id: 10,
+      question: "Sonunda ne yaptılar?",
+      options: ["Hesabı istediler", "Koştular", "Yemek yapmaya başladılar", "İçeri girmediler"],
+      correctAnswer: "Hesabı istediler",
+    },
   ],
   vocabulary: [
-    { word: "L'entrée", meaning: "Başlangıç" },
-    { word: "L'addition", meaning: "Hesap" },
+    { word: "Le serveur", meaning: "Garson" },
+    { word: "La carafe d'eau", meaning: "Su sürahisi" },
+    { word: "Le plat du jour", meaning: "Günün yemeği" },
+    { word: "Le dessert", meaning: "Tatlı" },
+    { word: "Le service", meaning: "Servis" },
+    { word: "Payer par carte", meaning: "Kartla ödemek" },
   ],
 };
 

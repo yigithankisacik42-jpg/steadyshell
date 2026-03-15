@@ -736,6 +736,51 @@ const unit339Phrases: FrenchA2UnitPhrases = {
       meaning: "Kartla ödeyebilir miyim?",
       pronunciation: "jö-pö-pe-ye-par-kart",
     },
+    {
+      text: "Nous sommes prêts à commander.",
+      meaning: "Sipariş vermeye hazırız.",
+      pronunciation: "nu-som-pre-a-ko-man-de",
+    },
+    {
+      text: "Pour moi, la soupe, s'il vous plaît.",
+      meaning: "Benim için çorba lütfen.",
+      pronunciation: "pur-mua-la-sup-sil-vu-ple",
+    },
+    {
+      text: "Je prends une salade.",
+      meaning: "Bir salata alıyorum.",
+      pronunciation: "jö-pran-ün-sa-lad",
+    },
+    {
+      text: "Est-ce que ce plat contient des noix?",
+      meaning: "Bu yemek kuruyemiş içeriyor mu?",
+      pronunciation: "es-kö-sö-pla-kon-tyan-de-nua",
+    },
+    {
+      text: "Sans oignons, s'il vous plaît.",
+      meaning: "Soğansız lütfen.",
+      pronunciation: "san-zo-nyon-sil-vu-ple",
+    },
+    {
+      text: "Une carafe d'eau, s'il vous plaît.",
+      meaning: "Bir sürahi su lütfen.",
+      pronunciation: "ün-ka-raf-do-sil-vu-ple",
+    },
+    {
+      text: "C'est pour ici ou à emporter?",
+      meaning: "Burada mı paket mi?",
+      pronunciation: "se-pu-rsi-u-a-am-por-te",
+    },
+    {
+      text: "Le plat était excellent.",
+      meaning: "Yemek mükemmeldi.",
+      pronunciation: "lö-pla-e-te-ek-se-lan",
+    },
+    {
+      text: "On partage un dessert?",
+      meaning: "Bir tatlı paylaşalım mı?",
+      pronunciation: "on-par-ta-jön-de-sert",
+    },
   ],
 };
 
