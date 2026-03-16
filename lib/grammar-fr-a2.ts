@@ -4,7 +4,6 @@ import { UnitGrammar } from "./grammar";
 // CEFR A2 Standartları: Geçmiş zaman, Gelecek zaman, Karşılaştırmalar, Günlük durumlar
 
 // ===== ÜNİTE 331: GEÇMİŞ TATİLLER =====
-// ===== ÜNİTE 331: GEÇMİŞ TATİLLER =====
 const unit331Grammar: UnitGrammar = {
   unitId: 331,
   title: "Geçmiş Tatiller",
