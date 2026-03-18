@@ -25,6 +25,7 @@ import { getEnglishA1PhrasesForUnit } from './phrases-en-a1';
 import { getEnglishA2PhrasesForUnit } from './phrases-en-a2';
 import { getFrenchA1PhrasesForUnit } from './phrases-fr-a1';
 import { getFrenchA2PhrasesForUnit } from './phrases-fr-a2';
+import { getFrB1PhrasesForUnit } from './phrases-fr-b1';
 import { getUnit } from './curriculum';
 
 export function getPhrasesForUnit(unitId: number): UnitPhrases {
@@ -93,6 +94,22 @@ export function getPhrasesForUnit(unitId: number): UnitPhrases {
                 }))
             };
         }
+    }
+
+    // Fransızca B1 (361-390)
+    if (unitId >= 361 && unitId <= 390) {
+        const frB1Phrases = getFrB1PhrasesForUnit(unitId);
+        const unitInfo = getUnit("fr", "B1", unitId);
+        return {
+            unitId,
+            title: unitInfo?.title || `Ünite ${unitId}`,
+            level: "B1",
+            phrases: frB1Phrases.map(p => ({
+                target: p.text,
+                native: p.meaning,
+                pronunciation: p.pronunciation
+            }))
+        };
     }
 
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===

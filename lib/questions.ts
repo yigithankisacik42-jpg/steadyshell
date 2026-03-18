@@ -585,6 +585,7 @@ import { getEnglishA1QuestionsForUnit } from './questions-en-a1';
 import { getEnglishA2QuestionsForUnit } from './questions-en-a2';
 import { getFrenchA1QuestionsForUnit } from './questions-fr-a1';
 import { getFrenchA2Quiz } from './questions-fr-a2';
+import { getFrenchB1Quiz } from './questions-fr-b1';
 
 export function getQuestionsForUnit(unitId: number, quizIndex: number = 1): Question[] {
     // === İNGİLİZCE ÜNİTELER (ID 101-220) ===
@@ -628,6 +629,11 @@ export function getQuestionsForUnit(unitId: number, quizIndex: number = 1): Ques
     // Fransızca A2 (331-360)
     if (unitId >= 331 && unitId <= 360) {
         return getFrenchA2Quiz(unitId, quizIndex);
+    }
+
+    // Fransızca B1 (361-390)
+    if (unitId >= 361 && unitId <= 390) {
+        return getFrenchB1Quiz(unitId, quizIndex);
     }
 
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===

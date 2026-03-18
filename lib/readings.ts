@@ -9,6 +9,7 @@ import { getB2ReadingForUnit } from './readings-b2';
 import { getEnglishA2ReadingForUnit } from './readings-en-a2';
 import { getReadingForUnit as getFrenchA1ReadingForUnit } from './readings-fr-a1';
 import { getFrenchA2ReadingForUnit } from './readings-fr-a2';
+import { getFrB1ReadingForUnit } from './readings-fr-b1';
 
 export interface ReadingQuestion {
     id: number;
@@ -511,6 +512,12 @@ export function getReadingForUnit(unitId: number): UnitReading {
     if (unitId >= 331 && unitId <= 360) {
         const frA2Reading = getFrenchA2ReadingForUnit(unitId);
         return frA2Reading || unit1Reading;
+    }
+
+    // French B1 seviyesi (361-390)
+    if (unitId >= 361 && unitId <= 390) {
+        const frB1Reading = getFrB1ReadingForUnit(unitId);
+        return frB1Reading || unit1Reading;
     }
 
     return unit1Reading;

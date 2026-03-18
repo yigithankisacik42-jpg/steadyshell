@@ -11,6 +11,7 @@ import { getB2GrammarForUnit } from './grammar-b2';
 import { getA2GrammarForUnit } from './grammar-a2';
 import { getFrenchA1GrammarForUnit } from './grammar-fr-a1';
 import { getFrenchA2GrammarForUnit } from './grammar-fr-a2';
+import { getFrB1GrammarForUnit } from './grammar-fr-b1';
 
 export interface GrammarExample {
     es?: string;
@@ -3267,6 +3268,14 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
         const frA2Grammar = getFrenchA2GrammarForUnit(unitId);
         if (frA2Grammar) {
             return frA2Grammar;
+        }
+    }
+
+    // Fransızca B1 (361-390)
+    if (unitId >= 361 && unitId <= 390) {
+        const frB1Grammar = getFrB1GrammarForUnit(unitId);
+        if (frB1Grammar) {
+            return frB1Grammar;
         }
     }
 

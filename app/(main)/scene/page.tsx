@@ -8,6 +8,7 @@ import Link from "next/link";
 import { SCENE_CATEGORIES, getSceneById, buildSceneSystemPrompt, Scene, LANGUAGE_NAMES } from "@/lib/scenes";
 import { useSpeech } from "@/lib/use-speech";
 import { cn } from "@/lib/utils";
+import { Scene3D } from "@/components/scene-3d";
 
 const LANGUAGES = [
     { code: 'es', name: 'İspanyolca', flag: '🇪🇸' },
@@ -53,6 +54,7 @@ function SceneContent() {
     const [selectedScene, setSelectedScene] = useState<Scene | null>(null);
 
     const [isInChat, setIsInChat] = useState(false);
+    const [is3DMode, setIs3DMode] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputValue, setInputValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -386,11 +388,35 @@ function SceneContent() {
                             </div>
                         </div>
                     </div>
+
+                    <button
+                        onClick={() => setIs3DMode(!is3DMode)}
+                        className={cn(
+                            "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-colors border",
+                            is3DMode
+                                ? "bg-violet-600 border-violet-500 text-white shadow-lg shadow-violet-500/20"
+                                : "bg-white/5 border-white/10 text-white hover:bg-white/10"
+                        )}
+                    >
+                        <Sparkles className="w-4 h-4" />
+                        {is3DMode ? "2D Mod" : "3D Mod"}
+                    </button>
                 </div>
             </header>
 
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto pt-4 pb-[120px] px-4 relative z-10">
+            {/* Main view switch based on mode */}
+            {is3DMode ? (
+                <Scene3D sceneData={selectedScene} messages={messages} isLoading={isLoading} />
+            ) : (
+                <>
+                    {/* Background for 2D */}
+                    <div className="absolute inset-0 pointer-events-none z-0">
+                        <div className="absolute top-[20%] left-[-10%] w-[40rem] h-[40rem] bg-violet-600/10 rounded-full blur-[100px]" />
+                        <div className="absolute bottom-[10%] right-[-10%] w-[30rem] h-[30rem] bg-fuchsia-500/10 rounded-full blur-[80px]" />
+                    </div>
+
+                    {/* Messages for 2D */}
+                    <div className="flex-1 overflow-y-auto pt-4 pb-[120px] px-4 relative z-10">
                 <div className="max-w-3xl mx-auto space-y-5">
                     {messages.map((message, index) => (
                         <div
@@ -450,9 +476,11 @@ function SceneContent() {
                     <div ref={messagesEndRef} />
                 </div>
             </div>
+            </>
+            )}
 
             {/* Floating Input */}
-            <div className="fixed bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent pt-10 z-50">
+            <div className="fixed bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-950/80 via-slate-950/60 to-transparent pt-10 z-50">
                 <div className="max-w-3xl mx-auto">
                     {speechError && (
                         <div className="mb-2 p-2 bg-red-500/20 text-red-300 text-xs font-bold rounded-lg text-center border border-red-500/30">

@@ -202,7 +202,12 @@ const unit309Phrases: FrenchA1UnitPhrases = {
         { text: "Ma chambre est petite.", meaning: "Odam küçük.", pronunciation: "ma-şambr-e-pö-tit" },
         { text: "Ferme la porte, s'il te plaît.", meaning: "Kapıyı kapat lütfen.", pronunciation: "ferm-la-port sil-tö-ple" },
         { text: "Ouvre la fenêtre.", meaning: "Pencereyi aç.", pronunciation: "uvr-la-fö-netr" },
-        { text: "Nous habitons ici.", meaning: "Biz burada yaşıyoruz.", pronunciation: "nu-za-bi-ton-i-si" }
+        { text: "Nous habitons ici.", meaning: "Biz burada yaşıyoruz.", pronunciation: "nu-za-bi-ton-i-si" },
+        { text: "Le tapis est dans le salon.", meaning: "Halı salondadır.", pronunciation: "lö-ta-pi-e-dan-lö-sa-lon" },
+        { text: "Le lit est confortable.", meaning: "Yatak rahattır.", pronunciation: "lö-li-e-kon-for-tabl" },
+        { text: "Où est le miroir?", meaning: "Ayna nerede?", pronunciation: "u-e-lö-mi-ruar" },
+        { text: "Le frigo est dans la cuisine.", meaning: "Buzdolabı mutfaktadır.", pronunciation: "lö-fri-go-e-dan-la-küi-zin" },
+        { text: "Je suis dans ma chambre.", meaning: "Odamdayım.", pronunciation: "jö-süi-dan-ma-şambr" }
     ]
 };
 

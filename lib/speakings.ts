@@ -9,6 +9,7 @@ import { getB1SpeakingForUnit } from './speakings-b1';
 import { getB2SpeakingForUnit } from './speakings-b2';
 import { getFrenchA1SpeakingForUnit } from './speakings-fr-a1';
 import { getFrenchA2SpeakingForUnit } from './speakings-fr-a2';
+import { getFrB1SpeakingForUnit } from './speakings-fr-b1';
 import { getSpanishA1SpeakingForUnit } from './speakings-es-a1';
 
 export interface SpeakingExercise {
@@ -425,6 +426,26 @@ export function getSpeakingForUnit(unitId: number): UnitSpeaking {
                 language: "fr",
                 level: "A2",
                 exercises: frA2Speaking.exercises.map((e, i) => ({
+                    id: i + 1,
+                    type: "repeat" as const,
+                    prompt: "Bu cümleyi tekrar et:",
+                    text: e.text,
+                    translation: e.translation
+                }))
+            };
+        }
+    }
+
+    // Fransızca B1 (361-390)
+    if (unitId >= 361 && unitId <= 390) {
+        const frB1Speaking = getFrB1SpeakingForUnit(unitId);
+        if (frB1Speaking) {
+            return {
+                unitId: unitId,
+                title: `Ünite ${unitId}`,
+                language: "fr",
+                level: "B1",
+                exercises: frB1Speaking.map((e: any, i: number) => ({
                     id: i + 1,
                     type: "repeat" as const,
                     prompt: "Bu cümleyi tekrar et:",
