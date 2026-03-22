@@ -20,10 +20,10 @@ interface Scene3DProps {
 // Sahne ID'lerine göre 3D model dosyası ve NPC konumu eşleştirmesi
 const SCENE_MODEL_MAP: Record<string, { model: string; npcPosition: [number, number, number]; cameraPosition: [number, number, number]; scale: number }> = {
   // Dükkan/Eczane sahnesi
-  pharmacy: { model: "/models/little-shop.glb", npcPosition: [0, 0, -1], cameraPosition: [0, 2, 5], scale: 1 },
-  supermarket: { model: "/models/little-shop.glb", npcPosition: [0, 0, -1], cameraPosition: [0, 2, 5], scale: 1 },
-  bakery: { model: "/models/little-shop.glb", npcPosition: [0, 0, -1], cameraPosition: [0, 2, 5], scale: 1 },
-  market: { model: "/models/little-shop.glb", npcPosition: [0, 0, -1], cameraPosition: [0, 2, 5], scale: 1 },
+  pharmacy: { model: "/models/little-shop.glb", npcPosition: [0, 0, -2], cameraPosition: [0, 1.5, 3], scale: 10 },
+  supermarket: { model: "/models/little-shop.glb", npcPosition: [0, 0, -2], cameraPosition: [0, 1.5, 3], scale: 10 },
+  bakery: { model: "/models/little-shop.glb", npcPosition: [0, 0, -2], cameraPosition: [0, 1.5, 3], scale: 10 },
+  market: { model: "/models/little-shop.glb", npcPosition: [0, 0, -2], cameraPosition: [0, 1.5, 3], scale: 10 },
 };
 
 // GLB Model Yükleyici Bileşeni
@@ -40,7 +40,7 @@ function GLBModel({ modelPath, scale = 1 }: { modelPath: string; scale?: number 
   }, [scene]);
 
   return (
-    <Center>
+    <Center position={[0, -0.5, 0]}>
       <primitive object={scene} scale={scale} />
     </Center>
   );
@@ -243,15 +243,16 @@ export function Scene3D({ sceneData, messages, isLoading }: Scene3DProps) {
         <SceneEnvironment sceneData={sceneData} />
         <NPC isTyping={isLoading} lastAssistantMessage={lastAssistantMessage} position={npcPos as [number, number, number]} />
         
-        {/* Controls */}
+        {/* Controls - Restricted for immersion */}
         <OrbitControls 
           enablePan={false} 
-          minPolarAngle={Math.PI / 6} 
-          maxPolarAngle={Math.PI / 2 + 0.1}
-          minDistance={2}
-          maxDistance={10}
+          minPolarAngle={Math.PI / 3} 
+          maxPolarAngle={Math.PI / 2 - 0.05} // Yerden aşağı inmesin
+          minDistance={1}
+          maxDistance={5} // Odadan dışarı çıkamasın
+          target={[0, 1, -2]} // Her zaman NPC'ye (satıcıya) doğru baksın
         />
-        <ContactShadows position={[0, -0.49, 0]} opacity={0.4} scale={10} blur={2} far={4} />
+        <ContactShadows position={[0, -0.49, 0]} opacity={0.4} scale={20} blur={2} far={4} />
       </Canvas>
     </div>
   );
