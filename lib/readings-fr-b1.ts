@@ -560,6 +560,406 @@ const unit367Reading: UnitReading = {
   ]
 };
 
+const unit368Reading: UnitReading = {
+  unitId: 368,
+  title: "L'Importance du Bien-être",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Pour rester en bonne santé, il ne suffit pas de ne pas être malade. Le bien-être est un équilibre entre la santé physique et la santé mentale. Tout d'abord, une alimentation saine est essentielle. Manger beaucoup de fruits et de légumes donne à notre corps l'énergie nécessaire pour la journée. De plus, il est prouvé que faire de l'exercice régulièrement, comme marcher ou nager, renforce le cœur et réduit le stress.\n\nCependant, il ne faut pas oublier l'importance du sommeil. Les médecins recommandent de dormir au moins huit heures par nuit pour que le cerveau se repose et que les blessures guérissent plus vite. Enfin, prendre du temps pour soi, lire un livre ou méditer aide à garder un esprit sain. Il est important que chacun trouve son propre rythme pour vivre heureux et en pleine forme.",
+    translation: "Sağlıklı kalmak için hasta olmamak yeterli değildir. Zindelik, fiziksel sağlık ile zihinsel sağlık arasında bir dengedir. İlk olarak, sağlıklı bir beslenme esastır. Çok fazla meyve ve sebze yemek, gün için vücudumuza gerekli enerjiyi verir. Ayrıca, yürümek veya yüzmek gibi düzenli egzersiz yapmanın kalbi güçlendirdiği ve stresi azalttığı kanıtlanmıştır.\n\nBununla birlikte, uykunun önemini unutmamak gerekir. Doktorlar, beynin dinlenmesi ve yaraların daha hızlı iyileşmesi için gecede en az sekiz saat uyunmasını önermektedir. Son olarak, kendine zaman ayırmak, kitap okumak veya meditasyon yapmak sağlıklı bir zihin yapısını korumaya yardımcı olur. Herkesin mutlu ve formda yaşamak için kendi ritmini bulması önemlidir."
+  },
+  vocabulary: [
+    { word: "Un équilibre", meaning: "Denge" },
+    { word: "Renforcer", meaning: "Güçlendirmek" },
+    { word: "Le cerveau", meaning: "Beyin" },
+    { word: "Méditer", meaning: "Meditasyon yapmak" },
+    { word: "Le rythme", meaning: "Ritim / Düzen" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Selon le texte, qu'est-ce que le bien-être ?",
+      options: ["Avoir beaucoup d'argent", "Ne pas être malade", "Un équilibre entre la santé physique et mentale", "Dormir toute la journée"],
+      correctAnswer: "Un équilibre entre la santé physique et mentale"
+    },
+    {
+      id: 2,
+      question: "Que donne une alimentation saine à notre corps ?",
+      options: ["De la chaleur", "L'énergie nécessaire pour la journée", "Beaucoup de sommeil", "De l'argent"],
+      correctAnswer: "L'énergie nécessaire pour la journée"
+    },
+    {
+      id: 3,
+      question: "Quels exemples de sport sont donnés dans le texte ?",
+      options: ["Le football et le tennis", "La course à pied", "Marcher ou nager", "Le vélo"],
+      correctAnswer: "Marcher ou nager"
+    },
+    {
+      id: 4,
+      question: "Quels sont les deux effets positifs de l'exercice régulier ?",
+      options: ["Il renforce le cœur et réduit le stress", "Il abîme les genoux", "Il fatigue le cerveau", "Il donne faim"],
+      correctAnswer: "Il renforce le cœur et réduit le stress"
+    },
+    {
+      id: 5,
+      question: "Combien d'heures de sommeil les médecins recommandent-ils ?",
+      options: ["Quatre heures", "Au moins huit heures par nuit", "Dix heures", "Six heures"],
+      correctAnswer: "Au moins huit heures par nuit"
+    },
+    {
+      id: 6,
+      question: "Pourquoi le sommeil est-il si important ?",
+      options: ["Pour rêver de voyages", "Pour que le cerveau se repose et que les blessures guérissent", "Pour ne pas voir les autres", "Pour grandir"],
+      correctAnswer: "Pour que le cerveau se repose et que les blessures guérissent"
+    },
+    {
+      id: 7,
+      question: "Que conseille l'auteur de faire pour garder un esprit sain ?",
+      options: ["Travailler plus", "Regarder la télévision", "Prendre du temps pour soi, lire ou méditer", "Manger des bonbons"],
+      correctAnswer: "Prendre du temps pour soi, lire ou méditer"
+    },
+    {
+      id: 8,
+      question: "Qu'est-ce qui est essentiel selon le début du texte ?",
+      options: ["Avoir des amis", "Une alimentation saine", "Une grande maison", "Un bon téléphone"],
+      correctAnswer: "Une alimentation saine"
+    },
+    {
+      id: 9,
+      question: "Quel mot du texte signifie 'İyileşmek' ?",
+      options: ["Renforcer", "Guérir", "Méditer", "Marcher"],
+      correctAnswer: "Guérir"
+    },
+    {
+      id: 10,
+      question: "Quelle est la conclusion du texte ?",
+      options: ["Il faut boire beaucoup d'eau", "Tout le monde doit courir", "Chacun doit trouver son propre rythme", "La viande est mauvaise"],
+      correctAnswer: "Chacun doit trouver son propre rythme"
+    }
+  ]
+};
+
+const unit369Reading: UnitReading = {
+  unitId: 369,
+  title: "Le Système Éducatif",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "L'éducation est un droit fondamental pour tous les enfants. En France, l'école est obligatoire de 3 à 16 ans. Les élèves commencent par l'école maternelle, puis ils vont à l'école primaire pour apprendre à lire et à écrire. Ensuite, au collège et au lycée, ils étudient diverses matières comme les mathématiques, l'histoire et les langues étrangères. À la fin du lycée, les étudiants passent un examen très important appelé le baccalauréat, ou le 'bac'. Réussir cet examen est essentiel pour aller à l'université.\n\nCependant, l'éducation ne s'arrête pas à l'école. De nos jours, l'apprentissage tout au long de la vie est très valorisé. Les adultes continuent souvent à étudier ou à suivre des cours pour améliorer leurs compétences professionnelles ou simplement pour le plaisir d'apprendre de nouvelles choses.",
+    translation: "Eğitim, tüm çocuklar için temel bir haktır. Fransa'da okul 3 yaşından 16 yaşına kadar zorunludur. Öğrenciler anaokulu ile başlar, ardından okumayı ve yazmayı öğrenmek için ilkokula giderler. Daha sonra ortaokul ve lisede matematik, tarih ve yabancı diller gibi çeşitli dersler çalışırlar. Lisenin sonunda öğrenciler bakalorya veya 'bac' adı verilen çok önemli bir sınava girerler. Bu sınavı geçmek üniversiteye gitmek için esastır.\n\nBununla birlikte, eğitim okulda bitmez. Günümüzde yaşam boyu öğrenmeye büyük değer verilmektedir. Yetişkinler genellikle mesleki becerilerini geliştirmek veya sadece yeni şeyler öğrenmenin zevki için çalışmaya veya ders almaya devam ederler."
+  },
+  vocabulary: [
+    { word: "Obligatoire", meaning: "Zorunlu" },
+    { word: "La matière", meaning: "Maddenin yanı sıra 'Ders / Branş'" },
+    { word: "L'apprentissage (m)", meaning: "Öğrenim / Öğrenme" },
+    { word: "Les compétences (f)", meaning: "Beceriler / Yetenekler" },
+    { word: "Le droit", meaning: "Hak (hukuk)" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "À quel âge l'école est-elle obligatoire en France ?",
+      options: ["De 6 à 18 ans", "De 3 à 16 ans", "De 5 à 15 ans", "De 10 à 20 ans"],
+      correctAnswer: "De 3 à 16 ans"
+    },
+    {
+      id: 2,
+      question: "Quel est le but de l'école primaire selon le texte ?",
+      options: ["Jouer avec des amis", "Passer le bac", "Apprendre à lire et à écrire", "Chercher un emploi"],
+      correctAnswer: "Apprendre à lire et à écrire"
+    },
+    {
+      id: 3,
+      question: "Quelles sont deux matières étudiées au collège et au lycée mentionnées dans le texte ?",
+      options: ["Le sport et la musique", "L'informatique et l'art", "Les mathématiques et l'histoire", "La chimie et la physique"],
+      correctAnswer: "Les mathématiques et l'histoire"
+    },
+    {
+      id: 4,
+      question: "Comment s'appelle l'examen important à la fin du lycée ?",
+      options: ["Le brevet", "Le baccalauréat", "La licence", "Le master"],
+      correctAnswer: "Le baccalauréat"
+    },
+    {
+      id: 5,
+      question: "Pourquoi est-il essentiel de réussir le baccalauréat ?",
+      options: ["Pour aller à l'université", "Pour finir l'école primaire", "Pour voyager", "Pour trouver des amis"],
+      correctAnswer: "Pour aller à l'université"
+    },
+    {
+      id: 6,
+      question: "Selon le texte, quand l'éducation s'arrête-t-elle ?",
+      options: ["À 16 ans", "À la fin du lycée", "Elle ne s'arrête pas à l'école", "À 3 ans"],
+      correctAnswer: "Elle ne s'arrête pas à l'école"
+    },
+    {
+      id: 7,
+      question: "Que font souvent les adultes selon le deuxième paragraphe ?",
+      options: ["Ils retournent au lycée", "Ils arrêtent de lire", "Ils continuent à étudier ou à suivre des cours", "Ils deviennent professeurs"],
+      correctAnswer: "Ils continuent à étudier ou à suivre des cours"
+    },
+    {
+      id: 8,
+      question: "Quel est l'un des buts de l'apprentissage pour les adultes ?",
+      options: ["Acheter une maison", "Améliorer leurs compétences professionnelles", "Passer le bac", "Se reposer"],
+      correctAnswer: "Améliorer leurs compétences professionnelles"
+    },
+    {
+      id: 9,
+      question: "Quel mot du texte signifie 'Zorunlu' ?",
+      options: ["Fondamental", "Profesionnel", "Obligatoire", "Essentiel"],
+      correctAnswer: "Obligatoire"
+    },
+    {
+      id: 10,
+      question: "Laquelle de ces écoles vient en premier dans le système ?",
+      options: ["Le collège", "Le lycée", "L'école maternelle", "L'université"],
+      correctAnswer: "L'école maternelle"
+    }
+  ]
+};
+
+const unit370Reading: UnitReading = {
+  unitId: 370,
+  title: "Protéger Notre Planète",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "La protection de l'environnement est aujourd'hui une urgence mondiale. Chaque année, la pollution et le changement climatique détruisent une partie de la nature. Les forêts disparaissent et de nombreux animaux sauvages perdent leur habitat. Pourtant, nous pouvons tous agir au quotidien pour inverser cette tendance.\n\nEn réduisant notre consommation de plastique et en recyclant nos déchets, nous aidons à garder les océans propres. De plus, il est possible d'économiser l'énergie en éteignant les lumières en sortant d'une pièce. Utiliser les transports en commun ou faire du vélo au lieu de prendre la voiture réduit considérablement la pollution de l'air. En faisant ces petits gestes, nous pouvons préserver la Terre pour les générations futures.",
+    translation: "Cevrenin korunması bugün küresel bir acil durumdur. Her yıl, kirlilik ve iklim değişikliği doğanın bir bölümünü yok ediyor. Ormanlar yok oluyor ve birçok vahşi hayvan yaşam alanlarını kaybediyor. Oysa bu eğilimi tersine çevirmek için hepimiz günlük olarak harekete geçebiliriz.\n\nPlastik tüketimimizi azaltarak ve çöplerimizi geri dönüştürerek, okyanusların temiz kalmasına yardımcı oluyoruz. Ayrıca, bir odadan çıkarken ışıkları kapatarak enerji tasarrufu yapmak mümkündür. Arabayı almak yerine toplu taşımayı kullanmak veya bisiklete binmek hava kirliliğini önemli ölçüde azaltır. Bu küçük jestleri (hareketleri) yaparak Dünyayı gelecek nesiller için koruyabiliriz."
+  },
+  vocabulary: [
+    { word: "Une urgence", meaning: "Acil durum" },
+    { word: "Inverser", meaning: "Tersine çevirmek" },
+    { word: "La tendance", meaning: "Eğilim / Trend" },
+    { word: "Préserver", meaning: "Korumak / Muhafaza etmek" },
+    { word: "Considérablement", meaning: "Önemli ölçüde" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Selon le texte, qu'est-ce qui est une urgence mondiale ?",
+      options: ["Trouver un emploi", "Gagner de l'argent", "La protection de l'environnement", "Aller sur Mars"],
+      correctAnswer: "La protection de l'environnement"
+    },
+    {
+      id: 2,
+      question: "Qu'est-ce qui détruit une partie de la nature chaque année ?",
+      options: ["La météo", "La pollution et le changement climatique", "Les animaux sauvages", "L'océan"],
+      correctAnswer: "La pollution et le changement climatique"
+    },
+    {
+      id: 3,
+      question: "Que perdent de nombreux animaux sauvages ?",
+      options: ["Leur famille", "Leurs amis", "Leur santé", "Leur habitat"],
+      correctAnswer: "Leur habitat"
+    },
+    {
+      id: 4,
+      question: "Comment peut-on aider à garder les océans propres ?",
+      options: ["En nageant souvent", "En réduisant le plastique et en recyclant les déchets", "En pêchant des poissons", "En jetant de l'eau"],
+      correctAnswer: "En réduisant le plastique et en recyclant les déchets"
+    },
+    {
+      id: 5,
+      question: "Que doit-on faire pour économiser de l'énergie à la maison ?",
+      options: ["Laisser la télévision allumée", "Regarder le soleil", "Ouvrir les fenêtres", "Éteindre les lumières en sortant d'une pièce"],
+      correctAnswer: "Éteindre les lumières en sortant d'une pièce"
+    },
+    {
+      id: 6,
+      question: "Quelles alternatives à la voiture sont proposées pour réduire la pollution de l'air ?",
+      options: ["L'avion ou le bateau", "Le taxi", "Utiliser les transports en commun ou faire du vélo", "Rester à la maison"],
+      correctAnswer: "Utiliser les transports en commun ou faire du vélo"
+    },
+    {
+      id: 7,
+      question: "À quoi servent ces 'petits gestes' à la fin du texte ?",
+      options: ["À devenir riche", "À préserver la Terre pour les générations futures", "À courir plus vite", "À voyager moins cher"],
+      correctAnswer: "À préserver la Terre pour les générations futures"
+    },
+    {
+      id: 8,
+      question: "Quel mot du texte signifie 'Yok etmek' ?",
+      options: ["Recycler", "Détruire", "Préserver", "Protéger"],
+      correctAnswer: "Détruire"
+    },
+    {
+      id: 9,
+      question: "Quel temps/mode grammatical est souvent utilisé dans le deuxième paragraphe (ex: en réduisant, en recyclant, en éteignant) ?",
+      options: ["L'Impératif", "Le Gérondif", "Le Subjonctif", "Le Plus-que-parfait"],
+      correctAnswer: "Le Gérondif"
+    },
+    {
+      id: 10,
+      question: "Laquelle de ces actions N'EST PAS mentionnée pour protéger la planète ?",
+      options: ["Planter des arbres", "Réduire le plastique", "Faire du vélo", "Recycler"],
+      correctAnswer: "Planter des arbres"
+    }
+  ]
+};
+
+const unit371Reading: UnitReading = {
+  unitId: 371,
+  title: "La Vie en Ville et Les Transports",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Vivre dans une grande ville a beaucoup d'avantages, mais la circulation est souvent un défi. Il y a des embouteillages tous les jours, surtout le matin et le soir. C'est pourquoi de nombreux citadins préfèrent utiliser les transports en commun.\n\nLe métro est le moyen de transport le plus rapide. Il voyage sous la terre et évite les problèmes de circulation. Le réseau est composé de plusieurs lignes et de nombreuses stations. Pour prendre le métro, il faut acheter un ticket ou utiliser une carte, puis la valider avant de descendre sur le quai.\n\nDans le centre-ville, il y a aussi des bus et des tramways. Certains quartiers sont même réservés aux piétons, ce qui les rend parfaits pour se promener, faire du shopping ou prendre un café en terrasse.",
+    translation: "Büyük bir şehirde yaşamanın birçok avantajı vardır, ancak trafik genellikle bir zorluktur. Her gün, özellikle sabah ve akşam trafikte sıkışıklıklar olur. Bu yüzden birçok şehirli toplu taşıma kullanmayı tercih ediyor.\n\nMetro en hızlı ulaşım aracıdır. Yeraltında seyahat eder ve trafik sorunlarından kaçınır. Ağ, birçok hattan ve istasyondan oluşur. Metroya binmek için bir bilet satın almak veya bir kart kullanmak, ardından perona inmeden önce onu okutmak (onaylamak) gerekir.\n\nŞehir merkezinde otobüsler ve tramvaylar da vardır. Bazı mahalleler hatta sadece yayalara ayrılmıştır, bu da onları yürüyüş yapmak, alışveriş yapmak veya terasta bir kahve içmek için mükemmel hale getirir."
+  },
+  vocabulary: [
+    { word: "Un citadin", meaning: "Şehirde yaşayan kişi" },
+    { word: "Le réseau", meaning: "Ağ (Ulaşım, internet vb.)" },
+    { word: "Le quai", meaning: "Peron / İskele" },
+    { word: "Réservé", meaning: "Ayrılmış / Rezerve edilmiş" },
+    { word: "Se promener", meaning: "Dolaşmak / Yürüyüş yapmak" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Quel est l'un des défis de la vie dans une grande ville selon le texte ?",
+      options: ["La nourriture", "Les musées", "La circulation", "Le silence"],
+      correctAnswer: "La circulation"
+    },
+    {
+      id: 2,
+      question: "Quand y a-t-il souvent des embouteillages ?",
+      options: ["La nuit", "Le week-end", "À midi", "Surtout le matin et le soir"],
+      correctAnswer: "Surtout le matin et le soir"
+    },
+    {
+      id: 3,
+      question: "Que préfèrent utiliser de nombreux citadins ?",
+      options: ["Leur propre voiture", "Les transports en commun", "Les avions", "Les taxis"],
+      correctAnswer: "Les transports en commun"
+    },
+    {
+      id: 4,
+      question: "Quel est le moyen de transport le plus rapide en ville selon le texte ?",
+      options: ["Le métro", "Le bus", "Le vélo", "La voiture"],
+      correctAnswer: "Le métro"
+    },
+    {
+      id: 5,
+      question: "Où voyage le métro ?",
+      options: ["Sur l'eau", "Dans les airs", "Sous la terre", "Sur les montagnes"],
+      correctAnswer: "Sous la terre"
+    },
+    {
+      id: 6,
+      question: "Que faut-il faire avant de descendre sur le quai du métro ?",
+      options: ["Boire un café", "Parler au chauffeur", "Manger rapidement", "Valider son ticket ou sa carte"],
+      correctAnswer: "Valider son ticket ou sa carte"
+    },
+    {
+      id: 7,
+      question: "Que trouve-t-on aussi dans le centre-ville à part le métro ?",
+      options: ["Des avions", "Des bateaux", "Des bus et des tramways", "Des tracteurs"],
+      correctAnswer: "Des bus et des tramways"
+    },
+    {
+      id: 8,
+      question: "À qui sont réservés certains quartiers ?",
+      options: ["Aux voitures", "Aux piétons", "Aux bus", "Aux animaux"],
+      correctAnswer: "Aux piétons"
+    },
+    {
+      id: 9,
+      question: "Qu'est-ce qu'on peut faire dans ces quartiers réservés ?",
+      options: ["Conduire très vite", "Se promener et faire du shopping", "Dormir dans la rue", "Construire des maisons"],
+      correctAnswer: "Se promener et faire du shopping"
+    },
+    {
+      id: 10,
+      question: "Quel mot du texte signifie 'Onaylamak / Okutmak (Bilet)' ?",
+      options: ["Acheter", "Valider", "Descendre", "Éviter"],
+      correctAnswer: "Valider"
+    }
+  ]
+};
+
+const unit372Reading: UnitReading = {
+  unitId: 372,
+  title: "Le Sport dans la Vie Quotidienne",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Le sport occupe une place très importante dans la vie des Français. Beaucoup de personnes pratiquent une activité physique régulièrement, que ce soit en salle de sport, en plein air ou dans un club.\n\nLes sports collectifs comme le football, le basket-ball et le rugby sont très populaires. Chaque week-end, des millions de spectateurs regardent les matchs à la télévision. Les enfants commencent souvent à jouer au football dès l'âge de six ans.\n\nMais les sports individuels ont aussi beaucoup de succès. La course à pied, la natation et le cyclisme attirent de plus en plus de pratiquants. Faire du sport régulièrement permet de rester en forme, de réduire le stress et de se sentir mieux dans sa vie quotidienne.",
+    translation: "Spor, Fransızların hayatında çok önemli bir yer tutar. Birçok kişi düzenli olarak fiziksel bir aktivite yapar, ister spor salonunda, ister açık havada, ister bir kulüpte.\n\nFutbol, basketbol ve ragbi gibi takım sporları çok popülerdir. Her hafta sonu milyonlarca seyirci maçları televizyonda izler. Çocuklar genellikle altı yaşında futbol oynamaya başlarlar.\n\nAma bireysel sporlar da çok başarılıdır. Koşu, yüzme ve bisiklet giderek daha fazla sporcu çeker. Düzenli spor yapmak, formda kalmayı, stresi azaltmayı ve günlük hayatta daha iyi hissetmeyi sağlar."
+  },
+  vocabulary: [
+    { word: "En plein air", meaning: "Açık havada" },
+    { word: "Un spectateur", meaning: "Seyirci / İzleyici" },
+    { word: "Le succès", meaning: "Başarı" },
+    { word: "Un pratiquant", meaning: "Sporcu / Uygulayıcı" },
+    { word: "Se sentir mieux", meaning: "Kendini daha iyi hissetmek" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Quelle place occupe le sport dans la vie des Français ?",
+      options: ["Aucune place", "Une place très importante", "Une petite place", "Seulement pour les enfants"],
+      correctAnswer: "Une place très importante"
+    },
+    {
+      id: 2,
+      question: "Où peut-on pratiquer une activité physique selon le texte ?",
+      options: ["Seulement en salle de sport", "En salle, en plein air ou dans un club", "Seulement dans un club", "Au bureau"],
+      correctAnswer: "En salle, en plein air ou dans un club"
+    },
+    {
+      id: 3,
+      question: "Quels sports collectifs sont cités dans le texte ?",
+      options: ["Le tennis et le golf", "Le football, le basket-ball et le rugby", "La natation et le cyclisme", "L'escalade et le yoga"],
+      correctAnswer: "Le football, le basket-ball et le rugby"
+    },
+    {
+      id: 4,
+      question: "Que font des millions de spectateurs chaque week-end ?",
+      options: ["Ils font du vélo", "Ils regardent les matchs à la télévision", "Ils vont au cinéma", "Ils lisent des livres"],
+      correctAnswer: "Ils regardent les matchs à la télévision"
+    },
+    {
+      id: 5,
+      question: "À quel âge les enfants commencent-ils souvent à jouer au football ?",
+      options: ["Trois ans", "Dix ans", "Six ans", "Huit ans"],
+      correctAnswer: "Six ans"
+    },
+    {
+      id: 6,
+      question: "Quels sports individuels sont mentionnés ?",
+      options: ["Le tennis et le golf", "La course à pied, la natation et le cyclisme", "Le yoga et le ski", "La boxe et le judo"],
+      correctAnswer: "La course à pied, la natation et le cyclisme"
+    },
+    {
+      id: 7,
+      question: "Que permet de faire le sport régulièrement selon le texte ?",
+      options: ["Gagner de l'argent", "Rester en forme et réduire le stress", "Devenir célèbre", "Voyager partout"],
+      correctAnswer: "Rester en forme et réduire le stress"
+    },
+    {
+      id: 8,
+      question: "Quel mot du texte signifie 'Seyirci' ?",
+      options: ["Pratiquant", "Spectateur", "Joueur", "Arbitre"],
+      correctAnswer: "Spectateur"
+    },
+    {
+      id: 9,
+      question: "Les sports individuels ont-ils du succès ?",
+      options: ["Non, pas du tout", "Oui, beaucoup de succès", "Le texte ne dit rien", "Seulement le football"],
+      correctAnswer: "Oui, beaucoup de succès"
+    },
+    {
+      id: 10,
+      question: "Que signifie 'se sentir mieux dans sa vie quotidienne' ?",
+      options: ["Daha fazla para kazanmak", "Günlük hayatta kendini daha iyi hissetmek", "Daha çok uyumak", "Yeni arkadaşlar edinmek"],
+      correctAnswer: "Günlük hayatta kendini daha iyi hissetmek"
+    }
+  ]
+};
+
 export function getFrB1ReadingForUnit(unitId: number): UnitReading | undefined {
   const readings: { [key: number]: UnitReading } = {
     361: unit361Reading,
@@ -568,7 +968,12 @@ export function getFrB1ReadingForUnit(unitId: number): UnitReading | undefined {
     364: unit364Reading,
     365: unit365Reading,
     366: unit366Reading,
-    367: unit367Reading
+    367: unit367Reading,
+    368: unit368Reading,
+    369: unit369Reading,
+    370: unit370Reading,
+    371: unit371Reading,
+    372: unit372Reading
   };
   return readings[unitId];
 }

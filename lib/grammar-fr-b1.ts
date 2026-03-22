@@ -332,7 +332,246 @@ const unit367Grammar: UnitGrammar = {
   ]
 };
 
+const unit368Grammar: UnitGrammar = {
+  unitId: 368,
+  title: "Le Subjonctif Présent (Bölüm 2: Duygu ve İstek)",
+  rules: [
+    {
+      id: "fr-b1-subjonctif-volonte",
+      title: "💭 Bölüm 1: İstek Bildiren Fiiller (Volonté)",
+      explanation:
+        'Birinin bir şey yapmasını **istediğimizde** "Je veux que..." (İstiyorum ki...) veya "Je désire que..." gibi kalıplar kullanırız. Bu kalıplardan sonra fiil her zaman Subjonctif (Dilek) kipinde çekilir.',
+      examples: [
+        { fr: "Je veux que tu te reposes.", tr: "Dinlenmeni istiyorum." },
+        { fr: "Le médecin exige que vous preniez ce médicament.", tr: "Doktor bu ilacı almanızı talep ediyor." }
+      ]
+    },
+    {
+      id: "fr-b1-subjonctif-sentiment",
+      title: "❤️ Bölüm 2: Duygu Bildiren İfadeler (Sentiment)",
+      explanation:
+        'Mutluluk, üzüntü, şaşkınlık veya korku gibi **duyguları** ifade eden kalıplardan ("Je suis content que...", "Je suis triste que...", "J\'ai peur que...") sonra da daima Subjonctif kullanılır.',
+      examples: [
+        { fr: "Je suis content que tu ailles mieux.", tr: "Daha iyi olmana sevindim." },
+        { fr: "J'ai peur qu'il soit malade.", tr: "Onun hasta olmasından korkuyorum." }
+      ]
+    },
+    {
+      id: "fr-b1-subjonctif-regle-sujet",
+      title: "⚠️ Bölüm 3: Önemli Bir Kural (Özne Değişimi)",
+      explanation:
+        'Subjonctif kullanmak için "que" bağlacından önceki özne ile sonraki özne **farklı** olmalıdır. Eğer özne aynıysa, "que" kullanılmaz ve doğrudan mastar (infinitif) fiil söylenir.',
+      examples: [
+        { fr: "Je veux aller à l'hôpital. (Aynı özne: Ben istiyorum, ben gideceğim)", tr: "Hastaneye gitmek istiyorum." },
+        { fr: "Je veux que tu ailles à l'hôpital. (Farklı özne: Ben istiyorum, sen gideceksin)", tr: "Senin hastaneye gitmeni istiyorum." }
+      ]
+    },
+    {
+      id: "fr-b1-subjonctif-sante-exemples",
+      title: "💊 Bölüm 4: Sağlık Konusunda Pratik",
+      explanation:
+        'Sağlık ve zindelik konularında tavsiye veya endişe belirtirken bu yapılar çok sık kullanılır.',
+      examples: [
+        { fr: "Je suis triste que vous ayez mal.", tr: "Ağrınız olmasına üzülüyorum." },
+        { fr: "Il est dommage qu'elle ne fasse pas de sport.", tr: "Onun spor yapmaması ne yazık." }
+      ]
+    }
+  ]
+};
+
+const unit369Grammar: UnitGrammar = {
+  unitId: 369,
+  title: "Le Subjonctif Présent (Bölüm 3: Bağlaçlarla Kullanım)",
+  rules: [
+    {
+      id: "fr-b1-subjonctif-conjonctions-but",
+      title: "🎯 Bölüm 1: Amaç Bildiren Bağlaçlar",
+      explanation:
+        'Birinin bir şey yapması **amacıyla** konuştuğumuzda "pour que" veya "afin que" (-sın diye) kullanırız. Bu bağlaçlardan sonra daima Subjonctif kullanılır.',
+      examples: [
+        { fr: "Je t'aide pour que tu réussisses ton examen.", tr: "Sınavını geçesin diye sana yardım ediyorum." },
+        { fr: "Il parle fort afin que tout le monde l'entende.", tr: "Herkes onu duysun diye yüksek sesle konuşuyor." }
+      ]
+    },
+    {
+      id: "fr-b1-subjonctif-conjonctions-concession",
+      title: "⚖️ Bölüm 2: Zıtlık/Ödün Bildiren Bağlaçlar",
+      explanation:
+        '"Bien que" veya "quoique" (...olmasına rağmen) bağlaçlarından sonra her zaman Subjonctif kipi gelir.',
+      examples: [
+        { fr: "Bien qu'il soit fatigué, il étudie.", tr: "Yorgun olmasına rağmen ders çalışıyor." },
+        { fr: "Elle est venue à l'école bien qu'elle soit malade.", tr: "Hasta olmasına rağmen okula geldi." }
+      ]
+    },
+    {
+      id: "fr-b1-subjonctif-conjonctions-temps",
+      title: "⏳ Bölüm 3: Zaman Bağlaçları (Avant que)",
+      explanation:
+        '"Avant que" (-den önce) bağlacından sonra daima Subjonctif kullanılır. Ancak DİKKAT: "Après que" (-den sonra) bağlacından sonra normal zaman (Indicatif) kullanılır!',
+      examples: [
+        { fr: "Fais tes devoirs avant que le professeur n'arrive.", tr: "Öğretmen gelmeden önce ödevlerini yap." },
+        { fr: "Je pars avant qu'il soit trop tard.", tr: "Çok geç olmadan önce çıkıyorum." }
+      ]
+    },
+    {
+      id: "fr-b1-subjonctif-conjonctions-meme-sujet",
+      title: "⚠️ Bölüm 4: Özneler Aynıysa Ne Olur?",
+      explanation:
+        'Eğer iki eylemi de **aynı kişi** yapıyorsa "pour que" veya "avant que" yerine "pour + mastar" ve "avant de + mastar" kullanılır.',
+      examples: [
+        { fr: "J'étudie pour réussir. (Ben çalışıyorum, ben başaracağım)", tr: "Başarmak için ders çalışıyorum." },
+        { fr: "J'étudie pour que tu réussisses. (Ben çalışıyorum, sen başaracaksın)", tr: "Sen başarasın diye ders çalışıyorum." }
+      ]
+    }
+  ]
+};
+
+const unit370Grammar: UnitGrammar = {
+  unitId: 370,
+  title: "Le Participe Présent et Le Gérondif (-erek, -arak)",
+  rules: [
+    {
+      id: "fr-b1-gerondif-formation",
+      title: "🛠️ Bölüm 1: Nasıl Yapılır? (-ant Eki)",
+      explanation:
+        'Bir fiilden Gérondif (Ulaç) yapmak için fiilin geniş zamandaki "nous" (biz) çekimine bakarız. Sondaki "-ons" ekini atıp yerine **"-ant"** ekleriz. Başına da **"en"** edatını koyarız.\n\nÖrnek:\n*Parler* -> nous parlons -> parlant -> **en parlant** (konuşarak)\n*Finir* -> nous finissons -> finissant -> **en finissant** (bitirerek)',
+      examples: [
+        { fr: "En marchant", tr: "Yürüyerek" },
+        { fr: "En recyclant", tr: "Geri dönüşüm yaparak" }
+      ]
+    },
+    {
+      id: "fr-b1-gerondif-exceptions",
+      title: "⚠️ Bölüm 2: 3 Önemli İstisna Fiil",
+      explanation:
+        'Sadece 3 fiil bu kurala uymaz, bunları ezberlemelisiniz:\n1. **Avoir** (sahip olmak) -> en **ayant** (sahip olarak)\n2. **Être** (olmak) -> en **étant** (olarak)\n3. **Savoir** (bilmek) -> en **sachant** (bilerek)',
+      examples: [
+        { fr: "En étant malade, il est resté à la maison.", tr: "Hasta olduğu için (hasta olarak), evde kaldı." },
+        { fr: "En sachant la vérité, elle a souri.", tr: "Gerçeği bilerek gülümsedi." }
+      ]
+    },
+    {
+      id: "fr-b1-gerondif-simultaneite",
+      title: "⏱️ Bölüm 3: Aynı Anda Gerçekleşen Eylemler",
+      explanation:
+        'Gérondif, **aynı anda** yapılan iki işi anlatmak için çok kullanılır. Türkçeye "-ken, -erek, -arak" diye çevrilir.',
+      examples: [
+        { fr: "Il mange en regardant la télévision.", tr: "Televizyon izleyerek (izlerken) yemek yiyor." },
+        { fr: "Elle travaille en écoutant de la musique.", tr: "Müzik dinleyerek çalışıyor." }
+      ]
+    },
+    {
+      id: "fr-b1-gerondif-maniere-cause",
+      title: "🌿 Bölüm 4: Yöntem ve Çevre Pratiği",
+      explanation:
+        'Bir şeyin **nasıl** veya **neden** yapıldığını açıklarken de Gérondif kullanılır. Çevrecilik konularında sorunu nasıl çözeceğimizi anlatırken çok işe yarar.',
+      examples: [
+        { fr: "En utilisant le vélo, on réduit la pollution.", tr: "Bisiklet kullanarak kirliliği azaltırız." },
+        { fr: "On protège la nature en jetant les déchets à la poubelle.", tr: "Çöpleri çöp kutusuna atarak doğayı koruruz." }
+      ]
+    }
+  ]
+};
+
+const unit371Grammar: UnitGrammar = {
+  unitId: 371,
+  title: "Les Pronoms Relatifs Composés (Lequel, Auquel, Duquel...)",
+  rules: [
+    {
+      id: "fr-b1-pronoms-lequel",
+      title: "🔗 Bölüm 1: 'Lequel' Ailesi (Edatlardan Sonra)",
+      explanation:
+        'Fransızcada "avec (ile), pour (için), sur (üzerinde), dans (içinde)" gibi bir edattan sonra, bahsettiğimiz nesnenin cinsiyetine ve sayısına göre "ki o..." demek için **Lequel** ailesini kullanırız:\n* Eril Tekil: Lequel\n* Dişil Tekil: Laquelle\n* Eril Çoğul: Lesquels\n* Dişil Çoğul: Lesquelles',
+      examples: [
+        { fr: "Le stylo avec lequel j'écris. (stylo = eril)", tr: "Kendisiyle yazdığım kalem." },
+        { fr: "La chaise sur laquelle je suis assis. (chaise = dişil)", tr: "Üzerinde oturduğum sandalye." }
+      ]
+    },
+    {
+      id: "fr-b1-pronoms-auquel",
+      title: "🔄 Bölüm 2: 'À' Edatı ile Birleşimi (Auquel)",
+      explanation:
+        'Eğer fiil "à" edatı alıyorsa (penser à, s\'intéresser à gibi), "à + lequel" birleşerek değişir:\n* à + lequel = **auquel**\n* à + laquelle = **à laquelle** (değişmez)\n* à + lesquels = **auxquels**\n* à + lesquelles = **auxquelles**',
+      examples: [
+        { fr: "Le problème auquel je pense. (penser à un problème)", tr: "Hakkında düşündüğüm problem." },
+        { fr: "Les sports auxquels il s'intéresse.", tr: "İlgilendiği sporlar." }
+      ]
+    },
+    {
+      id: "fr-b1-pronoms-duquel",
+      title: "✂️ Bölüm 3: 'De' Edatı ile Birleşimi (Duquel)",
+      explanation:
+        'Eğer kullanılan ifade "de" edatı ile bitiyorsa (à côté de, près de, à cause de), "de + lequel" birleşir:\n* de + lequel = **duquel**\n* de + laquelle = **de laquelle** (değişmez)\n* de + lesquels = **desquels**\n* de + lesquelles = **desquelles**',
+      examples: [
+        { fr: "Le parc à côté duquel j'habite.", tr: "Yanında yaşadığım park." },
+        { fr: "Les bâtiments près desquels nous sommes.", tr: "Yakınında olduğumuz binalar." }
+      ]
+    },
+    {
+      id: "fr-b1-pronoms-personnes-exception",
+      title: "⚠️ Bölüm 4: İnsanlar İçin İstisna (Qui)",
+      explanation:
+        'ÖNEMLİ: Eğer bahsettiğimiz şey bir **İNSAN** ise, "lequel/laquelle" yerine genellikle edat + **"qui"** kullanmayı tercih ederiz.',
+      examples: [
+        { fr: "L'ami avec qui je voyage. (avec lequel yerine)", tr: "Birlikte seyahat ettiğim arkadaşım." },
+        { fr: "La fille à qui je parle. (à laquelle yerine)", tr: "Konuştuğum kız." }
+      ]
+    }
+  ]
+};
+
+const unit372Grammar: UnitGrammar = {
+  unitId: 372,
+  title: "Spor Fiilleri (Jouer vs Faire) ve Durum Zarfları (-ment)",
+  rules: [
+    {
+      id: "fr-b1-jouer-a",
+      title: "⚽ Bölüm 1: 'Jouer à' (Toplu veya Takım Sporları)",
+      explanation:
+        'Fransızcada **topla oynanan sporlar**, **takım sporları** veya **oyunlar** (satranç, video oyunları) için "jouer à" kullanılır.\n* jouer à + le = **jouer au**\n* jouer à + la = **jouer à la**\n* jouer à + les = **jouer aux**',
+      examples: [
+        { fr: "Je joue au football. (le football)", tr: "Futbol oynuyorum." },
+        { fr: "Ils jouent au tennis tous les dimanches.", tr: "Onlar her pazar tenis oynarlar." },
+        { fr: "Elle joue aux échecs. (les échecs)", tr: "O satranç oynar." }
+      ]
+    },
+    {
+      id: "fr-b1-faire-de",
+      title: "🏃‍♂️ Bölüm 2: 'Faire de' (Bireysel Sporlar ve Aktiviteler)",
+      explanation:
+        '**Bireysel sporlar**, **fiziksel aktiviteler** veya **müzik aletleri** çalmak için "faire de" kullanılır.\n* faire de + le = **faire du**\n* faire de + la = **faire de la**\n* faire de + l\' = **faire de l\'**\n* faire de + les = **faire des**',
+      examples: [
+        { fr: "Je fais de la natation. (la natation)", tr: "Yüzme (sporu) yapıyorum." },
+        { fr: "Il fait du vélo le matin. (le vélo)", tr: "Sabahları bisiklete biner." },
+        { fr: "Nous faisons de l'escalade.", tr: "Biz tırmanış yapıyoruz." }
+      ]
+    },
+    {
+      id: "fr-b1-adverbes-maniere",
+      title: "⚡ Bölüm 3: Durum Zarfları (Les Adverbes de Manière)",
+      explanation:
+        'Bir eylemin **nasıl** yapıldığını belirtmek için zarflar kullanılır (-ca, -ce, -lice anlamı katar). Çoğu zarf, sıfatın **dişil** formuna **"-ment"** eklenerek oluşturulur:\n* lent (eril) -> lente (dişil) -> **lentement** (yavaşça)\n* franc (eril) -> franche (dişil) -> **franchement** (açıkça)',
+      examples: [
+        { fr: "Il marche lentement.", tr: "Yavaşça yürüyor." },
+        { fr: "Elle parle doucement. (doux -> douce -> doucement)", tr: "O yumuşakça (sessizce) konuşuyor." }
+      ]
+    },
+    {
+      id: "fr-b1-adverbes-exceptions",
+      title: "⚠️ Bölüm 4: Zarf Kuralları (İstisnalar)",
+      explanation:
+        '1) Eğer sıfat **sesli harfle** bitiyorsa, doğrudan eril forma "-ment" eklenir:\n* vrai -> **vraiment** (gerçekten)\n* absolu -> **absolument** (kesinlikle)\n\n2) Eğer sıfat **-ant** veya **-ent** ile bitiyorsa, **-amment** veya **-emment** olur (Okunuşları aynıdır: -aman):\n* fréquent -> **fréquemment** (sıkça)\n* méchant -> **méchamment** (kötücül bir şekilde)',
+      examples: [
+        { fr: "Il court rapidement. (rapide -> rapidement)", tr: "Hızlıca koşuyor." },
+        { fr: "C'est vraiment difficile.", tr: "Bu gerçekten zor." },
+        { fr: "Il a répondu intelligemment. (intelligent -> intelligemment)", tr: "Zekice cevap verdi." }
+      ]
+    }
+  ]
+};
+
 export function getFrB1GrammarForUnit(unitId: number): UnitGrammar | undefined {
+
   const grammar: { [key: number]: UnitGrammar } = {
     361: unit361Grammar,
     362: unit362Grammar,
@@ -340,7 +579,12 @@ export function getFrB1GrammarForUnit(unitId: number): UnitGrammar | undefined {
     364: unit364Grammar,
     365: unit365Grammar,
     366: unit366Grammar,
-    367: unit367Grammar
+    367: unit367Grammar,
+    368: unit368Grammar,
+    369: unit369Grammar,
+    370: unit370Grammar,
+    371: unit371Grammar,
+    372: unit372Grammar
   };
   return grammar[unitId];
 }

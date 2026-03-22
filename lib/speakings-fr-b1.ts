@@ -129,6 +129,91 @@ const unit367Speaking: UnitSpeakingFrB1 = {
   ]
 };
 
+const unit368Speaking: UnitSpeakingFrB1 = {
+  unitId: 368,
+  title: "Sağlık ve Zindelik (Santé et Bien-être)",
+  exercises: [
+    { text: "Comment vous sentez-vous aujourd'hui ?", translation: "Bugün kendinizi nasıl hissediyorsunuz?", pronunciation: "ko-man vu san-te vu o-jur-dü-i" },
+    { text: "Je me sens fatigué et j'ai un peu de fièvre.", translation: "Kendimi yorgun hissediyorum ve biraz ateşim var.", pronunciation: "jö mö san fa-ti-ge e je un pö dö fyevr" },
+    { text: "Avez-vous mal quelque part ?", translation: "Bir yeriniz ağrıyor mu?", pronunciation: "a-ve vu mal kel-kö par" },
+    { text: "Oui, j'ai très mal à la gorge.", translation: "Evet, boğazım çok ağrıyor.", pronunciation: "ui, je tre mal a la gorj" },
+    { text: "Je vais vous prescrire quelques médicaments.", translation: "Size birkaç ilaç yazacağım.", pronunciation: "jö ve vu pres-krir kel-kö me-di-ka-man" },
+    { text: "Pensez-vous que c'est grave, docteur ?", translation: "Sizce ciddi mi, doktor?", pronunciation: "pan-se vu kö se grav, dok-tör" },
+    { text: "Non, c'est juste un simple rhume.", translation: "Hayır, sadece basit bir soğuk algınlığı.", pronunciation: "non, se just un sanpl rüm" },
+    { text: "Est-ce que vous faites du sport régulièrement ?", translation: "Düzenli spor yapıyor musunuz?", pronunciation: "es-kö vu fet dü spor re-gü-lyer-man" },
+    { text: "J'essaie de courir deux fois par semaine.", translation: "Haftada iki kez koşmaya çalışıyorum.", pronunciation: "je-sey dö ku-rir dö fua par sö-men" },
+    { text: "C'est très bien pour maintenir votre bien-être.", translation: "Zindeliğinizi korumak için bu çok iyi.", pronunciation: "se tre byan pur man-tö-nir votr byan-etr" }
+  ]
+};
+
+const unit369Speaking: UnitSpeakingFrB1 = {
+  unitId: 369,
+  title: "Eğitim ve Öğrenim (Éducation et Apprentissage)",
+  exercises: [
+    { text: "En quelle année êtes-vous à l'université ?", translation: "Üniversitede kaçıncı yılınızdasınız?", pronunciation: "an kel a-ne et vu a lü-ni-ver-si-te" },
+    { text: "Je suis en dernière année et je prépare mon diplôme.", translation: "Son yılımdayım ve diplomamı hazırlıyorum.", pronunciation: "jö süi an der-nyer a-ne e jö pre-par mon di-plom" },
+    { text: "Quel est votre sujet préféré à l'école ?", translation: "Okulda en sevdiğiniz konu/ders nedir?", pronunciation: "kel e votr sü-je pre-fe-re a le-kol" },
+    { text: "J'aime beaucoup les mathématiques et l'histoire.", translation: "Matematiği ve tarihi çok seviyorum.", pronunciation: "jem bo-ku le ma-te-ma-tik e lis-tuar" },
+    { text: "Avez-vous réussi votre examen de français ?", translation: "Fransızca sınavınızı geçtiniz mi?", pronunciation: "a-ve vu re-ü-si votr eg-za-man dö fran-se" },
+    { text: "Oui, j'ai eu une très bonne note !", translation: "Evet, çok iyi bir not aldım!", pronunciation: "ui, je ü ün tre bon not" },
+    { text: "Que voulez-vous étudier plus tard ?", translation: "İleride ne okumak istiyorsunuz?", pronunciation: "kö vu-le vu e-tü-dye plü tar" },
+    { text: "Je voudrais obtenir une bourse et étudier à l'étranger.", translation: "Burs alıp yurtdışında okumak isterim.", pronunciation: "jö vu-dre ob-tö-nir ün burs e e-tü-dye a le-tran-je" },
+    { text: "Monsieur, pouvez-vous expliquer cette leçon encore une fois ?", translation: "Öğretmenim, bu dersi bir kez daha açıklayabilir misiniz?", pronunciation: "mö-syö, pu-ve vu eks-pli-ke set lö-son an-kor ün fua" },
+    { text: "Bien sûr, écoutez attentivement s'il vous plaît.", translation: "Tabii ki, lütfen dikkatlice dinleyin.", pronunciation: "byan sür, e-ku-te a-tan-tiv-man sil vu ple" }
+  ]
+};
+
+const unit370Speaking: UnitSpeakingFrB1 = {
+  unitId: 370,
+  title: "Doğa ve Çevre (Nature et Environnement)",
+  exercises: [
+    { text: "Que faites-vous pour protéger l'environnement ?", translation: "Çevreyi korumak için ne yapıyorsunuz?", pronunciation: "kö fet vu pur pro-te-je lan-vi-ron-man" },
+    { text: "Je trie mes déchets et je recycle le plastique.", translation: "Çöplerimi ayırıyorum ve plastiği geri dönüştürüyorum.", pronunciation: "jö tri me de-şe e jö rö-sikl lö plas-tik" },
+    { text: "Pensez-vous que le changement climatique est grave ?", translation: "İklim değişikliğinin ciddi olduğunu düşünüyor musunuz?", pronunciation: "pan-se vu kö lö şanj-man kli-ma-tik e grav" },
+    { text: "Oui, c'est le plus grand défi de notre époque.", translation: "Evet, çağımızın en büyük zorluğudur.", pronunciation: "ui, se lö plü gran de-fi dö notr e-pok" },
+    { text: "Est-ce que vous prenez souvent la voiture ?", translation: "Sık sık araba kullanır mısınız?", pronunciation: "es-kö vu prö-ne su-van la vua-tür" },
+    { text: "Non, je préfère utiliser mon vélo ou marcher.", translation: "Hayır, bisikletimi kullanmayı veya yürümeyi tercih ederim.", pronunciation: "non, jö pre-fer ü-ti-li-ze mon ve-lo u mar-şe" },
+    { text: "Les animaux sauvages perdent leur habitat naturel.", translation: "Vahşi hayvanlar doğal yaşam alanlarını kaybediyor.", pronunciation: "lez a-ni-mo so-vaj perd lör a-bi-ta na-tü-rel" },
+    { text: "Nous devrions tous réduire notre consommation d'eau.", translation: "Hepimiz su tüketimimizi azaltmalıyız.", pronunciation: "nu dö-vri-yon tus re-düir notr kon-so-ma-syon do" },
+    { text: "Avez-vous déjà participé à un nettoyage de la plage ?", translation: "Hiç plaj temizliğine katıldınız mı?", pronunciation: "a-ve vu de-ja par-ti-si-pe a un net-tua-yaj dö la plaj" },
+    { text: "Oui, c'était une expérience très enrichissante.", translation: "Evet, çok zenginleştirici bir deneyimdi.", pronunciation: "ui, se-te tün eks-pe-ryans tre an-ri-şis-sant" }
+  ]
+};
+
+const unit371Speaking: UnitSpeakingFrB1 = {
+  unitId: 371,
+  title: "Şehir ve Toplu Taşıma (La Ville et Les Transports)",
+  exercises: [
+    { text: "Excusez-moi, comment puis-je aller au centre-ville ?", translation: "Afedersiniz, şehir merkezine nasıl gidebilirim?", pronunciation: "eks-kü-ze mua, ko-man püi-jö a-le o santr-vil" },
+    { text: "Vous pouvez prendre le bus numéro 12 ou le métro.", translation: "12 numaralı otobüse veya metroya binebilirsiniz.", pronunciation: "vu pu-ve prandr lö büs nü-me-ro duz u lö me-tro" },
+    { text: "C'est loin d'ici ou je peux y aller à pied ?", translation: "Buradan uzak mı yoksa yürüyerek gidebilir miyim?", pronunciation: "se luan di-si u jö pö i a-le a pye" },
+    { text: "Ce n'est pas très loin, environ dix minutes à pied.", translation: "Çok uzak değil, yürüyerek yaklaşık on dakika.", pronunciation: "sö ne pa tre luan, an-vi-ron di mi-nüt a pye" },
+    { text: "Où puis-je acheter un ticket de métro ?", translation: "Nereden metro bileti satın alabilirim?", pronunciation: "u püi-jö aş-te un ti-ke dö me-tro" },
+    { text: "Il y a un distributeur automatique à la station.", translation: "İstasyonda otomatik bir makine (biletmatik) var.", pronunciation: "i-lya un dis-tri-bü-tör o-to-ma-tik a la sta-syon" },
+    { text: "Je suis perdu, pouvez-vous me montrer sur la carte ?", translation: "Kayboldum, haritada bana gösterebilir misiniz?", pronunciation: "jö süi per-dü, pu-ve vu mö mon-tre sür la kart" },
+    { text: "Bien sûr, nous sommes ici et vous devez aller là-bas.", translation: "Tabii ki, biz buradayız ve siz oraya gitmelisiniz.", pronunciation: "byan sür, nu som i-si e vu dö-ve a-le la-ba" },
+    { text: "À quelle heure passe le dernier train ce soir ?", translation: "Bu akşam son tren saat kaçta geçiyor?", pronunciation: "a kel ör pas lö der-nye tran sö suar" },
+    { text: "Le dernier train part à minuit précis.", translation: "Son tren tam gece yarısında kalkıyor.", pronunciation: "lö der-nye tran par a mi-nüi pre-si" }
+  ]
+};
+
+const unit372Speaking: UnitSpeakingFrB1 = {
+  unitId: 372,
+  title: "Spor ve Aktiviteler (Le Sport et Les Activités Physiques)",
+  exercises: [
+    { text: "Quel sport pratiquez-vous régulièrement ?", translation: "Düzenli olarak hangi sporu yapıyorsunuz?", pronunciation: "kel spor pra-ti-ke vu re-gü-lyer-man" },
+    { text: "Je fais de la course à pied tous les matins.", translation: "Her sabah koşu yapıyorum.", pronunciation: "jö fe dö la kurs a pye tu le ma-tan" },
+    { text: "Avez-vous vu le match à la télévision hier soir ?", translation: "Dün akşam maçı televizyonda izlediniz mi?", pronunciation: "a-ve vu vü lö maç a la te-le-viz-yon yer suar" },
+    { text: "Oui, c'était un match incroyable, notre équipe a gagné.", translation: "Evet, inanılmaz bir maçtı, takımımız kazandı.", pronunciation: "ui, se-te un maç an-krua-yabl, notr e-kip a gan-ye" },
+    { text: "Je voudrais m'inscrire à la salle de sport.", translation: "Spor salonuna kaydolmak istiyorum.", pronunciation: "jö vu-dre mans-krir a la sal dö spor" },
+    { text: "Les cours collectifs sont inclus dans l'abonnement.", translation: "Grup dersleri aboneliğe dahildir.", pronunciation: "le kur ko-lek-tif son an-klü dan la-bon-man" },
+    { text: "Ne forcez pas trop si vous ressentez une douleur.", translation: "Bir ağrı hissederseniz fazla zorlamayın.", pronunciation: "nö for-se pa tro si vu rö-san-te ün du-lör" },
+    { text: "Est-ce que tu sais nager le papillon ?", translation: "Kelebek stili yüzmeyi biliyor musun?", pronunciation: "es kö tü se na-je lö pa-pi-yon" },
+    { text: "Le sport collectif nous apprend l'esprit d'équipe.", translation: "Takım sporu bize takım ruhunu öğretir.", pronunciation: "lö spor ko-lek-tif nuz a-pran les-pri de-kip" },
+    { text: "Il faut s'hydrater pendant l'effort physique.", translation: "Fiziksel aktivite sırasında su içmek gerekir.", pronunciation: "il fo sid-ra-te pan-dan le-for fi-zik" }
+  ]
+};
+
 export function getFrB1SpeakingForUnit(unitId: number): SpeakingExerciseFrB1[] {
   const idMapping: { [key: number]: UnitSpeakingFrB1 } = {
     361: unit361Speaking,
@@ -137,7 +222,12 @@ export function getFrB1SpeakingForUnit(unitId: number): SpeakingExerciseFrB1[] {
     364: unit364Speaking,
     365: unit365Speaking,
     366: unit366Speaking,
-    367: unit367Speaking
+    367: unit367Speaking,
+    368: unit368Speaking,
+    369: unit369Speaking,
+    370: unit370Speaking,
+    371: unit371Speaking,
+    372: unit372Speaking
   };
   return idMapping[unitId]?.exercises || unit361Speaking.exercises;
 }

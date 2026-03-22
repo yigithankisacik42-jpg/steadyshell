@@ -684,6 +684,491 @@ const unit367Quiz4: Question[] = [
     { id: 640, type: "SELECT", question: "Suyu nasıl tasarruf edebiliriz? ('En prenant des douches plus courtes')", options: [{ id: "a", text: "Daha kısa duş alarak", correct: true }, { id: "b", text: "Daha çok su içerek", correct: false }, { id: "c", text: "Denize girerek", correct: false }] }
 ];
 
+// ===== UNIT 368 HARDCODED QUIZZES =====
+const unit368Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basic Phrases
+    { id: 641, type: "SELECT", question: "'La santé' ne demek?", options: [{ id: "a", text: "Hastalık", correct: false }, { id: "b", text: "Sağlık", correct: true }, { id: "c", text: "Doktor", correct: false }, { id: "d", text: "Hastane", correct: false }] },
+    { id: 642, type: "SELECT", question: "'Le médecin' ne demek?", options: [{ id: "a", text: "İlaç", correct: false }, { id: "b", text: "Hastane", correct: false }, { id: "c", text: "Doktor", correct: true }, { id: "d", text: "Hemşire", correct: false }] },
+    { id: 643, type: "SELECT", question: "'La douleur' ne demek?", options: [{ id: "a", text: "Ağrı / Acı", correct: true }, { id: "b", text: "Uyku", correct: false }, { id: "c", text: "Ateş", correct: false }, { id: "d", text: "Üzüntü", correct: false }] },
+    { id: 644, type: "SELECT", question: "'Le médicament' ne demek?", options: [{ id: "a", text: "Reçete", correct: false }, { id: "b", text: "Doktor", correct: false }, { id: "c", text: "İlaç", correct: true }, { id: "d", text: "Tedavi", correct: false }] },
+    { id: 645, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'ordonnance", options: [{ id: "a", text: "Hastane", correct: false }, { id: "b", text: "Reçete", correct: true }, { id: "c", text: "Eczane", correct: false }, { id: "d", text: "Ateş", correct: false }] },
+    { id: 646, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Guérir", options: [{ id: "a", text: "İyileşmek", correct: true }, { id: "b", text: "Gülmek", correct: false }, { id: "c", text: "Korumak", correct: false }, { id: "d", text: "Koşmak", correct: false }] },
+    { id: 647, type: "FILL_BLANK", question: "Doldur:", sentence: "L'enfant a beaucoup de ___ (ateş).", options: [{ id: "a", text: "fièvre", correct: true }, { id: "b", text: "toux", correct: false }] },
+    { id: 648, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai attrapé un ___ (soğuk algınlığı).", options: [{ id: "a", text: "rhume", correct: true }, { id: "b", text: "sommeil", correct: false }] },
+    { id: 649, type: "TRANSLATE", question: "Çevir:", hint: "Burnu kanamaya başlıyor.", correctAnswer: "Son nez commence à saigner." },
+    { id: 650, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Bu hafif bir yara.", correctAnswer: "C'est une blessure légère." },
+    { id: 651, type: "SELECT", question: "'Le sommeil' ne demek?", options: [{ id: "a", text: "Rüya", correct: false }, { id: "b", text: "Uyku", correct: true }, { id: "c", text: "Yorgunluk", correct: false }, { id: "d", text: "Güneş", correct: false }] },
+    { id: 652, type: "SELECT", question: "'Fatigué(e)' ne demek?", options: [{ id: "a", text: "Mutlu", correct: false }, { id: "b", text: "Yorgun", correct: true }, { id: "c", text: "Hasta", correct: false }, { id: "d", text: "Aç", correct: false }] },
+    { id: 653, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Respirer", options: [{ id: "a", text: "Dinlenmek", correct: false }, { id: "b", text: "Nefes almak", correct: true }, { id: "c", text: "Cevap vermek", correct: false }, { id: "d", text: "Koşmak", correct: false }] },
+    { id: 654, type: "TRANSLATE", question: "Çevir:", hint: "Sağlıklı beslenmek esastır.", correctAnswer: "Manger sain est essentiel." },
+    { id: 655, type: "SELECT", question: "Hangi cümle 'Düzenli olarak egzersiz yapmak gerekir.' anlamına gelir?", options: [{ id: "a", text: "Il faut bien dormir.", correct: false }, { id: "b", text: "Il faut manger sain.", correct: false }, { id: "c", text: "Il faut faire de l'exercice régulièrement.", correct: true }] },
+    { id: 656, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle suit un ___ strict.", options: [{ id: "a", text: "régime", correct: true }, { id: "b", text: "sommeil", correct: false }] },
+    { id: 657, type: "TRANSLATE", question: "Çevir:", hint: "Yoga genel zindeliği artırır.", correctAnswer: "Le yoga améliore le bien-être général." },
+    { id: 658, type: "SELECT", question: "'Le bien-être' ne demek?", options: [{ id: "a", text: "Zenginlik", correct: false }, { id: "b", text: "Zindelik / Esenlik", correct: true }, { id: "c", text: "Sağlık sigortası", correct: false }, { id: "d", text: "Spor salonu", correct: false }] },
+    { id: 659, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous devez voir un ___.", options: [{ id: "a", text: "médecin", correct: true }, { id: "b", text: "médicament", correct: false }] },
+    { id: 660, type: "SELECT", question: "'La toux' ne demek?", options: [{ id: "a", text: "Ateş", correct: false }, { id: "b", text: "Öksürük", correct: true }, { id: "c", text: "Hapşırma", correct: false }, { id: "d", text: "Terleme", correct: false }] }
+];
+
+const unit368Quiz2: Question[] = [
+    // Quiz 2: Grammar (Le Subjonctif Part 2) & Sentences
+    { id: 661, type: "SELECT", question: "'Je veux que...' kalıbından sonra fiil hangi kipte olmalıdır?", options: [{ id: "a", text: "Le Futur", correct: false }, { id: "b", text: "L'Impératif", correct: false }, { id: "c", text: "Le Subjonctif", correct: true }, { id: "d", text: "L'Imparfait", correct: false }] },
+    { id: 662, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Je veux que tu te ___ (reposer).", options: [{ id: "a", text: "reposes", correct: true }, { id: "b", text: "repose", correct: false }] },
+    { id: 663, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Je suis content que tu ___ (aller) mieux.", options: [{ id: "a", text: "ailles", correct: true }, { id: "b", text: "vas", correct: false }] },
+    { id: 664, type: "SELECT", question: "Hangi durumda Subjonctif YERİNE Mastar (İnfinitif) kullanılır?", options: [{ id: "a", text: "Zaman geçmişse", correct: false }, { id: "b", text: "'que' bağlacından önceki ve sonraki özne aynıysa", correct: true }, { id: "c", text: "Cümle olumsuzsa", correct: false }, { id: "d", text: "Fiil düzensizse", correct: false }] },
+    { id: 665, type: "SELECT", question: "'Prendre' fiilinin 'vous' şahsına göre Subjonctif çekimi hangisidir?", options: [{ id: "a", text: "prenez", correct: false }, { id: "b", text: "prennes", correct: false }, { id: "c", text: "preniez", correct: true }, { id: "d", text: "prennent", correct: false }] },
+    { id: 666, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "J'ai peur qu'il ___ (être) malade.", options: [{ id: "a", text: "soit", correct: true }, { id: "b", text: "est", correct: false }] },
+    { id: 667, type: "FILL_BLANK", question: "Doldur (Mastar mı Subjonctif mi?):", sentence: "Je veux ___ (aller) à l'hôpital. (Özneler aynı)", options: [{ id: "a", text: "aille", correct: false }, { id: "b", text: "aller", correct: true }] },
+    { id: 668, type: "TRANSLATE", question: "Çevir:", hint: "Senin hastaneye gitmeni istiyorum.", correctAnswer: "Je veux que tu ailles à l'hôpital." },
+    { id: 669, type: "SELECT", question: "Hangi cümle doğrudur?", options: [{ id: "a", text: "Je suis triste que tu as mal.", correct: false }, { id: "b", text: "Je suis triste que tu aies mal.", correct: true }] },
+    { id: 670, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je veux que tu te reposes.", options: [{ id: "a", text: "Dinlenmeni istiyorum.", correct: true }, { id: "b", text: "Dinlenmek istiyorum.", correct: false }, { id: "c", text: "Uyumak istiyorum.", correct: false }, { id: "d", text: "Hastaneye gitmeni istiyorum.", correct: false }] },
+    { id: 671, type: "SELECT", question: "Aşağıdakilerden hangisi duygu bildirir ve Subjonctif gerektirir?", options: [{ id: "a", text: "Je pense que...", correct: false }, { id: "b", text: "Je suis content que...", correct: true }, { id: "c", text: "Je sais que...", correct: false }, { id: "d", text: "Il est sûr que...", correct: false }] },
+    { id: 672, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Il est dommage qu'elle ne ___ (faire) pas de sport.", options: [{ id: "a", text: "fasse", correct: true }, { id: "b", text: "fait", correct: false }] },
+    { id: 673, type: "SELECT", question: "'Avoir' fiilinin 'vous' şahsına göre Subjonctif çekimi nedir?", options: [{ id: "a", text: "ayez", correct: true }, { id: "b", text: "avez", correct: false }, { id: "c", text: "aviez", correct: false }, { id: "d", text: "aient", correct: false }] },
+    { id: 674, type: "TRANSLATE", question: "Çevir:", hint: "Ağrınız olmasına üzülüyorum.", correctAnswer: "Je suis triste que vous ayez mal." },
+    { id: 675, type: "SELECT", question: "Hangisi Subjonctif formundadır?", options: [{ id: "a", text: "qu'ils prennent", correct: true }, { id: "b", text: "ils prennent", correct: false }, { id: "c", text: "ils prenaient", correct: false }] },
+    { id: 676, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le médecin exige que vous preniez ce médicament.", options: [{ id: "a", text: "Doktor bu ilacı almanızı talep ediyor.", correct: true }, { id: "b", text: "Doktor reçete yazdı.", correct: false }, { id: "c", text: "Doktor ilacı içti.", correct: false }, { id: "d", text: "İlaç almak zorundasınız.", correct: false }] },
+    { id: 677, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Daha iyi olmana sevindim.", correctAnswer: "Je suis content que tu ailles mieux." },
+    { id: 678, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai peur ___ soit malade.", options: [{ id: "a", text: "qu'il", correct: true }, { id: "b", text: "qu", correct: false }] },
+    { id: 679, type: "SELECT", question: "'Je désire que...' ne demektir?", options: [{ id: "a", text: "Korkuyorum ki...", correct: false }, { id: "b", text: "Arzu ediyorum ki...", correct: true }, { id: "c", text: "Üzgünüm ki...", correct: false }] },
+    { id: 680, type: "TRANSLATE", question: "Çevir:", hint: "Onun hasta olmasından korkuyorum.", correctAnswer: "J'ai peur qu'il soit malade." }
+];
+
+const unit368Quiz3: Question[] = [
+    // Quiz 3: Speaking/Phrases, translation
+    { id: 681, type: "SELECT", question: "Qu'est-ce que 'Je ne me sens pas très bien aujourd'hui' signifie?", options: [{ id: "a", text: "Bugün çok iyi hissediyorum.", correct: false }, { id: "b", text: "Bugün kendimi pek iyi hissetmiyorum.", correct: true }, { id: "c", text: "Bugün hava çok güzel.", correct: false }] },
+    { id: 682, type: "SELECT", question: "'Consulter un médecin' ne demek?", options: [{ id: "a", text: "Doktor olmak", correct: false }, { id: "b", text: "Bir doktora danışmak / görünmek", correct: true }, { id: "c", text: "Hastane aramak", correct: false }] },
+    { id: 683, type: "FILL_BLANK", question: "Doldur:", sentence: "J'ai ___ à la tête et je tousse beaucoup.", options: [{ id: "a", text: "mal", correct: true }, { id: "b", text: "douleur", correct: false }] },
+    { id: 684, type: "TRANSLATE", question: "Çevir:", hint: "Spor, fiziksel ve zihinsel sağlık için mükemmeldir.", correctAnswer: "Le sport est excellent pour la santé physique et mentale." },
+    { id: 685, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Rendez-vous", options: [{ id: "a", text: "Toplantı / Randevu", correct: true }, { id: "b", text: "Reçete", correct: false }, { id: "c", text: "Doktor", correct: false }, { id: "d", text: "İlaç", correct: false }] },
+    { id: 686, type: "SELECT", question: "Hangisi 'Dinlenmeli ve sıcak kalmalısınız.' demektir?", options: [{ id: "a", text: "Vous devez vous reposer et rester au chaud.", correct: true }, { id: "b", text: "Vous allez avoir froid.", correct: false }, { id: "c", text: "Prenez vos médicaments vite.", correct: false }] },
+    { id: 687, type: "TRANSLATE", question: "Çevir:", hint: "Bu sabah ilaçlarınızı aldınız mı?", correctAnswer: "Avez-vous pris vos médicaments ce matin ?" },
+    { id: 688, type: "FILL_BLANK", question: "Doldur:", sentence: "Manger plus de légumes fait partie d'un ___ sain.", options: [{ id: "a", text: "régime", correct: true }, { id: "b", text: "repas", correct: false }] },
+    { id: 689, type: "SELECT", question: "Hangisi 'Kendimi yorgun hissediyorum ve biraz ateşim var.' demektir?", options: [{ id: "a", text: "Je me sens fatigué et j'ai un peu de fièvre.", correct: true }, { id: "b", text: "J'ai mal à la tête et je dors.", correct: false }, { id: "c", text: "Je vais bien aujourd'hui.", correct: false }] },
+    { id: 690, type: "TRANSLATE", question: "Çevir:", hint: "Evet, boğazım çok ağrıyor.", correctAnswer: "Oui, j'ai très mal à la gorge." },
+    { id: 691, type: "FILL_BLANK", question: "Doldur:", sentence: "Je vais vous ___ (yazacağım) quelques médicaments.", options: [{ id: "a", text: "prescrire", correct: true }, { id: "b", text: "donner", correct: false }] },
+    { id: 692, type: "FILL_BLANK", question: "Doldur:", sentence: "Pensez-vous que c'est ___, docteur ? (ciddi)", options: [{ id: "a", text: "grave", correct: true }, { id: "b", text: "grand", correct: false }] },
+    { id: 693, type: "SELECT", question: "Hangisi 'Hayır, sadece basit bir soğuk algınlığı.' demektir?", options: [{ id: "a", text: "Non, c'est très grave.", correct: false }, { id: "b", text: "Non, c'est juste un simple rhume.", correct: true }, { id: "c", text: "C'est une maladie rare.", correct: false }] },
+    { id: 694, type: "TRANSLATE", question: "Çevir:", hint: "Düzenli spor yapıyor musunuz?", correctAnswer: "Est-ce que vous faites du sport régulièrement ?" },
+    { id: 695, type: "SELECT", question: "'J'essaie de courir deux fois par semaine.' çevirisi nedir?", options: [{ id: "a", text: "Haftada iki kez yüzüyorum.", correct: false }, { id: "b", text: "Haftada iki kez koşmaya çalışıyorum.", correct: true }, { id: "c", text: "Her gün koşuyorum.", correct: false }] },
+    { id: 696, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est très bien pour maintenir votre ___ (zindelik).", options: [{ id: "a", text: "bien-être", correct: true }, { id: "b", text: "santé", correct: false }] },
+    { id: 697, type: "TRANSLATE", question: "Çevir:", hint: "Bu hastalıktan iyileşmek ne kadar sürer?", correctAnswer: "Combien de temps faut-il pour guérir de cette maladie ?" },
+    { id: 698, type: "FILL_BLANK", question: "Doldur:", sentence: "Pensez à boire beaucoup d'___ pendant la journée.", options: [{ id: "a", text: "eau", correct: true }, { id: "b", text: "jus", correct: false }] },
+    { id: 699, type: "SELECT", question: "'Avez-vous mal quelque part ?' ne demek?", options: [{ id: "a", text: "Bir yeriniz ağrıyor mu?", correct: true }, { id: "b", text: "Nereye gidiyorsunuz?", correct: false }, { id: "c", text: "İlaç aldınız mı?", correct: false }] },
+    { id: 700, type: "TRANSLATE", question: "Çevir:", hint: "Doktorla randevu almak istiyorum, lütfen.", correctAnswer: "Je voudrais prendre rendez-vous avec le docteur, s'il vous plaît." }
+];
+
+const unit368Quiz4: Question[] = [
+    // Quiz 4: Reading comprehension & mixed review
+    { id: 701, type: "SELECT", question: "Selon le texte, qu'est-ce que le bien-être ?", options: [{ id: "a", text: "Un équilibre entre la santé physique et mentale", correct: true }, { id: "b", text: "Avoir beaucoup d'argent", correct: false }, { id: "c", text: "Ne pas être malade", correct: false }] },
+    { id: 702, type: "TRANSLATE", question: "Çevir:", hint: "Sağlıklı kalmak için hasta olmamak yeterli değildir.", correctAnswer: "Pour rester en bonne santé, il ne suffit pas de ne pas être malade." },
+    { id: 703, type: "SELECT", question: "Quels sont les deux effets positifs de l'exercice régulier ?", options: [{ id: "a", text: "Il fatigue", correct: false }, { id: "b", text: "Il renforce le cœur et réduit le stress", correct: true }, { id: "c", text: "Il donne faim", correct: false }] },
+    { id: 704, type: "FILL_BLANK", question: "Doldur:", sentence: "Une ___ saine est essentielle. (beslenme)", options: [{ id: "a", text: "alimentation", correct: true }, { id: "b", text: "boisson", correct: false }] },
+    { id: 705, type: "SELECT", question: "Combien d'heures de sommeil les médecins recommandent-ils ?", options: [{ id: "a", text: "Six heures", correct: false }, { id: "b", text: "Au moins huit heures par nuit", correct: true }, { id: "c", text: "Dix heures", correct: false }] },
+    { id: 706, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le cerveau", options: [{ id: "a", text: "Kalp", correct: false }, { id: "b", text: "Beyin", correct: true }, { id: "c", text: "Mide", correct: false }, { id: "d", text: "Kas", correct: false }] },
+    { id: 707, type: "TRANSLATE", question: "Çevir:", hint: "Çok fazla meyve ve sebze yemek enerji verir.", correctAnswer: "Manger beaucoup de fruits et de légumes donne de l'énergie." },
+    { id: 708, type: "SELECT", question: "Pourquoi le sommeil est-il si important ?", options: [{ id: "a", text: "Pour que le cerveau se repose et que les blessures guérissent", correct: true }, { id: "b", text: "Pour rêver", correct: false }, { id: "c", text: "Pour ne rien faire", correct: false }] },
+    { id: 709, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Je veux que tu ___ (dormir) bien.", options: [{ id: "a", text: "dormes", correct: true }, { id: "b", text: "dors", correct: false }] },
+    { id: 710, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Meditasyon yapmak sağlıklı bir zihni korumaya yardımcı olur.", correctAnswer: "Méditer aide à garder un esprit sain." },
+    { id: 711, type: "SELECT", question: "Que conseille l'auteur de faire pour garder un esprit sain ?", options: [{ id: "a", text: "Prendre du temps pour soi, lire ou méditer", correct: true }, { id: "b", text: "Travailler plus", correct: false }, { id: "c", text: "Regarder un film", correct: false }] },
+    { id: 712, type: "SELECT", question: "Quelle est la conclusion du texte ?", options: [{ id: "a", text: "Chacun doit trouver son propre rythme", correct: true }, { id: "b", text: "L'eau est importante", correct: false }, { id: "c", text: "Il faut courir", correct: false }] },
+    { id: 713, type: "FILL_BLANK", question: "Doldur:", sentence: "Le sommeil aide pour que les blessures ___ plus vite. (iyileşsin)", options: [{ id: "a", text: "guérissent", correct: true }, { id: "b", text: "guéris", correct: false }] },
+    { id: 714, type: "TRANSLATE", question: "Çevir:", hint: "Herkesin mutlu yaşamak için kendi ritmini bulması önemlidir.", correctAnswer: "Il est important que chacun trouve son propre rythme pour vivre heureux." },
+    { id: 715, type: "SELECT", question: "'Un équilibre' ne demek (metindeki kullanımıyla)?", options: [{ id: "a", text: "Eşitlik", correct: false }, { id: "b", text: "Denge", correct: true }, { id: "c", text: "Agresiflik", correct: false }, { id: "d", text: "Hastalık", correct: false }] },
+    { id: 716, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Renforcer", options: [{ id: "a", text: "Güçlendirmek", correct: true }, { id: "b", text: "Zayıflatmak", correct: false }, { id: "c", text: "Korumak", correct: false }, { id: "d", text: "Değiştirmek", correct: false }] },
+    { id: 717, type: "TRANSLATE", question: "Çevir:", hint: "Düzenli egzersiz yapmak kalbi güçlendirir.", correctAnswer: "Faire de l'exercice régulièrement renforce le cœur." },
+    { id: 718, type: "SELECT", question: "Subjonctif 'Je suis content que vous ___ (aller) bien.' cümlesinde nasıl çekimlenir?", options: [{ id: "a", text: "allez", correct: false }, { id: "b", text: "alliez", correct: true }, { id: "c", text: "vas", correct: false }] },
+    { id: 719, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Il est important qu'il ___ (prendre) son médicament.", options: [{ id: "a", text: "prenne", correct: true }, { id: "b", text: "prend", correct: false }] },
+    { id: 720, type: "SELECT", question: "'Le rythme' kelimesinin metindeki anlamı nedir?", options: [{ id: "a", text: "Müzik", correct: false }, { id: "b", text: "Ritim / Düzen", correct: true }, { id: "c", text: "Hız", correct: false }] }
+];
+
+// ===== UNIT 369 HARDCODED QUIZZES =====
+const unit369Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basic Phrases
+    { id: 721, type: "SELECT", question: "'L'école' ne demek?", options: [{ id: "a", text: "Hastane", correct: false }, { id: "b", text: "Okul", correct: true }, { id: "c", text: "Ev", correct: false }, { id: "d", text: "Öğrenci", correct: false }] },
+    { id: 722, type: "SELECT", question: "'L'étudiant' ne demek?", options: [{ id: "a", text: "Profosör", correct: false }, { id: "b", text: "Eğitim", correct: false }, { id: "c", text: "Öğrenci (Üniversite)", correct: true }, { id: "d", text: "Burs", correct: false }] },
+    { id: 723, type: "SELECT", question: "'La leçon' ne demek?", options: [{ id: "a", text: "Sınav", correct: false }, { id: "b", text: "Okul", correct: false }, { id: "c", text: "Ders (İşlenen konu)", correct: true }, { id: "d", text: "Diploma", correct: false }] },
+    { id: 724, type: "SELECT", question: "'Échouer' ne demek?", options: [{ id: "a", text: "Başarısız olmak / Kalmak", correct: true }, { id: "b", text: "Başarmak", correct: false }, { id: "c", text: "Çalışmak", correct: false }, { id: "d", text: "Öğrenmek", correct: false }] },
+    { id: 725, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'examen", options: [{ id: "a", text: "Not", correct: false }, { id: "b", text: "Sınav", correct: true }, { id: "c", text: "Burs", correct: false }, { id: "d", text: "Ödev", correct: false }] },
+    { id: 726, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Réussir", options: [{ id: "a", text: "Başarmak", correct: true }, { id: "b", text: "Kalmak", correct: false }, { id: "c", text: "Yazmak", correct: false }, { id: "d", text: "Dinlemek", correct: false }] },
+    { id: 727, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle étudie le ___ à l'université. (hukuk)", options: [{ id: "a", text: "droit", correct: true }, { id: "b", text: "devoir", correct: false }] },
+    { id: 728, type: "FILL_BLANK", question: "Doldur:", sentence: "N'oublie pas de faire tes ___ (ödev).", options: [{ id: "a", text: "devoirs", correct: true }, { id: "b", text: "leçons", correct: false }] },
+    { id: 729, type: "TRANSLATE", question: "Çevir:", hint: "Bu konu çok ilginç.", correctAnswer: "Ce sujet est très intéressant." },
+    { id: 730, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Öğretmen dersi açıklıyor.", correctAnswer: "Le professeur explique la leçon." },
+    { id: 731, type: "SELECT", question: "'Le diplôme' ne demek?", options: [{ id: "a", text: "Ödev", correct: false }, { id: "b", text: "Diploma", correct: true }, { id: "c", text: "Üniversite", correct: false }, { id: "d", text: "Sınav", correct: false }] },
+    { id: 732, type: "SELECT", question: "'La bourse' ne demek?", options: [{ id: "a", text: "Ders", correct: false }, { id: "b", text: "Burs", correct: true }, { id: "c", text: "Öğrenci", correct: false }, { id: "d", text: "Özerklik", correct: false }] },
+    { id: 733, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Apprendre", options: [{ id: "a", text: "Çalışmak", correct: false }, { id: "b", text: "Öğrenmek", correct: true }, { id: "c", text: "Öğretmek", correct: false }, { id: "d", text: "Sınav", correct: false }] },
+    { id: 734, type: "TRANSLATE", question: "Çevir:", hint: "O matematik öğretiyor.", correctAnswer: "Elle enseigne les mathématiques." },
+    { id: 735, type: "SELECT", question: "Hangi cümle 'Okullar eylülde açılıyor.' anlamına gelir?", options: [{ id: "a", text: "Les examens sont en septembre.", correct: false }, { id: "b", text: "Le professeur vient en septembre.", correct: false }, { id: "c", text: "La rentrée des classes a lieu en septembre.", correct: true }] },
+    { id: 736, type: "FILL_BLANK", question: "Doldur:", sentence: "Il étudie à la ___. (kütüphane)", options: [{ id: "a", text: "bibliothèque", correct: true }, { id: "b", text: "rentrée", correct: false }] },
+    { id: 737, type: "TRANSLATE", question: "Çevir:", hint: "Tarihten çok iyi bir not aldı.", correctAnswer: "Elle a eu une très bonne note en histoire." },
+    { id: 738, type: "SELECT", question: "'Éduquer' ne demektir? (Kökten türet)", options: [{ id: "a", text: "Eğitmek", correct: true }, { id: "b", text: "Sınav yapmak", correct: false }, { id: "c", text: "Not vermek", correct: false } ] },
+    { id: 739, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un excellent ___ (öğrenci/lise).", options: [{ id: "a", text: "élève", correct: true }, { id: "b", text: "professeur", correct: false }] },
+    { id: 740, type: "SELECT", question: "'La rentrée' ne demek?", options: [{ id: "a", text: "Tatil", correct: false }, { id: "b", text: "Okula dönüş / Okulların açılması", correct: true }, { id: "c", text: "Geç kalma", correct: false }, { id: "d", text: "Sınav dönemi", correct: false }] }
+];
+
+const unit369Quiz2: Question[] = [
+    // Quiz 2: Grammar (Le Subjonctif Part 3) & Sentences
+    { id: 741, type: "SELECT", question: "Hangi bağlaçtan sonra daima Subjonctif kullanılır?", options: [{ id: "a", text: "Après que", correct: false }, { id: "b", text: "Parce que", correct: false }, { id: "c", text: "Bien que", correct: true }, { id: "d", text: "Pendant que", correct: false }] },
+    { id: 742, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Je t'aide pour que tu ___ (réussir) ton examen.", options: [{ id: "a", text: "réussisses", correct: true }, { id: "b", text: "réussis", correct: false }] },
+    { id: 743, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Bien qu'il ___ (être) fatigué, il étudie.", options: [{ id: "a", text: "soit", correct: true }, { id: "b", text: "est", correct: false }] },
+    { id: 744, type: "SELECT", question: "'Pour que' ne demektir?", options: [{ id: "a", text: "-den sonra", correct: false }, { id: "b", text: "-sın diye / amacıyla", correct: true }, { id: "c", text: "Rağmen", correct: false }, { id: "d", text: "Çünkü", correct: false }] },
+    { id: 745, type: "SELECT", question: "'Après que' bağlacından sonra hangi kip kullanılır?", options: [{ id: "a", text: "Subjonctif", correct: false }, { id: "b", text: "Indicatif (Normal Haber Kipi)", correct: true }, { id: "c", text: "Conditionnel", correct: false } ] },
+    { id: 746, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Elle est venue à l'école bien qu'elle ___ (être) malade.", options: [{ id: "a", text: "soit", correct: true }, { id: "b", text: "est", correct: false }] },
+    { id: 747, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Fais tes devoirs avant que le professeur n'___ (arriver).", options: [{ id: "a", text: "arrive", correct: true }, { id: "b", text: "arrives", correct: false }] },
+    { id: 748, type: "TRANSLATE", question: "Çevir:", hint: "Herkes onu duysun diye (afin que) yüksek sesle konuşuyor.", correctAnswer: "Il parle fort afin que tout le monde l'entende." },
+    { id: 749, type: "SELECT", question: "Hangi cümle doğrudur? (Özneler aynı: 'Je' ve 'Je')", options: [{ id: "a", text: "J'étudie pour que je réussisse.", correct: false }, { id: "b", text: "J'étudie pour réussir.", correct: true }] },
+    { id: 750, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je pars avant qu'il soit trop tard.", options: [{ id: "a", text: "Çok geç olmadan önce çıkıyorum.", correct: true }, { id: "b", text: "Geç kaldıktan sonra çıkıyorum.", correct: false }, { id: "c", text: "Okuldan önce çıkıyorum.", correct: false }, { id: "d", text: "Sınavdan sonra gidiyorum.", correct: false }] },
+    { id: 751, type: "SELECT", question: "Aşağıdakilerden hangisi 'Rağmen' anlamında Subjonctif gerektiren bir bağlaçtır?", options: [{ id: "a", text: "Parce que", correct: false }, { id: "b", text: "Quoique", correct: true }, { id: "c", text: "Dès que", correct: false }, { id: "d", text: "Tandis que", correct: false }] },
+    { id: 752, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Je veux t'expliquer la grammaire afin que tu ___ (comprendre).", options: [{ id: "a", text: "comprennes", correct: true }, { id: "b", text: "comprend", correct: false }] },
+    { id: 753, type: "SELECT", question: "Özneler aynıysa 'avant que' yerine ne kullanılır?", options: [{ id: "a", text: "avant + isim", correct: false }, { id: "b", text: "avant de + mastar", correct: true }, { id: "c", text: "après que", correct: false }] },
+    { id: 754, type: "TRANSLATE", question: "Çevir:", hint: "Sen başarasın diye ders çalışıyorum.", correctAnswer: "J'étudie pour que tu réussisses." },
+    { id: 755, type: "SELECT", question: "Hangisi Subjonctif formundadır?", options: [{ id: "a", text: "qu'il lise (lire)", correct: true }, { id: "b", text: "il lit (lire)", correct: false }, { id: "c", text: "il a lu (lire)", correct: false }] },
+    { id: 756, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Bien qu'il soit intelligent, il ne travaille pas.", options: [{ id: "a", text: "Zeki olmasına rağmen çalışmıyor.", correct: true }, { id: "b", text: "Çalışmadığı için zeki değil.", correct: false }, { id: "c", text: "Çok çalışmasına rağmen zeki değil.", correct: false } ] },
+    { id: 757, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Yorgun olmasına rağmen ders çalışıyor.", correctAnswer: "Bien qu'il soit fatigué, il étudie." },
+    { id: 758, type: "FILL_BLANK", question: "Doldur:", sentence: "Il m'aide ___ (afin que) je finisse mes devoirs.", options: [{ id: "a", text: "afin que", correct: true }, { id: "b", text: "pour", correct: false }] },
+    { id: 759, type: "SELECT", question: "'Afin que' ile aynı anlama gelen ve aynı kurallara tabi olan bağlaç hangisidir?", options: [{ id: "a", text: "Avant que", correct: false }, { id: "b", text: "Pour que", correct: true }, { id: "c", text: "Bien que", correct: false }] },
+    { id: 760, type: "TRANSLATE", question: "Çevir:", hint: "Öğretmen gelmeden önce ödevlerini yap.", correctAnswer: "Fais tes devoirs avant que le professeur n'arrive." }
+];
+
+const unit369Quiz3: Question[] = [
+    // Quiz 3: Speaking/Phrases, translation
+    { id: 761, type: "SELECT", question: "Qu'est-ce que 'En quelle année êtes-vous à l'université ?' signifie?", options: [{ id: "a", text: "Hangi üniversiteye gidiyorsunuz?", correct: false }, { id: "b", text: "Üniversitede kaçıncı yılınızdasınız?", correct: true }, { id: "c", text: "Üniversite ne zaman bitiyor?", correct: false }] },
+    { id: 762, type: "SELECT", question: "'Préparer un diplôme' ne demek?", options: [{ id: "a", text: "Sınava hazırlamak", correct: false }, { id: "b", text: "Diploma hazırlamak / Üzerine çalışmak", correct: true }, { id: "c", text: "Mezun olmak", correct: false }] },
+    { id: 763, type: "FILL_BLANK", question: "Doldur:", sentence: "Quel est votre ___ préféré à l'école ? (konu/ders)", options: [{ id: "a", text: "sujet", correct: true }, { id: "b", text: "professeur", correct: false }] },
+    { id: 764, type: "TRANSLATE", question: "Çevir:", hint: "Matematiği ve tarihi çok seviyorum.", correctAnswer: "J'aime beaucoup les mathématiques et l'histoire." },
+    { id: 765, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une bourse", options: [{ id: "a", text: "Okul", correct: false }, { id: "b", text: "Burs", correct: true }, { id: "c", text: "Diploma", correct: false }, { id: "d", text: "Çanta", correct: false }] },
+    { id: 766, type: "SELECT", question: "Hangisi 'Burs alıp yurtdışında okumak isterim.' demektir?", options: [{ id: "a", text: "Je voudrais obtenir une bourse et étudier à l'étranger.", correct: true }, { id: "b", text: "Je suis à l'université en France.", correct: false }, { id: "c", text: "Je veux travailler loin.", correct: false }] },
+    { id: 767, type: "TRANSLATE", question: "Çevir:", hint: "Öğrenciler final sınavlarına hazırlanmalıdır.", correctAnswer: "Les étudiants doivent préparer leurs examens finaux." },
+    { id: 768, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle a obtenu son diplôme avec ___ très bien. (derece)", options: [{ id: "a", text: "mention", correct: true }, { id: "b", text: "note", correct: false }] },
+    { id: 769, type: "SELECT", question: "Hangisi 'Matematik öğretmeni bu yıl çok katı.' demektir?", options: [{ id: "a", text: "Le professeur de mathématiques est très strict cette année.", correct: true }, { id: "b", text: "Le professeur est souvent en retard.", correct: false }, { id: "c", text: "Les profs aiment les maths.", correct: false }] },
+    { id: 770, type: "TRANSLATE", question: "Çevir:", hint: "Bugün kaç dersiniz var?", correctAnswer: "Combien de cours avez-vous aujourd'hui ?" },
+    { id: 771, type: "FILL_BLANK", question: "Doldur:", sentence: "J'espère réussir cet examen car j'ai ___ (çok) étudié.", options: [{ id: "a", text: "beaucoup", correct: true }, { id: "b", text: "très", correct: false }] },
+    { id: 772, type: "FILL_BLANK", question: "Doldur:", sentence: "Écoutez ___ (dikkatlice) s'il vous plaît.", options: [{ id: "a", text: "attentivement", correct: true }, { id: "b", text: "lentement", correct: false }] },
+    { id: 773, type: "SELECT", question: "Hangisi 'Okulların açılması her zaman stresli bir andır.' demektir?", options: [{ id: "a", text: "L'école est toujours drôle.", correct: false }, { id: "b", text: "La rentrée scolaire est toujours un moment stressant.", correct: true }, { id: "c", text: "La fin des cours approche.", correct: false }] },
+    { id: 774, type: "TRANSLATE", question: "Çevir:", hint: "Çıkmadan önce ödevlerini yapmayı unutma.", correctAnswer: "N'oublie pas de faire tes devoirs avant de sortir." },
+    { id: 775, type: "SELECT", question: "'Que voulez-vous étudier plus tard ?' çevirisi nedir?", options: [{ id: "a", text: "Hangi üniversiteye gitmek istersin?", correct: false }, { id: "b", text: "İleride ne okumak istiyorsunuz?", correct: true }, { id: "c", text: "Neden ders çalışmıyorsun?", correct: false }] },
+    { id: 776, type: "FILL_BLANK", question: "Doldur:", sentence: "Monsieur, pouvez-vous ___ (açıklamak) cette leçon encore une fois ?", options: [{ id: "a", text: "expliquer", correct: true }, { id: "b", text: "répéter", correct: false }] },
+    { id: 777, type: "TRANSLATE", question: "Çevir:", hint: "Evet, çok iyi bir not aldım!", correctAnswer: "Oui, j'ai eu une très bonne note !" },
+    { id: 778, type: "FILL_BLANK", question: "Doldur:", sentence: "L'éducation est ___ pour l'avenir des jeunes. (esastır)", options: [{ id: "a", text: "essentielle", correct: true }, { id: "b", text: "facile", correct: false }] },
+    { id: 779, type: "SELECT", question: "'Je suis en dernière année' ne demek?", options: [{ id: "a", text: "Son yılımdayım", correct: true }, { id: "b", text: "Geçen yıl mezun oldum", correct: false }, { id: "c", text: "İlk senem", correct: false }] },
+    { id: 780, type: "TRANSLATE", question: "Çevir:", hint: "Tabii ki, lütfen dikkatlice dinleyin.", correctAnswer: "Bien sûr, écoutez attentivement s'il vous plaît." }
+];
+
+const unit369Quiz4: Question[] = [
+    // Quiz 4: Reading comprehension & mixed review
+    { id: 781, type: "SELECT", question: "À quel âge l'école est-elle obligatoire en France ?", options: [{ id: "a", text: "De 3 à 16 ans", correct: true }, { id: "b", text: "De 6 à 18 ans", correct: false }, { id: "c", text: "De 7 à 15 ans", correct: false }] },
+    { id: 782, type: "TRANSLATE", question: "Çevir:", hint: "Eğitim, tüm çocuklar için temel bir haktır.", correctAnswer: "L'éducation est un droit fondamental pour tous les enfants." },
+    { id: 783, type: "SELECT", question: "Quel est le but de l'école primaire ?", options: [{ id: "a", text: "Passer le bac", correct: false }, { id: "b", text: "Apprendre à lire et à écrire", correct: true }, { id: "c", text: "Trouver un travail", correct: false }] },
+    { id: 784, type: "FILL_BLANK", question: "Doldur:", sentence: "Les élèves étudient diverses ___ (dersler).", options: [{ id: "a", text: "matières", correct: true }, { id: "b", text: "écoles", correct: false }] },
+    { id: 785, type: "SELECT", question: "Quel examen les étudiants passent-ils à la fin du lycée ?", options: [{ id: "a", text: "Le brevet", correct: false }, { id: "b", text: "Le baccalauréat", correct: true }, { id: "c", text: "Le permis", correct: false }] },
+    { id: 786, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'apprentissage", options: [{ id: "a", text: "Öğrenci", correct: false }, { id: "b", text: "Öğrenim / Öğrenme", correct: true }, { id: "c", text: "Öğretmen", correct: false }, { id: "d", text: "Sınav", correct: false }] },
+    { id: 787, type: "TRANSLATE", question: "Çevir:", hint: "Bu sınavı geçmek üniversiteye gitmek için esastır.", correctAnswer: "Réussir cet examen est essentiel pour aller à l'université." },
+    { id: 788, type: "SELECT", question: "Selon le texte, quand l'éducation s'arrête-t-elle ?", options: [{ id: "a", text: "Elle ne s'arrête pas à l'école", correct: true }, { id: "b", text: "À 16 ans", correct: false }, { id: "c", text: "À 18 ans", correct: false }] },
+    { id: 789, type: "FILL_BLANK", question: "Doldur:", sentence: "L'apprentissage tout au long de la ___ est valorisé. (hayat/yaşam)", options: [{ id: "a", text: "vie", correct: true }, { id: "b", text: "journée", correct: false }] },
+    { id: 790, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Eğitim okulda bitmez.", correctAnswer: "L'éducation ne s'arrête pas à l'école." },
+    { id: 791, type: "SELECT", question: "Quel est l'un des buts de l'apprentissage pour les adultes ?", options: [{ id: "a", text: "Améliorer leurs compétences professionnelles", correct: true }, { id: "b", text: "Jouer plus", correct: false }, { id: "c", text: "Dormir", correct: false }] },
+    { id: 792, type: "SELECT", question: "'Les compétences' ne demek?", options: [{ id: "a", text: "Beceriler / Yetenekler", correct: true }, { id: "b", text: "Notlar", correct: false }, { id: "c", text: "Diplomalar", correct: false }] },
+    { id: 793, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Je veux t'aider pour que tu ___ (avoir) de bonnes notes.", options: [{ id: "a", text: "aies", correct: true }, { id: "b", text: "as", correct: false }] },
+    { id: 794, type: "TRANSLATE", question: "Çevir:", hint: "Yetişkinler ders almaya devam ederler.", correctAnswer: "Les adultes continuent à suivre des cours." },
+    { id: 795, type: "SELECT", question: "'Obligatoire' ne demek?", options: [{ id: "a", text: "İsteğe bağlı", correct: false }, { id: "b", text: "Zorunlu", correct: true }, { id: "c", text: "Zor", correct: false }, { id: "d", text: "Uzun", correct: false }] },
+    { id: 796, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une école maternelle", options: [{ id: "a", text: "Anaokulu", correct: true }, { id: "b", text: "İlkokul", correct: false }, { id: "c", text: "Lise", correct: false }, { id: "d", text: "Üniversite", correct: false }] },
+    { id: 797, type: "TRANSLATE", question: "Çevir:", hint: "Yeni şeyler öğrenmenin zevki.", correctAnswer: "Le plaisir d'apprendre de nouvelles choses." },
+    { id: 798, type: "SELECT", question: "Hangi bağlaçtan sonra 'Subjonctif' GELMEZ?", options: [{ id: "a", text: "Avant que", correct: false }, { id: "b", text: "Après que", correct: true }, { id: "c", text: "Bien que", correct: false }] },
+    { id: 799, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Bien qu'il ___ (étudier) beaucoup, l'examen est difficile.", options: [{ id: "a", text: "étudie", correct: true }, { id: "b", text: "étudies", correct: false }] },
+    { id: 800, type: "SELECT", question: "Üniversiteden önceki eğitim aşaması Fransa'da hangisidir?", options: [{ id: "a", text: "Le lycée", correct: true }, { id: "b", text: "L'école maternelle", correct: false }, { id: "c", text: "Le collège", correct: false }] }
+];
+
+// ===== UNIT 370 HARDCODED QUIZZES =====
+const unit370Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basic Phrases
+    { id: 801, type: "SELECT", question: "'L'environnement' ne demek?", options: [{ id: "a", text: "Doğa", correct: false }, { id: "b", text: "Çevre", correct: true }, { id: "c", text: "Ağaç", correct: false }, { id: "d", text: "Deniz", correct: false }] },
+    { id: 802, type: "SELECT", question: "'La pollution' ne demek?", options: [{ id: "a", text: "Çözüm", correct: false }, { id: "b", text: "Kirlilik", correct: true }, { id: "c", text: "Geri dönüşüm", correct: false }, { id: "d", text: "Atıklar", correct: false }] },
+    { id: 803, type: "SELECT", question: "'Les déchets' ne demek?", options: [{ id: "a", text: "Çöp / Atıklar", correct: true }, { id: "b", text: "Enerji", correct: false }, { id: "c", text: "Okyanus", correct: false }, { id: "d", text: "Orman", correct: false }] },
+    { id: 804, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Protéger", options: [{ id: "a", text: "Yok etmek", correct: false }, { id: "b", text: "Korumak", correct: true }, { id: "c", text: "Kirletmek", correct: false }, { id: "d", text: "Geri dönüştürmek", correct: false }] },
+    { id: 805, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Recycler", options: [{ id: "a", text: "Atmak", correct: false }, { id: "b", text: "Geri dönüştürmek", correct: true }, { id: "c", text: "Temizlemek", correct: false }, { id: "d", text: "Yakmak", correct: false }] },
+    { id: 806, type: "TRANSLATE", question: "Çevir:", hint: "Bu ağaç yüz yaşından büyük.", correctAnswer: "Cet arbre a plus de cent ans." },
+    { id: 807, type: "FILL_BLANK", question: "Doldur:", sentence: "Les animaux sauvages vivent dans la ___. (orman)", options: [{ id: "a", text: "forêt", correct: true }, { id: "b", text: "mer", correct: false }] },
+    { id: 808, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Plastiği geri dönüştürmek önemlidir.", correctAnswer: "Il est important de recycler le plastique." },
+    { id: 809, type: "SELECT", question: "'Détruire' ne demek?", options: [{ id: "a", text: "İnşa etmek", correct: false }, { id: "b", text: "Yok etmek", correct: true }, { id: "c", text: "Kurtarmak", correct: false }, { id: "d", text: "Tasarlamak", correct: false }] },
+    { id: 810, type: "SELECT", question: "'Sauvage' ne demek?", options: [{ id: "a", text: "Evcil", correct: false }, { id: "b", text: "Vahşi / Yabani", correct: true }, { id: "c", text: "Küçük", correct: false }, { id: "d", text: "Sevimli", correct: false }] },
+    { id: 811, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'énergie solaire", options: [{ id: "a", text: "Rüzgar enerjisi", correct: false }, { id: "b", text: "Güneş enerjisi", correct: true }, { id: "c", text: "Elektrik", correct: false }, { id: "d", text: "Geri dönüşüm", correct: false }] },
+    { id: 812, type: "FILL_BLANK", question: "Doldur:", sentence: "La Terre est notre seule ___. (gezegen)", options: [{ id: "a", text: "planète", correct: true }, { id: "b", text: "nature", correct: false }] },
+    { id: 813, type: "TRANSLATE", question: "Çevir:", hint: "Çöplerinizi yere atmayın.", correctAnswer: "Ne jetez pas vos déchets par terre." },
+    { id: 814, type: "SELECT", question: "Hangi kelime 'Küresel Isınma' anlamında kullanılır?", options: [{ id: "a", text: "Le recyclage", correct: false }, { id: "b", text: "La pollution", correct: false }, { id: "c", text: "Le réchauffement", correct: true }] },
+    { id: 815, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous devons ___ notre planète. (korumak)", options: [{ id: "a", text: "protéger", correct: true }, { id: "b", text: "détruire", correct: false }] },
+    { id: 816, type: "SELECT", question: "'Conserver' ne demek?", options: [{ id: "a", text: "Korumak / Muhafaza etmek", correct: true }, { id: "b", text: "Atmak", correct: false }, { id: "c", text: "Harcanmak", correct: false }] },
+    { id: 817, type: "TRANSLATE", question: "Çevir:", hint: "Hava kirliliği büyük bir problemdir.", correctAnswer: "La pollution de l'air est un grand problème." },
+    { id: 818, type: "SELECT", question: "'La mer' ne demek?", options: [{ id: "a", text: "Göl", correct: false }, { id: "b", text: "Toprak", correct: false }, { id: "c", text: "Deniz", correct: true }, { id: "d", text: "Nehir", correct: false }] },
+    { id: 819, type: "FILL_BLANK", question: "Doldur:", sentence: "Les usines ___ (kirletmek) la rivière.", options: [{ id: "a", text: "polluent", correct: true }, { id: "b", text: "protègent", correct: false }] },
+    { id: 820, type: "SELECT", question: "Hangi cümle 'Doğada yürüyüş yapmayı severim.' anlamına gelir?", options: [{ id: "a", text: "J'aime me promener dans la nature.", correct: true }, { id: "b", text: "Je préfère rester à la maison.", correct: false }, { id: "c", text: "La nature est belle.", correct: false }] }
+];
+
+const unit370Quiz2: Question[] = [
+    // Quiz 2: Grammar (Le Participe Présent et Le Gérondif) & Sentences
+    { id: 821, type: "SELECT", question: "Le Gérondif (-erek, -arak) nasıl oluşturulur?", options: [{ id: "a", text: "Fiilin mastar haline 'en' eklenerek", correct: false }, { id: "b", text: "'nous' çekimindeki -ons atılıp '-ant' eklenerek ve önüne 'en' getirilerek", correct: true }, { id: "c", text: "Fiilin sonuna -é eklenerek", correct: false }] },
+    { id: 822, type: "FILL_BLANK", question: "Doldur (Gérondif):", sentence: "Il mange ___ regardant la télévision. (izleyerek)", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "au", correct: false }] },
+    { id: 823, type: "FILL_BLANK", question: "Doldur (Gérondif):", sentence: "On protège la nature en ___ (recycler) le plastique.", options: [{ id: "a", text: "recyclant", correct: true }, { id: "b", text: "recycle", correct: false }] },
+    { id: 824, type: "SELECT", question: "'Être' fiilinin Gérondif formu hangisidir?", options: [{ id: "a", text: "en étant", correct: true }, { id: "b", text: "en eant", correct: false }, { id: "c", text: "en aillant", correct: false }, { id: "d", text: "en estant", correct: false }] },
+    { id: 825, type: "SELECT", question: "'Avoir' fiilinin Gérondif formu hangisidir?", options: [{ id: "a", text: "en avant", correct: false }, { id: "b", text: "en ayant", correct: true }, { id: "c", text: "en ayez", correct: false }] },
+    { id: 826, type: "FILL_BLANK", question: "Doldur (Gérondif):", sentence: "En ___ (utiliser) le vélo, on réduit la pollution.", options: [{ id: "a", text: "utilisant", correct: true }, { id: "b", text: "utilisons", correct: false }] },
+    { id: 827, type: "TRANSLATE", question: "Çevir:", hint: "Televizyon izleyerek yemek yiyor.", correctAnswer: "Il mange en regardant la télévision." },
+    { id: 828, type: "LISTENING", question: "Duyduğunu seç:", audioText: "En sachant la vérité, elle a souri.", options: [{ id: "a", text: "Söylediklerini bilerek güldü.", correct: false }, { id: "b", text: "Gerçeği bilerek gülümsedi.", correct: true }, { id: "c", text: "Kitap okuyarak gülümsedi.", correct: false }] },
+    { id: 829, type: "SELECT", question: "'Savoir' (bilmek) fiilinin Gérondif formu nedir?", options: [{ id: "a", text: "en savant", correct: false }, { id: "b", text: "en sachant", correct: true }, { id: "c", text: "en sait", correct: false }] },
+    { id: 830, type: "FILL_BLANK", question: "Doldur (Gérondif):", sentence: "Elle travaille ___ écoutant de la musique. (dinlerken/dinleyerek)", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "avec", correct: false }] },
+    { id: 831, type: "SELECT", question: "Aşağıdakilerden hangisi bir Gérondif örneğidir?", options: [{ id: "a", text: "il mange", correct: false }, { id: "b", text: "en marchant", correct: true }, { id: "c", text: "pour manger", correct: false }, { id: "d", text: "mangé", correct: false }] },
+    { id: 832, type: "TRANSLATE", question: "Çevir:", hint: "Geri dönüşüm yaparak doğayı koruyoruz.", correctAnswer: "En recyclant, on protège la nature." },
+    { id: 833, type: "FILL_BLANK", question: "Doldur (Gérondif):", sentence: "Il gagne de l'argent en ___ (vendre) des voitures.", options: [{ id: "a", text: "vendant", correct: true }, { id: "b", text: "vendons", correct: false }] },
+    { id: 834, type: "SELECT", question: "Gérondif ne ifade eder?", options: [{ id: "a", text: "Geçmiş zamanı", correct: false }, { id: "b", text: "Sadece gelecekte olacakları", correct: false }, { id: "c", text: "Aynı anda gerçekleşen eylemleri veya yöntemi (-erek, -arak)", correct: true }] },
+    { id: 835, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Hasta olduğu için (hasta olarak), evde kaldı.", correctAnswer: "En étant malade, il est resté à la maison." },
+    { id: 836, type: "LISTENING", question: "Duyduğunu seç:", audioText: "On protège la nature en jetant les déchets à la poubelle.", options: [{ id: "a", text: "Çöpleri çöp kutusuna atarak doğayı koruruz.", correct: true }, { id: "b", text: "Plastiği geri dönüştürerek doğayı koruruz.", correct: false }, { id: "c", text: "Daha az su kullanarak doğayı koruruz.", correct: false }] },
+    { id: 837, type: "FILL_BLANK", question: "Doldur (Gérondif):", sentence: "En ___ (finir) ses devoirs, il est sorti.", options: [{ id: "a", text: "finissant", correct: true }, { id: "b", text: "finisant", correct: false }] },
+    { id: 838, type: "SELECT", question: "'En courant' ne demek?", options: [{ id: "a", text: "Yürüyerek", correct: false }, { id: "b", text: "Koşarak", correct: true }, { id: "c", text: "Uyurken", correct: false }] },
+    { id: 839, type: "TRANSLATE", question: "Çevir:", hint: "Bisiklet kullanarak kirliliği azaltırız.", correctAnswer: "En utilisant le vélo, on réduit la pollution." },
+    { id: 840, type: "SELECT", question: "'Parler' (Konuşmak) -> 'en parlant' (Konuşarak). Doğru mu?", options: [{ id: "a", text: "Doğru", correct: true }, { id: "b", text: "Yanlış", correct: false }] }
+];
+
+const unit370Quiz3: Question[] = [
+    // Quiz 3: Speaking/Phrases, translation
+    { id: 841, type: "SELECT", question: "Qu'est-ce que 'Le changement climatique est un problème mondial.' signifie?", options: [{ id: "a", text: "Hava kirliliği büyük bir sorundur.", correct: false }, { id: "b", text: "İklim değişikliği küresel bir sorundur.", correct: true }, { id: "c", text: "Ormanlar dünya sorunudur.", correct: false }] },
+    { id: 842, type: "SELECT", question: "Hangisi 'Plastik tüketimimizi azaltmalıyız.' demektir?", options: [{ id: "a", text: "Nous devons réduire notre consommation de plastique.", correct: true }, { id: "b", text: "Nous devons acheter plus de plastique.", correct: false }, { id: "c", text: "Le plastique est mauvais.", correct: false }] },
+    { id: 843, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est important de ___ (geri dönüştürmek) le papier et le verre.", options: [{ id: "a", text: "recycler", correct: true }, { id: "b", text: "planter", correct: false }] },
+    { id: 844, type: "TRANSLATE", question: "Çevir:", hint: "Çöplerinizi doğaya atmayın.", correctAnswer: "Ne jetez pas vos déchets dans la nature." },
+    { id: 845, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les énergies renouvelables protègent notre planète.", options: [{ id: "a", text: "Yenilenebilir enerjiler gezegenimizi korur.", correct: true }, { id: "b", text: "Güneş enerjisi çevreyi temizler.", correct: false }, { id: "c", text: "Dünyayı korumak zordur.", correct: false }] },
+    { id: 846, type: "SELECT", question: "Hangisi 'Okyanus kirliliği deniz hayvanlarını tehdit ediyor.' demektir?", options: [{ id: "a", text: "Les océans sont très propres cette année.", correct: false }, { id: "b", text: "La pollution des océans menace les animaux marins.", correct: true }, { id: "c", text: "Les poissons aiment la mer.", correct: false }] },
+    { id: 847, type: "TRANSLATE", question: "Çevir:", hint: "Hava kirliliğini azaltmak için toplu taşımayı kullanın.", correctAnswer: "Prenez les transports en commun pour réduire la pollution de l'air." },
+    { id: 848, type: "FILL_BLANK", question: "Doldur:", sentence: "L'eau potable devient une ___ (kaynak) rare.", options: [{ id: "a", text: "ressource", correct: true }, { id: "b", text: "pollution", correct: false }] },
+    { id: 849, type: "SELECT", question: "Hangisi 'Ormanların yok olması gerçek bir trajedidir.' demektir?", options: [{ id: "a", text: "Les arbres sont très vieux.", correct: false }, { id: "b", text: "La disparition des forêts est une véritable tragédie.", correct: true }, { id: "c", text: "Nous plantons des arbres.", correct: false }] },
+    { id: 850, type: "TRANSLATE", question: "Çevir:", hint: "Herkes çevre için ufak bir adım atabilir.", correctAnswer: "Chacun peut faire un geste pour l'environnement." },
+    { id: 851, type: "FILL_BLANK", question: "Doldur:", sentence: "Que faites-vous pour ___ l'environnement ? (korumak)", options: [{ id: "a", text: "protéger", correct: true }, { id: "b", text: "détruire", correct: false }] },
+    { id: 852, type: "SELECT", question: "'Je trie mes déchets et je recycle le plastique.' çevirisi nedir?", options: [{ id: "a", text: "Çöplerimi atıyorum ve kağıt alıyorum.", correct: false }, { id: "b", text: "Çöplerimi ayırıyorum ve plastiği geri dönüştürüyorum.", correct: true }, { id: "c", text: "Plastik kullanmıyorum.", correct: false }] },
+    { id: 853, type: "FILL_BLANK", question: "Doldur:", sentence: "Pensez-vous que le changement climatique est ___ ? (ciddi)", options: [{ id: "a", text: "grave", correct: true }, { id: "b", text: "important", correct: false }] },
+    { id: 854, type: "TRANSLATE", question: "Çevir:", hint: "Sık sık arabaya biner misiniz?", correctAnswer: "Est-ce que vous prenez souvent la voiture ?" },
+    { id: 855, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je préfère utiliser mon vélo ou marcher.", options: [{ id: "a", text: "Araba kullanmayı tercih ederim.", correct: false }, { id: "b", text: "Bisikletimi kullanmayı veya yürümeyi tercih ederim.", correct: true }, { id: "c", text: "Yürümeyi sevmiyorum.", correct: false }] },
+    { id: 856, type: "SELECT", question: "Hangisi 'Vahşi hayvanlar doğal yaşam alanlarını kaybediyor.' demektir?", options: [{ id: "a", text: "Les animaux sauvages sont mignons.", correct: false }, { id: "b", text: "Les animaux sauvages perdent leur habitat naturel.", correct: true }, { id: "c", text: "La forêt est grande.", correct: false }] },
+    { id: 857, type: "TRANSLATE", question: "Çevir:", hint: "Hepimiz su tüketimimizi azaltmalıyız.", correctAnswer: "Nous devrions tous réduire notre consommation d'eau." },
+    { id: 858, type: "FILL_BLANK", question: "Doldur:", sentence: "Avez-vous déjà participé à un ___ (temizlik) de la plage ?", options: [{ id: "a", text: "nettoyage", correct: true }, { id: "b", text: "événement", correct: false }] },
+    { id: 859, type: "SELECT", question: "'Oui, c'était une expérience très enrichissante.' ne demek?", options: [{ id: "a", text: "Evet, çok zenginleştirici bir deneyimdi.", correct: true }, { id: "b", text: "Evet, çok pahalı bir geziydi.", correct: false }, { id: "c", text: "Çok yorucu bir andı.", correct: false }] },
+    { id: 860, type: "TRANSLATE", question: "Çevir:", hint: "Evet, çağımızın en büyük zorluğudur.", correctAnswer: "Oui, c'est le plus grand défi de notre époque." }
+];
+
+const unit370Quiz4: Question[] = [
+    // Quiz 4: Reading comprehension & mixed review
+    { id: 861, type: "SELECT", question: "Selon le texte, qu'est-ce qui est une urgence mondiale ?", options: [{ id: "a", text: "La protection de l'environnement", correct: true }, { id: "b", text: "Aller sur Mars", correct: false }, { id: "c", text: "Gagner de l'argent", correct: false }] },
+    { id: 862, type: "TRANSLATE", question: "Çevir:", hint: "Kirlilik ve iklim değişikliği doğanın bir bölümünü yok ediyor.", correctAnswer: "La pollution et le changement climatique détruisent une partie de la nature." },
+    { id: 863, type: "SELECT", question: "Que perdent de nombreux animaux sauvages selon le texte ?", options: [{ id: "a", text: "Leur nourriture", correct: false }, { id: "b", text: "Leur habitat", correct: true }, { id: "c", text: "Leurs amis", correct: false }] },
+    { id: 864, type: "FILL_BLANK", question: "Doldur:", sentence: "En ___ (azaltarak) notre consommation, nous aidons. (Gérondif kullan)", options: [{ id: "a", text: "réduisant", correct: true }, { id: "b", text: "réduire", correct: false }] },
+    { id: 865, type: "SELECT", question: "Comment peut-on aider à garder les océans propres ?", options: [{ id: "a", text: "En réduisant le plastique et en recyclant les déchets", correct: true }, { id: "b", text: "En pêchant des poissons", correct: false }, { id: "c", text: "En nageant souvent", correct: false }] },
+    { id: 866, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Éteindre les lumières", options: [{ id: "a", text: "Suyu açmak", correct: false }, { id: "b", text: "Işıkları kapatmak", correct: true }, { id: "c", text: "Camı açmak", correct: false }, { id: "d", text: "Televizyonu kapatmak", correct: false }] },
+    { id: 867, type: "TRANSLATE", question: "Çevir:", hint: "Toplu taşımayı kullanmak hava kirliliğini önemli ölçüde azaltır.", correctAnswer: "Utiliser les transports en commun réduit considérablement la pollution de l'air." },
+    { id: 868, type: "SELECT", question: "Que doit-on faire pour économiser de l'énergie à la maison ?", options: [{ id: "a", text: "Regarder le soleil", correct: false }, { id: "b", text: "Éteindre les lumières en sortant d'une pièce", correct: true }, { id: "c", text: "Laisser la fenêtre ouverte", correct: false }] },
+    { id: 869, type: "FILL_BLANK", question: "Doldur (Gérondif):", sentence: "En ___ (faire) ces petits gestes, nous pouvons préserver la Terre.", options: [{ id: "a", text: "faisant", correct: true }, { id: "b", text: "faisons", correct: false }] },
+    { id: 870, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Bu eğilimi tersine çevirmek için.", correctAnswer: "Pour inverser cette tendance." },
+    { id: 871, type: "SELECT", question: "À quoi servent ces 'petits gestes' à la fin du texte ?", options: [{ id: "a", text: "À préserver la Terre pour les générations futures", correct: true }, { id: "b", text: "À devenir riche", correct: false }, { id: "c", text: "À voyager", correct: false }] },
+    { id: 872, type: "SELECT", question: "Quel mot du texte signifie 'Önemli ölçüde'?", options: [{ id: "a", text: "Considérablement", correct: true }, { id: "b", text: "Urgent", correct: false }, { id: "c", text: "Petit", correct: false }] },
+    { id: 873, type: "FILL_BLANK", question: "Doldur:", sentence: "La protection de l'environnement est une ___ (acil durum) mondiale.", options: [{ id: "a", text: "urgence", correct: true }, { id: "b", text: "option", correct: false }] },
+    { id: 874, type: "TRANSLATE", question: "Çevir:", hint: "Gelecek nesiller için dünyayı koruyabiliriz.", correctAnswer: "Nous pouvons préserver la Terre pour les générations futures." },
+    { id: 875, type: "SELECT", question: "Hangi bağlaç Subjonctif GEREKTİRMEZ?", options: [{ id: "a", text: "Avant que", correct: false }, { id: "b", text: "Après que", correct: true }, { id: "c", text: "Bien que", correct: false }, { id: "d", text: "Pour que", correct: false }] },
+    { id: 876, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Une tendance", options: [{ id: "a", text: "Eğilim / Trend", correct: true }, { id: "b", text: "Olay", correct: false }, { id: "c", text: "Zorluk", correct: false }, { id: "d", text: "Sınav", correct: false }] },
+    { id: 877, type: "TRANSLATE", question: "Çevir:", hint: "Herkes günlük olarak harekete geçebilir.", correctAnswer: "Nous pouvons tous agir au quotidien." },
+    { id: 878, type: "SELECT", question: "Laquelle de ces actions N'EST PAS mentionnée pour protéger la planète dans le texte ?", options: [{ id: "a", text: "Faire du vélo", correct: false }, { id: "b", text: "Planter des arbres", correct: true }, { id: "c", text: "Recycler nos déchets", correct: false }] },
+    { id: 879, type: "FILL_BLANK", question: "Doldur (Gérondif):", sentence: "Il a souri en ___ (savoir) la vérité.", options: [{ id: "a", text: "sachant", correct: true }, { id: "b", text: "savant", correct: false }] },
+    { id: 880, type: "SELECT", question: "İklim değişikliği anlamına gelen Fransızca terim hangisidir?", options: [{ id: "a", text: "Le changement climatique", correct: true }, { id: "b", text: "La pollution de l'eau", correct: false }, { id: "c", text: "La protection de l'environnement", correct: false }] }
+];
+
+// ===== UNIT 371 HARDCODED QUIZZES =====
+const unit371Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basic Phrases
+    { id: 881, type: "SELECT", question: "'La ville' ne demek?", options: [{ id: "a", text: "Şehir", correct: true }, { id: "b", text: "Köy", correct: false }, { id: "c", text: "Sokak", correct: false }, { id: "d", text: "Ev", correct: false }] },
+    { id: 882, type: "SELECT", question: "'La circulation' ne demek?", options: [{ id: "a", text: "Hava", correct: false }, { id: "b", text: "Trafik / Dolaşım", correct: true }, { id: "c", text: "Metro", correct: false }, { id: "d", text: "Yaya", correct: false }] },
+    { id: 883, type: "SELECT", question: "'Le trottoir' ne demek?", options: [{ id: "a", text: "Yol", correct: false }, { id: "b", text: "Köprü", correct: false }, { id: "c", text: "Kaldırım", correct: true }, { id: "d", text: "Kavşak", correct: false }] },
+    { id: 884, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Traverser", options: [{ id: "a", text: "Beklemek", correct: false }, { id: "b", text: "Karşıdan karşıya geçmek", correct: true }, { id: "c", text: "Dönmek", correct: false }, { id: "d", text: "İnmek", correct: false }] },
+    { id: 885, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le carrefour", options: [{ id: "a", text: "Kavşak", correct: true }, { id: "b", text: "Bilet", correct: false }, { id: "c", text: "İstasyon", correct: false }, { id: "d", text: "Yolcu", correct: false }] },
+    { id: 886, type: "TRANSLATE", question: "Çevir:", hint: "Büyük bir şehirde yaşıyorum.", correctAnswer: "J'habite dans une grande ville." },
+    { id: 887, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a un gros ___ (trafik sıkışıklığı) sur l'autoroute.", options: [{ id: "a", text: "embouteillage", correct: true }, { id: "b", text: "quartier", correct: false }] },
+    { id: 888, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Yayalar kaldırımda yürümelidir.", correctAnswer: "Les piétons doivent marcher sur le trottoir." },
+    { id: 889, type: "SELECT", question: "'Le quartier' ne demek?", options: [{ id: "a", text: "Şehir", correct: false }, { id: "b", text: "Semt / Mahalle", correct: true }, { id: "c", text: "Belediye", correct: false }, { id: "d", text: "Bina", correct: false }] },
+    { id: 890, type: "SELECT", question: "'Le passager' ne demek?", options: [{ id: "a", text: "Şoför", correct: false }, { id: "b", text: "Yolcu", correct: true }, { id: "c", text: "Biletçi", correct: false }, { id: "d", text: "Yaya", correct: false }] },
+    { id: 891, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Valider", options: [{ id: "a", text: "İptal etmek", correct: false }, { id: "b", text: "Onaylamak / Okutmak", correct: true }, { id: "c", text: "Satın almak", correct: false }, { id: "d", text: "İnmek", correct: false }] },
+    { id: 892, type: "FILL_BLANK", question: "Doldur:", sentence: "Où est la ___ de métro ? (istasyon / durak)", options: [{ id: "a", text: "station", correct: true }, { id: "b", text: "mairie", correct: false }] },
+    { id: 893, type: "TRANSLATE", question: "Çevir:", hint: "Yolculuk yaklaşık bir saat sürer.", correctAnswer: "Le trajet dure environ une heure." },
+    { id: 894, type: "SELECT", question: "Hangi kelime 'Aktarma' anlamındadır?", options: [{ id: "a", text: "Terminal", correct: false }, { id: "b", text: "Correspondance", correct: true }, { id: "c", text: "Voyage", correct: false }] },
+    { id: 895, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce ___ (bina) historique est magnifique.", options: [{ id: "a", text: "bâtiment", correct: true }, { id: "b", text: "trajet", correct: false }] },
+    { id: 896, type: "SELECT", question: "'La mairie' ne demek?", options: [{ id: "a", text: "Postane", correct: false }, { id: "b", text: "Belediye binası", correct: true }, { id: "c", text: "Banka", correct: false }] },
+    { id: 897, type: "TRANSLATE", question: "Çevir:", hint: "Her zaman toplu taşımayı kullanıyorum.", correctAnswer: "Je prends toujours les transports en commun." },
+    { id: 898, type: "SELECT", question: "'Le centre-ville' ne demek?", options: [{ id: "a", text: "Banliyö", correct: false }, { id: "b", text: "Şehir merkezi", correct: true }, { id: "c", text: "Pazar", correct: false }] },
+    { id: 899, type: "FILL_BLANK", question: "Doldur:", sentence: "Le métro est un train ___. (yeraltı)", options: [{ id: "a", text: "souterrain", correct: true }, { id: "b", text: "rapide", correct: false }] },
+    { id: 900, type: "SELECT", question: "Hangi kelime 'Tek yön bilet' anlamına gelir? (ipucu metni)", options: [{ id: "a", text: "Un aller simple", correct: true }, { id: "b", text: "Un aller-retour", correct: false }, { id: "c", text: "Une carte de crédit", correct: false }] }
+];
+
+const unit371Quiz2: Question[] = [
+    // Quiz 2: Grammar (Pronoms Relatifs Composés: lequel, auquel...) & sentences
+    { id: 901, type: "SELECT", question: "Bir edattan (avec, pour, sur) sonra cansız veya nesneler için hangi ilgi zamiri ailesi kullanılır?", options: [{ id: "a", text: "qui / que", correct: false }, { id: "b", text: "lequel / laquelle / lesquels", correct: true }, { id: "c", text: "dont / où", correct: false }] },
+    { id: 902, type: "FILL_BLANK", question: "Doldur:", sentence: "Le stylo avec ___ j'écris. (le stylo = eril tekil)", options: [{ id: "a", text: "lequel", correct: true }, { id: "b", text: "laquelle", correct: false }] },
+    { id: 903, type: "FILL_BLANK", question: "Doldur:", sentence: "La chaise sur ___ je suis assis. (la chaise = dişil tekil)", options: [{ id: "a", text: "laquelle", correct: true }, { id: "b", text: "lesquelles", correct: false }] },
+    { id: 904, type: "SELECT", question: "'à + lequel' birleşiminden hangi kelime oluşur?", options: [{ id: "a", text: "auquel", correct: true }, { id: "b", text: "à lequel", correct: false }, { id: "c", text: "auxquels", correct: false }] },
+    { id: 905, type: "SELECT", question: "'de + lesquels' birleşiminden hangi kelime oluşur?", options: [{ id: "a", text: "de lesquels", correct: false }, { id: "b", text: "desquels", correct: true }, { id: "c", text: "duquel", correct: false }] },
+    { id: 906, type: "FILL_BLANK", question: "Doldur:", sentence: "Le problème ___ je pense. (penser à un problème - le problème)", options: [{ id: "a", text: "auquel", correct: true }, { id: "b", text: "duquel", correct: false }] },
+    { id: 907, type: "TRANSLATE", question: "Çevir:", hint: "Üzerinde oturduğum sandalye.", correctAnswer: "La chaise sur laquelle je suis assis." },
+    { id: 908, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les sports auxquels il s'intéresse.", options: [{ id: "a", text: "Hoşlandığı oyunlar.", correct: false }, { id: "b", text: "İlgilendiği sporlar.", correct: true }, { id: "c", text: "Yaptığı sporlar.", correct: false }] },
+    { id: 909, type: "SELECT", question: "'à + laquelle' (dişil tekil) birleşir mi?", options: [{ id: "a", text: "Birleşmez, 'à laquelle' olarak kalır", correct: true }, { id: "b", text: "Evet, 'auquelle' olur", correct: false }] },
+    { id: 910, type: "FILL_BLANK", question: "Doldur:", sentence: "Le parc à côté ___ j'habite. (de + le parc)", options: [{ id: "a", text: "duquel", correct: true }, { id: "b", text: "desquels", correct: false }] },
+    { id: 911, type: "SELECT", question: "Eğer bahsettiğimiz şey bir İNSAN ise, edattan sonra (avec, à, de) 'lequel' yerine genellikle hangisi tercih edilir?", options: [{ id: "a", text: "que", correct: false }, { id: "b", text: "qui", correct: true }, { id: "c", text: "dont", correct: false }] },
+    { id: 912, type: "TRANSLATE", question: "Çevir:", hint: "Yanında yaşadığım bina.", correctAnswer: "Le bâtiment à côté duquel j'habite." },
+    { id: 913, type: "FILL_BLANK", question: "Doldur:", sentence: "Les amis avec ___ je sors. (insan için)", options: [{ id: "a", text: "qui", correct: true }, { id: "b", text: "lesquels", correct: false }] },
+    { id: 914, type: "SELECT", question: "Hangi cümle doğrudur? (Hakkında konuştuğumuz projeler / les projets)", options: [{ id: "a", text: "Les projets de lesquels nous parlons.", correct: false }, { id: "b", text: "Les projets desquels nous parlons.", correct: true }] },
+    { id: 915, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Kendisiyle yazdığım kalem.", correctAnswer: "Le stylo avec lequel j'écris." },
+    { id: 916, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La fille à qui je parle.", options: [{ id: "a", text: "Bakıştığım kız.", correct: false }, { id: "b", text: "Konuştuğum kız.", correct: true }, { id: "c", text: "Gördüğüm kız.", correct: false }] },
+    { id: 917, type: "FILL_BLANK", question: "Doldur:", sentence: "Les réunions ___ j'assiste. (assister à des réunions / dişil çoğul)", options: [{ id: "a", text: "auxquelles", correct: true }, { id: "b", text: "auxquels", correct: false }] },
+    { id: 918, type: "SELECT", question: "Cümlede boşluğa ne gelmelidir? 'C'est l'ordinateur sur ... je travaille.' (ordinateur=eril)", options: [{ id: "a", text: "lequel", correct: true }, { id: "b", text: "laquelle", correct: false }, { id: "c", text: "lesquels", correct: false }] },
+    { id: 919, type: "TRANSLATE", question: "Çevir:", hint: "Yakınında olduğumuz binalar.", correctAnswer: "Les bâtiments près desquels nous sommes." },
+    { id: 920, type: "SELECT", question: "Hangi kelime 'avec' edatından sonra dişil çoğul nesneler için gelir?", options: [{ id: "a", text: "lesquelles", correct: true }, { id: "b", text: "laquelle", correct: false }, { id: "c", text: "desquelles", correct: false }] }
+];
+
+const unit371Quiz3: Question[] = [
+    // Quiz 3: Speaking/Phrases, translation
+    { id: 921, type: "SELECT", question: "Qu'est-ce que 'Pardon, pour aller à la gare s'il vous plaît ?' signifie?", options: [{ id: "a", text: "Müzeye nasıl giderim?", correct: false }, { id: "b", text: "Afedersiniz, istasyona nasıl gidebilirim lütfen?", correct: true }, { id: "c", text: "İstasyon nerede?", correct: false }] },
+    { id: 922, type: "SELECT", question: "Hangisi 'Metro, şehirde otobüsten daha hızlıdır.' demektir?", options: [{ id: "a", text: "Le métro est plus rapide que le bus en ville.", correct: true }, { id: "b", text: "Le bus est plus lent que le tram.", correct: false }, { id: "c", text: "Je prends le métro en ville.", correct: false }] },
+    { id: 923, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut descendre à la ___ station. (sonraki)", options: [{ id: "a", text: "prochaine", correct: true }, { id: "b", text: "dernière", correct: false }] },
+    { id: 924, type: "TRANSLATE", question: "Çevir:", hint: "Trafik sıkışıklığı nedeniyle şehir merkezinden kaçının.", correctAnswer: "Évitez le centre-ville à cause des embouteillages." },
+    { id: 925, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je vais prendre un taxi pour rentrer.", options: [{ id: "a", text: "Dönmek için taksiye bineceğim.", correct: true }, { id: "b", text: "Havaalanına gitmek için otobüse bineceğim.", correct: false }, { id: "c", text: "Taksi bulamıyorum.", correct: false }] },
+    { id: 926, type: "SELECT", question: "Hangisi 'Binmeden önce biletinizi okutmayı unutmayın.' demektir?", options: [{ id: "a", text: "Achetez un ticket avant de monter.", correct: false }, { id: "b", text: "Pensez à valider votre ticket avant de monter.", correct: true }, { id: "c", text: "Ne jetez pas le ticket.", correct: false }] },
+    { id: 927, type: "TRANSLATE", question: "Çevir:", hint: "Bu semt güzel binalarıyla tanınır.", correctAnswer: "Ce quartier est connu pour ses beaux bâtiments." },
+    { id: 928, type: "FILL_BLANK", question: "Doldur:", sentence: "Traversez la ___ (sokak) et tournez à gauche.", options: [{ id: "a", text: "rue", correct: true }, { id: "b", text: "route", correct: false }] },
+    { id: 929, type: "SELECT", question: "Hangisi 'Hat 4 bugün çalışmalar nedeniyle kapalı.' demektir?", options: [{ id: "a", text: "Le métro 4 est en panne.", correct: false }, { id: "b", text: "La ligne 4 est fermée pour travaux aujourd'hui.", correct: true }, { id: "c", text: "Il y a des travaux sur la route.", correct: false }] },
+    { id: 930, type: "TRANSLATE", question: "Çevir:", hint: "Nereden metro bileti satın alabilirim?", correctAnswer: "Où puis-je acheter un ticket de métro ?" },
+    { id: 931, type: "FILL_BLANK", question: "Doldur:", sentence: "Vous pouvez prendre le bus numéro 12 ou le ___. (metro)", options: [{ id: "a", text: "métro", correct: true }, { id: "b", text: "taxi", correct: false }] },
+    { id: 932, type: "SELECT", question: "'C'est loin d'ici ou je peux y aller à pied ?' çevirisi nedir?", options: [{ id: "a", text: "Oraya otobüsle gidebilir miyim?", correct: false }, { id: "b", text: "Buradan uzak mı yoksa yürüyerek gidebilir miyim?", correct: true }, { id: "c", text: "Yakınlarda metro var mı?", correct: false }] },
+    { id: 933, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce n'est pas très loin, environ dix minutes à ___. (yürüyerek)", options: [{ id: "a", text: "pied", correct: true }, { id: "b", text: "marche", correct: false }] },
+    { id: 934, type: "TRANSLATE", question: "Çevir:", hint: "Kayboldum, haritada bana gösterebilir misiniz?", correctAnswer: "Je suis perdu, pouvez-vous me montrer sur la carte ?" },
+    { id: 935, type: "LISTENING", question: "Duyduğunu seç:", audioText: "À quelle heure passe le dernier train ce soir ?", options: [{ id: "a", text: "İlk tren ne zaman kalkıyor?", correct: false }, { id: "b", text: "Bu akşam son tren saat kaçta geçiyor?", correct: true }, { id: "c", text: "Gelecek tren saat kaçta?", correct: false }] },
+    { id: 936, type: "SELECT", question: "Hangisi 'İstasyonda otomatik bir makine (biletmatik) var.' demektir?", options: [{ id: "a", text: "Il y a un guichet ouvert.", correct: false }, { id: "b", text: "Il y a un distributeur automatique à la station.", correct: true }, { id: "c", text: "La station a un café.", correct: false }] },
+    { id: 937, type: "TRANSLATE", question: "Çevir:", hint: "Tabii ki, biz buradayız ve siz oraya gitmelisiniz.", correctAnswer: "Bien sûr, nous sommes ici et vous devez aller là-bas." },
+    { id: 938, type: "FILL_BLANK", question: "Doldur:", sentence: "Le dernier train part à ___ (gece yarısı) précis.", options: [{ id: "a", text: "minuit", correct: true }, { id: "b", text: "soir", correct: false }] },
+    { id: 939, type: "SELECT", question: "'Les piétons ont la priorité.' ne demek?", options: [{ id: "a", text: "Yolcuların önceliği vardır", correct: false }, { id: "b", text: "Yayaların önceliği vardır", correct: true }, { id: "c", text: "Arabaların geçiş hakkı var", correct: false }] },
+    { id: 940, type: "TRANSLATE", question: "Çevir:", hint: "Afedersiniz, şehir merkezine nasıl gidebilirim?", correctAnswer: "Excusez-moi, comment puis-je aller au centre-ville ?" }
+];
+
+const unit371Quiz4: Question[] = [
+    // Quiz 4: Reading comprehension & mixed review
+    { id: 941, type: "SELECT", question: "Selon le texte, quel est l'un des défis de la vie dans une grande ville ?", options: [{ id: "a", text: "La nourriture", correct: false }, { id: "b", text: "La circulation", correct: true }, { id: "c", text: "Le temps", correct: false }] },
+    { id: 942, type: "TRANSLATE", question: "Çevir:", hint: "Her gün, özellikle sabah ve akşam trafikte sıkışıklıklar olur.", correctAnswer: "Il y a des embouteillages tous les jours, surtout le matin et le soir." },
+    { id: 943, type: "SELECT", question: "Quel est le moyen de transport le plus rapide en ville selon le texte ?", options: [{ id: "a", text: "Le métro", correct: true }, { id: "b", text: "Le vélo", correct: false }, { id: "c", text: "La voiture", correct: false }] },
+    { id: 944, type: "FILL_BLANK", question: "Doldur:", sentence: "Le métro voyage sous la ___. (toprak/yeraltı)", options: [{ id: "a", text: "terre", correct: true }, { id: "b", text: "rue", correct: false }] },
+    { id: 945, type: "SELECT", question: "Que faut-il faire avant de descendre sur le quai ?", options: [{ id: "a", text: "Boire un café", correct: false }, { id: "b", text: "Valider son ticket", correct: true }, { id: "c", text: "Manger", correct: false }] },
+    { id: 946, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les transports en commun", options: [{ id: "a", text: "Trafiğe kapalı yol", correct: false }, { id: "b", text: "Toplu taşıma", correct: true }, { id: "c", text: "Kaldırım", correct: false }, { id: "d", text: "Metro peronu", correct: false }] },
+    { id: 947, type: "TRANSLATE", question: "Çevir:", hint: "Ağ, birçok hattan ve istasyondan oluşur.", correctAnswer: "Le réseau est composé de plusieurs lignes et de nombreuses stations." },
+    { id: 948, type: "SELECT", question: "Dans le centre-ville, on trouve aussi des bus et...", options: [{ id: "a", text: "des tramways", correct: true }, { id: "b", text: "des tracteurs", correct: false }, { id: "c", text: "des bateaux", correct: false }] },
+    { id: 949, type: "FILL_BLANK", question: "Doldur:", sentence: "Certains quartiers sont réservés ___ (aux) piétons.", options: [{ id: "a", text: "aux", correct: true }, { id: "b", text: "des", correct: false }] },
+    { id: 950, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Büyük bir şehirde yaşamanın birçok avantajı vardır.", correctAnswer: "Vivre dans une grande ville a beaucoup d'avantages." },
+    { id: 951, type: "SELECT", question: "Qu'est-ce qu'on peut faire dans les quartiers réservés aux piétons ?", options: [{ id: "a", text: "Conduire un camion", correct: false }, { id: "b", text: "Se promener et faire du shopping", correct: true }, { id: "c", text: "Chasser", correct: false }] },
+    { id: 952, type: "SELECT", question: "Hangi kelime (avec, sur, pour) dan sonra FRANSIZCA'da ERİL TEKİL bir nesneyi belirtirken kullanılır?", options: [{ id: "a", text: "Lequel", correct: true }, { id: "b", text: "Laquelle", correct: false }, { id: "c", text: "Lequels", correct: false }] },
+    { id: 953, type: "FILL_BLANK", question: "Doldur:", sentence: "Le projet ___ je participe. (participer à / le projet)", options: [{ id: "a", text: "auquel", correct: true }, { id: "b", text: "duquel", correct: false }] },
+    { id: 954, type: "TRANSLATE", question: "Çevir:", hint: "Bu yüzden birçok şehirli toplu taşıma kullanmayı tercih ediyor.", correctAnswer: "C'est pourquoi de nombreux citadins préfèrent utiliser les transports en commun." },
+    { id: 955, type: "SELECT", question: "Lequel des mots suivants signifie 'Şehirde yaşayan kişi' ?", options: [{ id: "a", text: "Un villageois", correct: false }, { id: "b", text: "Un citadin", correct: true }, { id: "c", text: "Un maire", correct: false }] },
+    { id: 956, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Un quai", options: [{ id: "a", text: "Peron / İskele", correct: true }, { id: "b", text: "İstasyon binası", correct: false }, { id: "c", text: "Bilet makinesi", correct: false }] },
+    { id: 957, type: "TRANSLATE", question: "Çevir:", hint: "Bu, onları yürüyüş yapmak için mükemmel hale getirir.", correctAnswer: "Ce qui les rend parfaits pour se promener." },
+    { id: 958, type: "SELECT", question: "Quel mot n'est PAS un moyen de transport ?", options: [{ id: "a", text: "Un trottoir", correct: true }, { id: "b", text: "Le métro", correct: false }, { id: "c", text: "Le bus", correct: false }] },
+    { id: 959, type: "FILL_BLANK", question: "Doldur:", sentence: "La rue ___ tu dois traverser. (-ki onu = que vs lequel? Burada normal nesne zamiri gerekir, lequel DEĞİL. Bu şaşırtmacalı: 'que')", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "laquelle", correct: false }] },
+    { id: 960, type: "SELECT", question: "Şehir merkezinde kahve içmekten bahseden orijinal Fransızca kelime öbeği hangisidir?", options: [{ id: "a", text: "Boire un thé noir", correct: false }, { id: "b", text: "Prendre un café en terrasse", correct: true }, { id: "c", text: "Acheter un croissant", correct: false }] }
+];
+
+// ===== UNIT 372 HARDCODED QUIZZES =====
+const unit372Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basic Phrases
+    { id: 961, type: "SELECT", question: "'L'entraînement' ne demek?", options: [{ id: "a", text: "Maç", correct: false }, { id: "b", text: "Antrenman", correct: true }, { id: "c", text: "Saha", correct: false }, { id: "d", text: "Hakem", correct: false }] },
+    { id: 962, type: "SELECT", question: "'L'équipe' ne demek?", options: [{ id: "a", text: "Oyuncu", correct: false }, { id: "b", text: "Takım", correct: true }, { id: "c", text: "Gol", correct: false }, { id: "d", text: "Skor", correct: false }] },
+    { id: 963, type: "SELECT", question: "'Gagner' ne demek?", options: [{ id: "a", text: "Kaybetmek", correct: false }, { id: "b", text: "Koşmak", correct: false }, { id: "c", text: "Kazanmak", correct: true }, { id: "d", text: "Oynamak", correct: false }] },
+    { id: 964, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le terrain", options: [{ id: "a", text: "Saha / Kort", correct: true }, { id: "b", text: "Spor salonu", correct: false }, { id: "c", text: "Bilet", correct: false }, { id: "d", text: "Tribun", correct: false }] },
+    { id: 965, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'arbitre", options: [{ id: "a", text: "Oyuncu", correct: false }, { id: "b", text: "Hakem", correct: true }, { id: "c", text: "Antrenör", correct: false }, { id: "d", text: "Rakip", correct: false }] },
+    { id: 966, type: "TRANSLATE", question: "Çevir:", hint: "Takımımız turnuvayı kazandı.", correctAnswer: "Notre équipe a gagné le tournoi." },
+    { id: 967, type: "FILL_BLANK", question: "Doldur:", sentence: "Le match ___ (başlamak) à vingt heures.", options: [{ id: "a", text: "commence", correct: true }, { id: "b", text: "finit", correct: false }] },
+    { id: 968, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Haftada üç kez spor salonuna gidiyorum.", correctAnswer: "Je vais à la salle de sport trois fois par semaine." },
+    { id: 969, type: "SELECT", question: "'Perdre' ne demek?", options: [{ id: "a", text: "Kazanmak", correct: false }, { id: "b", text: "Kaybetmek", correct: true }, { id: "c", text: "Oynamak", correct: false }, { id: "d", text: "Geçmek", correct: false }] },
+    { id: 970, type: "SELECT", question: "'La blessure' ne demek?", options: [{ id: "a", text: "Gol", correct: false }, { id: "b", text: "Maç", correct: false }, { id: "c", text: "Yaralanma / Sakatlık", correct: true }, { id: "d", text: "Forma", correct: false }] },
+    { id: 971, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Courir", options: [{ id: "a", text: "Yüzmek", correct: false }, { id: "b", text: "Koşmak", correct: true }, { id: "c", text: "Zıplamak", correct: false }, { id: "d", text: "Dönmek", correct: false }] },
+    { id: 972, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est le meilleur ___ de l'année. (oyuncu)", options: [{ id: "a", text: "joueur", correct: true }, { id: "b", text: "arbitre", correct: false }] },
+    { id: 973, type: "TRANSLATE", question: "Çevir:", hint: "Muhteşem bir gol attı.", correctAnswer: "Il a marqué un but magnifique." },
+    { id: 974, type: "SELECT", question: "'Se sentır en forme' ne demek?", options: [{ id: "a", text: "Formda hissetmek", correct: true }, { id: "b", text: "Hasta olmak", correct: false }, { id: "c", text: "Yorgun olmak", correct: false }] },
+    { id: 975, type: "FILL_BLANK", question: "Doldur:", sentence: "La balle a touché le ___. (ağ)", options: [{ id: "a", text: "filet", correct: true }, { id: "b", text: "but", correct: false }] },
+    { id: 976, type: "SELECT", question: "'La compétition' ne demek?", options: [{ id: "a", text: "Antrenman", correct: false }, { id: "b", text: "Yarışma / Rekabet", correct: true }, { id: "c", text: "Seyirci", correct: false }] },
+    { id: 977, type: "TRANSLATE", question: "Çevir:", hint: "Olimpiyatlar için her gün antrenman yapıyor.", correctAnswer: "Il s'entraîne tous les jours pour les Jeux Olympiques." },
+    { id: 978, type: "SELECT", question: "'L'adversaire' ne demek?", options: [{ id: "a", text: "Takım arkadaşı", correct: false }, { id: "b", text: "Rakip", correct: true }, { id: "c", text: "Antrenör", correct: false }] },
+    { id: 979, type: "FILL_BLANK", question: "Doldur:", sentence: "Les joueurs sont sur le ___. (saha)", options: [{ id: "a", text: "terrain", correct: true }, { id: "b", text: "gymnase", correct: false }] },
+    { id: 980, type: "SELECT", question: "'Nager' ne demek?", options: [{ id: "a", text: "Koşmak", correct: false }, { id: "b", text: "Yüzmek", correct: true }, { id: "c", text: "Atlamak", correct: false }] }
+];
+
+const unit372Quiz2: Question[] = [
+    // Quiz 2: Grammar (Jouer à vs Faire de + Adverbes -ment)
+    { id: 981, type: "SELECT", question: "Takım sporları (futbol, tenis vb.) için hangi fiil kullanılır?", options: [{ id: "a", text: "Faire de", correct: false }, { id: "b", text: "Jouer à", correct: true }, { id: "c", text: "Prendre", correct: false }] },
+    { id: 982, type: "FILL_BLANK", question: "Doldur:", sentence: "Je joue ___ football. (le football)", options: [{ id: "a", text: "au", correct: true }, { id: "b", text: "du", correct: false }] },
+    { id: 983, type: "FILL_BLANK", question: "Doldur:", sentence: "Je fais ___ natation. (la natation)", options: [{ id: "a", text: "de la", correct: true }, { id: "b", text: "à la", correct: false }] },
+    { id: 984, type: "SELECT", question: "Bireysel sporlar (yüzme, bisiklet vb.) için hangi fiil kullanılır?", options: [{ id: "a", text: "Jouer à", correct: false }, { id: "b", text: "Faire de", correct: true }, { id: "c", text: "Pratiquer", correct: false }] },
+    { id: 985, type: "FILL_BLANK", question: "Doldur:", sentence: "Il fait ___ vélo le matin. (le vélo)", options: [{ id: "a", text: "du", correct: true }, { id: "b", text: "au", correct: false }] },
+    { id: 986, type: "SELECT", question: "'Lent' -> 'Lente' -> '___' (yavaşça)", options: [{ id: "a", text: "Lentment", correct: false }, { id: "b", text: "Lentement", correct: true }, { id: "c", text: "Lentament", correct: false }] },
+    { id: 987, type: "TRANSLATE", question: "Çevir:", hint: "Futbol oynuyorum.", correctAnswer: "Je joue au football." },
+    { id: 988, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il court rapidement.", options: [{ id: "a", text: "Yavaşça koşuyor.", correct: false }, { id: "b", text: "Hızlıca koşuyor.", correct: true }, { id: "c", text: "Dikkatli koşuyor.", correct: false }] },
+    { id: 989, type: "SELECT", question: "'Vrai' sıfatından zarf nasıl türetilir? (Sesli harfle biten sıfat)", options: [{ id: "a", text: "Vraiment (Doğrudan -ment eklenir)", correct: true }, { id: "b", text: "Vraiement", correct: false }] },
+    { id: 990, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle joue ___ échecs. (les échecs / satranç)", options: [{ id: "a", text: "aux", correct: true }, { id: "b", text: "des", correct: false }] },
+    { id: 991, type: "SELECT", question: "'Fréquent' -> '___' (ıkça / sıklıkla)", options: [{ id: "a", text: "Fréquentement", correct: false }, { id: "b", text: "Fréquemment", correct: true }, { id: "c", text: "Fréquantment", correct: false }] },
+    { id: 992, type: "TRANSLATE", question: "Çevir:", hint: "Yüzme (sporu) yapıyorum.", correctAnswer: "Je fais de la natation." },
+    { id: 993, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est ___ difficile. (gerçekten)", options: [{ id: "a", text: "vraiment", correct: true }, { id: "b", text: "vraiement", correct: false }] },
+    { id: 994, type: "SELECT", question: "'Doux -> Douce -> ___' (yumuşakça/sessizce)", options: [{ id: "a", text: "Doucement", correct: true }, { id: "b", text: "Douxment", correct: false }] },
+    { id: 995, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Biz tırmanış yapıyoruz.", correctAnswer: "Nous faisons de l'escalade." },
+    { id: 996, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Elle parle doucement.", options: [{ id: "a", text: "Yavaşça konuşuyor.", correct: false }, { id: "b", text: "Sessizce (yumuşakça) konuşuyor.", correct: true }, { id: "c", text: "Hızlı konuşuyor.", correct: false }] },
+    { id: 997, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous faisons ___ escalade. (l'escalade)", options: [{ id: "a", text: "de l'", correct: true }, { id: "b", text: "à l'", correct: false }] },
+    { id: 998, type: "SELECT", question: "Hangisi doğrudur? 'Tenis oynuyorum.'", options: [{ id: "a", text: "Je fais du tennis.", correct: false }, { id: "b", text: "Je joue au tennis.", correct: true }] },
+    { id: 999, type: "TRANSLATE", question: "Çevir:", hint: "Zekice cevap verdi.", correctAnswer: "Il a répondu intelligemment." },
+    { id: 1000, type: "SELECT", question: "Hangi kural doğrudur? Sıfat -ant veya -ent ile bitiyorsa...", options: [{ id: "a", text: "-ment yerine -amment / -emment olur", correct: true }, { id: "b", text: "Normal kural uygulanır", correct: false }] }
+];
+
+const unit372Quiz3: Question[] = [
+    // Quiz 3: Speaking/Phrases, translation
+    { id: 1001, type: "SELECT", question: "'Je fais de la natation deux fois par semaine.' ne demek?", options: [{ id: "a", text: "Haftada iki kez tenis oynuyorum.", correct: false }, { id: "b", text: "Haftada iki kez yüzme yapıyorum.", correct: true }, { id: "c", text: "Her gün yüzüyorum.", correct: false }] },
+    { id: 1002, type: "SELECT", question: "Hangisi 'Antrenmandan önce ısınmak gerekir.' demektir?", options: [{ id: "a", text: "Il faut s'échauffer avant l'entraînement.", correct: true }, { id: "b", text: "Il faut courir après l'entraînement.", correct: false }, { id: "c", text: "Il faut manger avant le match.", correct: false }] },
+    { id: 1003, type: "FILL_BLANK", question: "Doldur:", sentence: "Le match s'est terminé par un match ___. (beraberlik)", options: [{ id: "a", text: "nul", correct: true }, { id: "b", text: "final", correct: false }] },
+    { id: 1004, type: "TRANSLATE", question: "Çevir:", hint: "Beş yaşından beri tenis oynuyor.", correctAnswer: "Elle joue au tennis depuis l'âge de cinq ans." },
+    { id: 1005, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le sport est essentiel pour rester en bonne santé.", options: [{ id: "a", text: "Spor, sağlıklı kalmak için gereklidir.", correct: true }, { id: "b", text: "Spor yapmak eğlencelidir.", correct: false }, { id: "c", text: "Spor sağlıksızdır.", correct: false }] },
+    { id: 1006, type: "SELECT", question: "Hangisi 'Hakem oyuncuya kırmızı kart verdi.' demektir?", options: [{ id: "a", text: "L'arbitre a donné un carton rouge au joueur.", correct: true }, { id: "b", text: "Le joueur a donné un carton à l'arbitre.", correct: false }, { id: "c", text: "L'arbitre a siflé.", correct: false }] },
+    { id: 1007, type: "TRANSLATE", question: "Çevir:", hint: "Yarışmanın finalini kaybettiler.", correctAnswer: "Ils ont perdu la finale de la compétition." },
+    { id: 1008, type: "FILL_BLANK", question: "Doldur:", sentence: "Faire du sport permet de ___ le stress. (azaltmak)", options: [{ id: "a", text: "réduire", correct: true }, { id: "b", text: "augmenter", correct: false }] },
+    { id: 1009, type: "SELECT", question: "'Quel sport pratiquez-vous régulièrement ?' ne demek?", options: [{ id: "a", text: "Hangi sporu izliyorsunuz?", correct: false }, { id: "b", text: "Düzenli olarak hangi sporu yapıyorsunuz?", correct: true }, { id: "c", text: "Spor sever misiniz?", correct: false }] },
+    { id: 1010, type: "TRANSLATE", question: "Çevir:", hint: "Spor salonuna kaydolmak istiyorum.", correctAnswer: "Je voudrais m'inscrire à la salle de sport." },
+    { id: 1011, type: "FILL_BLANK", question: "Doldur:", sentence: "Les cours collectifs sont inclus dans l'___. (abonelik)", options: [{ id: "a", text: "abonnement", correct: true }, { id: "b", text: "inscription", correct: false }] },
+    { id: 1012, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ne forcez pas trop si vous ressentez une douleur.", options: [{ id: "a", text: "Ağrı hissederseniz fazla zorlamayın.", correct: true }, { id: "b", text: "Daha hızlı koşun.", correct: false }, { id: "c", text: "Egzersiz yapmayı bırakmayın.", correct: false }] },
+    { id: 1013, type: "SELECT", question: "'Le sport collectif nous apprend l'esprit d'équipe.' ne demek?", options: [{ id: "a", text: "Takım sporu bize takım ruhunu öğretir.", correct: true }, { id: "b", text: "Bireysel spor daha iyidir.", correct: false }, { id: "c", text: "Takım sporları zordur.", correct: false }] },
+    { id: 1014, type: "TRANSLATE", question: "Çevir:", hint: "Fiziksel aktivite sırasında su içmek gerekir.", correctAnswer: "Il faut s'hydrater pendant l'effort physique." },
+    { id: 1015, type: "FILL_BLANK", question: "Doldur:", sentence: "Kelebek stili yüzmeyi biliyor musun? Est-ce que tu sais nager le ___ ?", options: [{ id: "a", text: "papillon", correct: true }, { id: "b", text: "dauphin", correct: false }] },
+    { id: 1016, type: "SELECT", question: "Hangisi 'En sevdiğiniz futbol takımı hangisi?' demektir?", options: [{ id: "a", text: "Quel sport aimez-vous ?", correct: false }, { id: "b", text: "Quelle est votre équipe de football préférée ?", correct: true }, { id: "c", text: "Jouez-vous au football ?", correct: false }] },
+    { id: 1017, type: "TRANSLATE", question: "Çevir:", hint: "Dün akşam maçı televizyonda izlediniz mi?", correctAnswer: "Avez-vous vu le match à la télévision hier soir ?" },
+    { id: 1018, type: "FILL_BLANK", question: "Doldur:", sentence: "Oui, c'était un match ___. (inanılmaz)", options: [{ id: "a", text: "incroyable", correct: true }, { id: "b", text: "normal", correct: false }] },
+    { id: 1019, type: "SELECT", question: "'Inscrivez-vous à la salle de sport.' ne demek?", options: [{ id: "a", text: "Spor salonuna kayıt olun.", correct: true }, { id: "b", text: "Spor salonundan çıkın.", correct: false }] },
+    { id: 1020, type: "TRANSLATE", question: "Çevir:", hint: "Her sabah koşu yapıyorum.", correctAnswer: "Je fais de la course à pied tous les matins." }
+];
+
+const unit372Quiz4: Question[] = [
+    // Quiz 4: Reading comprehension & mixed review
+    { id: 1021, type: "SELECT", question: "Selon le texte, quelle place occupe le sport dans la vie des Français ?", options: [{ id: "a", text: "Aucune place", correct: false }, { id: "b", text: "Une place très importante", correct: true }, { id: "c", text: "Une petite place", correct: false }] },
+    { id: 1022, type: "TRANSLATE", question: "Çevir:", hint: "Her hafta sonu milyonlarca seyirci maçları televizyonda izler.", correctAnswer: "Chaque week-end, des millions de spectateurs regardent les matchs à la télévision." },
+    { id: 1023, type: "SELECT", question: "Quels sports collectifs sont cités dans le texte ?", options: [{ id: "a", text: "Le football, le basket-ball et le rugby", correct: true }, { id: "b", text: "Le tennis et le golf", correct: false }, { id: "c", text: "La natation et le cyclisme", correct: false }] },
+    { id: 1024, type: "FILL_BLANK", question: "Doldur:", sentence: "Les enfants commencent à jouer ___ football dès l'âge de six ans.", options: [{ id: "a", text: "au", correct: true }, { id: "b", text: "du", correct: false }] },
+    { id: 1025, type: "SELECT", question: "Que permet de faire le sport régulièrement ?", options: [{ id: "a", text: "Devenir célèbre", correct: false }, { id: "b", text: "Rester en forme et réduire le stress", correct: true }, { id: "c", text: "Gagner de l'argent", correct: false }] },
+    { id: 1026, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Un spectateur", options: [{ id: "a", text: "Sporcu", correct: false }, { id: "b", text: "Seyirci", correct: true }, { id: "c", text: "Hakem", correct: false }, { id: "d", text: "Antrenör", correct: false }] },
+    { id: 1027, type: "TRANSLATE", question: "Çevir:", hint: "Bireysel sporlar da çok başarılıdır.", correctAnswer: "Les sports individuels ont aussi beaucoup de succès." },
+    { id: 1028, type: "SELECT", question: "Quels sports individuels sont mentionnés dans le texte ?", options: [{ id: "a", text: "Le yoga et le ski", correct: false }, { id: "b", text: "La course à pied, la natation et le cyclisme", correct: true }, { id: "c", text: "Le tennis et la boxe", correct: false }] },
+    { id: 1029, type: "FILL_BLANK", question: "Doldur:", sentence: "Les sports individuels ___ de plus en plus de pratiquants. (attraire=çekmek 3. çoğul)", options: [{ id: "a", text: "attirent", correct: true }, { id: "b", text: "attire", correct: false }] },
+    { id: 1030, type: "TRANSLATE", question: "Fransızcasını yaz:", hint: "Düzenli spor yapmak günlük hayatta daha iyi hissetmeyi sağlar.", correctAnswer: "Faire du sport régulièrement permet de se sentir mieux dans sa vie quotidienne." },
+    { id: 1031, type: "SELECT", question: "Que signifie 'en plein air' ?", options: [{ id: "a", text: "Kapalı alanda", correct: false }, { id: "b", text: "Açık havada", correct: true }, { id: "c", text: "Su altında", correct: false }] },
+    { id: 1032, type: "SELECT", question: "'Faire de' mi yoksa 'Jouer à' mı? -> ___ escalade.", options: [{ id: "a", text: "Faire de l' (bireysel aktivite)", correct: true }, { id: "b", text: "Jouer à l' (takım sporu)", correct: false }] },
+    { id: 1033, type: "FILL_BLANK", question: "Doldur (Zarf):", sentence: "Il court ___. (hızlıca / rapide -> ?)", options: [{ id: "a", text: "rapidement", correct: true }, { id: "b", text: "rapide", correct: false }] },
+    { id: 1034, type: "TRANSLATE", question: "Çevir:", hint: "Spor, Fransızların hayatında çok önemli bir yer tutar.", correctAnswer: "Le sport occupe une place très importante dans la vie des Français." },
+    { id: 1035, type: "SELECT", question: "Quel mot du texte signifie 'Sporcu / Uygulayıcı' ?", options: [{ id: "a", text: "Spectateur", correct: false }, { id: "b", text: "Pratiquant", correct: true }, { id: "c", text: "Joueur", correct: false }] },
+    { id: 1036, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Faire du sport régulièrement", options: [{ id: "a", text: "Düzenli spor yapmak", correct: true }, { id: "b", text: "Nadiren spor yapmak", correct: false }, { id: "c", text: "Sporu bırakmak", correct: false }] },
+    { id: 1037, type: "TRANSLATE", question: "Çevir:", hint: "Çocuklar genellikle altı yaşında futbol oynamaya başlarlar.", correctAnswer: "Les enfants commencent souvent à jouer au football dès l'âge de six ans." },
+    { id: 1038, type: "SELECT", question: "Où peut-on pratiquer le sport selon le texte ?", options: [{ id: "a", text: "Seulement au gymnase", correct: false }, { id: "b", text: "En salle, en plein air ou dans un club", correct: true }, { id: "c", text: "Seulement chez soi", correct: false }] },
+    { id: 1039, type: "FILL_BLANK", question: "Doldur (Zarf):", sentence: "Il a répondu ___. (zekice / intelligent -> ?)", options: [{ id: "a", text: "intelligemment", correct: true }, { id: "b", text: "intelligentement", correct: false }] },
+    { id: 1040, type: "SELECT", question: "Le texte mentionne que le sport réduit...", options: [{ id: "a", text: "Le stress", correct: true }, { id: "b", text: "Le sommeil", correct: false }, { id: "c", text: "L'appétit", correct: false }] }
+];
+
 
  // Seeded random number generator for reliable questions per unit
 function seededRandom(seed: number) {
@@ -757,6 +1242,46 @@ export function getFrenchB1Quiz(unitId: number, quizIndex: number): Question[] {
         if (quizIndex === 2) return unit367Quiz2;
         if (quizIndex === 3) return unit367Quiz3;
         if (quizIndex === 4) return unit367Quiz4;
+    }
+
+    // Return hardcoded, perfectly tailored quizzes for UNIT 368
+    if (unitId === 368) {
+        if (quizIndex === 1) return unit368Quiz1;
+        if (quizIndex === 2) return unit368Quiz2;
+        if (quizIndex === 3) return unit368Quiz3;
+        if (quizIndex === 4) return unit368Quiz4;
+    }
+
+    // Return hardcoded, perfectly tailored quizzes for UNIT 369
+    if (unitId === 369) {
+        if (quizIndex === 1) return unit369Quiz1;
+        if (quizIndex === 2) return unit369Quiz2;
+        if (quizIndex === 3) return unit369Quiz3;
+        if (quizIndex === 4) return unit369Quiz4;
+    }
+
+    // Return hardcoded, perfectly tailored quizzes for UNIT 370
+    if (unitId === 370) {
+        if (quizIndex === 1) return unit370Quiz1;
+        if (quizIndex === 2) return unit370Quiz2;
+        if (quizIndex === 3) return unit370Quiz3;
+        if (quizIndex === 4) return unit370Quiz4;
+    }
+
+    // Return hardcoded, perfectly tailored quizzes for UNIT 371
+    if (unitId === 371) {
+        if (quizIndex === 1) return unit371Quiz1;
+        if (quizIndex === 2) return unit371Quiz2;
+        if (quizIndex === 3) return unit371Quiz3;
+        if (quizIndex === 4) return unit371Quiz4;
+    }
+
+    // Return hardcoded, perfectly tailored quizzes for UNIT 372
+    if (unitId === 372) {
+        if (quizIndex === 1) return unit372Quiz1;
+        if (quizIndex === 2) return unit372Quiz2;
+        if (quizIndex === 3) return unit372Quiz3;
+        if (quizIndex === 4) return unit372Quiz4;
     }
 
     // Dynamic Generator for rest of the units

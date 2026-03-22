@@ -241,6 +241,141 @@ const unit367Vocab: UnitVocabularyFrB1 = {
     ]
 };
 
+const unit368Vocab: UnitVocabularyFrB1 = {
+    unitId: 368,
+    title: "Sağlık ve Zindelik (Santé et Bien-être)",
+    words: [
+        { word: "La santé", meaning: "Sağlık", example: "La santé est la chose la plus importante.", exampleTranslation: "Sağlık en önemli şeydir.", pronunciation: "la san-te" },
+        { word: "La maladie", meaning: "Hastalık", example: "Il souffre d'une maladie rare.", exampleTranslation: "Nadir bir hastalıktan muzdarip.", pronunciation: "la ma-la-di" },
+        { word: "Le médecin", meaning: "Doktor", example: "Vous devez voir un médecin.", exampleTranslation: "Bir doktor görmelisiniz.", pronunciation: "lö med-san" },
+        { word: "L'hôpital (m)", meaning: "Hastane", example: "Elle travaille à l'hôpital.", exampleTranslation: "O hastanede çalışıyor.", pronunciation: "lo-pi-tal" },
+        { word: "La douleur", meaning: "Ağrı / Acı", example: "J'ai une forte douleur au dos.", exampleTranslation: "Sırtımda şiddetli bir ağrı var.", pronunciation: "la du-lör" },
+        { word: "Le médicament", meaning: "İlaç", example: "N'oubliez pas de prendre vos médicaments.", exampleTranslation: "İlaçlarınızı almayı unutmayın.", pronunciation: "lö me-di-ka-man" },
+        { word: "L'ordonnance (f)", meaning: "Reçete", example: "Le médecin m'a rédigé une ordonnance.", exampleTranslation: "Doktor bana bir reçete yazdı.", pronunciation: "lor-do-nans" },
+        { word: "Guérir", meaning: "İyileşmek / İyileştirmek", example: "Il va guérir bientôt.", exampleTranslation: "Yakında iyileşecek.", pronunciation: "ge-rir" },
+        { word: "La fièvre", meaning: "Ateş", example: "L'enfant a beaucoup de fièvre.", exampleTranslation: "Çocuğun çok ateşi var.", pronunciation: "la fyevr" },
+        { word: "Toux (La toux)", meaning: "Öksürük", example: "J'ai une mauvaise toux depuis trois jours.", exampleTranslation: "Üç gündür kötü bir öksürüğüm var.", pronunciation: "la tu" },
+        { word: "Le rhume", meaning: "Soğuk algınlığı / Nezle", example: "J'ai attrapé un rhume.", exampleTranslation: "Soğuk algınlığına yakalandım.", pronunciation: "lö rüm" },
+        { word: "Saigner", meaning: "Kanamak", example: "Son nez commence à saigner.", exampleTranslation: "Burnu kanamaya başlıyor.", pronunciation: "se-nye" },
+        { word: "La blessure", meaning: "Yara", example: "C'est une blessure légère.", exampleTranslation: "Bu hafif bir yara.", pronunciation: "la ble-sür" },
+        { word: "Le sommeil", meaning: "Uyku", example: "Manquer de sommeil est mauvais pour la santé.", exampleTranslation: "Uykusuz kalmak sağlık için kötüdür.", pronunciation: "lö so-mey" },
+        { word: "Fatigué(e)", meaning: "Yorgun", example: "Je me sens très fatigué aujourd'hui.", exampleTranslation: "Bugün çok yorgun hissediyorum.", pronunciation: "fa-ti-ge" },
+        { word: "L'exercice (m)", meaning: "Egzersiz / Spor", example: "Il faut faire de l'exercice régulièrement.", exampleTranslation: "Düzenli olarak egzersiz yapmak gerekir.", pronunciation: "leg-zer-sis" },
+        { word: "Le régime", meaning: "Diyet", example: "Elle suit un régime strict.", exampleTranslation: "O sıkı bir diyet uyguluyor.", pronunciation: "lö re-jim" },
+        { word: "Respirer", meaning: "Nefes almak", example: "Respirez profondément.", exampleTranslation: "Derin nefes alın.", pronunciation: "res-pi-re" },
+        { word: "Sain(e)", meaning: "Sağlıklı (yiyecek/yaşam tarzı)", example: "Manger sain est essentiel.", exampleTranslation: "Sağlıklı beslenmek esastır.", pronunciation: "san (sen)" },
+        { word: "Le bien-être", meaning: "Zindelik / Esenlik", example: "Le yoga améliore le bien-être général.", exampleTranslation: "Yoga genel zindeliği artırır.", pronunciation: "lö byan-etr" }
+    ]
+};
+
+const unit369Vocab: UnitVocabularyFrB1 = {
+    unitId: 369,
+    title: "Eğitim ve Öğrenim (Éducation et Apprentissage)",
+    words: [
+        { word: "L'éducation (f)", meaning: "Eğitim", example: "L'éducation est la clé du succès.", exampleTranslation: "Eğitim başarının anahtarıdır.", pronunciation: "le-dü-ka-syon" },
+        { word: "L'école (f)", meaning: "Okul", example: "Les enfants vont à l'école tous les jours.", exampleTranslation: "Çocuklar her gün okula gider.", pronunciation: "le-kol" },
+        { word: "L'université (f)", meaning: "Üniversite", example: "Elle étudie le droit à l'université.", exampleTranslation: "Üniversitede hukuk okuyor.", pronunciation: "lü-ni-ver-si-te" },
+        { word: "L'élève (m/f)", meaning: "Öğrenci (İlkokul/Lise)", example: "C'est un excellent élève.", exampleTranslation: "O mükemmel bir öğrenci.", pronunciation: "le-lev" },
+        { word: "L'étudiant(e)", meaning: "Öğrenci (Üniversite)", example: "Les étudiants préparent leurs examens.", exampleTranslation: "Öğrenciler sınavlarına hazırlanıyor.", pronunciation: "le-tü-dyan" },
+        { word: "Le professeur", meaning: "Öğretmen / Profesör", example: "Le professeur explique la leçon.", exampleTranslation: "Öğretmen dersi açıklıyor.", pronunciation: "lö pro-fe-sör" },
+        { word: "La leçon", meaning: "Ders (İşlenen konu)", example: "Avez-vous compris la leçon ?", exampleTranslation: "Dersi anladınız mı?", pronunciation: "la lö-son" },
+        { word: "Le cours", meaning: "Ders (Süreç/Sınıf)", example: "Je n'ai pas pu aller en cours hier.", exampleTranslation: "Dün derse gidemedim.", pronunciation: "lö kur" },
+        { word: "Apprendre", meaning: "Öğrenmek", example: "Il est facile d'apprendre avec la bonne méthode.", exampleTranslation: "Doğru yöntemle öğrenmek kolaydır.", pronunciation: "a-prandr" },
+        { word: "Enseigner", meaning: "Öğretmek", example: "Elle enseigne les mathématiques.", exampleTranslation: "O matematik öğretiyor.", pronunciation: "an-se-nye" },
+        { word: "L'examen (m)", meaning: "Sınav", example: "L'examen final est la semaine prochaine.", exampleTranslation: "Final sınavı haftaya.", pronunciation: "leg-za-man" },
+        { word: "Réussir", meaning: "Başarmak / (Sınavı) geçmek", example: "J'espère réussir cet examen.", exampleTranslation: "Umarım bu sınavı geçerim.", pronunciation: "re-ü-sir" },
+        { word: "Échouer", meaning: "Başarısız olmak / Kalmak", example: "S'il ne travaille pas, il va échouer.", exampleTranslation: "Çalışmazsa başarısız olacak.", pronunciation: "e-şue" },
+        { word: "Les devoirs (m)", meaning: "Ödev", example: "N'oublie pas de faire tes devoirs.", exampleTranslation: "Ödevlerini yapmayı unutma.", pronunciation: "le dö-vuar" },
+        { word: "La note", meaning: "Not / Puan", example: "Elle a eu une très bonne note en histoire.", exampleTranslation: "Tarihten çok iyi bir not aldı.", pronunciation: "la not" },
+        { word: "Le diplôme", meaning: "Diploma", example: "Il vient de recevoir son diplôme.", exampleTranslation: "Diplomasını henüz yeni aldı.", pronunciation: "lö di-plom" },
+        { word: "La bourse", meaning: "Burs", example: "Elle a obtenu une bourse pour étudier à l'étranger.", exampleTranslation: "Yurtdışında okumak için burs kazandı.", pronunciation: "la burs" },
+        { word: "Étudier", meaning: "Çalışmak (ders) / Okumak", example: "Il étudie à la bibliothèque.", exampleTranslation: "Kütüphanede ders çalışıyor.", pronunciation: "e-tü-dye" },
+        { word: "Le sujet", meaning: "Konu", example: "Ce sujet est très intéressant.", exampleTranslation: "Bu konu çok ilginç.", pronunciation: "lö sü-je" },
+        { word: "La rentrée", meaning: "Okula dönüş / Okulların açılması", example: "La rentrée des classes a lieu en septembre.", exampleTranslation: "Okullar eylülde açılıyor.", pronunciation: "la ran-tre" }
+    ]
+};
+
+const unit370Vocab: UnitVocabularyFrB1 = {
+    unitId: 370,
+    title: "Doğa ve Çevre (Nature et Environnement)",
+    words: [
+        { word: "L'environnement (m)", meaning: "Çevre", example: "Il faut protéger l'environnement.", exampleTranslation: "Çevreyi korumak gerekir.", pronunciation: "lan-vi-ron-man" },
+        { word: "La nature", meaning: "Doğa", example: "J'aime me promener dans la nature.", exampleTranslation: "Doğada yürüyüş yapmayı severim.", pronunciation: "la na-tür" },
+        { word: "L'arbre (m)", meaning: "Ağaç", example: "Cet arbre a plus de cent ans.", exampleTranslation: "Bu ağaç yüz yaşından büyük.", pronunciation: "larbr" },
+        { word: "La forêt", meaning: "Orman", example: "Les animaux sauvages vivent dans la forêt.", exampleTranslation: "Vahşi hayvanlar ormanda yaşar.", pronunciation: "la fo-re" },
+        { word: "Protéger", meaning: "Korumak", example: "Nous devons protéger notre planète.", exampleTranslation: "Gezegenimizi korumalıyız.", pronunciation: "pro-te-je" },
+        { word: "La pollution", meaning: "Kirlilik", example: "La pollution de l'air est un grand problème.", exampleTranslation: "Hava kirliliği büyük bir problemdir.", pronunciation: "la po-lü-syon" },
+        { word: "Polluer", meaning: "Kirletmek", example: "Les usines polluent la rivière.", exampleTranslation: "Fabrikalar nehri kirletiyor.", pronunciation: "po-lü-e" },
+        { word: "Le changement climatique", meaning: "İklim değişikliği", example: "Le changement climatique menace le monde.", exampleTranslation: "İklim değişikliği dünyayı tehdit ediyor.", pronunciation: "lö şanj-man kli-ma-tik" },
+        { word: "Le recyclage", meaning: "Geri dönüşüm", example: "Le recyclage du papier sauve des arbres.", exampleTranslation: "Kağıt geri dönüşümü ağaçları kurtarır.", pronunciation: "lö rö-si-klaj" },
+        { word: "Recycler", meaning: "Geri dönüştürmek", example: "Il est important de recycler le plastique.", exampleTranslation: "Plastiği geri dönüştürmek önemlidir.", pronunciation: "rö-si-kle" },
+        { word: "Les déchets (m)", meaning: "Çöp / Atıklar", example: "Ne jetez pas vos déchets par terre.", exampleTranslation: "Çöplerinizi yere atmayın.", pronunciation: "le de-şe" },
+        { word: "L'énergie solaire", meaning: "Güneş enerjisi", example: "L'énergie solaire est propre.", exampleTranslation: "Güneş enerjisi temizdir.", pronunciation: "le-ner-ji so-ler" },
+        { word: "La planète", meaning: "Gezegen", example: "La Terre est notre seule planète.", exampleTranslation: "Dünya bizim tek gezegenimizdir.", pronunciation: "la pla-net" },
+        { word: "Le réchauffement", meaning: "Isınma", example: "Le réchauffement de la planète s'accélère.", exampleTranslation: "Küresel ısınma hızlanıyor.", pronunciation: "lö re-şof-man" },
+        { word: "La mer", meaning: "Deniz", example: "La mer est très calme aujourd'hui.", exampleTranslation: "Deniz bugün çok sakin.", pronunciation: "la mer" },
+        { word: "L'animal (pl: les animaux)", meaning: "Hayvan", example: "C'est un animal très rare.", exampleTranslation: "O çok nadir bir hayvandır.", pronunciation: "la-ni-mal" },
+        { word: "Sauvage", meaning: "Vahşi / Yabani", example: "Ne t'approche pas, c'est un animal sauvage.", exampleTranslation: "Yaklaşma, o vahşi bir hayvan.", pronunciation: "so-vaj" },
+        { word: "Détruire", meaning: "Yok etmek", example: "L'homme ne doit pas détruire la nature.", exampleTranslation: "İnsan doğayı yok etmemelidir.", pronunciation: "de-trüir" },
+        { word: "L'écologie (f)", meaning: "Ekoloji / Çevre bilimi", example: "Il étudie l'écologie à l'université.", exampleTranslation: "Üniversitede ekoloji okuyor.", pronunciation: "le-ko-lo-ji" },
+        { word: "Conserver", meaning: "Korumak / Muhafaza etmek", example: "Nous devons conserver l'eau potable.", exampleTranslation: "İçme suyunu korumalıyız.", pronunciation: "kon-ser-ve" }
+    ]
+};
+
+const unit371Vocab: UnitVocabularyFrB1 = {
+    unitId: 371,
+    title: "Şehir ve Toplu Taşıma (La Ville et Les Transports)",
+    words: [
+        { word: "La ville", meaning: "Şehir", example: "J'habite dans une grande ville.", exampleTranslation: "Büyük bir şehirde yaşıyorum.", pronunciation: "la vil" },
+        { word: "La circulation", meaning: "Trafik / Dolaşım", example: "La circulation est dense le matin.", exampleTranslation: "Sabahları trafik yoğundur.", pronunciation: "la sir-kü-la-syon" },
+        { word: "L'embouteillage (m)", meaning: "Trafik sıkışıklığı", example: "Il y a un gros embouteillage sur l'autoroute.", exampleTranslation: "Otoyolda büyük bir trafik sıkışıklığı var.", pronunciation: "lan-bu-tey-yaj" },
+        { word: "Le trottoir", meaning: "Kaldırım", example: "Les piétons doivent marcher sur le trottoir.", exampleTranslation: "Yayalar kaldırımda yürümelidir.", pronunciation: "lö tro-tuar" },
+        { word: "Le piéton", meaning: "Yaya", example: "Ce passage est réservé aux piétons.", exampleTranslation: "Bu geçit yayalara ayrılmıştır.", pronunciation: "lö pye-ton" },
+        { word: "Traverser", meaning: "Karşıdan karşıya geçmek", example: "Regardez à gauche et à droite avant de traverser.", exampleTranslation: "Karşıya geçmeden önce sola ve sağa bakın.", pronunciation: "tra-ver-se" },
+        { word: "Le carrefour", meaning: "Kavşak", example: "Tournez à droite au prochain carrefour.", exampleTranslation: "Sonraki kavşakta sağa dönün.", pronunciation: "lö kar-fur" },
+        { word: "Le quartier", meaning: "Semt / Mahalle", example: "C'est un quartier très calme.", exampleTranslation: "Çok sakin bir mahalledir.", pronunciation: "lö kar-tye" },
+        { word: "Les transports en commun", meaning: "Toplu taşıma", example: "Je prends toujours les transports en commun.", exampleTranslation: "Her zaman toplu taşımayı kullanıyorum.", pronunciation: "le trans-por an ko-mun" },
+        { word: "La station", meaning: "İstasyon / Durak (Metro vb.)", example: "Où est la station de métro la plus proche ?", exampleTranslation: "En yakın metro istasyonu nerede?", pronunciation: "la sta-syon" },
+        { word: "L'arrêt (m) de bus", meaning: "Otobüs durağı", example: "Attends-moi à l'arrêt de bus.", exampleTranslation: "Beni otobüs durağında bekle.", pronunciation: "la-re dö büs" },
+        { word: "Le trajet", meaning: "Yolculuk / Mesafe", example: "Le trajet dure environ une heure.", exampleTranslation: "Yolculuk yaklaşık bir saat sürer.", pronunciation: "lö tra-je" },
+        { word: "Le passager", meaning: "Yolcu", example: "Le bus est rempli de passagers.", exampleTranslation: "Otobüs yolcularla dolu.", pronunciation: "lö pa-sa-je" },
+        { word: "Le ticket", meaning: "Bilet", example: "J'ai acheté un aller simple.", exampleTranslation: "Tek yön ticket/bilet aldım.", pronunciation: "lö ti-ke" },
+        { word: "Valider", meaning: "Onaylamak / Okutmak (Bilet)", example: "N'oubliez pas de valider votre ticket.", exampleTranslation: "Biletinizi okutmayı unutmayın.", pronunciation: "va-li-de" },
+        { word: "Correspondance (f)", meaning: "Aktarma", example: "Vous avez une correspondance à la gare centrale.", exampleTranslation: "Merkez istasyonda bir aktarmanız var.", pronunciation: "ko-res-pon-dans" },
+        { word: "Souterrain(e)", meaning: "Yeraltı (Sıfat)", example: "Le métro est un train souterrain.", exampleTranslation: "Metro bir yeraltı trenidir.", pronunciation: "su-te-ran" },
+        { word: "Le bâtiment", meaning: "Bina", example: "Ce bâtiment historique est magnifique.", exampleTranslation: "Bu tarihi bina muhteşemdir.", pronunciation: "lö ba-ti-man" },
+        { word: "La mairie", meaning: "Belediye binası", example: "Il travaille à la mairie.", exampleTranslation: "Belediyede çalışıyor.", pronunciation: "la me-ri" },
+        { word: "Le centre-ville", meaning: "Şehir merkezi", example: "Nous allons faire les magasins au centre-ville.", exampleTranslation: "Şehir merkezinde alışverişe gideceğiz.", pronunciation: "lö santr-vil" }
+    ]
+};
+
+const unit372Vocab: UnitVocabularyFrB1 = {
+    unitId: 372,
+    title: "Spor ve Aktiviteler (Le Sport et Les Activités Physiques)",
+    words: [
+        { word: "L'entraînement (m)", meaning: "Antrenman", example: "J'ai un entraînement de foot ce soir.", exampleTranslation: "Bu akşam futbol antrenmanım var.", pronunciation: "lan-tren-man" },
+        { word: "Le match", meaning: "Maç", example: "Le match commence à vingt heures.", exampleTranslation: "Maç saat yirmide başlıyor.", pronunciation: "lö maç" },
+        { word: "L'équipe (f)", meaning: "Takım", example: "Notre équipe a gagné le tournoi.", exampleTranslation: "Takımımız turnuvayı kazandı.", pronunciation: "le-kip" },
+        { word: "Le terrain", meaning: "Saha / Kort", example: "Les joueurs sont sur le terrain.", exampleTranslation: "Oyuncular sahada.", pronunciation: "lö te-ran" },
+        { word: "Le gymnase", meaning: "Spor salonu (okul/kulüp)", example: "Le cours d'éducation physique est au gymnase.", exampleTranslation: "Beden eğitimi dersi spor salonundadır.", pronunciation: "lö jim-naz" },
+        { word: "La salle de sport", meaning: "Spor salonu (fitness)", example: "Je vais à la salle de sport trois fois par semaine.", exampleTranslation: "Haftada üç kez spor salonuna gidiyorum.", pronunciation: "la sal dö spor" },
+        { word: "Gagner", meaning: "Kazanmak", example: "Ils veulent gagner la coupe.", exampleTranslation: "Kupayı kazanmak istiyorlar.", pronunciation: "gan-ye" },
+        { word: "Perdre", meaning: "Kaybetmek", example: "Il n'aime pas perdre.", exampleTranslation: "Kaybetmeyi sevmiyor.", pronunciation: "perdr" },
+        { word: "Le joueur / La joueuse", meaning: "Oyuncu", example: "C'est le meilleur joueur de l'année.", exampleTranslation: "Yılın en iyi oyuncusudur.", pronunciation: "lö ju-ör / la ju-öz" },
+        { word: "L'arbitre (m/f)", meaning: "Hakem", example: "L'arbitre a sifflé la fin du match.", exampleTranslation: "Hakem maçın bitiş düdüğünü çaldı.", pronunciation: "lar-bitr" },
+        { word: "Courir", meaning: "Koşmak", example: "Il aime courir dans le parc le dimanche.", exampleTranslation: "Pazar günleri parkta koşmayı sever.", pronunciation: "ku-rir" },
+        { word: "Sauter", meaning: "Zıplamak / Atlamak", example: "Elle sait sauter très haut.", exampleTranslation: "Çok yükseğe zıplayabilir.", pronunciation: "so-te" },
+        { word: "Nager", meaning: "Yüzmek", example: "J'ai appris à nager très jeune.", exampleTranslation: "Yüzmeyi çok genç yaşta öğrendim.", pronunciation: "na-je" },
+        { word: "La compétition", meaning: "Yarışma / Rekabet", example: "La compétition sera rude cette année.", exampleTranslation: "Bu yıl yarışma zorlu olacak.", pronunciation: "la kom-pe-ti-syon" },
+        { word: "L'adversaire (m/f)", meaning: "Rakip", example: "Respectez toujours votre adversaire.", exampleTranslation: "Her zaman rakibinize saygı gösterin.", pronunciation: "lad-ver-ser" },
+        { word: "Le but", meaning: "Gol / Amaç", example: "Il a marqué un but magnifique.", exampleTranslation: "Muhteşem bir gol attı.", pronunciation: "lö bü" },
+        { word: "En forme", meaning: "Formda", example: "Pour rester en forme, je fais du vélo.", exampleTranslation: "Formda kalmak için bisiklete biniyorum.", pronunciation: "an form" },
+        { word: "La blessure", meaning: "Yara / Sakatlık", example: "Il a une blessure au genou.", exampleTranslation: "Dizinde bir sakatlık var.", pronunciation: "la ble-sür" },
+        { word: "S'entraîner", meaning: "Antrenman yapmak", example: "Il s'entraîne tous les jours pour les Jeux Olympiques.", exampleTranslation: "Olimpiyatlar için her gün antrenman yapıyor.", pronunciation: "san-tre-ne" },
+        { word: "Le filet", meaning: "Ağ (Voleybol/Tenis)", example: "La balle a touché le filet.", exampleTranslation: "Top ağa çarptı.", pronunciation: "lö fi-le" }
+    ]
+};
+
 export function getFrB1VocabularyForUnit(unitId: number): FrenchB1VocabularyItem[] {
     const idMapping: { [key: number]: UnitVocabularyFrB1 } = {
         361: unit361Vocab,
@@ -249,7 +384,12 @@ export function getFrB1VocabularyForUnit(unitId: number): FrenchB1VocabularyItem
         364: unit364Vocab,
         365: unit365Vocab,
         366: unit366Vocab,
-        367: unit367Vocab
+        367: unit367Vocab,
+        368: unit368Vocab,
+        369: unit369Vocab,
+        370: unit370Vocab,
+        371: unit371Vocab,
+        372: unit372Vocab
     };
     return idMapping[unitId]?.words || unit361Vocab.words;
 }

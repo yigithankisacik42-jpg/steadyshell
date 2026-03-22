@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, OrbitControls, Html, ContactShadows, Float, Text } from "@react-three/drei";
+import React, { useRef, useState, useEffect, Suspense } from "react";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { Environment, OrbitControls, Html, ContactShadows, Float, Text, useGLTF, Center } from "@react-three/drei";
 import * as THREE from "three";
 import { Scene as SceneData } from "@/lib/scenes";
 
@@ -17,9 +17,54 @@ interface Scene3DProps {
   isLoading: boolean;
 }
 
+// Sahne ID'lerine göre 3D model dosyası ve NPC konumu eşleştirmesi
+const SCENE_MODEL_MAP: Record<string, { model: string; npcPosition: [number, number, number]; cameraPosition: [number, number, number]; scale: number }> = {
+  // Dükkan/Eczane sahnesi
+  pharmacy: { model: "/models/little-shop.glb", npcPosition: [0, 0, -1], cameraPosition: [0, 2, 5], scale: 1 },
+  supermarket: { model: "/models/little-shop.glb", npcPosition: [0, 0, -1], cameraPosition: [0, 2, 5], scale: 1 },
+  bakery: { model: "/models/little-shop.glb", npcPosition: [0, 0, -1], cameraPosition: [0, 2, 5], scale: 1 },
+  market: { model: "/models/little-shop.glb", npcPosition: [0, 0, -1], cameraPosition: [0, 2, 5], scale: 1 },
+};
+
+// GLB Model Yükleyici Bileşeni
+function GLBModel({ modelPath, scale = 1 }: { modelPath: string; scale?: number }) {
+  const { scene } = useGLTF(modelPath);
+
+  useEffect(() => {
+    scene.traverse((child) => {
+      if ((child as THREE.Mesh).isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+  }, [scene]);
+
+  return (
+    <Center>
+      <primitive object={scene} scale={scale} />
+    </Center>
+  );
+}
+
+// Loading Spinner (model yüklenirken gösterilecek)
+function LoadingSpinner() {
+  return (
+    <Html center>
+      <div className="flex flex-col items-center gap-3">
+        <div className="relative w-16 h-16">
+          <div className="absolute inset-0 border-4 border-violet-500/30 rounded-full"></div>
+          <div className="absolute inset-0 border-4 border-transparent border-t-violet-500 rounded-full animate-spin"></div>
+        </div>
+        <p className="text-white/70 text-sm font-medium animate-pulse">Sahne Yükleniyor...</p>
+      </div>
+    </Html>
+  );
+}
+
 // A generic NPC component
-function NPC({ isTyping, lastAssistantMessage }: { isTyping: boolean, lastAssistantMessage: string | null }) {
+function NPC({ isTyping, lastAssistantMessage, position }: { isTyping: boolean, lastAssistantMessage: string | null, position?: [number, number, number] }) {
   const meshRef = useRef<THREE.Mesh>(null);
+  const npcPos = position || [0, 0, -2];
   
   // Simple idle animation
   useFrame((state) => {
@@ -29,7 +74,7 @@ function NPC({ isTyping, lastAssistantMessage }: { isTyping: boolean, lastAssist
   });
 
   return (
-    <group position={[0, 0, -2]}>
+    <group position={npcPos}>
       {/* Speech Bubble */}
       {(lastAssistantMessage || isTyping) && (
         <Html position={[0, 2.5, 0]} center zIndexRange={[100, 0]}>
@@ -65,7 +110,7 @@ function NPC({ isTyping, lastAssistantMessage }: { isTyping: boolean, lastAssist
   );
 }
 
-// Interactive Objects
+// Interactive Objects (sadece fallback sahne için)
 function InteractiveProp({ position, name, color }: { position: [number, number, number], name: string, color: string }) {
   const [hovered, setHovered] = useState(false);
   const meshRef = useRef<THREE.Mesh>(null);
@@ -102,9 +147,8 @@ function InteractiveProp({ position, name, color }: { position: [number, number,
   );
 }
 
-// Background environment mapping based on scene ID/category
-function SceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
-  // A generic room for now
+// Fallback sahne (GLB model olmayan sahneler için eski geometrik ortam)
+function FallbackSceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
   return (
     <group>
       {/* Floor */}
@@ -127,9 +171,43 @@ function SceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
         >
           {sceneData?.titleTr || "Sanal Sahne"}
         </Text>
+        <Text
+          fontSize={0.3}
+          color="#ef4444"
+          position={[0, -0.6, 0]}
+          anchorX="center"
+          anchorY="middle"
+        >
+          DEBUG ID: {sceneData?.id || "NULL"}
+        </Text>
       </Float>
     </group>
   );
+}
+
+// Ana sahne ortamı — GLB model varsa onu yükler, yoksa fallback geometrik ortamı gösterir
+function SceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
+  const sceneId = sceneData?.id || "";
+  const modelConfig = SCENE_MODEL_MAP[sceneId];
+
+  // ALWAYS log the mapping resolution for debug
+  console.log("SCENE RENDER:", { sceneId, hasConfig: !!modelConfig });
+
+  if (modelConfig) {
+    return (
+      <React.Fragment>
+        <Suspense fallback={<LoadingSpinner />}>
+          <GLBModel modelPath={modelConfig.model} scale={modelConfig.scale} />
+        </Suspense>
+        {/* Force fallback to render at offset to verify BOTH are here if something fails */}
+        <group position={[0, -10, 0]}>
+           <FallbackSceneEnvironment sceneData={sceneData} />
+        </group>
+      </React.Fragment>
+    );
+  }
+
+  return <FallbackSceneEnvironment sceneData={sceneData} />;
 }
 
 export function Scene3D({ sceneData, messages, isLoading }: Scene3DProps) {
@@ -137,34 +215,41 @@ export function Scene3D({ sceneData, messages, isLoading }: Scene3DProps) {
   const assistantMessages = messages.filter(m => m.role === 'assistant');
   const lastAssistantMessage = assistantMessages.length > 0 ? assistantMessages[assistantMessages.length - 1].content : null;
 
+  // GLB model varsa kamera ve NPC pozisyonlarını modele göre ayarla
+  const sceneId = sceneData?.id || "";
+  const modelConfig = SCENE_MODEL_MAP[sceneId];
+  const cameraPos = modelConfig?.cameraPosition || [0, 1.5, 4];
+  const npcPos = modelConfig?.npcPosition || [0, 0, -2];
+
   return (
     <div className="absolute inset-0 z-0 bg-slate-950">
-      <Canvas shadows camera={{ position: [0, 1.5, 4], fov: 50 }}>
+      <Canvas shadows camera={{ position: cameraPos as [number, number, number], fov: 50 }}>
         {/* Lighting */}
-        <ambientLight intensity={0.4} />
+        <ambientLight intensity={0.6} />
         <directionalLight 
           position={[5, 5, 5]} 
-          intensity={1} 
+          intensity={1.2} 
           castShadow 
           shadow-mapSize={[1024, 1024]} 
         />
         <pointLight position={[-5, 5, -5]} intensity={0.5} color="#c084fc" />
+        <pointLight position={[3, 3, 3]} intensity={0.3} color="#fbbf24" />
         
         {/* Environment setup */}
         <Environment preset="city" />
-        <fog attach="fog" args={['#020617', 2, 10]} />
+        <fog attach="fog" args={['#020617', 5, 20]} />
         
         {/* Main Content */}
         <SceneEnvironment sceneData={sceneData} />
-        <NPC isTyping={isLoading} lastAssistantMessage={lastAssistantMessage} />
+        <NPC isTyping={isLoading} lastAssistantMessage={lastAssistantMessage} position={npcPos as [number, number, number]} />
         
         {/* Controls */}
         <OrbitControls 
           enablePan={false} 
-          minPolarAngle={Math.PI / 4} 
+          minPolarAngle={Math.PI / 6} 
           maxPolarAngle={Math.PI / 2 + 0.1}
           minDistance={2}
-          maxDistance={8}
+          maxDistance={10}
         />
         <ContactShadows position={[0, -0.49, 0]} opacity={0.4} scale={10} blur={2} far={4} />
       </Canvas>
