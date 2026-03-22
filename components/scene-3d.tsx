@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect, Suspense } from "react";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls, Html, ContactShadows, Float, Text, useGLTF, Center } from "@react-three/drei";
 import * as THREE from "three";
 import { Scene as SceneData } from "@/lib/scenes";
@@ -17,16 +17,21 @@ interface Scene3DProps {
   isLoading: boolean;
 }
 
-// Sahne ID'lerine göre 3D model dosyası ve NPC konumu eşleştirmesi
-const SCENE_MODEL_MAP: Record<string, { model: string; npcPosition: [number, number, number]; cameraPosition: [number, number, number]; scale: number }> = {
-  // Dükkan/Eczane sahnesi
-  pharmacy: { model: "/models/little-shop.glb", npcPosition: [0, 0, -2], cameraPosition: [0, 1.5, 3], scale: 10 },
-  supermarket: { model: "/models/little-shop.glb", npcPosition: [0, 0, -2], cameraPosition: [0, 1.5, 3], scale: 10 },
-  bakery: { model: "/models/little-shop.glb", npcPosition: [0, 0, -2], cameraPosition: [0, 1.5, 3], scale: 10 },
-  market: { model: "/models/little-shop.glb", npcPosition: [0, 0, -2], cameraPosition: [0, 1.5, 3], scale: 10 },
+// Model Configuration Map
+const SCENE_MODEL_MAP: Record<string, { 
+  model: string; 
+  shopkeeperPos: [number, number, number]; 
+  playerPos: [number, number, number];
+  cameraPos: [number, number, number]; 
+  cameraTarget: [number, number, number];
+  scale: number 
+}> = {
+  pharmacy: { model: "/models/little-shop.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 10 },
+  supermarket: { model: "/models/little-shop.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 10 },
+  bakery: { model: "/models/little-shop.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 10 },
+  market: { model: "/models/little-shop.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 10 },
 };
 
-// GLB Model Yükleyici Bileşeni
 function GLBModel({ modelPath, scale = 1 }: { modelPath: string; scale?: number }) {
   const { scene } = useGLTF(modelPath);
 
@@ -46,7 +51,6 @@ function GLBModel({ modelPath, scale = 1 }: { modelPath: string; scale?: number 
   );
 }
 
-// Loading Spinner (model yüklenirken gösterilecek)
 function LoadingSpinner() {
   return (
     <Html center>
@@ -61,24 +65,42 @@ function LoadingSpinner() {
   );
 }
 
-// A generic NPC component
-function NPC({ isTyping, lastAssistantMessage, position }: { isTyping: boolean, lastAssistantMessage: string | null, position?: [number, number, number] }) {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const npcPos = position || [0, 0, -2];
+// Core Generic Character Component
+function Character({ 
+  isTyping, 
+  message, 
+  position, 
+  rotationY = 0,
+  bodyColor, 
+  headColor, 
+  isPlayer 
+}: { 
+  isTyping: boolean; 
+  message: string | null; 
+  position: [number, number, number]; 
+  rotationY?: number;
+  bodyColor: string; 
+  headColor: string;
+  isPlayer?: boolean;
+}) {
+  const groupRef = useRef<THREE.Group>(null);
   
-  // Simple idle animation
+  // Subtle breathing (no flying)
   useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * 2) * 0.05 + 1;
+    if (groupRef.current) {
+      // Very tiny Y animation (breathing) and anchor safely
+      groupRef.current.position.y = position[1] + (Math.sin(state.clock.elapsedTime * 2 + (isPlayer ? 0 : Math.PI)) * 0.03);
     }
   });
 
   return (
-    <group position={npcPos}>
+    <group ref={groupRef} position={position} rotation={[0, rotationY, 0]}>
       {/* Speech Bubble */}
-      {(lastAssistantMessage || isTyping) && (
-        <Html position={[0, 2.5, 0]} center zIndexRange={[100, 0]}>
-          <div className="bg-slate-900/90 backdrop-blur-md border border-white/20 p-4 rounded-2xl max-w-[280px] shadow-2xl animate-in fade-in zoom-in duration-300">
+      {(message || isTyping) && (
+        <Html position={[0, 2.3, 0]} center zIndexRange={[100, 0]}>
+          <div className={`backdrop-blur-md border p-3 rounded-xl min-w-[150px] max-w-[280px] shadow-2xl animate-in fade-in zoom-in duration-300 ${
+            isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 text-white" : "bg-slate-900/90 border-white/20 text-white"
+          }`}>
             {isTyping ? (
               <div className="flex space-x-1.5 items-center justify-center p-2">
                 <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
@@ -86,41 +108,38 @@ function NPC({ isTyping, lastAssistantMessage, position }: { isTyping: boolean, 
                 <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce"></div>
               </div>
             ) : (
-              <p className="text-white text-sm font-medium leading-relaxed">
-                {lastAssistantMessage}
+              <p className="text-sm font-medium leading-relaxed">
+                {message}
               </p>
             )}
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-900/90 border-b border-r border-white/20 rotate-45"></div>
+            <div className={`absolute -bottom-2 w-4 h-4 border-b border-r rotate-45 ${
+              isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 right-6" : "bg-slate-900/90 border-white/20 left-1/2 -translate-x-1/2"
+            }`}></div>
           </div>
         </Html>
       )}
 
-      {/* Basic NPC Body */}
-      <mesh ref={meshRef} castShadow>
-        <capsuleGeometry args={[0.5, 1, 4, 16]} />
-        <meshStandardMaterial color="#8b5cf6" roughness={0.3} metalness={0.2} />
+      {/* Body: Capsule is 1.4 units tall. By placing Y at 0.7, its base sits exactly on 0. */}
+      {/* We make the capsule radius 0.4 and height 0.6 => total height 0.6 + (2*0.4) = 1.4 */}
+      <mesh position={[0, 0.7, 0]} castShadow>
+        <capsuleGeometry args={[0.3, 0.6, 4, 16]} />
+        <meshStandardMaterial color={bodyColor} roughness={0.7} metalness={0.1} />
       </mesh>
       
-      {/* Character Head */}
-      <mesh position={[0, 1.8, 0]} castShadow>
-        <sphereGeometry args={[0.4, 32, 32]} />
-        <meshStandardMaterial color="#c4b5fd" roughness={0.4} />
+      {/* Head: sits at 1.4 (top of body) + 0.3 (head radius) = 1.7 */}
+      <mesh position={[0, 1.7, 0]} castShadow>
+        <sphereGeometry args={[0.25, 32, 32]} />
+        <meshStandardMaterial color={headColor} roughness={0.5} />
       </mesh>
     </group>
   );
 }
 
-// Interactive Objects (sadece fallback sahne için)
+// Fallback Scene
 function InteractiveProp({ position, name, color }: { position: [number, number, number], name: string, color: string }) {
   const [hovered, setHovered] = useState(false);
   const meshRef = useRef<THREE.Mesh>(null);
-
-  useFrame((state) => {
-    if (meshRef.current && hovered) {
-      meshRef.current.rotation.y += 0.02;
-    }
-  });
-
+  useFrame(() => { if (meshRef.current && hovered) meshRef.current.rotation.y += 0.02; });
   return (
     <group position={position}>
       <mesh 
@@ -130,127 +149,108 @@ function InteractiveProp({ position, name, color }: { position: [number, number,
         castShadow
       >
         <boxGeometry args={[0.6, 0.6, 0.6]} />
-        <meshStandardMaterial 
-          color={hovered ? "#a78bfa" : color} 
-          emissive={hovered ? "#8b5cf6" : "#000000"} 
-          emissiveIntensity={hovered ? 0.5 : 0} 
-        />
+        <meshStandardMaterial color={hovered ? "#a78bfa" : color} />
       </mesh>
       {hovered && (
         <Html position={[0, 0.8, 0]} center>
-          <div className="bg-white text-slate-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-in fade-in slide-in-from-bottom-2">
-            {name}
-          </div>
+          <div className="bg-white text-slate-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg">{name}</div>
         </Html>
       )}
     </group>
   );
 }
 
-// Fallback sahne (GLB model olmayan sahneler için eski geometrik ortam)
 function FallbackSceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
   return (
     <group>
-      {/* Floor */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]} receiveShadow>
         <planeGeometry args={[20, 20]} />
         <meshStandardMaterial color="#1e1b4b" roughness={0.8} />
         <gridHelper args={[20, 20, 0x4c1d95, 0x312e81]} rotation={[Math.PI / 2, 0, 0]} />
       </mesh>
-      
-      {/* Decorative props based on scenario */}
       <InteractiveProp position={[-2, 0, -1]} name="La Boîte" color="#4f46e5" />
       <InteractiveProp position={[2, 0, -1.5]} name="Le Cube" color="#ec4899" />
-      
       <Float speed={2} rotationIntensity={0.5} floatIntensity={1} position={[0, 3, -4]}>
-        <Text
-          fontSize={0.5}
-          color="#a78bfa"
-          anchorX="center"
-          anchorY="middle"
-        >
-          {sceneData?.titleTr || "Sanal Sahne"}
-        </Text>
-        <Text
-          fontSize={0.3}
-          color="#ef4444"
-          position={[0, -0.6, 0]}
-          anchorX="center"
-          anchorY="middle"
-        >
-          DEBUG ID: {sceneData?.id || "NULL"}
-        </Text>
+        <Text fontSize={0.5} color="#a78bfa" anchorX="center" anchorY="middle">{sceneData?.titleTr || "Sanal Sahne"}</Text>
       </Float>
     </group>
   );
 }
 
-// Ana sahne ortamı — GLB model varsa onu yükler, yoksa fallback geometrik ortamı gösterir
 function SceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
   const sceneId = sceneData?.id || "";
   const modelConfig = SCENE_MODEL_MAP[sceneId];
-
-  // ALWAYS log the mapping resolution for debug
-  console.log("SCENE RENDER:", { sceneId, hasConfig: !!modelConfig });
-
   if (modelConfig) {
     return (
-      <React.Fragment>
-        <Suspense fallback={<LoadingSpinner />}>
-          <GLBModel modelPath={modelConfig.model} scale={modelConfig.scale} />
-        </Suspense>
-        {/* Force fallback to render at offset to verify BOTH are here if something fails */}
-        <group position={[0, -10, 0]}>
-           <FallbackSceneEnvironment sceneData={sceneData} />
-        </group>
-      </React.Fragment>
+      <Suspense fallback={<LoadingSpinner />}>
+        <GLBModel modelPath={modelConfig.model} scale={modelConfig.scale} />
+      </Suspense>
     );
   }
-
   return <FallbackSceneEnvironment sceneData={sceneData} />;
 }
 
 export function Scene3D({ sceneData, messages, isLoading }: Scene3DProps) {
-  // Find last assistant message
+  // Extract text for bubbles
+  const userMessages = messages.filter(m => m.role === 'user');
+  const lastUserMessage = userMessages.length > 0 ? userMessages[userMessages.length - 1].content : null;
+
   const assistantMessages = messages.filter(m => m.role === 'assistant');
   const lastAssistantMessage = assistantMessages.length > 0 ? assistantMessages[assistantMessages.length - 1].content : null;
 
-  // GLB model varsa kamera ve NPC pozisyonlarını modele göre ayarla
+  // Set positions from map OR default fallback coordinates
   const sceneId = sceneData?.id || "";
-  const modelConfig = SCENE_MODEL_MAP[sceneId];
-  const cameraPos = modelConfig?.cameraPosition || [0, 1.5, 4];
-  const npcPos = modelConfig?.npcPosition || [0, 0, -2];
+  const config = SCENE_MODEL_MAP[sceneId];
+  
+  const shopkeeperPos = config?.shopkeeperPos || [0, 0, -2];
+  const playerPos = config?.playerPos || [-0.6, 0, 1.2];
+  const cameraPos = config?.cameraPos || [0.5, 1.8, 4];
+  const cameraTarget = config?.cameraTarget || [0, 1.2, -1];
 
   return (
     <div className="absolute inset-0 z-0 bg-slate-950">
       <Canvas shadows camera={{ position: cameraPos as [number, number, number], fov: 50 }}>
-        {/* Lighting */}
+        {/* Lights */}
         <ambientLight intensity={0.6} />
-        <directionalLight 
-          position={[5, 5, 5]} 
-          intensity={1.2} 
-          castShadow 
-          shadow-mapSize={[1024, 1024]} 
-        />
+        <directionalLight position={[5, 5, 5]} intensity={1.2} castShadow shadow-mapSize={[1024, 1024]} />
         <pointLight position={[-5, 5, -5]} intensity={0.5} color="#c084fc" />
         <pointLight position={[3, 3, 3]} intensity={0.3} color="#fbbf24" />
         
-        {/* Environment setup */}
+        {/* Sky/Fog */}
         <Environment preset="city" />
         <fog attach="fog" args={['#020617', 5, 20]} />
         
-        {/* Main Content */}
+        {/* Scene Background */}
         <SceneEnvironment sceneData={sceneData} />
-        <NPC isTyping={isLoading} lastAssistantMessage={lastAssistantMessage} position={npcPos as [number, number, number]} />
         
-        {/* Controls - Restricted for immersion */}
+        {/* Shopkeeper (NPC) */}
+        <Character 
+          isTyping={isLoading} 
+          message={lastAssistantMessage} 
+          position={shopkeeperPos as [number, number, number]} 
+          bodyColor="#8b5cf6" // Violet body
+          headColor="#c4b5fd" 
+        />
+
+        {/* Player (User) */}
+        <Character 
+          isTyping={false} // User is not the AI, no dots if loading
+          message={lastUserMessage} 
+          position={playerPos as [number, number, number]} 
+          rotationY={Math.PI - 0.5} // slightly turned away from camera, looking towards shopkeeper
+          bodyColor="#d946ef" // Fuchsia/Pink body for contrast
+          headColor="#f0abfc" 
+          isPlayer={true}
+        />
+        
+        {/* Controls - Immersion limits */}
         <OrbitControls 
           enablePan={false} 
           minPolarAngle={Math.PI / 3} 
-          maxPolarAngle={Math.PI / 2 - 0.05} // Yerden aşağı inmesin
+          maxPolarAngle={Math.PI / 2 - 0.05} // Ground level
           minDistance={1}
-          maxDistance={5} // Odadan dışarı çıkamasın
-          target={[0, 1, -2]} // Her zaman NPC'ye (satıcıya) doğru baksın
+          maxDistance={5} 
+          target={cameraTarget as [number, number, number]}
         />
         <ContactShadows position={[0, -0.49, 0]} opacity={0.4} scale={20} blur={2} far={4} />
       </Canvas>
