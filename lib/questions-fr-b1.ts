@@ -1169,12 +1169,1712 @@ const unit372Quiz4: Question[] = [
     { id: 1040, type: "SELECT", question: "Le texte mentionne que le sport réduit...", options: [{ id: "a", text: "Le stress", correct: true }, { id: "b", text: "Le sommeil", correct: false }, { id: "c", text: "L'appétit", correct: false }] }
 ];
 
+// ===== UNIT 373 HARDCODED QUIZZES =====
+const unit373Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basic Culture Phrases
+    { id: 1041, type: "SELECT", question: "'Les coutumes' ne demek?", options: [{ id: "a", text: "Gelenekler / Adetler", correct: true }, { id: "b", text: "Şehirler", correct: false }, { id: "c", text: "Tatiller", correct: false }, { id: "d", text: "Haritalar", correct: false }] },
+    { id: 1042, type: "SELECT", question: "'La politesse' ne demek?", options: [{ id: "a", text: "Nezaket", correct: true }, { id: "b", text: "Yasak", correct: false }, { id: "c", text: "Yemek", correct: false }, { id: "d", text: "Ulaşım", correct: false }] },
+    { id: 1043, type: "SELECT", question: "'Le pourboire' ne demek?", options: [{ id: "a", text: "Bahşiş", correct: true }, { id: "b", text: "Bilet", correct: false }, { id: "c", text: "Oda", correct: false }, { id: "d", text: "Şikayet", correct: false }] },
+    { id: 1044, type: "SELECT", question: "'L'artisanat' ne demek?", options: [{ id: "a", text: "El sanatları", correct: true }, { id: "b", text: "Elektrik", correct: false }, { id: "c", text: "Randevu", correct: false }, { id: "d", text: "Hesap", correct: false }] },
+    { id: 1045, type: "SELECT", question: "'Le patrimoine' ne demek?", options: [{ id: "a", text: "Kültürel miras", correct: true }, { id: "b", text: "İş sözleşmesi", correct: false }, { id: "c", text: "Alışveriş", correct: false }, { id: "d", text: "Bina", correct: false }] },
+    { id: 1046, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les coutumes", options: [{ id: "a", text: "Gelenekler", correct: true }, { id: "b", text: "Biletler", correct: false }, { id: "c", text: "Kıyafetler", correct: false }, { id: "d", text: "İzinler", correct: false }] },
+    { id: 1047, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le marché local", options: [{ id: "a", text: "Yerel pazar", correct: true }, { id: "b", text: "Yerel okul", correct: false }, { id: "c", text: "Yerel banka", correct: false }, { id: "d", text: "Yerel otel", correct: false }] },
+    { id: 1048, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'hospitalité", options: [{ id: "a", text: "Misafirperverlik", correct: true }, { id: "b", text: "Hastane", correct: false }, { id: "c", text: "Hız", correct: false }, { id: "d", text: "Hasta", correct: false }] },
+    { id: 1049, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut respecter les ___ locales.", options: [{ id: "a", text: "coutumes", correct: true }, { id: "b", text: "coutures", correct: false }] },
+    { id: 1050, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est déjà inclus.", options: [{ id: "a", text: "pourboire", correct: true }, { id: "b", text: "passeport", correct: false }] },
+    { id: 1051, type: "SELECT", question: "'Il est important de respecter les coutumes locales.' ne demek?", options: [{ id: "a", text: "Yerel geleneklere saygı göstermek önemlidir.", correct: true }, { id: "b", text: "Yerel pazara gitmek önemlidir.", correct: false }, { id: "c", text: "Gelenekler gereksizdir.", correct: false }, { id: "d", text: "Sadece turistler önemlidir.", correct: false }] },
+    { id: 1052, type: "SELECT", question: "'On devrait apprendre quelques mots de la langue.' ne demek?", options: [{ id: "a", text: "Dilden birkaç kelime öğrenmeliyiz.", correct: true }, { id: "b", text: "Dil öğrenmek istemiyoruz.", correct: false }, { id: "c", text: "Yalnızca İngilizce yeter.", correct: false }, { id: "d", text: "Dilin tamamını bilmek gerekir.", correct: false }] },
+    { id: 1053, type: "TRANSLATE", question: "Çevir:", hint: "Yerel kültür", correctAnswer: "La culture locale" },
+    { id: 1054, type: "TRANSLATE", question: "Çevir:", hint: "Sosyal kurallar", correctAnswer: "Les codes sociaux" },
+    { id: 1055, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La tenue correcte est recommandée", options: [{ id: "a", text: "Uygun kıyafet önerilir.", correct: true }, { id: "b", text: "Kıyafet yasaktır.", correct: false }, { id: "c", text: "Kıyafet çok pahalıdır.", correct: false }, { id: "d", text: "Kıyafet gereksizdir.", correct: false }] },
+    { id: 1056, type: "TRANSLATE", question: "Çevir:", hint: "Yerel pazar", correctAnswer: "Le marché local" },
+    { id: 1057, type: "SELECT", question: "'S'adapter' ne demek?", options: [{ id: "a", text: "Uyum sağlamak", correct: true }, { id: "b", text: "Geri dönmek", correct: false }, { id: "c", text: "Beklemek", correct: false }, { id: "d", text: "Kaybetmek", correct: false }] },
+    { id: 1058, type: "SELECT", question: "'Éviter' ne demek?", options: [{ id: "a", text: "Kaçınmak", correct: true }, { id: "b", text: "Onaylamak", correct: false }, { id: "c", text: "Ödemek", correct: false }, { id: "d", text: "Konuşmak", correct: false }] },
+    { id: 1059, type: "FILL_BLANK", question: "Doldur:", sentence: "Je me ___ sur les règles.", options: [{ id: "a", text: "renseigne", correct: true }, { id: "b", text: "range", correct: false }] },
+    { id: 1060, type: "SELECT", question: "'Les gestes' ne demek?", options: [{ id: "a", text: "Jestler / El-kol hareketleri", correct: true }, { id: "b", text: "Geziler", correct: false }, { id: "c", text: "Köprüler", correct: false }, { id: "d", text: "Şarkılar", correct: false }] }
+];
 
- // Seeded random number generator for reliable questions per unit
+const unit373Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1061, type: "SELECT", question: "Daha yumuşak bir tavsiye vermek için hangisi kullanılır?", options: [{ id: "a", text: "Il vaut mieux", correct: true }, { id: "b", text: "Il est interdit de", correct: false }, { id: "c", text: "Il y a", correct: false }, { id: "d", text: "Il était", correct: false }] },
+    { id: 1062, type: "SELECT", question: "'Il est important de' ne anlama gelir?", options: [{ id: "a", text: "Yapmak önemlidir", correct: true }, { id: "b", text: "Yapmamak gerekir", correct: false }, { id: "c", text: "Yapmak yasaktır", correct: false }, { id: "d", text: "Yapmak zor değildir", correct: false }] },
+    { id: 1063, type: "SELECT", question: "'Il vaut mieux ne pas + mastar' ne anlama gelir?", options: [{ id: "a", text: "Yapmamak daha iyi olur", correct: true }, { id: "b", text: "Yapmak gerekir", correct: false }, { id: "c", text: "Yapmak yasaktır", correct: false }, { id: "d", text: "Yapmak zorundasın", correct: false }] },
+    { id: 1064, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___ de réserver à l'avance.", options: [{ id: "a", text: "conseillé", correct: true }, { id: "b", text: "conseille", correct: false }] },
+    { id: 1065, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ mieux éviter les sujets sensibles.", options: [{ id: "a", text: "vaut", correct: true }, { id: "b", text: "va", correct: false }] },
+    { id: 1066, type: "TRANSLATE", question: "Çevir:", hint: "Tapınaklarda sessiz konuşmak gerekir.", correctAnswer: "Il faut parler doucement dans les temples." },
+    { id: 1067, type: "TRANSLATE", question: "Çevir:", hint: "Bahşiş vermemek daha iyi olur.", correctAnswer: "Il vaut mieux ne pas donner de pourboire." },
+    { id: 1068, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il est interdit de prendre des photos.", options: [{ id: "a", text: "Fotoğraf çekmek yasaktır.", correct: true }, { id: "b", text: "Fotoğraf çekmek serbesttir.", correct: false }, { id: "c", text: "Fotoğraf çekmek gerekir.", correct: false }, { id: "d", text: "Fotoğraf çekmek pahalıdır.", correct: false }] },
+    { id: 1069, type: "SELECT", question: "'On devrait' ne anlama gelir?", options: [{ id: "a", text: "Yapmalıyız / Önerilir", correct: true }, { id: "b", text: "Yapıyoruz", correct: false }, { id: "c", text: "Yapmayacağız", correct: false }, { id: "d", text: "Yapmıştık", correct: false }] },
+    { id: 1070, type: "TRANSLATE", question: "Çevir:", hint: "Yerel kültüre saygı göstermek önemlidir.", correctAnswer: "Il est important de respecter la culture locale." },
+    { id: 1071, type: "SELECT", question: "'Je me renseigne sur les coutumes avant de partir.' ne demek?", options: [{ id: "a", text: "Yola çıkmadan önce gelenekler hakkında bilgi alıyorum.", correct: true }, { id: "b", text: "Yola çıktıktan sonra alışveriş yapıyorum.", correct: false }, { id: "c", text: "Gelenekleri sevmiyorum.", correct: false }, { id: "d", text: "Evde kalıyorum.", correct: false }] },
+    { id: 1072, type: "SELECT", question: "'Les habitants sont très accueillants.' ne demek?", options: [{ id: "a", text: "Yerel halk çok misafirperverdir.", correct: true }, { id: "b", text: "Yerel halk sinirlidir.", correct: false }, { id: "c", text: "Yerel halk yoktur.", correct: false }, { id: "d", text: "Yerel halk dışarı çıkmaz.", correct: false }] },
+    { id: 1073, type: "TRANSLATE", question: "Çevir:", hint: "Dilden birkaç kelime öğrenmeliyiz.", correctAnswer: "On devrait apprendre quelques mots de la langue." },
+    { id: 1074, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est interdit de ___ ici.", options: [{ id: "a", text: "prendre des photos", correct: true }, { id: "b", text: "respecter", correct: false }] },
+    { id: 1075, type: "SELECT", question: "Yasak belirtmek için hangi yapı kullanılır?", options: [{ id: "a", text: "Il est interdit de", correct: true }, { id: "b", text: "Il faut", correct: false }, { id: "c", text: "Il vaut mieux", correct: false }, { id: "d", text: "Il y a", correct: false }] },
+    { id: 1076, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je m'adapte aux règles", options: [{ id: "a", text: "Kurallara uyum sağlıyorum.", correct: true }, { id: "b", text: "Kuralları bilmiyorum.", correct: false }, { id: "c", text: "Kuralları değiştiriyorum.", correct: false }, { id: "d", text: "Kuralları unutuyorum.", correct: false }] },
+    { id: 1077, type: "TRANSLATE", question: "Çevir:", hint: "Seyahat etmek, keşfetmek ve saygı göstermektir.", correctAnswer: "Voyager, c'est découvrir et respecter." },
+    { id: 1078, type: "SELECT", question: "'Il est préférable de' ne anlama gelir?", options: [{ id: "a", text: "Daha iyidir / Tercih edilir", correct: true }, { id: "b", text: "Daha kötü olur", correct: false }, { id: "c", text: "Yasaktır", correct: false }, { id: "d", text: "Mümkün değildir", correct: false }] },
+    { id: 1079, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut ___ ses chaussures en entrant.", options: [{ id: "a", text: "enlever", correct: true }, { id: "b", text: "envoier", correct: false }] },
+    { id: 1080, type: "SELECT", question: "'Il vaut mieux' hangi anlamı verir?", options: [{ id: "a", text: "Daha iyi olur", correct: true }, { id: "b", text: "Asla olmaz", correct: false }, { id: "c", text: "Zorunludur", correct: false }, { id: "d", text: "Geçmişteydi", correct: false }] }
+];
+
+const unit373Quiz3: Question[] = [
+    // Quiz 3: Reading comprehension & vocab
+    { id: 1081, type: "SELECT", question: "Où voyage Camille ?", options: [{ id: "a", text: "En Italie", correct: false }, { id: "b", text: "Au Japon", correct: true }, { id: "c", text: "Au Canada", correct: false }, { id: "d", text: "En Espagne", correct: false }] },
+    { id: 1082, type: "SELECT", question: "Que fait-elle avant de partir ?", options: [{ id: "a", text: "Elle se renseigne sur les coutumes locales", correct: true }, { id: "b", text: "Elle change de travail", correct: false }, { id: "c", text: "Elle achète une voiture", correct: false }, { id: "d", text: "Elle apprend à conduire", correct: false }] },
+    { id: 1083, type: "SELECT", question: "Que faut-il faire en entrant chez quelqu'un ?", options: [{ id: "a", text: "Enlever ses chaussures", correct: true }, { id: "b", text: "Parler fort", correct: false }, { id: "c", text: "Prendre des photos", correct: false }, { id: "d", text: "Fumer", correct: false }] },
+    { id: 1084, type: "SELECT", question: "Où doit-on parler doucement ?", options: [{ id: "a", text: "Dans les temples", correct: true }, { id: "b", text: "Dans les marchés", correct: false }, { id: "c", text: "Dans les trains", correct: false }, { id: "d", text: "Dans les hôtels", correct: false }] },
+    { id: 1085, type: "SELECT", question: "Quel endroit visite-t-elle le premier jour ?", options: [{ id: "a", text: "Un marché local", correct: true }, { id: "b", text: "Un musée", correct: false }, { id: "c", text: "Une bibliothèque", correct: false }, { id: "d", text: "Un stade", correct: false }] },
+    { id: 1086, type: "SELECT", question: "Que lui explique le guide touristique ?", options: [{ id: "a", text: "Les prix des hôtels", correct: false }, { id: "b", text: "Le sens de certains gestes et la politesse", correct: true }, { id: "c", text: "Les horaires des bus", correct: false }, { id: "d", text: "La météo", correct: false }] },
+    { id: 1087, type: "SELECT", question: "À quoi assiste Camille le soir ?", options: [{ id: "a", text: "À une fête traditionnelle", correct: true }, { id: "b", text: "À un match", correct: false }, { id: "c", text: "À une conférence", correct: false }, { id: "d", text: "À un cours", correct: false }] },
+    { id: 1088, type: "SELECT", question: "Que découvre-t-elle au sujet du pourboire ?", options: [{ id: "a", text: "Il n'est pas habituel", correct: true }, { id: "b", text: "Il est obligatoire", correct: false }, { id: "c", text: "Il est interdit partout", correct: false }, { id: "d", text: "Il est très élevé", correct: false }] },
+    { id: 1089, type: "SELECT", question: "Que vaut-il mieux éviter ?", options: [{ id: "a", text: "Certains sujets sensibles", correct: true }, { id: "b", text: "Les marchés locaux", correct: false }, { id: "c", text: "Les guides", correct: false }, { id: "d", text: "Les temples", correct: false }] },
+    { id: 1090, type: "SELECT", question: "Que comprend-elle à la fin du séjour ?", options: [{ id: "a", text: "Voyager coûte trop cher", correct: false }, { id: "b", text: "Voyager, c'est s'adapter et respecter", correct: true }, { id: "c", text: "Voyager est inutile", correct: false }, { id: "d", text: "Voyager, c'est rester seul", correct: false }] },
+    { id: 1091, type: "TRANSLATE", question: "Çevir:", hint: "Gelenekler", correctAnswer: "Les coutumes" },
+    { id: 1092, type: "TRANSLATE", question: "Çevir:", hint: "Bahşiş", correctAnswer: "Le pourboire" },
+    { id: 1093, type: "TRANSLATE", question: "Çevir:", hint: "Kıyafet", correctAnswer: "La tenue" },
+    { id: 1094, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Se renseigner", options: [{ id: "a", text: "Bilgi almak", correct: true }, { id: "b", text: "Gezmek", correct: false }, { id: "c", text: "Ödemek", correct: false }, { id: "d", text: "Uyumak", correct: false }] },
+    { id: 1095, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle se sent plus proche de la ___.", options: [{ id: "a", text: "culture", correct: true }, { id: "b", text: "voiture", correct: false }] },
+    { id: 1096, type: "TRANSLATE", question: "Çevir:", hint: "Bilgi almak", correctAnswer: "Se renseigner" },
+    { id: 1097, type: "SELECT", question: "'Une fête traditionnelle' ne demek?", options: [{ id: "a", text: "Geleneksel festival", correct: true }, { id: "b", text: "Yerel market", correct: false }, { id: "c", text: "Hızlı yemek", correct: false }, { id: "d", text: "Kısa gezi", correct: false }] },
+    { id: 1098, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le guide touristique", options: [{ id: "a", text: "Turistik rehber", correct: true }, { id: "b", text: "Taksi şoförü", correct: false }, { id: "c", text: "Otel resepsiyonu", correct: false }, { id: "d", text: "Pazar satıcısı", correct: false }] },
+    { id: 1099, type: "FILL_BLANK", question: "Doldur:", sentence: "Il vaut mieux ___ certains sujets sensibles.", options: [{ id: "a", text: "éviter", correct: true }, { id: "b", text: "inviter", correct: false }] },
+    { id: 1100, type: "SELECT", question: "'S'adapter' ne demek?", options: [{ id: "a", text: "Uyum sağlamak", correct: true }, { id: "b", text: "Ayrılmak", correct: false }, { id: "c", text: "Unutmak", correct: false }, { id: "d", text: "Yemek yapmak", correct: false }] }
+];
+
+const unit373Quiz4: Question[] = [
+    // Quiz 4: Mixed challenge
+    { id: 1101, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est important de ___ les règles.", options: [{ id: "a", text: "respecter", correct: true }, { id: "b", text: "refuser", correct: false }] },
+    { id: 1102, type: "SELECT", question: "'Les habitudes' ne demek?", options: [{ id: "a", text: "Alışkanlıklar", correct: true }, { id: "b", text: "Tatlılar", correct: false }, { id: "c", text: "Biletler", correct: false }, { id: "d", text: "Haritalar", correct: false }] },
+    { id: 1103, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La politesse", options: [{ id: "a", text: "Nezaket", correct: true }, { id: "b", text: "Polis", correct: false }, { id: "c", text: "Pencere", correct: false }, { id: "d", text: "Plan", correct: false }] },
+    { id: 1104, type: "TRANSLATE", question: "Çevir:", hint: "Yerel pazarda alışveriş yapmayı seviyorum.", correctAnswer: "J'aime faire des achats au marché local." },
+    { id: 1105, type: "SELECT", question: "'Il vaut mieux + mastar' ne anlama gelir?", options: [{ id: "a", text: "Daha iyi olur", correct: true }, { id: "b", text: "Tam olarak olur", correct: false }, { id: "c", text: "Yasaktır", correct: false }, { id: "d", text: "Zorunlu değildir", correct: false }] },
+    { id: 1106, type: "FILL_BLANK", question: "Doldur:", sentence: "On ___ apprendre quelques mots.", options: [{ id: "a", text: "devrait", correct: true }, { id: "b", text: "devoir", correct: false }] },
+    { id: 1107, type: "SELECT", question: "'Le patrimoine' ne demek?", options: [{ id: "a", text: "Kültürel miras", correct: true }, { id: "b", text: "Havaalanı", correct: false }, { id: "c", text: "Spor salonu", correct: false }, { id: "d", text: "Alışveriş", correct: false }] },
+    { id: 1108, type: "TRANSLATE", question: "Çevir:", hint: "Fotoğraf çekmek yasaktır.", correctAnswer: "Il est interdit de prendre des photos." },
+    { id: 1109, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Respectez les coutumes locales", options: [{ id: "a", text: "Yerel geleneklere saygı gösterin.", correct: true }, { id: "b", text: "Yerel gelenekleri unutun.", correct: false }, { id: "c", text: "Yerel pazara gidin.", correct: false }, { id: "d", text: "Yerel yemekleri pişirin.", correct: false }] },
+    { id: 1110, type: "SELECT", question: "'Le touriste' ne demek?", options: [{ id: "a", text: "Turist", correct: true }, { id: "b", text: "Kaptan", correct: false }, { id: "c", text: "Şef", correct: false }, { id: "d", text: "Doktor", correct: false }] },
+    { id: 1111, type: "TRANSLATE", question: "Çevir:", hint: "Yerel halk çok misafirperver.", correctAnswer: "Les habitants sont très accueillants." },
+    { id: 1112, type: "FILL_BLANK", question: "Doldur:", sentence: "La tenue doit être ___ .", options: [{ id: "a", text: "correcte", correct: true }, { id: "b", text: "incorrecte", correct: false }] },
+    { id: 1113, type: "SELECT", question: "Hangi cümle doğru tavsiyedir?", options: [{ id: "a", text: "Il vaut mieux éviter les sujets sensibles.", correct: true }, { id: "b", text: "Il est interdit de respecter.", correct: false }, { id: "c", text: "Il faut ne pas apprendre.", correct: false }, { id: "d", text: "Il vaut mieux jamais voyager.", correct: false }] },
+    { id: 1114, type: "TRANSLATE", question: "Çevir:", hint: "Yola çıkmadan önce bilgi aldım.", correctAnswer: "Je me suis renseigné avant de partir." },
+    { id: 1115, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je préfère voyager lentement", options: [{ id: "a", text: "Yavaş gezmeyi tercih ederim.", correct: true }, { id: "b", text: "Hızlı koşmayı severim.", correct: false }, { id: "c", text: "Hiç seyahat etmem.", correct: false }, { id: "d", text: "Seyahat etmeyi sevmem.", correct: false }] },
+    { id: 1116, type: "SELECT", question: "'Observer' ne demek?", options: [{ id: "a", text: "Gözlemlemek", correct: true }, { id: "b", text: "Ödemek", correct: false }, { id: "c", text: "Kabul etmek", correct: false }, { id: "d", text: "Kapatmak", correct: false }] },
+    { id: 1117, type: "FILL_BLANK", question: "Doldur:", sentence: "Le pourboire est ___ inclus.", options: [{ id: "a", text: "déjà", correct: true }, { id: "b", text: "jamais", correct: false }] },
+    { id: 1118, type: "SELECT", question: "Hangi ifade yasak belirtir?", options: [{ id: "a", text: "Il est interdit de...", correct: true }, { id: "b", text: "Il est possible de...", correct: false }, { id: "c", text: "Il y a...", correct: false }, { id: "d", text: "Il était...", correct: false }] },
+    { id: 1119, type: "TRANSLATE", question: "Çevir:", hint: "Yerel kültürü keşfetmek istiyorum.", correctAnswer: "Je veux découvrir la culture locale." },
+    { id: 1120, type: "SELECT", question: "'Les codes sociaux' ne demek?", options: [{ id: "a", text: "Sosyal kurallar", correct: true }, { id: "b", text: "Sosyal medya", correct: false }, { id: "c", text: "Sosyal yardım", correct: false }, { id: "d", text: "Sosyal kulüp", correct: false }] }
+];
+
+// ===== UNIT 374 HARDCODED QUIZZES =====
+const unit374Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basic Culture Phrases
+    { id: 1121, type: "SELECT", question: "'La diversité' ne demek?", options: [{ id: "a", text: "Çeşitlilik", correct: true }, { id: "b", text: "Düzen", correct: false }, { id: "c", text: "Aile", correct: false }, { id: "d", text: "Bilet", correct: false }] },
+    { id: 1122, type: "SELECT", question: "'La tolérance' ne demek?", options: [{ id: "a", text: "Hoşgörü", correct: true }, { id: "b", text: "Sabırsızlık", correct: false }, { id: "c", text: "Yorgunluk", correct: false }, { id: "d", text: "Uzaklık", correct: false }] },
+    { id: 1123, type: "SELECT", question: "'Le stéréotype' ne demek?", options: [{ id: "a", text: "Kalıp yargı", correct: true }, { id: "b", text: "Yol tarifi", correct: false }, { id: "c", text: "İzin", correct: false }, { id: "d", text: "Şehir", correct: false }] },
+    { id: 1124, type: "SELECT", question: "'Le choc culturel' ne demek?", options: [{ id: "a", text: "Kültür şoku", correct: true }, { id: "b", text: "Kültür dersi", correct: false }, { id: "c", text: "Kültür merkezi", correct: false }, { id: "d", text: "Kültür turu", correct: false }] },
+    { id: 1125, type: "SELECT", question: "'La langue maternelle' ne demek?", options: [{ id: "a", text: "Ana dil", correct: true }, { id: "b", text: "Yabancı dil", correct: false }, { id: "c", text: "İş dili", correct: false }, { id: "d", text: "Sessiz dil", correct: false }] },
+    { id: 1126, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La famille élargie", options: [{ id: "a", text: "Geniş aile", correct: true }, { id: "b", text: "Küçük aile", correct: false }, { id: "c", text: "Komşular", correct: false }, { id: "d", text: "Arkadaşlar", correct: false }] },
+    { id: 1127, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le mode de vie", options: [{ id: "a", text: "Yaşam tarzı", correct: true }, { id: "b", text: "Yol tarifi", correct: false }, { id: "c", text: "Yemek tarifi", correct: false }, { id: "d", text: "Ulaşım", correct: false }] },
+    { id: 1128, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les salutations", options: [{ id: "a", text: "Selamlaşmalar", correct: true }, { id: "b", text: "Davetler", correct: false }, { id: "c", text: "Seyahatler", correct: false }, { id: "d", text: "Kurallar", correct: false }] },
+    { id: 1129, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut éviter les ___.", options: [{ id: "a", text: "stéréotypes", correct: true }, { id: "b", text: "stations", correct: false }] },
+    { id: 1130, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ visuel est important.", options: [{ id: "a", text: "contact", correct: true }, { id: "b", text: "contrat", correct: false }] },
+    { id: 1131, type: "SELECT", question: "'La ponctualité' ne demek?", options: [{ id: "a", text: "Dakiklik", correct: true }, { id: "b", text: "Yön", correct: false }, { id: "c", text: "Hız", correct: false }, { id: "d", text: "Sessizlik", correct: false }] },
+    { id: 1132, type: "SELECT", question: "'La cuisine traditionnelle' ne demek?", options: [{ id: "a", text: "Geleneksel mutfak", correct: true }, { id: "b", text: "Hızlı yemek", correct: false }, { id: "c", text: "Okul kantini", correct: false }, { id: "d", text: "Günlük menü", correct: false }] },
+    { id: 1133, type: "TRANSLATE", question: "Çevir:", hint: "Açık fikirlilik", correctAnswer: "L'ouverture d'esprit" },
+    { id: 1134, type: "TRANSLATE", question: "Çevir:", hint: "Gelenekler", correctAnswer: "Les coutumes" },
+    { id: 1135, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le respect des aînés", options: [{ id: "a", text: "Büyüklere saygı", correct: true }, { id: "b", text: "Gençlere saygı", correct: false }, { id: "c", text: "Öğrenciler", correct: false }, { id: "d", text: "Kurallar", correct: false }] },
+    { id: 1136, type: "TRANSLATE", question: "Çevir:", hint: "Kültürel miras", correctAnswer: "Le patrimoine" },
+    { id: 1137, type: "SELECT", question: "'Le dialecte' ne demek?", options: [{ id: "a", text: "Lehçe", correct: true }, { id: "b", text: "Tiyatro", correct: false }, { id: "c", text: "Davet", correct: false }, { id: "d", text: "Şef", correct: false }] },
+    { id: 1138, type: "SELECT", question: "'Les valeurs' ne demek?", options: [{ id: "a", text: "Değerler", correct: true }, { id: "b", text: "Renkler", correct: false }, { id: "c", text: "Kıyafetler", correct: false }, { id: "d", text: "Binalar", correct: false }] },
+    { id: 1139, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ locale est accueillante.", options: [{ id: "a", text: "communauté", correct: true }, { id: "b", text: "commande", correct: false }] },
+    { id: 1140, type: "SELECT", question: "'S'adapter' ne demek?", options: [{ id: "a", text: "Uyum sağlamak", correct: true }, { id: "b", text: "Çıkmak", correct: false }, { id: "c", text: "Yemek yapmak", correct: false }, { id: "d", text: "Uyumak", correct: false }] }
+];
+
+const unit374Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1141, type: "SELECT", question: "Karşılaştırma yapmak için hangi yapı doğru?", options: [{ id: "a", text: "plus ... que", correct: true }, { id: "b", text: "plus ... de", correct: false }, { id: "c", text: "plus ... à", correct: false }, { id: "d", text: "plus ... pour", correct: false }] },
+    { id: 1142, type: "SELECT", question: "'différent de' ne anlama gelir?", options: [{ id: "a", text: "...den farklı", correct: true }, { id: "b", text: "...e benzer", correct: false }, { id: "c", text: "... kadar", correct: false }, { id: "d", text: "... ile", correct: false }] },
+    { id: 1143, type: "SELECT", question: "'tandis que' hangi anlamı verir?", options: [{ id: "a", text: "... iken", correct: true }, { id: "b", text: "çünkü", correct: false }, { id: "c", text: "sonra", correct: false }, { id: "d", text: "ancak", correct: false }] },
+    { id: 1144, type: "SELECT", question: "'par contre' ne anlama gelir?", options: [{ id: "a", text: "buna karşılık", correct: true }, { id: "b", text: "aynı şekilde", correct: false }, { id: "c", text: "o zaman", correct: false }, { id: "d", text: "bu yüzden", correct: false }] },
+    { id: 1145, type: "FILL_BLANK", question: "Doldur:", sentence: "En France, on dîne tôt, ___ en Espagne on dîne tard.", options: [{ id: "a", text: "tandis qu'", correct: true }, { id: "b", text: "parce qu'", correct: false }] },
+    { id: 1146, type: "FILL_BLANK", question: "Doldur:", sentence: "Nos habitudes sont ___ des vôtres.", options: [{ id: "a", text: "différentes", correct: true }, { id: "b", text: "différents", correct: false }] },
+    { id: 1147, type: "TRANSLATE", question: "Çevir:", hint: "Bana göre nezaket çok önemlidir.", correctAnswer: "À mon avis, la politesse est essentielle." },
+    { id: 1148, type: "TRANSLATE", question: "Çevir:", hint: "Buna rağmen insanlarla tanışmayı seviyorum.", correctAnswer: "Pourtant, j'aime rencontrer des gens." },
+    { id: 1149, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il me semble que les salutations sont différentes ici.", options: [{ id: "a", text: "Selamlaşmalar burada farklı gibi geliyor.", correct: true }, { id: "b", text: "Selamlaşmalar burada aynıdır.", correct: false }, { id: "c", text: "Selamlaşmalar hiç yoktur.", correct: false }, { id: "d", text: "Selamlaşmalar önemsizdir.", correct: false }] },
+    { id: 1150, type: "SELECT", question: "'Je trouve que' ne anlama gelir?", options: [{ id: "a", text: "Bence", correct: true }, { id: "b", text: "Bilmiyorum", correct: false }, { id: "c", text: "Sanırım", correct: false }, { id: "d", text: "İnanmıyorum", correct: false }] },
+    { id: 1151, type: "SELECT", question: "Konuşma: 'Dans mon pays, on dîne assez tôt.' ne demek?", options: [{ id: "a", text: "Benim ülkemde akşam yemeği oldukça erken yenir.", correct: true }, { id: "b", text: "Benim ülkemde kahvaltı geç yenir.", correct: false }, { id: "c", text: "Benim ülkemde hiç yemek yenmez.", correct: false }, { id: "d", text: "Benim ülkemde herkes dışarıda yer.", correct: false }] },
+    { id: 1152, type: "SELECT", question: "Konuşma: 'J'évite les stéréotypes.' ne demek?", options: [{ id: "a", text: "Kalıp yargılardan kaçınırım.", correct: true }, { id: "b", text: "Kalıp yargıları severim.", correct: false }, { id: "c", text: "Kalıp yargıları paylaşırım.", correct: false }, { id: "d", text: "Kalıp yargıları unuturum.", correct: false }] },
+    { id: 1153, type: "TRANSLATE", question: "Çevir:", hint: "Farklılıklara karşı açık fikirli olmalıyız.", correctAnswer: "Nous devons garder l'esprit ouvert face aux différences." },
+    { id: 1154, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ que la ponctualité est importante.", options: [{ id: "a", text: "me semble", correct: true }, { id: "b", text: "me ressemble", correct: false }] },
+    { id: 1155, type: "SELECT", question: "'pareil à' ne demek?", options: [{ id: "a", text: "...e benzer", correct: true }, { id: "b", text: "...den farklı", correct: false }, { id: "c", text: "... kadar", correct: false }, { id: "d", text: "... için", correct: false }] },
+    { id: 1156, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le dialogue interculturel est essentiel", options: [{ id: "a", text: "Kültürler arası diyalog çok önemlidir.", correct: true }, { id: "b", text: "Kültürler arası diyalog gereksizdir.", correct: false }, { id: "c", text: "Kültürler arası diyalog zordur.", correct: false }, { id: "d", text: "Kültürler arası diyalog yasaktır.", correct: false }] },
+    { id: 1157, type: "TRANSLATE", question: "Çevir:", hint: "Bu kültür bizimkine benzer.", correctAnswer: "Cette culture est pareille à la nôtre." },
+    { id: 1158, type: "SELECT", question: "Karşıtlık için hangi bağlaç doğrudur?", options: [{ id: "a", text: "tandis que", correct: true }, { id: "b", text: "parce que", correct: false }, { id: "c", text: "pour", correct: false }, { id: "d", text: "si", correct: false }] },
+    { id: 1159, type: "FILL_BLANK", question: "Doldur:", sentence: "Je suis timide, ___ j'aime rencontrer des gens.", options: [{ id: "a", text: "pourtant", correct: true }, { id: "b", text: "donc", correct: false }] },
+    { id: 1160, type: "SELECT", question: "Hangi ifade görüş bildirir?", options: [{ id: "a", text: "À mon avis", correct: true }, { id: "b", text: "Il y a", correct: false }, { id: "c", text: "À côté de", correct: false }, { id: "d", text: "En face de", correct: false }] }
+];
+
+const unit374Quiz3: Question[] = [
+    // Quiz 3: Reading comprehension
+    { id: 1161, type: "SELECT", question: "Où Marie passe-t-elle un semestre ?", options: [{ id: "a", text: "En Turquie", correct: true }, { id: "b", text: "En France", correct: false }, { id: "c", text: "En Grèce", correct: false }, { id: "d", text: "Au Maroc", correct: false }] },
+    { id: 1162, type: "SELECT", question: "Qui est présent au dîner ?", options: [{ id: "a", text: "La famille élargie", correct: true }, { id: "b", text: "Seulement les parents", correct: false }, { id: "c", text: "Les voisins", correct: false }, { id: "d", text: "Ses collègues", correct: false }] },
+    { id: 1163, type: "SELECT", question: "Comment Marie trouve-t-elle l'habitude de partager les plats ?", options: [{ id: "a", text: "Chaleureuse", correct: true }, { id: "b", text: "Froide", correct: false }, { id: "c", text: "Bizarre", correct: false }, { id: "d", text: "Inutile", correct: false }] },
+    { id: 1164, type: "SELECT", question: "Que doit-elle faire par politesse ?", options: [{ id: "a", text: "Accepter un peu de chaque plat", correct: true }, { id: "b", text: "Refuser les plats", correct: false }, { id: "c", text: "Partir tôt", correct: false }, { id: "d", text: "Rester silencieuse", correct: false }] },
+    { id: 1165, type: "SELECT", question: "Que boivent-ils après le dîner ?", options: [{ id: "a", text: "Du thé", correct: true }, { id: "b", text: "Du lait", correct: false }, { id: "c", text: "Du soda", correct: false }, { id: "d", text: "Du jus", correct: false }] },
+    { id: 1166, type: "SELECT", question: "Quels sujets sont mentionnés ?", options: [{ id: "a", text: "La vie quotidienne, les études, les traditions", correct: true }, { id: "b", text: "La météo seulement", correct: false }, { id: "c", text: "Le sport uniquement", correct: false }, { id: "d", text: "La politique uniquement", correct: false }] },
+    { id: 1167, type: "SELECT", question: "Comment sont les dîners en France selon Marie ?", options: [{ id: "a", text: "Plus courts", correct: true }, { id: "b", text: "Plus longs", correct: false }, { id: "c", text: "Plus bruyants", correct: false }, { id: "d", text: "Plus tardifs", correct: false }] },
+    { id: 1168, type: "SELECT", question: "Que comprend-elle sur les cultures ?", options: [{ id: "a", text: "Chaque culture a ses valeurs et ses codes", correct: true }, { id: "b", text: "Il n'y a qu'une seule manière de vivre", correct: false }, { id: "c", text: "Toutes les cultures sont identiques", correct: false }, { id: "d", text: "Les cultures n'ont pas de règles", correct: false }] },
+    { id: 1169, type: "SELECT", question: "Quel mot du texte signifie 'samimi/sıcak' ?", options: [{ id: "a", text: "Chaleureuse", correct: true }, { id: "b", text: "Silencieuse", correct: false }, { id: "c", text: "Rapide", correct: false }, { id: "d", text: "Lointaine", correct: false }] },
+    { id: 1170, type: "SELECT", question: "Comment se sent Marie à la fin ?", options: [{ id: "a", text: "Ouverte d'esprit", correct: true }, { id: "b", text: "Fermée", correct: false }, { id: "c", text: "En colère", correct: false }, { id: "d", text: "Indifférente", correct: false }] },
+    { id: 1171, type: "TRANSLATE", question: "Çevir:", hint: "Geniş aile", correctAnswer: "La famille élargie" },
+    { id: 1172, type: "TRANSLATE", question: "Çevir:", hint: "Teşekkür etmek", correctAnswer: "Remercier" },
+    { id: 1173, type: "TRANSLATE", question: "Çevir:", hint: "Karşılaştırmak", correctAnswer: "Comparer" },
+    { id: 1174, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ouvert d'esprit", options: [{ id: "a", text: "Açık fikirli", correct: true }, { id: "b", text: "Kapalı kapı", correct: false }, { id: "c", text: "Kısa yol", correct: false }, { id: "d", text: "Sessiz", correct: false }] },
+    { id: 1175, type: "FILL_BLANK", question: "Doldur:", sentence: "La famille ___ est présente.", options: [{ id: "a", text: "élargie", correct: true }, { id: "b", text: "élargir", correct: false }] },
+    { id: 1176, type: "SELECT", question: "'Chaleureux' ne demek?", options: [{ id: "a", text: "Sıcak / Samimi", correct: true }, { id: "b", text: "Soğuk", correct: false }, { id: "c", text: "Sessiz", correct: false }, { id: "d", text: "Yavaş", correct: false }] },
+    { id: 1177, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je remercie plusieurs fois", options: [{ id: "a", text: "Birkaç kez teşekkür ederim", correct: true }, { id: "b", text: "Hiç teşekkür etmem", correct: false }, { id: "c", text: "Birkaç kez konuşurum", correct: false }, { id: "d", text: "Birkaç kez uyurum", correct: false }] },
+    { id: 1178, type: "FILL_BLANK", question: "Doldur:", sentence: "Les repas sont souvent plus ___ en France.", options: [{ id: "a", text: "courts", correct: true }, { id: "b", text: "longs", correct: false }] },
+    { id: 1179, type: "TRANSLATE", question: "Çevir:", hint: "Bu alışkanlık çok sıcaktı.", correctAnswer: "Cette habitude était très chaleureuse." },
+    { id: 1180, type: "SELECT", question: "Quelle boisson est mentionnée après le dîner ?", options: [{ id: "a", text: "Le thé", correct: true }, { id: "b", text: "Le café", correct: false }, { id: "c", text: "Le lait", correct: false }, { id: "d", text: "Le jus", correct: false }] }
+];
+
+const unit374Quiz4: Question[] = [
+    // Quiz 4: Mixed review
+    { id: 1181, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ culturelle est une richesse.", options: [{ id: "a", text: "diversité", correct: true }, { id: "b", text: "division", correct: false }] },
+    { id: 1182, type: "SELECT", question: "'La hiérarchie' ne demek?", options: [{ id: "a", text: "Hiyerarşi", correct: true }, { id: "b", text: "Havaalanı", correct: false }, { id: "c", text: "Hareket", correct: false }, { id: "d", text: "Hastane", correct: false }] },
+    { id: 1183, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La ponctualité", options: [{ id: "a", text: "Dakiklik", correct: true }, { id: "b", text: "Plan", correct: false }, { id: "c", text: "Kültür", correct: false }, { id: "d", text: "Kıyafet", correct: false }] },
+    { id: 1184, type: "TRANSLATE", question: "Çevir:", hint: "Bu kültür bizimkinden farklıdır.", correctAnswer: "Cette culture est différente de la nôtre." },
+    { id: 1185, type: "SELECT", question: "'Le contact visuel' ne demek?", options: [{ id: "a", text: "Göz teması", correct: true }, { id: "b", text: "Gözlük", correct: false }, { id: "c", text: "Kapı", correct: false }, { id: "d", text: "El hareketi", correct: false }] },
+    { id: 1186, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est important d'avoir l'___ ouvert.", options: [{ id: "a", text: "esprit", correct: true }, { id: "b", text: "escalier", correct: false }] },
+    { id: 1187, type: "SELECT", question: "'Les vêtements traditionnels' ne demek?", options: [{ id: "a", text: "Geleneksel kıyafetler", correct: true }, { id: "b", text: "Günlük kıyafetler", correct: false }, { id: "c", text: "Spor kıyafetleri", correct: false }, { id: "d", text: "Kışlık kıyafetler", correct: false }] },
+    { id: 1188, type: "TRANSLATE", question: "Çevir:", hint: "Karşılıklı saygı iletişimi kolaylaştırır.", correctAnswer: "Le respect mutuel facilite la communication." },
+    { id: 1189, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les salutations varient selon la culture", options: [{ id: "a", text: "Selamlaşmalar kültüre göre değişir.", correct: true }, { id: "b", text: "Selamlaşmalar her yerde aynıdır.", correct: false }, { id: "c", text: "Selamlaşmalar gereksizdir.", correct: false }, { id: "d", text: "Selamlaşmalar yasaktır.", correct: false }] },
+    { id: 1190, type: "SELECT", question: "'Les croyances' ne demek?", options: [{ id: "a", text: "İnançlar", correct: true }, { id: "b", text: "Kıyafetler", correct: false }, { id: "c", text: "Saatler", correct: false }, { id: "d", text: "Hediyeler", correct: false }] },
+    { id: 1191, type: "TRANSLATE", question: "Çevir:", hint: "Göz teması her zaman doğrudan değildir.", correctAnswer: "Le contact visuel n'est pas toujours direct." },
+    { id: 1192, type: "FILL_BLANK", question: "Doldur:", sentence: "Le respect des ___ est une règle sociale.", options: [{ id: "a", text: "aînés", correct: true }, { id: "b", text: "amis", correct: false }] },
+    { id: 1193, type: "SELECT", question: "Hangisi karşıtlık bağlacıdır?", options: [{ id: "a", text: "en revanche", correct: true }, { id: "b", text: "parce que", correct: false }, { id: "c", text: "si", correct: false }, { id: "d", text: "pour", correct: false }] },
+    { id: 1194, type: "TRANSLATE", question: "Çevir:", hint: "Bence bu gelenek çok güzel.", correctAnswer: "Je trouve que cette tradition est très belle." },
+    { id: 1195, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le mode de vie est différent ici", options: [{ id: "a", text: "Yaşam tarzı burada farklıdır.", correct: true }, { id: "b", text: "Yaşam tarzı burada aynıdır.", correct: false }, { id: "c", text: "Yaşam tarzı burada yoktur.", correct: false }, { id: "d", text: "Yaşam tarzı burada yasaktır.", correct: false }] },
+    { id: 1196, type: "SELECT", question: "'Partager' ne demek?", options: [{ id: "a", text: "Paylaşmak", correct: true }, { id: "b", text: "Kaybetmek", correct: false }, { id: "c", text: "Saklamak", correct: false }, { id: "d", text: "Bırakmak", correct: false }] },
+    { id: 1197, type: "FILL_BLANK", question: "Doldur:", sentence: "On peut ___ deux cultures.", options: [{ id: "a", text: "comparer", correct: true }, { id: "b", text: "comprendre", correct: false }] },
+    { id: 1198, type: "SELECT", question: "'Ouvert d'esprit' ne demek?", options: [{ id: "a", text: "Açık fikirli", correct: true }, { id: "b", text: "Kapalı kapı", correct: false }, { id: "c", text: "Açık renk", correct: false }, { id: "d", text: "Sakin", correct: false }] },
+    { id: 1199, type: "TRANSLATE", question: "Çevir:", hint: "Kalıp yargılardan kaçınmak gerekir.", correctAnswer: "Il faut éviter les stéréotypes." },
+    { id: 1200, type: "SELECT", question: "Hangi ifade görüş bildirir?", options: [{ id: "a", text: "À mon avis", correct: true }, { id: "b", text: "Il y a", correct: false }, { id: "c", text: "Avec", correct: false }, { id: "d", text: "Sous", correct: false }] }
+];
+
+// ===== UNIT 375 HARDCODED QUIZZES =====
+const unit375Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1201, type: "SELECT", question: "'La peinture' ne demek?", options: [{ id: "a", text: "Resim (boyama)", correct: true }, { id: "b", text: "Şiir", correct: false }, { id: "c", text: "Müze", correct: false }, { id: "d", text: "Kitap", correct: false }] },
+    { id: 1202, type: "SELECT", question: "'Le roman' ne demek?", options: [{ id: "a", text: "Roman", correct: true }, { id: "b", text: "Tiyatro", correct: false }, { id: "c", text: "Galeri", correct: false }, { id: "d", text: "Bölüm", correct: false }] },
+    { id: 1203, type: "SELECT", question: "'Le tableau' ne demek?", options: [{ id: "a", text: "Tablo", correct: true }, { id: "b", text: "Sahne", correct: false }, { id: "c", text: "Olay örgüsü", correct: false }, { id: "d", text: "Kütüphane", correct: false }] },
+    { id: 1204, type: "SELECT", question: "'La sculpture' ne demek?", options: [{ id: "a", text: "Heykel", correct: true }, { id: "b", text: "Resim", correct: false }, { id: "c", text: "Şiir", correct: false }, { id: "d", text: "Karakter", correct: false }] },
+    { id: 1205, type: "SELECT", question: "'Le musée' ne demek?", options: [{ id: "a", text: "Müze", correct: true }, { id: "b", text: "Pazar", correct: false }, { id: "c", text: "Kafe", correct: false }, { id: "d", text: "Okul", correct: false }] },
+    { id: 1206, type: "SELECT", question: "'Le chef-d'œuvre' ne demek?", options: [{ id: "a", text: "Başyapıt", correct: true }, { id: "b", text: "Başlık", correct: false }, { id: "c", text: "Yayıncı", correct: false }, { id: "d", text: "Eleştiri", correct: false }] },
+    { id: 1207, type: "SELECT", question: "'La bibliothèque' ne demek?", options: [{ id: "a", text: "Kütüphane", correct: true }, { id: "b", text: "Kitapçı", correct: false }, { id: "c", text: "Sahne", correct: false }, { id: "d", text: "Roman", correct: false }] },
+    { id: 1208, type: "SELECT", question: "'Le personnage' ne demek?", options: [{ id: "a", text: "Karakter", correct: true }, { id: "b", text: "Yazar", correct: false }, { id: "c", text: "Sahne", correct: false }, { id: "d", text: "Müze", correct: false }] },
+    { id: 1209, type: "SELECT", question: "'L'inspiration' ne demek?", options: [{ id: "a", text: "İlham", correct: true }, { id: "b", text: "Sahne", correct: false }, { id: "c", text: "Yayıncı", correct: false }, { id: "d", text: "Stil", correct: false }] },
+    { id: 1210, type: "SELECT", question: "'L'éditeur' ne demek?", options: [{ id: "a", text: "Yayıncı", correct: true }, { id: "b", text: "Oyuncu", correct: false }, { id: "c", text: "Okuyucu", correct: false }, { id: "d", text: "Şair", correct: false }] },
+    { id: 1211, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La galerie", options: [{ id: "a", text: "Galeri", correct: true }, { id: "b", text: "Sergi", correct: false }, { id: "c", text: "Sahne", correct: false }, { id: "d", text: "Kütüphane", correct: false }] },
+    { id: 1212, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le poème", options: [{ id: "a", text: "Şiir", correct: true }, { id: "b", text: "Roman", correct: false }, { id: "c", text: "Tablo", correct: false }, { id: "d", text: "Tiyatro", correct: false }] },
+    { id: 1213, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le théâtre", options: [{ id: "a", text: "Tiyatro", correct: true }, { id: "b", text: "Müze", correct: false }, { id: "c", text: "Galeri", correct: false }, { id: "d", text: "Şiir", correct: false }] },
+    { id: 1214, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'auteur", options: [{ id: "a", text: "Yazar (eser sahibi)", correct: true }, { id: "b", text: "Okur", correct: false }, { id: "c", text: "Oyuncu", correct: false }, { id: "d", text: "Editör", correct: false }] },
+    { id: 1215, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'intrigue", options: [{ id: "a", text: "Olay örgüsü", correct: true }, { id: "b", text: "Başlık", correct: false }, { id: "c", text: "Bölüm", correct: false }, { id: "d", text: "Karakter", correct: false }] },
+    { id: 1216, type: "FILL_BLANK", question: "Doldur:", sentence: "Je lis un ___ chaque soir.", options: [{ id: "a", text: "roman", correct: true }, { id: "b", text: "poème", correct: false }] },
+    { id: 1217, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est complet ce soir.", options: [{ id: "a", text: "théâtre", correct: true }, { id: "b", text: "chapitre", correct: false }] },
+    { id: 1218, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce ___ est exposé au musée.", options: [{ id: "a", text: "tableau", correct: true }, { id: "b", text: "chapitre", correct: false }] },
+    { id: 1219, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ publie de nouveaux auteurs.", options: [{ id: "a", text: "éditeur", correct: true }, { id: "b", text: "poète", correct: false }] },
+    { id: 1220, type: "FILL_BLANK", question: "Doldur:", sentence: "Il peint sur une grande ___.", options: [{ id: "a", text: "toile", correct: true }, { id: "b", text: "scène", correct: false }] }
+];
+
+const unit375Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1221, type: "SELECT", question: "Imparfait genellikle hangi amaçla kullanılır?", options: [{ id: "a", text: "Arka plan / alışkanlık anlatımı", correct: true }, { id: "b", text: "Tamamlanmış tek olay", correct: false }, { id: "c", text: "Gelecek planı", correct: false }, { id: "d", text: "Emir vermek", correct: false }] },
+    { id: 1222, type: "SELECT", question: "Passé composé ne için kullanılır?", options: [{ id: "a", text: "Tamamlanmış olay", correct: true }, { id: "b", text: "Süreklilik", correct: false }, { id: "c", text: "Genel kural", correct: false }, { id: "d", text: "Koşul", correct: false }] },
+    { id: 1223, type: "FILL_BLANK", question: "Doldur:", sentence: "Lucie ___ un roman quand son amie est arrivée.", options: [{ id: "a", text: "lisait", correct: true }, { id: "b", text: "a lu", correct: false }] },
+    { id: 1224, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ l'exposition hier soir.", options: [{ id: "a", text: "avons visité", correct: true }, { id: "b", text: "visitions", correct: false }] },
+    { id: 1225, type: "SELECT", question: "'dont' hangi yapının yerini alır?", options: [{ id: "a", text: "de + isim", correct: true }, { id: "b", text: "à + isim", correct: false }, { id: "c", text: "pour + isim", correct: false }, { id: "d", text: "avec + isim", correct: false }] },
+    { id: 1226, type: "SELECT", question: "Hangi cümlede 'dont' doğru kullanılmıştır?", options: [{ id: "a", text: "C'est l'auteur dont je parle.", correct: true }, { id: "b", text: "C'est l'auteur que je parle.", correct: false }, { id: "c", text: "C'est l'auteur où je parle.", correct: false }, { id: "d", text: "C'est l'auteur qui je parle.", correct: false }] },
+    { id: 1227, type: "SELECT", question: "'À mon avis' ne demek?", options: [{ id: "a", text: "Bana göre", correct: true }, { id: "b", text: "Belki", correct: false }, { id: "c", text: "Asla", correct: false }, { id: "d", text: "Ne zaman", correct: false }] },
+    { id: 1228, type: "SELECT", question: "'Je trouve que' ifadesi ne bildirir?", options: [{ id: "a", text: "Görüş / fikir", correct: true }, { id: "b", text: "Emir", correct: false }, { id: "c", text: "Şart", correct: false }, { id: "d", text: "Zaman", correct: false }] },
+    { id: 1229, type: "TRANSLATE", question: "Çevir:", hint: "Bana göre bu roman çok sürükleyici.", correctAnswer: "À mon avis, ce roman est très captivant." },
+    { id: 1230, type: "TRANSLATE", question: "Çevir:", hint: "Oyunu biraz uzun buldum.", correctAnswer: "J'ai trouvé la pièce plutôt longue." },
+    { id: 1231, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quel est ton genre de livre préféré ?", options: [{ id: "a", text: "En sevdiğin kitap türü nedir?", correct: true }, { id: "b", text: "Hangi müzeye gidiyorsun?", correct: false }, { id: "c", text: "Bu roman ne zaman çıkacak?", correct: false }, { id: "d", text: "Hangi filmi izliyorsun?", correct: false }] },
+    { id: 1232, type: "LISTENING", question: "Duyduğunu seç:", audioText: "J'adore les romans historiques.", options: [{ id: "a", text: "Tarihi romanları çok severim.", correct: true }, { id: "b", text: "Tarihi filmleri sevmem.", correct: false }, { id: "c", text: "Roman okumayı sevmiyorum.", correct: false }, { id: "d", text: "Tarih dersim var.", correct: false }] },
+    { id: 1233, type: "SELECT", question: "Konuşma: 'Tu préfères lire ou regarder une pièce de théâtre ?' ne demek?", options: [{ id: "a", text: "Okumayı mı yoksa bir tiyatro oyunu izlemeyi mi tercih edersin?", correct: true }, { id: "b", text: "Tiyatroya ne zaman gidiyoruz?", correct: false }, { id: "c", text: "Bu oyunu kim yazdı?", correct: false }, { id: "d", text: "Müzeyi mi yoksa galeriyi mi tercih edersin?", correct: false }] },
+    { id: 1234, type: "SELECT", question: "Konuşma: 'Les voyages et la musique m'inspirent.' ne demek?", options: [{ id: "a", text: "Seyahatler ve müzik bana ilham verir.", correct: true }, { id: "b", text: "Müzik dinlemeyi bırakıyorum.", correct: false }, { id: "c", text: "Seyahat etmekten nefret ederim.", correct: false }, { id: "d", text: "Müzik beni üzmez.", correct: false }] },
+    { id: 1235, type: "FILL_BLANK", question: "Doldur:", sentence: "C'est un roman ___ le style est unique.", options: [{ id: "a", text: "dont", correct: true }, { id: "b", text: "que", correct: false }] },
+    { id: 1236, type: "FILL_BLANK", question: "Doldur:", sentence: "Hier, nous ___ au musée d'art.", options: [{ id: "a", text: "sommes allés", correct: true }, { id: "b", text: "allions", correct: false }] },
+    { id: 1237, type: "TRANSLATE", question: "Çevir:", hint: "Bu tabloyu çok beğendim.", correctAnswer: "J'ai beaucoup aimé ce tableau." },
+    { id: 1238, type: "TRANSLATE", question: "Çevir:", hint: "Bu şiir bana çocukluğumu hatırlatıyor.", correctAnswer: "Ce poème me rappelle mon enfance." },
+    { id: 1239, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La critique a été positive.", options: [{ id: "a", text: "Eleştiri olumlu oldu.", correct: true }, { id: "b", text: "Eleştiri iptal edildi.", correct: false }, { id: "c", text: "Eleştiri çok uzun.", correct: false }, { id: "d", text: "Eleştiri yazılmadı.", correct: false }] },
+    { id: 1240, type: "SELECT", question: "Hangi zarflar görüşü yumuşatır?", options: [{ id: "a", text: "plutôt, assez, vraiment", correct: true }, { id: "b", text: "hier, demain, aujourd'hui", correct: false }, { id: "c", text: "vite, lentement", correct: false }, { id: "d", text: "jamais, plus", correct: false }] }
+];
+
+const unit375Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1241, type: "SELECT", question: "Où Lucie se rend-elle ?", options: [{ id: "a", text: "Au festival du livre et des arts", correct: true }, { id: "b", text: "À la bibliothèque", correct: false }, { id: "c", text: "Au cinéma", correct: false }, { id: "d", text: "Au stade", correct: false }] },
+    { id: 1242, type: "SELECT", question: "Avec qui Lucie va-t-elle au festival ?", options: [{ id: "a", text: "Avec sa mère", correct: false }, { id: "b", text: "Avec sa meilleure amie Nora", correct: true }, { id: "c", text: "Avec son professeur", correct: false }, { id: "d", text: "Avec ses collègues", correct: false }] },
+    { id: 1243, type: "SELECT", question: "Que visitent-elles le matin ?", options: [{ id: "a", text: "Une exposition d'illustrations", correct: true }, { id: "b", text: "Un marché", correct: false }, { id: "c", text: "Une salle de concert", correct: false }, { id: "d", text: "Un cinéma", correct: false }] },
+    { id: 1244, type: "SELECT", question: "Que fait l'illustrateur ?", options: [{ id: "a", text: "Il explique comment il crée ses personnages", correct: true }, { id: "b", text: "Il vend des billets", correct: false }, { id: "c", text: "Il répare des livres", correct: false }, { id: "d", text: "Il joue de la musique", correct: false }] },
+    { id: 1245, type: "SELECT", question: "À quelle activité Lucie assiste-t-elle à midi ?", options: [{ id: "a", text: "Une rencontre avec une autrice", correct: true }, { id: "b", text: "Un match de football", correct: false }, { id: "c", text: "Un cours de danse", correct: false }, { id: "d", text: "Un atelier de cuisine", correct: false }] },
+    { id: 1246, type: "SELECT", question: "Qu'achète-t-elle ?", options: [{ id: "a", text: "Un tableau", correct: false }, { id: "b", text: "Un nouveau roman", correct: true }, { id: "c", text: "Un ticket de bus", correct: false }, { id: "d", text: "Un magazine", correct: false }] },
+    { id: 1247, type: "SELECT", question: "Que reçoit-elle après l'achat ?", options: [{ id: "a", text: "Une dédicace", correct: true }, { id: "b", text: "Un cadeau", correct: false }, { id: "c", text: "Un billet gratuit", correct: false }, { id: "d", text: "Une affiche", correct: false }] },
+    { id: 1248, type: "SELECT", question: "Qui lit un extrait sur scène ?", options: [{ id: "a", text: "Un comédien", correct: true }, { id: "b", text: "Un serveur", correct: false }, { id: "c", text: "Un journaliste", correct: false }, { id: "d", text: "Un musicien", correct: false }] },
+    { id: 1249, type: "SELECT", question: "Quel spectacle voient-elles le soir ?", options: [{ id: "a", text: "Une pièce de théâtre inspirée du roman", correct: true }, { id: "b", text: "Un concert de rock", correct: false }, { id: "c", text: "Un film d'action", correct: false }, { id: "d", text: "Un reportage", correct: false }] },
+    { id: 1250, type: "SELECT", question: "Que fait Lucie ensuite ?", options: [{ id: "a", text: "Elle écrit une critique sur son blog", correct: true }, { id: "b", text: "Elle s'endort immédiatement", correct: false }, { id: "c", text: "Elle prend le train", correct: false }, { id: "d", text: "Elle quitte la ville", correct: false }] },
+    { id: 1251, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le musée propose une visite guidée.", options: [{ id: "a", text: "Müze rehberli bir tur sunuyor.", correct: true }, { id: "b", text: "Müze bugün kapalı.", correct: false }, { id: "c", text: "Rehber gelmedi.", correct: false }, { id: "d", text: "Müze ücretsiz değil.", correct: false }] },
+    { id: 1252, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le personnage principal change à la fin.", options: [{ id: "a", text: "Baş karakter sonunda değişir.", correct: true }, { id: "b", text: "Baş karakter hiç değişmez.", correct: false }, { id: "c", text: "Karakter sahnede değildir.", correct: false }, { id: "d", text: "Hikaye bitmiyor.", correct: false }] },
+    { id: 1253, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le public a applaudi debout.", options: [{ id: "a", text: "İzleyici ayakta alkışladı.", correct: true }, { id: "b", text: "İzleyici hiç alkışlamadı.", correct: false }, { id: "c", text: "Sahne boş kaldı.", correct: false }, { id: "d", text: "Biletler satılmadı.", correct: false }] },
+    { id: 1254, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Son style d'écriture est très simple.", options: [{ id: "a", text: "Yazı tarzı çok sade.", correct: true }, { id: "b", text: "Yazı tarzı çok karışık.", correct: false }, { id: "c", text: "Yazmayı sevmiyor.", correct: false }, { id: "d", text: "Kitabı uzun.", correct: false }] },
+    { id: 1255, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cette peinture est inspirée de la nature.", options: [{ id: "a", text: "Bu resim doğadan ilham almıştır.", correct: true }, { id: "b", text: "Bu resim doğayı yok eder.", correct: false }, { id: "c", text: "Bu resim çok eski değil.", correct: false }, { id: "d", text: "Bu resim satılık değil.", correct: false }] },
+    { id: 1256, type: "TRANSLATE", question: "Çevir:", hint: "Başyapıt", correctAnswer: "Le chef-d'œuvre" },
+    { id: 1257, type: "TRANSLATE", question: "Çevir:", hint: "Kütüphane", correctAnswer: "La bibliothèque" },
+    { id: 1258, type: "TRANSLATE", question: "Çevir:", hint: "Eleştiri", correctAnswer: "La critique" },
+    { id: 1259, type: "TRANSLATE", question: "Çevir:", hint: "Sahne", correctAnswer: "La scène" },
+    { id: 1260, type: "TRANSLATE", question: "Çevir:", hint: "Yaratıcılık", correctAnswer: "La créativité" }
+];
+
+const unit375Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1261, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ applaudit longtemps.", options: [{ id: "a", text: "public", correct: true }, { id: "b", text: "poète", correct: false }] },
+    { id: 1262, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est prête pour la pièce.", options: [{ id: "a", text: "scène", correct: true }, { id: "b", text: "galerie", correct: false }] },
+    { id: 1263, type: "FILL_BLANK", question: "Doldur:", sentence: "Je lis un ___ policier.", options: [{ id: "a", text: "roman", correct: true }, { id: "b", text: "poème", correct: false }] },
+    { id: 1264, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ publie de nouveaux auteurs.", options: [{ id: "a", text: "éditeur", correct: true }, { id: "b", text: "auteur", correct: false }] },
+    { id: 1265, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette ___ est en marbre.", options: [{ id: "a", text: "sculpture", correct: true }, { id: "b", text: "peinture", correct: false }] },
+    { id: 1266, type: "SELECT", question: "'L'intrigue' ne demek?", options: [{ id: "a", text: "Olay örgüsü", correct: true }, { id: "b", text: "Sergi", correct: false }, { id: "c", text: "Yazar", correct: false }, { id: "d", text: "Stil", correct: false }] },
+    { id: 1267, type: "SELECT", question: "'Le chapitre' ne demek?", options: [{ id: "a", text: "Bölüm", correct: true }, { id: "b", text: "Kütüphane", correct: false }, { id: "c", text: "Tablo", correct: false }, { id: "d", text: "Karakter", correct: false }] },
+    { id: 1268, type: "SELECT", question: "'La galerie' ne demek?", options: [{ id: "a", text: "Galeri", correct: true }, { id: "b", text: "Sahne", correct: false }, { id: "c", text: "Eleştiri", correct: false }, { id: "d", text: "Oyun", correct: false }] },
+    { id: 1269, type: "SELECT", question: "'Le poète' ne demek?", options: [{ id: "a", text: "Şair", correct: true }, { id: "b", text: "Yayıncı", correct: false }, { id: "c", text: "Okur", correct: false }, { id: "d", text: "Oyuncu", correct: false }] },
+    { id: 1270, type: "SELECT", question: "'Le style' ne demek?", options: [{ id: "a", text: "Stil / Üslup", correct: true }, { id: "b", text: "Sahne", correct: false }, { id: "c", text: "Kütüphane", correct: false }, { id: "d", text: "Roman", correct: false }] },
+    { id: 1271, type: "TRANSLATE", question: "Çevir:", hint: "Müzede yeni bir sergi var.", correctAnswer: "Il y a une nouvelle exposition au musée." },
+    { id: 1272, type: "TRANSLATE", question: "Çevir:", hint: "Yazar yeni kitabını imzalıyor.", correctAnswer: "L'écrivain signe son nouveau livre." },
+    { id: 1273, type: "TRANSLATE", question: "Çevir:", hint: "Bu eser bir başyapıt.", correctAnswer: "Cette œuvre est un chef-d'œuvre." },
+    { id: 1274, type: "TRANSLATE", question: "Çevir:", hint: "Okumayı tercih ederim.", correctAnswer: "Je préfère lire." },
+    { id: 1275, type: "TRANSLATE", question: "Çevir:", hint: "Bu romanın karakterleri çok ilginç.", correctAnswer: "Les personnages de ce roman sont très intéressants." },
+    { id: 1276, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le chef-d'œuvre", options: [{ id: "a", text: "Başyapıt", correct: true }, { id: "b", text: "Eleştiri", correct: false }, { id: "c", text: "Sergi", correct: false }, { id: "d", text: "Sahne", correct: false }] },
+    { id: 1277, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La bibliothèque", options: [{ id: "a", text: "Kütüphane", correct: true }, { id: "b", text: "Yayıncı", correct: false }, { id: "c", text: "Şiir", correct: false }, { id: "d", text: "Sahne", correct: false }] },
+    { id: 1278, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le théâtre", options: [{ id: "a", text: "Tiyatro", correct: true }, { id: "b", text: "Müze", correct: false }, { id: "c", text: "Galeri", correct: false }, { id: "d", text: "Roman", correct: false }] },
+    { id: 1279, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le poème", options: [{ id: "a", text: "Şiir", correct: true }, { id: "b", text: "Tablo", correct: false }, { id: "c", text: "Kütüphane", correct: false }, { id: "d", text: "Müze", correct: false }] },
+    { id: 1280, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'inspiration", options: [{ id: "a", text: "İlham", correct: true }, { id: "b", text: "Olay örgüsü", correct: false }, { id: "c", text: "Eleştiri", correct: false }, { id: "d", text: "Yayıncı", correct: false }] }
+];
+
+// ===== UNIT 376 HARDCODED QUIZZES =====
+const unit376Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1281, type: "SELECT", question: "'L'histoire' ne demek?", options: [{ id: "a", text: "Tarih", correct: true }, { id: "b", text: "Hikaye", correct: false }, { id: "c", text: "Harita", correct: false }, { id: "d", text: "Sınav", correct: false }] },
+    { id: 1282, type: "SELECT", question: "'La guerre' ne demek?", options: [{ id: "a", text: "Savaş", correct: true }, { id: "b", text: "Barış", correct: false }, { id: "c", text: "Zafer", correct: false }, { id: "d", text: "Kral", correct: false }] },
+    { id: 1283, type: "SELECT", question: "'La paix' ne demek?", options: [{ id: "a", text: "Barış", correct: true }, { id: "b", text: "Savaş", correct: false }, { id: "c", text: "Arşiv", correct: false }, { id: "d", text: "Yüzyıl", correct: false }] },
+    { id: 1284, type: "SELECT", question: "'La bataille' ne demek?", options: [{ id: "a", text: "Muharebe", correct: true }, { id: "b", text: "Anıt", correct: false }, { id: "c", text: "Kronoloji", correct: false }, { id: "d", text: "Kral", correct: false }] },
+    { id: 1285, type: "SELECT", question: "'La victoire' ne demek?", options: [{ id: "a", text: "Zafer", correct: true }, { id: "b", text: "Yenilgi", correct: false }, { id: "c", text: "Antlaşma", correct: false }, { id: "d", text: "Sömürge", correct: false }] },
+    { id: 1286, type: "SELECT", question: "'La défaite' ne demek?", options: [{ id: "a", text: "Yenilgi", correct: true }, { id: "b", text: "Zafer", correct: false }, { id: "c", text: "Kurtuluş", correct: false }, { id: "d", text: "İmparatorluk", correct: false }] },
+    { id: 1287, type: "SELECT", question: "'La révolution' ne demek?", options: [{ id: "a", text: "Devrim", correct: true }, { id: "b", text: "Anma", correct: false }, { id: "c", text: "Arşiv", correct: false }, { id: "d", text: "Kral", correct: false }] },
+    { id: 1288, type: "SELECT", question: "'L'indépendance' ne demek?", options: [{ id: "a", text: "Bağımsızlık", correct: true }, { id: "b", text: "Kronoloji", correct: false }, { id: "c", text: "Barış", correct: false }, { id: "d", text: "Savaş", correct: false }] },
+    { id: 1289, type: "SELECT", question: "'Le traité' ne demek?", options: [{ id: "a", text: "Antlaşma", correct: true }, { id: "b", text: "Anıt", correct: false }, { id: "c", text: "Kral", correct: false }, { id: "d", text: "Arşiv", correct: false }] },
+    { id: 1290, type: "SELECT", question: "'Le monument' ne demek?", options: [{ id: "a", text: "Anıt", correct: true }, { id: "b", text: "Saray", correct: false }, { id: "c", text: "Kütüphane", correct: false }, { id: "d", text: "Krallık", correct: false }] },
+    { id: 1291, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le siècle", options: [{ id: "a", text: "Yüzyıl", correct: true }, { id: "b", text: "Tarih", correct: false }, { id: "c", text: "Kronoloji", correct: false }, { id: "d", text: "Arşiv", correct: false }] },
+    { id: 1292, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La chronologie", options: [{ id: "a", text: "Kronoloji", correct: true }, { id: "b", text: "Anayasa", correct: false }, { id: "c", text: "Cumhuriyet", correct: false }, { id: "d", text: "Krallık", correct: false }] },
+    { id: 1293, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le royaume", options: [{ id: "a", text: "Krallık", correct: true }, { id: "b", text: "İmparatorluk", correct: false }, { id: "c", text: "Cumhuriyet", correct: false }, { id: "d", text: "Anayasa", correct: false }] },
+    { id: 1294, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La constitution", options: [{ id: "a", text: "Anayasa", correct: true }, { id: "b", text: "Cumhuriyet", correct: false }, { id: "c", text: "Antlaşma", correct: false }, { id: "d", text: "Arşiv", correct: false }] },
+    { id: 1295, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le site historique", options: [{ id: "a", text: "Tarihi alan", correct: true }, { id: "b", text: "Savaş alanı", correct: false }, { id: "c", text: "Müze", correct: false }, { id: "d", text: "Saray", correct: false }] },
+    { id: 1296, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ a duré plusieurs années.", options: [{ id: "a", text: "guerre", correct: true }, { id: "b", text: "paix", correct: false }] },
+    { id: 1297, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ont célébré la ___.", options: [{ id: "a", text: "victoire", correct: true }, { id: "b", text: "défaite", correct: false }] },
+    { id: 1298, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ protège les droits.", options: [{ id: "a", text: "constitution", correct: true }, { id: "b", text: "révolution", correct: false }] },
+    { id: 1299, type: "FILL_BLANK", question: "Doldur:", sentence: "On commémore cette ___.", options: [{ id: "a", text: "date", correct: true }, { id: "b", text: "source", correct: false }] },
+    { id: 1300, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ a mis fin au conflit.", options: [{ id: "a", text: "traité", correct: true }, { id: "b", text: "monument", correct: false }] }
+];
+
+const unit376Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1301, type: "SELECT", question: "Hangi kalıp yıl belirtir?", options: [{ id: "a", text: "en + yıl", correct: true }, { id: "b", text: "au + yıl", correct: false }, { id: "c", text: "le + yüzyıl", correct: false }, { id: "d", text: "dans + yıl", correct: false }] },
+    { id: 1302, type: "SELECT", question: "'Au XIXe siècle' neyi belirtir?", options: [{ id: "a", text: "Yüzyıl", correct: true }, { id: "b", text: "Gün", correct: false }, { id: "c", text: "Ay", correct: false }, { id: "d", text: "Saat", correct: false }] },
+    { id: 1303, type: "FILL_BLANK", question: "Doldur:", sentence: "La république a été fondée ___ 1923.", options: [{ id: "a", text: "en", correct: true }, { id: "b", text: "au", correct: false }] },
+    { id: 1304, type: "FILL_BLANK", question: "Doldur:", sentence: "___ XXe siècle, la ville a changé.", options: [{ id: "a", text: "Au", correct: true }, { id: "b", text: "En", correct: false }] },
+    { id: 1305, type: "SELECT", question: "'D'abord' ne demek?", options: [{ id: "a", text: "Önce", correct: true }, { id: "b", text: "Sonra", correct: false }, { id: "c", text: "Sonunda", correct: false }, { id: "d", text: "Bu yüzden", correct: false }] },
+    { id: 1306, type: "SELECT", question: "'Finalement' ne demek?", options: [{ id: "a", text: "Sonunda", correct: true }, { id: "b", text: "Önce", correct: false }, { id: "c", text: "Hemen", correct: false }, { id: "d", text: "Asla", correct: false }] },
+    { id: 1307, type: "SELECT", question: "'Parce que' ne demek?", options: [{ id: "a", text: "Çünkü", correct: true }, { id: "b", text: "Bu yüzden", correct: false }, { id: "c", text: "Buna rağmen", correct: false }, { id: "d", text: "Ne zaman", correct: false }] },
+    { id: 1308, type: "SELECT", question: "'À cause de' ne demek?", options: [{ id: "a", text: "... yüzünden", correct: true }, { id: "b", text: "... sayesinde", correct: false }, { id: "c", text: "Önce", correct: false }, { id: "d", text: "Sonra", correct: false }] },
+    { id: 1309, type: "TRANSLATE", question: "Çevir:", hint: "Bu yüzden barış geri geldi.", correctAnswer: "Donc, la paix est revenue." },
+    { id: 1310, type: "TRANSLATE", question: "Çevir:", hint: "Önce antlaşmayı imzaladılar.", correctAnswer: "D'abord, ils ont signé le traité." },
+    { id: 1311, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quel événement historique t'intéresse le plus ?", options: [{ id: "a", text: "Seni en çok hangi tarihi olay ilgilendiriyor?", correct: true }, { id: "b", text: "Tarihi olaylar neden önemlidir?", correct: false }, { id: "c", text: "Hangi müzeye gidiyorsun?", correct: false }, { id: "d", text: "Bu olay ne zaman oldu?", correct: false }] },
+    { id: 1312, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La Révolution française me fascine.", options: [{ id: "a", text: "Fransız Devrimi beni büyülüyor.", correct: true }, { id: "b", text: "Fransızca öğreniyorum.", correct: false }, { id: "c", text: "Barış anlaşması imzalandı.", correct: false }, { id: "d", text: "Müzeyi seviyorum.", correct: false }] },
+    { id: 1313, type: "SELECT", question: "Konuşma: 'Tu as déjà visité un musée d'histoire ?' ne demek?", options: [{ id: "a", text: "Hiç bir tarih müzesini ziyaret ettin mi?", correct: true }, { id: "b", text: "Müze ne zaman açılıyor?", correct: false }, { id: "c", text: "Hangi şehirdesin?", correct: false }, { id: "d", text: "Bu tablo eski mi?", correct: false }] },
+    { id: 1314, type: "SELECT", question: "Konuşma: 'J'ai appris l'histoire de la ville.' ne demek?", options: [{ id: "a", text: "Şehrin tarihini öğrendim.", correct: true }, { id: "b", text: "Şehri çok seviyorum.", correct: false }, { id: "c", text: "Şehirde yaşıyorum.", correct: false }, { id: "d", text: "Şehir küçük.", correct: false }] },
+    { id: 1315, type: "FILL_BLANK", question: "Doldur:", sentence: "La bataille est connue ___ elle a changé le cours de l'histoire.", options: [{ id: "a", text: "parce que", correct: true }, { id: "b", text: "donc", correct: false }] },
+    { id: 1316, type: "FILL_BLANK", question: "Doldur:", sentence: "___, la ville a été libérée.", options: [{ id: "a", text: "Finalement", correct: true }, { id: "b", text: "D'abord", correct: false }] },
+    { id: 1317, type: "TRANSLATE", question: "Çevir:", hint: "Geçmişi hatırlamak önemlidir.", correctAnswer: "Il est important de se souvenir du passé." },
+    { id: 1318, type: "TRANSLATE", question: "Çevir:", hint: "Bu tarih her yıl anılır.", correctAnswer: "On commémore cette date chaque année." },
+    { id: 1319, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le traité a mis fin au conflit.", options: [{ id: "a", text: "Antlaşma çatışmayı sona erdirdi.", correct: true }, { id: "b", text: "Savaş başladı.", correct: false }, { id: "c", text: "Barış imzalanmadı.", correct: false }, { id: "d", text: "Müzeyi ziyaret ettik.", correct: false }] },
+    { id: 1320, type: "SELECT", question: "Hangi bağlaç kronoloji için kullanılır?", options: [{ id: "a", text: "d'abord", correct: true }, { id: "b", text: "parce que", correct: false }, { id: "c", text: "donc", correct: false }, { id: "d", text: "à cause de", correct: false }] }
+];
+
+const unit376Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1321, type: "SELECT", question: "Pourquoi la ville organise-t-elle une journée de commémoration ?", options: [{ id: "a", text: "Pour rappeler un événement historique important", correct: true }, { id: "b", text: "Pour lancer un festival", correct: false }, { id: "c", text: "Pour ouvrir un nouveau musée", correct: false }, { id: "d", text: "Pour célébrer un match", correct: false }] },
+    { id: 1322, type: "SELECT", question: "Qui se rend au monument principal ?", options: [{ id: "a", text: "Les élèves du lycée", correct: true }, { id: "b", text: "Des touristes", correct: false }, { id: "c", text: "Les journalistes", correct: false }, { id: "d", text: "Les musiciens", correct: false }] },
+    { id: 1323, type: "SELECT", question: "Avec qui vont-ils au monument ?", options: [{ id: "a", text: "Avec leurs professeurs d'histoire", correct: true }, { id: "b", text: "Avec leurs parents", correct: false }, { id: "c", text: "Avec des guides étrangers", correct: false }, { id: "d", text: "Avec leurs amis", correct: false }] },
+    { id: 1324, type: "SELECT", question: "Que raconte le guide ?", options: [{ id: "a", text: "La bataille et la victoire", correct: true }, { id: "b", text: "Une recette", correct: false }, { id: "c", text: "Une histoire de voyage", correct: false }, { id: "d", text: "Un film", correct: false }] },
+    { id: 1325, type: "SELECT", question: "Que montre le guide aux élèves ?", options: [{ id: "a", text: "Des archives et des photos anciennes", correct: true }, { id: "b", text: "Des cartes bancaires", correct: false }, { id: "c", text: "Des billets de train", correct: false }, { id: "d", text: "Des plans de ville", correct: false }] },
+    { id: 1326, type: "SELECT", question: "Que font les élèves pendant la visite ?", options: [{ id: "a", text: "Ils écoutent et posent des questions", correct: true }, { id: "b", text: "Ils dorment", correct: false }, { id: "c", text: "Ils jouent", correct: false }, { id: "d", text: "Ils mangent", correct: false }] },
+    { id: 1327, type: "SELECT", question: "Sur qui portent les questions des élèves ?", options: [{ id: "a", text: "Sur les témoins de l'époque", correct: true }, { id: "b", text: "Sur les films modernes", correct: false }, { id: "c", text: "Sur les bus", correct: false }, { id: "d", text: "Sur les magasins", correct: false }] },
+    { id: 1328, type: "SELECT", question: "Que fait tout le monde à la fin ?", options: [{ id: "a", text: "Ils déposent des fleurs devant le monument", correct: true }, { id: "b", text: "Ils quittent la ville", correct: false }, { id: "c", text: "Ils visitent un marché", correct: false }, { id: "d", text: "Ils prennent le train", correct: false }] },
+    { id: 1329, type: "SELECT", question: "Que comprennent les élèves ?", options: [{ id: "a", text: "Qu'il faut se souvenir du passé", correct: true }, { id: "b", text: "Que le passé n'est pas important", correct: false }, { id: "c", text: "Qu'il faut oublier l'histoire", correct: false }, { id: "d", text: "Que le musée est fermé", correct: false }] },
+    { id: 1330, type: "SELECT", question: "Quel est le message final du texte ?", options: [{ id: "a", text: "Construire un avenir meilleur", correct: true }, { id: "b", text: "Aller à la mer", correct: false }, { id: "c", text: "Changer d'école", correct: false }, { id: "d", text: "Éviter les monuments", correct: false }] },
+    { id: 1331, type: "LISTENING", question: "Duyduğunu seç:", audioText: "On commémore cette date chaque année.", options: [{ id: "a", text: "Bu tarih her yıl anılır.", correct: true }, { id: "b", text: "Bu tarih unutulur.", correct: false }, { id: "c", text: "Bu tarih değişir.", correct: false }, { id: "d", text: "Bu tarih yoktur.", correct: false }] },
+    { id: 1332, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La paix a été signée après la guerre.", options: [{ id: "a", text: "Savaşın ardından barış imzalandı.", correct: true }, { id: "b", text: "Barış bozuldu.", correct: false }, { id: "c", text: "Savaş başladı.", correct: false }, { id: "d", text: "Zafer kazanıldı.", correct: false }] },
+    { id: 1333, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le monument rend hommage aux victimes.", options: [{ id: "a", text: "Anıt, kurbanları anıyor.", correct: true }, { id: "b", text: "Anıt yıkıldı.", correct: false }, { id: "c", text: "Anıt satıldı.", correct: false }, { id: "d", text: "Anıt kapalı.", correct: false }] },
+    { id: 1334, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les archives conservent des documents anciens.", options: [{ id: "a", text: "Arşivler eski belgeleri saklar.", correct: true }, { id: "b", text: "Arşivler yeni belgeleri siler.", correct: false }, { id: "c", text: "Arşivler kapalıdır.", correct: false }, { id: "d", text: "Arşivler boş.", correct: false }] },
+    { id: 1335, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La chronologie aide à comprendre les événements.", options: [{ id: "a", text: "Kronoloji olayları anlamaya yardım eder.", correct: true }, { id: "b", text: "Kronoloji gereksizdir.", correct: false }, { id: "c", text: "Olayları unuturuz.", correct: false }, { id: "d", text: "Olaylar değişmez.", correct: false }] },
+    { id: 1336, type: "TRANSLATE", question: "Çevir:", hint: "Barış", correctAnswer: "La paix" },
+    { id: 1337, type: "TRANSLATE", question: "Çevir:", hint: "Zafer", correctAnswer: "La victoire" },
+    { id: 1338, type: "TRANSLATE", question: "Çevir:", hint: "Kronoloji", correctAnswer: "La chronologie" },
+    { id: 1339, type: "TRANSLATE", question: "Çevir:", hint: "Anıt", correctAnswer: "Le monument" },
+    { id: 1340, type: "TRANSLATE", question: "Çevir:", hint: "Bağımsızlık", correctAnswer: "L'indépendance" }
+];
+
+const unit376Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1341, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ était puissant.", options: [{ id: "a", text: "royaume", correct: true }, { id: "b", text: "site", correct: false }] },
+    { id: 1342, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ a prononcé un discours.", options: [{ id: "a", text: "président", correct: true }, { id: "b", text: "roi", correct: false }] },
+    { id: 1343, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette ___ est fiable.", options: [{ id: "a", text: "source", correct: true }, { id: "b", text: "victoire", correct: false }] },
+    { id: 1344, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ont signé un ___.", options: [{ id: "a", text: "traité", correct: true }, { id: "b", text: "monument", correct: false }] },
+    { id: 1345, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ a transformé la société.", options: [{ id: "a", text: "révolution", correct: true }, { id: "b", text: "commémoration", correct: false }] },
+    { id: 1346, type: "SELECT", question: "'La commémoration' ne demek?", options: [{ id: "a", text: "Anma", correct: true }, { id: "b", text: "Savaş", correct: false }, { id: "c", text: "Kronoloji", correct: false }, { id: "d", text: "Anıt", correct: false }] },
+    { id: 1347, type: "SELECT", question: "'Le témoignage' ne demek?", options: [{ id: "a", text: "Tanıklık", correct: true }, { id: "b", text: "Arşiv", correct: false }, { id: "c", text: "Kral", correct: false }, { id: "d", text: "Anlaşma", correct: false }] },
+    { id: 1348, type: "SELECT", question: "'L'empire' ne demek?", options: [{ id: "a", text: "İmparatorluk", correct: true }, { id: "b", text: "Cumhuriyet", correct: false }, { id: "c", text: "Köy", correct: false }, { id: "d", text: "Saray", correct: false }] },
+    { id: 1349, type: "SELECT", question: "'La colonisation' ne demek?", options: [{ id: "a", text: "Sömürgeleştirme", correct: true }, { id: "b", text: "Bağımsızlık", correct: false }, { id: "c", text: "Kurtuluş", correct: false }, { id: "d", text: "Zafer", correct: false }] },
+    { id: 1350, type: "SELECT", question: "'Se souvenir' ne demek?", options: [{ id: "a", text: "Hatırlamak", correct: true }, { id: "b", text: "Unutmak", correct: false }, { id: "c", text: "Yazmak", correct: false }, { id: "d", text: "Gezmek", correct: false }] },
+    { id: 1351, type: "TRANSLATE", question: "Çevir:", hint: "Bu tarihi alan çok ziyaretçi çeker.", correctAnswer: "Ce site historique attire beaucoup de visiteurs." },
+    { id: 1352, type: "TRANSLATE", question: "Çevir:", hint: "Kral reformu açıkladı.", correctAnswer: "Le roi a annoncé la réforme." },
+    { id: 1353, type: "TRANSLATE", question: "Çevir:", hint: "Antlaşma çatışmayı sona erdirdi.", correctAnswer: "Le traité a mis fin au conflit." },
+    { id: 1354, type: "TRANSLATE", question: "Çevir:", hint: "Bu kaynak güvenilir.", correctAnswer: "Cette source est fiable." },
+    { id: 1355, type: "TRANSLATE", question: "Çevir:", hint: "Şehrin kurtuluşu her yıl anılır.", correctAnswer: "La libération de la ville est commémorée chaque année." },
+    { id: 1356, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La bataille", options: [{ id: "a", text: "Muharebe", correct: true }, { id: "b", text: "Zafer", correct: false }, { id: "c", text: "Barış", correct: false }, { id: "d", text: "Yenilgi", correct: false }] },
+    { id: 1357, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La défaite", options: [{ id: "a", text: "Yenilgi", correct: true }, { id: "b", text: "Zafer", correct: false }, { id: "c", text: "Anma", correct: false }, { id: "d", text: "Savaş", correct: false }] },
+    { id: 1358, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'indépendance", options: [{ id: "a", text: "Bağımsızlık", correct: true }, { id: "b", text: "Cumhuriyet", correct: false }, { id: "c", text: "Anayasa", correct: false }, { id: "d", text: "Krallık", correct: false }] },
+    { id: 1359, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le monument", options: [{ id: "a", text: "Anıt", correct: true }, { id: "b", text: "Müze", correct: false }, { id: "c", text: "Arşiv", correct: false }, { id: "d", text: "Kronoloji", correct: false }] },
+    { id: 1360, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La constitution", options: [{ id: "a", text: "Anayasa", correct: true }, { id: "b", text: "Cumhuriyet", correct: false }, { id: "c", text: "Antlaşma", correct: false }, { id: "d", text: "İmparatorluk", correct: false }] }
+];
+
+// ===== UNIT 377 HARDCODED QUIZZES =====
+const unit377Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1361, type: "SELECT", question: "'La biographie' ne demek?", options: [{ id: "a", text: "Biyografi", correct: true }, { id: "b", text: "Bibliyografya", correct: false }, { id: "c", text: "Tarih", correct: false }, { id: "d", text: "Hikaye", correct: false }] },
+    { id: 1362, type: "SELECT", question: "'Le personnage historique' ne demek?", options: [{ id: "a", text: "Tarihi şahsiyet", correct: true }, { id: "b", text: "Tarihi bölge", correct: false }, { id: "c", text: "Tarih dersi", correct: false }, { id: "d", text: "Kahraman", correct: false }] },
+    { id: 1363, type: "SELECT", question: "'La célébrité' ne demek?", options: [{ id: "a", text: "Ünlülük", correct: true }, { id: "b", text: "Gençlik", correct: false }, { id: "c", text: "Ödül", correct: false }, { id: "d", text: "Eser", correct: false }] },
+    { id: 1364, type: "SELECT", question: "'Le talent' ne demek?", options: [{ id: "a", text: "Yetenek", correct: true }, { id: "b", text: "Başarı", correct: false }, { id: "c", text: "Çaba", correct: false }, { id: "d", text: "Kaynak", correct: false }] },
+    { id: 1365, type: "SELECT", question: "'La carrière' ne demek?", options: [{ id: "a", text: "Kariyer", correct: true }, { id: "b", text: "Kütüphane", correct: false }, { id: "c", text: "Hikaye", correct: false }, { id: "d", text: "Kronoloji", correct: false }] },
+    { id: 1366, type: "SELECT", question: "'L'œuvre' ne demek?", options: [{ id: "a", text: "Eser", correct: true }, { id: "b", text: "Ödül", correct: false }, { id: "c", text: "Müze", correct: false }, { id: "d", text: "Arşiv", correct: false }] },
+    { id: 1367, type: "SELECT", question: "'L'héritage' ne demek?", options: [{ id: "a", text: "Miras", correct: true }, { id: "b", text: "Kariyer", correct: false }, { id: "c", text: "Şöhret", correct: false }, { id: "d", text: "Portre", correct: false }] },
+    { id: 1368, type: "SELECT", question: "'Le portrait' ne demek?", options: [{ id: "a", text: "Portre", correct: true }, { id: "b", text: "Rol", correct: false }, { id: "c", text: "Model", correct: false }, { id: "d", text: "Anı", correct: false }] },
+    { id: 1369, type: "SELECT", question: "'L'influence' ne demek?", options: [{ id: "a", text: "Etki", correct: true }, { id: "b", text: "Savaş", correct: false }, { id: "c", text: "İmza", correct: false }, { id: "d", text: "Kronoloji", correct: false }] },
+    { id: 1370, type: "SELECT", question: "'L'engagement' ne demek?", options: [{ id: "a", text: "Adanmışlık / Aktivizm", correct: true }, { id: "b", text: "Korku", correct: false }, { id: "c", text: "Nezaket", correct: false }, { id: "d", text: "Şaşkınlık", correct: false }] },
+    { id: 1371, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le prix", options: [{ id: "a", text: "Ödül", correct: true }, { id: "b", text: "Miras", correct: false }, { id: "c", text: "Övgü", correct: false }, { id: "d", text: "Seçim", correct: false }] },
+    { id: 1372, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le succès", options: [{ id: "a", text: "Başarı", correct: true }, { id: "b", text: "Sebep", correct: false }, { id: "c", text: "Savaş", correct: false }, { id: "d", text: "Kayıp", correct: false }] },
+    { id: 1373, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le savant", options: [{ id: "a", text: "Bilim insanı", correct: true }, { id: "b", text: "Sporcu", correct: false }, { id: "c", text: "Yazar", correct: false }, { id: "d", text: "Müzisyen", correct: false }] },
+    { id: 1374, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'inventeur", options: [{ id: "a", text: "Mucit", correct: true }, { id: "b", text: "Editör", correct: false }, { id: "c", text: "Model", correct: false }, { id: "d", text: "Sahne", correct: false }] },
+    { id: 1375, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le sportif", options: [{ id: "a", text: "Sporcu", correct: true }, { id: "b", text: "Tiyatrocu", correct: false }, { id: "c", text: "Bilim insanı", correct: false }, { id: "d", text: "Ressam", correct: false }] },
+    { id: 1376, type: "FILL_BLANK", question: "Doldur:", sentence: "Il a commencé sa ___ très jeune.", options: [{ id: "a", text: "carrière", correct: true }, { id: "b", text: "jeunesse", correct: false }] },
+    { id: 1377, type: "FILL_BLANK", question: "Doldur:", sentence: "Son ___ est traduit en plusieurs langues.", options: [{ id: "a", text: "œuvre", correct: true }, { id: "b", text: "portrait", correct: false }] },
+    { id: 1378, type: "FILL_BLANK", question: "Doldur:", sentence: "Sa ___ est internationale.", options: [{ id: "a", text: "renommée", correct: true }, { id: "b", text: "enfance", correct: false }] },
+    { id: 1379, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ a composé une nouvelle pièce.", options: [{ id: "a", text: "musicien", correct: true }, { id: "b", text: "acteur", correct: false }] },
+    { id: 1380, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ a créé une machine.", options: [{ id: "a", text: "inventeur", correct: true }, { id: "b", text: "héritage", correct: false }] }
+];
+
+const unit377Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1381, type: "SELECT", question: "Hangi fiil passé composé'de Être ile kullanılır?", options: [{ id: "a", text: "naître", correct: true }, { id: "b", text: "aimer", correct: false }, { id: "c", text: "finir", correct: false }, { id: "d", text: "prendre", correct: false }] },
+    { id: 1382, type: "SELECT", question: "Cümleyi tamamla: Elle est ___ à Paris.", options: [{ id: "a", text: "née", correct: true }, { id: "b", text: "né", correct: false }, { id: "c", text: "naître", correct: false }, { id: "d", text: "nait", correct: false }] },
+    { id: 1383, type: "FILL_BLANK", question: "Doldur:", sentence: "À l'âge de 20 ans, il ___ sa carrière.", options: [{ id: "a", text: "a commencé", correct: true }, { id: "b", text: "commence", correct: false }] },
+    { id: 1384, type: "SELECT", question: "'depuis' ne demek?", options: [{ id: "a", text: "-den beri", correct: true }, { id: "b", text: "sonra", correct: false }, { id: "c", text: "önce", correct: false }, { id: "d", text: "her zaman", correct: false }] },
+    { id: 1385, type: "SELECT", question: "'pendant' ne demek?", options: [{ id: "a", text: "boyunca", correct: true }, { id: "b", text: "hemen", correct: false }, { id: "c", text: "sonunda", correct: false }, { id: "d", text: "önce", correct: false }] },
+    { id: 1386, type: "SELECT", question: "'dès' ne demek?", options: [{ id: "a", text: "-den itibaren", correct: true }, { id: "b", text: "-e göre", correct: false }, { id: "c", text: "sonra", correct: false }, { id: "d", text: "önce", correct: false }] },
+    { id: 1387, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle a travaillé ___ dix ans.", options: [{ id: "a", text: "pendant", correct: true }, { id: "b", text: "depuis", correct: false }] },
+    { id: 1388, type: "SELECT", question: "Hangi yapı görüş/aktarımı belirtir?", options: [{ id: "a", text: "Il dit que...", correct: true }, { id: "b", text: "Il y a...", correct: false }, { id: "c", text: "Il faut...", correct: false }, { id: "d", text: "Il est...", correct: false }] },
+    { id: 1389, type: "SELECT", question: "'Selon lui' ne demek?", options: [{ id: "a", text: "Ona göre", correct: true }, { id: "b", text: "Ondan sonra", correct: false }, { id: "c", text: "Onunla", correct: false }, { id: "d", text: "Onu", correct: false }] },
+    { id: 1390, type: "TRANSLATE", question: "Çevir:", hint: "Ona göre pes etmemek gerekir.", correctAnswer: "Selon lui, il faut persévérer." },
+    { id: 1391, type: "TRANSLATE", question: "Çevir:", hint: "20 yaşında kariyerine başladı.", correctAnswer: "À l'âge de 20 ans, il a commencé sa carrière." },
+    { id: 1392, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Qui est ton personnage historique préféré ?", options: [{ id: "a", text: "En sevdiğin tarihi şahsiyet kim?", correct: true }, { id: "b", text: "Tarihi olaylar neden önemli?", correct: false }, { id: "c", text: "Hangi müzeye gidiyorsun?", correct: false }, { id: "d", text: "Bu kişi nerede doğdu?", correct: false }] },
+    { id: 1393, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Parce qu'elle a changé le monde.", options: [{ id: "a", text: "Çünkü dünyayı değiştirdi.", correct: true }, { id: "b", text: "Çünkü geçmişte yaşadı.", correct: false }, { id: "c", text: "Çünkü çok genç.", correct: false }, { id: "d", text: "Çünkü unutuldu.", correct: false }] },
+    { id: 1394, type: "SELECT", question: "Passé composé: 'devenir' için doğru şekil hangisi?", options: [{ id: "a", text: "est devenu", correct: true }, { id: "b", text: "a devenu", correct: false }, { id: "c", text: "est devenir", correct: false }, { id: "d", text: "a devenir", correct: false }] },
+    { id: 1395, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ___ célèbres après ce film.", options: [{ id: "a", text: "sont devenus", correct: true }, { id: "b", text: "ont devenu", correct: false }] },
+    { id: 1396, type: "SELECT", question: "Hangi cümlede söz aktarımı vardır?", options: [{ id: "a", text: "Il dit que la créativité est essentielle.", correct: true }, { id: "b", text: "La créativité est essentielle.", correct: false }, { id: "c", text: "Créativité essentielle.", correct: false }, { id: "d", text: "Être créatif.", correct: false }] },
+    { id: 1397, type: "SELECT", question: "'À l'âge de' neyi ifade eder?", options: [{ id: "a", text: "Yaş", correct: true }, { id: "b", text: "Yer", correct: false }, { id: "c", text: "Sebep", correct: false }, { id: "d", text: "Sonuç", correct: false }] },
+    { id: 1398, type: "TRANSLATE", question: "Çevir:", hint: "Biyografisini okudun mu?", correctAnswer: "As-tu lu sa biographie ?" },
+    { id: 1399, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il a reçu des prix internationaux.", options: [{ id: "a", text: "Uluslararası ödüller aldı.", correct: true }, { id: "b", text: "Uluslararası ödüller vermedi.", correct: false }, { id: "c", text: "Uluslararası bir arşiv var.", correct: false }, { id: "d", text: "Uluslararası bir anlaşma yaptı.", correct: false }] },
+    { id: 1400, type: "SELECT", question: "Hangi kelime süre bildirir?", options: [{ id: "a", text: "pendant", correct: true }, { id: "b", text: "parce que", correct: false }, { id: "c", text: "donc", correct: false }, { id: "d", text: "selon", correct: false }] }
+];
+
+const unit377Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1401, type: "SELECT", question: "Pourquoi Selin prépare-t-elle un exposé ?", options: [{ id: "a", text: "Pour son cours d'histoire", correct: true }, { id: "b", text: "Pour un concours de sport", correct: false }, { id: "c", text: "Pour un voyage", correct: false }, { id: "d", text: "Pour un anniversaire", correct: false }] },
+    { id: 1402, type: "SELECT", question: "Qui choisit-elle pour son exposé ?", options: [{ id: "a", text: "Une inventrice", correct: true }, { id: "b", text: "Un acteur", correct: false }, { id: "c", text: "Un musicien", correct: false }, { id: "d", text: "Un sportif", correct: false }] },
+    { id: 1403, type: "SELECT", question: "Où Selin va-t-elle pour chercher des informations ?", options: [{ id: "a", text: "À la bibliothèque", correct: true }, { id: "b", text: "Au cinéma", correct: false }, { id: "c", text: "Au stade", correct: false }, { id: "d", text: "Au marché", correct: false }] },
+    { id: 1404, type: "SELECT", question: "Que lit-elle ?", options: [{ id: "a", text: "Une biographie", correct: true }, { id: "b", text: "Un roman", correct: false }, { id: "c", text: "Un journal", correct: false }, { id: "d", text: "Un e-mail", correct: false }] },
+    { id: 1405, type: "SELECT", question: "Que regarde-t-elle ?", options: [{ id: "a", text: "Des archives", correct: true }, { id: "b", text: "Des matchs", correct: false }, { id: "c", text: "Des chansons", correct: false }, { id: "d", text: "Des recettes", correct: false }] },
+    { id: 1406, type: "SELECT", question: "Quels éléments note-t-elle ?", options: [{ id: "a", text: "L'enfance, la carrière et l'invention principale", correct: true }, { id: "b", text: "Les menus, les prix et les horaires", correct: false }, { id: "c", text: "Les films et les acteurs", correct: false }, { id: "d", text: "Les sports et les règles", correct: false }] },
+    { id: 1407, type: "SELECT", question: "Que découvre Selin sur l'inventrice ?", options: [{ id: "a", text: "Elle a surmonté de grandes difficultés", correct: true }, { id: "b", text: "Elle a quitté l'école", correct: false }, { id: "c", text: "Elle n'a pas travaillé", correct: false }, { id: "d", text: "Elle a oublié son passé", correct: false }] },
+    { id: 1408, type: "SELECT", question: "Qu'a-t-elle reçu ?", options: [{ id: "a", text: "Un prix international", correct: true }, { id: "b", text: "Un billet de bus", correct: false }, { id: "c", text: "Un diplôme de cuisine", correct: false }, { id: "d", text: "Un costume", correct: false }] },
+    { id: 1409, type: "SELECT", question: "Que montre Selin pendant la présentation ?", options: [{ id: "a", text: "Un portrait et une chronologie", correct: true }, { id: "b", text: "Un match en direct", correct: false }, { id: "c", text: "Un film d'action", correct: false }, { id: "d", text: "Un repas", correct: false }] },
+    { id: 1410, type: "SELECT", question: "Quel est le message final ?", options: [{ id: "a", text: "L'héritage peut inspirer les jeunes", correct: true }, { id: "b", text: "Il faut oublier le passé", correct: false }, { id: "c", text: "Les inventions sont inutiles", correct: false }, { id: "d", text: "La classe est fermée", correct: false }] },
+    { id: 1411, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Sa biographie est très inspirante.", options: [{ id: "a", text: "Biyografisi çok ilham vericidir.", correct: true }, { id: "b", text: "Biyografisi çok kısadır.", correct: false }, { id: "c", text: "Biyografisi yoktur.", correct: false }, { id: "d", text: "Biyografi yazmayı sevmez.", correct: false }] },
+    { id: 1412, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il a commencé sa carrière très jeune.", options: [{ id: "a", text: "Kariyerine çok genç başladı.", correct: true }, { id: "b", text: "Kariyerine geç başladı.", correct: false }, { id: "c", text: "Kariyerini bıraktı.", correct: false }, { id: "d", text: "Kariyeri yoktur.", correct: false }] },
+    { id: 1413, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le sportif s'entraîne chaque matin.", options: [{ id: "a", text: "Sporcu her sabah antrenman yapar.", correct: true }, { id: "b", text: "Sporcu akşamları çalışır.", correct: false }, { id: "c", text: "Sporcu çalışmayı sevmez.", correct: false }, { id: "d", text: "Sporcu emeklidir.", correct: false }] },
+    { id: 1414, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Son discours a changé les mentalités.", options: [{ id: "a", text: "Konuşması düşünce yapısını değiştirdi.", correct: true }, { id: "b", text: "Konuşması iptal edildi.", correct: false }, { id: "c", text: "Konuşması çok kısa.", correct: false }, { id: "d", text: "Konuşması hiç yok.", correct: false }] },
+    { id: 1415, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Sa renommée est internationale.", options: [{ id: "a", text: "Şöhreti uluslararasıdır.", correct: true }, { id: "b", text: "Şöhreti yereldir.", correct: false }, { id: "c", text: "Şöhreti yoktur.", correct: false }, { id: "d", text: "Şöhreti azaldı.", correct: false }] },
+    { id: 1416, type: "TRANSLATE", question: "Çevir:", hint: "Rol model", correctAnswer: "Le modèle" },
+    { id: 1417, type: "TRANSLATE", question: "Çevir:", hint: "Miras", correctAnswer: "L'héritage" },
+    { id: 1418, type: "TRANSLATE", question: "Çevir:", hint: "Ünlülük", correctAnswer: "La célébrité" },
+    { id: 1419, type: "TRANSLATE", question: "Çevir:", hint: "Biyografi", correctAnswer: "La biographie" },
+    { id: 1420, type: "TRANSLATE", question: "Çevir:", hint: "Yetenek", correctAnswer: "Le talent" }
+];
+
+const unit377Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1421, type: "FILL_BLANK", question: "Doldur:", sentence: "Il a laissé un ___ culturel.", options: [{ id: "a", text: "héritage", correct: true }, { id: "b", text: "portrait", correct: false }] },
+    { id: 1422, type: "FILL_BLANK", question: "Doldur:", sentence: "Son ___ est remarquable.", options: [{ id: "a", text: "talent", correct: true }, { id: "b", text: "prix", correct: false }] },
+    { id: 1423, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est internationale.", options: [{ id: "a", text: "renommée", correct: true }, { id: "b", text: "jeunesse", correct: false }] },
+    { id: 1424, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ a touché le public.", options: [{ id: "a", text: "discours", correct: true }, { id: "b", text: "portrait", correct: false }] },
+    { id: 1425, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___ célèbre après ce prix.", options: [{ id: "a", text: "devenue", correct: true }, { id: "b", text: "devenir", correct: false }] },
+    { id: 1426, type: "SELECT", question: "'La contribution' ne demek?", options: [{ id: "a", text: "Katkı", correct: true }, { id: "b", text: "Ödül", correct: false }, { id: "c", text: "Portre", correct: false }, { id: "d", text: "Sahne", correct: false }] },
+    { id: 1427, type: "SELECT", question: "'Le parcours' ne demek?", options: [{ id: "a", text: "Hayat yolu / Kariyer yolu", correct: true }, { id: "b", text: "Kronoloji", correct: false }, { id: "c", text: "Yüzük", correct: false }, { id: "d", text: "Çizim", correct: false }] },
+    { id: 1428, type: "SELECT", question: "'L'influence' ne demek?", options: [{ id: "a", text: "Etki", correct: true }, { id: "b", text: "Başarı", correct: false }, { id: "c", text: "Spor", correct: false }, { id: "d", text: "Yüzyıl", correct: false }] },
+    { id: 1429, type: "SELECT", question: "'Le modèle' ne demek?", options: [{ id: "a", text: "Rol model / Örnek", correct: true }, { id: "b", text: "Müze", correct: false }, { id: "c", text: "Savaş", correct: false }, { id: "d", text: "Kaynak", correct: false }] },
+    { id: 1430, type: "SELECT", question: "'L'œuvre' ne demek?", options: [{ id: "a", text: "Eser", correct: true }, { id: "b", text: "Tarih", correct: false }, { id: "c", text: "Kronoloji", correct: false }, { id: "d", text: "Ödül", correct: false }] },
+    { id: 1431, type: "TRANSLATE", question: "Çevir:", hint: "Bu portre müzede sergileniyor.", correctAnswer: "Ce portrait est exposé au musée." },
+    { id: 1432, type: "TRANSLATE", question: "Çevir:", hint: "Sporcu her gün antrenman yapar.", correctAnswer: "Le sportif s'entraîne tous les jours." },
+    { id: 1433, type: "TRANSLATE", question: "Çevir:", hint: "Onun hikayesi dünyaya ilham verir.", correctAnswer: "Son histoire inspire le monde." },
+    { id: 1434, type: "TRANSLATE", question: "Çevir:", hint: "Uluslararası bir ödül aldı.", correctAnswer: "Elle a reçu un prix international." },
+    { id: 1435, type: "TRANSLATE", question: "Çevir:", hint: "Gençler için bir rol modeldir.", correctAnswer: "C'est un modèle pour les jeunes." },
+    { id: 1436, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La biographie", options: [{ id: "a", text: "Biyografi", correct: true }, { id: "b", text: "Bibliyografya", correct: false }, { id: "c", text: "Tarih", correct: false }, { id: "d", text: "Ders", correct: false }] },
+    { id: 1437, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La carrière", options: [{ id: "a", text: "Kariyer", correct: true }, { id: "b", text: "Kütüphane", correct: false }, { id: "c", text: "Sahne", correct: false }, { id: "d", text: "Spor", correct: false }] },
+    { id: 1438, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le portrait", options: [{ id: "a", text: "Portre", correct: true }, { id: "b", text: "Ressam", correct: false }, { id: "c", text: "Dönem", correct: false }, { id: "d", text: "Sahnede", correct: false }] },
+    { id: 1439, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'actrice", options: [{ id: "a", text: "Aktris", correct: true }, { id: "b", text: "Şair", correct: false }, { id: "c", text: "Mucit", correct: false }, { id: "d", text: "Öğretmen", correct: false }] },
+    { id: 1440, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le musicien", options: [{ id: "a", text: "Müzisyen", correct: true }, { id: "b", text: "Sporcu", correct: false }, { id: "c", text: "Yazar", correct: false }, { id: "d", text: "Editör", correct: false }] }
+];
+
+// ===== UNIT 378 HARDCODED QUIZZES =====
+const unit378Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1441, type: "SELECT", question: "'La découverte' ne demek?", options: [{ id: "a", text: "Keşif", correct: true }, { id: "b", text: "Kritik", correct: false }, { id: "c", text: "Deney", correct: false }, { id: "d", text: "Makale", correct: false }] },
+    { id: 1442, type: "SELECT", question: "'Le chercheur' ne demek?", options: [{ id: "a", text: "Araştırmacı", correct: true }, { id: "b", text: "Müzisyen", correct: false }, { id: "c", text: "Sporcu", correct: false }, { id: "d", text: "Oyuncu", correct: false }] },
+    { id: 1443, type: "SELECT", question: "'Le laboratoire' ne demek?", options: [{ id: "a", text: "Laboratuvar", correct: true }, { id: "b", text: "Kütüphane", correct: false }, { id: "c", text: "Sahne", correct: false }, { id: "d", text: "Arşiv", correct: false }] },
+    { id: 1444, type: "SELECT", question: "'L'expérience' ne demek?", options: [{ id: "a", text: "Deney", correct: true }, { id: "b", text: "Teori", correct: false }, { id: "c", text: "Yöntem", correct: false }, { id: "d", text: "Kanıt", correct: false }] },
+    { id: 1445, type: "SELECT", question: "'L'hypothèse' ne demek?", options: [{ id: "a", text: "Hipotez", correct: true }, { id: "b", text: "Analiz", correct: false }, { id: "c", text: "Sonuç", correct: false }, { id: "d", text: "Yayın", correct: false }] },
+    { id: 1446, type: "SELECT", question: "'La preuve' ne demek?", options: [{ id: "a", text: "Kanıt", correct: true }, { id: "b", text: "İcat", correct: false }, { id: "c", text: "Gözlem", correct: false }, { id: "d", text: "Yenilik", correct: false }] },
+    { id: 1447, type: "SELECT", question: "'Le résultat' ne demek?", options: [{ id: "a", text: "Sonuç", correct: true }, { id: "b", text: "Hata", correct: false }, { id: "c", text: "Giriş", correct: false }, { id: "d", text: "Süre", correct: false }] },
+    { id: 1448, type: "SELECT", question: "'L'observation' ne demek?", options: [{ id: "a", text: "Gözlem", correct: true }, { id: "b", text: "Ölçüm", correct: false }, { id: "c", text: "Kayıt", correct: false }, { id: "d", text: "Kronoloji", correct: false }] },
+    { id: 1449, type: "SELECT", question: "'L'invention' ne demek?", options: [{ id: "a", text: "İcat", correct: true }, { id: "b", text: "Keşif", correct: false }, { id: "c", text: "Rapor", correct: false }, { id: "d", text: "Ders", correct: false }] },
+    { id: 1450, type: "SELECT", question: "'Le progrès' ne demek?", options: [{ id: "a", text: "İlerleme", correct: true }, { id: "b", text: "Geri dönüş", correct: false }, { id: "c", text: "Düşüş", correct: false }, { id: "d", text: "Durma", correct: false }] },
+    { id: 1451, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le microscope", options: [{ id: "a", text: "Mikroskop", correct: true }, { id: "b", text: "Teleskop", correct: false }, { id: "c", text: "Laboratuvar", correct: false }, { id: "d", text: "Deney", correct: false }] },
+    { id: 1452, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le télescope", options: [{ id: "a", text: "Teleskop", correct: true }, { id: "b", text: "Mikroskop", correct: false }, { id: "c", text: "Yöntem", correct: false }, { id: "d", text: "Kanıt", correct: false }] },
+    { id: 1453, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le vaccin", options: [{ id: "a", text: "Aşı", correct: true }, { id: "b", text: "İlaç", correct: false }, { id: "c", text: "Hastalık", correct: false }, { id: "d", text: "Çare", correct: false }] },
+    { id: 1454, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La méthode", options: [{ id: "a", text: "Yöntem", correct: true }, { id: "b", text: "Sonuç", correct: false }, { id: "c", text: "Teori", correct: false }, { id: "d", text: "Analiz", correct: false }] },
+    { id: 1455, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'innovation", options: [{ id: "a", text: "Yenilik", correct: true }, { id: "b", text: "Sistem", correct: false }, { id: "c", text: "Düzen", correct: false }, { id: "d", text: "Kural", correct: false }] },
+    { id: 1456, type: "FILL_BLANK", question: "Doldur:", sentence: "Les ___ sont prometteurs.", options: [{ id: "a", text: "résultats", correct: true }, { id: "b", text: "risques", correct: false }] },
+    { id: 1457, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ a réussi.", options: [{ id: "a", text: "expérience", correct: true }, { id: "b", text: "observateur", correct: false }] },
+    { id: 1458, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils travaillent au ___.", options: [{ id: "a", text: "laboratoire", correct: true }, { id: "b", text: "monument", correct: false }] },
+    { id: 1459, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est essentielle.", options: [{ id: "a", text: "preuve", correct: true }, { id: "b", text: "fête", correct: false }] },
+    { id: 1460, type: "FILL_BLANK", question: "Doldur:", sentence: "On ___ une nouvelle formule.", options: [{ id: "a", text: "teste", correct: true }, { id: "b", text: "lance", correct: false }] }
+];
+
+const unit378Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1461, type: "SELECT", question: "'Si... alors...' ne bildirir?", options: [{ id: "a", text: "Koşul / Sonuç", correct: true }, { id: "b", text: "Amaç", correct: false }, { id: "c", text: "Zaman", correct: false }, { id: "d", text: "Sebep", correct: false }] },
+    { id: 1462, type: "SELECT", question: "'grâce à' ne demek?", options: [{ id: "a", text: "sayesinde", correct: true }, { id: "b", text: "yüzünden", correct: false }, { id: "c", text: "rağmen", correct: false }, { id: "d", text: "önce", correct: false }] },
+    { id: 1463, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils répètent l'expérience ___ confirmer les résultats.", options: [{ id: "a", text: "afin de", correct: true }, { id: "b", text: "pendant", correct: false }] },
+    { id: 1464, type: "FILL_BLANK", question: "Doldur:", sentence: "On observe les étoiles ___ comprendre l'univers.", options: [{ id: "a", text: "pour", correct: true }, { id: "b", text: "parce que", correct: false }] },
+    { id: 1465, type: "SELECT", question: "Hangi cümlede edilgen yapı vardır?", options: [{ id: "a", text: "La formule est testée plusieurs fois.", correct: true }, { id: "b", text: "Ils testent la formule.", correct: false }, { id: "c", text: "Nous testons la formule.", correct: false }, { id: "d", text: "Testez la formule.", correct: false }] },
+    { id: 1466, type: "SELECT", question: "'donc' ne demek?", options: [{ id: "a", text: "bu yüzden", correct: true }, { id: "b", text: "çünkü", correct: false }, { id: "c", text: "rağmen", correct: false }, { id: "d", text: "önce", correct: false }] },
+    { id: 1467, type: "SELECT", question: "'à cause de' ne demek?", options: [{ id: "a", text: "yüzünden", correct: true }, { id: "b", text: "sayesinde", correct: false }, { id: "c", text: "için", correct: false }, { id: "d", text: "sonra", correct: false }] },
+    { id: 1468, type: "SELECT", question: "'afin de' ne demek?", options: [{ id: "a", text: "amacıyla", correct: true }, { id: "b", text: "önce", correct: false }, { id: "c", text: "yüzünden", correct: false }, { id: "d", text: "sonra", correct: false }] },
+    { id: 1469, type: "TRANSLATE", question: "Çevir:", hint: "Hipotez doğruysa, deney başarılı olur.", correctAnswer: "Si l'hypothèse est correcte, alors l'expérience réussira." },
+    { id: 1470, type: "TRANSLATE", question: "Çevir:", hint: "Bu yöntem sayesinde sonuçlar güvenilirdir.", correctAnswer: "Grâce à cette méthode, les résultats sont fiables." },
+    { id: 1471, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quelle découverte scientifique te fascine ?", options: [{ id: "a", text: "Hangi bilimsel keşif seni büyülüyor?", correct: true }, { id: "b", text: "Bilimsel dergi nerede?", correct: false }, { id: "c", text: "Bu keşif ne zaman oldu?", correct: false }, { id: "d", text: "Keşifler pahalı mı?", correct: false }] },
+    { id: 1472, type: "LISTENING", question: "Duyduğunu seç:", audioText: "On la teste avec des expériences.", options: [{ id: "a", text: "Onu deneylerle test ederiz.", correct: true }, { id: "b", text: "Onu hemen unuturuz.", correct: false }, { id: "c", text: "Onu kimse bilmez.", correct: false }, { id: "d", text: "Onu araştırmayız.", correct: false }] },
+    { id: 1473, type: "SELECT", question: "Konuşma: 'Le télescope permet d'observer les étoiles.' ne demek?", options: [{ id: "a", text: "Teleskop yıldızları gözlemlemeyi sağlar.", correct: true }, { id: "b", text: "Teleskop bozuldu.", correct: false }, { id: "c", text: "Yıldızlar kayboldu.", correct: false }, { id: "d", text: "Teleskop satıldı.", correct: false }] },
+    { id: 1474, type: "SELECT", question: "Konuşma: 'Parce qu'elle confirme les résultats.' ne demek?", options: [{ id: "a", text: "Çünkü sonuçları doğrular.", correct: true }, { id: "b", text: "Çünkü sonuçlar yanlış.", correct: false }, { id: "c", text: "Çünkü sonuçları gizler.", correct: false }, { id: "d", text: "Çünkü sonuçları unuturlar.", correct: false }] },
+    { id: 1475, type: "FILL_BLANK", question: "Doldur:", sentence: "L'expérience ___ réalisée au laboratoire.", options: [{ id: "a", text: "est", correct: true }, { id: "b", text: "a", correct: false }] },
+    { id: 1476, type: "FILL_BLANK", question: "Doldur:", sentence: "Les données ___ analysées par l'équipe.", options: [{ id: "a", text: "sont", correct: true }, { id: "b", text: "ont", correct: false }] },
+    { id: 1477, type: "TRANSLATE", question: "Çevir:", hint: "Formül birkaç kez test edilir.", correctAnswer: "La formule est testée plusieurs fois." },
+    { id: 1478, type: "TRANSLATE", question: "Çevir:", hint: "Evreni anlamak için yıldızları gözlemleriz.", correctAnswer: "On observe les étoiles pour comprendre l'univers." },
+    { id: 1479, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La méthode scientifique est rigoureuse.", options: [{ id: "a", text: "Bilimsel yöntem titizdir.", correct: true }, { id: "b", text: "Bilimsel yöntem basittir.", correct: false }, { id: "c", text: "Bilimsel yöntem yoktur.", correct: false }, { id: "d", text: "Bilimsel yöntem pahalıdır.", correct: false }] },
+    { id: 1480, type: "SELECT", question: "Hangi yapı amaç bildirir?", options: [{ id: "a", text: "pour / afin de", correct: true }, { id: "b", text: "parce que", correct: false }, { id: "c", text: "donc", correct: false }, { id: "d", text: "à cause de", correct: false }] }
+];
+
+const unit378Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1481, type: "SELECT", question: "Où Nora fait-elle son stage ?", options: [{ id: "a", text: "Dans un laboratoire de biologie", correct: true }, { id: "b", text: "Dans un hôpital", correct: false }, { id: "c", text: "Dans une école", correct: false }, { id: "d", text: "Dans une usine", correct: false }] },
+    { id: 1482, type: "SELECT", question: "Sur quoi travaille l'équipe ?", options: [{ id: "a", text: "Un nouveau médicament", correct: true }, { id: "b", text: "Un nouveau téléphone", correct: false }, { id: "c", text: "Un roman", correct: false }, { id: "d", text: "Une exposition", correct: false }] },
+    { id: 1483, type: "SELECT", question: "Que font-ils chaque jour ?", options: [{ id: "a", text: "Ils testent des hypothèses", correct: true }, { id: "b", text: "Ils partent en voyage", correct: false }, { id: "c", text: "Ils font du sport", correct: false }, { id: "d", text: "Ils écrivent des poèmes", correct: false }] },
+    { id: 1484, type: "SELECT", question: "Que remarque Nora un matin ?", options: [{ id: "a", text: "Une réaction inattendue", correct: true }, { id: "b", text: "Une panne d'électricité", correct: false }, { id: "c", text: "Une visite surprise", correct: false }, { id: "d", text: "Une fête", correct: false }] },
+    { id: 1485, type: "SELECT", question: "Que découvre l'équipe après vérification ?", options: [{ id: "a", text: "Une formule prometteuse", correct: true }, { id: "b", text: "Une nouvelle théorie", correct: false }, { id: "c", text: "Un problème sans solution", correct: false }, { id: "d", text: "Un livre ancien", correct: false }] },
+    { id: 1486, type: "SELECT", question: "Où publient-ils leurs conclusions ?", options: [{ id: "a", text: "Dans une revue scientifique", correct: true }, { id: "b", text: "Dans un journal sportif", correct: false }, { id: "c", text: "Sur un blog personnel", correct: false }, { id: "d", text: "À la télévision", correct: false }] },
+    { id: 1487, type: "SELECT", question: "Que comprend Nora sur la recherche ?", options: [{ id: "a", text: "La rigueur et la patience sont essentielles", correct: true }, { id: "b", text: "La recherche est facile", correct: false }, { id: "c", text: "La recherche est inutile", correct: false }, { id: "d", text: "La recherche est rapide", correct: false }] },
+    { id: 1488, type: "SELECT", question: "Quel effet la découverte a-t-elle sur Nora ?", options: [{ id: "a", text: "Elle veut devenir chercheuse", correct: true }, { id: "b", text: "Elle veut quitter la science", correct: false }, { id: "c", text: "Elle veut voyager", correct: false }, { id: "d", text: "Elle veut changer d'école", correct: false }] },
+    { id: 1489, type: "SELECT", question: "Quel est le sujet principal du texte ?", options: [{ id: "a", text: "Une découverte scientifique", correct: true }, { id: "b", text: "Un festival", correct: false }, { id: "c", text: "Un match", correct: false }, { id: "d", text: "Une pièce de théâtre", correct: false }] },
+    { id: 1490, type: "SELECT", question: "Que fait l'équipe avec les résultats ?", options: [{ id: "a", text: "Ils les notent soigneusement", correct: true }, { id: "b", text: "Ils les oublient", correct: false }, { id: "c", text: "Ils les vendent", correct: false }, { id: "d", text: "Ils les détruisent", correct: false }] },
+    { id: 1491, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'expérience a donné des résultats positifs.", options: [{ id: "a", text: "Deney olumlu sonuçlar verdi.", correct: true }, { id: "b", text: "Deney başarısız oldu.", correct: false }, { id: "c", text: "Deney yapılmadı.", correct: false }, { id: "d", text: "Deney iptal edildi.", correct: false }] },
+    { id: 1492, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le laboratoire est bien équipé.", options: [{ id: "a", text: "Laboratuvar iyi donanımlıdır.", correct: true }, { id: "b", text: "Laboratuvar kapalıdır.", correct: false }, { id: "c", text: "Laboratuvar küçüktür.", correct: false }, { id: "d", text: "Laboratuvar uzaktadır.", correct: false }] },
+    { id: 1493, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le vaccin protège contre la maladie.", options: [{ id: "a", text: "Aşı hastalığa karşı korur.", correct: true }, { id: "b", text: "Aşı hastalığa neden olur.", correct: false }, { id: "c", text: "Aşı hastalığı artırır.", correct: false }, { id: "d", text: "Aşı hastalığı gizler.", correct: false }] },
+    { id: 1494, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le microscope révèle des détails invisibles.", options: [{ id: "a", text: "Mikroskop görünmez ayrıntıları gösterir.", correct: true }, { id: "b", text: "Mikroskop çalışmıyor.", correct: false }, { id: "c", text: "Mikroskop pahalıdır.", correct: false }, { id: "d", text: "Mikroskop satıldı.", correct: false }] },
+    { id: 1495, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le progrès scientifique est rapide.", options: [{ id: "a", text: "Bilimsel ilerleme hızlıdır.", correct: true }, { id: "b", text: "Bilimsel ilerleme yavaştır.", correct: false }, { id: "c", text: "Bilimsel ilerleme yoktur.", correct: false }, { id: "d", text: "Bilimsel ilerleme tehlikelidir.", correct: false }] },
+    { id: 1496, type: "TRANSLATE", question: "Çevir:", hint: "Araştırma", correctAnswer: "La recherche" },
+    { id: 1497, type: "TRANSLATE", question: "Çevir:", hint: "Kanıt", correctAnswer: "La preuve" },
+    { id: 1498, type: "TRANSLATE", question: "Çevir:", hint: "İcat", correctAnswer: "L'invention" },
+    { id: 1499, type: "TRANSLATE", question: "Çevir:", hint: "Mikroskop", correctAnswer: "Le microscope" },
+    { id: 1500, type: "TRANSLATE", question: "Çevir:", hint: "Yöntem", correctAnswer: "La méthode" }
+];
+
+const unit378Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1501, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est claire.", options: [{ id: "a", text: "preuve", correct: true }, { id: "b", text: "panne", correct: false }] },
+    { id: 1502, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ observe les étoiles.", options: [{ id: "a", text: "télescope", correct: true }, { id: "b", text: "microscope", correct: false }] },
+    { id: 1503, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ scientifique est rigoureuse.", options: [{ id: "a", text: "méthode", correct: true }, { id: "b", text: "fête", correct: false }] },
+    { id: 1504, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est précis.", options: [{ id: "a", text: "calcul", correct: true }, { id: "b", text: "calme", correct: false }] },
+    { id: 1505, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ___ la température.", options: [{ id: "a", text: "mesurent", correct: true }, { id: "b", text: "mangent", correct: false }] },
+    { id: 1506, type: "SELECT", question: "'L'innovation' ne demek?", options: [{ id: "a", text: "Yenilik", correct: true }, { id: "b", text: "Gözlem", correct: false }, { id: "c", text: "Kanıt", correct: false }, { id: "d", text: "Sonuç", correct: false }] },
+    { id: 1507, type: "SELECT", question: "'La publication' ne demek?", options: [{ id: "a", text: "Yayın", correct: true }, { id: "b", text: "Yaygınlık", correct: false }, { id: "c", text: "Yarış", correct: false }, { id: "d", text: "Yön", correct: false }] },
+    { id: 1508, type: "SELECT", question: "'Le médicament' ne demek?", options: [{ id: "a", text: "İlaç", correct: true }, { id: "b", text: "Aşı", correct: false }, { id: "c", text: "Hastalık", correct: false }, { id: "d", text: "Tedavi", correct: false }] },
+    { id: 1509, type: "SELECT", question: "'La maladie' ne demek?", options: [{ id: "a", text: "Hastalık", correct: true }, { id: "b", text: "Sağlık", correct: false }, { id: "c", text: "Ağrı", correct: false }, { id: "d", text: "Alerji", correct: false }] },
+    { id: 1510, type: "SELECT", question: "'Le remède' ne demek?", options: [{ id: "a", text: "Çare / İlaç", correct: true }, { id: "b", text: "Sorun", correct: false }, { id: "c", text: "Rapor", correct: false }, { id: "d", text: "Öneri", correct: false }] },
+    { id: 1511, type: "TRANSLATE", question: "Çevir:", hint: "Bu keşif bilimi değiştirdi.", correctAnswer: "Cette découverte a changé la science." },
+    { id: 1512, type: "TRANSLATE", question: "Çevir:", hint: "Araştırmacılar gece gündüz çalışıyor.", correctAnswer: "Les chercheurs travaillent jour et nuit." },
+    { id: 1513, type: "TRANSLATE", question: "Çevir:", hint: "Mikroskop ayrıntıları gösterir.", correctAnswer: "Le microscope révèle des détails." },
+    { id: 1514, type: "TRANSLATE", question: "Çevir:", hint: "Bu yenilik hayatı iyileştirir.", correctAnswer: "Cette innovation améliore la vie." },
+    { id: 1515, type: "TRANSLATE", question: "Çevir:", hint: "Kanıt olmadan ikna edemeyiz.", correctAnswer: "Sans preuve, on ne peut pas convaincre." },
+    { id: 1516, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La théorie", options: [{ id: "a", text: "Teori", correct: true }, { id: "b", text: "Tarih", correct: false }, { id: "c", text: "Teknoloji", correct: false }, { id: "d", text: "Tavsiye", correct: false }] },
+    { id: 1517, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'analyse", options: [{ id: "a", text: "Analiz", correct: true }, { id: "b", text: "Anlam", correct: false }, { id: "c", text: "Anıt", correct: false }, { id: "d", text: "Anlaşma", correct: false }] },
+    { id: 1518, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le calcul", options: [{ id: "a", text: "Hesaplama", correct: true }, { id: "b", text: "Hesap", correct: false }, { id: "c", text: "Hafıza", correct: false }, { id: "d", text: "Harita", correct: false }] },
+    { id: 1519, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le progrès", options: [{ id: "a", text: "İlerleme", correct: true }, { id: "b", text: "İnceleme", correct: false }, { id: "c", text: "İndirim", correct: false }, { id: "d", text: "İnşa", correct: false }] },
+    { id: 1520, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Mesurer", options: [{ id: "a", text: "Ölçmek", correct: true }, { id: "b", text: "Denemek", correct: false }, { id: "c", text: "İcat etmek", correct: false }, { id: "d", text: "Düşünmek", correct: false }] }
+];
+
+// ===== UNIT 379 HARDCODED QUIZZES =====
+const unit379Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1521, type: "SELECT", question: "'L'espace' ne demek?", options: [{ id: "a", text: "Uzay", correct: true }, { id: "b", text: "Hava", correct: false }, { id: "c", text: "Evren", correct: false }, { id: "d", text: "Gezegen", correct: false }] },
+    { id: 1522, type: "SELECT", question: "'L'univers' ne demek?", options: [{ id: "a", text: "Evren", correct: true }, { id: "b", text: "Uzay mekiği", correct: false }, { id: "c", text: "Yörünge", correct: false }, { id: "d", text: "Uydu", correct: false }] },
+    { id: 1523, type: "SELECT", question: "'La galaxie' ne demek?", options: [{ id: "a", text: "Galaksi", correct: true }, { id: "b", text: "Yıldız", correct: false }, { id: "c", text: "Gözlemevi", correct: false }, { id: "d", text: "Roket", correct: false }] },
+    { id: 1524, type: "SELECT", question: "'La planète' ne demek?", options: [{ id: "a", text: "Gezegen", correct: true }, { id: "b", text: "Güneş", correct: false }, { id: "c", text: "Ay", correct: false }, { id: "d", text: "Yörünge", correct: false }] },
+    { id: 1525, type: "SELECT", question: "'L'étoile' ne demek?", options: [{ id: "a", text: "Yıldız", correct: true }, { id: "b", text: "Görev", correct: false }, { id: "c", text: "Misyon", correct: false }, { id: "d", text: "Astronot", correct: false }] },
+    { id: 1526, type: "SELECT", question: "'Le satellite' ne demek?", options: [{ id: "a", text: "Uydu", correct: true }, { id: "b", text: "Roket", correct: false }, { id: "c", text: "Mekik", correct: false }, { id: "d", text: "Teleskop", correct: false }] },
+    { id: 1527, type: "SELECT", question: "'L'astronaute' ne demek?", options: [{ id: "a", text: "Astronot", correct: true }, { id: "b", text: "Mühendis", correct: false }, { id: "c", text: "Mürettebat", correct: false }, { id: "d", text: "Pilot", correct: false }] },
+    { id: 1528, type: "SELECT", question: "'La fusée' ne demek?", options: [{ id: "a", text: "Roket", correct: true }, { id: "b", text: "Uzay istasyonu", correct: false }, { id: "c", text: "Uçak", correct: false }, { id: "d", text: "Uydu", correct: false }] },
+    { id: 1529, type: "SELECT", question: "'L'orbite' ne demek?", options: [{ id: "a", text: "Yörünge", correct: true }, { id: "b", text: "Atmosfer", correct: false }, { id: "c", text: "Hız", correct: false }, { id: "d", text: "Yol", correct: false }] },
+    { id: 1530, type: "SELECT", question: "'La gravité' ne demek?", options: [{ id: "a", text: "Yerçekimi", correct: true }, { id: "b", text: "Ağırlık", correct: false }, { id: "c", text: "Işık", correct: false }, { id: "d", text: "Karanlık", correct: false }] },
+    { id: 1531, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La lune", options: [{ id: "a", text: "Ay", correct: true }, { id: "b", text: "Güneş", correct: false }, { id: "c", text: "Yıldız", correct: false }, { id: "d", text: "Uydu", correct: false }] },
+    { id: 1532, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La station spatiale", options: [{ id: "a", text: "Uzay istasyonu", correct: true }, { id: "b", text: "Uzay mekiği", correct: false }, { id: "c", text: "Uzay giysisi", correct: false }, { id: "d", text: "Uzay roketi", correct: false }] },
+    { id: 1533, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'équipage", options: [{ id: "a", text: "Mürettebat", correct: true }, { id: "b", text: "Kontrol", correct: false }, { id: "c", text: "Motor", correct: false }, { id: "d", text: "Kayıt", correct: false }] },
+    { id: 1534, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le télescope", options: [{ id: "a", text: "Teleskop", correct: true }, { id: "b", text: "Mikroskop", correct: false }, { id: "c", text: "Roket", correct: false }, { id: "d", text: "Uydu", correct: false }] },
+    { id: 1535, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'observatoire", options: [{ id: "a", text: "Gözlemevi", correct: true }, { id: "b", text: "Misyon", correct: false }, { id: "c", text: "Yörünge", correct: false }, { id: "d", text: "Atmosfer", correct: false }] },
+    { id: 1536, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ décolle ce soir.", options: [{ id: "a", text: "fusée", correct: true }, { id: "b", text: "lune", correct: false }] },
+    { id: 1537, type: "FILL_BLANK", question: "Doldur:", sentence: "Le satellite est en ___.", options: [{ id: "a", text: "orbite", correct: true }, { id: "b", text: "atmosphère", correct: false }] },
+    { id: 1538, type: "FILL_BLANK", question: "Doldur:", sentence: "Les astronautes vivent en ___.", options: [{ id: "a", text: "apesanteur", correct: true }, { id: "b", text: "gravité", correct: false }] },
+    { id: 1539, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ protège la Terre.", options: [{ id: "a", text: "atmosphère", correct: true }, { id: "b", text: "orbite", correct: false }] },
+    { id: 1540, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ a été réussi.", options: [{ id: "a", text: "atterrissage", correct: true }, { id: "b", text: "lancement", correct: false }] }
+];
+
+const unit379Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1541, type: "SELECT", question: "'autour de' ne demek?", options: [{ id: "a", text: "etrafında", correct: true }, { id: "b", text: "uzağında", correct: false }, { id: "c", text: "altında", correct: false }, { id: "d", text: "içinde", correct: false }] },
+    { id: 1542, type: "SELECT", question: "'près de' ne demek?", options: [{ id: "a", text: "yakınında", correct: true }, { id: "b", text: "üstünde", correct: false }, { id: "c", text: "arasında", correct: false }, { id: "d", text: "içinde", correct: false }] },
+    { id: 1543, type: "FILL_BLANK", question: "Doldur:", sentence: "La station spatiale tourne ___ la Terre.", options: [{ id: "a", text: "autour de", correct: true }, { id: "b", text: "près de", correct: false }] },
+    { id: 1544, type: "FILL_BLANK", question: "Doldur:", sentence: "La fusée part ___ Mars.", options: [{ id: "a", text: "vers", correct: true }, { id: "b", text: "entre", correct: false }] },
+    { id: 1545, type: "SELECT", question: "'entre ... et ...' ne demek?", options: [{ id: "a", text: "... ile ... arasında", correct: true }, { id: "b", text: "... üstünde", correct: false }, { id: "c", text: "... dışında", correct: false }, { id: "d", text: "... içinde", correct: false }] },
+    { id: 1546, type: "SELECT", question: "'au-dessus de' ne demek?", options: [{ id: "a", text: "üstünde", correct: true }, { id: "b", text: "altında", correct: false }, { id: "c", text: "yakınında", correct: false }, { id: "d", text: "uzak", correct: false }] },
+    { id: 1547, type: "FILL_BLANK", question: "Doldur:", sentence: "Le satellite est ___ l'atmosphère.", options: [{ id: "a", text: "au-dessus de", correct: true }, { id: "b", text: "en dessous de", correct: false }] },
+    { id: 1548, type: "FILL_BLANK", question: "Doldur:", sentence: "La mission ___ six mois.", options: [{ id: "a", text: "durera", correct: true }, { id: "b", text: "dure", correct: false }] },
+    { id: 1549, type: "FILL_BLANK", question: "Doldur:", sentence: "Les astronautes ___ la planète.", options: [{ id: "a", text: "observeront", correct: true }, { id: "b", text: "observaient", correct: false }] },
+    { id: 1550, type: "SELECT", question: "Hangisi Futur Simple'dır?", options: [{ id: "a", text: "partira", correct: true }, { id: "b", text: "partait", correct: false }, { id: "c", text: "parti", correct: false }, { id: "d", text: "partir", correct: false }] },
+    { id: 1551, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Tu voudrais devenir astronaute ?", options: [{ id: "a", text: "Astronot olmak ister misin?", correct: true }, { id: "b", text: "Astronot musun?", correct: false }, { id: "c", text: "Astronot olamazsın.", correct: false }, { id: "d", text: "Astronot nerede?", correct: false }] },
+    { id: 1552, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Elle est en orbite autour de la Terre.", options: [{ id: "a", text: "Dünya'nın etrafında yörüngededir.", correct: true }, { id: "b", text: "Dünya'nın içinde.", correct: false }, { id: "c", text: "Dünya'nın dışında değil.", correct: false }, { id: "d", text: "Dünya'nın altında.", correct: false }] },
+    { id: 1553, type: "SELECT", question: "Konuşma: 'Pourquoi le télescope est important ?' ne demek?", options: [{ id: "a", text: "Teleskop neden önemli?", correct: true }, { id: "b", text: "Teleskop nerede?", correct: false }, { id: "c", text: "Teleskop bozuk mu?", correct: false }, { id: "d", text: "Teleskop kimde?", correct: false }] },
+    { id: 1554, type: "SELECT", question: "Konuşma: 'Parce qu'il permet d'observer l'univers.' ne demek?", options: [{ id: "a", text: "Çünkü evreni gözlemlemeyi sağlar.", correct: true }, { id: "b", text: "Çünkü evren tehlikelidir.", correct: false }, { id: "c", text: "Çünkü gözlem istemiyoruz.", correct: false }, { id: "d", text: "Çünkü teleskop kırık.", correct: false }] },
+    { id: 1555, type: "TRANSLATE", question: "Çevir:", hint: "Görev altı ay sürecek.", correctAnswer: "La mission durera six mois." },
+    { id: 1556, type: "TRANSLATE", question: "Çevir:", hint: "Astronotlar gezegeni gözlemleyecek.", correctAnswer: "Les astronautes observeront la planète." },
+    { id: 1557, type: "SELECT", question: "'loin de' ne demek?", options: [{ id: "a", text: "uzağında", correct: true }, { id: "b", text: "yakınında", correct: false }, { id: "c", text: "etrafında", correct: false }, { id: "d", text: "içinde", correct: false }] },
+    { id: 1558, type: "FILL_BLANK", question: "Doldur:", sentence: "La lune est ___ la Terre.", options: [{ id: "a", text: "près de", correct: true }, { id: "b", text: "loin de", correct: false }] },
+    { id: 1559, type: "TRANSLATE", question: "Çevir:", hint: "Roket Mars'a doğru gider.", correctAnswer: "La fusée part vers Mars." },
+    { id: 1560, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La gravité est plus faible sur la Lune.", options: [{ id: "a", text: "Yerçekimi Ay'da daha zayıftır.", correct: true }, { id: "b", text: "Yerçekimi Ay'da daha güçlüdür.", correct: false }, { id: "c", text: "Yerçekimi Ay'da yoktur.", correct: false }, { id: "d", text: "Yerçekimi Dünya'da yoktur.", correct: false }] }
+];
+
+const unit379Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1561, type: "SELECT", question: "Où la classe de Kerem visite-t-elle ?", options: [{ id: "a", text: "Un centre spatial", correct: true }, { id: "b", text: "Un musée", correct: false }, { id: "c", text: "Un stade", correct: false }, { id: "d", text: "Une bibliothèque", correct: false }] },
+    { id: 1562, type: "SELECT", question: "Que regardent-ils ?", options: [{ id: "a", text: "Le lancement d'une fusée", correct: true }, { id: "b", text: "Un film", correct: false }, { id: "c", text: "Un match", correct: false }, { id: "d", text: "Un concert", correct: false }] },
+    { id: 1563, type: "SELECT", question: "Que transporte la fusée ?", options: [{ id: "a", text: "Un satellite", correct: true }, { id: "b", text: "Un télescope", correct: false }, { id: "c", text: "Un avion", correct: false }, { id: "d", text: "Une navette", correct: false }] },
+    { id: 1564, type: "SELECT", question: "Quel est l'objectif de la mission ?", options: [{ id: "a", text: "Observer la Terre et mesurer le climat", correct: true }, { id: "b", text: "Aller sur la Lune", correct: false }, { id: "c", text: "Prendre des touristes", correct: false }, { id: "d", text: "Construire une station", correct: false }] },
+    { id: 1565, type: "SELECT", question: "Qui explique la mission ?", options: [{ id: "a", text: "Le guide", correct: true }, { id: "b", text: "Un sportif", correct: false }, { id: "c", text: "Un musicien", correct: false }, { id: "d", text: "Un acteur", correct: false }] },
+    { id: 1566, type: "SELECT", question: "Où vont-ils après le décollage ?", options: [{ id: "a", text: "Dans la salle de contrôle", correct: true }, { id: "b", text: "Au restaurant", correct: false }, { id: "c", text: "À la gare", correct: false }, { id: "d", text: "À la plage", correct: false }] },
+    { id: 1567, type: "SELECT", question: "Que se passe-t-il quelques minutes plus tard ?", options: [{ id: "a", text: "Le satellite atteint son orbite", correct: true }, { id: "b", text: "La fusée tombe", correct: false }, { id: "c", text: "La mission s'arrête", correct: false }, { id: "d", text: "La classe part", correct: false }] },
+    { id: 1568, type: "SELECT", question: "Comment se sentent les élèves ?", options: [{ id: "a", text: "Impressionnés", correct: true }, { id: "b", text: "Fatigués", correct: false }, { id: "c", text: "En colère", correct: false }, { id: "d", text: "Tristes", correct: false }] },
+    { id: 1569, type: "SELECT", question: "Que font les élèves ?", options: [{ id: "a", text: "Ils posent beaucoup de questions", correct: true }, { id: "b", text: "Ils dorment", correct: false }, { id: "c", text: "Ils chantent", correct: false }, { id: "d", text: "Ils quittent la salle", correct: false }] },
+    { id: 1570, type: "SELECT", question: "Que comprennent-ils sur l'exploration spatiale ?", options: [{ id: "a", text: "Elle demande précision et travail d'équipe", correct: true }, { id: "b", text: "Elle est facile", correct: false }, { id: "c", text: "Elle est inutile", correct: false }, { id: "d", text: "Elle est dangereuse", correct: false }] },
+    { id: 1571, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La fusée a décollé avec succès.", options: [{ id: "a", text: "Roket başarıyla kalkış yaptı.", correct: true }, { id: "b", text: "Roket kalkış yapmadı.", correct: false }, { id: "c", text: "Roket geri döndü.", correct: false }, { id: "d", text: "Roket kayboldu.", correct: false }] },
+    { id: 1572, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les astronautes vivent en apesanteur.", options: [{ id: "a", text: "Astronotlar ağırlıksızlıkta yaşar.", correct: true }, { id: "b", text: "Astronotlar ağırdır.", correct: false }, { id: "c", text: "Astronotlar yeryüzündedir.", correct: false }, { id: "d", text: "Astronotlar korkar.", correct: false }] },
+    { id: 1573, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le lancement a été reporté à cause du vent.", options: [{ id: "a", text: "Fırlatma rüzgar nedeniyle ertelendi.", correct: true }, { id: "b", text: "Fırlatma zamanında oldu.", correct: false }, { id: "c", text: "Fırlatma iptal edilmedi.", correct: false }, { id: "d", text: "Fırlatma gece yapıldı.", correct: false }] },
+    { id: 1574, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'atterrissage s'est bien passé.", options: [{ id: "a", text: "İniş iyi geçti.", correct: true }, { id: "b", text: "İniş kötü geçti.", correct: false }, { id: "c", text: "İniş olmadı.", correct: false }, { id: "d", text: "İniş ertelendi.", correct: false }] },
+    { id: 1575, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'astronomie aide à comprendre l'univers.", options: [{ id: "a", text: "Astronomi evreni anlamaya yardımcı olur.", correct: true }, { id: "b", text: "Astronomi evreni unutmaya yardım eder.", correct: false }, { id: "c", text: "Astronomi sadece oyun.", correct: false }, { id: "d", text: "Astronomi gereksizdir.", correct: false }] },
+    { id: 1576, type: "TRANSLATE", question: "Çevir:", hint: "Uydu", correctAnswer: "Le satellite" },
+    { id: 1577, type: "TRANSLATE", question: "Çevir:", hint: "Yörünge", correctAnswer: "L'orbite" },
+    { id: 1578, type: "TRANSLATE", question: "Çevir:", hint: "Uzay istasyonu", correctAnswer: "La station spatiale" },
+    { id: 1579, type: "TRANSLATE", question: "Çevir:", hint: "Astronot", correctAnswer: "L'astronaute" },
+    { id: 1580, type: "TRANSLATE", question: "Çevir:", hint: "Takımyıldız", correctAnswer: "La constellation" }
+];
+
+const unit379Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1581, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ observe les planètes.", options: [{ id: "a", text: "télescope", correct: true }, { id: "b", text: "satellite", correct: false }] },
+    { id: 1582, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est prêt.", options: [{ id: "a", text: "équipage", correct: true }, { id: "b", text: "orbite", correct: false }] },
+    { id: 1583, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est plus faible sur la Lune.", options: [{ id: "a", text: "gravité", correct: true }, { id: "b", text: "mission", correct: false }] },
+    { id: 1584, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est prévu à 9h.", options: [{ id: "a", text: "décollage", correct: true }, { id: "b", text: "atterrissage", correct: false }] },
+    { id: 1585, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ transporte l'équipage.", options: [{ id: "a", text: "navette", correct: true }, { id: "b", text: "planète", correct: false }] },
+    { id: 1586, type: "SELECT", question: "'La constellation' ne demek?", options: [{ id: "a", text: "Takımyıldız", correct: true }, { id: "b", text: "Yörünge", correct: false }, { id: "c", text: "Atmosfer", correct: false }, { id: "d", text: "Uçuş", correct: false }] },
+    { id: 1587, type: "SELECT", question: "'L'astronomie' ne demek?", options: [{ id: "a", text: "Astronomi", correct: true }, { id: "b", text: "Astroloji", correct: false }, { id: "c", text: "Geometri", correct: false }, { id: "d", text: "Kimya", correct: false }] },
+    { id: 1588, type: "SELECT", question: "'L'apesanteur' ne demek?", options: [{ id: "a", text: "Ağırlıksızlık", correct: true }, { id: "b", text: "Yerçekimi", correct: false }, { id: "c", text: "Hız", correct: false }, { id: "d", text: "Basınç", correct: false }] },
+    { id: 1589, type: "SELECT", question: "'Le cosmonaute' ne demek?", options: [{ id: "a", text: "Kozmonot", correct: true }, { id: "b", text: "Astronot", correct: false }, { id: "c", text: "Pilot", correct: false }, { id: "d", text: "Mühendis", correct: false }] },
+    { id: 1590, type: "SELECT", question: "'La combinaison' ne demek?", options: [{ id: "a", text: "Uzay kıyafeti", correct: true }, { id: "b", text: "Mekik", correct: false }, { id: "c", text: "Roket", correct: false }, { id: "d", text: "Görev", correct: false }] },
+    { id: 1591, type: "TRANSLATE", question: "Çevir:", hint: "Teleskop gezegenleri gözlemler.", correctAnswer: "Le télescope observe les planètes." },
+    { id: 1592, type: "TRANSLATE", question: "Çevir:", hint: "Uydu görüntüler gönderir.", correctAnswer: "Le satellite envoie des images." },
+    { id: 1593, type: "TRANSLATE", question: "Çevir:", hint: "Uzay istasyonu yörüngededir.", correctAnswer: "La station spatiale est en orbite." },
+    { id: 1594, type: "TRANSLATE", question: "Çevir:", hint: "Kalkış 9'da planlandı.", correctAnswer: "Le décollage est prévu à 9h." },
+    { id: 1595, type: "TRANSLATE", question: "Çevir:", hint: "İniş başarılı oldu.", correctAnswer: "L'atterrissage a été réussi." },
+    { id: 1596, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La galaxie", options: [{ id: "a", text: "Galaksi", correct: true }, { id: "b", text: "Gezegen", correct: false }, { id: "c", text: "Yıldız", correct: false }, { id: "d", text: "Uzay", correct: false }] },
+    { id: 1597, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La planète", options: [{ id: "a", text: "Gezegen", correct: true }, { id: "b", text: "Galaksi", correct: false }, { id: "c", text: "Atmosfer", correct: false }, { id: "d", text: "Yörünge", correct: false }] },
+    { id: 1598, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le soleil", options: [{ id: "a", text: "Güneş", correct: true }, { id: "b", text: "Ay", correct: false }, { id: "c", text: "Yıldız", correct: false }, { id: "d", text: "Uydu", correct: false }] },
+    { id: 1599, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La lune", options: [{ id: "a", text: "Ay", correct: true }, { id: "b", text: "Güneş", correct: false }, { id: "c", text: "Yıldız", correct: false }, { id: "d", text: "Gezegen", correct: false }] },
+    { id: 1600, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'espace", options: [{ id: "a", text: "Uzay", correct: true }, { id: "b", text: "Evren", correct: false }, { id: "c", text: "Yörünge", correct: false }, { id: "d", text: "Uçuş", correct: false }] }
+];
+
+// ===== UNIT 380 HARDCODED QUIZZES =====
+const unit380Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1601, type: "SELECT", question: "'La mode' ne demek?", options: [{ id: "a", text: "Moda", correct: true }, { id: "b", text: "Model", correct: false }, { id: "c", text: "Sezon", correct: false }, { id: "d", text: "Mağaza", correct: false }] },
+    { id: 1602, type: "SELECT", question: "'La tendance' ne demek?", options: [{ id: "a", text: "Trend", correct: true }, { id: "b", text: "Renk", correct: false }, { id: "c", text: "Kumaş", correct: false }, { id: "d", text: "Desen", correct: false }] },
+    { id: 1603, type: "SELECT", question: "'Le défilé' ne demek?", options: [{ id: "a", text: "Defile", correct: true }, { id: "b", text: "Fuar", correct: false }, { id: "c", text: "Düğün", correct: false }, { id: "d", text: "Spor", correct: false }] },
+    { id: 1604, type: "SELECT", question: "'Le styliste' ne demek?", options: [{ id: "a", text: "Stilist", correct: true }, { id: "b", text: "Yazar", correct: false }, { id: "c", text: "Ressam", correct: false }, { id: "d", text: "Mühendis", correct: false }] },
+    { id: 1605, type: "SELECT", question: "'La collection' ne demek?", options: [{ id: "a", text: "Koleksiyon", correct: true }, { id: "b", text: "İndirim", correct: false }, { id: "c", text: "Vitrin", correct: false }, { id: "d", text: "Beden", correct: false }] },
+    { id: 1606, type: "SELECT", question: "'Le tissu' ne demek?", options: [{ id: "a", text: "Kumaş", correct: true }, { id: "b", text: "Takı", correct: false }, { id: "c", text: "Kemer", correct: false }, { id: "d", text: "Düğme", correct: false }] },
+    { id: 1607, type: "SELECT", question: "'Le coton' ne demek?", options: [{ id: "a", text: "Pamuk", correct: true }, { id: "b", text: "Yün", correct: false }, { id: "c", text: "İpek", correct: false }, { id: "d", text: "Deri", correct: false }] },
+    { id: 1608, type: "SELECT", question: "'La tenue' ne demek?", options: [{ id: "a", text: "Kıyafet / Kombin", correct: true }, { id: "b", text: "Boyunluk", correct: false }, { id: "c", text: "Şapka", correct: false }, { id: "d", text: "Çanta", correct: false }] },
+    { id: 1609, type: "SELECT", question: "'Le motif' ne demek?", options: [{ id: "a", text: "Desen", correct: true }, { id: "b", text: "Renk", correct: false }, { id: "c", text: "Fiyat", correct: false }, { id: "d", text: "Beden", correct: false }] },
+    { id: 1610, type: "SELECT", question: "'La taille' ne demek?", options: [{ id: "a", text: "Beden", correct: true }, { id: "b", text: "Fiyat", correct: false }, { id: "c", text: "Kumaş", correct: false }, { id: "d", text: "Stil", correct: false }] },
+    { id: 1611, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La vitrine", options: [{ id: "a", text: "Vitrin", correct: true }, { id: "b", text: "Vitrinlik", correct: false }, { id: "c", text: "Beden", correct: false }, { id: "d", text: "Dolap", correct: false }] },
+    { id: 1612, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les soldes", options: [{ id: "a", text: "İndirimler", correct: true }, { id: "b", text: "Koleksiyon", correct: false }, { id: "c", text: "Sezon", correct: false }, { id: "d", text: "Beden", correct: false }] },
+    { id: 1613, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'accessoire", options: [{ id: "a", text: "Aksesuar", correct: true }, { id: "b", text: "Kıyafet", correct: false }, { id: "c", text: "Ayakkabı", correct: false }, { id: "d", text: "Renk", correct: false }] },
+    { id: 1614, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La soie", options: [{ id: "a", text: "İpek", correct: true }, { id: "b", text: "Pamuk", correct: false }, { id: "c", text: "Yün", correct: false }, { id: "d", text: "Deri", correct: false }] },
+    { id: 1615, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le cuir", options: [{ id: "a", text: "Deri", correct: true }, { id: "b", text: "İpek", correct: false }, { id: "c", text: "Yün", correct: false }, { id: "d", text: "Pamuk", correct: false }] },
+    { id: 1616, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette ___ me va bien.", options: [{ id: "a", text: "taille", correct: true }, { id: "b", text: "couleur", correct: false }] },
+    { id: 1617, type: "FILL_BLANK", question: "Doldur:", sentence: "Je porte une ___ noire.", options: [{ id: "a", text: "robe", correct: true }, { id: "b", text: "collection", correct: false }] },
+    { id: 1618, type: "FILL_BLANK", question: "Doldur:", sentence: "Il y a une ___ de 30%.", options: [{ id: "a", text: "réduction", correct: true }, { id: "b", text: "saison", correct: false }] },
+    { id: 1619, type: "FILL_BLANK", question: "Doldur:", sentence: "Les accessoires complètent la ___.", options: [{ id: "a", text: "tenue", correct: true }, { id: "b", text: "vitrine", correct: false }] },
+    { id: 1620, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette ___ est très élégante.", options: [{ id: "a", text: "tenue", correct: true }, { id: "b", text: "taille", correct: false }] }
+];
+
+const unit380Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1621, type: "SELECT", question: "Renk sıfatları genellikle nereye gelir?", options: [{ id: "a", text: "İsimden sonra", correct: true }, { id: "b", text: "Fiilden önce", correct: false }, { id: "c", text: "Cümlenin başında", correct: false }, { id: "d", text: "İsimden önce", correct: false }] },
+    { id: 1622, type: "SELECT", question: "Hangi renk sıfatı değişmezdir?", options: [{ id: "a", text: "marron", correct: true }, { id: "b", text: "bleu", correct: false }, { id: "c", text: "noir", correct: false }, { id: "d", text: "rouge", correct: false }] },
+    { id: 1623, type: "SELECT", question: "Karşılaştırma için doğru kalıp hangisi?", options: [{ id: "a", text: "plus ... que", correct: true }, { id: "b", text: "plus ... de", correct: false }, { id: "c", text: "plus ... à", correct: false }, { id: "d", text: "plus ... en", correct: false }] },
+    { id: 1624, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette veste est plus ___ que l'autre.", options: [{ id: "a", text: "élégante", correct: true }, { id: "b", text: "élégant", correct: false }] },
+    { id: 1625, type: "SELECT", question: "Hangi fiil 'giyinmek' anlamındadır?", options: [{ id: "a", text: "s'habiller", correct: true }, { id: "b", text: "porter", correct: false }, { id: "c", text: "mettre", correct: false }, { id: "d", text: "assortir", correct: false }] },
+    { id: 1626, type: "SELECT", question: "'porter' fiili ne anlama gelir?", options: [{ id: "a", text: "giymek/takmak", correct: true }, { id: "b", text: "denemek", correct: false }, { id: "c", text: "satın almak", correct: false }, { id: "d", text: "tasarlamak", correct: false }] },
+    { id: 1627, type: "SELECT", question: "'mettre' fiili ne anlama gelir?", options: [{ id: "a", text: "giymek/takmak", correct: true }, { id: "b", text: "yürümek", correct: false }, { id: "c", text: "koşmak", correct: false }, { id: "d", text: "gülmek", correct: false }] },
+    { id: 1628, type: "TRANSLATE", question: "Çevir:", hint: "Bu ceket diğerinden daha şık.", correctAnswer: "Cette veste est plus élégante que l'autre." },
+    { id: 1629, type: "TRANSLATE", question: "Çevir:", hint: "En rahat kıyafet bu.", correctAnswer: "C'est le vêtement le plus confortable." },
+    { id: 1630, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Quel style préfères-tu ?", options: [{ id: "a", text: "Hangi tarzı tercih ediyorsun?", correct: true }, { id: "b", text: "Hangi mağaza açık?", correct: false }, { id: "c", text: "Hangi beden?", correct: false }, { id: "d", text: "Hangi renk?", correct: false }] },
+    { id: 1631, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cette tenue te va très bien.", options: [{ id: "a", text: "Bu kombin sana çok yakışıyor.", correct: true }, { id: "b", text: "Bu kombin sana olmuyor.", correct: false }, { id: "c", text: "Kombin çok pahalı.", correct: false }, { id: "d", text: "Kombin yok.", correct: false }] },
+    { id: 1632, type: "SELECT", question: "Konuşma: 'Le bleu te va mieux que le rouge.' ne demek?", options: [{ id: "a", text: "Mavi sana kırmızıdan daha çok yakışıyor.", correct: true }, { id: "b", text: "Mavi kırmızıdan daha pahalı.", correct: false }, { id: "c", text: "Mavi rengi sevmiyorum.", correct: false }, { id: "d", text: "Mavi yok.", correct: false }] },
+    { id: 1633, type: "SELECT", question: "Konuşma: 'La cabine d'essayage est là-bas.' ne demek?", options: [{ id: "a", text: "Deneme kabini orada.", correct: true }, { id: "b", text: "Vitrin orada.", correct: false }, { id: "c", text: "Kasa orada.", correct: false }, { id: "d", text: "Çıkış orada.", correct: false }] },
+    { id: 1634, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ une veste.", options: [{ id: "a", text: "mets", correct: true }, { id: "b", text: "met", correct: false }] },
+    { id: 1635, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle ___ une robe noire.", options: [{ id: "a", text: "porte", correct: true }, { id: "b", text: "portes", correct: false }] },
+    { id: 1636, type: "TRANSLATE", question: "Çevir:", hint: "Akşam için giyiniyor.", correctAnswer: "Elle s'habille pour la soirée." },
+    { id: 1637, type: "TRANSLATE", question: "Çevir:", hint: "Renkleri uyumlu yapmak gerekir.", correctAnswer: "Il faut assortir les couleurs." },
+    { id: 1638, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les accessoires complètent ton look.", options: [{ id: "a", text: "Aksesuarlar görünümünü tamamlar.", correct: true }, { id: "b", text: "Aksesuarlar görünümü bozar.", correct: false }, { id: "c", text: "Aksesuar yok.", correct: false }, { id: "d", text: "Look pahalıdır.", correct: false }] },
+    { id: 1639, type: "SELECT", question: "Hangi cümlede süperlatif vardır?", options: [{ id: "a", text: "C'est le vêtement le plus confortable.", correct: true }, { id: "b", text: "Cette veste est confortable.", correct: false }, { id: "c", text: "Cette veste est plus confortable.", correct: false }, { id: "d", text: "Cette veste est confortable que l'autre.", correct: false }] },
+    { id: 1640, type: "SELECT", question: "Hangi cümlede renk uyumu vardır?", options: [{ id: "a", text: "une robe bleue", correct: true }, { id: "b", text: "une robe bleu", correct: false }, { id: "c", text: "une robe bleus", correct: false }, { id: "d", text: "une robe bleu e", correct: false }] }
+];
+
+const unit380Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1641, type: "SELECT", question: "Pourquoi Merve va-t-elle au centre-ville ?", options: [{ id: "a", text: "Pour acheter des vêtements", correct: true }, { id: "b", text: "Pour aller au cinéma", correct: false }, { id: "c", text: "Pour visiter un musée", correct: false }, { id: "d", text: "Pour rencontrer une amie", correct: false }] },
+    { id: 1642, type: "SELECT", question: "Que cherche Merve ?", options: [{ id: "a", text: "Une tenue élégante", correct: true }, { id: "b", text: "Un livre", correct: false }, { id: "c", text: "Un téléphone", correct: false }, { id: "d", text: "Un billet", correct: false }] },
+    { id: 1643, type: "SELECT", question: "Où entrent-elles ?", options: [{ id: "a", text: "Dans une boutique", correct: true }, { id: "b", text: "Dans une école", correct: false }, { id: "c", text: "Dans un café", correct: false }, { id: "d", text: "Dans une gare", correct: false }] },
+    { id: 1644, type: "SELECT", question: "Que propose la boutique ?", options: [{ id: "a", text: "Des réductions", correct: true }, { id: "b", text: "Des cours", correct: false }, { id: "c", text: "Des repas", correct: false }, { id: "d", text: "Des billets", correct: false }] },
+    { id: 1645, type: "SELECT", question: "Que fait Merve ?", options: [{ id: "a", text: "Elle essaie des robes", correct: true }, { id: "b", text: "Elle joue", correct: false }, { id: "c", text: "Elle cuisine", correct: false }, { id: "d", text: "Elle voyage", correct: false }] },
+    { id: 1646, type: "SELECT", question: "Sur quoi hésite-t-elle ?", options: [{ id: "a", text: "La couleur", correct: true }, { id: "b", text: "Le prix du bus", correct: false }, { id: "c", text: "Le temps", correct: false }, { id: "d", text: "La taille de la ville", correct: false }] },
+    { id: 1647, type: "SELECT", question: "Quel conseil donne le vendeur ?", options: [{ id: "a", text: "Une robe bleue", correct: true }, { id: "b", text: "Une robe noire trop grande", correct: false }, { id: "c", text: "Un pantalon", correct: false }, { id: "d", text: "Des chaussures de sport", correct: false }] },
+    { id: 1648, type: "SELECT", question: "Que choisit la sœur de Merve ?", options: [{ id: "a", text: "Des accessoires", correct: true }, { id: "b", text: "Un livre", correct: false }, { id: "c", text: "Un ordinateur", correct: false }, { id: "d", text: "Un billet de train", correct: false }] },
+    { id: 1649, type: "SELECT", question: "Comment se sent Merve à la fin ?", options: [{ id: "a", text: "Satisfaite", correct: true }, { id: "b", text: "En colère", correct: false }, { id: "c", text: "Triste", correct: false }, { id: "d", text: "Fatiguée", correct: false }] },
+    { id: 1650, type: "SELECT", question: "Que comprend-elle ?", options: [{ id: "a", text: "Il faut assortir les couleurs et choisir la bonne taille", correct: true }, { id: "b", text: "Il faut toujours acheter en ligne", correct: false }, { id: "c", text: "Il faut éviter les boutiques", correct: false }, { id: "d", text: "Il faut changer de style chaque jour", correct: false }] },
+    { id: 1651, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Cette saison, les couleurs vives sont à la mode.", options: [{ id: "a", text: "Bu sezon canlı renkler moda.", correct: true }, { id: "b", text: "Bu sezon koyu renkler moda değil.", correct: false }, { id: "c", text: "Renkler pahalı.", correct: false }, { id: "d", text: "Renkler yok.", correct: false }] },
+    { id: 1652, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le défilé présente la nouvelle collection.", options: [{ id: "a", text: "Defile yeni koleksiyonu sunuyor.", correct: true }, { id: "b", text: "Defile iptal edildi.", correct: false }, { id: "c", text: "Defile çok kısa.", correct: false }, { id: "d", text: "Defile yok.", correct: false }] },
+    { id: 1653, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le motif à fleurs est tendance.", options: [{ id: "a", text: "Çiçekli desen trenddir.", correct: true }, { id: "b", text: "Çiçekli desen yasaktır.", correct: false }, { id: "c", text: "Çiçekli desen ucuzdur.", correct: false }, { id: "d", text: "Çiçekli desen yok.", correct: false }] },
+    { id: 1654, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La vitrine attire beaucoup de clients.", options: [{ id: "a", text: "Vitrin birçok müşteri çeker.", correct: true }, { id: "b", text: "Vitrin kimseyi çekmez.", correct: false }, { id: "c", text: "Vitrin kapalıdır.", correct: false }, { id: "d", text: "Vitrin pahalıdır.", correct: false }] },
+    { id: 1655, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les soldes commencent demain.", options: [{ id: "a", text: "İndirimler yarın başlıyor.", correct: true }, { id: "b", text: "İndirimler bitti.", correct: false }, { id: "c", text: "İndirimler çok pahalı.", correct: false }, { id: "d", text: "İndirimler yok.", correct: false }] },
+    { id: 1656, type: "TRANSLATE", question: "Çevir:", hint: "Aksesuar", correctAnswer: "L'accessoire" },
+    { id: 1657, type: "TRANSLATE", question: "Çevir:", hint: "Vitrin", correctAnswer: "La vitrine" },
+    { id: 1658, type: "TRANSLATE", question: "Çevir:", hint: "İndirim", correctAnswer: "La réduction" },
+    { id: 1659, type: "TRANSLATE", question: "Çevir:", hint: "Kumaş", correctAnswer: "Le tissu" },
+    { id: 1660, type: "TRANSLATE", question: "Çevir:", hint: "Beden", correctAnswer: "La taille" }
+];
+
+const unit380Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1661, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ une veste.", options: [{ id: "a", text: "mets", correct: true }, { id: "b", text: "met", correct: false }] },
+    { id: 1662, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle ___ une robe noire.", options: [{ id: "a", text: "porte", correct: true }, { id: "b", text: "portent", correct: false }] },
+    { id: 1663, type: "FILL_BLANK", question: "Doldur:", sentence: "Les chaussures ___ sont à la mode.", options: [{ id: "a", text: "noires", correct: true }, { id: "b", text: "noir", correct: false }] },
+    { id: 1664, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette robe est ___ élégante.", options: [{ id: "a", text: "très", correct: true }, { id: "b", text: "trois", correct: false }] },
+    { id: 1665, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ attire les clients.", options: [{ id: "a", text: "vitrine", correct: true }, { id: "b", text: "taille", correct: false }] },
+    { id: 1666, type: "SELECT", question: "'Les soldes' ne demek?", options: [{ id: "a", text: "İndirimler", correct: true }, { id: "b", text: "Sezon", correct: false }, { id: "c", text: "Koleksiyon", correct: false }, { id: "d", text: "Stil", correct: false }] },
+    { id: 1667, type: "SELECT", question: "'La boutique' ne demek?", options: [{ id: "a", text: "Butik / Mağaza", correct: true }, { id: "b", text: "Gözlemevi", correct: false }, { id: "c", text: "Atölye", correct: false }, { id: "d", text: "Sahne", correct: false }] },
+    { id: 1668, type: "SELECT", question: "'La saison' ne demek?", options: [{ id: "a", text: "Sezon", correct: true }, { id: "b", text: "Şehir", correct: false }, { id: "c", text: "Şiir", correct: false }, { id: "d", text: "Şehir merkezi", correct: false }] },
+    { id: 1669, type: "SELECT", question: "'Le look' ne demek?", options: [{ id: "a", text: "Görünüm / Stil", correct: true }, { id: "b", text: "Renk", correct: false }, { id: "c", text: "Beden", correct: false }, { id: "d", text: "Desen", correct: false }] },
+    { id: 1670, type: "SELECT", question: "'Assortir' ne demek?", options: [{ id: "a", text: "Uyumlu hale getirmek", correct: true }, { id: "b", text: "Dikmek", correct: false }, { id: "c", text: "Temizlemek", correct: false }, { id: "d", text: "Taşımak", correct: false }] },
+    { id: 1671, type: "TRANSLATE", question: "Çevir:", hint: "Bu sezon mavi moda.", correctAnswer: "Cette saison, le bleu est à la mode." },
+    { id: 1672, type: "TRANSLATE", question: "Çevir:", hint: "Defile yeni koleksiyonu sunuyor.", correctAnswer: "Le défilé présente la nouvelle collection." },
+    { id: 1673, type: "TRANSLATE", question: "Çevir:", hint: "Butik on'da açılır.", correctAnswer: "La boutique ouvre à dix heures." },
+    { id: 1674, type: "TRANSLATE", question: "Çevir:", hint: "Renkleri uyumlu yapmak gerekir.", correctAnswer: "Il faut assortir les couleurs." },
+    { id: 1675, type: "TRANSLATE", question: "Çevir:", hint: "Bu elbise bana çok yakışıyor.", correctAnswer: "Cette robe me va très bien." },
+    { id: 1676, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le tissu", options: [{ id: "a", text: "Kumaş", correct: true }, { id: "b", text: "Deri", correct: false }, { id: "c", text: "Pamuk", correct: false }, { id: "d", text: "Yün", correct: false }] },
+    { id: 1677, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le coton", options: [{ id: "a", text: "Pamuk", correct: true }, { id: "b", text: "Yün", correct: false }, { id: "c", text: "İpek", correct: false }, { id: "d", text: "Deri", correct: false }] },
+    { id: 1678, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La soie", options: [{ id: "a", text: "İpek", correct: true }, { id: "b", text: "Pamuk", correct: false }, { id: "c", text: "Yün", correct: false }, { id: "d", text: "Deri", correct: false }] },
+    { id: 1679, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La laine", options: [{ id: "a", text: "Yün", correct: true }, { id: "b", text: "Pamuk", correct: false }, { id: "c", text: "İpek", correct: false }, { id: "d", text: "Deri", correct: false }] },
+    { id: 1680, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le cuir", options: [{ id: "a", text: "Deri", correct: true }, { id: "b", text: "İpek", correct: false }, { id: "c", text: "Pamuk", correct: false }, { id: "d", text: "Yün", correct: false }] }
+];
+
+// ===== UNIT 381 HARDCODED QUIZZES =====
+const unit381Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1681, type: "SELECT", question: "'La consommation' ne demek?", options: [{ id: "a", text: "Tüketim", correct: true }, { id: "b", text: "Üretim", correct: false }, { id: "c", text: "Tasarruf", correct: false }, { id: "d", text: "Bütçe", correct: false }] },
+    { id: 1682, type: "SELECT", question: "'Le consommateur' ne demek?", options: [{ id: "a", text: "Tüketici", correct: true }, { id: "b", text: "Satıcı", correct: false }, { id: "c", text: "Kasiyer", correct: false }, { id: "d", text: "Kargo", correct: false }] },
+    { id: 1683, type: "SELECT", question: "'L'achat' ne demek?", options: [{ id: "a", text: "Satın alma", correct: true }, { id: "b", text: "İade", correct: false }, { id: "c", text: "Fatura", correct: false }, { id: "d", text: "Sepet", correct: false }] },
+    { id: 1684, type: "SELECT", question: "'Le budget' ne demek?", options: [{ id: "a", text: "Bütçe", correct: true }, { id: "b", text: "Fiyat", correct: false }, { id: "c", text: "Kalite", correct: false }, { id: "d", text: "İstek", correct: false }] },
+    { id: 1685, type: "SELECT", question: "'La dépense' ne demek?", options: [{ id: "a", text: "Harcama", correct: true }, { id: "b", text: "Kazanç", correct: false }, { id: "c", text: "İndirim", correct: false }, { id: "d", text: "Fiş", correct: false }] },
+    { id: 1686, type: "SELECT", question: "'Économiser' ne demek?", options: [{ id: "a", text: "Tasarruf etmek", correct: true }, { id: "b", text: "Harcamak", correct: false }, { id: "c", text: "Borç almak", correct: false }, { id: "d", text: "Satmak", correct: false }] },
+    { id: 1687, type: "SELECT", question: "'La promotion' ne demek?", options: [{ id: "a", text: "Kampanya", correct: true }, { id: "b", text: "Kredi", correct: false }, { id: "c", text: "İade", correct: false }, { id: "d", text: "Bütçe", correct: false }] },
+    { id: 1688, type: "SELECT", question: "'Le reçu' ne demek?", options: [{ id: "a", text: "Fiş", correct: true }, { id: "b", text: "Fatura", correct: false }, { id: "c", text: "Çek", correct: false }, { id: "d", text: "Sepet", correct: false }] },
+    { id: 1689, type: "SELECT", question: "'Le magasin' ne demek?", options: [{ id: "a", text: "Mağaza", correct: true }, { id: "b", text: "Market", correct: false }, { id: "c", text: "Banka", correct: false }, { id: "d", text: "Kafe", correct: false }] },
+    { id: 1690, type: "SELECT", question: "'Le panier' ne demek?", options: [{ id: "a", text: "Sepet", correct: true }, { id: "b", text: "Kasa", correct: false }, { id: "c", text: "Kart", correct: false }, { id: "d", text: "Kutu", correct: false }] },
+    { id: 1691, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La facture", options: [{ id: "a", text: "Fatura", correct: true }, { id: "b", text: "Fiş", correct: false }, { id: "c", text: "İndirim", correct: false }, { id: "d", text: "İade", correct: false }] },
+    { id: 1692, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La livraison", options: [{ id: "a", text: "Teslimat", correct: true }, { id: "b", text: "Kargo", correct: false }, { id: "c", text: "Ürün", correct: false }, { id: "d", text: "Ödeme", correct: false }] },
+    { id: 1693, type: "LISTENING", question: "Duyduğunu seç:", audioText: "En espèces", options: [{ id: "a", text: "Nakit", correct: true }, { id: "b", text: "Kartla", correct: false }, { id: "c", text: "Online", correct: false }, { id: "d", text: "Çekle", correct: false }] },
+    { id: 1694, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le colis", options: [{ id: "a", text: "Paket", correct: true }, { id: "b", text: "Fiş", correct: false }, { id: "c", text: "Sepet", correct: false }, { id: "d", text: "Ürün", correct: false }] },
+    { id: 1695, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le retour", options: [{ id: "a", text: "İade", correct: true }, { id: "b", text: "Kargo", correct: false }, { id: "c", text: "Ödeme", correct: false }, { id: "d", text: "Kasiyer", correct: false }] },
+    { id: 1696, type: "FILL_BLANK", question: "Doldur:", sentence: "Je ___ mon budget.", options: [{ id: "a", text: "respecte", correct: true }, { id: "b", text: "respect", correct: false }] },
+    { id: 1697, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est gratuite.", options: [{ id: "a", text: "livraison", correct: true }, { id: "b", text: "qualité", correct: false }] },
+    { id: 1698, type: "FILL_BLANK", question: "Doldur:", sentence: "Il propose un ___.", options: [{ id: "a", text: "rabais", correct: true }, { id: "b", text: "besoin", correct: false }] },
+    { id: 1699, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est possible sous 14 jours.", options: [{ id: "a", text: "retour", correct: true }, { id: "b", text: "colis", correct: false }] },
+    { id: 1700, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est importante.", options: [{ id: "a", text: "qualité", correct: true }, { id: "b", text: "envie", correct: false }] }
+];
+
+const unit381Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1701, type: "SELECT", question: "'beaucoup de' ne demek?", options: [{ id: "a", text: "çok", correct: true }, { id: "b", text: "az", correct: false }, { id: "c", text: "hiç", correct: false }, { id: "d", text: "yeterince", correct: false }] },
+    { id: 1702, type: "SELECT", question: "'un peu de' ne demek?", options: [{ id: "a", text: "biraz", correct: true }, { id: "b", text: "çok", correct: false }, { id: "c", text: "fazla", correct: false }, { id: "d", text: "yok", correct: false }] },
+    { id: 1703, type: "SELECT", question: "'trop de' ne demek?", options: [{ id: "a", text: "fazla", correct: true }, { id: "b", text: "az", correct: false }, { id: "c", text: "yeterince", correct: false }, { id: "d", text: "biraz", correct: false }] },
+    { id: 1704, type: "SELECT", question: "'pas assez de' ne demek?", options: [{ id: "a", text: "yeterince değil", correct: true }, { id: "b", text: "fazla", correct: false }, { id: "c", text: "çok", correct: false }, { id: "d", text: "biraz", correct: false }] },
+    { id: 1705, type: "SELECT", question: "Amaç bildiren ifade hangisi?", options: [{ id: "a", text: "pour / afin de", correct: true }, { id: "b", text: "parce que", correct: false }, { id: "c", text: "donc", correct: false }, { id: "d", text: "mais", correct: false }] },
+    { id: 1706, type: "SELECT", question: "Karşıtlık bildiren bağlaç hangisi?", options: [{ id: "a", text: "mais", correct: true }, { id: "b", text: "donc", correct: false }, { id: "c", text: "parce que", correct: false }, { id: "d", text: "afin de", correct: false }] },
+    { id: 1707, type: "TRANSLATE", question: "Çevir:", hint: "Fiyatları karşılaştırıyorum çünkü tasarruf etmek istiyorum.", correctAnswer: "Je compare les prix parce que je veux économiser." },
+    { id: 1708, type: "TRANSLATE", question: "Çevir:", hint: "Ürünü iade etmek için fişi saklar.", correctAnswer: "Elle garde le reçu afin de retourner le produit." },
+    { id: 1709, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Tu compares les prix avant d'acheter ?", options: [{ id: "a", text: "Satın almadan önce fiyatları karşılaştırıyor musun?", correct: true }, { id: "b", text: "Fiyatlar sabit mi?", correct: false }, { id: "c", text: "Satın almak istemiyorum.", correct: false }, { id: "d", text: "Fiyatlar düşük mü?", correct: false }] },
+    { id: 1710, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'achat en ligne est très pratique.", options: [{ id: "a", text: "Online satın alma çok pratiktir.", correct: true }, { id: "b", text: "Online satın alma zordur.", correct: false }, { id: "c", text: "Online satın alma yoktur.", correct: false }, { id: "d", text: "Online satın alma pahalıdır.", correct: false }] },
+    { id: 1711, type: "SELECT", question: "Konuşma: 'Quel est ton budget pour ce mois ?' ne demek?", options: [{ id: "a", text: "Bu ay için bütçen nedir?", correct: true }, { id: "b", text: "Bu ay nerede yaşıyorsun?", correct: false }, { id: "c", text: "Bu ay izin var mı?", correct: false }, { id: "d", text: "Bu ay ne yedin?", correct: false }] },
+    { id: 1712, type: "SELECT", question: "Konuşma: 'Je dois économiser un peu.' ne demek?", options: [{ id: "a", text: "Biraz tasarruf etmeliyim.", correct: true }, { id: "b", text: "Biraz harcamalıyım.", correct: false }, { id: "c", text: "Azalış yok.", correct: false }, { id: "d", text: "İndirim yok.", correct: false }] },
+    { id: 1713, type: "FILL_BLANK", question: "Doldur:", sentence: "Je dépense ___ d'argent.", options: [{ id: "a", text: "trop", correct: true }, { id: "b", text: "toute", correct: false }] },
+    { id: 1714, type: "FILL_BLANK", question: "Doldur:", sentence: "Il reste ___ budget.", options: [{ id: "a", text: "un peu de", correct: true }, { id: "b", text: "trop de", correct: false }] },
+    { id: 1715, type: "TRANSLATE", question: "Çevir:", hint: "Çok fazla para harcıyorum.", correctAnswer: "Je dépense trop d'argent." },
+    { id: 1716, type: "TRANSLATE", question: "Çevir:", hint: "Biraz bütçe kaldı.", correctAnswer: "Il reste un peu de budget." },
+    { id: 1717, type: "SELECT", question: "Hangi cümlede karşıtlık vardır?", options: [{ id: "a", text: "Le produit est cher, mais la qualité est bonne.", correct: true }, { id: "b", text: "Le produit est cher.", correct: false }, { id: "c", text: "Le produit est bon.", correct: false }, { id: "d", text: "Le produit est neuf.", correct: false }] },
+    { id: 1718, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je préfère payer en espèces.", options: [{ id: "a", text: "Nakit ödemeyi tercih ederim.", correct: true }, { id: "b", text: "Kartla ödemeyi tercih ederim.", correct: false }, { id: "c", text: "Ödemek istemiyorum.", correct: false }, { id: "d", text: "Ödeme yok.", correct: false }] },
+    { id: 1719, type: "SELECT", question: "'pourtant' ne demek?", options: [{ id: "a", text: "buna rağmen", correct: true }, { id: "b", text: "bu yüzden", correct: false }, { id: "c", text: "çünkü", correct: false }, { id: "d", text: "sonra", correct: false }] },
+    { id: 1720, type: "SELECT", question: "Hangi ifade miktar belirtir?", options: [{ id: "a", text: "assez de", correct: true }, { id: "b", text: "donc", correct: false }, { id: "c", text: "mais", correct: false }, { id: "d", text: "car", correct: false }] }
+];
+
+const unit381Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1721, type: "SELECT", question: "Que veut acheter Lina ?", options: [{ id: "a", text: "Un nouveau téléphone", correct: true }, { id: "b", text: "Un ordinateur", correct: false }, { id: "c", text: "Un livre", correct: false }, { id: "d", text: "Une voiture", correct: false }] },
+    { id: 1722, type: "SELECT", question: "Que fait-elle avant d'acheter ?", options: [{ id: "a", text: "Elle compare les prix", correct: true }, { id: "b", text: "Elle voyage", correct: false }, { id: "c", text: "Elle vend", correct: false }, { id: "d", text: "Elle cuisine", correct: false }] },
+    { id: 1723, type: "SELECT", question: "Que cherche-t-elle en ligne ?", options: [{ id: "a", text: "Des promotions", correct: true }, { id: "b", text: "Des films", correct: false }, { id: "c", text: "Des billets", correct: false }, { id: "d", text: "Des recettes", correct: false }] },
+    { id: 1724, type: "SELECT", question: "Que fait-elle chaque mois ?", options: [{ id: "a", text: "Elle met de côté de l'argent", correct: true }, { id: "b", text: "Elle dépense tout", correct: false }, { id: "c", text: "Elle change de ville", correct: false }, { id: "d", text: "Elle ne travaille pas", correct: false }] },
+    { id: 1725, type: "SELECT", question: "Que trouve-t-elle un jour ?", options: [{ id: "a", text: "Une réduction intéressante", correct: true }, { id: "b", text: "Un nouvel emploi", correct: false }, { id: "c", text: "Un colis perdu", correct: false }, { id: "d", text: "Une vieille facture", correct: false }] },
+    { id: 1726, type: "SELECT", question: "Que vérifie-t-elle avant d'acheter ?", options: [{ id: "a", text: "La qualité du produit", correct: true }, { id: "b", text: "La météo", correct: false }, { id: "c", text: "Le métro", correct: false }, { id: "d", text: "La route", correct: false }] },
+    { id: 1727, type: "SELECT", question: "Que lit-elle ?", options: [{ id: "a", text: "Les avis des clients", correct: true }, { id: "b", text: "Un roman", correct: false }, { id: "c", text: "Un journal sportif", correct: false }, { id: "d", text: "Une affiche", correct: false }] },
+    { id: 1728, type: "SELECT", question: "Pourquoi garde-t-elle le reçu ?", options: [{ id: "a", text: "Pour un éventuel retour", correct: true }, { id: "b", text: "Pour le vendre", correct: false }, { id: "c", text: "Pour le jeter", correct: false }, { id: "d", text: "Pour le donner", correct: false }] },
+    { id: 1729, type: "SELECT", question: "Quel est le résultat ?", options: [{ id: "a", text: "Elle respecte son budget", correct: true }, { id: "b", text: "Elle dépasse son budget", correct: false }, { id: "c", text: "Elle oublie le reçu", correct: false }, { id: "d", text: "Elle annule l'achat", correct: false }] },
+    { id: 1730, type: "SELECT", question: "Quel est le sujet principal du texte ?", options: [{ id: "a", text: "La gestion du budget", correct: true }, { id: "b", text: "La météo", correct: false }, { id: "c", text: "Le sport", correct: false }, { id: "d", text: "La cuisine", correct: false }] },
+    { id: 1731, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je compare les prix avant d'acheter.", options: [{ id: "a", text: "Satın almadan önce fiyatları karşılaştırırım.", correct: true }, { id: "b", text: "Fiyatları karşılaştırmam.", correct: false }, { id: "c", text: "Fiyatları artırırım.", correct: false }, { id: "d", text: "Fiyatları unuturum.", correct: false }] },
+    { id: 1732, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le reçu est nécessaire pour un retour.", options: [{ id: "a", text: "İade için fiş gereklidir.", correct: true }, { id: "b", text: "İade için fiş gerekmez.", correct: false }, { id: "c", text: "Fiş yok.", correct: false }, { id: "d", text: "İade yok.", correct: false }] },
+    { id: 1733, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La qualité est plus importante que le prix.", options: [{ id: "a", text: "Kalite fiyattan daha önemlidir.", correct: true }, { id: "b", text: "Fiyat kaliteden daha önemlidir.", correct: false }, { id: "c", text: "Kalite ve fiyat aynı.", correct: false }, { id: "d", text: "Kalite önemli değildir.", correct: false }] },
+    { id: 1734, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il y a beaucoup de choix au supermarché.", options: [{ id: "a", text: "Süpermarkette birçok seçenek var.", correct: true }, { id: "b", text: "Süpermarkette seçenek yok.", correct: false }, { id: "c", text: "Süpermarket kapalı.", correct: false }, { id: "d", text: "Süpermarket çok uzak.", correct: false }] },
+    { id: 1735, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je paie par carte bancaire.", options: [{ id: "a", text: "Banka kartıyla öderim.", correct: true }, { id: "b", text: "Nakit öderim.", correct: false }, { id: "c", text: "Ödemem.", correct: false }, { id: "d", text: "Çekle öderim.", correct: false }] },
+    { id: 1736, type: "TRANSLATE", question: "Çevir:", hint: "Tasarruf etmek", correctAnswer: "Économiser" },
+    { id: 1737, type: "TRANSLATE", question: "Çevir:", hint: "Bütçe", correctAnswer: "Le budget" },
+    { id: 1738, type: "TRANSLATE", question: "Çevir:", hint: "Kampanya", correctAnswer: "La promotion" },
+    { id: 1739, type: "TRANSLATE", question: "Çevir:", hint: "Teslimat", correctAnswer: "La livraison" },
+    { id: 1740, type: "TRANSLATE", question: "Çevir:", hint: "İade", correctAnswer: "Le retour" }
+];
+
+const unit381Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1741, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est trop élevé.", options: [{ id: "a", text: "prix", correct: true }, { id: "b", text: "choix", correct: false }] },
+    { id: 1742, type: "FILL_BLANK", question: "Doldur:", sentence: "Je paie ___ carte bancaire.", options: [{ id: "a", text: "par", correct: true }, { id: "b", text: "pour", correct: false }] },
+    { id: 1743, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ arrive demain.", options: [{ id: "a", text: "colis", correct: true }, { id: "b", text: "choix", correct: false }] },
+    { id: 1744, type: "FILL_BLANK", question: "Doldur:", sentence: "Il propose une ___.", options: [{ id: "a", text: "réduction", correct: true }, { id: "b", text: "taille", correct: false }] },
+    { id: 1745, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ client est disponible.", options: [{ id: "a", text: "service", correct: true }, { id: "b", text: "budget", correct: false }] },
+    { id: 1746, type: "SELECT", question: "'Le besoin' ne demek?", options: [{ id: "a", text: "İhtiyaç", correct: true }, { id: "b", text: "İstek", correct: false }, { id: "c", text: "Ödül", correct: false }, { id: "d", text: "Yol", correct: false }] },
+    { id: 1747, type: "SELECT", question: "'L'envie' ne demek?", options: [{ id: "a", text: "İstek", correct: true }, { id: "b", text: "İhtiyaç", correct: false }, { id: "c", text: "İndirim", correct: false }, { id: "d", text: "Fiş", correct: false }] },
+    { id: 1748, type: "SELECT", question: "'La satisfaction' ne demek?", options: [{ id: "a", text: "Memnuniyet", correct: true }, { id: "b", text: "Sorun", correct: false }, { id: "c", text: "Kalite", correct: false }, { id: "d", text: "Seçim", correct: false }] },
+    { id: 1749, type: "SELECT", question: "'Le gaspillage' ne demek?", options: [{ id: "a", text: "İsraf", correct: true }, { id: "b", text: "Kazanç", correct: false }, { id: "c", text: "Kâr", correct: false }, { id: "d", text: "Kredi", correct: false }] },
+    { id: 1750, type: "SELECT", question: "'Le service client' ne demek?", options: [{ id: "a", text: "Müşteri hizmetleri", correct: true }, { id: "b", text: "Servis", correct: false }, { id: "c", text: "Yemek", correct: false }, { id: "d", text: "Kargo", correct: false }] },
+    { id: 1751, type: "TRANSLATE", question: "Çevir:", hint: "Müşteri memnuniyeti önemlidir.", correctAnswer: "La satisfaction du client est importante." },
+    { id: 1752, type: "TRANSLATE", question: "Çevir:", hint: "Paket yarın geliyor.", correctAnswer: "Le colis arrive demain." },
+    { id: 1753, type: "TRANSLATE", question: "Çevir:", hint: "Nakit ödüyorum.", correctAnswer: "Je paie en espèces." },
+    { id: 1754, type: "TRANSLATE", question: "Çevir:", hint: "Satıcı indirim teklif ediyor.", correctAnswer: "Le vendeur propose un rabais." },
+    { id: 1755, type: "TRANSLATE", question: "Çevir:", hint: "Sadece ihtiyacım olanı alırım.", correctAnswer: "J'achète seulement ce dont j'ai besoin." },
+    { id: 1756, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La consommation", options: [{ id: "a", text: "Tüketim", correct: true }, { id: "b", text: "Tasarruf", correct: false }, { id: "c", text: "Üretim", correct: false }, { id: "d", text: "Bütçe", correct: false }] },
+    { id: 1757, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le budget", options: [{ id: "a", text: "Bütçe", correct: true }, { id: "b", text: "Banka", correct: false }, { id: "c", text: "Fiyat", correct: false }, { id: "d", text: "Fiş", correct: false }] },
+    { id: 1758, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La réduction", options: [{ id: "a", text: "İndirim", correct: true }, { id: "b", text: "Kredi", correct: false }, { id: "c", text: "İade", correct: false }, { id: "d", text: "Sepet", correct: false }] },
+    { id: 1759, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le reçu", options: [{ id: "a", text: "Fiş", correct: true }, { id: "b", text: "Fatura", correct: false }, { id: "c", text: "Çek", correct: false }, { id: "d", text: "Koli", correct: false }] },
+    { id: 1760, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La livraison", options: [{ id: "a", text: "Teslimat", correct: true }, { id: "b", text: "Seçim", correct: false }, { id: "c", text: "İade", correct: false }, { id: "d", text: "Harcama", correct: false }] }
+];
+
+
+// ===== UNIT 382 HARDCODED QUIZZES =====
+const unit382Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1761, type: "SELECT", question: "'La publicitÃ©' ne demek?", options: [{ id: "a", text: "Reklam", correct: true }, { id: "b", text: "Pazarlama", correct: false }, { id: "c", text: "Slogan", correct: false }, { id: "d", text: "Logo", correct: false }] },
+    { id: 1762, type: "SELECT", question: "'La campagne publicitaire' ne demek?", options: [{ id: "a", text: "Reklam kampanyasÄ±", correct: true }, { id: "b", text: "Marka", correct: false }, { id: "c", text: "Rekabet", correct: false }, { id: "d", text: "Lansman", correct: false }] },
+    { id: 1763, type: "SELECT", question: "'La marque' ne demek?", options: [{ id: "a", text: "Marka", correct: true }, { id: "b", text: "BÃ¼tÃ§e", correct: false }, { id: "c", text: "AfiÅŸ", correct: false }, { id: "d", text: "Pazar", correct: false }] },
+    { id: 1764, type: "SELECT", question: "'Le slogan' ne demek?", options: [{ id: "a", text: "Slogan", correct: true }, { id: "b", text: "Mesaj", correct: false }, { id: "c", text: "ÃœrÃ¼n", correct: false }, { id: "d", text: "Hizmet", correct: false }] },
+    { id: 1765, type: "SELECT", question: "'Le logo' ne demek?", options: [{ id: "a", text: "Logo", correct: true }, { id: "b", text: "BroÅŸÃ¼r", correct: false }, { id: "c", text: "Hedef kitle", correct: false }, { id: "d", text: "Marka imajÄ±", correct: false }] },
+    { id: 1766, type: "SELECT", question: "'Le produit' ne demek?", options: [{ id: "a", text: "ÃœrÃ¼n", correct: true }, { id: "b", text: "Hizmet", correct: false }, { id: "c", text: "Teklif", correct: false }, { id: "d", text: "Pazar", correct: false }] },
+    { id: 1767, type: "SELECT", question: "'Le service' ne demek?", options: [{ id: "a", text: "Hizmet", correct: true }, { id: "b", text: "Strateji", correct: false }, { id: "c", text: "Reklam filmi", correct: false }, { id: "d", text: "Slogan", correct: false }] },
+    { id: 1768, type: "SELECT", question: "'Le message' ne demek?", options: [{ id: "a", text: "Mesaj", correct: true }, { id: "b", text: "Reklam", correct: false }, { id: "c", text: "Ä°kna", correct: false }, { id: "d", text: "Lansman", correct: false }] },
+    { id: 1769, type: "SELECT", question: "'La cible' ne demek?", options: [{ id: "a", text: "Hedef kitle", correct: true }, { id: "b", text: "Ä°tibar", correct: false }, { id: "c", text: "Rekabet", correct: false }, { id: "d", text: "Marka", correct: false }] },
+    { id: 1770, type: "SELECT", question: "'Le public cible' ne demek?", options: [{ id: "a", text: "Hedef kitle", correct: true }, { id: "b", text: "Pazar", correct: false }, { id: "c", text: "Strateji", correct: false }, { id: "d", text: "BÃ¼tÃ§e", correct: false }] },
+    { id: 1771, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Le marchÃ©", options: [{ id: "a", text: "Pazar", correct: true }, { id: "b", text: "Reklam", correct: false }, { id: "c", text: "Slogan", correct: false }, { id: "d", text: "Logo", correct: false }] },
+    { id: 1772, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "La concurrence", options: [{ id: "a", text: "Rekabet", correct: true }, { id: "b", text: "Kampanya", correct: false }, { id: "c", text: "Ä°tibar", correct: false }, { id: "d", text: "Hizmet", correct: false }] },
+    { id: 1773, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Le spot publicitaire", options: [{ id: "a", text: "Reklam filmi", correct: true }, { id: "b", text: "BroÅŸÃ¼r", correct: false }, { id: "c", text: "AfiÅŸ", correct: false }, { id: "d", text: "Lansman", correct: false }] },
+    { id: 1774, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "L'affiche", options: [{ id: "a", text: "AfiÅŸ", correct: true }, { id: "b", text: "Slogan", correct: false }, { id: "c", text: "Mesaj", correct: false }, { id: "d", text: "Pazar", correct: false }] },
+    { id: 1775, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Le prospectus", options: [{ id: "a", text: "BroÅŸÃ¼r", correct: true }, { id: "b", text: "Reklam filmi", correct: false }, { id: "c", text: "Marka imajÄ±", correct: false }, { id: "d", text: "ÃœrÃ¼n", correct: false }] },
+    { id: 1776, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est trÃ¨s connue.", options: [{ id: "a", text: "marque", correct: true }, { id: "b", text: "campagne", correct: false }] },
+    { id: 1777, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est facile Ã  retenir.", options: [{ id: "a", text: "slogan", correct: true }, { id: "b", text: "logo", correct: false }] },
+    { id: 1778, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ passe Ã  la tÃ©lÃ©vision.", options: [{ id: "a", text: "spot publicitaire", correct: true }, { id: "b", text: "prospectus", correct: false }] },
+    { id: 1779, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ attire l'attention.", options: [{ id: "a", text: "affiche", correct: true }, { id: "b", text: "cible", correct: false }] },
+    { id: 1780, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ prÃ©sente les offres.", options: [{ id: "a", text: "prospectus", correct: true }, { id: "b", text: "message", correct: false }] }
+];
+
+const unit382Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1781, type: "SELECT", question: "Reklamlarda 'Hemen deneyin!' ifadesi hangi kiptir?", options: [{ id: "a", text: "ImpÃ©ratif", correct: true }, { id: "b", text: "Futur Simple", correct: false }, { id: "c", text: "PassÃ© ComposÃ©", correct: false }, { id: "d", text: "Conditionnel", correct: false }] },
+    { id: 1782, type: "SELECT", question: "YakÄ±n gelecek iÃ§in doÄŸru yapÄ± hangisi?", options: [{ id: "a", text: "aller + mastar", correct: true }, { id: "b", text: "Ãªtre + participe passÃ©", correct: false }, { id: "c", text: "venir de + mastar", correct: false }, { id: "d", text: "ne ... pas", correct: false }] },
+    { id: 1783, type: "SELECT", question: "Hangisi Futur Simple Ã¶rneÄŸidir?", options: [{ id: "a", text: "La marque lancera un nouveau produit.", correct: true }, { id: "b", text: "Nous allons lancer la campagne.", correct: false }, { id: "c", text: "La marque lance un produit.", correct: false }, { id: "d", text: "La marque a lancÃ© un produit.", correct: false }] },
+    { id: 1784, type: "SELECT", question: "KarÅŸÄ±laÅŸtÄ±rma iÃ§in doÄŸru kalÄ±p hangisi?", options: [{ id: "a", text: "plus ... que", correct: true }, { id: "b", text: "plus ... de", correct: false }, { id: "c", text: "plus ... Ã ", correct: false }, { id: "d", text: "plus ... en", correct: false }] },
+    { id: 1785, type: "SELECT", question: "SÃ¼perlatif hangi yapÄ±dÄ±r?", options: [{ id: "a", text: "le/la/les plus + sÄ±fat", correct: true }, { id: "b", text: "plus ... que", correct: false }, { id: "c", text: "aussi ... que", correct: false }, { id: "d", text: "moins ... que", correct: false }] },
+    { id: 1786, type: "SELECT", question: "Olumsuz emir kipi sÄ±rasÄ± hangisidir?", options: [{ id: "a", text: "Ne + fiil + pas", correct: true }, { id: "b", text: "Fiil + ne + pas", correct: false }, { id: "c", text: "Ne + pas + fiil", correct: false }, { id: "d", text: "Pas + fiil + ne", correct: false }] },
+    { id: 1787, type: "FILL_BLANK", question: "Doldur:", sentence: "___ ce produit !", options: [{ id: "a", text: "Essayez", correct: true }, { id: "b", text: "Essayer", correct: false }] },
+    { id: 1788, type: "FILL_BLANK", question: "Doldur:", sentence: "Ne ___ pas l'offre !", options: [{ id: "a", text: "ratez", correct: true }, { id: "b", text: "rate", correct: false }] },
+    { id: 1789, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous ___ lancer la campagne.", options: [{ id: "a", text: "allons", correct: true }, { id: "b", text: "allez", correct: false }] },
+    { id: 1790, type: "FILL_BLANK", question: "Doldur:", sentence: "Ce slogan est plus ___ que l'autre.", options: [{ id: "a", text: "accrocheur", correct: true }, { id: "b", text: "accrocheuse", correct: false }] },
+    { id: 1791, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Tu as vu cette publicitÃ© ?", options: [{ id: "a", text: "Bu reklamÄ± gÃ¶rdÃ¼n mÃ¼?", correct: true }, { id: "b", text: "Bu reklamÄ± Ã§ektin mi?", correct: false }, { id: "c", text: "Bu reklamÄ±n fiyatÄ± ne?", correct: false }, { id: "d", text: "Bu reklam yeni mi?", correct: false }] },
+    { id: 1792, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Je prÃ©fÃ¨re en ligne, c'est plus ciblÃ©.", options: [{ id: "a", text: "Ben online olanÄ± tercih ederim, daha hedeflidir.", correct: true }, { id: "b", text: "Ben televizyonda tercih ederim.", correct: false }, { id: "c", text: "Ben hedef sevmem.", correct: false }, { id: "d", text: "Ben reklam sevmem.", correct: false }] },
+    { id: 1793, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Le logo te plaÃ®t ?", options: [{ id: "a", text: "Logo hoÅŸuna gidiyor mu?", correct: true }, { id: "b", text: "Logo nerede?", correct: false }, { id: "c", text: "Logo Ã§ok bÃ¼yÃ¼k.", correct: false }, { id: "d", text: "Logo kayÄ±p.", correct: false }] },
+    { id: 1794, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Ils ont un budget publicitaire Ã©levÃ©.", options: [{ id: "a", text: "YÃ¼ksek bir reklam bÃ¼tÃ§eleri var.", correct: true }, { id: "b", text: "Reklam bÃ¼tÃ§eleri yok.", correct: false }, { id: "c", text: "BÃ¼tÃ§e dÃ¼ÅŸÃ¼k.", correct: false }, { id: "d", text: "BÃ¼tÃ§e sabit.", correct: false }] },
+    { id: 1795, type: "SELECT", question: "KonuÅŸma: 'Quelle est la cible de cette campagne ?' ne demek?", options: [{ id: "a", text: "Bu kampanyanÄ±n hedef kitlesi nedir?", correct: true }, { id: "b", text: "Bu kampanya ne zaman?", correct: false }, { id: "c", text: "Bu kampanya nerede?", correct: false }, { id: "d", text: "Bu kampanya bitti mi?", correct: false }] },
+    { id: 1796, type: "SELECT", question: "KonuÅŸma: 'Oui, le slogan est vraiment accrocheur.' ne demek?", options: [{ id: "a", text: "Evet, slogan gerÃ§ekten akÄ±lda kalÄ±cÄ±.", correct: true }, { id: "b", text: "Evet, sloganÄ± sevmiyorum.", correct: false }, { id: "c", text: "Evet, slogan uzun.", correct: false }, { id: "d", text: "Evet, slogan zor.", correct: false }] },
+    { id: 1797, type: "SELECT", question: "KonuÅŸma: 'On dirait une grande marque.' ne demek?", options: [{ id: "a", text: "BÃ¼yÃ¼k bir markaya benziyor.", correct: true }, { id: "b", text: "BÃ¼yÃ¼k bir reklam var.", correct: false }, { id: "c", text: "BÃ¼tÃ§e Ã§ok bÃ¼yÃ¼k.", correct: false }, { id: "d", text: "Pazar Ã§ok bÃ¼yÃ¼k.", correct: false }] },
+    { id: 1798, type: "SELECT", question: "KonuÅŸma: 'Tu prÃ©fÃ¨res la publicitÃ© en ligne ou Ã  la tÃ©lÃ© ?' ne demek?", options: [{ id: "a", text: "Online reklamÄ± mÄ± yoksa TV reklamÄ±nÄ± mÄ± tercih edersin?", correct: true }, { id: "b", text: "Online reklam var mÄ±?", correct: false }, { id: "c", text: "Televizyon aÃ§Ä±k mÄ±?", correct: false }, { id: "d", text: "ReklamÄ±n fiyatÄ± ne?", correct: false }] },
+    { id: 1799, type: "TRANSLATE", question: "Ã‡evir:", hint: "YarÄ±n kampanyayÄ± baÅŸlatacaÄŸÄ±z.", correctAnswer: "Nous allons lancer la campagne demain." },
+    { id: 1800, type: "TRANSLATE", question: "Ã‡evir:", hint: "Bu marka rakiplerinden daha Ã¼nlÃ¼.", correctAnswer: "Cette marque est plus connue que ses concurrents." }
+];
+
+const unit382Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1801, type: "SELECT", question: "Que prÃ©pare l'entreprise ?", options: [{ id: "a", text: "Le lancement d'un nouveau produit", correct: true }, { id: "b", text: "Un voyage", correct: false }, { id: "c", text: "Un film", correct: false }, { id: "d", text: "Une fÃªte", correct: false }] },
+    { id: 1802, type: "SELECT", question: "Que crÃ©e l'Ã©quipe marketing ?", options: [{ id: "a", text: "Un slogan et un logo", correct: true }, { id: "b", text: "Un roman", correct: false }, { id: "c", text: "Un tableau", correct: false }, { id: "d", text: "Un match", correct: false }] },
+    { id: 1803, type: "SELECT", question: "Quels canaux sont choisis ?", options: [{ id: "a", text: "Les rÃ©seaux sociaux et la tÃ©lÃ©vision", correct: true }, { id: "b", text: "La radio seulement", correct: false }, { id: "c", text: "Le journal", correct: false }, { id: "d", text: "L'Ã©cole", correct: false }] },
+    { id: 1804, type: "SELECT", question: "Que font les influenceurs ?", options: [{ id: "a", text: "Ils publient des vidÃ©os", correct: true }, { id: "b", text: "Ils vendent des billets", correct: false }, { id: "c", text: "Ils cuisinent", correct: false }, { id: "d", text: "Ils voyagent", correct: false }] },
+    { id: 1805, type: "SELECT", question: "Que se passe-t-il avec les ventes ?", options: [{ id: "a", text: "Elles augmentent rapidement", correct: true }, { id: "b", text: "Elles diminuent", correct: false }, { id: "c", text: "Elles restent stables", correct: false }, { id: "d", text: "Elles s'arrÃªtent", correct: false }] },
+    { id: 1806, type: "SELECT", question: "Que gagne la marque ?", options: [{ id: "a", text: "De la notoriÃ©tÃ©", correct: true }, { id: "b", text: "Des dettes", correct: false }, { id: "c", text: "Des problÃ¨mes", correct: false }, { id: "d", text: "Des amendes", correct: false }] },
+    { id: 1807, type: "SELECT", question: "Que dit le directeur Ã  la fin ?", options: [{ id: "a", text: "La stratÃ©gie a Ã©tÃ© efficace", correct: true }, { id: "b", text: "La stratÃ©gie a Ã©chouÃ©", correct: false }, { id: "c", text: "La campagne est annulÃ©e", correct: false }, { id: "d", text: "Le produit est mauvais", correct: false }] },
+    { id: 1808, type: "SELECT", question: "Que veut-il faire ensuite ?", options: [{ id: "a", text: "Analyser les rÃ©sultats", correct: true }, { id: "b", text: "ArrÃªter la publicitÃ©", correct: false }, { id: "c", text: "Changer de logo", correct: false }, { id: "d", text: "Fermer l'entreprise", correct: false }] },
+    { id: 1809, type: "SELECT", question: "Quel est le sujet principal du texte ?", options: [{ id: "a", text: "Une campagne publicitaire", correct: true }, { id: "b", text: "Un voyage", correct: false }, { id: "c", text: "Un Ã©vÃ©nement sportif", correct: false }, { id: "d", text: "Un spectacle", correct: false }] },
+    { id: 1810, type: "SELECT", question: "Pourquoi analyser les rÃ©sultats ?", options: [{ id: "a", text: "Pour amÃ©liorer la prochaine campagne", correct: true }, { id: "b", text: "Pour vendre l'entreprise", correct: false }, { id: "c", text: "Pour annuler le produit", correct: false }, { id: "d", text: "Pour changer de ville", correct: false }] },
+    { id: 1811, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Cette publicitÃ© est trÃ¨s efficace.", options: [{ id: "a", text: "Bu reklam Ã§ok etkilidir.", correct: true }, { id: "b", text: "Bu reklam pahalÄ±dÄ±r.", correct: false }, { id: "c", text: "Bu reklam eski.", correct: false }, { id: "d", text: "Bu reklam yok.", correct: false }] },
+    { id: 1812, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Le slogan est facile Ã  retenir.", options: [{ id: "a", text: "Slogan akÄ±lda kalÄ±cÄ±dÄ±r.", correct: true }, { id: "b", text: "Slogan zor.", correct: false }, { id: "c", text: "Slogan gereksiz.", correct: false }, { id: "d", text: "Slogan kayboldu.", correct: false }] },
+    { id: 1813, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "La campagne cible les jeunes adultes.", options: [{ id: "a", text: "Kampanya genÃ§ yetiÅŸkinleri hedefliyor.", correct: true }, { id: "b", text: "Kampanya Ã§ocuklarÄ± hedefliyor.", correct: false }, { id: "c", text: "Kampanya iptal.", correct: false }, { id: "d", text: "Kampanya bÃ¼tÃ§esiz.", correct: false }] },
+    { id: 1814, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Le spot passe Ã  la tÃ©lÃ©vision le soir.", options: [{ id: "a", text: "Reklam filmi akÅŸam televizyonda yayÄ±nlanÄ±r.", correct: true }, { id: "b", text: "Reklam filmi sabah yayÄ±nlanÄ±r.", correct: false }, { id: "c", text: "Reklam filmi yasak.", correct: false }, { id: "d", text: "Reklam filmi yok.", correct: false }] },
+    { id: 1815, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "La marque veut amÃ©liorer son image.", options: [{ id: "a", text: "Marka imajÄ±nÄ± geliÅŸtirmek istiyor.", correct: true }, { id: "b", text: "Marka kampanyayÄ± bitiriyor.", correct: false }, { id: "c", text: "Marka fiyatÄ± dÃ¼ÅŸÃ¼rÃ¼yor.", correct: false }, { id: "d", text: "Marka Ã¼rÃ¼nÃ¼ iptal ediyor.", correct: false }] },
+    { id: 1816, type: "TRANSLATE", question: "Ã‡evir:", hint: "Reklam", correctAnswer: "La publicitÃ©" },
+    { id: 1817, type: "TRANSLATE", question: "Ã‡evir:", hint: "Slogan", correctAnswer: "Le slogan" },
+    { id: 1818, type: "TRANSLATE", question: "Ã‡evir:", hint: "Bilinirlik", correctAnswer: "La notoriÃ©tÃ©" },
+    { id: 1819, type: "TRANSLATE", question: "Ã‡evir:", hint: "Lansman", correctAnswer: "Le lancement" },
+    { id: 1820, type: "TRANSLATE", question: "Ã‡evir:", hint: "Sosyal medya", correctAnswer: "Les rÃ©seaux sociaux" }
+];
+
+const unit382Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1821, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est clair.", options: [{ id: "a", text: "message", correct: true }, { id: "b", text: "slogan", correct: false }] },
+    { id: 1822, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est limitÃ©e cette annÃ©e.", options: [{ id: "a", text: "promotion", correct: true }, { id: "b", text: "rÃ©putation", correct: false }] },
+    { id: 1823, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ de la marque augmente.", options: [{ id: "a", text: "notoriÃ©tÃ©", correct: true }, { id: "b", text: "cible", correct: false }] },
+    { id: 1824, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ du produit est prÃ©vu demain.", options: [{ id: "a", text: "lancement", correct: true }, { id: "b", text: "logo", correct: false }] },
+    { id: 1825, type: "FILL_BLANK", question: "Doldur:", sentence: "La publicitÃ© ___ est interdite.", options: [{ id: "a", text: "mensongÃ¨re", correct: true }, { id: "b", text: "tÃ©lÃ©visÃ©e", correct: false }] },
+    { id: 1826, type: "SELECT", question: "'La persuasion' ne demek?", options: [{ id: "a", text: "Ä°kna", correct: true }, { id: "b", text: "Pazarlama", correct: false }, { id: "c", text: "Ä°ndirim", correct: false }, { id: "d", text: "BÃ¼tÃ§e", correct: false }] },
+    { id: 1827, type: "SELECT", question: "'La notoriÃ©tÃ©' ne demek?", options: [{ id: "a", text: "Bilinirlik", correct: true }, { id: "b", text: "Rekabet", correct: false }, { id: "c", text: "TÃ¼ketim", correct: false }, { id: "d", text: "Kampanya", correct: false }] },
+    { id: 1828, type: "SELECT", question: "'L'image de marque' ne demek?", options: [{ id: "a", text: "Marka imajÄ±", correct: true }, { id: "b", text: "AfiÅŸ tasarÄ±mÄ±", correct: false }, { id: "c", text: "Sosyal medya", correct: false }, { id: "d", text: "Reklam filmi", correct: false }] },
+    { id: 1829, type: "SELECT", question: "'La rÃ©putation' ne demek?", options: [{ id: "a", text: "Ä°tibar", correct: true }, { id: "b", text: "Teklif", correct: false }, { id: "c", text: "Mesaj", correct: false }, { id: "d", text: "Pazar", correct: false }] },
+    { id: 1830, type: "SELECT", question: "'Le budget publicitaire' ne demek?", options: [{ id: "a", text: "Reklam bÃ¼tÃ§esi", correct: true }, { id: "b", text: "BÃ¼tÃ§e raporu", correct: false }, { id: "c", text: "Pazarlama planÄ±", correct: false }, { id: "d", text: "SatÄ±ÅŸ hedefi", correct: false }] },
+    { id: 1831, type: "TRANSLATE", question: "Ã‡evir:", hint: "Online reklam geniÅŸ bir kitleye ulaÅŸÄ±r.", correctAnswer: "La publicitÃ© en ligne touche un large public." },
+    { id: 1832, type: "TRANSLATE", question: "Ã‡evir:", hint: "Logo basit ve tanÄ±nabilir olmalÄ±.", correctAnswer: "Le logo doit Ãªtre simple et reconnaissable." },
+    { id: 1833, type: "TRANSLATE", question: "Ã‡evir:", hint: "Kampanya birÃ§ok mÃ¼ÅŸteri Ã§eker.", correctAnswer: "La promotion attire beaucoup de clients." },
+    { id: 1834, type: "TRANSLATE", question: "Ã‡evir:", hint: "Reklam kampanyasÄ± bir ay sÃ¼rer.", correctAnswer: "La campagne publicitaire dure un mois." },
+    { id: 1835, type: "TRANSLATE", question: "Ã‡evir:", hint: "BroÅŸÃ¼r yenilikleri sunar.", correctAnswer: "Le prospectus prÃ©sente les nouveautÃ©s." },
+    { id: 1836, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "Le marketing", options: [{ id: "a", text: "Pazarlama", correct: true }, { id: "b", text: "Kampanya", correct: false }, { id: "c", text: "Rekabet", correct: false }, { id: "d", text: "Slogan", correct: false }] },
+    { id: 1837, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "La stratÃ©gie", options: [{ id: "a", text: "Strateji", correct: true }, { id: "b", text: "BÃ¼tÃ§e", correct: false }, { id: "c", text: "Hedef kitle", correct: false }, { id: "d", text: "Kampanya", correct: false }] },
+    { id: 1838, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "L'influenceur", options: [{ id: "a", text: "Influencer / Fenomen", correct: true }, { id: "b", text: "MÃ¼ÅŸteri", correct: false }, { id: "c", text: "SatÄ±cÄ±", correct: false }, { id: "d", text: "TÃ¼ketici", correct: false }] },
+    { id: 1839, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "La publicitÃ© tÃ©lÃ©visÃ©e", options: [{ id: "a", text: "TV reklamÄ±", correct: true }, { id: "b", text: "Online reklam", correct: false }, { id: "c", text: "AldatÄ±cÄ± reklam", correct: false }, { id: "d", text: "Radyo reklamÄ±", correct: false }] },
+    { id: 1840, type: "LISTENING", question: "DuyduÄŸunu seÃ§:", audioText: "La concurrence", options: [{ id: "a", text: "Rekabet", correct: true }, { id: "b", text: "Ä°tibar", correct: false }, { id: "c", text: "Teklif", correct: false }, { id: "d", text: "Marka", correct: false }] }
+];
+
+// ===== UNIT 383 HARDCODED QUIZZES =====
+const unit383Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1841, type: "SELECT", question: "'La nouvelle' ne demek?", options: [{ id: "a", text: "Haber", correct: true }, { id: "b", text: "Manşet", correct: false }, { id: "c", text: "Gazete", correct: false }, { id: "d", text: "Söylenti", correct: false }] },
+    { id: 1842, type: "SELECT", question: "'L'actualité' ne demek?", options: [{ id: "a", text: "Gündem", correct: true }, { id: "b", text: "Duyuru", correct: false }, { id: "c", text: "Manşet", correct: false }, { id: "d", text: "Basın", correct: false }] },
+    { id: 1843, type: "SELECT", question: "'Le journal' ne demek?", options: [{ id: "a", text: "Gazete", correct: true }, { id: "b", text: "Kanal", correct: false }, { id: "c", text: "Röportaj", correct: false }, { id: "d", text: "Bülten", correct: false }] },
+    { id: 1844, type: "SELECT", question: "'Le journaliste' ne demek?", options: [{ id: "a", text: "Gazeteci", correct: true }, { id: "b", text: "Okuyucu", correct: false }, { id: "c", text: "Sunucu", correct: false }, { id: "d", text: "Şoför", correct: false }] },
+    { id: 1845, type: "SELECT", question: "'La rédaction' ne demek?", options: [{ id: "a", text: "Redaksiyon / yazı işleri", correct: true }, { id: "b", text: "Basın toplantısı", correct: false }, { id: "c", text: "Program", correct: false }, { id: "d", text: "Reklam", correct: false }] },
+    { id: 1846, type: "SELECT", question: "'L'article' ne demek?", options: [{ id: "a", text: "Makale / haber yazısı", correct: true }, { id: "b", text: "Yorum", correct: false }, { id: "c", text: "Kaynak", correct: false }, { id: "d", text: "Söylenti", correct: false }] },
+    { id: 1847, type: "SELECT", question: "'Le titre' ne demek?", options: [{ id: "a", text: "Başlık", correct: true }, { id: "b", text: "Haber", correct: false }, { id: "c", text: "Röportaj", correct: false }, { id: "d", text: "Gazete", correct: false }] },
+    { id: 1848, type: "SELECT", question: "'La une' ne demek?", options: [{ id: "a", text: "Manşet", correct: true }, { id: "b", text: "Kaynak", correct: false }, { id: "c", text: "Program", correct: false }, { id: "d", text: "Kanal", correct: false }] },
+    { id: 1849, type: "SELECT", question: "'Le reportage' ne demek?", options: [{ id: "a", text: "Haber / röportaj", correct: true }, { id: "b", text: "Basın bildirisi", correct: false }, { id: "c", text: "Sosyal medya", correct: false }, { id: "d", text: "Bütçe", correct: false }] },
+    { id: 1850, type: "SELECT", question: "'L'interview' ne demek?", options: [{ id: "a", text: "Röportaj", correct: true }, { id: "b", text: "Başlık", correct: false }, { id: "c", text: "Yayın", correct: false }, { id: "d", text: "Söylenti", correct: false }] },
+    { id: 1851, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le direct", options: [{ id: "a", text: "Canlı yayın", correct: true }, { id: "b", text: "Manşet", correct: false }, { id: "c", text: "Basın", correct: false }, { id: "d", text: "Kaynak", correct: false }] },
+    { id: 1852, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La chaîne", options: [{ id: "a", text: "Kanal", correct: true }, { id: "b", text: "Program", correct: false }, { id: "c", text: "Gazete", correct: false }, { id: "d", text: "Okuyucu", correct: false }] },
+    { id: 1853, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La radio", options: [{ id: "a", text: "Radyo", correct: true }, { id: "b", text: "Televizyon", correct: false }, { id: "c", text: "Gazete", correct: false }, { id: "d", text: "Afiş", correct: false }] },
+    { id: 1854, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La presse", options: [{ id: "a", text: "Basın", correct: true }, { id: "b", text: "Program", correct: false }, { id: "c", text: "Hedef", correct: false }, { id: "d", text: "Kanal", correct: false }] },
+    { id: 1855, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La source", options: [{ id: "a", text: "Kaynak", correct: true }, { id: "b", text: "Röportaj", correct: false }, { id: "c", text: "Başlık", correct: false }, { id: "d", text: "Söylenti", correct: false }] },
+    { id: 1856, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est confirmée.", options: [{ id: "a", text: "nouvelle", correct: true }, { id: "b", text: "chaîne", correct: false }] },
+    { id: 1857, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ attire l'attention.", options: [{ id: "a", text: "titre", correct: true }, { id: "b", text: "débat", correct: false }] },
+    { id: 1858, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ diffuse les infos.", options: [{ id: "a", text: "chaîne", correct: true }, { id: "b", text: "rumeur", correct: false }] },
+    { id: 1859, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est en direct.", options: [{ id: "a", text: "reportage", correct: true }, { id: "b", text: "communiqué", correct: false }] },
+    { id: 1860, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est fiable.", options: [{ id: "a", text: "source", correct: true }, { id: "b", text: "télévision", correct: false }] }
+];
+
+const unit383Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1861, type: "SELECT", question: "Kaynak belirtmek için hangisi kullanılır?", options: [{ id: "a", text: "selon / d'après", correct: true }, { id: "b", text: "pendant", correct: false }, { id: "c", text: "malgré", correct: false }, { id: "d", text: "parce que", correct: false }] },
+    { id: 1862, type: "SELECT", question: "Dolaylı anlatımda hangi bağlaç kullanılır?", options: [{ id: "a", text: "que", correct: true }, { id: "b", text: "où", correct: false }, { id: "c", text: "quand", correct: false }, { id: "d", text: "si", correct: false }] },
+    { id: 1863, type: "SELECT", question: "Hangi cümle söylenti ifade eder?", options: [{ id: "a", text: "Il y aurait des retards.", correct: true }, { id: "b", text: "Il y a des retards.", correct: false }, { id: "c", text: "Il y avait des retards.", correct: false }, { id: "d", text: "Il aura des retards.", correct: false }] },
+    { id: 1864, type: "SELECT", question: "'D'après' ne anlama gelir?", options: [{ id: "a", text: "...'e göre", correct: true }, { id: "b", text: "...'den önce", correct: false }, { id: "c", text: "...'den sonra", correct: false }, { id: "d", text: "...'e rağmen", correct: false }] },
+    { id: 1865, type: "SELECT", question: "Duyuru yapmak için hangi ifade kullanılır?", options: [{ id: "a", text: "annoncer que", correct: true }, { id: "b", text: "oublier que", correct: false }, { id: "c", text: "arrêter que", correct: false }, { id: "d", text: "finir que", correct: false }] },
+    { id: 1866, type: "SELECT", question: "Hangi cümle conditionnel journalistique örneğidir?", options: [{ id: "a", text: "Le service serait gratuit.", correct: true }, { id: "b", text: "Le service est gratuit.", correct: false }, { id: "c", text: "Le service était gratuit.", correct: false }, { id: "d", text: "Le service sera gratuit.", correct: false }] },
+    { id: 1867, type: "FILL_BLANK", question: "Doldur:", sentence: "___ la police, l'incident est terminé.", options: [{ id: "a", text: "Selon", correct: true }, { id: "b", text: "Pendant", correct: false }] },
+    { id: 1868, type: "FILL_BLANK", question: "Doldur:", sentence: "Le maire ___ que le projet commence demain.", options: [{ id: "a", text: "annonce", correct: true }, { id: "b", text: "annonces", correct: false }] },
+    { id: 1869, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ des retards sur la ligne.", options: [{ id: "a", text: "y aurait", correct: true }, { id: "b", text: "y a", correct: false }] },
+    { id: 1870, type: "FILL_BLANK", question: "Doldur:", sentence: "D'après le journal, la route ___ fermée.", options: [{ id: "a", text: "sera", correct: true }, { id: "b", text: "est", correct: false }] },
+    { id: 1871, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Tu as vu l'article sur la ville ?", options: [{ id: "a", text: "Şehirle ilgili makaleyi gördün mü?", correct: true }, { id: "b", text: "Şehirde geziye çıktın mı?", correct: false }, { id: "c", text: "Şehirde hava nasıl?", correct: false }, { id: "d", text: "Şehirde yaşar mısın?", correct: false }] },
+    { id: 1872, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le titre est accrocheur, mais un peu exagéré.", options: [{ id: "a", text: "Başlık dikkat çekici ama biraz abartılı.", correct: true }, { id: "b", text: "Başlık hiç ilgi çekmiyor.", correct: false }, { id: "c", text: "Başlık çok kısa.", correct: false }, { id: "d", text: "Başlık yok.", correct: false }] },
+    { id: 1873, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je vais regarder le direct.", options: [{ id: "a", text: "Canlı yayını izleyeceğim.", correct: true }, { id: "b", text: "Gazeteyi okuyacağım.", correct: false }, { id: "c", text: "Haber yazacağım.", correct: false }, { id: "d", text: "Röportaj yapacağım.", correct: false }] },
+    { id: 1874, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La chaîne diffuse l'interview ce soir.", options: [{ id: "a", text: "Kanal bu akşam röportajı yayınlıyor.", correct: true }, { id: "b", text: "Kanal yayını durduruyor.", correct: false }, { id: "c", text: "Kanal yeni bir gazete çıkarıyor.", correct: false }, { id: "d", text: "Kanal sabah yayın yapıyor.", correct: false }] },
+    { id: 1875, type: "TRANSLATE", question: "Çevir:", hint: "Bu haber kaynak tarafından doğrulandı.", correctAnswer: "Cette nouvelle est confirmée par la source." },
+    { id: 1876, type: "TRANSLATE", question: "Çevir:", hint: "Basın toplantısı saat 10'da başlıyor.", correctAnswer: "La conférence de presse commence à dix heures." },
+    { id: 1877, type: "TRANSLATE", question: "Çevir:", hint: "Söylenti doğrulanmadı.", correctAnswer: "La rumeur n'est pas confirmée." },
+    { id: 1878, type: "SELECT", question: "Konuşma: 'Les médias parlent beaucoup de ce débat.' ne demek?", options: [{ id: "a", text: "Medyalar bu tartışmadan çok bahsediyor.", correct: true }, { id: "b", text: "Medyalar tartışmayı bitirdi.", correct: false }, { id: "c", text: "Medyalar tartışmıyor.", correct: false }, { id: "d", text: "Medyalar tartışmayı sevmiyor.", correct: false }] },
+    { id: 1879, type: "SELECT", question: "Konuşma: 'En ligne, c'est plus rapide.' ne demek?", options: [{ id: "a", text: "Online, daha hızlı.", correct: true }, { id: "b", text: "Online, daha pahalı.", correct: false }, { id: "c", text: "Online, daha zor.", correct: false }, { id: "d", text: "Online, daha yavaş.", correct: false }] },
+    { id: 1880, type: "SELECT", question: "Konuşma: 'C'est vrai, il faut vérifier les faits.' ne demek?", options: [{ id: "a", text: "Doğru, gerçekleri doğrulamak gerekir.", correct: true }, { id: "b", text: "Doğru, hiçbir şey yapmaya gerek yok.", correct: false }, { id: "c", text: "Doğru, sadece başlığı oku.", correct: false }, { id: "d", text: "Doğru, gerçekleri sakla.", correct: false }] }
+];
+
+const unit383Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1881, type: "SELECT", question: "Sur quoi l'article est-il préparé ?", options: [{ id: "a", text: "L'ouverture d'une nouvelle ligne de tramway", correct: true }, { id: "b", text: "Une fête sportive", correct: false }, { id: "c", text: "La météo", correct: false }, { id: "d", text: "Un concert", correct: false }] },
+    { id: 1882, type: "SELECT", question: "Qui la rédaction envoie-t-elle ?", options: [{ id: "a", text: "Une journaliste", correct: true }, { id: "b", text: "Un photographe uniquement", correct: false }, { id: "c", text: "Un lecteur", correct: false }, { id: "d", text: "Un vendeur", correct: false }] },
+    { id: 1883, type: "SELECT", question: "Où va la journaliste ?", options: [{ id: "a", text: "Sur place", correct: true }, { id: "b", text: "À l'étranger", correct: false }, { id: "c", text: "À l'école", correct: false }, { id: "d", text: "À l'hôpital", correct: false }] },
+    { id: 1884, type: "SELECT", question: "Qui interviewe-t-elle ?", options: [{ id: "a", text: "Le maire et des habitants", correct: true }, { id: "b", text: "Des touristes", correct: false }, { id: "c", text: "Des élèves", correct: false }, { id: "d", text: "Des médecins", correct: false }] },
+    { id: 1885, type: "SELECT", question: "Que fait-elle avec les chiffres ?", options: [{ id: "a", text: "Elle les vérifie auprès de la source officielle", correct: true }, { id: "b", text: "Elle les invente", correct: false }, { id: "c", text: "Elle les ignore", correct: false }, { id: "d", text: "Elle les cache", correct: false }] },
+    { id: 1886, type: "SELECT", question: "Où circule la rumeur ?", options: [{ id: "a", text: "Sur les réseaux sociaux", correct: true }, { id: "b", text: "À la radio", correct: false }, { id: "c", text: "Dans la rue seulement", correct: false }, { id: "d", text: "Dans un musée", correct: false }] },
+    { id: 1887, type: "SELECT", question: "Que dit la rumeur ?", options: [{ id: "a", text: "Les billets seront gratuits", correct: true }, { id: "b", text: "Le tramway est annulé", correct: false }, { id: "c", text: "La ligne est déjà fermée", correct: false }, { id: "d", text: "Les billets sont très chers", correct: false }] },
+    { id: 1888, type: "SELECT", question: "La rumeur est-elle confirmée ?", options: [{ id: "a", text: "Non, elle n'est pas confirmée", correct: true }, { id: "b", text: "Oui, totalement", correct: false }, { id: "c", text: "Oui, par le maire", correct: false }, { id: "d", text: "On ne sait jamais", correct: false }] },
+    { id: 1889, type: "SELECT", question: "Qu'est-ce qui attire beaucoup de lecteurs ?", options: [{ id: "a", text: "Le titre de la une", correct: true }, { id: "b", text: "La météo", correct: false }, { id: "c", text: "Les photos de vacances", correct: false }, { id: "d", text: "La publicité", correct: false }] },
+    { id: 1890, type: "SELECT", question: "Où le journal publie-t-il l'article ?", options: [{ id: "a", text: "En ligne et en version papier", correct: true }, { id: "b", text: "Seulement à la radio", correct: false }, { id: "c", text: "Seulement en vidéo", correct: false }, { id: "d", text: "Uniquement à la télévision", correct: false }] },
+    { id: 1891, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je lis les nouvelles tous les jours.", options: [{ id: "a", text: "Her gün haberleri okurum.", correct: true }, { id: "b", text: "Her gün röportaj yaparım.", correct: false }, { id: "c", text: "Her gün gazete almam.", correct: false }, { id: "d", text: "Her gün televizyon izlerim.", correct: false }] },
+    { id: 1892, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'article a été publié ce matin.", options: [{ id: "a", text: "Makale bu sabah yayımlandı.", correct: true }, { id: "b", text: "Makale yarın yayımlanacak.", correct: false }, { id: "c", text: "Makale iptal edildi.", correct: false }, { id: "d", text: "Makale gizli.", correct: false }] },
+    { id: 1893, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La rumeur n'est pas confirmée.", options: [{ id: "a", text: "Söylenti doğrulanmadı.", correct: true }, { id: "b", text: "Söylenti doğru.", correct: false }, { id: "c", text: "Söylenti unutuldu.", correct: false }, { id: "d", text: "Söylenti bitti.", correct: false }] },
+    { id: 1894, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le débat est animé mais respectueux.", options: [{ id: "a", text: "Tartışma hararetli ama saygılı.", correct: true }, { id: "b", text: "Tartışma sakin ve sıkıcı.", correct: false }, { id: "c", text: "Tartışma iptal.", correct: false }, { id: "d", text: "Tartışma yok.", correct: false }] },
+    { id: 1895, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les médias parlent de ce sujet.", options: [{ id: "a", text: "Medyalar bu konudan bahsediyor.", correct: true }, { id: "b", text: "Medyalar konuyu bilmiyor.", correct: false }, { id: "c", text: "Medyalar konuyu gizliyor.", correct: false }, { id: "d", text: "Medyalar konuyu kapattı.", correct: false }] },
+    { id: 1896, type: "TRANSLATE", question: "Çevir:", hint: "Basın", correctAnswer: "La presse" },
+    { id: 1897, type: "TRANSLATE", question: "Çevir:", hint: "Manşet", correctAnswer: "La une" },
+    { id: 1898, type: "TRANSLATE", question: "Çevir:", hint: "Başlık", correctAnswer: "Le titre" },
+    { id: 1899, type: "TRANSLATE", question: "Çevir:", hint: "Kaynak", correctAnswer: "La source" },
+    { id: 1900, type: "TRANSLATE", question: "Çevir:", hint: "Gazeteci", correctAnswer: "Le journaliste" }
+];
+
+const unit383Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1901, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est fiable.", options: [{ id: "a", text: "source", correct: true }, { id: "b", text: "débat", correct: false }] },
+    { id: 1902, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ attire l'attention.", options: [{ id: "a", text: "une", correct: true }, { id: "b", text: "radio", correct: false }] },
+    { id: 1903, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est en direct.", options: [{ id: "a", text: "interview", correct: true }, { id: "b", text: "actualité", correct: false }] },
+    { id: 1904, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ publie l'article.", options: [{ id: "a", text: "journal", correct: true }, { id: "b", text: "débat", correct: false }] },
+    { id: 1905, type: "FILL_BLANK", question: "Doldur:", sentence: "Les ___ parlent du sujet.", options: [{ id: "a", text: "médias", correct: true }, { id: "b", text: "lecteurs", correct: false }] },
+    { id: 1906, type: "SELECT", question: "'La diffusion' ne demek?", options: [{ id: "a", text: "Yayın", correct: true }, { id: "b", text: "Başlık", correct: false }, { id: "c", text: "Kaynak", correct: false }, { id: "d", text: "Basın", correct: false }] },
+    { id: 1907, type: "SELECT", question: "'L'abonnement' ne demek?", options: [{ id: "a", text: "Abonelik", correct: true }, { id: "b", text: "Röportaj", correct: false }, { id: "c", text: "Program", correct: false }, { id: "d", text: "Afiş", correct: false }] },
+    { id: 1908, type: "SELECT", question: "'Le lecteur' ne demek?", options: [{ id: "a", text: "Okuyucu", correct: true }, { id: "b", text: "Gazeteci", correct: false }, { id: "c", text: "Sunucu", correct: false }, { id: "d", text: "Yazar", correct: false }] },
+    { id: 1909, type: "SELECT", question: "'Le communiqué' ne demek?", options: [{ id: "a", text: "Basın bildirisi", correct: true }, { id: "b", text: "Basın toplantısı", correct: false }, { id: "c", text: "Yayın akışı", correct: false }, { id: "d", text: "Söylenti", correct: false }] },
+    { id: 1910, type: "SELECT", question: "'La censure' ne demek?", options: [{ id: "a", text: "Sansür", correct: true }, { id: "b", text: "Röportaj", correct: false }, { id: "c", text: "Kanal", correct: false }, { id: "d", text: "Basın", correct: false }] },
+    { id: 1911, type: "TRANSLATE", question: "Çevir:", hint: "Canlı yayını takip ediyoruz.", correctAnswer: "Nous suivons le direct." },
+    { id: 1912, type: "TRANSLATE", question: "Çevir:", hint: "Başlık dikkat çekici.", correctAnswer: "Le titre est accrocheur." },
+    { id: 1913, type: "TRANSLATE", question: "Çevir:", hint: "Sosyal medya bilgiyi yayıyor.", correctAnswer: "Les réseaux sociaux relaient l'information." },
+    { id: 1914, type: "TRANSLATE", question: "Çevir:", hint: "Gazete online versiyonu da yayınlıyor.", correctAnswer: "Le journal publie aussi la version en ligne." },
+    { id: 1915, type: "TRANSLATE", question: "Çevir:", hint: "Bu röportaj canlı.", correctAnswer: "L'interview est en direct." },
+    { id: 1916, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La télévision", options: [{ id: "a", text: "Televizyon", correct: true }, { id: "b", text: "Radyo", correct: false }, { id: "c", text: "Gazete", correct: false }, { id: "d", text: "Program", correct: false }] },
+    { id: 1917, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le reportage", options: [{ id: "a", text: "Haber / röportaj", correct: true }, { id: "b", text: "Basın bildirisi", correct: false }, { id: "c", text: "Manşet", correct: false }, { id: "d", text: "Tartışma", correct: false }] },
+    { id: 1918, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La conférence de presse", options: [{ id: "a", text: "Basın toplantısı", correct: true }, { id: "b", text: "Basın", correct: false }, { id: "c", text: "Program", correct: false }, { id: "d", text: "Söylenti", correct: false }] },
+    { id: 1919, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'opinion", options: [{ id: "a", text: "Görüş", correct: true }, { id: "b", text: "Manşet", correct: false }, { id: "c", text: "Başlık", correct: false }, { id: "d", text: "Haber", correct: false }] },
+    { id: 1920, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La rumeur", options: [{ id: "a", text: "Söylenti", correct: true }, { id: "b", text: "Kaynak", correct: false }, { id: "c", text: "Gazete", correct: false }, { id: "d", text: "Program", correct: false }] }
+];
+
+// ===== UNIT 384 HARDCODED QUIZZES =====
+const unit384Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 1921, type: "SELECT", question: "'La politique' ne demek?", options: [{ id: "a", text: "Siyaset", correct: true }, { id: "b", text: "Basın", correct: false }, { id: "c", text: "Program", correct: false }, { id: "d", text: "Söylenti", correct: false }] },
+    { id: 1922, type: "SELECT", question: "'Le gouvernement' ne demek?", options: [{ id: "a", text: "Hükümet", correct: true }, { id: "b", text: "Muhalefet", correct: false }, { id: "c", text: "Kanal", correct: false }, { id: "d", text: "Basın", correct: false }] },
+    { id: 1923, type: "SELECT", question: "'La démocratie' ne demek?", options: [{ id: "a", text: "Demokrasi", correct: true }, { id: "b", text: "Monarşi", correct: false }, { id: "c", text: "Koalisyon", correct: false }, { id: "d", text: "Parlamento", correct: false }] },
+    { id: 1924, type: "SELECT", question: "'La monarchie' ne demek?", options: [{ id: "a", text: "Monarşi", correct: true }, { id: "b", text: "Cumhuriyet", correct: false }, { id: "c", text: "Demokrasi", correct: false }, { id: "d", text: "Adalet", correct: false }] },
+    { id: 1925, type: "SELECT", question: "'La république' ne demek?", options: [{ id: "a", text: "Cumhuriyet", correct: true }, { id: "b", text: "Monarşi", correct: false }, { id: "c", text: "Seçim", correct: false }, { id: "d", text: "Bütçe", correct: false }] },
+    { id: 1926, type: "SELECT", question: "'Le parlement' ne demek?", options: [{ id: "a", text: "Parlamento", correct: true }, { id: "b", text: "Hükümet", correct: false }, { id: "c", text: "Kanal", correct: false }, { id: "d", text: "Kampanya", correct: false }] },
+    { id: 1927, type: "SELECT", question: "'La constitution' ne demek?", options: [{ id: "a", text: "Anayasa", correct: true }, { id: "b", text: "Yasa", correct: false }, { id: "c", text: "Parti", correct: false }, { id: "d", text: "Koalisyon", correct: false }] },
+    { id: 1928, type: "SELECT", question: "'La loi' ne demek?", options: [{ id: "a", text: "Yasa", correct: true }, { id: "b", text: "Program", correct: false }, { id: "c", text: "Seçim", correct: false }, { id: "d", text: "Basın", correct: false }] },
+    { id: 1929, type: "SELECT", question: "'L'élection' ne demek?", options: [{ id: "a", text: "Seçim", correct: true }, { id: "b", text: "Oy", correct: false }, { id: "c", text: "Rapor", correct: false }, { id: "d", text: "Reform", correct: false }] },
+    { id: 1930, type: "SELECT", question: "'Le vote' ne demek?", options: [{ id: "a", text: "Oy", correct: true }, { id: "b", text: "Kampanya", correct: false }, { id: "c", text: "Parti", correct: false }, { id: "d", text: "Söylenti", correct: false }] },
+    { id: 1931, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'électeur", options: [{ id: "a", text: "Seçmen", correct: true }, { id: "b", text: "Aday", correct: false }, { id: "c", text: "Bakan", correct: false }, { id: "d", text: "Başkan", correct: false }] },
+    { id: 1932, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le candidat", options: [{ id: "a", text: "Aday", correct: true }, { id: "b", text: "Seçim", correct: false }, { id: "c", text: "Yasa", correct: false }, { id: "d", text: "Oy", correct: false }] },
+    { id: 1933, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'opposition", options: [{ id: "a", text: "Muhalefet", correct: true }, { id: "b", text: "Çoğunluk", correct: false }, { id: "c", text: "Koalisyon", correct: false }, { id: "d", text: "Hükümet", correct: false }] },
+    { id: 1934, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La majorité", options: [{ id: "a", text: "Çoğunluk", correct: true }, { id: "b", text: "Azınlık", correct: false }, { id: "c", text: "Yasa", correct: false }, { id: "d", text: "Program", correct: false }] },
+    { id: 1935, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La minorité", options: [{ id: "a", text: "Azınlık", correct: true }, { id: "b", text: "Çoğunluk", correct: false }, { id: "c", text: "Seçim", correct: false }, { id: "d", text: "Kanal", correct: false }] },
+    { id: 1936, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ propose une réforme.", options: [{ id: "a", text: "gouvernement", correct: true }, { id: "b", text: "débat", correct: false }] },
+    { id: 1937, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ protège les droits.", options: [{ id: "a", text: "constitution", correct: true }, { id: "b", text: "campagne", correct: false }] },
+    { id: 1938, type: "FILL_BLANK", question: "Doldur:", sentence: "Les citoyens vont ___.", options: [{ id: "a", text: "voter", correct: true }, { id: "b", text: "votent", correct: false }] },
+    { id: 1939, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ soutient le président.", options: [{ id: "a", text: "majorité", correct: true }, { id: "b", text: "minorité", correct: false }] },
+    { id: 1940, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est organisé en juin.", options: [{ id: "a", text: "référendum", correct: true }, { id: "b", text: "reportage", correct: false }] }
+];
+
+const unit384Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 1941, type: "SELECT", question: "Zorunluluk bildiren ifade hangisi?", options: [{ id: "a", text: "il faut", correct: true }, { id: "b", text: "peut-être", correct: false }, { id: "c", text: "cependant", correct: false }, { id: "d", text: "aujourd'hui", correct: false }] },
+    { id: 1942, type: "SELECT", question: "'devoir' fiili ne anlama gelir?", options: [{ id: "a", text: "zorunda olmak", correct: true }, { id: "b", text: "istirmek", correct: false }, { id: "c", text: "görmek", correct: false }, { id: "d", text: "seçmek", correct: false }] },
+    { id: 1943, type: "SELECT", question: "'avoir le droit de' ne demek?", options: [{ id: "a", text: "izinli olmak", correct: true }, { id: "b", text: "yasak olmak", correct: false }, { id: "c", text: "zorunda olmak", correct: false }, { id: "d", text: "vazgeçmek", correct: false }] },
+    { id: 1944, type: "SELECT", question: "Edilgen yapıya örnek hangisi?", options: [{ id: "a", text: "La loi est votée.", correct: true }, { id: "b", text: "La loi vote.", correct: false }, { id: "c", text: "La loi va voter.", correct: false }, { id: "d", text: "La loi votait.", correct: false }] },
+    { id: 1945, type: "SELECT", question: "'qui' bağlacı neyi temsil eder?", options: [{ id: "a", text: "Özne", correct: true }, { id: "b", text: "Nesne", correct: false }, { id: "c", text: "Zaman", correct: false }, { id: "d", text: "Yer", correct: false }] },
+    { id: 1946, type: "SELECT", question: "'que' bağlacı neyi temsil eder?", options: [{ id: "a", text: "Nesne", correct: true }, { id: "b", text: "Özne", correct: false }, { id: "c", text: "Zaman", correct: false }, { id: "d", text: "Neden", correct: false }] },
+    { id: 1947, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ respecter la loi.", options: [{ id: "a", text: "faut", correct: true }, { id: "b", text: "fait", correct: false }] },
+    { id: 1948, type: "FILL_BLANK", question: "Doldur:", sentence: "Les citoyens ___ voter.", options: [{ id: "a", text: "doivent", correct: true }, { id: "b", text: "dois", correct: false }] },
+    { id: 1949, type: "FILL_BLANK", question: "Doldur:", sentence: "La loi est ___ par le parlement.", options: [{ id: "a", text: "votée", correct: true }, { id: "b", text: "voter", correct: false }] },
+    { id: 1950, type: "FILL_BLANK", question: "Doldur:", sentence: "Le parti qui gagne ___ le gouvernement.", options: [{ id: "a", text: "forme", correct: true }, { id: "b", text: "former", correct: false }] },
+    { id: 1951, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Tu vas voter dimanche ?", options: [{ id: "a", text: "Pazar günü oy kullanacak mısın?", correct: true }, { id: "b", text: "Pazar günü çalışacak mısın?", correct: false }, { id: "c", text: "Pazar günü tatil mi?", correct: false }, { id: "d", text: "Pazar günü seçim yok mu?", correct: false }] },
+    { id: 1952, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'opposition n'est pas d'accord.", options: [{ id: "a", text: "Muhalefet aynı fikirde değil.", correct: true }, { id: "b", text: "Muhalefet destekliyor.", correct: false }, { id: "c", text: "Muhalefet hiç yok.", correct: false }, { id: "d", text: "Muhalefet lideri konuşuyor.", correct: false }] },
+    { id: 1953, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La campagne électorale devient intense.", options: [{ id: "a", text: "Seçim kampanyası yoğunlaşıyor.", correct: true }, { id: "b", text: "Seçim kampanyası bitiyor.", correct: false }, { id: "c", text: "Seçim kampanyası yok.", correct: false }, { id: "d", text: "Seçim kampanyası sakin.", correct: false }] },
+    { id: 1954, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Oui, tout le monde parle de politique.", options: [{ id: "a", text: "Evet, herkes siyasetten bahsediyor.", correct: true }, { id: "b", text: "Evet, kimse siyaset konuşmuyor.", correct: false }, { id: "c", text: "Evet, herkes spordan bahsediyor.", correct: false }, { id: "d", text: "Evet, herkes susuyor.", correct: false }] },
+    { id: 1955, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le président propose une nouvelle loi.", options: [{ id: "a", text: "Başkan yeni bir yasa öneriyor.", correct: true }, { id: "b", text: "Başkan yasayı iptal ediyor.", correct: false }, { id: "c", text: "Başkan konuşmayı bitirdi.", correct: false }, { id: "d", text: "Başkan istifa ediyor.", correct: false }] },
+    { id: 1956, type: "TRANSLATE", question: "Çevir:", hint: "Yasa parlamento tarafından kabul edilir.", correctAnswer: "La loi est votée par le parlement." },
+    { id: 1957, type: "TRANSLATE", question: "Çevir:", hint: "Vatandaşlar oy kullanmak zorunda.", correctAnswer: "Les citoyens doivent voter." },
+    { id: 1958, type: "TRANSLATE", question: "Çevir:", hint: "Bu reform önemlidir.", correctAnswer: "Cette réforme est importante." },
+    { id: 1959, type: "TRANSLATE", question: "Çevir:", hint: "Muhalefet projeyi eleştiriyor.", correctAnswer: "L'opposition critique le projet." },
+    { id: 1960, type: "TRANSLATE", question: "Çevir:", hint: "Seçimler pazar günü yapılacak.", correctAnswer: "Les élections auront lieu dimanche." }
+];
+
+const unit384Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 1961, type: "SELECT", question: "De quel type d'élections parle-t-on ?", options: [{ id: "a", text: "Les élections municipales", correct: true }, { id: "b", text: "Les élections nationales", correct: false }, { id: "c", text: "Les élections scolaires", correct: false }, { id: "d", text: "Les élections sportives", correct: false }] },
+    { id: 1962, type: "SELECT", question: "Qui publie le reportage ?", options: [{ id: "a", text: "La rédaction du journal", correct: true }, { id: "b", text: "La radio", correct: false }, { id: "c", text: "Une école", correct: false }, { id: "d", text: "Un magasin", correct: false }] },
+    { id: 1963, type: "SELECT", question: "Qui la journaliste interviewe-t-elle ?", options: [{ id: "a", text: "Deux candidats et des citoyens", correct: true }, { id: "b", text: "Des touristes", correct: false }, { id: "c", text: "Des policiers", correct: false }, { id: "d", text: "Des médecins", correct: false }] },
+    { id: 1964, type: "SELECT", question: "Que promet le candidat A ?", options: [{ id: "a", text: "Une réforme des transports", correct: true }, { id: "b", text: "Une nouvelle école", correct: false }, { id: "c", text: "Un festival", correct: false }, { id: "d", text: "Un musée", correct: false }] },
+    { id: 1965, type: "SELECT", question: "Sur quoi insiste le candidat B ?", options: [{ id: "a", text: "La sécurité", correct: true }, { id: "b", text: "Le sport", correct: false }, { id: "c", text: "La météo", correct: false }, { id: "d", text: "La publicité", correct: false }] },
+    { id: 1966, type: "SELECT", question: "Que fait l'opposition ?", options: [{ id: "a", text: "Elle critique le budget proposé", correct: true }, { id: "b", text: "Elle soutient le candidat A", correct: false }, { id: "c", text: "Elle organise un concert", correct: false }, { id: "d", text: "Elle annule l'élection", correct: false }] },
+    { id: 1967, type: "SELECT", question: "Qui annonce la date du vote ?", options: [{ id: "a", text: "La commission électorale", correct: true }, { id: "b", text: "Le maire", correct: false }, { id: "c", text: "La télévision", correct: false }, { id: "d", text: "Les citoyens", correct: false }] },
+    { id: 1968, type: "SELECT", question: "Quand le vote aura-t-il lieu ?", options: [{ id: "a", text: "Dimanche", correct: true }, { id: "b", text: "Lundi", correct: false }, { id: "c", text: "Mardi", correct: false }, { id: "d", text: "Vendredi", correct: false }] },
+    { id: 1969, type: "SELECT", question: "Que rappelle le journal ?", options: [{ id: "a", text: "L'importance de la participation", correct: true }, { id: "b", text: "Le prix des billets", correct: false }, { id: "c", text: "La fermeture des routes", correct: false }, { id: "d", text: "Le match de football", correct: false }] },
+    { id: 1970, type: "SELECT", question: "Où l'article est-il aussi publié ?", options: [{ id: "a", text: "En ligne", correct: true }, { id: "b", text: "À la radio", correct: false }, { id: "c", text: "À la télévision", correct: false }, { id: "d", text: "Dans un musée", correct: false }] },
+    { id: 1971, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le gouvernement annonce une réforme.", options: [{ id: "a", text: "Hükümet bir reform duyuruyor.", correct: true }, { id: "b", text: "Hükümet reformu iptal ediyor.", correct: false }, { id: "c", text: "Hükümet sessiz kalıyor.", correct: false }, { id: "d", text: "Hükümet seçimleri erteliyor.", correct: false }] },
+    { id: 1972, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les élections auront lieu dimanche.", options: [{ id: "a", text: "Seçimler pazar günü yapılacak.", correct: true }, { id: "b", text: "Seçimler bugün yapılacak.", correct: false }, { id: "c", text: "Seçimler iptal.", correct: false }, { id: "d", text: "Seçimler gelecek yıl.", correct: false }] },
+    { id: 1973, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La démocratie repose sur le vote.", options: [{ id: "a", text: "Demokrasi oya dayanır.", correct: true }, { id: "b", text: "Demokrasi tartışmaya dayanır.", correct: false }, { id: "c", text: "Demokrasi basına dayanır.", correct: false }, { id: "d", text: "Demokrasi kampanyaya dayanır.", correct: false }] },
+    { id: 1974, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La justice doit être indépendante.", options: [{ id: "a", text: "Adalet bağımsız olmalı.", correct: true }, { id: "b", text: "Adalet pahalı olmalı.", correct: false }, { id: "c", text: "Adalet gecikmeli.", correct: false }, { id: "d", text: "Adalet yok.", correct: false }] },
+    { id: 1975, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La campagne électorale commence aujourd'hui.", options: [{ id: "a", text: "Seçim kampanyası bugün başlıyor.", correct: true }, { id: "b", text: "Seçim kampanyası bitti.", correct: false }, { id: "c", text: "Seçim kampanyası yarın.", correct: false }, { id: "d", text: "Seçim kampanyası iptal.", correct: false }] },
+    { id: 1976, type: "TRANSLATE", question: "Çevir:", hint: "Parlamento", correctAnswer: "Le parlement" },
+    { id: 1977, type: "TRANSLATE", question: "Çevir:", hint: "Başkan", correctAnswer: "Le président" },
+    { id: 1978, type: "TRANSLATE", question: "Çevir:", hint: "Koalisyon", correctAnswer: "La coalition" },
+    { id: 1979, type: "TRANSLATE", question: "Çevir:", hint: "Referandum", correctAnswer: "Le référendum" },
+    { id: 1980, type: "TRANSLATE", question: "Çevir:", hint: "Özgürlük", correctAnswer: "La liberté" }
+];
+
+const unit384Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 1981, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ annonce une réforme.", options: [{ id: "a", text: "gouvernement", correct: true }, { id: "b", text: "débat", correct: false }] },
+    { id: 1982, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est secret.", options: [{ id: "a", text: "vote", correct: true }, { id: "b", text: "titre", correct: false }] },
+    { id: 1983, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est un principe.", options: [{ id: "a", text: "égalité", correct: true }, { id: "b", text: "actualité", correct: false }] },
+    { id: 1984, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ dirige le gouvernement.", options: [{ id: "a", text: "premier ministre", correct: true }, { id: "b", text: "lecteur", correct: false }] },
+    { id: 1985, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ critique le budget.", options: [{ id: "a", text: "opposition", correct: true }, { id: "b", text: "élection", correct: false }] },
+    { id: 1986, type: "SELECT", question: "'La coalition' ne demek?", options: [{ id: "a", text: "Koalisyon", correct: true }, { id: "b", text: "Anayasa", correct: false }, { id: "c", text: "Yasa", correct: false }, { id: "d", text: "Program", correct: false }] },
+    { id: 1987, type: "SELECT", question: "'La campagne électorale' ne demek?", options: [{ id: "a", text: "Seçim kampanyası", correct: true }, { id: "b", text: "Seçim komisyonu", correct: false }, { id: "c", text: "Basın toplantısı", correct: false }, { id: "d", text: "Yayın akışı", correct: false }] },
+    { id: 1988, type: "SELECT", question: "'La liberté' ne demek?", options: [{ id: "a", text: "Özgürlük", correct: true }, { id: "b", text: "Eşitlik", correct: false }, { id: "c", text: "Adalet", correct: false }, { id: "d", text: "Görüş", correct: false }] },
+    { id: 1989, type: "SELECT", question: "'La justice' ne demek?", options: [{ id: "a", text: "Adalet", correct: true }, { id: "b", text: "Kampanya", correct: false }, { id: "c", text: "Kaynak", correct: false }, { id: "d", text: "Basın", correct: false }] },
+    { id: 1990, type: "SELECT", question: "'Le pouvoir' ne demek?", options: [{ id: "a", text: "İktidar / Güç", correct: true }, { id: "b", text: "Haber", correct: false }, { id: "c", text: "Yorum", correct: false }, { id: "d", text: "Program", correct: false }] },
+    { id: 1991, type: "TRANSLATE", question: "Çevir:", hint: "Hükümet reform duyuruyor.", correctAnswer: "Le gouvernement annonce une réforme." },
+    { id: 1992, type: "TRANSLATE", question: "Çevir:", hint: "Seçmen bir aday seçer.", correctAnswer: "L'électeur choisit un candidat." },
+    { id: 1993, type: "TRANSLATE", question: "Çevir:", hint: "Başkan yasayı imzalar.", correctAnswer: "Le président signe la loi." },
+    { id: 1994, type: "TRANSLATE", question: "Çevir:", hint: "Seçim kampanyası bugün başlıyor.", correctAnswer: "La campagne électorale commence aujourd'hui." },
+    { id: 1995, type: "TRANSLATE", question: "Çevir:", hint: "Vatandaş seçimlere katılır.", correctAnswer: "Le citoyen participe aux élections." },
+    { id: 1996, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le parlement", options: [{ id: "a", text: "Parlamento", correct: true }, { id: "b", text: "Hükümet", correct: false }, { id: "c", text: "Bütçe", correct: false }, { id: "d", text: "Koalisyon", correct: false }] },
+    { id: 1997, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La constitution", options: [{ id: "a", text: "Anayasa", correct: true }, { id: "b", text: "Yasa", correct: false }, { id: "c", text: "Seçim", correct: false }, { id: "d", text: "Program", correct: false }] },
+    { id: 1998, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le référendum", options: [{ id: "a", text: "Referandum", correct: true }, { id: "b", text: "Reform", correct: false }, { id: "c", text: "Koalisyon", correct: false }, { id: "d", text: "Muhalefet", correct: false }] },
+    { id: 1999, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La démocratie", options: [{ id: "a", text: "Demokrasi", correct: true }, { id: "b", text: "Monarşi", correct: false }, { id: "c", text: "Cumhuriyet", correct: false }, { id: "d", text: "Adalet", correct: false }] },
+    { id: 2000, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le ministre", options: [{ id: "a", text: "Bakan", correct: true }, { id: "b", text: "Başkan", correct: false }, { id: "c", text: "Seçmen", correct: false }, { id: "d", text: "Aday", correct: false }] }
+];
+
+// ===== UNIT 385 HARDCODED QUIZZES =====
+const unit385Quiz1: Question[] = [
+    // Quiz 1: Vocab & Basics
+    { id: 2001, type: "SELECT", question: "'La loi' ne demek?", options: [{ id: "a", text: "Yasa / Kanun", correct: true }, { id: "b", text: "Mahkeme", correct: false }, { id: "c", text: "Adalet", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 2002, type: "SELECT", question: "'Le tribunal' ne demek?", options: [{ id: "a", text: "Mahkeme", correct: true }, { id: "b", text: "Hapishane", correct: false }, { id: "c", text: "Hakim", correct: false }, { id: "d", text: "Sanık", correct: false }] },
+    { id: 2003, type: "SELECT", question: "'L'avocat' ne demek?", options: [{ id: "a", text: "Avukat", correct: true }, { id: "b", text: "Hakim", correct: false }, { id: "c", text: "Polis", correct: false }, { id: "d", text: "Kurban", correct: false }] },
+    { id: 2004, type: "SELECT", question: "'Le juge' ne demek?", options: [{ id: "a", text: "Hakim / Yargıç", correct: true }, { id: "b", text: "Avukat", correct: false }, { id: "c", text: "Suçlu", correct: false }, { id: "d", text: "Tanık", correct: false }] },
+    { id: 2005, type: "SELECT", question: "'Le procès' ne demek?", options: [{ id: "a", text: "Dava / Duruşma", correct: true }, { id: "b", text: "Karar", correct: false }, { id: "c", text: "Ceza", correct: false }, { id: "d", text: "Delil", correct: false }] },
+    { id: 2006, type: "SELECT", question: "'Le coupable' ne demek?", options: [{ id: "a", text: "Suçlu", correct: true }, { id: "b", text: "Masum", correct: false }, { id: "c", text: "Kurban", correct: false }, { id: "d", text: "Tanık", correct: false }] },
+    { id: 2007, type: "SELECT", question: "'La victime' ne demek?", options: [{ id: "a", text: "Kurban / Mağdur", correct: true }, { id: "b", text: "Suçlu", correct: false }, { id: "c", text: "Polis", correct: false }, { id: "d", text: "Hakim", correct: false }] },
+    { id: 2008, type: "SELECT", question: "'Le témoignage' ne demek?", options: [{ id: "a", text: "Tanıklık / İfade", correct: true }, { id: "b", text: "Kanıt", correct: false }, { id: "c", text: "Karar", correct: false }, { id: "d", text: "Suç", correct: false }] },
+    { id: 2009, type: "SELECT", question: "'La preuve' ne demek?", options: [{ id: "a", text: "Kanıt / Delil", correct: true }, { id: "b", text: "Ceza", correct: false }, { id: "c", text: "Avukat", correct: false }, { id: "d", text: "Hapishane", correct: false }] },
+    { id: 2010, type: "SELECT", question: "'La prison' ne demek?", options: [{ id: "a", text: "Hapishane", correct: true }, { id: "b", text: "Mahkeme", correct: false }, { id: "c", text: "Polis karakolu", correct: false }, { id: "d", text: "Adalet sarayı", correct: false }] },
+    { id: 2011, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'innocent", options: [{ id: "a", text: "Masum", correct: true }, { id: "b", text: "Suçlu", correct: false }, { id: "c", text: "Tanık", correct: false }, { id: "d", text: "Kurban", correct: false }] },
+    { id: 2012, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le crime", options: [{ id: "a", text: "Suç / Cinayet", correct: true }, { id: "b", text: "Ceza", correct: false }, { id: "c", text: "Karar", correct: false }, { id: "d", text: "Delil", correct: false }] },
+    { id: 2013, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'amende", options: [{ id: "a", text: "Para cezası", correct: true }, { id: "b", text: "Hapis", correct: false }, { id: "c", text: "Dava", correct: false }, { id: "d", text: "Savunma", correct: false }] },
+    { id: 2014, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le suspect", options: [{ id: "a", text: "Şüpheli", correct: true }, { id: "b", text: "Masum", correct: false }, { id: "c", text: "Hakim", correct: false }, { id: "d", text: "Avukat", correct: false }] },
+    { id: 2015, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La justice", options: [{ id: "a", text: "Adalet", correct: true }, { id: "b", text: "Kanun", correct: false }, { id: "c", text: "Mahkeme", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 2016, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ protège les citoyens.", options: [{ id: "a", text: "loi", correct: true }, { id: "b", text: "prison", correct: false }] },
+    { id: 2017, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ rend son verdict.", options: [{ id: "a", text: "juge", correct: true }, { id: "b", text: "suspect", correct: false }] },
+    { id: 2018, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ défend le suspect.", options: [{ id: "a", text: "avocat", correct: true }, { id: "b", text: "victime", correct: false }] },
+    { id: 2019, type: "FILL_BLANK", question: "Doldur:", sentence: "La police cherche une ___.", options: [{ id: "a", text: "preuve", correct: true }, { id: "b", text: "amende", correct: false }] },
+    { id: 2020, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ commence demain.", options: [{ id: "a", text: "procès", correct: true }, { id: "b", text: "crime", correct: false }] }
+];
+
+const unit385Quiz2: Question[] = [
+    // Quiz 2: Grammar & Speaking
+    { id: 2021, type: "SELECT", question: "Adalet isteklerinde hangi kip kullanılır?", options: [{ id: "a", text: "Subjonctif", correct: true }, { id: "b", text: "Conditionnel", correct: false }, { id: "c", text: "Impératif", correct: false }, { id: "d", text: "Indicatif", correct: false }] },
+    { id: 2022, type: "SELECT", question: "'Il est juste que...' ifadesinden sonra ne gelir?", options: [{ id: "a", text: "Subjonctif", correct: true }, { id: "b", text: "Futur", correct: false }, { id: "c", text: "Passé Composé", correct: false }, { id: "d", text: "Présent", correct: false }] },
+    { id: 2023, type: "SELECT", question: "Edilgen yapı (Passif) formülü nedir?", options: [{ id: "a", text: "Être + Participe Passé", correct: true }, { id: "b", text: "Avoir + Participe Passé", correct: false }, { id: "c", text: "Aller + Infinitif", correct: false }, { id: "d", text: "Venir de + Infinitif", correct: false }] },
+    { id: 2024, type: "SELECT", question: "İddialarda (kesinleşmemiş haberlerde) hangi kip kullanılır?", options: [{ id: "a", text: "Conditionnel", correct: true }, { id: "b", text: "Subjonctif", correct: false }, { id: "c", text: "Impératif", correct: false }, { id: "d", text: "Futur Simple", correct: false }] },
+    { id: 2025, type: "SELECT", question: "'Onun suçlu olduğu iddia ediliyor' çevirisi nasıldır?", options: [{ id: "a", text: "Il serait coupable.", correct: true }, { id: "b", text: "Il est coupable.", correct: false }, { id: "c", text: "Il était coupable.", correct: false }, { id: "d", text: "Il sera coupable.", correct: false }] },
+    { id: 2026, type: "SELECT", question: "Hangi cümle Subjonctif örneğidir?", options: [{ id: "a", text: "Il exige que le client soit libéré.", correct: true }, { id: "b", text: "Le client est libéré.", correct: false }, { id: "c", text: "Le client sera libéré.", correct: false }, { id: "d", text: "Le client a été libéré.", correct: false }] },
+    { id: 2027, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est juste que le coupable ___ puni.", options: [{ id: "a", text: "soit", correct: true }, { id: "b", text: "est", correct: false }] },
+    { id: 2028, type: "FILL_BLANK", question: "Doldur:", sentence: "L'accusé a ___ condamné à trois ans.", options: [{ id: "a", text: "été", correct: true }, { id: "b", text: "eu", correct: false }] },
+    { id: 2029, type: "FILL_BLANK", question: "Doldur:", sentence: "Le suspect ___ quitté le pays.", options: [{ id: "a", text: "aurait", correct: true }, { id: "b", text: "a", correct: false }] },
+    { id: 2030, type: "FILL_BLANK", question: "Doldur:", sentence: "La victime ___ indemnisée par l'État.", options: [{ id: "a", text: "sera", correct: true }, { id: "b", text: "est", correct: false }] },
+    { id: 2031, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Vous avez le droit de garder le silence.", options: [{ id: "a", text: "Sessiz kalma hakkınız var.", correct: true }, { id: "b", text: "Konuşma hakkınız var.", correct: false }, { id: "c", text: "Adalet istiyoruz.", correct: false }, { id: "d", text: "Ben masumum.", correct: false }] },
+    { id: 2032, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Je suis innocent de ces accusations.", options: [{ id: "a", text: "Ben bu suçlamalardan masumum.", correct: true }, { id: "b", text: "Ben suçluyum.", correct: false }, { id: "c", text: "Avukat istiyorum.", correct: false }, { id: "d", text: "Delil yok.", correct: false }] },
+    { id: 2033, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le procès commencera la semaine prochaine.", options: [{ id: "a", text: "Dava önümüzdeki hafta başlayacak.", correct: true }, { id: "b", text: "Dava bugün bitti.", correct: false }, { id: "c", text: "Mahkeme kapalı.", correct: false }, { id: "d", text: "Karar verildi.", correct: false }] },
+    { id: 2034, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le juge a rendu un verdict de culpabilité.", options: [{ id: "a", text: "Hakim suçluluk kararı verdi.", correct: true }, { id: "b", text: "Hakim beraat kararı verdi.", correct: false }, { id: "c", text: "Avukat konuşuyor.", correct: false }, { id: "d", text: "Tanık gelmedi.", correct: false }] },
+    { id: 2035, type: "SELECT", question: "Konuşma: 'L'accusé a été finalement acquitté.' ne demek?", options: [{ id: "a", text: "Sanık sonunda beraat etti.", correct: true }, { id: "b", text: "Sanık mahkum edildi.", correct: false }, { id: "c", text: "Sanık kaçtı.", correct: false }, { id: "d", text: "Sanık suçunu kabul etti.", correct: false }] },
+    { id: 2036, type: "SELECT", question: "Konuşma: 'Il a engagé un avocat.' ne demek?", options: [{ id: "a", text: "Bir avukat tuttu.", correct: true }, { id: "b", text: "Bir ev kiraladı.", correct: false }, { id: "c", text: "Polisi aradı.", correct: false }, { id: "d", text: "Hakim oldu.", correct: false }] },
+    { id: 2037, type: "TRANSLATE", question: "Çevir:", hint: "Suçlunun cezalandırılması adildir.", correctAnswer: "Il est juste que le coupable soit puni." },
+    { id: 2038, type: "TRANSLATE", question: "Çevir:", hint: "Sanık üç yıl hapis cezasına çarptırıldı.", correctAnswer: "L'accusé a été condamné à trois ans de prison." },
+    { id: 2039, type: "TRANSLATE", question: "Çevir:", hint: "Şüphelinin ülkeyi terk ettiği iddia ediliyor.", correctAnswer: "Le suspect aurait quitté le pays." },
+    { id: 2040, type: "TRANSLATE", question: "Çevir:", hint: "Avukat müvekkilinin serbest bırakılmasını talep ediyor.", correctAnswer: "L'avocat exige que son client soit libéré." }
+];
+
+const unit385Quiz3: Question[] = [
+    // Quiz 3: Reading Comprehension & Phrases
+    { id: 2041, type: "SELECT", question: "Qui est le personnage principal ?", options: [{ id: "a", text: "L'inspecteur Moreau", correct: true }, { id: "b", text: "Le juge", correct: false }, { id: "c", text: "L'avocat", correct: false }, { id: "d", text: "Le suspect", correct: false }] },
+    { id: 2042, type: "SELECT", question: "Que fait l'inspecteur ?", options: [{ id: "a", text: "Il examine les preuves", correct: true }, { id: "b", text: "Il dort", correct: false }, { id: "c", text: "Il regarde la télé", correct: false }, { id: "d", text: "Il voyage", correct: false }] },
+    { id: 2043, type: "SELECT", question: "Comment est le suspect ?", options: [{ id: "a", text: "Silencieux et calme", correct: true }, { id: "b", text: "Nerveux", correct: false }, { id: "c", text: "En colère", correct: false }, { id: "d", text: "Bavard", correct: false }] },
+    { id: 2044, type: "SELECT", question: "Que dit l'avocat de la défense ?", options: [{ id: "a", text: "Son client est innocent", correct: true }, { id: "b", text: "Son client est coupable", correct: false }, { id: "c", text: "Il n'y a pas de juge", correct: false }, { id: "d", text: "La police a raison", correct: false }] },
+    { id: 2045, type: "SELECT", question: "Qu'est-ce qui est incontestable ?", options: [{ id: "a", text: "L'ADN retrouvé sur place", correct: true }, { id: "b", text: "Le témoignage", correct: false }, { id: "c", text: "L'alibi", correct: false }, { id: "d", text: "Le climat", correct: false }] },
+    { id: 2046, type: "SELECT", question: "Comment la vérité se révélera-t-elle ?", options: [{ id: "a", text: "Sans l'aide du juge", correct: false }, { id: "b", text: "Au procès", correct: true }, { id: "c", text: "Dans le journal", correct: false }, { id: "d", text: "Rapidement", correct: false }] },
+    { id: 2047, type: "SELECT", question: "À quoi l'inspecteur tient-il ?", options: [{ id: "a", text: "À son café", correct: false }, { id: "b", text: "À ce que la justice soit faite", correct: true }, { id: "c", text: "À sa voiture", correct: false }, { id: "d", text: "À sa réputation", correct: false }] },
+    { id: 2048, type: "SELECT", question: "Le suspect parle-t-il beaucoup ?", options: [{ id: "a", text: "Non, il garde le silence", correct: true }, { id: "b", text: "Oui, tout le temps", correct: false }, { id: "c", text: "Seulement à l'avocat", correct: false }, { id: "d", text: "Oui, au journaliste", correct: false }] },
+    { id: 2049, type: "SELECT", question: "Où se passe l'action ?", options: [{ id: "a", text: "Dans le bureau de l'inspecteur", correct: true }, { id: "b", text: "Au tribunal", correct: false }, { id: "c", text: "Dans la rue", correct: false }, { id: "d", text: "Dans un café", correct: false }] },
+    { id: 2050, type: "SELECT", question: "Quel est l'objectif de l'enquête ?", options: [{ id: "a", text: "Trouver la vérité", correct: true }, { id: "b", text: "Arrêter l'avocat", correct: false }, { id: "c", text: "Fermer le dossier", correct: false }, { id: "d", text: "Prouver l'innocence", correct: false }] },
+    { id: 2051, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La police a trouvé de nouvelles preuves.", options: [{ id: "a", text: "Polis yeni deliller buldu.", correct: true }, { id: "b", text: "Polis suçluyu arıyor.", correct: false }, { id: "c", text: "Polis karakolu kapalı.", correct: false }, { id: "d", text: "Polis delil bulamadı.", correct: false }] },
+    { id: 2052, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Justice doit être rendue à la victime.", options: [{ id: "a", text: "Mağdur için adalet yerini bulmalıdır.", correct: true }, { id: "b", text: "Suçlu hapiste.", correct: false }, { id: "c", text: "Kurban intikam aldı.", correct: false }, { id: "d", text: "Mahkeme kararı verdi.", correct: false }] },
+    { id: 2053, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le voleur a été condamné à payer une amende.", options: [{ id: "a", text: "Hırsız para cezası ödemeye mahkum edildi.", correct: true }, { id: "b", text: "Hırsız hapse girdi.", correct: false }, { id: "c", text: "Hırsız masum bulundu.", correct: false }, { id: "d", text: "Hırsız kaçtı.", correct: false }] },
+    { id: 2054, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Nul n'est censé ignorer la loi.", options: [{ id: "a", text: "Kimse yasayı bilmemezlikten gelemez.", correct: true }, { id: "b", text: "Yasa herkes içindir.", correct: false }, { id: "c", text: "Yasa herkese eşittir.", correct: false }, { id: "d", text: "Yasaları bilmek zordur.", correct: false }] },
+    { id: 2055, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le système judiciaire est complexe.", options: [{ id: "a", text: "Yargı sistemi karmaşıktır.", correct: true }, { id: "b", text: "Adalet yavaştır.", correct: false }, { id: "c", text: "Mahkemeler kalabalık.", correct: false }, { id: "d", text: "Yargı sistemi basittir.", correct: false }] },
+    { id: 2056, type: "TRANSLATE", question: "Çevir:", hint: "Hakim / Yargıç", correctAnswer: "Le juge" },
+    { id: 2057, type: "TRANSLATE", question: "Çevir:", hint: "Dava / Duruşma", correctAnswer: "Le procès" },
+    { id: 2058, type: "TRANSLATE", question: "Çevir:", hint: "Suçlu", correctAnswer: "Le coupable" },
+    { id: 2059, type: "TRANSLATE", question: "Çevir:", hint: "Kanıt / Delil", correctAnswer: "La preuve" },
+    { id: 2060, type: "TRANSLATE", question: "Çevir:", hint: "Avukat", correctAnswer: "L'avocat" }
+];
+
+const unit385Quiz4: Question[] = [
+    // Quiz 4: Mixed Challenge
+    { id: 2061, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ commence la semaine prochaine.", options: [{ id: "a", text: "procès", correct: true }, { id: "b", text: "débat", correct: false }] },
+    { id: 2062, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle ___ au tribunal demain.", options: [{ id: "a", text: "témoignera", correct: true }, { id: "b", text: "témoigne", correct: false }] },
+    { id: 2063, type: "FILL_BLANK", question: "Doldur:", sentence: "Le suspect a été ___ hier soir.", options: [{ id: "a", text: "arrêté", correct: true }, { id: "b", text: "libéré", correct: false }] },
+    { id: 2064, type: "FILL_BLANK", question: "Doldur:", sentence: "L'accusé a été finalement ___.", options: [{ id: "a", text: "acquitté", correct: true }, { id: "b", text: "arrête", correct: false }] },
+    { id: 2065, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est rendue.", options: [{ id: "a", text: "justice", correct: true }, { id: "b", text: "loi", correct: false }] },
+    { id: 2066, type: "SELECT", question: "'L'acquittement' ne demek?", options: [{ id: "a", text: "Beraat", correct: true }, { id: "b", text: "Ceza", correct: false }, { id: "c", text: "Suçlama", correct: false }, { id: "d", text: "Tanıklık", correct: false }] },
+    { id: 2067, type: "SELECT", question: "'Le droit' ne demek?", options: [{ id: "a", text: "Hak / Hukuk", correct: true }, { id: "b", text: "Sol", correct: false }, { id: "c", text: "Kanun", correct: false }, { id: "d", text: "Ceza", correct: false }] },
+    { id: 2068, type: "SELECT", question: "'Le témoignage' ne demek?", options: [{ id: "a", text: "Tanıklık", correct: true }, { id: "b", text: "Yalan", correct: false }, { id: "c", text: "Suç", correct: false }, { id: "d", text: "Hakim", correct: false }] },
+    { id: 2069, type: "SELECT", question: "'L'innocence' ne demek?", options: [{ id: "a", text: "Masumiyet", correct: true }, { id: "b", text: "Suçluluk", correct: false }, { id: "c", text: "Ceza", correct: false }, { id: "d", text: "Kanıt", correct: false }] },
+    { id: 2070, type: "SELECT", question: "'Le verdict' ne demek?", options: [{ id: "a", text: "Karar", correct: true }, { id: "b", text: "Dava", correct: false }, { id: "c", text: "Suç", correct: false }, { id: "d", text: "Delil", correct: false }] },
+    { id: 2071, type: "TRANSLATE", question: "Çevir:", hint: "Şüpheli dün akşam tutuklandı.", correctAnswer: "Le suspect a été arrêté hier soir." },
+    { id: 2072, type: "TRANSLATE", question: "Çevir:", hint: "Polis yeni deliller buldu.", correctAnswer: "La police a trouvé de nouvelles preuves." },
+    { id: 2073, type: "TRANSLATE", question: "Çevir:", hint: "Avukat savunma yapıyor.", correctAnswer: "L'avocat fait la défense." },
+    { id: 2074, type: "TRANSLATE", question: "Çevir:", hint: "Hakim suçluluk kararı verdi.", correctAnswer: "Le juge a rendu un verdict de culpabilité." },
+    { id: 2075, type: "TRANSLATE", question: "Çevir:", hint: "Herkesin adil bir yargılanma hakkı vardır.", correctAnswer: "Tout le monde a droit à un procès équitable." },
+    { id: 2076, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le tribunal", options: [{ id: "a", text: "Mahkeme", correct: true }, { id: "b", text: "Hapishane", correct: false }, { id: "c", text: "Karakol", correct: false }, { id: "d", text: "Kanun", correct: false }] },
+    { id: 2077, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'avocat", options: [{ id: "a", text: "Avukat", correct: true }, { id: "b", text: "Yargıç", correct: false }, { id: "c", text: "Savcı", correct: false }, { id: "d", text: "Tanık", correct: false }] },
+    { id: 2078, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le juge", options: [{ id: "a", text: "Hakim", correct: true }, { id: "b", text: "Sanık", correct: false }, { id: "c", text: "Avukat", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 2079, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La loi", options: [{ id: "a", text: "Yasa", correct: true }, { id: "b", text: "Mahkeme", correct: false }, { id: "c", text: "Dava", correct: false }, { id: "d", text: "Hakim", correct: false }] },
+    { id: 2080, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La victime", options: [{ id: "a", text: "Kurban", correct: true }, { id: "b", text: "Tanık", correct: false }, { id: "c", text: "Masum", correct: false }, { id: "d", text: "Suçlu", correct: false }] }
+];
+
+
+// Seeded random number generator for reliable questions per unit
 function seededRandom(seed: number) {
     let x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
 }
+const unit386Quiz1: Question[] = [
+    {
+        id: 2081,
+        type: "SELECT",
+        question: "'İnsan hakları' ifadesinin Fransızcası nedir?",
+        options: [
+            { id: "a", text: "Les droits de l'homme", correct: true },
+            { id: "b", text: "La liberté", correct: false },
+            { id: "c", text: "L'égalité", correct: false },
+            { id: "d", text: "La paix", correct: false }
+        ]
+    },
+    {
+        id: 2082,
+        type: "SELECT",
+        question: "Hangi kelime 'ayrımcılık' anlamına gelir?",
+        options: [
+            { id: "a", text: "La paix", correct: false },
+            { id: "b", text: "La discrimination", correct: true },
+            { id: "c", text: "L'égalité", correct: false },
+            { id: "d", text: "Le racisme", correct: false }
+        ]
+    },
+    {
+        id: 2083,
+        type: "SELECT",
+        question: "'Le réfugié' kelimesinin anlamı nedir?",
+        options: [
+            { id: "a", text: "Vatandaş", correct: false },
+            { id: "b", text: "Mülteci", correct: true },
+            { id: "c", text: "Gösterici", correct: false },
+            { id: "d", text: "Polis", correct: false }
+        ]
+    },
+    {
+        id: 2084,
+        type: "TRANSLATE",
+        question: "Çevir:",
+        hint: "Özgürlük değerli bir haktır.",
+        correctAnswer: "La liberté est un droit précieux."
+    },
+    {
+        id: 2085,
+        type: "LISTENING",
+        question: "Duyduğunu seç:",
+        audioText: "C'est une grande injustice sociale.",
+        options: [
+            { id: "a", text: "Bu büyük bir sosyal adaletsizliktir.", correct: true },
+            { id: "b", text: "Bu büyük bir barıştır.", correct: false },
+            { id: "c", text: "Bu büyük bir eşitliktir.", correct: false },
+            { id: "d", text: "Bu büyük bir haktır.", correct: false }
+        ]
+    }
+];
+
+const unit386Quiz2: Question[] = [
+    {
+        id: 2086,
+        type: "FILL_BLANK",
+        question: "Doldur:",
+        sentence: "Il est nécessaire que nous ___ (respecter) les droits.",
+        options: [
+            { id: "a", text: "respections", correct: true },
+            { id: "b", text: "respectons", correct: false }
+        ]
+    },
+    {
+        id: 2087,
+        type: "SELECT",
+        question: "Hangi cümle edilgen yapıdadır (Le Passif)?",
+        options: [
+            { id: "a", text: "Le gouvernement protège les droits.", correct: false },
+            { id: "b", text: "Les réfugiés sont protégés par la loi.", correct: true },
+            { id: "c", text: "Ils demandent la paix.", correct: false },
+            { id: "d", text: "Nous luttons contre le racisme.", correct: false }
+        ]
+    },
+    {
+        id: 2088,
+        type: "TRANSLATE",
+        question: "Çevir:",
+        hint: "Herkesin özgürce yaşama hakkı vardır.",
+        correctAnswer: "Tout le monde a le droit de vivre en liberté."
+    },
+    {
+        id: 2089,
+        type: "FILL_BLANK",
+        question: "Doldur:",
+        sentence: "Ils exigent que la loi ___ (changer).",
+        options: [
+            { id: "a", text: "change", correct: true },
+            { id: "b", text: "changent", correct: false }
+        ]
+    },
+    {
+        id: 2090,
+        type: "LISTENING",
+        question: "Duyduğunu seç:",
+        audioText: "L'égalité est une valeur fondamentale.",
+        options: [
+            { id: "a", text: "Eşitlik temel bir değerdir.", correct: true },
+            { id: "b", text: "Özgürlük temel bir değerdir.", correct: false },
+            { id: "c", text: "Barış temel bir değerdir.", correct: false },
+            { id: "d", text: "Adalet temel bir değerdir.", correct: false }
+        ]
+    }
+];
+
+const unit386Quiz3: Question[] = [
+    {
+        id: 2091,
+        type: "SELECT",
+        question: "Okuma parçasına göre, vatandaşlar neden meydanda toplandı?",
+        options: [
+            { id: "a", text: "Alışveriş yapmak için", correct: false },
+            { id: "b", text: "Barışçıl bir şekilde gösteri yapmak için", correct: true },
+            { id: "c", text: "Miting izlemek için", correct: false },
+            { id: "d", text: "Konser için", correct: false }
+        ]
+    },
+    {
+        id: 2092,
+        type: "SELECT",
+        question: "Pankartlarda ne talep ediliyordu?",
+        options: [
+            { id: "a", text: "Daha fazla eşitlik ve ayrımcılığın sonu", correct: true },
+            { id: "b", text: "Daha fazla iş", correct: false },
+            { id: "c", text: "Daha düşük vergiler", correct: false },
+            { id: "d", text: "Daha fazla tatil", correct: false }
+        ]
+    },
+    {
+        id: 2093,
+        type: "SELECT",
+        question: "Hareketin sözcüsü hangi konu üzerine konuştu?",
+        options: [
+            { id: "a", text: "Ekonomi", correct: false },
+            { id: "b", text: "Çevre", correct: false },
+            { id: "c", text: "İnsan haklarının önemi", correct: true },
+            { id: "d", text: "Eğitim", correct: false }
+        ]
+    },
+    {
+        id: 2094,
+        type: "SELECT",
+        question: "Sözcü sağlıklı bir demokrasi için neyin temel olduğunu söyledi?",
+        options: [
+            { id: "a", text: "Oy hakkının", correct: false },
+            { id: "b", text: "İfade özgürlüğünün", correct: true },
+            { id: "c", text: "Zenginliğin", correct: false },
+            { id: "d", text: "Polisin", correct: false }
+        ]
+    },
+    {
+        id: 2095,
+        type: "SELECT",
+        question: "Gösteri nasıl sona erdi?",
+        options: [
+            { id: "a", text: "Şiddetle", correct: false },
+            { id: "b", text: "Kaosla", correct: false },
+            { id: "c", text: "Sakin bir şekilde (dans le calme)", correct: true },
+            { id: "d", text: "Yağmur nedeniyle", correct: false }
+        ]
+    }
+];
+
+const unit386Quiz4: Question[] = [
+    {
+        id: 2096,
+        type: "SELECT",
+        question: "'Protéger' fiilinin anlamı nedir?",
+        options: [
+            { id: "a", text: "Protesto etmek", correct: false },
+            { id: "b", text: "Korumak", correct: true },
+            { id: "c", text: "Yargılamak", correct: false },
+            { id: "d", text: "Göstermek", correct: false }
+        ]
+    },
+    {
+        id: 2097,
+        type: "FILL_BLANK",
+        question: "Doldur:",
+        sentence: "Il est essentiel que le gouvernement ___ (agir).",
+        options: [
+            { id: "a", text: "agisse", correct: true },
+            { id: "b", text: "agit", correct: false }
+        ]
+    },
+    {
+        id: 2098,
+        type: "TRANSLATE",
+        question: "Çevir:",
+        hint: "Haklarımız için gösteri yapıyoruz.",
+        correctAnswer: "Nous manifestons pour nos droits."
+    },
+    {
+        id: 2099,
+        type: "SELECT",
+        question: "Hangi cümle 'İfade özgürlüğü garanti altına alınmalıdır' anlamına gelir?",
+        options: [
+            { id: "a", text: "La liberté d'expression doit être garantie.", correct: true },
+            { id: "b", text: "Tout le monde doit parler.", correct: false },
+            { id: "c", text: "Il faut écouter les réfugiés.", correct: false },
+            { id: "d", text: "Nous luttons pour la liberté.", correct: false }
+        ]
+    },
+    {
+        id: 2100,
+        type: "LISTENING",
+        question: "Duyduğunu seç:",
+        audioText: "Tous les êtres humains naissent libres et égaux.",
+        options: [
+            { id: "a", text: "Bütün insanlar özgür ve eşit doğarlar.", correct: true },
+            { id: "b", text: "İnsan haklarına saygı duymalıyız.", correct: false },
+            { id: "c", text: "Özgürlük bir haktır.", correct: false },
+            { id: "d", text: "Irkçılığa karşı mücadele ediyoruz.", correct: false }
+        ]
+    }
+];
+
+const unit387Quiz1: Question[] = [
+    {
+        id: 2101,
+        type: "SELECT",
+        question: "'Gönüllülük' ifadesinin Fransızcası nedir?",
+        options: [
+            { id: "a", text: "Le bénévolat", correct: true },
+            { id: "b", text: "La solidarité", correct: false },
+            { id: "c", text: "La communauté", correct: false },
+            { id: "d", text: "Le soutien", correct: false }
+        ]
+    },
+    {
+        id: 2102,
+        type: "SELECT",
+        question: "Hangi kelime 'hayır kurumu / dernek' anlamına gelir?",
+        options: [
+            { id: "a", text: "La cause", correct: false },
+            { id: "b", text: "L'association caritative", correct: true },
+            { id: "c", text: "Le bénévole", correct: false },
+            { id: "d", text: "La distribution", correct: false }
+        ]
+    },
+    {
+        id: 2103,
+        type: "SELECT",
+        question: "'Faire un don' ne anlama gelir?",
+        options: [
+            { id: "a", text: "Bağış yapmak", correct: true },
+            { id: "b", text: "Yardım etmek", correct: false },
+            { id: "c", text: "Katılmak", correct: false },
+            { id: "d", text: "Dağıtmak", correct: false }
+        ]
+    },
+    {
+        id: 2104,
+        type: "TRANSLATE",
+        question: "Çevir:",
+        hint: "Zor durumdaki çocuklara yardım etmeyi sever.",
+        correctAnswer: "Il aime aider les enfants en difficulté."
+    },
+    {
+        id: 2105,
+        type: "LISTENING",
+        question: "Duyduğunu seç:",
+        audioText: "Les bénévoles aident les personnes démunies.",
+        options: [
+            { id: "a", text: "Gönüllüler yoksul insanlara yardım eder.", correct: true },
+            { id: "b", text: "Doktorlar hastalara yardım eder.", correct: false },
+            { id: "c", text: "Gönüllülük Fransa'da yaygındır.", correct: false },
+            { id: "d", text: "Dernek yeni üyeler arıyor.", correct: false }
+        ]
+    }
+];
+
+const unit387Quiz2: Question[] = [
+    {
+        id: 2106,
+        type: "FILL_BLANK",
+        question: "Doldur (Amaç):",
+        sentence: "Nous faisons des dons ___ que la recherche avance.",
+        options: [
+            { id: "a", text: "afin", correct: true },
+            { id: "b", text: "pour", correct: false }
+        ]
+    },
+    {
+        id: 2107,
+        type: "FILL_BLANK",
+        question: "Doldur (Belgisiz Zamir):",
+        sentence: "___ peut faire la différence.",
+        options: [
+            { id: "a", text: "Chacun", correct: true },
+            { id: "b", text: "Personne", correct: false }
+        ]
+    },
+    {
+        id: 2108,
+        type: "TRANSLATE",
+        question: "Çevir:",
+        hint: "Yemek dağıtmaya söz verdi.",
+        correctAnswer: "Elle s'est engagée à distribuer des repas."
+    },
+    {
+        id: 2109,
+        type: "FILL_BLANK",
+        question: "Doldur (Subjonctif):",
+        sentence: "Je travaille comme bénévole pour que les enfants ___ (avoir) un avenir.",
+        options: [
+            { id: "a", text: "aient", correct: true },
+            { id: "b", text: "ont", correct: false }
+        ]
+    },
+    {
+        id: 2110,
+        type: "LISTENING",
+        question: "Duyduğunu seç:",
+        audioText: "C'est important d'aider les autres.",
+        options: [
+            { id: "a", text: "Başkalarına yardım etmek önemlidir.", correct: true },
+            { id: "b", text: "Gönüllü olmak isterdim.", correct: false },
+            { id: "c", text: "Dayanışma bizi güçlü kılar.", correct: false },
+            { id: "d", text: "Bağış yapmak önemlidir.", correct: false }
+        ]
+    }
+];
+
+const unit387Quiz3: Question[] = [
+    {
+        id: 2111,
+        type: "SELECT",
+        question: "Okuma parçasına göre, dernek ne organize etti?",
+        options: [
+            { id: "a", text: "Büyük bir yemek dağıtımı", correct: true },
+            { id: "b", text: "Kıyafet toplama kampanyası", correct: false },
+            { id: "c", text: "Bağış gecesi", correct: false },
+            { id: "d", text: "Yürüyüş", correct: false }
+        ]
+    },
+    {
+        id: 2112,
+        type: "SELECT",
+        question: "Kimler gönüllü olarak katıldı?",
+        options: [
+            { id: "a", text: "Sadece yaşlılar", correct: false },
+            { id: "b", text: "Birçok genç", correct: true },
+            { id: "c", text: "Çocuklar", correct: false },
+            { id: "d", text: "Sadece dernek başkanı", correct: false }
+        ]
+    },
+    {
+        id: 2113,
+        type: "SELECT",
+        question: "Yemekler nerede dağıtıldı?",
+        options: [
+            { id: "a", text: "Okullarda", correct: false },
+            { id: "b", text: "Şehir merkezinde", correct: true },
+            { id: "c", text: "Hastanelerde", correct: false },
+            { id: "d", text: "Parklarda", correct: false }
+        ]
+    },
+    {
+        id: 2114,
+        type: "SELECT",
+        question: "Dernek başkanına göre, ne yapmak para vermek kadar önemlidir?",
+        options: [
+            { id: "a", text: "Kıyafet vermek", correct: false },
+            { id: "b", text: "Zamanından bağış yapmak", correct: true },
+            { id: "c", text: "Yemek pişirmek", correct: false },
+            { id: "d", text: "Uyumak", correct: false }
+        ]
+    },
+    {
+        id: 2115,
+        type: "SELECT",
+        question: "Etkinlik neyi kanıtladı?",
+        options: [
+            { id: "a", text: "Herkesin kendi çapında yardım edebileceğini", correct: true },
+            { id: "b", text: "Gönüllü bulmanın zor olduğunu", correct: false },
+            { id: "c", text: "Sadece zenginlerin yardım edebileceğini", correct: false },
+            { id: "d", text: "Yemek yapmanın zor olduğunu", correct: false }
+        ]
+    }
+];
+
+const unit387Quiz4: Question[] = [
+    {
+        id: 2116,
+        type: "SELECT",
+        question: "'La solidarité' kelimesinin anlamı nedir?",
+        options: [
+            { id: "a", text: "Dayanışma", correct: true },
+            { id: "b", text: "Topluluk", correct: false },
+            { id: "c", text: "Destek", correct: false },
+            { id: "d", text: "Bağış", correct: false }
+        ]
+    },
+    {
+        id: 2117,
+        type: "FILL_BLANK",
+        question: "Doldur:",
+        sentence: "___ ne doit être oublié.",
+        options: [
+            { id: "a", text: "Personne", correct: true },
+            { id: "b", text: "Tout le monde", correct: false }
+        ]
+    },
+    {
+        id: 2118,
+        type: "TRANSLATE",
+        question: "Çevir:",
+        hint: "Boş zamanımı başkalarına adıyorum.",
+        correctAnswer: "Je consacre mon temps libre aux autres."
+    },
+    {
+        id: 2119,
+        type: "SELECT",
+        question: "Hangi cümle 'Bu asil bir amaç' anlamına gelir?",
+        options: [
+            { id: "a", text: "C'est une cause noble.", correct: true },
+            { id: "b", text: "C'est un don important.", correct: false },
+            { id: "c", text: "Le bénévolat est répandu.", correct: false },
+            { id: "d", text: "Il aime aider.", correct: false }
+        ]
+    },
+    {
+        id: 2120,
+        type: "LISTENING",
+        question: "Duyduğunu seç:",
+        audioText: "La solidarité nous rend plus forts.",
+        options: [
+            { id: "a", text: "Dayanışma bizi daha güçlü kılar.", correct: true },
+            { id: "b", text: "Ekip çalışması esastır.", correct: false },
+            { id: "c", text: "Bir dernekte gönüllüyüm.", correct: false },
+            { id: "d", text: "Bağış yapmaktan çekinmeyin.", correct: false }
+        ]
+    }
+];
 
 function shuffle<T>(array: T[], seed: number): T[] {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -1282,6 +2982,111 @@ export function getFrenchB1Quiz(unitId: number, quizIndex: number): Question[] {
         if (quizIndex === 2) return unit372Quiz2;
         if (quizIndex === 3) return unit372Quiz3;
         if (quizIndex === 4) return unit372Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 373
+    if (unitId === 373) {
+        if (quizIndex === 1) return unit373Quiz1;
+        if (quizIndex === 2) return unit373Quiz2;
+        if (quizIndex === 3) return unit373Quiz3;
+        if (quizIndex === 4) return unit373Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 374
+    if (unitId === 374) {
+        if (quizIndex === 1) return unit374Quiz1;
+        if (quizIndex === 2) return unit374Quiz2;
+        if (quizIndex === 3) return unit374Quiz3;
+        if (quizIndex === 4) return unit374Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 375
+    if (unitId === 375) {
+        if (quizIndex === 1) return unit375Quiz1;
+        if (quizIndex === 2) return unit375Quiz2;
+        if (quizIndex === 3) return unit375Quiz3;
+        if (quizIndex === 4) return unit375Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 376
+    if (unitId === 376) {
+        if (quizIndex === 1) return unit376Quiz1;
+        if (quizIndex === 2) return unit376Quiz2;
+        if (quizIndex === 3) return unit376Quiz3;
+        if (quizIndex === 4) return unit376Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 377
+    if (unitId === 377) {
+        if (quizIndex === 1) return unit377Quiz1;
+        if (quizIndex === 2) return unit377Quiz2;
+        if (quizIndex === 3) return unit377Quiz3;
+        if (quizIndex === 4) return unit377Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 378
+    if (unitId === 378) {
+        if (quizIndex === 1) return unit378Quiz1;
+        if (quizIndex === 2) return unit378Quiz2;
+        if (quizIndex === 3) return unit378Quiz3;
+        if (quizIndex === 4) return unit378Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 379
+    if (unitId === 379) {
+        if (quizIndex === 1) return unit379Quiz1;
+        if (quizIndex === 2) return unit379Quiz2;
+        if (quizIndex === 3) return unit379Quiz3;
+        if (quizIndex === 4) return unit379Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 380
+    if (unitId === 380) {
+        if (quizIndex === 1) return unit380Quiz1;
+        if (quizIndex === 2) return unit380Quiz2;
+        if (quizIndex === 3) return unit380Quiz3;
+        if (quizIndex === 4) return unit380Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 381
+    if (unitId === 381) {
+        if (quizIndex === 1) return unit381Quiz1;
+        if (quizIndex === 2) return unit381Quiz2;
+        if (quizIndex === 3) return unit381Quiz3;
+        if (quizIndex === 4) return unit381Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 382
+    if (unitId === 382) {
+        if (quizIndex === 1) return unit382Quiz1;
+        if (quizIndex === 2) return unit382Quiz2;
+        if (quizIndex === 3) return unit382Quiz3;
+        if (quizIndex === 4) return unit382Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 383
+    if (unitId === 383) {
+        if (quizIndex === 1) return unit383Quiz1;
+        if (quizIndex === 2) return unit383Quiz2;
+        if (quizIndex === 3) return unit383Quiz3;
+        if (quizIndex === 4) return unit383Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 384
+    if (unitId === 384) {
+        if (quizIndex === 1) return unit384Quiz1;
+        if (quizIndex === 2) return unit384Quiz2;
+        if (quizIndex === 3) return unit384Quiz3;
+        if (quizIndex === 4) return unit384Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 385
+    if (unitId === 385) {
+        if (quizIndex === 1) return unit385Quiz1;
+        if (quizIndex === 2) return unit385Quiz2;
+        if (quizIndex === 3) return unit385Quiz3;
+        if (quizIndex === 4) return unit385Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 386
+    if (unitId === 386) {
+        if (quizIndex === 1) return unit386Quiz1;
+        if (quizIndex === 2) return unit386Quiz2;
+        if (quizIndex === 3) return unit386Quiz3;
+        if (quizIndex === 4) return unit386Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 387
+    if (unitId === 387) {
+        if (quizIndex === 1) return unit387Quiz1;
+        if (quizIndex === 2) return unit387Quiz2;
+        if (quizIndex === 3) return unit387Quiz3;
+        if (quizIndex === 4) return unit387Quiz4;
     }
 
     // Dynamic Generator for rest of the units

@@ -29,9 +29,16 @@ interface UseSpeechReturn {
     error: string | null;
 }
 
-export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
+interface UseSpeechOptions {
+    continuousMode?: boolean;
+    onSilence?: (text: string) => void;
+    silenceTimeoutMs?: number;
+}
+
+export function useSpeech(languageCode: string = 'es', options?: UseSpeechOptions): UseSpeechReturn & { isMouthOpen: boolean } {
     const [isListening, setIsListening] = useState(false);
     const [isSpeaking, setIsSpeaking] = useState(false);
+    const [isMouthOpen, setIsMouthOpen] = useState(false);
     const [transcript, setTranscript] = useState('');
     const [error, setError] = useState<string | null>(null);
     const [isSupported, setIsSupported] = useState(true);
@@ -39,6 +46,7 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const recognitionRef = useRef<any>(null);
     const synthRef = useRef<SpeechSynthesis | null>(null);
+    const silenceTimerRef = useRef<NodeJS.Timeout | null>(null);
 
     // Browser desteği kontrolü ve sesleri yükleme
     useEffect(() => {
@@ -97,7 +105,17 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
                 }
 
                 // Final varsa onu set et, yoksa interimi set et ki UI'da canlı dalgalanma görünsün.
-                setTranscript(finalTranscript || interimTranscript);
+                const currentText = finalTranscript || interimTranscript;
+                setTranscript(currentText);
+
+                // Silence Detection Logic for Call Mode
+                if (options?.continuousMode && options?.onSilence && currentText.trim()) {
+                    if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+                    silenceTimerRef.current = setTimeout(() => {
+                        options.onSilence!(currentText);
+                        setTranscript('');
+                    }, options.silenceTimeoutMs || 1500);
+                }
             };
 
             recognition.onerror = (event) => {
@@ -198,11 +216,28 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
             console.log("Seçilen TTS Sesi:", utterance.voice.name, utterance.voice.lang);
         }
 
-        utterance.onstart = () => setIsSpeaking(true);
-        utterance.onend = () => setIsSpeaking(false);
+        utterance.onstart = () => {
+            setIsSpeaking(true);
+            setIsMouthOpen(true);
+        };
+        
+        // Lip sync emulation using word boundaries
+        utterance.onboundary = (e) => {
+            if (e.name === "word") {
+                setIsMouthOpen(true);
+                setTimeout(() => setIsMouthOpen(false), 100);
+            }
+        };
+
+        utterance.onend = () => {
+            setIsSpeaking(false);
+            setIsMouthOpen(false);
+        };
+        
         utterance.onerror = (e) => {
             console.error("Speech Synthesis Error:", e);
             setIsSpeaking(false);
+            setIsMouthOpen(false);
         };
 
         synthRef.current.speak(utterance);
@@ -225,6 +260,9 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
             if (synthRef.current) {
                 synthRef.current.cancel();
             }
+            if (silenceTimerRef.current) {
+                clearTimeout(silenceTimerRef.current);
+            }
         };
     }, []);
 
@@ -237,7 +275,8 @@ export function useSpeech(languageCode: string = 'es'): UseSpeechReturn {
         speak,
         stopSpeaking,
         isSupported,
-        error
+        error,
+        isMouthOpen
     };
 }
 

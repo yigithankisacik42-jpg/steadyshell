@@ -960,6 +960,1140 @@ const unit372Reading: UnitReading = {
   ]
 };
 
+const unit373Reading: UnitReading = {
+  unitId: 373,
+  title: "Voyager avec Respect",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Camille voyage au Japon pour la première fois. Avant de partir, elle s'est renseignée sur les coutumes locales. Elle a appris qu'il faut enlever ses chaussures en entrant chez quelqu'un et parler doucement dans les temples.\n\nLe premier jour, elle visite un marché local et goûte des spécialités. Un guide touristique lui explique le sens de certains gestes et l'importance de la politesse. Le soir, Camille assiste à une fête traditionnelle; elle porte une tenue correcte et respecte les règles.\n\nElle découvre aussi que le pourboire n'est pas habituel et qu'il vaut mieux éviter certains sujets sensibles. À la fin du séjour, Camille se sent plus proche de la culture et comprend que voyager, c'est s'adapter et respecter.",
+    translation: "Camille ilk kez Japonya'ya seyahat ediyor. Yola çıkmadan önce yerel gelenekler hakkında bilgi aldı. Birinin evine girerken ayakkabılarını çıkarmak gerektiğini ve tapınaklarda alçak sesle konuşulması gerektiğini öğrendi.\n\nİlk gün yerel bir pazarı ziyaret ediyor ve yöresel tatları deniyor. Turistik bir rehber bazı jestlerin anlamını ve nezaketin önemini açıklıyor. Akşam, Camille geleneksel bir festivale katılıyor; uygun bir kıyafet giyiyor ve kurallara uyuyor.\n\nAyrıca bahşişin yaygın olmadığını ve bazı hassas konulardan kaçınmanın daha iyi olduğunu keşfediyor. Seyahatin sonunda Camille kendini kültüre daha yakın hissediyor ve seyahat etmenin uyum sağlamak ve saygı göstermek olduğunu anlıyor."
+  },
+  vocabulary: [
+    { word: "Les coutumes", meaning: "Gelenekler" },
+    { word: "Se renseigner", meaning: "Bilgi almak" },
+    { word: "Le pourboire", meaning: "Bahşiş" },
+    { word: "La tenue", meaning: "Kıyafet / Kılık" },
+    { word: "S'adapter", meaning: "Uyum sağlamak" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Où voyage Camille ?",
+      options: ["En Italie", "Au Japon", "Au Canada", "En Espagne"],
+      correctAnswer: "Au Japon"
+    },
+    {
+      id: 2,
+      question: "Que fait-elle avant de partir ?",
+      options: ["Elle achète un nouveau téléphone", "Elle se renseigne sur les coutumes locales", "Elle change d'hôtel", "Elle apprend à conduire"],
+      correctAnswer: "Elle se renseigne sur les coutumes locales"
+    },
+    {
+      id: 3,
+      question: "Que faut-il faire en entrant chez quelqu'un ?",
+      options: ["Parler fort", "Enlever ses chaussures", "Apporter un cadeau", "Prendre des photos"],
+      correctAnswer: "Enlever ses chaussures"
+    },
+    {
+      id: 4,
+      question: "Où doit-on parler doucement ?",
+      options: ["Dans les temples", "Dans les restaurants", "Dans les marchés", "Dans les bus"],
+      correctAnswer: "Dans les temples"
+    },
+    {
+      id: 5,
+      question: "Quel endroit visite-t-elle le premier jour ?",
+      options: ["Un musée", "Un marché local", "Un stade", "Une école"],
+      correctAnswer: "Un marché local"
+    },
+    {
+      id: 6,
+      question: "Que lui explique le guide touristique ?",
+      options: ["Les horaires du train", "Le sens de certains gestes et la politesse", "Les prix des hôtels", "La météo"],
+      correctAnswer: "Le sens de certains gestes et la politesse"
+    },
+    {
+      id: 7,
+      question: "À quoi assiste Camille le soir ?",
+      options: ["À un concert", "À une fête traditionnelle", "À un match", "À une conférence"],
+      correctAnswer: "À une fête traditionnelle"
+    },
+    {
+      id: 8,
+      question: "Pourquoi porte-t-elle une tenue correcte ?",
+      options: ["Pour faire du sport", "Pour respecter les règles", "Pour aller à la plage", "Pour prendre le métro"],
+      correctAnswer: "Pour respecter les règles"
+    },
+    {
+      id: 9,
+      question: "Que découvre-t-elle au sujet du pourboire ?",
+      options: ["Il est obligatoire", "Il n'est pas habituel", "Il est très élevé", "Il est interdit partout"],
+      correctAnswer: "Il n'est pas habituel"
+    },
+    {
+      id: 10,
+      question: "Que comprend-elle à la fin du séjour ?",
+      options: ["Voyager coûte trop cher", "Voyager, c'est s'adapter et respecter", "Voyager, c'est rester seul", "Voyager est inutile"],
+      correctAnswer: "Voyager, c'est s'adapter et respecter"
+    }
+  ]
+};
+
+const unit374Reading: UnitReading = {
+  unitId: 374,
+  title: "Deux Familles, Deux Cultures",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Marie, une étudiante française, passe un semestre en Turquie. Elle est invitée à dîner chez la famille de son amie Elif. Dès son arrivée, elle remarque que la famille élargie est présente: les grands-parents, les oncles et les tantes.\n\nLe repas commence par des salades et des plats traditionnels. Tout le monde partage les mêmes plats, et Marie trouve cette habitude très chaleureuse. Elle apprend aussi qu'il est poli d'accepter au moins un peu de chaque plat et de remercier plusieurs fois.\n\nAprès le dîner, la famille discute autour d'un thé. Les sujets sont variés: la vie quotidienne, les études, les traditions. Marie compare cette soirée avec les dîners en France, où les repas sont souvent plus courts. Elle comprend qu'il n'y a pas une seule manière de vivre: chaque culture a ses valeurs et ses codes. À la fin, elle se sent plus ouverte d'esprit.",
+    translation: "Fransız öğrenci Marie, Türkiye'de bir dönem geçiriyor. Arkadaşı Elif'in ailesine akşam yemeğine davet ediliyor. Daha gelir gelmez geniş ailenin orada olduğunu fark ediyor: büyükanne, büyükbaba, amcalar ve teyzeler.\n\nYemek salatalar ve geleneksel yemeklerle başlıyor. Herkes aynı yemekleri paylaşıyor ve Marie bu alışkanlığı çok sıcak buluyor. Ayrıca her yemekten en az biraz kabul etmenin ve birkaç kez teşekkür etmenin nezaket olduğunu öğreniyor.\n\nAkşam yemeğinden sonra aile çay eşliğinde sohbet ediyor. Konular çeşitli: günlük yaşam, eğitim, gelenekler. Marie bu akşamı Fransa'daki yemeklerle karşılaştırıyor; orada yemekler genellikle daha kısadır. Tek bir yaşam biçimi olmadığını anlıyor: her kültürün kendi değerleri ve kuralları var. Sonunda daha açık fikirli hissediyor."
+  },
+  vocabulary: [
+    { word: "La famille élargie", meaning: "Geniş aile" },
+    { word: "Chaleureux (Chaleureuse)", meaning: "Sıcak / Samimi" },
+    { word: "Remercier", meaning: "Teşekkür etmek" },
+    { word: "Comparer", meaning: "Karşılaştırmak" },
+    { word: "Ouvert d'esprit", meaning: "Açık fikirli" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Où Marie passe-t-elle un semestre ?",
+      options: ["En Turquie", "En Espagne", "En Italie", "En France"],
+      correctAnswer: "En Turquie"
+    },
+    {
+      id: 2,
+      question: "Qui est présent au dîner ?",
+      options: ["Seulement les parents", "La famille élargie", "Les voisins", "Des collègues"],
+      correctAnswer: "La famille élargie"
+    },
+    {
+      id: 3,
+      question: "Comment Marie trouve-t-elle l'habitude de partager les plats ?",
+      options: ["Froide", "Chaleureuse", "Étrange", "Désagréable"],
+      correctAnswer: "Chaleureuse"
+    },
+    {
+      id: 4,
+      question: "Que doit-elle faire par politesse ?",
+      options: ["Refuser tous les plats", "Accepter un peu de chaque plat", "Partir tôt", "Ne pas parler"],
+      correctAnswer: "Accepter un peu de chaque plat"
+    },
+    {
+      id: 5,
+      question: "Que boivent-ils après le dîner ?",
+      options: ["Du café", "Du thé", "Du jus", "De l'eau"],
+      correctAnswer: "Du thé"
+    },
+    {
+      id: 6,
+      question: "Quels sujets sont mentionnés ?",
+      options: ["La météo seulement", "La vie quotidienne, les études, les traditions", "Le sport et le cinéma", "La politique uniquement"],
+      correctAnswer: "La vie quotidienne, les études, les traditions"
+    },
+    {
+      id: 7,
+      question: "Comment sont les dîners en France selon Marie ?",
+      options: ["Plus courts", "Plus longs", "Plus bruyants", "Plus froids"],
+      correctAnswer: "Plus courts"
+    },
+    {
+      id: 8,
+      question: "Que comprend-elle sur les cultures ?",
+      options: ["Elles sont toutes identiques", "Il n'y a qu'une seule manière de vivre", "Chaque culture a ses valeurs et ses codes", "Elles sont sans règles"],
+      correctAnswer: "Chaque culture a ses valeurs et ses codes"
+    },
+    {
+      id: 9,
+      question: "Quel mot du texte signifie 'samimi/sıcak' ?",
+      options: ["Chaleureuse", "Froide", "Rapide", "Silencieuse"],
+      correctAnswer: "Chaleureuse"
+    },
+    {
+      id: 10,
+      question: "Comment se sent Marie à la fin ?",
+      options: ["Fermée", "Ouverte d'esprit", "En colère", "Fatiguée"],
+      correctAnswer: "Ouverte d'esprit"
+    }
+  ]
+};
+
+const unit375Reading: UnitReading = {
+  unitId: 375,
+  title: "Au Festival du Livre",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Lucie, étudiante en lettres, se rend au festival du livre et des arts de sa ville avec sa meilleure amie Nora. Dès le matin, elles visitent une exposition d'illustrations et discutent avec un illustrateur qui explique comment il crée ses personnages.\n\nÀ midi, Lucie assiste à une rencontre avec une autrice. Elle achète son nouveau roman et reçoit une dédicace. L'après-midi, un comédien lit un extrait du livre sur scène, et le public écoute en silence.\n\nLe soir, elles regardent une pièce de théâtre inspirée du roman. Lucie se sent très inspirée et écrit ensuite une courte critique sur son blog.",
+    translation: "Edebiyat öğrencisi Lucie, en yakın arkadaşı Nora ile şehrindeki kitap ve sanat festivaline gider. Sabahın erken saatlerinde bir illüstrasyon sergisini gezerler ve karakterleri nasıl yarattığını anlatan bir çizerle konuşurlar.\n\nÖğlen, Lucie bir yazar buluşmasına katılır. Yazarın yeni romanını satın alır ve imza alır. Öğleden sonra bir oyuncu sahnede romandan bir bölüm okur ve izleyiciler sessizce dinler.\n\nAkşam, romandan uyarlanmış bir tiyatro oyunu izlerler. Lucie çok ilham alır ve ardından blogunda kısa bir eleştiri yazar."
+  },
+  vocabulary: [
+    { word: "Une dédicace", meaning: "İmza (kitap için)" },
+    { word: "Un illustrateur / Une illustratrice", meaning: "Çizer" },
+    { word: "Un extrait", meaning: "Alıntı / Bölüm" },
+    { word: "Un comédien / Une comédienne", meaning: "Oyuncu" },
+    { word: "Inspiré(e)", meaning: "İlham almış" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Où Lucie se rend-elle ?",
+      options: ["Au festival du livre et des arts", "À la bibliothèque", "Au cinéma", "Au stade"],
+      correctAnswer: "Au festival du livre et des arts"
+    },
+    {
+      id: 2,
+      question: "Avec qui Lucie va-t-elle au festival ?",
+      options: ["Avec sa mère", "Avec sa meilleure amie Nora", "Avec son professeur", "Avec ses collègues"],
+      correctAnswer: "Avec sa meilleure amie Nora"
+    },
+    {
+      id: 3,
+      question: "Que visitent-elles le matin ?",
+      options: ["Une exposition d'illustrations", "Un marché", "Une salle de concert", "Un cinéma"],
+      correctAnswer: "Une exposition d'illustrations"
+    },
+    {
+      id: 4,
+      question: "Que fait l'illustrateur ?",
+      options: ["Il explique comment il crée ses personnages", "Il vend des billets", "Il répare des livres", "Il joue de la musique"],
+      correctAnswer: "Il explique comment il crée ses personnages"
+    },
+    {
+      id: 5,
+      question: "À quelle activité Lucie assiste-t-elle à midi ?",
+      options: ["Une rencontre avec une autrice", "Un match de football", "Un cours de danse", "Un atelier de cuisine"],
+      correctAnswer: "Une rencontre avec une autrice"
+    },
+    {
+      id: 6,
+      question: "Qu'achète-t-elle ?",
+      options: ["Un tableau", "Un nouveau roman", "Un ticket de bus", "Un magazine"],
+      correctAnswer: "Un nouveau roman"
+    },
+    {
+      id: 7,
+      question: "Que reçoit-elle après l'achat ?",
+      options: ["Une dédicace", "Un cadeau", "Un billet gratuit", "Une affiche"],
+      correctAnswer: "Une dédicace"
+    },
+    {
+      id: 8,
+      question: "Qui lit un extrait sur scène ?",
+      options: ["Un comédien", "Un serveur", "Un journaliste", "Un musicien"],
+      correctAnswer: "Un comédien"
+    },
+    {
+      id: 9,
+      question: "Quel spectacle voient-elles le soir ?",
+      options: ["Une pièce de théâtre inspirée du roman", "Un concert de rock", "Un film d'action", "Un reportage"],
+      correctAnswer: "Une pièce de théâtre inspirée du roman"
+    },
+    {
+      id: 10,
+      question: "Que fait Lucie ensuite ?",
+      options: ["Elle écrit une critique sur son blog", "Elle s'endort immédiatement", "Elle prend le train", "Elle quitte la ville"],
+      correctAnswer: "Elle écrit une critique sur son blog"
+    }
+  ]
+};
+
+const unit376Reading: UnitReading = {
+  unitId: 376,
+  title: "La Journée de Commémoration",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Chaque année, la ville organise une journée de commémoration pour rappeler un événement historique important. Cette année, les élèves du lycée se rendent au monument principal avec leurs professeurs d'histoire.\n\nSur place, un guide raconte la bataille et explique comment la victoire a été obtenue. Il montre aussi des archives et des photos anciennes. Les élèves écoutent attentivement et posent des questions sur les témoins de l'époque.\n\nÀ la fin de la visite, tout le monde dépose des fleurs devant le monument. Les élèves comprennent qu'il est essentiel de se souvenir du passé pour construire un avenir meilleur.",
+    translation: "Her yıl şehir, önemli bir tarihi olayı hatırlatmak için bir anma günü düzenler. Bu yıl lise öğrencileri tarih öğretmenleriyle birlikte ana anıta gider.\n\nOrada bir rehber muharebeyi anlatır ve zaferin nasıl kazanıldığını açıklar. Ayrıca arşivleri ve eski fotoğrafları gösterir. Öğrenciler dikkatle dinler ve dönemin tanıkları hakkında sorular sorar.\n\nZiyaretin sonunda herkes anıtın önüne çiçek bırakır. Öğrenciler, daha iyi bir gelecek kurmak için geçmişi hatırlamanın önemli olduğunu anlar."
+  },
+  vocabulary: [
+    { word: "Une commémoration", meaning: "Anma" },
+    { word: "Un témoin", meaning: "Tanık" },
+    { word: "Une bataille", meaning: "Muharebe" },
+    { word: "Une victoire", meaning: "Zafer" },
+    { word: "Une archive", meaning: "Arşiv" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Pourquoi la ville organise-t-elle une journée de commémoration ?",
+      options: ["Pour lancer un festival", "Pour rappeler un événement historique important", "Pour ouvrir un nouveau musée", "Pour célébrer un match"],
+      correctAnswer: "Pour rappeler un événement historique important"
+    },
+    {
+      id: 2,
+      question: "Qui se rend au monument principal ?",
+      options: ["Des touristes", "Les élèves du lycée", "Les journalistes", "Les musiciens"],
+      correctAnswer: "Les élèves du lycée"
+    },
+    {
+      id: 3,
+      question: "Avec qui vont-ils au monument ?",
+      options: ["Avec leurs parents", "Avec leurs professeurs d'histoire", "Avec des guides étrangers", "Avec leurs amis"],
+      correctAnswer: "Avec leurs professeurs d'histoire"
+    },
+    {
+      id: 4,
+      question: "Que raconte le guide ?",
+      options: ["La bataille et la victoire", "Une recette", "Une histoire de voyage", "Un film"],
+      correctAnswer: "La bataille et la victoire"
+    },
+    {
+      id: 5,
+      question: "Que montre le guide aux élèves ?",
+      options: ["Des archives et des photos anciennes", "Des cartes bancaires", "Des billets de train", "Des plans de ville"],
+      correctAnswer: "Des archives et des photos anciennes"
+    },
+    {
+      id: 6,
+      question: "Que font les élèves pendant la visite ?",
+      options: ["Ils dorment", "Ils écoutent et posent des questions", "Ils jouent", "Ils mangent"],
+      correctAnswer: "Ils écoutent et posent des questions"
+    },
+    {
+      id: 7,
+      question: "Sur qui portent les questions des élèves ?",
+      options: ["Sur les témoins de l'époque", "Sur les films modernes", "Sur les bus", "Sur les magasins"],
+      correctAnswer: "Sur les témoins de l'époque"
+    },
+    {
+      id: 8,
+      question: "Que fait tout le monde à la fin ?",
+      options: ["Ils déposent des fleurs devant le monument", "Ils quittent la ville", "Ils visitent un marché", "Ils prennent le train"],
+      correctAnswer: "Ils déposent des fleurs devant le monument"
+    },
+    {
+      id: 9,
+      question: "Que comprennent les élèves ?",
+      options: ["Que le passé n'est pas important", "Qu'il faut se souvenir du passé", "Qu'il faut oublier l'histoire", "Que le musée est fermé"],
+      correctAnswer: "Qu'il faut se souvenir du passé"
+    },
+    {
+      id: 10,
+      question: "Quel est le message final du texte ?",
+      options: ["Construire un avenir meilleur", "Aller à la mer", "Changer d'école", "Éviter les monuments"],
+      correctAnswer: "Construire un avenir meilleur"
+    }
+  ]
+};
+
+const unit377Reading: UnitReading = {
+  unitId: 377,
+  title: "Un Exposé sur une Inventrice",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Selin doit préparer un exposé sur une personnalité célèbre pour son cours d'histoire. Elle choisit une inventrice de son pays parce que son parcours est inspirant.\n\nPour trouver des informations, Selin va à la bibliothèque. Elle lit une biographie, regarde des archives et note les dates importantes: l'enfance, le début de la carrière et l'invention principale. Elle découvre que l'inventrice a surmonté de grandes difficultés et a reçu un prix international.\n\nLe jour de la présentation, Selin montre un portrait et une chronologie simple. La classe écoute avec attention. À la fin, elle explique que l'héritage de cette inventrice peut inspirer les jeunes.",
+    translation: "Selin, tarih dersi için ünlü bir şahsiyet hakkında sunum hazırlamak zorundadır. Hayat yolculuğu ilham verici olduğu için ülkesinden bir mucit kadın seçer.\n\nBilgi bulmak için Selin kütüphaneye gider. Bir biyografi okur, arşivlere bakar ve önemli tarihleri not eder: çocukluk, kariyerin başlangıcı ve başlıca icat. Mucit kadının büyük zorlukları aştığını ve uluslararası bir ödül aldığını öğrenir.\n\nSunum günü Selin bir portre ve basit bir kronoloji gösterir. Sınıf dikkatle dinler. Sonunda, bu mucidin mirasının gençlere ilham verebileceğini açıklar."
+  },
+  vocabulary: [
+    { word: "Un exposé", meaning: "Sunum" },
+    { word: "Une invention", meaning: "İcat" },
+    { word: "Une récompense", meaning: "Ödül" },
+    { word: "Une archive", meaning: "Arşiv" },
+    { word: "Un héritage", meaning: "Miras" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Pourquoi Selin prépare-t-elle un exposé ?",
+      options: ["Pour son cours d'histoire", "Pour un concours de sport", "Pour un voyage", "Pour un anniversaire"],
+      correctAnswer: "Pour son cours d'histoire"
+    },
+    {
+      id: 2,
+      question: "Qui choisit-elle pour son exposé ?",
+      options: ["Une inventrice", "Un acteur", "Un musicien", "Un sportif"],
+      correctAnswer: "Une inventrice"
+    },
+    {
+      id: 3,
+      question: "Où Selin va-t-elle pour chercher des informations ?",
+      options: ["À la bibliothèque", "Au cinéma", "Au stade", "Au marché"],
+      correctAnswer: "À la bibliothèque"
+    },
+    {
+      id: 4,
+      question: "Que lit-elle ?",
+      options: ["Une biographie", "Un roman", "Un journal", "Un e-mail"],
+      correctAnswer: "Une biographie"
+    },
+    {
+      id: 5,
+      question: "Que regarde-t-elle ?",
+      options: ["Des archives", "Des matchs", "Des chansons", "Des recettes"],
+      correctAnswer: "Des archives"
+    },
+    {
+      id: 6,
+      question: "Quels éléments note-t-elle ?",
+      options: ["L'enfance, la carrière et l'invention principale", "Les menus, les prix et les horaires", "Les films et les acteurs", "Les sports et les règles"],
+      correctAnswer: "L'enfance, la carrière et l'invention principale"
+    },
+    {
+      id: 7,
+      question: "Que découvre Selin sur l'inventrice ?",
+      options: ["Elle a surmonté de grandes difficultés", "Elle a quitté l'école", "Elle n'a pas travaillé", "Elle a oublié son passé"],
+      correctAnswer: "Elle a surmonté de grandes difficultés"
+    },
+    {
+      id: 8,
+      question: "Qu'a-t-elle reçu ?",
+      options: ["Un prix international", "Un billet de bus", "Un diplôme de cuisine", "Un costume"],
+      correctAnswer: "Un prix international"
+    },
+    {
+      id: 9,
+      question: "Que montre Selin pendant la présentation ?",
+      options: ["Un portrait et une chronologie", "Un match en direct", "Un film d'action", "Un repas"],
+      correctAnswer: "Un portrait et une chronologie"
+    },
+    {
+      id: 10,
+      question: "Quel est le message final ?",
+      options: ["L'héritage peut inspirer les jeunes", "Il faut oublier le passé", "Les inventions sont inutiles", "La classe est fermée"],
+      correctAnswer: "L'héritage peut inspirer les jeunes"
+    }
+  ]
+};
+
+const unit378Reading: UnitReading = {
+  unitId: 378,
+  title: "Une Découverte au Laboratoire",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Nora effectue un stage dans un laboratoire de biologie. Son équipe travaille sur un nouveau médicament contre une maladie rare. Chaque jour, ils testent différentes hypothèses et notent soigneusement les résultats.\n\nUn matin, Nora observe une réaction inattendue lors d'une expérience. Après plusieurs vérifications, l'équipe découvre une formule prometteuse. Ils publient ensuite leurs conclusions dans une revue scientifique.\n\nNora comprend que la rigueur, la méthode et la patience sont essentielles dans la recherche. Cette découverte lui donne envie de devenir chercheuse.",
+    translation: "Nora bir biyoloji laboratuvarında staj yapıyor. Ekibi nadir bir hastalığa karşı yeni bir ilaç üzerinde çalışıyor. Her gün farklı hipotezleri test ediyorlar ve sonuçları dikkatlice not ediyorlar.\n\nBir sabah Nora bir deney sırasında beklenmedik bir reaksiyon gözlemler. Birkaç doğrulamadan sonra ekip umut verici bir formül keşfeder. Ardından sonuçlarını bilimsel bir dergide yayımlarlar.\n\nNora araştırmada titizlik, yöntem ve sabrın çok önemli olduğunu anlar. Bu keşif onun araştırmacı olma isteğini güçlendirir."
+  },
+  vocabulary: [
+    { word: "Un stage", meaning: "Staj" },
+    { word: "Une formule", meaning: "Formül" },
+    { word: "Une réaction", meaning: "Reaksiyon" },
+    { word: "Une revue scientifique", meaning: "Bilimsel dergi" },
+    { word: "La rigueur", meaning: "Titizlik" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Où Nora fait-elle son stage ?",
+      options: ["Dans un laboratoire de biologie", "Dans un hôpital", "Dans une école", "Dans une usine"],
+      correctAnswer: "Dans un laboratoire de biologie"
+    },
+    {
+      id: 2,
+      question: "Sur quoi travaille l'équipe ?",
+      options: ["Un nouveau médicament", "Un nouveau téléphone", "Un roman", "Une exposition"],
+      correctAnswer: "Un nouveau médicament"
+    },
+    {
+      id: 3,
+      question: "Que font-ils chaque jour ?",
+      options: ["Ils testent des hypothèses", "Ils partent en voyage", "Ils font du sport", "Ils écrivent des poèmes"],
+      correctAnswer: "Ils testent des hypothèses"
+    },
+    {
+      id: 4,
+      question: "Que remarque Nora un matin ?",
+      options: ["Une réaction inattendue", "Une panne d'électricité", "Une visite surprise", "Une fête"],
+      correctAnswer: "Une réaction inattendue"
+    },
+    {
+      id: 5,
+      question: "Que découvre l'équipe après vérification ?",
+      options: ["Une formule prometteuse", "Une nouvelle théorie", "Un problème sans solution", "Un livre ancien"],
+      correctAnswer: "Une formule prometteuse"
+    },
+    {
+      id: 6,
+      question: "Où publient-ils leurs conclusions ?",
+      options: ["Dans une revue scientifique", "Dans un journal sportif", "Sur un blog personnel", "À la télévision"],
+      correctAnswer: "Dans une revue scientifique"
+    },
+    {
+      id: 7,
+      question: "Que comprend Nora sur la recherche ?",
+      options: ["La rigueur et la patience sont essentielles", "La recherche est facile", "La recherche est inutile", "La recherche est rapide"],
+      correctAnswer: "La rigueur et la patience sont essentielles"
+    },
+    {
+      id: 8,
+      question: "Quel effet la découverte a-t-elle sur Nora ?",
+      options: ["Elle veut devenir chercheuse", "Elle veut quitter la science", "Elle veut voyager", "Elle veut changer d'école"],
+      correctAnswer: "Elle veut devenir chercheuse"
+    },
+    {
+      id: 9,
+      question: "Quel est le sujet principal du texte ?",
+      options: ["Une découverte scientifique", "Un festival", "Un match", "Une pièce de théâtre"],
+      correctAnswer: "Une découverte scientifique"
+    },
+    {
+      id: 10,
+      question: "Que fait l'équipe avec les résultats ?",
+      options: ["Ils les notent soigneusement", "Ils les oublient", "Ils les vendent", "Ils les détruisent"],
+      correctAnswer: "Ils les notent soigneusement"
+    }
+  ]
+};
+
+const unit379Reading: UnitReading = {
+  unitId: 379,
+  title: "Le Lancement du Satellite",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Ce matin, la classe de Kerem visite un centre spatial. Ils regardent le lancement d'une fusée qui emporte un satellite. Le guide explique que la mission doit observer la Terre et mesurer le climat.\n\nAprès le décollage, ils vont dans la salle de contrôle. Les ingénieurs suivent la fusée sur les écrans. Quelques minutes plus tard, le satellite atteint son orbite.\n\nLes élèves sont impressionnés et posent beaucoup de questions. Ils comprennent que l'exploration spatiale demande de la précision et un grand travail d'équipe.",
+    translation: "Bu sabah Kerem'in sınıfı bir uzay merkezini ziyaret ediyor. Bir uydu taşıyan roketin fırlatılışını izliyorlar. Rehber, görevin Dünya'yı gözlemlemek ve iklimi ölçmek olduğunu açıklar.\n\nKalkıştan sonra kontrol odasına giderler. Mühendisler roketi ekranlardan takip eder. Birkaç dakika sonra uydu yörüngesine ulaşır.\n\nÖğrenciler çok etkilenir ve birçok soru sorar. Uzay araştırmalarının hassasiyet ve güçlü bir ekip çalışması gerektirdiğini anlarlar."
+  },
+  vocabulary: [
+    { word: "Un centre spatial", meaning: "Uzay merkezi" },
+    { word: "Un lancement", meaning: "Fırlatma" },
+    { word: "Une orbite", meaning: "Yörünge" },
+    { word: "Un satellite", meaning: "Uydu" },
+    { word: "Une mission", meaning: "Görev / Misyon" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Où la classe de Kerem visite-t-elle ?",
+      options: ["Un centre spatial", "Un musée", "Un stade", "Une bibliothèque"],
+      correctAnswer: "Un centre spatial"
+    },
+    {
+      id: 2,
+      question: "Que regardent-ils ?",
+      options: ["Le lancement d'une fusée", "Un film", "Un match", "Un concert"],
+      correctAnswer: "Le lancement d'une fusée"
+    },
+    {
+      id: 3,
+      question: "Que transporte la fusée ?",
+      options: ["Un satellite", "Un télescope", "Un avion", "Une navette"],
+      correctAnswer: "Un satellite"
+    },
+    {
+      id: 4,
+      question: "Quel est l'objectif de la mission ?",
+      options: ["Observer la Terre et mesurer le climat", "Aller sur la Lune", "Prendre des touristes", "Construire une station"],
+      correctAnswer: "Observer la Terre et mesurer le climat"
+    },
+    {
+      id: 5,
+      question: "Qui explique la mission ?",
+      options: ["Le guide", "Un sportif", "Un musicien", "Un acteur"],
+      correctAnswer: "Le guide"
+    },
+    {
+      id: 6,
+      question: "Où vont-ils après le décollage ?",
+      options: ["Dans la salle de contrôle", "Au restaurant", "À la gare", "À la plage"],
+      correctAnswer: "Dans la salle de contrôle"
+    },
+    {
+      id: 7,
+      question: "Que se passe-t-il quelques minutes plus tard ?",
+      options: ["Le satellite atteint son orbite", "La fusée tombe", "La mission s'arrête", "La classe part"],
+      correctAnswer: "Le satellite atteint son orbite"
+    },
+    {
+      id: 8,
+      question: "Comment se sentent les élèves ?",
+      options: ["Impressionnés", "Fatigués", "En colère", "Tristes"],
+      correctAnswer: "Impressionnés"
+    },
+    {
+      id: 9,
+      question: "Que font les élèves ?",
+      options: ["Ils posent beaucoup de questions", "Ils dorment", "Ils chantent", "Ils quittent la salle"],
+      correctAnswer: "Ils posent beaucoup de questions"
+    },
+    {
+      id: 10,
+      question: "Que comprennent-ils sur l'exploration spatiale ?",
+      options: ["Elle demande précision et travail d'équipe", "Elle est facile", "Elle est inutile", "Elle est dangereuse"],
+      correctAnswer: "Elle demande précision et travail d'équipe"
+    }
+  ]
+};
+
+const unit380Reading: UnitReading = {
+  unitId: 380,
+  title: "Une Journée de Shopping",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Merve et sa sœur vont au centre-ville pour acheter des vêtements. Merve cherche une tenue élégante pour une soirée. Elles commencent par regarder les vitrines et entrent dans une boutique qui propose des réductions.\n\nMerve essaie plusieurs robes, mais hésite sur la couleur. Le vendeur lui conseille une robe bleue qui met en valeur ses yeux. Sa sœur choisit des accessoires pour compléter le look.\n\nÀ la fin, Merve est satisfaite de ses achats. Elle comprend qu'il faut assortir les couleurs et choisir une taille adaptée.",
+    translation: "Merve ve kız kardeşi kıyafet almak için şehir merkezine gider. Merve bir akşam için şık bir kombin arar. Önce vitrinlere bakarlar ve indirim sunan bir butiğe girerler.\n\nMerve birkaç elbise dener ama renk konusunda kararsızdır. Satıcı gözlerini öne çıkaran mavi bir elbise önerir. Kız kardeşi görünümü tamamlamak için aksesuarlar seçer.\n\nSonunda Merve alışverişinden memnundur. Renkleri uyumlu seçmek ve uygun bedeni tercih etmek gerektiğini anlar."
+  },
+  vocabulary: [
+    { word: "Une vitrine", meaning: "Vitrin" },
+    { word: "Un vendeur", meaning: "Satıcı" },
+    { word: "Une robe", meaning: "Elbise" },
+    { word: "Un accessoire", meaning: "Aksesuar" },
+    { word: "Une taille", meaning: "Beden" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Pourquoi Merve va-t-elle au centre-ville ?",
+      options: ["Pour acheter des vêtements", "Pour aller au cinéma", "Pour visiter un musée", "Pour rencontrer une amie"],
+      correctAnswer: "Pour acheter des vêtements"
+    },
+    {
+      id: 2,
+      question: "Que cherche Merve ?",
+      options: ["Une tenue élégante", "Un livre", "Un téléphone", "Un billet"],
+      correctAnswer: "Une tenue élégante"
+    },
+    {
+      id: 3,
+      question: "Où entrent-elles ?",
+      options: ["Dans une boutique", "Dans une école", "Dans un café", "Dans une gare"],
+      correctAnswer: "Dans une boutique"
+    },
+    {
+      id: 4,
+      question: "Que propose la boutique ?",
+      options: ["Des réductions", "Des cours", "Des repas", "Des billets"],
+      correctAnswer: "Des réductions"
+    },
+    {
+      id: 5,
+      question: "Que fait Merve ?",
+      options: ["Elle essaie des robes", "Elle joue", "Elle cuisine", "Elle voyage"],
+      correctAnswer: "Elle essaie des robes"
+    },
+    {
+      id: 6,
+      question: "Sur quoi hésite-t-elle ?",
+      options: ["La couleur", "Le prix du bus", "Le temps", "La taille de la ville"],
+      correctAnswer: "La couleur"
+    },
+    {
+      id: 7,
+      question: "Quel conseil donne le vendeur ?",
+      options: ["Une robe bleue", "Une robe noire trop grande", "Un pantalon", "Des chaussures de sport"],
+      correctAnswer: "Une robe bleue"
+    },
+    {
+      id: 8,
+      question: "Que choisit la sœur de Merve ?",
+      options: ["Des accessoires", "Un livre", "Un ordinateur", "Un billet de train"],
+      correctAnswer: "Des accessoires"
+    },
+    {
+      id: 9,
+      question: "Comment se sent Merve à la fin ?",
+      options: ["Satisfaite", "En colère", "Triste", "Fatiguée"],
+      correctAnswer: "Satisfaite"
+    },
+    {
+      id: 10,
+      question: "Que comprend-elle ?",
+      options: ["Il faut assortir les couleurs et choisir la bonne taille", "Il faut toujours acheter en ligne", "Il faut éviter les boutiques", "Il faut changer de style chaque jour"],
+      correctAnswer: "Il faut assortir les couleurs et choisir la bonne taille"
+    }
+  ]
+};
+
+const unit381Reading: UnitReading = {
+  unitId: 381,
+  title: "Le Budget de Lina",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Lina veut acheter un nouveau téléphone, mais elle fait attention à son budget. Elle compare les prix en ligne et cherche des promotions. Elle met de côté une partie de son argent chaque mois.\n\nUn jour, elle trouve une réduction intéressante dans un magasin. Avant d'acheter, elle vérifie la qualité du produit et lit les avis des clients. Elle garde aussi le reçu pour un éventuel retour.\n\nGrâce à cette organisation, Lina achète ce dont elle a besoin sans dépasser son budget.",
+    translation: "Lina yeni bir telefon almak istiyor ama bütçesine dikkat ediyor. İnternette fiyatları karşılaştırıyor ve kampanyaları arıyor. Her ay parasının bir kısmını bir kenara koyuyor.\n\nBir gün bir mağazada ilginç bir indirim buluyor. Satın almadan önce ürünün kalitesini kontrol ediyor ve müşterilerin yorumlarını okuyor. Ayrıca olası bir iade için fişi saklıyor.\n\nBu düzen sayesinde Lina, bütçesini aşmadan ihtiyacı olanı satın alıyor."
+  },
+  vocabulary: [
+    { word: "Un avis", meaning: "Yorum / Görüş" },
+    { word: "Mettre de côté", meaning: "Bir kenara koymak" },
+    { word: "Une promotion", meaning: "Kampanya" },
+    { word: "Un budget", meaning: "Bütçe" },
+    { word: "Un reçu", meaning: "Fiş" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Que veut acheter Lina ?",
+      options: ["Un nouveau téléphone", "Un ordinateur", "Un livre", "Une voiture"],
+      correctAnswer: "Un nouveau téléphone"
+    },
+    {
+      id: 2,
+      question: "Que fait-elle avant d'acheter ?",
+      options: ["Elle compare les prix", "Elle voyage", "Elle vend", "Elle cuisine"],
+      correctAnswer: "Elle compare les prix"
+    },
+    {
+      id: 3,
+      question: "Que cherche-t-elle en ligne ?",
+      options: ["Des promotions", "Des films", "Des billets", "Des recettes"],
+      correctAnswer: "Des promotions"
+    },
+    {
+      id: 4,
+      question: "Que fait-elle chaque mois ?", 
+      options: ["Elle met de côté de l'argent", "Elle dépense tout", "Elle change de ville", "Elle ne travaille pas"],
+      correctAnswer: "Elle met de côté de l'argent"
+    },
+    {
+      id: 5,
+      question: "Que trouve-t-elle un jour ?", 
+      options: ["Une réduction intéressante", "Un nouvel emploi", "Un colis perdu", "Une vieille facture"],
+      correctAnswer: "Une réduction intéressante"
+    },
+    {
+      id: 6,
+      question: "Que vérifie-t-elle avant d'acheter ?", 
+      options: ["La qualité du produit", "La météo", "Le métro", "La route"],
+      correctAnswer: "La qualité du produit"
+    },
+    {
+      id: 7,
+      question: "Que lit-elle ?", 
+      options: ["Les avis des clients", "Un roman", "Un journal sportif", "Une affiche"],
+      correctAnswer: "Les avis des clients"
+    },
+    {
+      id: 8,
+      question: "Pourquoi garde-t-elle le reçu ?", 
+      options: ["Pour un éventuel retour", "Pour le vendre", "Pour le jeter", "Pour le donner"],
+      correctAnswer: "Pour un éventuel retour"
+    },
+    {
+      id: 9,
+      question: "Quel est le résultat ?", 
+      options: ["Elle respecte son budget", "Elle dépasse son budget", "Elle oublie le reçu", "Elle annule l'achat"],
+      correctAnswer: "Elle respecte son budget"
+    },
+    {
+      id: 10,
+      question: "Quel est le sujet principal du texte ?", 
+      options: ["La gestion du budget", "La météo", "Le sport", "La cuisine"],
+      correctAnswer: "La gestion du budget"
+    }
+  ]
+};
+
+const unit382Reading: UnitReading = {
+  unitId: 382,
+  title: "La Campagne de Lancement",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Une entreprise de boissons prépare le lancement d'un nouveau produit. L'équipe marketing crée un slogan simple et un logo moderne. Elle choisit les réseaux sociaux et la télévision pour toucher un large public.\n\nPendant la campagne, les influenceurs publient des vidéos et parlent du produit. Les ventes augmentent rapidement, et la marque gagne en notoriété.\n\nÀ la fin, le directeur affirme que la stratégie a été efficace, mais il veut analyser les résultats pour améliorer la prochaine campagne.",
+    translation: "Bir içecek şirketi yeni bir ürün lansmanı hazırlıyor. Pazarlama ekibi basit bir slogan ve modern bir logo oluşturuyor. Geniş bir kitleye ulaşmak için sosyal medya ve televizyonu seçiyor.\n\nKampanya sırasında influencer'lar videolar paylaşıp ürün hakkında konuşuyor. Satışlar hızla artıyor ve marka bilinirliği yükseliyor.\n\nSonunda müdür, stratejinin etkili olduğunu söylüyor ama bir sonraki kampanyayı geliştirmek için sonuçları analiz etmek istiyor."
+  },
+  vocabulary: [
+    { word: "Un lancement", meaning: "Lansman" },
+    { word: "Un slogan", meaning: "Slogan" },
+    { word: "Un influenceur", meaning: "Influencer" },
+    { word: "La notoriété", meaning: "Bilinirlik" },
+    { word: "Une stratégie", meaning: "Strateji" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Que prépare l'entreprise ?",
+      options: ["Le lancement d'un nouveau produit", "Un voyage", "Un film", "Une fête"],
+      correctAnswer: "Le lancement d'un nouveau produit"
+    },
+    {
+      id: 2,
+      question: "Que crée l'équipe marketing ?",
+      options: ["Un slogan et un logo", "Un roman", "Un tableau", "Un match"],
+      correctAnswer: "Un slogan et un logo"
+    },
+    {
+      id: 3,
+      question: "Quels canaux sont choisis ?",
+      options: ["Les réseaux sociaux et la télévision", "La radio seulement", "Le journal", "L'école"],
+      correctAnswer: "Les réseaux sociaux et la télévision"
+    },
+    {
+      id: 4,
+      question: "Que font les influenceurs ?",
+      options: ["Ils publient des vidéos", "Ils vendent des billets", "Ils cuisinent", "Ils voyagent"],
+      correctAnswer: "Ils publient des vidéos"
+    },
+    {
+      id: 5,
+      question: "Que se passe-t-il avec les ventes ?",
+      options: ["Elles augmentent rapidement", "Elles diminuent", "Elles restent stables", "Elles s'arrêtent"],
+      correctAnswer: "Elles augmentent rapidement"
+    },
+    {
+      id: 6,
+      question: "Que gagne la marque ?",
+      options: ["De la notoriété", "Des dettes", "Des problèmes", "Des amendes"],
+      correctAnswer: "De la notoriété"
+    },
+    {
+      id: 7,
+      question: "Que dit le directeur à la fin ?",
+      options: ["La stratégie a été efficace", "La stratégie a échoué", "La campagne est annulée", "Le produit est mauvais"],
+      correctAnswer: "La stratégie a été efficace"
+    },
+    {
+      id: 8,
+      question: "Que veut-il faire ensuite ?",
+      options: ["Analyser les résultats", "Arrêter la publicité", "Changer de logo", "Fermer l'entreprise"],
+      correctAnswer: "Analyser les résultats"
+    },
+    {
+      id: 9,
+      question: "Quel est le sujet principal du texte ?",
+      options: ["Une campagne publicitaire", "Un voyage", "Un événement sportif", "Un spectacle"],
+      correctAnswer: "Une campagne publicitaire"
+    },
+    {
+      id: 10,
+      question: "Pourquoi analyser les résultats ?",
+      options: ["Pour améliorer la prochaine campagne", "Pour vendre l'entreprise", "Pour annuler le produit", "Pour changer de ville"],
+      correctAnswer: "Pour améliorer la prochaine campagne"
+    }
+  ]
+};
+
+const unit383Reading: UnitReading = {
+  unitId: 383,
+  title: "La Une du Journal",
+  language: "FransÄ±zca",
+  level: "B1",
+  story: {
+    text: "Le journal local prÃ©pare un article sur l'ouverture d'une nouvelle ligne de tramway. La rÃ©daction envoie une journaliste sur place pour faire un reportage.\n\nElle interviewe le maire et des habitants. Elle vÃ©rifie les chiffres auprÃ¨s de la source officielle et compare les informations.\n\nSur les rÃ©seaux sociaux, une rumeur affirme que les billets seront gratuits, mais ce n'est pas confirmÃ©. Dans son article, la journaliste explique les faits et le titre de la une attire beaucoup de lecteurs. Le journal publie aussi la version en ligne.",
+    translation: "Yerel gazete yeni bir tramvay hattÄ±nÄ±n aÃ§Ä±lÄ±ÅŸÄ± hakkÄ±nda bir makale hazÄ±rlÄ±yor. Redaksiyon, yerinde bir haber yapmak iÃ§in bir gazeteciyi gÃ¶nderiyor.\n\nGazeteci belediye baÅŸkanÄ± ve bazÄ± sakinlerle rÃ¶portaj yapÄ±yor. Resmi kaynaktan rakamlarÄ± doÄŸruluyor ve bilgileri karÅŸÄ±laÅŸtÄ±rÄ±yor.\n\nSosyal medyada, biletlerin Ã¼cretsiz olacaÄŸÄ±na dair bir sÃ¶ylenti dolaÅŸÄ±yor, ancak bu doÄŸrulanmÄ±yor. Makalesinde gazeteci gerÃ§ekleri aÃ§Ä±klÄ±yor ve manÅŸetin baÅŸlÄ±ÄŸÄ± birÃ§ok okuyucunun dikkatini Ã§ekiyor. Gazete ayrÄ±ca online versiyonu da yayÄ±nlÄ±yor."
+  },
+  vocabulary: [
+    { word: "La rÃ©daction", meaning: "Redaksiyon" },
+    { word: "Le reportage", meaning: "Haber / RÃ¶portaj" },
+    { word: "La source", meaning: "Kaynak" },
+    { word: "La rumeur", meaning: "SÃ¶ylenti" },
+    { word: "La une", meaning: "ManÅŸet" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Sur quoi l'article est-il prÃ©parÃ© ?",
+      options: ["L'ouverture d'une nouvelle ligne de tramway", "Une fÃªte sportive", "La mÃ©tÃ©o", "Un concert"],
+      correctAnswer: "L'ouverture d'une nouvelle ligne de tramway"
+    },
+    {
+      id: 2,
+      question: "Qui la rÃ©daction envoie-t-elle ?",
+      options: ["Une journaliste", "Un photographe uniquement", "Un lecteur", "Un vendeur"],
+      correctAnswer: "Une journaliste"
+    },
+    {
+      id: 3,
+      question: "OÃ¹ va la journaliste ?",
+      options: ["Sur place", "Ã€ l'Ã©tranger", "Ã€ l'Ã©cole", "Ã€ l'hÃ´pital"],
+      correctAnswer: "Sur place"
+    },
+    {
+      id: 4,
+      question: "Qui interviewe-t-elle ?",
+      options: ["Le maire et des habitants", "Des touristes", "Des Ã©lÃ¨ves", "Des mÃ©decins"],
+      correctAnswer: "Le maire et des habitants"
+    },
+    {
+      id: 5,
+      question: "Que fait-elle avec les chiffres ?",
+      options: ["Elle les vÃ©rifie auprÃ¨s de la source officielle", "Elle les invente", "Elle les ignore", "Elle les cache"],
+      correctAnswer: "Elle les vÃ©rifie auprÃ¨s de la source officielle"
+    },
+    {
+      id: 6,
+      question: "OÃ¹ circule la rumeur ?",
+      options: ["Sur les rÃ©seaux sociaux", "Ã€ la radio", "Dans la rue seulement", "Dans un musÃ©e"],
+      correctAnswer: "Sur les rÃ©seaux sociaux"
+    },
+    {
+      id: 7,
+      question: "Que dit la rumeur ?",
+      options: ["Les billets seront gratuits", "Le tramway est annulÃ©", "La ligne est dÃ©jÃ  fermÃ©e", "Les billets sont trÃ¨s chers"],
+      correctAnswer: "Les billets seront gratuits"
+    },
+    {
+      id: 8,
+      question: "La rumeur est-elle confirmÃ©e ?",
+      options: ["Non, elle n'est pas confirmÃ©e", "Oui, totalement", "Oui, par le maire", "On ne sait jamais"],
+      correctAnswer: "Non, elle n'est pas confirmÃ©e"
+    },
+    {
+      id: 9,
+      question: "Qu'est-ce qui attire beaucoup de lecteurs ?",
+      options: ["Le titre de la une", "La mÃ©tÃ©o", "Les photos de vacances", "La publicitÃ©"],
+      correctAnswer: "Le titre de la une"
+    },
+    {
+      id: 10,
+      question: "OÃ¹ le journal publie-t-il l'article ?",
+      options: ["En ligne et en version papier", "Seulement Ã  la radio", "Seulement en vidÃ©o", "Uniquement Ã  la tÃ©lÃ©vision"],
+      correctAnswer: "En ligne et en version papier"
+    }
+  ]
+};
+
+const unit384Reading: UnitReading = {
+  unitId: 384,
+  title: "Les Élections Municipales",
+  language: "FransÄ±zca",
+  level: "B1",
+  story: {
+    text: "Dans la ville de Morin, les élections municipales approchent. La rédaction du journal publie un reportage pour présenter les programmes des candidats.\n\nLa journaliste interviewe deux candidats et plusieurs citoyens. Le candidat A promet une réforme des transports, tandis que le candidat B insiste sur la sécurité. L'opposition critique le budget proposé.\n\nLa commission électorale annonce que le vote aura lieu dimanche. Le journal rappelle l'importance de la participation et publie aussi l'article en ligne.",
+    translation: "Morin şehrinde belediye seçimleri yaklaşıyor. Gazetenin redaksiyonu, adayların programlarını tanıtmak için bir haber yayımlıyor.\n\nGazeteci iki adayla ve birkaç vatandaşla röportaj yapıyor. A adayı ulaşımda bir reform vaat ediyor, B adayı ise güvenlik üzerinde duruyor. Muhalefet önerilen bütçeyi eleştiriyor.\n\nSeçim komisyonu oy verme işleminin pazar günü yapılacağını duyuruyor. Gazete katılımın önemini hatırlatıyor ve makaleyi online olarak da yayımlıyor."
+  },
+  vocabulary: [
+    { word: "Les élections municipales", meaning: "Belediye seçimleri" },
+    { word: "La commission électorale", meaning: "Seçim komisyonu" },
+    { word: "Le programme", meaning: "Program" },
+    { word: "La participation", meaning: "Katılım" },
+    { word: "La réforme", meaning: "Reform" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "De quel type d'élections parle-t-on ?",
+      options: ["Les élections municipales", "Les élections nationales", "Les élections scolaires", "Les élections sportives"],
+      correctAnswer: "Les élections municipales"
+    },
+    {
+      id: 2,
+      question: "Qui publie le reportage ?",
+      options: ["La rédaction du journal", "La radio", "Une école", "Un magasin"],
+      correctAnswer: "La rédaction du journal"
+    },
+    {
+      id: 3,
+      question: "Qui la journaliste interviewe-t-elle ?",
+      options: ["Deux candidats et des citoyens", "Des touristes", "Des policiers", "Des médecins"],
+      correctAnswer: "Deux candidats et des citoyens"
+    },
+    {
+      id: 4,
+      question: "Que promet le candidat A ?",
+      options: ["Une réforme des transports", "Une nouvelle école", "Un festival", "Un musée"],
+      correctAnswer: "Une réforme des transports"
+    },
+    {
+      id: 5,
+      question: "Sur quoi insiste le candidat B ?",
+      options: ["La sécurité", "Le sport", "La météo", "La publicité"],
+      correctAnswer: "La sécurité"
+    },
+    {
+      id: 6,
+      question: "Que fait l'opposition ?",
+      options: ["Elle critique le budget proposé", "Elle soutient le candidat A", "Elle organise un concert", "Elle annule l'élection"],
+      correctAnswer: "Elle critique le budget proposé"
+    },
+    {
+      id: 7,
+      question: "Qui annonce la date du vote ?",
+      options: ["La commission électorale", "Le maire", "La télévision", "Les citoyens"],
+      correctAnswer: "La commission électorale"
+    },
+    {
+      id: 8,
+      question: "Quand le vote aura-t-il lieu ?",
+      options: ["Dimanche", "Lundi", "Mardi", "Vendredi"],
+      correctAnswer: "Dimanche"
+    },
+    {
+      id: 9,
+      question: "Que rappelle le journal ?",
+      options: ["L'importance de la participation", "Le prix des billets", "La fermeture des routes", "Le match de football"],
+      correctAnswer: "L'importance de la participation"
+    },
+    {
+      id: 10,
+      question: "Où l'article est-il aussi publié ?",
+      options: ["En ligne", "À la radio", "À la télévision", "Dans un musée"],
+      correctAnswer: "En ligne"
+    }
+  ]
+};
+
+const unit385Reading: UnitReading = {
+  unitId: 385,
+  title: "Le Témoignage Décisif",
+  language: "Fransızca",
+  level: "B1",
+  story: {
+    text: "Le procès de Thomas a commencé tôt ce matin au tribunal de la ville. Il était accusé d'avoir volé une voiture de luxe le mois dernier. Dès le début, Thomas a affirmé qu'il était innocent, mais la police avait trouvé ses empreintes sur la portière. Son avocat, Maître Dupont, avait préparé une défense solide. Au cours de l'audience, le juge a écouté attentivement les arguments des deux parties. \n\nSoudain, un nouveau témoin est entré dans la salle. C'était une dame âgée qui habitait près du lieu du crime. Elle a expliqué que le soir du vol, elle avait vu un homme très différent de Thomas conduire la voiture. De plus, elle a apporté une vidéo enregistrée par sa caméra de sécurité. Cette preuve s'est révélée décisive. Le vrai coupable a été identifié grâce aux images. Finalement, le juge a décidé d'acquitter Thomas, qui a fondu en larmes de soulagement. La justice avait été rendue.",
+    translation: "Thomas'ın davası bu sabah erkenden şehir mahkemesinde başladı. Geçen ay lüks bir araba çalmakla suçlanıyordu. Başından beri Thomas masum olduğunu iddia etti, ancak polis onun parmak izlerini kapıda bulmuştu. Avukatı Dupont sağlam bir savunma hazırlamıştı. Duruşma sırasında hakim her iki tarafın argümanlarını dikkatle dinledi.\n\nAniden salona yeni bir tanık girdi. Suç mahallinin yakınında oturan yaşlı bir kadındı. Hırsızlık akşamı Thomas'tan çok farklı bir adamın arabayı sürdüğünü gördüğünü açıkladı. Dahası, güvenlik kamerası tarafından kaydedilmiş bir video getirdi. Bu kanıtın belirleyici olduğu ortaya çıktı. Gerçek suçlu görüntüler sayesinde teşhis edildi. Sonunda hakim, rahatlamadan gözyaşlarına boğulan Thomas'ı beraat ettirmeye karar verdi. Adalet yerini bulmuştu."
+  },
+  vocabulary: [
+    { word: "Le tribunal", meaning: "Mahkeme" },
+    { word: "Affirmer", meaning: "İddia etmek / Doğrulamak" },
+    { word: "L'audience (f)", meaning: "Duruşma" },
+    { word: "Décisif / Décisive", meaning: "Belirleyici / Kesin" },
+    { word: "Acquitter", meaning: "Beraat ettirmek" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Où a commencé le procès de Thomas ?",
+      options: ["Au commissariat de police", "Au tribunal de la ville", "Dans un parc", "À l'hôpital"],
+      correctAnswer: "Au tribunal de la ville"
+    },
+    {
+      id: 2,
+      question: "De quoi Thomas était-il accusé ?",
+      options: ["D'avoir volé de l'argent", "D'avoir volé un vélo", "D'avoir volé une voiture de luxe", "D'avoir frappé quelqu'un"],
+      correctAnswer: "D'avoir volé une voiture de luxe"
+    },
+    {
+      id: 3,
+      question: "Quelle preuve la police a-t-elle trouvée contre lui ?",
+      options: ["Des photos", "Ses empreintes sur la portière", "Ses vêtements", "Une lettre"],
+      correctAnswer: "Ses empreintes sur la portière"
+    },
+    {
+      id: 4,
+      question: "Qui est Maître Dupont ?",
+      options: ["Le juge", "Le policier", "Son avocat", "Le vrai coupable"],
+      correctAnswer: "Son avocat"
+    },
+    {
+      id: 5,
+      question: "Qui est entré soudainement dans la salle d'audience ?",
+      options: ["Un chien", "Un nouveau juge", "Un nouveau témoin", "Le maire"],
+      correctAnswer: "Un nouveau témoin"
+    },
+    {
+      id: 6,
+      question: "Où habitait la dame âgée ?",
+      options: ["Loin de la ville", "Près du lieu du crime", "Dans un autre pays", "Au tribunal"],
+      correctAnswer: "Près du lieu du crime"
+    },
+    {
+      id: 7,
+      question: "Quelle preuve concrète la dame a-t-elle apportée ?",
+      options: ["Un couteau", "Une vidéo enregistrée par sa caméra de sécurité", "Un document écrit", "Le portefeuille du voleur"],
+      correctAnswer: "Une vidéo enregistrée par sa caméra de sécurité"
+    },
+    {
+      id: 8,
+      question: "Que montrent les images de la vidéo ?",
+      options: ["Que Thomas est le voleur", "Le vrai coupable", "Rien du tout", "Des animaux"],
+      correctAnswer: "Le vrai coupable"
+    },
+    {
+      id: 9,
+      question: "Quelle a été la décision finale du juge concernant Thomas ?",
+      options: ["Le condamner à la prison", "Lui faire payer une amende", "Le renvoyer", "L'acquitter"],
+      correctAnswer: "L'acquitter"
+    },
+    {
+      id: 10,
+      question: "Quel mot du texte signifie 'Beraat ettirmek' ?",
+      options: ["Accuser", "Voler", "Acquitter", "Condamner"],
+      correctAnswer: "Acquitter"
+    }
+  ]
+};
+
+const unit386Reading: UnitReading = {
+    unitId: 386,
+    title: "La Marche pour l'Égalité",
+    language: "fr",
+    level: "B1",
+    story: {
+        text: "Hier, des milliers de citoyens se sont rassemblés sur la place principale pour manifester pacifiquement. Ils portaient des pancartes demandant plus d'égalité et la fin de toute discrimination. Le porte-parole du mouvement a prononcé un discours très touchant sur l'importance des droits de l'homme dans notre société. Il a rappelé que la liberté d'expression est fondamentale pour une démocratie saine. La manifestation s'est terminée dans le calme, et les organisateurs espèrent que le gouvernement prendra des mesures concrètes rapidement.",
+        translation: "Dün, binlerce vatandaş barışçıl bir şekilde gösteri yapmak için ana meydanda toplandı. Daha fazla eşitlik ve her türlü ayrımcılığın sona ermesini talep eden pankartlar taşıyorlardı. Hareketin sözcüsü, toplumumuzda insan haklarının önemi üzerine çok dokunaklı bir konuşma yaptı. İfade özgürlüğünün sağlıklı bir demokrasi için temel olduğunu hatırlattı. Gösteri sakin bir şekilde sona erdi ve organizatörler hükümetin hızla somut adımlar atmasını umuyorlar."
+    },
+    vocabulary: [
+        { word: "se rassembler", meaning: "toplanmak" },
+        { word: "pacifiquement", meaning: "barışçıl bir şekilde" },
+        { word: "une pancarte", meaning: "pankart" },
+        { word: "un discours", meaning: "konuşma" },
+        { word: "le gouvernement", meaning: "hükümet" }
+    ],
+    questions: [
+        {
+            id: 1,
+            question: "Combien de citoyens se sont rassemblés ?",
+            options: ["Des centaines", "Des milliers", "Deux cents", "Personne"],
+            correctAnswer: "Des milliers"
+        },
+        {
+            id: 2,
+            question: "Que demandaient les pancartes ?",
+            options: ["Plus de travail", "Plus d'égalité et la fin de la discrimination", "La destitution du président", "De l'argent"],
+            correctAnswer: "Plus d'égalité et la fin de la discrimination"
+        },
+        {
+            id: 3,
+            question: "Le porte-parole a souligné l'importance de quoi ?",
+            options: ["De l'argent", "Des droits de l'homme", "De la guerre", "Du silence"],
+            correctAnswer: "Des droits de l'homme"
+        },
+        {
+            id: 4,
+            question: "Comment la manifestation s'est-elle terminée ?",
+            options: ["Dans la violence", "Dans le calme", "Par une tempête", "Rapidement"],
+            correctAnswer: "Dans le calme"
+        }
+    ]
+};
+
+const unit387Reading: UnitReading = {
+    unitId: 387,
+    title: "Un week-end de solidarité",
+    language: "fr",
+    level: "B1",
+    story: {
+        text: "Ce week-end, l'association a organisé une grande distribution de repas pour les personnes fragiles. Beaucoup de jeunes se sont engagés comme bénévoles. Ils ont préparé des plats chauds et les ont distribués dans le centre-ville. La présidente de l'association a remercié tout le monde pour leur solidarité. 'Faire un don de son temps est aussi important que de donner de l'argent,' a-t-elle déclaré. Cette initiative a rassemblé toute la communauté autour d'une cause noble. L'événement a prouvé que chacun peut aider à son échelle.",
+        translation: "Bu hafta sonu, dernek hassas kişiler için büyük bir yemek dağıtımı düzenledi. Birçok genç gönüllü olarak katıldı. Sıcak yemekler hazırladılar ve şehir merkezinde dağıttılar. Dernek başkanı herkese dayanışmaları için teşekkür etti. 'Zamanından bağış yapmak, para vermek kadar önemlidir' dedi. Bu girişim tüm topluluğu asil bir amaç etrafında topladı. Etkinlik, herkesin kendi çapında yardım edebileceğini kanıtladı."
+    },
+    vocabulary: [
+        { word: "fragile", meaning: "hassas / kırılgan" },
+        { word: "le plat", meaning: "yemek / tabak" },
+        { word: "la présidente", meaning: "başkan (kadın)" },
+        { word: "déclarer", meaning: "beyan etmek / açıklamak" },
+        { word: "à son échelle", meaning: "kendi çapında" }
+    ],
+    questions: [
+        {
+            id: 1,
+            question: "Qu'est-ce que l'association a organisé ?",
+            options: ["Un concert", "Une distribution de repas", "Une manifestation", "Une compétition sportive"],
+            correctAnswer: "Une distribution de repas"
+        },
+        {
+            id: 2,
+            question: "Qui s'est engagé comme bénévole ?",
+            options: ["Beaucoup de jeunes", "Seulement des personnes âgées", "Des policiers", "La présidente toute seule"],
+            correctAnswer: "Beaucoup de jeunes"
+        },
+        {
+            id: 3,
+            question: "Où les plats ont-ils été distribués ?",
+            options: ["À l'école", "Dans le centre-ville", "Dans un village", "À l'hôpital"],
+            correctAnswer: "Dans le centre-ville"
+        },
+        {
+            id: 4,
+            question: "Selon la présidente, donnez de son temps est aussi important que quoi ?",
+            options: ["Donner de l'argent", "Aller au cinéma", "Dormir", "Étudier"],
+            correctAnswer: "Donner de l'argent"
+        },
+        {
+            id: 5,
+            question: "Qu'est-ce que l'initiative a prouvé ?",
+            options: ["Que personne ne veut aider", "Que chacun peut aider à son échelle", "Que l'association a besoin de plus de jeunes", "Que cuisiner est difficile"],
+            correctAnswer: "Que chacun peut aider à son échelle"
+        }
+    ]
+};
+
 export function getFrB1ReadingForUnit(unitId: number): UnitReading | undefined {
   const readings: { [key: number]: UnitReading } = {
     361: unit361Reading,
@@ -973,7 +2107,22 @@ export function getFrB1ReadingForUnit(unitId: number): UnitReading | undefined {
     369: unit369Reading,
     370: unit370Reading,
     371: unit371Reading,
-    372: unit372Reading
+    372: unit372Reading,
+    373: unit373Reading,
+    374: unit374Reading,
+    375: unit375Reading,
+    376: unit376Reading,
+    377: unit377Reading,
+    378: unit378Reading,
+    379: unit379Reading,
+    380: unit380Reading,
+    381: unit381Reading,
+    382: unit382Reading,
+    383: unit383Reading,
+    384: unit384Reading,
+    385: unit385Reading,
+    386: unit386Reading,
+    387: unit387Reading
   };
   return readings[unitId];
 }

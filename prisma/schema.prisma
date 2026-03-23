@@ -24,4 +24,21 @@ model User {
 
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+  
+  memory        UserMemory?
+}
+
+model UserMemory {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  hobbies     String?  @db.Text
+  weaknesses  String?  @db.Text
+  profession  String?
+  goals       String?
+  notes       String?  @db.Text // AI's general notes about the user
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

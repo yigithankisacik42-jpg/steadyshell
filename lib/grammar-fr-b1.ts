@@ -570,6 +570,561 @@ const unit372Grammar: UnitGrammar = {
   ]
 };
 
+const unit373Grammar: UnitGrammar = {
+  unitId: 373,
+  title: "Seyahat Kültürü",
+  rules: [
+    {
+      id: "fr-b1-conseils-intro",
+      title: "🧭 Bölüm 1: Tavsiye Vermek (Il faut / Il est important de)",
+      explanation:
+        "Seyahatte kural ve tavsiye verirken en sık kullanılan iki yapı şunlardır:\n\n* **Il faut + mastar** = Yapmak gerekir\n* **Il est important de + mastar** = Yapmak önemlidir\n\nBu yapılar genel kural ve öneri bildirmek için kullanılır.",
+      examples: [
+        { fr: "Il faut respecter les coutumes locales.", tr: "Yerel geleneklere saygı göstermek gerekir." },
+        { fr: "Il est important de se renseigner avant de partir.", tr: "Yola çıkmadan önce bilgi almak önemlidir." }
+      ]
+    },
+    {
+      id: "fr-b1-conseils-preference",
+      title: "✅ Bölüm 2: Yumuşak Tavsiye (Il vaut mieux / Il est préférable de)",
+      explanation:
+        "Daha kibar ve yumuşak bir öneri için **Il vaut mieux** veya **Il est préférable de** kullanılır.\n\n* **Il vaut mieux + mastar** = Daha iyi olur\n* **Il est préférable de + mastar** = Tercih edilir / Daha iyidir",
+      examples: [
+        { fr: "Il vaut mieux apprendre quelques mots de la langue.", tr: "Dilden birkaç kelime öğrenmek daha iyi olur." },
+        { fr: "Il est préférable de réserver à l'avance.", tr: "Önceden rezervasyon yapmak daha iyidir." }
+      ]
+    },
+    {
+      id: "fr-b1-conseils-negative",
+      title: "🚫 Bölüm 3: Olumsuz Tavsiyeler ve Yasaklar",
+      explanation:
+        "Olumsuz tavsiye verirken **ne pas** kullanılır. Yasak belirtmek için **Il est interdit de** yapısı tercih edilir.\n\n* **Il vaut mieux ne pas + mastar** = Yapmamak daha iyi olur\n* **Il est interdit de + mastar** = ... yapmak yasaktır",
+      examples: [
+        { fr: "Il vaut mieux ne pas parler trop fort dans les temples.", tr: "Tapınaklarda çok yüksek sesle konuşmamak daha iyi olur." },
+        { fr: "Il est interdit de prendre des photos ici.", tr: "Burada fotoğraf çekmek yasaktır." }
+      ]
+    }
+  ]
+};
+
+const unit374Grammar: UnitGrammar = {
+  unitId: 374,
+  title: "Farklı Kültürler",
+  rules: [
+    {
+      id: "fr-b1-contrast-intro",
+      title: "🔎 Bölüm 1: Kültürleri Karşılaştırma",
+      explanation:
+        "Kültürleri karşılaştırırken en temel yapı **plus/moins/aussi... que** kalıbıdır. Ayrıca **différent de** ve **pareil à** sık kullanılır.\n\n* plus + sıfat + que = daha ...\n* moins + sıfat + que = daha az ...\n* aussi + sıfat + que = ... kadar\n* différent de / pareil à = ...den farklı / ...e benzer",
+      examples: [
+        { fr: "Le rythme de vie est plus lent ici.", tr: "Burada yaşam temposu daha yavaştır." },
+        { fr: "Nos habitudes sont différentes des vôtres.", tr: "Alışkanlıklarımız sizinkilerden farklıdır." }
+      ]
+    },
+    {
+      id: "fr-b1-contrast-linkers",
+      title: "⚖️ Bölüm 2: Karşıtlık Bağlaçları",
+      explanation:
+        "Farklılık ve karşıtlık anlatmak için şu bağlaçlar çok kullanılır:\n\n* **tandis que / alors que** = ... iken\n* **par contre / en revanche** = buna karşılık\n* **cependant / pourtant** = ancak / buna rağmen",
+      examples: [
+        { fr: "En France, on dîne tôt, tandis qu'en Espagne on dîne tard.", tr: "Fransa'da erken yenir, İspanya'da geç." },
+        { fr: "Je suis timide; pourtant, j'aime rencontrer des gens.", tr: "Çekingenim; buna rağmen insanlarla tanışmayı seviyorum." }
+      ]
+    },
+    {
+      id: "fr-b1-contrast-opinion",
+      title: "💬 Bölüm 3: Görüş Bildirme ve Yumuşatma",
+      explanation:
+        "Kültürler arası konuşmalarda yargılayıcı olmamak için görüşleri yumuşatırız:\n\n* **À mon avis / Selon moi** = bana göre\n* **Il me semble que** = bana öyle geliyor ki\n* **Je trouve que** = bence",
+      examples: [
+        { fr: "À mon avis, la politesse est essentielle.", tr: "Bana göre nezaket çok önemlidir." },
+        { fr: "Il me semble que les salutations sont différentes ici.", tr: "Selamlaşmalar burada farklı gibi geliyor." }
+      ]
+    }
+  ]
+};
+
+const unit375Grammar: UnitGrammar = {
+  unitId: 375,
+  title: "Sanat ve Edebiyat",
+  rules: [
+    {
+      id: "fr-b1-recits-passe-intro",
+      title: "📖 Bölüm 1: Hikaye Anlatımında Passé Composé vs Imparfait",
+      explanation:
+        "Edebiyatta olayları anlatırken iki zaman sık kullanılır:\n\n* **Imparfait**: Arka plan, alışkanlık, süreklilik (okuyordu, gidiyordu)\n* **Passé composé**: Tamamlanmış olay (geldi, başladı)\n\nGenellikle arka planı imparfait ile, olayı passé composé ile veririz.",
+      examples: [
+        { fr: "Lucie lisait un roman quand son amie est arrivée.", tr: "Lucie roman okuyordu, arkadaşı geldi." },
+        { fr: "Nous avons visité l'exposition et nous étions très impressionnés.", tr: "Sergiyi gezdik ve çok etkilenmiştik." }
+      ]
+    },
+    {
+      id: "fr-b1-avis-critique",
+      title: "📝 Bölüm 2: Eleştiri ve Görüş Bildirme",
+      explanation:
+        "Bir eser hakkında görüş bildirirken şu yapılar çok kullanılır:\n\n* **À mon avis / Selon moi** = Bana göre\n* **Je trouve que / J'ai trouvé que** = Bence / Buldum ki\n* **C'est + sıfat** = Bu ...\n\nAyrıca görüşü yumuşatmak için **plutôt, assez, vraiment** gibi zarflar ekleyebiliriz.",
+      examples: [
+        { fr: "À mon avis, ce roman est captivant.", tr: "Bana göre bu roman sürükleyici." },
+        { fr: "J'ai trouvé la pièce plutôt longue.", tr: "Oyunu biraz uzun buldum." }
+      ]
+    },
+    {
+      id: "fr-b1-pronom-dont",
+      title: "🔗 Bölüm 3: 'Dont' ile Bağlantı Kurma",
+      explanation:
+        "**Dont**, 'de + isim' yapısının yerini alır ve iki cümleyi birleştirir.\n\nFormül: **isim + dont + cümle**\n\nÖzellikle sanat ve edebiyat bağlamında eser, yazar, stil vb. anlatırken çok kullanılır.",
+      examples: [
+        { fr: "C'est l'auteur dont je parle.", tr: "Bahsettiğim yazar budur." },
+        { fr: "Voici le livre dont le style est unique.", tr: "İşte stili eşsiz olan kitap." }
+      ]
+    }
+  ]
+};
+
+const unit376Grammar: UnitGrammar = {
+  unitId: 376,
+  title: "Tarihi Olaylar",
+  rules: [
+    {
+      id: "fr-b1-dates-siecles",
+      title: "🗓️ Bölüm 1: Tarih ve Yüzyıl İfadeleri",
+      explanation:
+        "Tarihi olayları anlatırken tarih ve yüzyıl kalıpları sık kullanılır:\n\n* **en + yıl** = en 1923\n* **au + yüzyıl** = au XIXe siècle\n* **le + gün/ay** = le 29 octobre\n* **il y a + süre** = il y a 100 ans",
+      examples: [
+        { fr: "La république a été fondée en 1923.", tr: "Cumhuriyet 1923'te kuruldu." },
+        { fr: "Au XXe siècle, la ville a beaucoup changé.", tr: "20. yüzyılda şehir çok değişti." }
+      ]
+    },
+    {
+      id: "fr-b1-chronologie",
+      title: "⏳ Bölüm 2: Kronoloji Bağlaçları",
+      explanation:
+        "Olayları sıraya koymak için şu bağlaçlar kullanılır:\n\n* **d'abord** = önce\n* **ensuite / puis** = sonra\n* **finalement** = sonunda\n* **pendant ce temps** = bu sırada",
+      examples: [
+        { fr: "D'abord, ils ont signé le traité; ensuite, la paix est revenue.", tr: "Önce antlaşmayı imzaladılar; sonra barış geri geldi." },
+        { fr: "Finalement, la ville a été libérée.", tr: "Sonunda şehir kurtarıldı." }
+      ]
+    },
+    {
+      id: "fr-b1-cause-consequence",
+      title: "🔗 Bölüm 3: Neden–Sonuç İfadeleri",
+      explanation:
+        "Tarihi olaylarda neden ve sonuç anlatımı önemlidir:\n\n* **parce que** = çünkü\n* **à cause de** = ... yüzünden\n* **donc / c'est pourquoi** = bu yüzden",
+      examples: [
+        { fr: "La bataille est connue parce qu'elle a changé le cours de l'histoire.", tr: "Muharebe, tarihin seyrini değiştirdiği için bilinir." },
+        { fr: "À cause de la guerre, beaucoup de familles ont quitté la ville.", tr: "Savaş yüzünden birçok aile şehirden ayrıldı." }
+      ]
+    }
+  ]
+};
+
+const unit377Grammar: UnitGrammar = {
+  unitId: 377,
+  title: "Ünlü Şahsiyetler",
+  rules: [
+    {
+      id: "fr-b1-passe-etre-biographie",
+      title: "✅ Bölüm 1: Biyografide Passé Composé (Être ile)",
+      explanation:
+        "Biyografilerde **naître, mourir, devenir, rester** gibi fiiller sık kullanılır. Bu fiiller **être** ile çekilir ve geçmiş zaman ortacı (participe passé) özneye göre uyum alır.\n\n* Elle est **née** en 1990.\n* Il est **devenu** célèbre.",
+      examples: [
+        { fr: "Elle est née à Paris.", tr: "Paris'te doğdu." },
+        { fr: "Ils sont devenus célèbres.", tr: "Ünlü oldular." }
+      ]
+    },
+    {
+      id: "fr-b1-age-duree",
+      title: "🕒 Bölüm 2: Yaş ve Süre İfadeleri",
+      explanation:
+        "Kişinin yaşamında dönemleri anlatırken şu yapılar kullanılır:\n\n* **à l'âge de** = ... yaşında\n* **pendant** = boyunca\n* **depuis** = beri\n* **dès** = -den itibaren",
+      examples: [
+        { fr: "À l'âge de 20 ans, il a commencé sa carrière.", tr: "20 yaşında kariyerine başladı." },
+        { fr: "Elle a travaillé pendant dix ans.", tr: "On yıl boyunca çalıştı." }
+      ]
+    },
+    {
+      id: "fr-b1-rapport-opinion",
+      title: "💬 Bölüm 3: Görüş ve Söz Aktarma",
+      explanation:
+        "Bir ünlünün düşüncelerini aktarırken şu yapılar kullanılır:\n\n* **Il/Elle dit que...** = ... dediğini söyler\n* **Il/Elle explique que...** = ... açıkladığını söyler\n* **Selon lui/elle...** = Ona göre...",
+      examples: [
+        { fr: "Il dit que la créativité est essentielle.", tr: "Yaratıcılığın çok önemli olduğunu söyler." },
+        { fr: "Selon elle, il faut persévérer.", tr: "Ona göre pes etmemek gerekir." }
+      ]
+    }
+  ]
+};
+
+const unit378Grammar: UnitGrammar = {
+  unitId: 378,
+  title: "Bilimsel Keşifler",
+  rules: [
+    {
+      id: "fr-b1-hypothese-cause",
+      title: "🧪 Bölüm 1: Hipotez ve Neden-Sonuç",
+      explanation:
+        "Bilimsel anlatımda hipotez ve neden-sonuç ilişkisi önemlidir. Sık kullanılan yapılar:\n\n* **Si... alors...** = Eğer... o halde...\n* **parce que / donc** = çünkü / bu yüzden\n* **grâce à** = sayesinde",
+      examples: [
+        { fr: "Si l'hypothèse est correcte, alors l'expérience réussira.", tr: "Hipotez doğruysa, deney başarılı olur." },
+        { fr: "Grâce à cette méthode, les résultats sont fiables.", tr: "Bu yöntem sayesinde sonuçlar güvenilirdir." }
+      ]
+    },
+    {
+      id: "fr-b1-objectif-but",
+      title: "🎯 Bölüm 2: Amaç Bildirme (pour / afin de)",
+      explanation:
+        "Bilimsel metinlerde amaç belirtirken **pour + mastar** veya **afin de + mastar** kullanılır.\n\n* Nous testons une formule **pour** vérifier l'hypothèse.\n* Ils répètent l'expérience **afin de** confirmer les résultats.",
+      examples: [
+        { fr: "On observe les étoiles pour comprendre l'univers.", tr: "Evreni anlamak için yıldızları gözlemleriz." },
+        { fr: "Ils mesurent la température afin de comparer les données.", tr: "Verileri karşılaştırmak için sıcaklığı ölçüyorlar." }
+      ]
+    },
+    {
+      id: "fr-b1-passif-science",
+      title: "🔬 Bölüm 3: Edilgen Yapı (Le Passif) Kullanımı",
+      explanation:
+        "Bilimsel dilde süreçleri anlatırken edilgen yapı sık kullanılır:\n\n* **être + participe passé** = yapılmak/edilmek\n\nÖrnek: L'expérience **est réalisée** dans le laboratoire.",
+      examples: [
+        { fr: "La formule est testée plusieurs fois.", tr: "Formül birkaç kez test edilir." },
+        { fr: "Les données sont analysées par l'équipe.", tr: "Veriler ekip tarafından analiz edilir." }
+      ]
+    }
+  ]
+};
+
+const unit379Grammar: UnitGrammar = {
+  unitId: 379,
+  title: "Uzay Araştırmaları",
+  rules: [
+    {
+      id: "fr-b1-espace-prepositions",
+      title: "🛰️ Bölüm 1: Uzayda Konum Bildiren Edatlar",
+      explanation:
+        "Uzayla ilgili konuşurken konum bildiren edatlar çok kullanılır:\n\n* **autour de** = etrafında\n* **loin de / près de** = uzağında / yakınında\n* **vers** = -e doğru\n* **dans** = içinde",
+      examples: [
+        { fr: "La station spatiale tourne autour de la Terre.", tr: "Uzay istasyonu Dünya'nın etrafında döner." },
+        { fr: "La fusée part vers Mars.", tr: "Roket Mars'a doğru gider." }
+      ]
+    },
+    {
+      id: "fr-b1-distance-position",
+      title: "📏 Bölüm 2: Mesafe ve Konum İfadeleri",
+      explanation:
+        "Mesafe ve konum belirtmek için şu yapılar kullanılır:\n\n* **entre ... et ...** = ... ile ... arasında\n* **au-dessus de / en dessous de** = üstünde / altında\n* **à + distance** = ... uzaklıkta",
+      examples: [
+        { fr: "La lune est entre la Terre et le soleil.", tr: "Ay, Dünya ile Güneş arasındadır." },
+        { fr: "Le satellite est au-dessus de l'atmosphère.", tr: "Uydu atmosferin üzerindedir." }
+      ]
+    },
+    {
+      id: "fr-b1-futur-mission",
+      title: "🚀 Bölüm 3: Gelecek Zamanla Görev Anlatımı",
+      explanation:
+        "Uzay görevleri anlatılırken **Futur Simple** sık kullanılır:\n\n* **sera / ira / partira / observera** gibi çekimler\n\nFormül: **fiil kökü + -ai, -as, -a, -ons, -ez, -ont**",
+      examples: [
+        { fr: "La mission durera six mois.", tr: "Görev altı ay sürecek." },
+        { fr: "Les astronautes observeront la planète.", tr: "Astronotlar gezegeni gözlemleyecek." }
+      ]
+    }
+  ]
+};
+
+const unit380Grammar: UnitGrammar = {
+  unitId: 380,
+  title: "Moda Trendleri",
+  rules: [
+    {
+      id: "fr-b1-couleurs-accord",
+      title: "🎨 Bölüm 1: Renk Sıfatları (Uyum ve Yer)",
+      explanation:
+        "Renk sıfatları genellikle isimden sonra gelir ve isimle cinsiyet-sayı uyumu yapar:\n\n* une robe **bleue**\n* des chaussures **noires**\n\nBazı renkler ise değişmez: **marron, orange, kaki** gibi.",
+      examples: [
+        { fr: "Elle porte une jupe rouge.", tr: "Kırmızı bir etek giyiyor." },
+        { fr: "Ils aiment les manteaux marron.", tr: "Kahverengi paltoları severler." }
+      ]
+    },
+    {
+      id: "fr-b1-comparatif-style",
+      title: "📏 Bölüm 2: Karşılaştırma ve Süperlatif",
+      explanation:
+        "Tarzları karşılaştırmak için **plus / moins / aussi ... que** kullanılır.\n\n* plus élégant que = daha şık\n* moins cher que = daha ucuz\n* aussi confortable que = ... kadar rahat",
+      examples: [
+        { fr: "Cette veste est plus élégante que l'autre.", tr: "Bu ceket diğerinden daha şık." },
+        { fr: "C'est le vêtement le plus confortable.", tr: "Bu en rahat kıyafet." }
+      ]
+    },
+    {
+      id: "fr-b1-porter-mettre",
+      title: "👕 Bölüm 3: Porter / Mettre / S'habiller",
+      explanation:
+        "Giyimle ilgili fiiller:\n\n* **porter** = üzerinde taşımak/giymek\n* **mettre** = giymek/takmak\n* **s'habiller** = giyinmek\n\nGenellikle: **Je mets une veste** / **Je porte une robe** / **Je m'habille vite**",
+      examples: [
+        { fr: "Je mets un manteau.", tr: "Bir palto giyiyorum." },
+        { fr: "Elle s'habille pour la soirée.", tr: "Akşam için giyiniyor." }
+      ]
+    }
+  ]
+};
+
+const unit381Grammar: UnitGrammar = {
+  unitId: 381,
+  title: "Tüketim Alışkanlıkları",
+  rules: [
+    {
+      id: "fr-b1-quantites",
+      title: "🛒 Bölüm 1: Miktar ve Nicelik İfadeleri",
+      explanation:
+        "Tüketim konuşurken miktar belirtmek için şu ifadeler kullanılır:\n\n* **beaucoup de** = çok\n* **un peu de** = biraz\n* **assez de** = yeterince\n* **trop de** = fazla\n* **pas assez de** = yeterince değil",
+      examples: [
+        { fr: "Je dépense trop d'argent.", tr: "Çok fazla para harcıyorum." },
+        { fr: "Il reste un peu de budget.", tr: "Biraz bütçe kaldı." }
+      ]
+    },
+    {
+      id: "fr-b1-objectif-achat",
+      title: "🎯 Bölüm 2: Amaç Bildirme (pour / afin de)",
+      explanation:
+        "Alışverişte amaç belirtirken **pour + mastar** veya **afin de + mastar** kullanılır.\n\n* Je compare les prix **pour** économiser.\n* Il achète en ligne **afin de** gagner du temps.",
+      examples: [
+        { fr: "Je cherche une promotion pour payer moins.", tr: "Daha az ödemek için kampanya arıyorum." },
+        { fr: "Elle garde le reçu afin de retourner le produit.", tr: "Ürünü iade etmek için fişi saklar." }
+      ]
+    },
+    {
+      id: "fr-b1-opposition",
+      title: "⚖️ Bölüm 3: Karşıtlık (mais / pourtant)",
+      explanation:
+        "Tüketim alışkanlıklarında karşıtlık anlatırken **mais** ve **pourtant** kullanılır.\n\n* Je veux acheter ce téléphone, **mais** il est cher.\n* Il a de l'argent, **pourtant** il économise.",
+      examples: [
+        { fr: "Le produit est cher, mais la qualité est bonne.", tr: "Ürün pahalı ama kalite iyi." },
+        { fr: "Elle a un budget limité; pourtant, elle achète beaucoup.", tr: "Bütçesi sınırlı; buna rağmen çok alışveriş yapıyor." }
+      ]
+    }
+  ]
+};
+
+const unit382Grammar: UnitGrammar = {
+  unitId: 382,
+  title: "ReklamcÄ±lÄ±k",
+  rules: [
+    {
+      id: "fr-b1-ad-imperatif",
+      title: "ğŸ“£ BÃ¶lÃ¼m 1: Reklam Dilinde Emir Kipi (ImpÃ©ratif)",
+      explanation:
+        "Reklamlarda mÃ¼ÅŸteriyi harekete geÃ§irmek iÃ§in emir kipi Ã§ok kullanÄ±lÄ±r.\n\n* **Fiil kÃ¶kÃ¼** kullanÄ±lÄ±r: *Essayez !, DÃ©couvrez !, Profitez !*\n* **Olumsuz emir:** *Ne + fiil + pas*\n\nBu yapÄ±, teklif ve Ã§aÄŸrÄ± cÃ¼mlelerini doÄŸal ve etkili gÃ¶sterir.",
+      examples: [
+        { fr: "Essayez notre nouveau produit !", tr: "Yeni Ã¼rÃ¼nÃ¼mÃ¼zÃ¼ deneyin!" },
+        { fr: "Ne manquez pas l'offre spÃ©ciale !", tr: "Ã–zel teklifi kaÃ§Ä±rmayÄ±n!" }
+      ]
+    },
+    {
+      id: "fr-b1-ad-futur",
+      title: "ğŸ“… BÃ¶lÃ¼m 2: Lansman Ä°Ã§in Gelecek Zaman",
+      explanation:
+        "Reklam ve lansman anlatÄ±mÄ±nda iki gelecek zaman sÄ±k kullanÄ±lÄ±r:\n\n* **Futur Proche:** *aller + mastar* (yakÄ±n plan)\n* **Futur Simple:** kÃ¶k + **-ai, -as, -a, -ons, -ez, -ont** (kesin plan / Ã¶ngÃ¶rÃ¼)\n\nÃ–rnek: *Nous allons lancer la campagne* / *La marque lancera un nouveau produit*.",
+      examples: [
+        { fr: "Nous allons lancer la campagne demain.", tr: "KampanyayÄ± yarÄ±n baÅŸlatacaÄŸÄ±z." },
+        { fr: "La marque lancera un nouveau produit en juin.", tr: "Marka haziranda yeni bir Ã¼rÃ¼n Ã§Ä±karacak." }
+      ]
+    },
+    {
+      id: "fr-b1-ad-comparatif",
+      title: "âš–ï¸ BÃ¶lÃ¼m 3: KarÅŸÄ±laÅŸtÄ±rma ve SÃ¼perlatif",
+      explanation:
+        "Reklamlarda Ã¼rÃ¼nleri karÅŸÄ±laÅŸtÄ±rmak iÃ§in ÅŸu yapÄ±lar kullanÄ±lÄ±r:\n\n* **plus / moins / aussi ... que** = daha / daha az / ... kadar\n* **le / la / les plus + sÄ±fat** = en ... (sÃ¼perlatif)\n\nBu yapÄ±lar Ã¼rÃ¼nÃ¼ vurgulamak iÃ§in sÄ±kÃ§a kullanÄ±lÄ±r.",
+      examples: [
+        { fr: "Notre service est plus rapide que celui des concurrents.", tr: "Hizmetimiz rakiplerinkinden daha hÄ±zlÄ±." },
+        { fr: "C'est le slogan le plus mÃ©morable de la marque.", tr: "Bu, markanÄ±n en akÄ±lda kalÄ±cÄ± sloganÄ±dÄ±r." }
+      ]
+    }
+  ]
+};
+
+const unit383Grammar: UnitGrammar = {
+  unitId: 383,
+  title: "Haber MedyasÄ±",
+  rules: [
+    {
+      id: "fr-b1-media-source",
+      title: "ğŸ“° BÃ¶lÃ¼m 1: Kaynak Belirtme (selon / d'aprÃ¨s)",
+      explanation:
+        "Haber dilinde bilgi kaynaÄŸÄ±nÄ± belirtmek iÃ§in **selon** ve **d'aprÃ¨s** kullanÄ±lÄ±r:\n\n* **Selon + isim** = ...'e gÃ¶re\n* **D'aprÃ¨s + isim** = ...'e gÃ¶re\n\nBu yapÄ±lar, bilginin kime ait olduÄŸunu aÃ§Ä±klar.",
+      examples: [
+        { fr: "Selon la police, l'incident est terminÃ©.", tr: "Polise gÃ¶re olay bitti." },
+        { fr: "D'aprÃ¨s le journal, la route sera fermÃ©e.", tr: "Gazeteye gÃ¶re yol kapatÄ±lacak." }
+      ]
+    },
+    {
+      id: "fr-b1-media-indirect",
+      title: "ğŸ’¬ BÃ¶lÃ¼m 2: DolaylÄ± AnlatÄ±m (annoncer / dire que)",
+      explanation:
+        "Gazetecilikte sÄ±kÃ§a **que** baÄŸlacÄ±yla dolaylÄ± anlatÄ±m kullanÄ±lÄ±r:\n\n* **annoncer que** = duyurmak\n* **dire que / expliquer que** = sÃ¶ylemek / aÃ§Ä±klamak\n\nBu yapÄ±lar haberin iÃ§eriÄŸini aktarÄ±r.",
+      examples: [
+        { fr: "Le maire annonce que le projet commence demain.", tr: "Belediye baÅŸkanÄ± projenin yarÄ±n baÅŸlayacaÄŸÄ±nÄ± duyuruyor." },
+        { fr: "La journaliste explique que les chiffres sont vÃ©rifiÃ©s.", tr: "Gazeteci rakamlarÄ±n doÄŸrulandÄ±ÄŸÄ±nÄ± aÃ§Ä±klÄ±yor." }
+      ]
+    },
+    {
+      id: "fr-b1-media-conditionnel",
+      title: "âš ï¸ BÃ¶lÃ¼m 3: Gazetecilikte Åart Kipi (SÃ¶ylenti)",
+      explanation:
+        "Kesin olmayan bilgiler aktarÄ±lÄ±rken **Conditionnel PrÃ©sent** kullanÄ±lÄ±r. Bu, bilginin teyit edilmediÄŸini gÃ¶sterir:\n\n* **Il y aurait...** = ... var(dÄ±) deniyor\n* **Il serait...** = ... olabilirmiÅŸ\n\nBu yapÄ±, haber dilinde ihtiyatlÄ± anlatÄ±m saÄŸlar.",
+      examples: [
+        { fr: "Il y aurait des retards sur la ligne.", tr: "Hatta gecikmeler var deniyor." },
+        { fr: "Le nouveau service serait gratuit.", tr: "Yeni hizmetin Ã¼cretsiz olabileceÄŸi sÃ¶yleniyor." }
+      ]
+    }
+  ]
+};
+
+const unit384Grammar: UnitGrammar = {
+  unitId: 384,
+  title: "Politik Sistemler",
+  rules: [
+    {
+      id: "fr-b1-politique-obligation",
+      title: "âš–ï¸ BÃ¶lÃ¼m 1: Zorunluluk ve Ä°zin (il faut / devoir)",
+      explanation:
+        "Siyasi ve toplumsal kurallarda zorunluluk ve izin belirtmek iÃ§in ÅŸu yapÄ±lar kullanÄ±lÄ±r:\n\n* **il faut + mastar** = gereklidir\n* **devoir + mastar** = zorunda olmak\n* **avoir le droit de + mastar** = izinli olmak\n\nBu yapÄ±lar kanun ve kurallarÄ± anlatÄ±rken Ã§ok sÄ±k kullanÄ±lÄ±r.",
+      examples: [
+        { fr: "Il faut respecter la loi.", tr: "Yasaya uymak gerekir." },
+        { fr: "Les citoyens doivent voter.", tr: "VatandaÅŸlar oy kullanmak zorundadÄ±r." }
+      ]
+    },
+    {
+      id: "fr-b1-politique-passif",
+      title: "ğŸ“œ BÃ¶lÃ¼m 2: Kanun Dilinde Edilgen YapÄ±",
+      explanation:
+        "ResmÃ® metinlerde edilgen yapÄ± sÄ±k kullanÄ±lÄ±r:\n\n* **Ãªtre + participe passÃ©** = edilgen\n\nBu yapÄ±, eylemi kimin yaptÄ±ÄŸÄ±ndan Ã§ok, eylemin kendisini vurgular.",
+      examples: [
+        { fr: "La loi est votÃ©e par le parlement.", tr: "Yasa parlamento tarafÄ±ndan kabul edilir." },
+        { fr: "Le projet est approuvÃ©.", tr: "Proje onaylanÄ±r." }
+      ]
+    },
+    {
+      id: "fr-b1-politique-relatifs",
+      title: "ğŸ§© BÃ¶lÃ¼m 3: KurumlarÄ± Anlatmada Qui / Que",
+      explanation:
+        "KurumlarÄ± tanÄ±mlarken **qui** ve **que** sÄ±k kullanÄ±lÄ±r:\n\n* **qui** = Ã¶zne yerine\n* **que** = nesne yerine\n\nBu yapÄ±lar bilgiyi akÄ±cÄ± verir.",
+      examples: [
+        { fr: "Le parti qui gagne les Ã©lections forme le gouvernement.", tr: "SeÃ§imleri kazanan parti hÃ¼kÃ¼meti kurar." },
+        { fr: "La loi que le parlement propose est importante.", tr: "Parlamentonun Ã¶nerdiÄŸi yasa Ã¶nemlidir." }
+      ]
+    }
+  ]
+};
+
+const unit385Grammar: UnitGrammar = {
+  unitId: 385,
+  title: "Hukuk ve Adalet (Droit et Justice)",
+  rules: [
+    {
+      id: "fr-b1-droit-subjonctif",
+      title: "⚖️ Bölüm 1: Adalet İsteklerinde Subjonctif (Dilek Kipi)",
+      explanation:
+        "Adalet ve hukuk sisteminde bir şeyin olmasını istemek veya talep etmek için **Subjonctif** sıkça kullanılır.\n\n* **Il est juste que...** (Adil olandır ki...)\n* **Il exige que...** (Talep ediyor ki...)\n* **Nous demandons que...** (İstiyoruz ki...)\n\nBu ifadelerden sonra fiil Subjonctif kipinde çekilir.",
+      examples: [
+        { fr: "Il est juste que le coupable soit puni.", tr: "Suçlunun cezalandırılması adildir." },
+        { fr: "L'avocat exige que son client soit libéré.", tr: "Avukat müvekkilinin serbest bırakılmasını talep ediyor." }
+      ]
+    },
+    {
+      id: "fr-b1-droit-passif",
+      title: "📝 Bölüm 2: Mahkeme Dilinde Edilgen Yapı (Le Passif)",
+      explanation:
+        "Hukuk dilinde eylemin kendisi, eylemi yapandan daha önemli olduğu için **Passif (Edilgen Çatı)** çok kullanılır. Formül: **Être + Participe Passé**.\n\n* a été condamné = mahkum edildi\n* sera jugé = yargılanacak",
+      examples: [
+        { fr: "L'accusé a été condamné à trois ans de prison.", tr: "Sanık üç yıl hapis cezasına çarptırıldı." },
+        { fr: "La victime sera indemnisée par l'État.", tr: "Mağdura devlet tarafından tazminat ödenecek." }
+      ]
+    },
+    {
+      id: "fr-b1-droit-conditionnel",
+      title: "⚠️ Bölüm 3: İddialarda Conditionnel (Şart Kipi) Kullanımı",
+      explanation:
+        "Kesinleşmemiş suçlamalarda veya haberlerde **Conditionnel** (Şart/Söylenti Kipi) kullanılır. Bu, bilginin bir iddia olduğunu ve henüz mahkemece kanıtlanmadığını gösterir.\n\n* **Il aurait volé...** = ...çalmış olduğu söyleniyor/iddia ediliyor\n* **Le suspect serait...** = Şüphelinin ... olduğu iddia ediliyor",
+      examples: [
+        { fr: "Le suspect aurait quitté le pays.", tr: "Şüphelinin ülkeyi terk ettiği iddia ediliyor." },
+        { fr: "Il serait le principal responsable de l'infraction.", tr: "İhlalin başlıca sorumlusu olduğu söyleniyor." }
+      ]
+    }
+  ]
+};
+
+const unit386Grammar: UnitGrammar = {
+  unitId: 386,
+  title: "İnsan Hakları (Les Droits de l'Homme)",
+  rules: [
+    {
+      id: "fr-b1-droits-subjonctif",
+      title: "⚖️ Bölüm 1: Gereklilik ve İrade (Subjonctif)",
+      explanation:
+        "İnsan hakları konularında bir şeyin olmasını istemek veya talep etmek için **Subjonctif** sıkça kullanılır.\n\n* **Il est nécessaire que...** (Gereklidir ki...)\n* **Nous voulons que...** (İstiyoruz ki...)\n* **Ils exigent que...** (Talep ediyorlar ki...)\n\nBu ifadelerden sonra fiil Subjonctif kipinde çekilir.",
+      examples: [
+        { fr: "Il est nécessaire que nous respections les droits de chacun.", tr: "Herkesin haklarına saygı duymamız gereklidir." },
+        { fr: "Ils exigent que la loi change.", tr: "Yasanın değişmesini talep ediyorlar." }
+      ]
+    },
+    {
+      id: "fr-b1-droits-passif",
+      title: "📝 Bölüm 2: Edilgen Yapı (Le Passif)",
+      explanation:
+        "Hukuk ve insan hakları dilinde eylemin kendisi, eylemi yapandan daha önemli olduğu için **Passif (Edilgen Çatı)** çok kullanılır. Formül: **Être + Participe Passé**.\n\n* est protégé = korunur\n* sont respectés = saygı duyulur",
+      examples: [
+        { fr: "Les réfugiés sont protégés par la loi internationale.", tr: "Mülteciler uluslararası hukuk tarafından korunur." },
+        { fr: "La liberté d'expression doit être garantie.", tr: "İfade özgürlüğü garanti altına alınmalıdır." }
+      ]
+    },
+    {
+      id: "fr-b1-droits-infinitif",
+      title: "⚠️ Bölüm 3: Hak Bildirme (Avoir le droit de)",
+      explanation:
+        "Hak ve özgürlüklerden bahsederken **avoir le droit de + mastar** yapısı kullanılır.\n\n* le droit de + fiil = ... hakkı\n* le droit à + isim = ... hakkı",
+      examples: [
+        { fr: "Tout le monde a le droit de vivre en liberté.", tr: "Herkesin özgürce yaşama hakkı vardır." },
+        { fr: "Les travailleurs ont droit à des conditions justes.", tr: "İşçilerin adil şartlara hakkı vardır." }
+      ]
+    }
+  ]
+};
+
+const unit387Grammar: UnitGrammar = {
+  unitId: 387,
+  title: "Gönüllülük (Le Bénévolat)",
+  rules: [
+    {
+      id: "fr-b1-benevolat-but",
+      title: "🎯 Bölüm 1: Amaç Bildiren Bağlaçlar (pour que / afin que)",
+      explanation:
+        "Sosyal sorumluluk projelerinde, bir hedefe ulaşmak için yapılan eylemleri anlatırken 'pour que' (diye, olması için) ve 'afin que' kullanılır. Bu bağlaçlardan sonra gelen fiil her zaman **Subjonctif** kipinde çekilir.",
+      examples: [
+        { fr: "Je travaille comme bénévole pour que les enfants aient un avenir.", tr: "Çocukların bir geleceği olması için gönüllü olarak çalışıyorum." },
+        { fr: "Nous faisons des dons afin que la recherche avance.", tr: "Araştırmanın ilerlemesi için bağış yapıyoruz." }
+      ]
+    },
+    {
+      id: "fr-b1-benevolat-indefinis",
+      title: "🌍 Bölüm 2: Belgisiz Zamirler (Chacun, Personne, Tout le monde)",
+      explanation:
+        "Toplumsal dayanışmadan bahsederken belgisiz zamirler sıkça kullanılır:\n\n* **Chacun** = Herkes / Her biri (Tekil fiil alır)\n* **Tout le monde** = Herkes (Tekil fiil alır)\n* **Personne ne** = Hiç kimse (Olumsuzluk ifade eder, pas almaz)\n* **Quelqu'un** = Birisi",
+      examples: [
+        { fr: "Chacun peut faire la différence.", tr: "Herkes fark yaratabilir." },
+        { fr: "Personne ne doit être oublié.", tr: "Kimse unutulmamalıdır." }
+      ]
+    },
+    {
+      id: "fr-b1-benevolat-engagement",
+      title: "🤝 Bölüm 3: Katılım Belirten Yapılar (S'engager / Décider)",
+      explanation:
+        "Gönüllülük eylemlerine katılmayı anlatırken şu edat yapıları kullanılır:\n\n* **s'engager à + infinitif** = ... yapmaya söz vermek / gönüllü katılmak\n* **s'engager dans + isim** = ...'ya katılmak / girmek\n* **décider de + infinitif** = ... yapmaya karar vermek",
+      examples: [
+        { fr: "Elle s'est engagée à distribuer des repas.", tr: "Yemek dağıtmaya söz verdi (gönüllü oldu)." },
+        { fr: "Ils ont décidé de soutenir l'association.", tr: "Derneği desteklemeye karar verdiler." }
+      ]
+    }
+  ]
+};
+
 export function getFrB1GrammarForUnit(unitId: number): UnitGrammar | undefined {
 
   const grammar: { [key: number]: UnitGrammar } = {
@@ -584,7 +1139,22 @@ export function getFrB1GrammarForUnit(unitId: number): UnitGrammar | undefined {
     369: unit369Grammar,
     370: unit370Grammar,
     371: unit371Grammar,
-    372: unit372Grammar
+    372: unit372Grammar,
+    373: unit373Grammar,
+    374: unit374Grammar,
+    375: unit375Grammar,
+    376: unit376Grammar,
+    377: unit377Grammar,
+    378: unit378Grammar,
+    379: unit379Grammar,
+    380: unit380Grammar,
+    381: unit381Grammar,
+    382: unit382Grammar,
+    383: unit383Grammar,
+    384: unit384Grammar,
+    385: unit385Grammar,
+    386: unit386Grammar,
+    387: unit387Grammar
   };
   return grammar[unitId];
 }

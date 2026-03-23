@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle, Check, Loader2, Lightbulb, CheckCircle2, Circle } from "lucide-react";
+import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle, Check, Loader2, Lightbulb, CheckCircle2, Circle, Phone, PhoneOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ShelldonAvatar } from "@/components/shelldon-avatar";
+import { Scene3D } from "@/components/scene-3d";
 import { SHELLDON_SCENARIOS, buildShelldonPrompt, buildFeedbackPrompt, buildHintPrompt, type ShelldonScenario } from "@/lib/shelldon-ai";
 import { useSpeech } from "@/lib/use-speech";
 import { useUserProgress } from "@/contexts/user-progress-context";
@@ -16,9 +17,17 @@ const LANGUAGES = [
     { code: "en", name: "İngilizce", flag: "🇬🇧" },
 ];
 
+interface Correction {
+    wrong: string;
+    right: string;
+    explanation: string;
+}
+
 interface Message {
     role: "user" | "assistant";
     content: string;
+    imageUrl?: string;
+    corrections?: Correction[];
 }
 
 interface FeedbackData {
@@ -30,6 +39,66 @@ interface FeedbackData {
 
 type ShelldonState = "idle" | "speaking" | "listening" | "happy" | "thinking";
 
+// Component for Interactive Inline Corrections
+function UserMessageBubble({ content, corrections }: { content: string, corrections?: Correction[] }) {
+    if (!corrections || corrections.length === 0) {
+        return <div className="whitespace-pre-wrap leading-relaxed">{content}</div>;
+    }
+
+    let elements: React.ReactNode[] = [content];
+
+    corrections.forEach(corr => {
+        const wrongText = corr.wrong;
+        if (!wrongText || wrongText.length < 2) return;
+        
+        // Remove trailing punctuation from wrongText to match inside the string more robustly
+        const cleanWrongText = wrongText.replace(/[.,!?]$/, "").trim();
+        if (!cleanWrongText) return;
+
+        const newElements: React.ReactNode[] = [];
+        elements.forEach((el, index) => {
+            if (typeof el === 'string') {
+                const parts = el.split(cleanWrongText);
+                parts.forEach((part, i) => {
+                    newElements.push(part);
+                    if (i < parts.length - 1) {
+                        newElements.push(
+                            <div key={`${index}-${i}`} className="relative inline-block group cursor-help font-medium">
+                                <span className="underline decoration-wavy decoration-rose-300 decoration-2 underline-offset-4 text-white hover:text-rose-100 transition-colors">
+                                    {cleanWrongText}
+                                </span>
+                                {/* TOOLTIP */}
+                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-50 animate-in fade-in slide-in-from-bottom-2 drop-shadow-2xl">
+                                    <div className="bg-slate-900 border border-slate-700/50 text-white text-xs p-3.5 rounded-2xl min-w-[220px] max-w-[280px] whitespace-normal relative overflow-hidden">
+                                        {/* Glow Effect */}
+                                        <div className="absolute -top-6 -right-6 w-16 h-16 bg-emerald-500/20 blur-2xl rounded-full" />
+                                        
+                                        <div className="flex items-start gap-2.5 mb-2 relative z-10">
+                                            <div className="bg-emerald-500/20 p-1.5 rounded-full shrink-0">
+                                                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                                            </div>
+                                            <span className="font-bold text-emerald-300 text-sm mt-0.5 tracking-wide">{corr.right}</span>
+                                        </div>
+                                        <p className="text-slate-300 leading-relaxed text-[12px] border-t border-slate-700/60 pt-2.5 mt-2.5 relative z-10">
+                                            {corr.explanation}
+                                        </p>
+                                    </div>
+                                    <div className="w-3 h-3 bg-slate-900 border-r border-b border-slate-700/50 rotate-45 -mt-1.5 rounded-sm" />
+                                </div>
+                            </div>
+                        );
+                    }
+                });
+            } else {
+                newElements.push(el);
+            }
+        });
+        elements = newElements;
+    });
+
+    return <div className="leading-relaxed whitespace-pre-wrap">{elements}</div>;
+}
+
 export default function ShelldonPage() {
     // === STATE ===
     const [selectedLang, setSelectedLang] = useState("");
@@ -37,6 +106,7 @@ export default function ShelldonPage() {
     const [isInChat, setIsInChat] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputValue, setInputValue] = useState("");
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [shelldonState, setShelldonState] = useState<ShelldonState>("idle");
     const [currentBubbleText, setCurrentBubbleText] = useState("");
@@ -45,10 +115,17 @@ export default function ShelldonPage() {
     const [feedback, setFeedback] = useState<FeedbackData | null>(null);
     const [showTextInput, setShowTextInput] = useState(false);
     const [userLevel] = useState("A1");
+    // Memory State
+    const [userMemory, setUserMemory] = useState<any>(null);
+    // Call Mode State
+    const [isCallMode, setIsCallMode] = useState(false);
     // Yeni stateler (Hint & Görevler)
     const [isLoadingHint, setIsLoadingHint] = useState(false);
     const [currentHint, setCurrentHint] = useState<string | null>(null);
     const [completedObjectives, setCompletedObjectives] = useState<number[]>([]);
+    
+    // Slash commands state
+    const [showCommandMenu, setShowCommandMenu] = useState(false);
 
     const messagesContainerRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -65,9 +142,29 @@ export default function ShelldonPage() {
         stopSpeaking,
         isSupported: speechSupported,
         error: speechError,
-    } = useSpeech(selectedLang || "fr");
+        isMouthOpen,
+    } = useSpeech(selectedLang || "fr", {
+        continuousMode: isCallMode,
+        onSilence: (text) => {
+            // Automatically send the message when silence is detected in Call Mode
+            if (text.trim() && !isLoading) {
+                stopListening(); // Durdur, cevabı bekle
+                handleSendMessage(text.trim());
+            }
+        }
+    });
 
     const MAX_TURNS = 8;
+
+    // === MEMORY LOAD ===
+    useEffect(() => {
+        fetch('/api/memory')
+            .then(r => r.json())
+            .then(data => {
+                if (!data.error) setUserMemory(data);
+            })
+            .catch(console.error);
+    }, []);
 
     // === TTS bittiğinde idle'a dön ===
     useEffect(() => {
@@ -134,6 +231,10 @@ export default function ShelldonPage() {
                 if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
                     setCompletedObjectives(parsed.completedObjectives);
                 }
+                // Parse and strip inner corrections if AI started with errors right away (rare on first load)
+                const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanlış:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?=\n\n|\n?$|$)/gi;
+                let cleanAiMessage = aiMessage.replace(correctionRegex, "").replace(/💡\s*(Küçük bir d|D)üzeltme:?\s*\n?/gi, "").trim();
+                aiMessage = cleanAiMessage;
             } catch (e) {
                 // Eğer AI JSON döndürmediyse düz metni al
                 aiMessage = raw;
@@ -157,26 +258,94 @@ export default function ShelldonPage() {
         if (!messageText || isLoading || !selectedScenario) return;
 
         setInputValue("");
+        setShowCommandMenu(false);
         setCurrentHint(null);
         setShelldonState("thinking");
         setIsLoading(true);
 
-        const userMsg: Message = { role: "user", content: messageText };
+        // --- COMMAND INTERCEPTION ---
+        let isSystemCommand = false;
+        let commandPrompt = "";
+        let commandDisplayName = messageText;
+
+        if (messageText.startsWith("/clear")) {
+            setMessages([]);
+            setTurnCount(0);
+            setIsLoading(false);
+            setShelldonState("idle");
+            return;
+        } else if (messageText.startsWith("/roleplay")) {
+            const role = messageText.replace("/roleplay", "").trim();
+            if (!role) {
+                setCurrentBubbleText("⚠️ Lütfen '/roleplay [rol]' şeklinde bir rol belirt. Örn: /roleplay polis");
+                setIsLoading(false);
+                setShelldonState("idle");
+                return;
+            }
+            isSystemCommand = true;
+            commandDisplayName = `🎭 Rol Değişimi: ${role}`;
+            commandPrompt = `Şu andan itibaren senaryomuzu koruyarak, karakterini DEĞİŞTİRİYORSUN. Artık kesinlikle bir "${role}" olarak davranmalısın. Konuşma tarzını, üslubunu ve kelimelerini tamamen bu yeni role uydur. Sadece hedef dilde konuşmaya devam et. Lütfen bu yeni role girerek bana hemen bir şeyler söyle.`;
+        } else if (messageText.startsWith("/game")) {
+            isSystemCommand = true;
+            commandDisplayName = `🎮 Kelime Oyunu`;
+            commandPrompt = `Hadi kelime oyunu oynayalım! Bana arka arkaya aralarında boşluk olan 5 tane rastgele (günlük eşya, hayvan veya yiyecek) emojisi gönder. Sadece emojiler olsun, yazı veya açıklama yazma. Ben de bu emojilerin hedef dildeki isimlerini sırayla bilmeye çalışacağım. Başla!`;
+        }
+
+        const userMsg: Message = { role: "user", content: messageText, imageUrl: selectedImage || undefined };
         const updatedMessages = [...messages, userMsg];
         setMessages(updatedMessages);
         setTurnCount((t) => t + 1);
+        
+        const attachedImage = selectedImage; // Store it for API call
+        setSelectedImage(null); // Clear preview
 
         try {
-            const systemPrompt = buildShelldonPrompt(selectedLang, userLevel, selectedScenario);
+            let systemPrompt = buildShelldonPrompt(selectedLang, userLevel, selectedScenario);
+            
+            // Hafıza (Memory) Enjeksiyonu
+            if (userMemory && !isSystemCommand) {
+                const details = [];
+                if (userMemory.hobbies) details.push(`- Hobiler: ${userMemory.hobbies}`);
+                if (userMemory.weaknesses) details.push(`- Zayıf Yönler/Hatalar: ${userMemory.weaknesses}`);
+                if (userMemory.profession) details.push(`- Meslek/Eğitim: ${userMemory.profession}`);
+                if (userMemory.goals) details.push(`- Hedefler: ${userMemory.goals}`);
+                if (userMemory.notes) details.push(`- Genel Notların: ${userMemory.notes}`);
+                
+                if (details.length > 0) {
+                    systemPrompt += `\n\n--- KULLANICI HAFIZASI (MEMORY) ---\nÖnceki sohbetlerden kullanıcı hakkında öğrendiklerin:\n${details.join("\n")}\nBu bilgileri yeri geldiğinde çok doğal ve samimi bir şekilde sohbete kat, onu hatırladığını hissettir, ancak sürekli bahsetme.`;
+                }
+            }
+            
+            // Eğer sistem komutuysa son mesajı gizlice özel prompt'a çeviriyoruz
+            const apiMessages = [
+                { role: "system", content: systemPrompt },
+                ...messages.map((m) => {
+                    if (m.imageUrl) {
+                        return {
+                            role: m.role,
+                            content: [
+                                { type: "text", text: m.content },
+                                { type: "image_url", image_url: { url: m.imageUrl } }
+                            ]
+                        };
+                    }
+                    return { role: m.role, content: m.content };
+                }),
+                { 
+                    role: "user", 
+                    content: attachedImage ? [
+                        { type: "text", text: isSystemCommand ? commandPrompt : messageText },
+                        { type: "image_url", image_url: { url: attachedImage } }
+                    ] : (isSystemCommand ? commandPrompt : messageText) 
+                }
+            ];
+
             const response = await fetch("/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    model: "llama-3.3-70b-versatile",
-                    messages: [
-                        { role: "system", content: systemPrompt },
-                        ...updatedMessages.map((m) => ({ role: m.role, content: m.content })),
-                    ],
+                    model: attachedImage ? "llama-3.2-11b-vision-preview" : "llama-3.3-70b-versatile",
+                    messages: apiMessages,
                 }),
             });
 
@@ -204,6 +373,41 @@ export default function ShelldonPage() {
                 // fallback
                 aiMessage = raw;
             }
+
+            // --- INLINE CORRECTION PARSING LOGIC ---
+            const corrections: Correction[] = [];
+            const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanlış:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?=\n\n|\n?$|$)/gi;
+            let match;
+            while ((match = correctionRegex.exec(aiMessage)) !== null) {
+                if (match[1] && match[2] && match[3]) {
+                    corrections.push({
+                        wrong: match[1].trim(),
+                        right: match[2].trim(),
+                        explanation: match[3].trim()
+                    });
+                }
+            }
+
+            let cleanAiMessage = aiMessage;
+            if (corrections.length > 0) {
+                cleanAiMessage = aiMessage.replace(correctionRegex, "").replace(/💡\s*(Küçük bir d|D)üzeltme:?\s*\n?/gi, "").trim();
+                
+                // Attach corrections to the last user message
+                setMessages(prev => {
+                    const newMsgs = [...prev];
+                    const lastUserIndex = newMsgs.findLastIndex(m => m.role === "user");
+                    if (lastUserIndex !== -1) {
+                        newMsgs[lastUserIndex] = { ...newMsgs[lastUserIndex], corrections };
+                    }
+                    return newMsgs;
+                });
+            }
+
+            // Fallback: If AI just left empty text after removing corrections, give a generic reply
+            if (!cleanAiMessage.trim()) {
+                cleanAiMessage = "Devam edelim!";
+            }
+            aiMessage = cleanAiMessage;
 
             // Objeleri güncelle (önceki tamamlananları tut, yenileri ekle, unique yap)
             setCompletedObjectives(prev => {
@@ -328,16 +532,64 @@ export default function ShelldonPage() {
         }
     };
 
+    // === INPUT CHANGES ===
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const val = e.target.value;
+        setInputValue(val);
+        if (val === "/") {
+            setShowCommandMenu(true);
+        } else if (!val.startsWith("/")) {
+            setShowCommandMenu(false);
+        }
+    };
+
+    // === IMAGE ATTACHMENT ===
+    const fileInputRef = useRef<HTMLInputElement>(null);
+    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setSelectedImage(reader.result as string);
+                setShowTextInput(true); // Switch to text mode to show preview
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+    const cancelImage = () => setSelectedImage(null);
+
     // === KEY PRESS ===
     const handleKeyPress = (e: React.KeyboardEvent) => {
         if (e.key === "Enter" && !e.shiftKey) {
             e.preventDefault();
             handleSendMessage();
+        } else if (e.key === "Escape") {
+            setShowCommandMenu(false);
+        }
+    };
+
+    const handleCommandClick = (cmd: string) => {
+        setInputValue(cmd + (cmd === "/clear" || cmd === "/game" ? "" : " "));
+        setShowCommandMenu(false);
+        inputRef.current?.focus();
+        
+        // Auto send clear and game
+        if (cmd === "/clear" || cmd === "/game") {
+            setTimeout(() => handleSendMessage(cmd), 50);
         }
     };
 
     // === GERİ DÖN ===
     const goBack = () => {
+        if (messages.length > 2) {
+            // Arka planda hafıza çıkarımı yap
+            fetch('/api/memory/extract', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ messages })
+            }).catch(console.error);
+        }
+
         stopSpeaking();
         setIsInChat(false);
         setSelectedScenario(null);
@@ -347,6 +599,7 @@ export default function ShelldonPage() {
         setIsFinished(false);
         setFeedback(null);
         setTurnCount(0);
+        setSelectedImage(null);
     };
 
     // =============================================
@@ -484,13 +737,51 @@ export default function ShelldonPage() {
 
                 {/* === ANA İÇERİK === */}
                 <div className="flex-1 flex flex-col items-center relative z-10 overflow-hidden">
-                    {/* Shelldon Avatar */}
-                    <div className="pt-6 pb-2">
-                        <ShelldonAvatar
-                            state={shelldonState}
-                            language={selectedLang}
-                            size={150}
-                        />
+                    {/* Scene 3D veya Shelldon Avatar */}
+                    <div className="w-full h-[25vh] sm:h-[30vh] md:h-[40vh] relative shrink-0 border-b border-white/20 bg-slate-900/5">
+                        {isCallMode ? (
+                            <div className="absolute inset-0">
+                                <Scene3D
+                                    sceneData={selectedScenario}
+                                    messages={messages}
+                                    isLoading={isLoading}
+                                    isMouthOpen={isMouthOpen}
+                                />
+                            </div>
+                        ) : (
+                            <div className="w-full h-full flex items-center justify-center pt-6 pb-2">
+                                <ShelldonAvatar
+                                    state={shelldonState}
+                                    language={selectedLang}
+                                    size={150}
+                                />
+                            </div>
+                        )}
+
+                        {/* Canlı Ses Modu (Call Mode) Toggle */}
+                        <div className="absolute top-4 right-4 z-50">
+                            <Button
+                                variant={isCallMode ? "destructive" : "secondary"}
+                                size="sm"
+                                onClick={() => {
+                                    setIsCallMode(!isCallMode);
+                                    if (!isCallMode) {
+                                        // Açılırken otomatik dinlemeye başla
+                                        startListening();
+                                    } else {
+                                        // Kapatırken dinlemeyi kes
+                                        stopListening();
+                                    }
+                                }}
+                                className={cn(
+                                    "rounded-full shadow-lg font-bold flex items-center gap-2 transition-all",
+                                    isCallMode ? "bg-rose-500 hover:bg-rose-600 !text-white animate-pulse" : "bg-white/90 hover:bg-white text-emerald-600 border border-emerald-100"
+                                )}
+                            >
+                                {isCallMode ? <PhoneOff className="w-4 h-4 text-white" /> : <Phone className="w-4 h-4 text-emerald-500" />}
+                                {isCallMode ? "Aramayı Bitir" : "Canlı Görüşme"}
+                            </Button>
+                        </div>
                     </div>
 
                     {/* Görevler (Checklist) */}
@@ -561,13 +852,20 @@ export default function ShelldonPage() {
                             <div
                                 key={i}
                                 className={cn(
-                                    "text-sm px-4 py-2.5 rounded-2xl max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 shadow-sm",
+                                    "text-sm px-4 py-2.5 rounded-2xl max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 shadow-sm flex flex-col gap-2",
                                     msg.role === "user"
                                         ? "bg-emerald-500 text-white ml-auto rounded-br-sm"
                                         : "bg-white text-slate-700 border border-slate-100 rounded-bl-sm"
                                 )}
                             >
-                                <div className="whitespace-pre-wrap leading-relaxed">{msg.content}</div>
+                                {msg.imageUrl && (
+                                    <img src={msg.imageUrl} alt="attachment" className="rounded-xl w-48 object-cover border border-white/20 shadow-sm" />
+                                )}
+                                {msg.role === "user" ? (
+                                    <UserMessageBubble content={msg.content} corrections={msg.corrections} />
+                                ) : (
+                                    <div className="whitespace-pre-wrap leading-relaxed">{msg.content}</div>
+                                )}
                             </div>
                         ))}
 
@@ -645,25 +943,94 @@ export default function ShelldonPage() {
 
                             {showTextInput ? (
                                 /* Text Input */
-                                <div className="flex-1 flex items-center gap-2 bg-slate-50 rounded-2xl px-4 py-2 border border-slate-200">
-                                    <input
-                                        ref={inputRef}
-                                        type="text"
-                                        value={inputValue}
-                                        onChange={(e) => setInputValue(e.target.value)}
-                                        onKeyDown={handleKeyPress}
-                                        placeholder="Mesajını yaz..."
-                                        disabled={isLoading}
-                                        className="flex-1 bg-transparent text-sm outline-none text-slate-700 placeholder:text-slate-400"
-                                    />
-                                    <Button
-                                        size="icon"
-                                        onClick={() => handleSendMessage()}
-                                        disabled={!inputValue.trim() || isLoading}
-                                        className="h-8 w-8 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl"
-                                    >
-                                        <Send className="w-4 h-4" />
-                                    </Button>
+                                <div className="flex-1 relative">
+                                    {/* COMMAND MENU */}
+                                    {showCommandMenu && (
+                                        <div className="absolute bottom-[calc(100%+12px)] left-0 w-full bg-white border border-slate-200 shadow-xl rounded-2xl p-2 z-50 animate-in fade-in slide-in-from-bottom-2">
+                                            <div className="text-[10px] font-black tracking-wider text-slate-400 uppercase mb-2 px-2">Kısayol Komutları</div>
+                                            <div className="space-y-1">
+                                                <button onClick={() => handleCommandClick("/roleplay")} className="w-full flex items-center justify-between p-2 hover:bg-emerald-50 rounded-xl group transition-colors text-left">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-xl group-hover:scale-110 transition-transform">🎭</span>
+                                                        <div>
+                                                            <div className="text-sm font-bold text-slate-700">/roleplay</div>
+                                                            <div className="text-[11px] text-slate-400">Yeni bir role bürünür</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                                <button onClick={() => handleCommandClick("/game")} className="w-full flex items-center justify-between p-2 hover:bg-emerald-50 rounded-xl group transition-colors text-left">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-xl group-hover:scale-110 transition-transform">🎮</span>
+                                                        <div>
+                                                            <div className="text-sm font-bold text-slate-700">/game</div>
+                                                            <div className="text-[11px] text-slate-400">Emoji kelime oyunu başlatır</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                                <button onClick={() => handleCommandClick("/clear")} className="w-full flex items-center justify-between p-2 hover:bg-rose-50 rounded-xl group transition-colors text-left">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-xl group-hover:scale-110 transition-transform">🧹</span>
+                                                        <div>
+                                                            <div className="text-sm font-bold text-rose-600">/clear</div>
+                                                            <div className="text-[11px] text-rose-400">Sohbeti sıfırlar</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* IMAGE PREVIEW */}
+                                    {selectedImage && (
+                                        <div className="absolute bottom-[calc(100%+8px)] left-0 bg-white border border-slate-200 shadow-xl rounded-2xl p-2 z-50 animate-in fade-in zoom-in slide-in-from-bottom-2">
+                                            <div className="relative">
+                                                <img src={selectedImage} alt="Preview" className="w-24 h-24 object-cover rounded-xl" />
+                                                <button 
+                                                    onClick={cancelImage}
+                                                    className="absolute -top-2 -right-2 bg-rose-500 text-white rounded-full p-1 shadow-md hover:bg-rose-600 transition-colors"
+                                                >
+                                                    <VolumeX className="w-3 h-3 rotate-45" /> {/* Close icon using VolumeX rotate */}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    <div className="flex items-center gap-2 bg-slate-50 rounded-2xl px-3 py-2 border border-slate-200 focus-within:border-emerald-300 focus-within:ring-2 focus-within:ring-emerald-100 transition-all">
+                                        {/* Image Upload Button Inside Input */}
+                                        <button 
+                                            onClick={() => fileInputRef.current?.click()}
+                                            className="p-2 text-slate-400 hover:text-emerald-500 hover:bg-emerald-50 rounded-xl transition-colors shrink-0"
+                                            title="Fotoğraf Yükle"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                                        </button>
+                                        <input 
+                                            type="file" 
+                                            accept="image/*" 
+                                            className="hidden" 
+                                            ref={fileInputRef} 
+                                            onChange={handleImageChange} 
+                                        />
+
+                                        <input
+                                            ref={inputRef}
+                                            type="text"
+                                            value={inputValue}
+                                            onChange={handleInputChange}
+                                            onKeyDown={handleKeyPress}
+                                            placeholder={selectedImage ? "Fotoğraf hakkında bir şey yaz..." : "Mesajını yaz... ('/' ile komutlar)"}
+                                            disabled={isLoading}
+                                            className="flex-1 bg-transparent text-sm outline-none text-slate-700 placeholder:text-slate-400"
+                                        />
+                                        <Button
+                                            size="icon"
+                                            onClick={() => handleSendMessage()}
+                                            disabled={(!inputValue.trim() && !selectedImage) || isLoading}
+                                            className="h-8 w-8 shrink-0 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl shadow-md"
+                                        >
+                                            <Send className="w-4 h-4" />
+                                        </Button>
+                                    </div>
                                 </div>
                             ) : (
                                 /* Mikrofon Butonu */

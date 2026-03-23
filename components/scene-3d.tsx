@@ -12,9 +12,10 @@ interface Message {
 }
 
 interface Scene3DProps {
-  sceneData: SceneData | null;
+  sceneData: { id: string; titleTr?: string; [key: string]: any } | null;
   messages: Message[];
   isLoading: boolean;
+  isMouthOpen?: boolean;
 }
 
 // Model Configuration Map
@@ -30,6 +31,11 @@ const SCENE_MODEL_MAP: Record<string, {
   supermarket: { model: "/models/little-shop.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 10 },
   bakery: { model: "/models/little-shop.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 10 },
   market: { model: "/models/little-shop.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 10 },
+  cafe: { model: "/models/cafe.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 10 },
+  
+  // Hastane & Havalimanı Sahneleri
+  doctor: { model: "/models/hospital.glb", shopkeeperPos: [0, 0, -2], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 5 },
+  airport: { model: "/models/airport.glb", shopkeeperPos: [0, 0, -3], playerPos: [-0.6, 0, 1.2], cameraPos: [0.5, 1.8, 4], cameraTarget: [0, 1.2, -1], scale: 5 },
 };
 
 function GLBModel({ modelPath, scale = 1 }: { modelPath: string; scale?: number }) {
@@ -73,7 +79,8 @@ function Character({
   rotationY = 0,
   bodyColor, 
   headColor, 
-  isPlayer 
+  isPlayer,
+  isMouthOpen
 }: { 
   isTyping: boolean; 
   message: string | null; 
@@ -82,6 +89,7 @@ function Character({
   bodyColor: string; 
   headColor: string;
   isPlayer?: boolean;
+  isMouthOpen?: boolean;
 }) {
   const groupRef = useRef<THREE.Group>(null);
   
@@ -98,9 +106,7 @@ function Character({
       {/* Speech Bubble */}
       {(message || isTyping) && (
         <Html position={[0, 2.3, 0]} center zIndexRange={[100, 0]}>
-          <div className={`backdrop-blur-md border p-3 rounded-xl min-w-[150px] max-w-[280px] shadow-2xl animate-in fade-in zoom-in duration-300 ${
-            isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 text-white" : "bg-slate-900/90 border-white/20 text-white"
-          }`}>
+          <div className={`backdrop-blur-md border p-3 rounded-xl min-w-[150px] max-w-[280px] shadow-2xl animate-in fade-in zoom-in duration-300 ${isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 text-white" : "bg-slate-900/90 border-white/20 text-white"}`}>
             {isTyping ? (
               <div className="flex space-x-1.5 items-center justify-center p-2">
                 <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
@@ -112,9 +118,7 @@ function Character({
                 {message}
               </p>
             )}
-            <div className={`absolute -bottom-2 w-4 h-4 border-b border-r rotate-45 ${
-              isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 right-6" : "bg-slate-900/90 border-white/20 left-1/2 -translate-x-1/2"
-            }`}></div>
+            <div className={`absolute -bottom-2 w-4 h-4 border-b border-r rotate-45 ${isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 right-6" : "bg-slate-900/90 border-white/20 left-1/2 -translate-x-1/2"}`}></div>
           </div>
         </Html>
       )}
@@ -126,11 +130,32 @@ function Character({
         <meshStandardMaterial color={bodyColor} roughness={0.7} metalness={0.1} />
       </mesh>
       
-      {/* Head: sits at 1.4 (top of body) + 0.3 (head radius) = 1.7 */}
-      <mesh position={[0, 1.7, 0]} castShadow>
-        <sphereGeometry args={[0.25, 32, 32]} />
-        <meshStandardMaterial color={headColor} roughness={0.5} />
-      </mesh>
+      {/* Head Group */}
+      <group position={[0, 1.7, 0]}>
+        <mesh castShadow>
+          <sphereGeometry args={[0.25, 32, 32]} />
+          <meshStandardMaterial color={headColor} roughness={0.5} />
+        </mesh>
+
+        {/* Face Elements target the local +Z axis as "forward" */}
+        {/* Left Eye */}
+        <mesh position={[-0.1, 0.05, 0.22]}>
+          <sphereGeometry args={[0.04, 16, 16]} />
+          <meshStandardMaterial color="#1e293b" roughness={0.2} metalness={0.8} />
+        </mesh>
+        
+        {/* Right Eye */}
+        <mesh position={[0.1, 0.05, 0.22]}>
+          <sphereGeometry args={[0.04, 16, 16]} />
+          <meshStandardMaterial color="#1e293b" roughness={0.2} metalness={0.8} />
+        </mesh>
+
+        {/* Mouth (Scales Y based on isMouthOpen) */}
+        <mesh position={[0, -0.05, 0.24]} scale={[1, isMouthOpen ? 4 : 0.5, 1]}>
+          <boxGeometry args={[0.08, 0.02, 0.02]} />
+          <meshStandardMaterial color="#0f172a" />
+        </mesh>
+      </group>
     </group>
   );
 }
@@ -160,7 +185,7 @@ function InteractiveProp({ position, name, color }: { position: [number, number,
   );
 }
 
-function FallbackSceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
+function FallbackSceneEnvironment({ sceneData }: { sceneData: { id: string; titleTr?: string; [key: string]: any } | null }) {
   return (
     <group>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]} receiveShadow>
@@ -177,7 +202,7 @@ function FallbackSceneEnvironment({ sceneData }: { sceneData: SceneData | null }
   );
 }
 
-function SceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
+function SceneEnvironment({ sceneData }: { sceneData: { id: string; titleTr?: string; [key: string]: any } | null }) {
   const sceneId = sceneData?.id || "";
   const modelConfig = SCENE_MODEL_MAP[sceneId];
   if (modelConfig) {
@@ -190,7 +215,7 @@ function SceneEnvironment({ sceneData }: { sceneData: SceneData | null }) {
   return <FallbackSceneEnvironment sceneData={sceneData} />;
 }
 
-export function Scene3D({ sceneData, messages, isLoading }: Scene3DProps) {
+export function Scene3D({ sceneData, messages, isLoading, isMouthOpen }: Scene3DProps) {
   // Extract text for bubbles
   const userMessages = messages.filter(m => m.role === 'user');
   const lastUserMessage = userMessages.length > 0 ? userMessages[userMessages.length - 1].content : null;
@@ -230,6 +255,7 @@ export function Scene3D({ sceneData, messages, isLoading }: Scene3DProps) {
           position={shopkeeperPos as [number, number, number]} 
           bodyColor="#8b5cf6" // Violet body
           headColor="#c4b5fd" 
+          isMouthOpen={isMouthOpen}
         />
 
         {/* Player (User) */}

@@ -214,6 +214,251 @@ const unit372Speaking: UnitSpeakingFrB1 = {
   ]
 };
 
+const unit373Speaking: UnitSpeakingFrB1 = {
+  unitId: 373,
+  title: "Seyahat Kültürü",
+  exercises: [
+    { text: "Quel est le meilleur conseil pour respecter la culture locale ?", translation: "Yerel kültüre saygı göstermek için en iyi tavsiye nedir?", pronunciation: "kel e lö me-yör kon-sey pur res-pek-te la kül-tür lo-kal" },
+    { text: "Il faut apprendre à saluer correctement.", translation: "Doğru şekilde selam vermeyi öğrenmek gerekir.", pronunciation: "il fo a-pran-dr a sa-lü-e ko-rek-te-man" },
+    { text: "Je me renseigne sur les coutumes avant de partir.", translation: "Yola çıkmadan önce gelenekler hakkında bilgi alıyorum.", pronunciation: "jö mö ran-sen-ny sur le ku-tüm a-van dö par-tir" },
+    { text: "Dans ce pays, on ne donne pas de pourboire.", translation: "Bu ülkede bahşiş verilmez.", pronunciation: "dan sö pei, on nö don pa dö pur-buar" },
+    { text: "Je préfère manger dans des restaurants locaux.", translation: "Yerel restoranlarda yemeyi tercih ederim.", pronunciation: "jö pre-fer man-je dan de res-to-ran lo-ko" },
+    { text: "Les habitants sont très accueillants.", translation: "Yerel halk çok misafirperverdir.", pronunciation: "le za-bi-tan son tre za-kö-yan" },
+    { text: "Je m'adapte aux horaires et aux règles.", translation: "Saatlere ve kurallara uyum sağlarım.", pronunciation: "jö ma-dapt o zo-rer e o regl" },
+    { text: "Tu dois éviter de parler trop fort dans les lieux sacrés.", translation: "Kutsal yerlerde çok yüksek sesle konuşmaktan kaçınmalısın.", pronunciation: "tü dua za-vi-te dö par-le tro for dan le lyö sa-kre" },
+    { text: "Nous avons assisté à une fête traditionnelle.", translation: "Geleneksel bir festivale katıldık.", pronunciation: "nu za-von a-si-ste a ün fet tra-di-syo-nel" },
+    { text: "Voyager, c'est découvrir et respecter.", translation: "Seyahat etmek, keşfetmek ve saygı göstermektir.", pronunciation: "vua-ya-je, se de-ku-vrir e res-pek-te" }
+  ]
+};
+
+const unit374Speaking: UnitSpeakingFrB1 = {
+  unitId: 374,
+  title: "Farklı Kültürler",
+  exercises: [
+    { text: "Quelles sont les différences culturelles qui vous surprennent ?", translation: "Sizi şaşırtan kültürel farklar nelerdir?", pronunciation: "kel son le di-fe-rans kül-tü-rel ki vu sür-pran" },
+    { text: "Dans mon pays, on dîne assez tôt.", translation: "Benim ülkemde akşam yemeği oldukça erken yenir.", pronunciation: "dan mon pei, on din a-se to" },
+    { text: "Chez nous, on salue avec une poignée de main.", translation: "Bizde el sıkışarak selamlaşılır.", pronunciation: "şe nu, on sa-lü a-vek ün po-nye dö men" },
+    { text: "La ponctualité est très appréciée dans certaines cultures.", translation: "Bazı kültürlerde dakiklik çok takdir edilir.", pronunciation: "la ponk-tü-a-li-te e tre za-pre-si-ye dan ser-ten kül-tür" },
+    { text: "Il faut garder l'esprit ouvert face aux différences.", translation: "Farklılıklara karşı açık fikirli olmak gerekir.", pronunciation: "il fo gar-de les-pri u-ver fas o di-fe-rans" },
+    { text: "J'évite les stéréotypes quand je voyage.", translation: "Seyahat ederken kalıp yargılardan kaçınırım.", pronunciation: "jev-it le ste-re-o-tip kan jö vua-yaj" },
+    { text: "Les traditions culinaires racontent l'histoire d'un peuple.", translation: "Geleneksel mutfaklar bir halkın tarihini anlatır.", pronunciation: "le tra-di-syon kü-li-ner ra-kont lis-tuar dön pö-pl" },
+    { text: "Je respecte les croyances, même si elles sont différentes.", translation: "Farklı olsalar bile inançlara saygı duyarım.", pronunciation: "jö res-pekt le krua-yans, mem si el son di-fe-rant" },
+    { text: "Le dialogue interculturel est essentiel.", translation: "Kültürler arası diyalog çok önemlidir.", pronunciation: "lö di-a-log an-ter-kül-tü-rel e e-san-syel" },
+    { text: "En voyage, on apprend à s'adapter.", translation: "Seyahatte uyum sağlamayı öğreniriz.", pronunciation: "an vua-yaj, on a-pran a sa-dap-te" }
+  ]
+};
+
+const unit375Speaking: UnitSpeakingFrB1 = {
+  unitId: 375,
+  title: "Sanat ve Edebiyat",
+  exercises: [
+    { text: "Quel est ton genre de livre préféré ?", translation: "En sevdiğin kitap türü nedir?", pronunciation: "kel e ton janr dö livr pre-fe-re" },
+    { text: "J'adore les romans historiques.", translation: "Tarihi romanları çok severim.", pronunciation: "ja-dor le ro-man is-to-rik" },
+    { text: "Tu es déjà allé au musée d'art moderne ?", translation: "Modern sanat müzesine hiç gittin mi?", pronunciation: "tü e de-ja a-le o mü-ze dar mo-dern" },
+    { text: "Oui, l'exposition était magnifique.", translation: "Evet, sergi harikaydı.", pronunciation: "ui, leks-po-zi-syon e-te ma-ni-fik" },
+    { text: "Quel écrivain français aimes-tu ?", translation: "Hangi Fransız yazarı seviyorsun?", pronunciation: "kel e-kri-van fran-se em-tü" },
+    { text: "J'aime beaucoup Victor Hugo.", translation: "Victor Hugo'yu çok severim.", pronunciation: "jem bo-ku vik-tor ü-go" },
+    { text: "Tu préfères lire ou regarder une pièce de théâtre ?", translation: "Okumayı mı yoksa bir tiyatro oyunu izlemeyi mi tercih edersin?", pronunciation: "tü pre-fer lir u rögar-de ün pyes dö te-atr" },
+    { text: "Je préfère lire, mais j'aime aussi le théâtre.", translation: "Okumayı tercih ederim ama tiyatroyu da severim.", pronunciation: "jö pre-fer lir, me jöm o-si lö te-atr" },
+    { text: "Qu'est-ce qui t'inspire pour écrire ?", translation: "Yazmak için sana ne ilham verir?", pronunciation: "kes-ki tin-spi-r pur e-krir" },
+    { text: "Les voyages et la musique m'inspirent.", translation: "Seyahatler ve müzik bana ilham verir.", pronunciation: "le vua-yaj e la mü-zik man-spi-r" }
+  ]
+};
+
+const unit376Speaking: UnitSpeakingFrB1 = {
+  unitId: 376,
+  title: "Tarihi Olaylar",
+  exercises: [
+    { text: "Quel événement historique t'intéresse le plus ?", translation: "Seni en çok hangi tarihi olay ilgilendiriyor?", pronunciation: "kel e-ve-ne-man is-to-rik tan-te-res lö plü" },
+    { text: "La Révolution française me fascine.", translation: "Fransız Devrimi beni büyülüyor.", pronunciation: "la re-vo-lü-syon fran-ses mö fa-sin" },
+    { text: "Tu as déjà visité un musée d'histoire ?", translation: "Hiç bir tarih müzesini ziyaret ettin mi?", pronunciation: "tü a de-ja vi-zi-te ün mü-ze dis-tuar" },
+    { text: "Oui, j'y suis allé l'année dernière.", translation: "Evet, geçen yıl gittim.", pronunciation: "ui, ji süi a-le la-ne der-nyer" },
+    { text: "Qu'est-ce que tu as appris là-bas ?", translation: "Orada ne öğrendin?", pronunciation: "kes-kö tü a a-pri la-ba" },
+    { text: "J'ai appris l'histoire de la ville.", translation: "Şehrin tarihini öğrendim.", pronunciation: "je a-pri lis-tuar dö la vil" },
+    { text: "Pourquoi la bataille est-elle importante ?", translation: "Bu muharebe neden önemli?", pronunciation: "pur-kua la ba-tay e-tel an-por-tant" },
+    { text: "Parce qu'elle a changé le cours de l'histoire.", translation: "Çünkü tarihin seyrini değiştirdi.", pronunciation: "parskö el a şan-je lö kur dölis-tuar" },
+    { text: "Tu te souviens d'une date marquante ?", translation: "Önemli bir tarihi hatırlıyor musun?", pronunciation: "tü tö su-vyen dün dat mar-kant" },
+    { text: "Oui, la proclamation de l'indépendance.", translation: "Evet, bağımsızlığın ilanı.", pronunciation: "ui, la pro-kla-ma-syon döl-lan-de-pan-dans" }
+  ]
+};
+
+const unit377Speaking: UnitSpeakingFrB1 = {
+  unitId: 377,
+  title: "Ünlü Şahsiyetler",
+  exercises: [
+    { text: "Qui est ton personnage historique préféré ?", translation: "En sevdiğin tarihi şahsiyet kim?", pronunciation: "ki e ton per-so-naj is-to-rik pre-fe-re" },
+    { text: "J'admire une grande scientifique.", translation: "Büyük bir bilim insanına hayranım.", pronunciation: "ja-dmir ün gran si-yan-ti-fik" },
+    { text: "Pourquoi l'admires-tu ?", translation: "Neden ona hayransın?", pronunciation: "pur-kua la-dmir tü" },
+    { text: "Parce qu'elle a changé le monde.", translation: "Çünkü dünyayı değiştirdi.", pronunciation: "parskö el a şan-je lö mond" },
+    { text: "As-tu lu sa biographie ?", translation: "Biyografisini okudun mu?", pronunciation: "a tü lü sa bi-o-gra-fi" },
+    { text: "Oui, son parcours est incroyable.", translation: "Evet, hayat yolu inanılmaz.", pronunciation: "ui, son par-kur e an-krua-yabl" },
+    { text: "Il a reçu des prix internationaux.", translation: "Uluslararası ödüller aldı.", pronunciation: "il a re-sü de pri an-ter-na-syo-no" },
+    { text: "Son discours m'a beaucoup touché.", translation: "Konuşması beni çok etkiledi.", pronunciation: "son dis-kur ma bo-ku tu-şe" },
+    { text: "Quel talent te plaît le plus chez lui ?", translation: "Onun hangi yeteneği seni en çok etkiliyor?", pronunciation: "kel ta-lan tö ple lö plü şe lü-i" },
+    { text: "Sa créativité et son courage.", translation: "Yaratıcılığı ve cesareti.", pronunciation: "sa kre-a-ti-vi-te e son ku-raj" }
+  ]
+};
+
+const unit378Speaking: UnitSpeakingFrB1 = {
+  unitId: 378,
+  title: "Bilimsel Keşifler",
+  exercises: [
+    { text: "Quelle découverte scientifique te fascine ?", translation: "Hangi bilimsel keşif seni büyülüyor?", pronunciation: "kel de-ku-vert si-yan-ti-fik te fa-sin" },
+    { text: "La découverte des vaccins est incroyable.", translation: "Aşıların keşfi inanılmaz.", pronunciation: "la de-ku-vert de vak-san e an-krua-yabl" },
+    { text: "Tu as déjà visité un laboratoire ?", translation: "Hiç bir laboratuvarı ziyaret ettin mi?", pronunciation: "tü a de-ja vi-zi-te ün la-bo-ra-tuar" },
+    { text: "Oui, j'ai vu des microscopes et des expériences.", translation: "Evet, mikroskoplar ve deneyler gördüm.", pronunciation: "ui, je vü de mik-ro-skop e deks-pe-ryans" },
+    { text: "Comment une hypothèse est-elle vérifiée ?", translation: "Bir hipotez nasıl doğrulanır?", pronunciation: "ko-man ün i-po-tez e-tel ve-ri-fi-e" },
+    { text: "On la teste avec des expériences.", translation: "Onu deneylerle test ederiz.", pronunciation: "on la test a-vek deks-pe-ryans" },
+    { text: "Quel équipement est nécessaire en science ?", translation: "Bilimde hangi ekipman gerekir?", pronunciation: "kel e-ki-pman e ne-se-ser an si-yans" },
+    { text: "Le télescope permet d'observer les étoiles.", translation: "Teleskop yıldızları gözlemlemeyi sağlar.", pronunciation: "lö te-les-kop per-met dob-ser-ve le ze-tual" },
+    { text: "Pourquoi la preuve est-elle importante ?", translation: "Kanıt neden önemlidir?", pronunciation: "pur-kua la pröv e-tel an-por-tant" },
+    { text: "Parce qu'elle confirme les résultats.", translation: "Çünkü sonuçları doğrular.", pronunciation: "parskö el kon-firm le re-zül-ta" }
+  ]
+};
+
+const unit379Speaking: UnitSpeakingFrB1 = {
+  unitId: 379,
+  title: "Uzay Araştırmaları",
+  exercises: [
+    { text: "Qu'est-ce qui t'intéresse dans l'espace ?", translation: "Uzayda seni ne ilgilendiriyor?", pronunciation: "kes-ki tan-te-res dan les-pas" },
+    { text: "Les étoiles et les galaxies me passionnent.", translation: "Yıldızlar ve galaksiler beni büyülüyor.", pronunciation: "le ze-tual e le ga-lak-si me pa-syo-n" },
+    { text: "Tu voudrais devenir astronaute ?", translation: "Astronot olmak ister misin?", pronunciation: "tü vu-dre dö-vnir as-tro-not" },
+    { text: "Oui, j'aimerais participer à une mission.", translation: "Evet, bir misyona katılmak isterim.", pronunciation: "ui, je-me-re par-ti-si-pe a ün mi-syon" },
+    { text: "Où se trouve la station spatiale ?", translation: "Uzay istasyonu nerede?", pronunciation: "u sö truv la sta-syon spa-syal" },
+    { text: "Elle est en orbite autour de la Terre.", translation: "Dünya'nın etrafında yörüngededir.", pronunciation: "el e an or-bit o-tur dö la ter" },
+    { text: "Pourquoi le télescope est important ?", translation: "Teleskop neden önemli?", pronunciation: "pur-kua lö te-les-kop e an-por-tan" },
+    { text: "Parce qu'il permet d'observer l'univers.", translation: "Çünkü evreni gözlemlemeyi sağlar.", pronunciation: "parskil per-met dob-ser-ve lü-ni-ver" },
+    { text: "La gravité est-elle différente sur la Lune ?", translation: "Yerçekimi Ay'da farklı mı?", pronunciation: "la gra-vi-te e-tel di-fe-rant sür la lün" },
+    { text: "Oui, elle est beaucoup plus faible.", translation: "Evet, çok daha zayıf.", pronunciation: "ui, el e bo-ku plü febl" }
+  ]
+};
+
+const unit380Speaking: UnitSpeakingFrB1 = {
+  unitId: 380,
+  title: "Moda Trendleri",
+  exercises: [
+    { text: "Quel style préfères-tu ?", translation: "Hangi tarzı tercih ediyorsun?", pronunciation: "kel stil pre-fer tü" },
+    { text: "Je préfère un style simple et élégant.", translation: "Sade ve şık bir tarzı tercih ederim.", pronunciation: "jö pre-fer an stil san-pl e e-le-gan" },
+    { text: "Cette tenue te va très bien.", translation: "Bu kombin sana çok yakışıyor.", pronunciation: "set tönü tö va tre byan" },
+    { text: "Merci, je l'ai trouvée en solde.", translation: "Teşekkürler, indirimde buldum.", pronunciation: "mer-si, jö le tru-ve an sold" },
+    { text: "Tu peux m'aider à choisir la couleur ?", translation: "Rengi seçmeme yardım eder misin?", pronunciation: "tü pö me-de a şua-zir la ku-lör" },
+    { text: "Le bleu te va mieux que le rouge.", translation: "Mavi sana kırmızıdan daha çok yakışıyor.", pronunciation: "lö blö tö va myö kö lö ruj" },
+    { text: "Est-ce que je peux essayer cette veste ?", translation: "Bu ceketi deneyebilir miyim?", pronunciation: "es-kö jö pö e-se-ye set vest" },
+    { text: "Oui, la cabine d'essayage est là-bas.", translation: "Evet, deneme kabini orada.", pronunciation: "ui, la ka-bin de-se-yaj e la-ba" },
+    { text: "Les accessoires complètent ton look.", translation: "Aksesuarlar görünümünü tamamlar.", pronunciation: "lez ak-se-suar kom-plet ton luk" },
+    { text: "Je cherche une tenue pour la soirée.", translation: "Akşam için bir kombin arıyorum.", pronunciation: "jö şerş ün tönü pur la sua-re" }
+  ]
+};
+
+const unit381Speaking: UnitSpeakingFrB1 = {
+  unitId: 381,
+  title: "Tüketim Alışkanlıkları",
+  exercises: [
+    { text: "Tu compares les prix avant d'acheter ?", translation: "Satın almadan önce fiyatları karşılaştırıyor musun?", pronunciation: "tü kom-par le pri a-van da-şe-te" },
+    { text: "Oui, je regarde toujours les promotions.", translation: "Evet, her zaman kampanyalara bakarım.", pronunciation: "ui, jö rö-gard tu-jur le pro-mo-syon" },
+    { text: "Tu fais souvent des achats en ligne ?", translation: "Sık sık online alışveriş yapar mısın?", pronunciation: "tü fe su-van de za-şa an liny" },
+    { text: "Oui, c'est pratique et rapide.", translation: "Evet, pratik ve hızlı.", pronunciation: "ui, se pra-tik e ra-pid" },
+    { text: "Quel est ton budget pour ce mois ?", translation: "Bu ay için bütçen nedir?", pronunciation: "kel e ton büj-e pur sö mua" },
+    { text: "Je dois économiser un peu.", translation: "Biraz tasarruf etmeliyim.", pronunciation: "jö doa ze-ko-no-mi-ze an pö" },
+    { text: "Tu préfères payer en espèces ou par carte ?", translation: "Nakit mi kartla mı ödemeyi tercih edersin?", pronunciation: "tü pre-fer pe-ye an es-pes u par kart" },
+    { text: "Je paie par carte bancaire.", translation: "Banka kartıyla öderim.", pronunciation: "jö pe par kart ban-ker" },
+    { text: "La livraison est-elle gratuite ?", translation: "Teslimat ücretsiz mi?", pronunciation: "la li-vre-zon e-tel gra-tü-it" },
+    { text: "Oui, à partir de cinquante euros.", translation: "Evet, elli eurodan itibaren.", pronunciation: "ui, a par-tir dö san-kant ö-ro" }
+  ]
+};
+
+const unit382Speaking: UnitSpeakingFrB1 = {
+  unitId: 382,
+  title: "Reklamcılık",
+  exercises: [
+    { text: "Tu as vu cette publicité ?", translation: "Bu reklamı gördün mü?", pronunciation: "tü a vü set pü-bli-si-te" },
+    { text: "Oui, le slogan est vraiment accrocheur.", translation: "Evet, slogan gerçekten akılda kalıcı.", pronunciation: "ui, lö slo-gan e vre-man a-kro-şör" },
+    { text: "Quelle est la cible de cette campagne ?", translation: "Bu kampanyanın hedef kitlesi nedir?", pronunciation: "kel e la sibl dö set kam-pan" },
+    { text: "Les jeunes adultes, je pense.", translation: "Genç yetişkinler, bence.", pronunciation: "le jön o-dült, jö pans" },
+    { text: "Tu préfères la publicité en ligne ou à la télé ?", translation: "Online reklamı mı yoksa TV reklamını mı tercih edersin?", pronunciation: "tü pre-fer la pü-bli-si-te an liny u a la te-le" },
+    { text: "Je préfère en ligne, c'est plus ciblé.", translation: "Ben online olanı tercih ederim, daha hedeflidir.", pronunciation: "jö pre-fer an liny, se plü si-ble" },
+    { text: "Le logo te plaît ?", translation: "Logo hoşuna gidiyor mu?", pronunciation: "lö lo-go tö ple" },
+    { text: "Oui, il est simple et moderne.", translation: "Evet, basit ve modern.", pronunciation: "ui, il e san-pl e mo-dern" },
+    { text: "Ils ont un budget publicitaire élevé.", translation: "Yüksek bir reklam bütçeleri var.", pronunciation: "il zon an büj-e pü-bli-si-ter e-le-ve" },
+    { text: "On dirait une grande marque.", translation: "Büyük bir markaya benziyor.", pronunciation: "on di-re ün gran mark" }
+  ]
+};
+
+const unit383Speaking: UnitSpeakingFrB1 = {
+  unitId: 383,
+  title: "Haber MedyasÄ±",
+  exercises: [
+    { text: "Tu as vu l'article sur la ville ?", translation: "Şehirle ilgili makaleyi gördün mü?", pronunciation: "tü a vü lar-ti-kl sür la vil" },
+    { text: "Oui, le journaliste a fait un bon reportage.", translation: "Evet, gazeteci iyi bir haber yaptı.", pronunciation: "ui, lö jur-na-list a fe an bon rö-por-taj" },
+    { text: "Le titre est accrocheur, mais un peu exagéré.", translation: "Başlık dikkat çekici ama biraz abartılı.", pronunciation: "lö titr e a-kro-şör me an pö eg-za-je-re" },
+    { text: "C'est vrai, il faut vérifier les faits.", translation: "Doğru, gerçekleri doğrulamak gerekir.", pronunciation: "se vre, il fo ve-ri-fi le fe" },
+    { text: "Tu préfères lire les nouvelles en ligne ou sur papier ?", translation: "Haberleri online mı yoksa kağıtta mı okumayı tercih edersin?", pronunciation: "tü pre-fer li-r le nu-vel an liny u sür pa-pye" },
+    { text: "En ligne, c'est plus rapide.", translation: "Online, daha hızlı.", pronunciation: "an liny, se plü ra-pid" },
+    { text: "La chaîne diffuse l'interview ce soir.", translation: "Kanal bu akşam röportajı yayınlıyor.", pronunciation: "la şen di-füz lan-ter-vyü sö suar" },
+    { text: "Je vais regarder le direct.", translation: "Canlı yayını izleyeceğim.", pronunciation: "jö ve rög-ar-de lö di-rekt" },
+    { text: "Les médias parlent beaucoup de ce débat.", translation: "Medyalar bu tartışmadan çok bahsediyor.", pronunciation: "le me-dya parl bo-ku dö sö de-ba" },
+    { text: "Espérons que l'information soit correcte.", translation: "Bilginin doğru olmasını umalım.", pronunciation: "es-pe-ron kö lan-for-ma-syon sua ko-rekt" }
+  ]
+};
+
+const unit384Speaking: UnitSpeakingFrB1 = {
+  unitId: 384,
+  title: "Politik Sistemler",
+  exercises: [
+    { text: "Tu as suivi le débat hier soir ?", translation: "Dün akşam tartışmayı takip ettin mi?", pronunciation: "tü a süi-vi lö de-ba yer suar" },
+    { text: "Oui, les candidats ont parlé de la réforme.", translation: "Evet, adaylar reformdan bahsetti.", pronunciation: "ui, le kan-di-da on par-le dö la re-form" },
+    { text: "Qui soutiens-tu aux élections ?", translation: "Seçimlerde kimi destekliyorsun?", pronunciation: "ki su-tyen tü o-zek-syon" },
+    { text: "Je suis encore indécis, je compare les programmes.", translation: "Hâlâ kararsızım, programları karşılaştırıyorum.", pronunciation: "jö sü an-kor an-de-si, jö kom-par le pro-gram" },
+    { text: "Le président propose une nouvelle loi.", translation: "Başkan yeni bir yasa öneriyor.", pronunciation: "lö pre-zi-dan pro-poz ün nu-vel loa" },
+    { text: "L'opposition n'est pas d'accord.", translation: "Muhalefet aynı fikirde değil.", pronunciation: "lo-po-zi-syon ne pa da-kor" },
+    { text: "La campagne électorale devient intense.", translation: "Seçim kampanyası yoğunlaşıyor.", pronunciation: "la kam-pan-y e-lek-to-ral dö-vyen an-tans" },
+    { text: "Oui, tout le monde parle de politique.", translation: "Evet, herkes siyasetten bahsediyor.", pronunciation: "ui, tu lö mond parl dö po-li-tik" },
+    { text: "Tu vas voter dimanche ?", translation: "Pazar günü oy kullanacak mısın?", pronunciation: "tü va vo-te di-manş" },
+    { text: "Oui, c'est important pour la démocratie.", translation: "Evet, demokrasi için önemli.", pronunciation: "ui, se an-por-tan pur la de-mo-kra-si" }
+  ]
+};
+
+const unit385Speaking: UnitSpeakingFrB1 = {
+  unitId: 385,
+  title: "Hukuk ve Adalet (Droit et Justice)",
+  exercises: [
+    { text: "Avez-vous compris vos droits ?", translation: "Haklarınızı anladınız mı?", pronunciation: "a-ve vu kon-pri vo drua" },
+    { text: "Je demande à voir mon avocat.", translation: "Avukatımı görmek istiyorum.", pronunciation: "jö dö-mand a vuar mon a-vo-ka" },
+    { text: "Le juge a prononcé sa sentence.", translation: "Hakim kararını (cezasını) açıkladı.", pronunciation: "lö jüj a pro-non-se sa san-tans" },
+    { text: "Le témoin a juré de dire la vérité.", translation: "Tanık gerçeği söylemeye yemin etti.", pronunciation: "lö te-muan a jü-re dö dir la ve-ri-te" },
+    { text: "Elle a porté plainte au commissariat.", translation: "Karakola gidip suç duyurusunda bulundu.", pronunciation: "el a por-te plant o ko-mi-sa-rya" },
+    { text: "L'accusé a été reconnu innocent.", translation: "Sanığın masum olduğuna karar verildi.", pronunciation: "la-kü-ze a e-te rö-ko-nü i-no-san" },
+    { text: "La police a ouvert une enquête.", translation: "Polis bir soruşturma başlattı.", pronunciation: "la po-lis a u-vert ün an-ket" },
+    { text: "Le respect de la loi est obligatoire.", translation: "Kanuna saygı zorunludur.", pronunciation: "lö res-pekt dö la lua e-to-bli-ga-tuar" },
+    { text: "La justice doit être égale pour tous.", translation: "Adalet herkes için eşit olmalıdır.", pronunciation: "la jüs-tis dua-tetr e-gal pur tus" },
+    { text: "Il a été condamné à payer une amende.", translation: "Para cezası ödemeye mahkum edildi.", pronunciation: "il a e-te kon-da-ne a pe-ye ün a-mand" }
+  ]
+};
+
+const unit386Speaking: UnitSpeakingFrB1 = {
+    unitId: 386,
+    title: "İnsan Hakları",
+    exercises: [
+        { text: "Tout le monde a droit à la liberté.", translation: "Herkesin özgürlük hakkı vardır.", pronunciation: "tu lö mond a dro-a a la li-ber-te" },
+        { text: "Il faut lutter contre la discrimination.", translation: "Ayrımcılığa karşı mücadele edilmeli.", pronunciation: "il fo lü-te kontr la dis-kri-mi-na-syon" },
+        { text: "Nous manifestons pour nos droits.", translation: "Haklarımız için gösteri yapıyoruz.", pronunciation: "nu ma-ni-fes-ton pur no dro-a" },
+        { text: "L'égalité est une valeur fondamentale.", translation: "Eşitlik temel bir değerdir.", pronunciation: "le-ga-li-te e tün va-lör fon-da-man-tal" },
+        { text: "Ils demandent plus de justice sociale.", translation: "Daha fazla sosyal adalet talep ediyorlar.", pronunciation: "il dö-mand plüs dö jüs-tis so-syal" }
+    ]
+};
+
+const unit387Speaking: UnitSpeakingFrB1 = {
+    unitId: 387,
+    title: "Gönüllülük",
+    exercises: [
+        { text: "Je suis bénévole dans une association.", translation: "Bir dernekte gönüllüyüm.", pronunciation: "jö süi be-ne-vol dan zün a-so-sya-syon" },
+        { text: "C'est important d'aider les autres.", translation: "Başkalarına yardım etmek önemlidir.", pronunciation: "se ten-por-tan de-de le zotr" },
+        { text: "Nous organisons une distribution de vêtements.", translation: "Bir kıyafet dağıtımı düzenliyoruz.", pronunciation: "nu zor-ga-ni-zon zün dis-tri-bü-syon dö vet-man" },
+        { text: "Ils ont fait un don pour cette cause.", translation: "Bu dava için bağış yaptılar.", pronunciation: "il zon fe un don pur set koz" },
+        { text: "Le bénévolat demande beaucoup d'énergie.", translation: "Gönüllülük çok enerji gerektirir.", pronunciation: "lö be-ne-vo-la dö-mand bo-ku de-ner-ji" }
+    ]
+};
+
 export function getFrB1SpeakingForUnit(unitId: number): SpeakingExerciseFrB1[] {
   const idMapping: { [key: number]: UnitSpeakingFrB1 } = {
     361: unit361Speaking,
@@ -227,7 +472,22 @@ export function getFrB1SpeakingForUnit(unitId: number): SpeakingExerciseFrB1[] {
     369: unit369Speaking,
     370: unit370Speaking,
     371: unit371Speaking,
-    372: unit372Speaking
+    372: unit372Speaking,
+    373: unit373Speaking,
+    374: unit374Speaking,
+    375: unit375Speaking,
+    376: unit376Speaking,
+    377: unit377Speaking,
+    378: unit378Speaking,
+    379: unit379Speaking,
+    380: unit380Speaking,
+    381: unit381Speaking,
+    382: unit382Speaking,
+    383: unit383Speaking,
+    384: unit384Speaking,
+    385: unit385Speaking,
+    386: unit386Speaking,
+    387: unit387Speaking
   };
   return idMapping[unitId]?.exercises || unit361Speaking.exercises;
 }
