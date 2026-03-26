@@ -6,42 +6,51 @@ const unit361Grammar: UnitGrammar = {
   rules: [
     {
       id: "fr-b1-cond-intro",
-      title: "🎯 Bölüm 1: Conditionnel Présent Nedir?",
+      title: "🎯 BÖLÜM 1: CONDITIONNEL PRÉSENT NEDİR?",
       explanation:
-        'Le Conditionnel Présent (Şimdiki Zamanın Şartı), Fransızcada temel olarak iki durum için kullanılır:\n\n1. **Kibarlık:** Bir şeyi nazikçe istemek veya teklif etmek ("İsterdim", "Yapabilir misiniz?"). İş görüşmelerinde vazgeçilmezdir.\n2. **Gerçekleşmemiş Varsayımlar:** "Eğer vaktim olsaydı, yapardım" gibi hayali durumları anlatmak.\n\n**Nasıl Oluşturulur?**\nFiilin *Futur Simple* (Gelecek Zaman) köküne, *Imparfait* (Geçmiş Zaman) ekleri eklenerek oluşturulur.',
+        "Conditionnel Présent, Fransızcada bir şeyin 'kesin' olmadığını, bir şarta, bir isteğe veya koca bir nezakete bağlı olduğunu gösterir.\n\n**Türkçedeki Karşılığı:** Genellikle '-rdım / -rdim' veya 'isterdim', 'yapardım', 'olurdu' şeklinde çevrilir. Soru sorarken ise 'yapabilir misiniz?' gibi aşırı kibar bir anlam katar.\n\n**Neden İş Görüşmesinde Kullanılır?**\nÇünkü Fransızlar nezakete aşıktır. 'Bana su ver' demek kabalıktır. 'Bir bardak su rica edebilir miydim?' (Conditionnel) demek ise sizi çok daha kibar gösterir. İş görüşmelerinde isteklerimizi ve yeteneklerimizi bu 'yumuşak' tonla anlatırız.",
       examples: [
         { fr: "Je voudrais un café.", tr: "Bir kahve isterdim. (Kibarca)" },
-        { fr: "Si j'étais à votre place, j'accepterais.", tr: "Sizin yerinizde olsaydım, kabul ederdim. (Varsayım)" }
+        { fr: "Pourriez-vous m'aider ?", tr: "Bana yardım edebilir miydiniz? (Nazikçe)" }
       ]
     },
     {
       id: "fr-b1-cond-formation",
-      title: "🧱 Bölüm 2: Conditionnel Présent Çekimi",
+      title: "🧱 BÖLÜM 2: CONDITIONNEL PRÉSENT ÇEKİMİ (Lego Zamanı)",
       explanation:
-        '**Düzenli Fiiller (Parler - Konuşmak):**\nKök: parler- (Mastar haliyle aynı kalır)\nEkler: -ais, -ais, -ait, -ions, -iez, -aient\n\n* Je parler**ais** (Konuşurdum)\n* Tu parler**ais** (Konuşurdun)\n* Il/Elle parler**ait** (Konuşurdu)\n* Nous parler**ions** (Konuşurduk)\n* Vous parler**iez** (Konuşurdunuz)\n* Ils/Elles parler**aient** (Konuşurlardı)',
+        "Bu zamanı oluşturmak, Fransızcanın en keyifli Lego oyunudur. İki farklı zamanın parçalarını birleştiririz.\n\n**Altın Formül:** FİİLİN YALIN HALİ (Mastar - R harfiyle biten) + IMPARFAIT EKLERİ (-ais, -ais, -ait, -ions, -iez, -aient)\n\n**Parler (Konuşmak) Çekimi:**\n* Je parler**ais** (Jö parlöre) - Konuşurdum\n* Tu parler**ais** (Tü parlöre) - Konuşurdun\n* Il / Elle parler**ait** (İl/El parlöre) - Konuşurdu\n* Nous parler**ions** (Nu parlöriyon) - Konuşurduk\n* Vous parler**iez** (Vu parlöriye) - Konuşurdunuz\n* Ils / Elles parler**aient** (İl/El parlöre) - Konuşurlardı\n\n*(Je, Tu, Il ve Ils çekimlerinin hepsi '-re' sesiyle biter!)*",
       examples: [
-        { fr: "Je travaillerais bien avec vous.", tr: "Sizinle seve seve çalışırdım." },
-        { fr: "Nous aimerions vous embaucher.", tr: "Sizi işe almak isterdik." }
+        { fr: "Je travaillerais.", tr: "Çalışırdım." },
+        { fr: "Nous mangerions.", tr: "Yerdik / Yemek yerdik." }
       ]
     },
     {
       id: "fr-b1-cond-irreg",
-      title: "⚠️ Bölüm 3: Düzensiz Fiillerde Conditionnel",
+      title: "⚠️ BÖLÜM 3: DÜZENSİZ FİİLLERDE CONDITIONNEL (Tuzaklar)",
       explanation:
-        'Futur Simple kökleri düzensiz olan fiiller, Conditionnel\'de de aynı düzensiz kökleri korurlar. Ancak ekler (Imparfait ekleri) her zaman aynı ve düzenlidir!\n\n* **Avoir (Sahip olmak):** Kök: aur- -> J\'aurais (Sahip olurdum)\n* **Être (Olmak):** Kök: ser- -> Je serais (Olurdum)\n* **Faire (Yapmak):** Kök: fer- -> Je ferais (Yapardım)\n* **Aller (Gitmek):** Kök: ir- -> J\'irais (Giderdim)\n* **Pouvoir (Ebilmek):** Kök: pourr- -> Je pourrais (Yapabilirdim)',
+        "İş görüşmesinde en çok kullanacağımız fiiller maalesef 'uslu' değillerdir. Ekler ASLA DEĞİŞMEZ ama bu düzensiz fiillerin KÖKLERİ DEĞİŞİR.\n\n1. **VOULOIR (İstemek):** Kök: **voudr-** -> Je voudrais (İsterdim / Rica etsem)\n2. **POUVOIR (Ebilmek):** Kök: **pourr-** -> Vous pourriez ? (Yapabilir miydiniz?)\n3. **ÊTRE (Olmak):** Kök: **ser-** -> Je serais (Ben ... olurdum)\n4. **AVOIR (Sahip Olmak):** Kök: **aur-** -> J'aurais (Sahip olurdum / Benim olurdu)",
       examples: [
-        { fr: "Je serais ravi de travailler ici.", tr: "Burada çalışmaktan memnuniyet duyardım." },
-        { fr: "Pourriez-vous répéter la question ?", tr: "Soruyu tekrar edebilir misiniz? (Çok kibar)" }
+        { fr: "Je voudrais me présenter.", tr: "Kendimi tanıtmak isterdim." },
+        { fr: "Vous pourriez m'expliquer le poste ?", tr: "Bana pozisyonu açıklayabilir miydiniz?" }
       ]
     },
     {
       id: "fr-b1-cond-usage",
-      title: "💼 Bölüm 4: İş Görüşmelerinde Conditionnel Kullanımı",
+      title: "💼 BÖLÜM 4: İŞ GÖRÜŞMELERİNDE KULLANIMI (Sahne Senin)",
       explanation:
-        'İş görüşmelerinde (Entretien d\'embauche) kaba veya kesin görünmemek için *Conditionnel* çok sık kullanılır. Emir kipleri veya geniş zaman yerine potansiyel yeteneklerinizi ve isteklerinizi belirtmek için mükemmeldir.\n\n**Önemli Kalıplar:**\n* Je voudrais (İsterdim)\n* J\'aimerais (Seviyor olurdum / İsterdim)\n* Serait-il possible de... (...mümkün müdür?)\n* Je pourrais (Yapabilirdim / Yapabilirim)',
+        "**Mülakat Diyaloğu:**\n\n**Le Recruteur:** Bonjour. Asseyez-vous, s'il vous plaît.\n**Sen:** Merci beaucoup. Je voudrais vous remercier pour cette opportunité.\n**Le Recruteur:** Pourquoi voulez-vous ce poste ?\n**Sen:** Parce que je serais un excellent développeur pour votre équipe.\n**Le Recruteur:** C'est intéressant. Avez-vous des questions ?\n**Sen:** Oui, pourriez-vous me parler de l'équipe ?",
       examples: [
-        { fr: "J'aimerais vous poser une question.", tr: "Size bir soru sormak isterdim." },
-        { fr: "Je pourrais commencer lundi prochain.", tr: "Gelecek pazartesi başlayabilirim (başlayabilirdim)." }
+        { fr: "Je serais ravi.", tr: "Memnun olurdum / Çok sevinirim." },
+        { fr: "J'aurais une question.", tr: "Bir sorum olacaktı / olurdu." }
+      ]
+    },
+    {
+      id: "fr-b1-cond-mission",
+      title: "🚀 KOÇUN MÜLAKAT GÖREVİ (Sözleşmeyi İmzala!)",
+      explanation:
+        "Şimdi o odayı terk etmeden önce karşı tarafa ne kadar istekli olduğunu en kibar şekilde (Conditionnel ile) söyleme vakti.\n\n**Görev:** Şu cümleyi Fransızca kur ve yüksek sesle oku:\n'Sizinle (avec vous) çalışmak (travailler) isterdim/çok isterim.'\n\n*(İpucu: Je voudrais + travailler + avec vous)*",
+      examples: [
+        { fr: "Je voudrais travailler avec vous.", tr: "Sizinle çalışmak isterdim." }
       ]
     }
   ]
@@ -49,48 +58,65 @@ const unit361Grammar: UnitGrammar = {
 
 const unit362Grammar: UnitGrammar = {
   unitId: 362,
-  title: "Le Gérondif (Ulaç / Zarf-Fiil)",
+  title: "Özgeçmiş Hazırlama ve Le Gérondif",
   rules: [
     {
       id: "fr-b1-gerondif-intro",
-      title: "🎯 Bölüm 1: Le Gérondif Nedir?",
+      title: "🎯 BÖLÜM 1: LE GÉRONDIF NEDİR?",
       explanation:
-        'Le Gérondif, Türkçedeki "-erek, -arak" veya "yaparken, ederken" anlamlarına gelen koddur. İki eylemin aynı anda yapıldığını veya bir eylemin nasıl (ne şekilde) yapıldığını belirtmek için kullanılır.\n\nÖzneleri aynı olan iki filden birini ana fiil, diğerini ise "Gérondif" olarak kullanırız.',
+        "Le Gérondif, bir kişinin aynı anda iki işi birden yaptığını anlatmak için kullanılan bir yapıdır.\n\n**Türkçedeki Karşılığı:**\n* '-erek / -arak' (Gülerek geldi)\n* '-ken' (Yemek yerken televizyon izledi)\n\n**En Büyük Kuralı:** Bu yapıyı kullanabilmeniz için her iki işi de **AYNI KİŞİNİN** yapıyor olması şarttır. (Yani siz kod yazarken başkası kahve içiyorsa Gérondif kullanamazsınız. İkisini de sizin yapmanız lazım!)",
       examples: [
-        { fr: "Il mange en regardant la télé.", tr: "Televizyon izleyerek (izlerken) yemek yiyor." },
-        { fr: "J'ai appris le français en écoutant de la musique.", tr: "Fransızcayı müzik dinleyerek öğrendim." }
+        { fr: "Il marche en chantant.", tr: "Şarkı söyleyerek yürüyor." },
+        { fr: "J'étudie en écoutant la radio.", tr: "Radyo dinleyerek ders çalışıyorum." }
       ]
     },
     {
       id: "fr-b1-gerondif-formation",
-      title: "🧱 Bölüm 2: Nasıl Oluşturulur?",
+      title: "🧱 BÖLÜM 2: NASIL OLUŞTURULUR? (Lego Zamanı)",
       explanation:
-        'Le Gérondif oluşturmak oldukça basittir:\n1. Fiilin Şimdiki Zaman (Présent) "Nous" (Biz) çekimini bul.\n2. Sondaki "-ons" ekini at.\n3. Kalan kökün sonuna "-ant" ekle.\n4. Başına "en" kelimesini koy.\n\nÖrnek (Regarder - İzlemek):\nNous regardons -> regard- -> en regardant (İzleyerek)',
+        "Gérondif yaparken çok basit bir Lego kuralı kullanıyoruz:\n\n**Altın Formül:** EN + Fiilin 'NOUS' Kökü + ANT\n\n**Örnek (Écouter - Dinlemek):**\n1. Fiilin 'Biz' (Nous) çekimini bul: **Nous écoutons**\n2. Sondaki '-ons' ekini at, kökü al: **écout-**\n3. Başına 'EN', sonuna 'ANT' yapıştır: **en écoutant** (Dinleyerek / Dinlerken)\n\n**Pratik:**\n* Parler -> **en parlant** (Konuşarak)\n* Regarder -> **en regardant** (İzleyerek)\n* Boire -> **en buvant** (İçerek)",
       examples: [
-        { fr: "Faire -> Nous faisons -> en faisant", tr: "Yaparak" },
-        { fr: "Prendre -> Nous prenons -> en prenant", tr: "Alarak" },
-        { fr: "Aller -> Nous allons -> en allant", tr: "Giderek" }
+        { fr: "En travaillant", tr: "Çalışarak / Çalışırken" },
+        { fr: "En mangeant", tr: "Yiyerek / Yerken" }
       ]
     },
     {
       id: "fr-b1-gerondif-irreg",
-      title: "⚠️ Bölüm 3: Düzensiz Fiiller",
+      title: "⚠️ BÖLÜM 3: DÜZENSİZ FİİLLER (Sadece 3 Tane!)",
       explanation:
-        'Sadece üç fiilin Gérondif kökü düzensizdir. Bunları ezberlemek gerekir:\n\n1. **Avoir (Sahip olmak):** en ayant (sahip olarak)\n2. **Être (Olmak):** en étant (olarak)\n3. **Savoir (Bilmek):** en sachant (bilerek)',
+        "Gérondif konusunda şanslısın! Kuralsız olan ve ezberlemen gereken **SADECE 3 FİİL** vardır:\n\n1. **ÊTRE (Olmak):** en étant (Olarak / Olurken)\n2. **AVOIR (Sahip Olmak):** en ayant (Sahip olarak)\n3. **SAVOIR (Bilmek):** en sachant (Bilerek)",
       examples: [
-        { fr: "En étant patient, tu réussiras.", tr: "Sabırlı olarak (sabrederek) başaracaksın." },
+        { fr: "En étant patient, tu réussiras.", tr: "Sabırlı olarak başaracaksın." },
         { fr: "Il a répondu en sachant la vérité.", tr: "Gerçeği bilerek cevap verdi." }
       ]
     },
     {
       id: "fr-b1-gerondif-usage",
-      title: "💡 Bölüm 4: Kullanım Durumları",
+      title: "💡 BÖLÜM 4: KULLANIM DURUMLARI (Sahne Senin)",
       explanation:
-        'Le Gérondif temel olarak üç durumda kullanılır:\n\n1. **Eşzamanlılık (Simultanéité):** Aynı anda gerçekleşen iki eylem. ("-ken")\n2. **Tarz / Yöntem (Manière / Moyen):** Bir şeyin nasıl yapıldığını açıklar. ("-erek")\n3. **Şart (Condition):** Eğer anlamı katar. ("-irsen")',
+        "**1. Eşzamanlılık:** Je travaille en écoutant de la musique. (Müzik dinleyerek çalışıyorum.)\n**2. Yöntem/Tarz:** Il est arrive en courant. (O, koşarak geldi.)\n**3. Şart/Koşul:** En étudiant tous les jours, tu vas parler français. (Her gün çalışarak Fransızca konuşacaksın.)",
       examples: [
-        { fr: "Il parle en souriant. (Eşzamanlılık)", tr: "Gülümseyerek (Gülümserken) konuşuyor." },
-        { fr: "Tu as maigri en faisant du sport. (Yöntem)", tr: "Spor yaparak zayıfladın." },
-        { fr: "En prenant le métro, tu iras plus vite. (Şart)", tr: "Metroya binersen daha hızlı gidersin." }
+        { fr: "Elle parle en souriant.", tr: "Gülümseyerek konuşuyor." },
+        { fr: "En prenant le métro, tu iras plus vite.", tr: "Metroya binersen daha hızlı gidersin." }
+      ]
+    },
+    {
+      id: "fr-b1-gerondif-diyalog",
+      title: "🗣️ OFİSTE KISA BİR DİYALOG",
+      explanation:
+        "**Arkadaşın:** Tu as l'air fatigué. Tu travailles trop !\n**Sen:** Oui... J'ai mangé mon sandwich en regardant mon ordinateur.\n**Arkadaşın:** Ce n'est pas bien ! On doit se reposer en mangeant.",
+      examples: [
+        { fr: "Tu as l'air fatigué.", tr: "Yorgun görünüyorsun." },
+        { fr: "On doit se reposer.", tr: "Dinlenmeliyiz." }
+      ]
+    },
+    {
+      id: "fr-b1-gerondif-mission",
+      title: "🚀 KOÇUN MULTİ-TASKİNG GÖREVİ (Şimdi Sen Yapıyorsun)",
+      explanation:
+        "Artık iki işi aynı anda tek bir cümleyle anlatabiliyorsun! Ofis masandasın ve şu cümleyi Fransızca kurmanı istiyorum:\n\n**'Ben kahve içerek çalışıyorum.'**\n\n*(İpucu: Je travaille + en buvant + du café)*",
+      examples: [
+        { fr: "Je travaille en buvant du café.", tr: "Kahve içerek çalışıyorum." }
       ]
     }
   ]
@@ -98,46 +124,65 @@ const unit362Grammar: UnitGrammar = {
 
 const unit363Grammar: UnitGrammar = {
   unitId: 363,
-  title: "Les Pronoms Relatifs (qui, que, où) (İlgi Adılları)",
+  title: "Kariyer Planlaması ve İlgi Adılları",
   rules: [
     {
-      id: "fr-b1-pronoms-relatifs-intro",
-      title: "🎯 Bölüm 1: İlgi Adılları Nedir?",
+      id: "fr-b1-relatifs-intro",
+      title: "🎯 BÖLÜM 1: İLGİ ADILLARI NEDİR?",
       explanation:
-        'İlgi adılları (Les pronoms relatifs), iki farklı cümleyi birbirine bağlamak ve tekrarlardan kaçınmak için kullanılır. Ortak olan ismi bir daha söylemek yerine "qui, que, où" gibi kelimeler kullanırız.\n\nÖrnek:\n1. J\'adore ce téléphone. (Bu telefonu çok seviyorum.)\n2. Ce téléphone est très rapide. (Bu telefon çok hızlı.)\n-> J\'adore ce téléphone **qui** est très rapide. (Çok hızlı *olan* bu telefonu çok seviyorum.)',
+        "İlgi adılı, dilbilgisi kitaplarının sıkıcı tabiridir. Biz onlara **'Cümle Yapıştırıcıları' (Lego Bağlantıları)** diyoruz.\n\nFransızlar 'Ben bir şirkette çalışıyorum. Şirket çok büyük.' diye kesik kesik konuşmayı hiç sevmezler. Bunun yerine 'Benim çalıştığım şirket çok büyük' derler. İşte bu bağlantıyı kuran, kelime tekrarını önleyen ve sizi anında native gibi gösteren sihirli köprülere bu isim verilir.",
       examples: [
-        { fr: "C'est la femme qui travaille ici.", tr: "Burada çalışan kadın budur." },
-        { fr: "C'est le livre que je lis.", tr: "Bu benim okuduğum kitaptır." }
+        { fr: "L'entreprise qui est grande.", tr: "Büyük olan şirket." },
+        { fr: "L'entreprise que j'aime.", tr: "Sevdiğim şirket." }
       ]
     },
     {
-      id: "fr-b1-pronoms-relatifs-qui",
-      title: "🧱 Bölüm 2: QUI (Özne)",
+      id: "fr-b1-relatifs-qui",
+      title: "🧱 BÖLÜM 2: QUI (İşi Yapan / Özne)",
       explanation:
-        '**QUI**, bir cümlenin **öznesinin (sujet)** yerini alır. Doğrudan fiilden önce gelir ve eylemi yapanı temsil eder.\nTürkçedeki "-an, -en" ekleri (yapan, giden, gelen vb.) gibi çevrilebilir.',
+        "**QUI** (Ki diye okunur), cümlede eylemi YAPAN şeyin yerine geçer. Türkçedeki '-an / -en' ekidir (Gelen, Giden, Yapan).\n\n**🎯 Koçun Altın Kuralı:** Eğer boşluktan veya yapıştırıcıdan hemen sonra bir **FİİL (Eylem)** geliyorsa, o kelime kesinlikle **QUI**'dir.\n\n* **C'est le collègue qui parle.** (Bu, konuşan meslektaştır.) -> *parle* bir fiildir.\n* **Le projet qui commence.** (Başlayan proje.) -> *commence* bir fiildir.\n* **Le téléphone qui sonne.** (Çalan telefon.) -> *sonne* bir fiildir.",
       examples: [
-        { fr: "Voici l'étudiant qui parle français.", tr: "İşte Fransızca konuşan öğrenci." },
-        { fr: "Le chien qui aboie est à mon voisin.", tr: "Havlayan köpek komşumundur." }
+        { fr: "L'homme qui travaille.", tr: "Çalışan adam." },
+        { fr: "La machine qui marche.", tr: "Çalışan makine." }
       ]
     },
     {
-      id: "fr-b1-pronoms-relatifs-que",
-      title: "📝 Bölüm 3: QUE (Nesne)",
+      id: "fr-b1-relatifs-que",
+      title: "📝 BÖLÜM 3: QUE (Etkilenen / Nesne)",
       explanation:
-        '**QUE**, bir cümlenin **nesnesinin (objet directionnel)** yerini alır. Her zaman bir özne ve fiilden (Je veux, Tu aimes vb.) önce gelir.\nSesli harfle başlayan bir kelimeden önce "Qu\'" şeklini alır.\nTürkçedeki "-dığım, -diğin" ekleri (sevdiğim, yaptığın vb.) gibi çevrilebilir.',
+        "**QUE** (Kö diye okunur), eylemden ETKİLENEN şeyin yer tutar. Türkçedeki '-dığım / -diğim' ekidir (İzlediğim, Sevdiğim, Yaptığım).\n\n**🎯 Koçun Altın Kuralı:** Eğer boşluktan hemen sonra bir **ŞAHIS veya İSİM** (Je, Tu, Ali, Le patron...) geliyorsa, o kelime kesinlikle **QUE**'dir.\n\n* **C'est le projet que je fais.** (Bu, benim yaptığım projedir.) -> *je* bir şahıstır.\n* **Le café que tu bois.** (Senin içtiğin kahve.) -> *tu* bir şahıstır.\n\n**⚠️ Çarpışma Kuralı:** Eğer QUE'den sonra sesli harfle başlayan bir kelime gelirse (**il, elle, on, j'aime**), QUE'nin 'e'si düşer ve **QU'** olur.\n* **Le travail qu'il aime.** (Onun sevdiği iş.)",
       examples: [
-        { fr: "Le gâteau que tu as fait est délicieux.", tr: "Yaptığın pasta çok lezzetli." },
-        { fr: "C'est l'ordinateur qu'il a acheté.", tr: "Bu onun satın aldığı bilgisayardır." }
+        { fr: "Le livre que je lis.", tr: "Okuduğum kitap." },
+        { fr: "Le film qu'elle regarde.", tr: "Onun izlediği film." }
       ]
     },
     {
-      id: "fr-b1-pronoms-relatifs-ou",
-      title: "📍 Bölüm 4: OÙ (Yer ve Zaman)",
+      id: "fr-b1-relatifs-ou",
+      title: "📍 BÖLÜM 4: OÙ (Yer ve Zaman)",
       explanation:
-        '**OÙ**, genellikle bir **yer (lieu)** bildirmek için kullanılır ("...dığı yer").\nAynı zamanda kesin bir **zaman (temps)** bildiren kelimeleri (jour, année, moment vb.) bağlamak için de kullanılır ("...dığı zaman/gün").',
+        "**OÙ** (U diye okunur). Üzerindeki minik çizgiye çok dikkat et, çünkü o çizgi olmazsa 'veya' anlamına gelir. İki görevi vardır:\n\n**1. Yer (Le Lieu):** La ville où j'habite. (Yaşadığım şehir.)\n**2. Zaman (Le Temps):** Le jour où je suis arrivé. (Geldiğim gün.)\n\nTürkçedeki '-dığım yer' veya '-dığım zaman' anlamlarına gelir.",
       examples: [
-        { fr: "La ville où j'habite est très belle.", tr: "Yaşadığım (oturduğum) şehir çok güzel." },
-        { fr: "Je me souviens du jour où nous nous sommes rencontrés.", tr: "Tanıştığımız günü hatırlıyorum." }
+        { fr: "Le bureau où je travaille.", tr: "Çalıştığım ofis." },
+        { fr: "L'année où on s'est rencontrés.", tr: "Tanıştığımız yıl." }
+      ]
+    },
+    {
+      id: "fr-b1-relatifs-table",
+      title: "🆚 BEYNE KAZIMA TABLOSU (Ultimate Özet)",
+      explanation:
+        "Şu tabloyu zihnine kazıdığın an bu konuda hata yapma ihtimalin SIFIRDIR!\n\n| Yapıştırıcı | Arkasından Ne Gelir? | Türkçesi | Örnek |\n| :--- | :--- | :--- | :--- |\n| **QUI** | FİİL (est, parle...) | Yapan / Eden | Le client qui téléphone. |\n| **QUE (Qu')** | ŞAHIS (Je, Tu, Paul...) | Yaptığım / Ettiğim | Le client que je vois. |\n| **OÙ** | YER veya ZAMAN | -dığım yer / zaman | L'entreprise où je suis. |",
+      examples: [
+        { fr: "C'est facile !", tr: "Bu çok kolay!" }
+      ]
+    },
+    {
+      id: "fr-b1-relatifs-mission",
+      title: "🚀 KOÇUN SON TESTİ (Bağlantıları Kur)",
+      explanation:
+        "Artık en uzun ve en karmaşık cümleleri tek nefeste Fransızca söyleyebilecek kapasitedesin! Steadyshell ofisinde olduğunu hayal et ve şu boşlukları doldur:\n\n1. **'C'est l'ordinateur ______ marche bien.'** (Bu iyi çalışan bilgisayardır.)\n2. **'C'est la ville ______ nous travaillons.'** (Bu bizim çalıştığımız şehirdir.)",
+      examples: [
+        { fr: "C'est l'ordinateur qui marche bien.", tr: "Bu iyi çalışan bilgisayardır." },
+        { fr: "C'est la ville où nous travaillons.", tr: "Bu bizim çalıştığımız şehirdir." }
       ]
     }
   ]
