@@ -190,46 +190,55 @@ const unit363Grammar: UnitGrammar = {
 
 const unit364Grammar: UnitGrammar = {
   unitId: 364,
-  title: "Les Pronoms Démonstratifs (İşaret Adılları)",
+  title: "Eğitim Sistemi ve İşaret Adılları",
   rules: [
     {
-      id: "fr-b1-pronoms-demonstratifs-intro",
-      title: "🎯 Bölüm 1: İşaret Adılı Nedir?",
+      id: "fr-b1-demonstratifs-intro",
+      title: "🎯 BÖLÜM 1: İŞARET ADILI NEDİR? (\"Bunu / Şunu\")",
       explanation:
-        'Daha önce bahsedilen bir ismin tekrarını önlemek için kullanılır. Türkçedeki "şu, bu, o, şunlar, bunlar" veya "benimki, seninki, ...olan" anlamlarına gelir.\nFransızcada ismin cinsiyetine ve sayısına göre dört şekli vardır:\n\n* **Celui:** Eril Tekil (Bu / Şu / O)\n* **Celle:** Dişil Tekil (Bu / Şu / O)\n* **Ceux:** Eril Çoğul (Bunlar / Şunlar / Onlar)\n* **Celles:** Dişil Çoğul (Bunlar / Şunlar / Onlar)',
+        "İşaret adılı, daha önce bahsi geçmiş bir ismin (araba, bilgisayar, kazak) yerine geçen ve onu işaret eden kelimedir.\n\n**Altın Kural:** Hatırlarsan 'Ce / Cette' (Bu) kelimelerinden sonra hep bir isim gelirdi (Ce pantalon). İşaret adılları ise tek başlarına kullanılırlar, çünkü ismin ta kendisi olmuşlardır!\n\n**4 Temel Lego Parçamız:**\n* **Celui:** Erkek Tekil (Bu / Şu / O)\n* **Celle:** Dişil Tekil (Bu / Şu / O)\n* **Ceux:** Erkek Çoğul (Bunlar / Şunlar)\n* **Celles:** Dişil Çoğul (Bunlar / Şunlar)\n\n**🚨 KOÇUN UYARISI:** Bu 4 kelime Fransızcada ASLA tek başına cıscıplak kullanılmaz! Yanlarına mutlaka -ci/-là, de veya qui/que takılarını almak zorundadırlar.",
       examples: [
-        { fr: "Mon livre et celui de Pierre.", tr: "Benim kitabım ve Pierre'inki (Pierre'in kitabı)." },
-        { fr: "La voiture rouge ou celle-ci ?", tr: "Kırmızı araba mı yoksa bu mu?" }
+        { fr: "Celui-ci", tr: "Bu / Buradaki" },
+        { fr: "Celle de Paul", tr: "Paul'ünki" }
       ]
     },
     {
-      id: "fr-b1-pronoms-demonstratifs-ci-la",
-      title: "🧱 Bölüm 2: -ci ve -là Ekleri",
+      id: "fr-b1-demonstratifs-ci-la",
+      title: "🧱 BÖLÜM 2: -CI VE -LÀ EKLERİ (Yakın ve Uzak)",
       explanation:
-        'Yakınlık ve uzaklığı daha net belirtmek veya iki seçenek arasında tercih yapmak için kullanılır.\n\n* **-ci (Yakınlık):** celui-ci, celle-ci, ceux-ci, celles-ci (Bu, bunlar)\n* **-là (Uzaklık):** celui-là, celle-là, ceux-là, celles-là (Şu/O, şunlar/onlar)',
+        "Birini yakından, diğerini uzaktan işaret ederken kullanılır:\n\n* **-ci (ici = bura):** Yakındaki nesneyi ('Bu / Bunu') gösterir.\n* **-là (là = ora):** Uzaktaki nesneyi ('Şu / Şunu') gösterir.\n\n**Formül:** Celui / Celle + -ci veya -là\n\n**Örnek:** Quel pull tu préfères ? Celui-ci ou celui-là ? (Buradaki bunu mu, oradaki şunu mu?)",
       examples: [
-        { fr: "Quel gâteau veux-tu ? Celui-ci ou celui-là ?", tr: "Hangi pastayı istiyorsun? Bunu mu yoksa şunu mu?" },
-        { fr: "J'aime ces fleurs, surtout celles-là.", tr: "Bu çiçekleri seviyorum, özellikle de şunları." }
+        { fr: "Je préfère celle-ci.", tr: "Bunu (yakındakini) tercih ederim." },
+        { fr: "Regarde celui-là !", tr: "Şuna (uzaktakine) bak!" }
       ]
     },
     {
-      id: "fr-b1-pronoms-demonstratifs-de",
-      title: "📝 Bölüm 3: Aidiyet Belirtme (de)",
+      id: "fr-b1-demonstratifs-de",
+      title: "📝 BÖLÜM 3: AİDİYET BELİRTME 'DE' (...-ninki)",
       explanation:
-        'Bir şeyin kime ait olduğunu belirtirken ismi tekrarlamadan "de + kişi" kalıbını kullanırız.\n\nFormül: **Celui/Celle/Ceux/Celles + de + isim/zamir**',
+        "Bazen 'Bu' veya 'Şu' demeyiz de, 'Ali'ninki', 'Benimki', 'Babamınki' deriz. Fransızcada bunu yapmak çok kolaydır!\n\n**Formül:** Celui / Celle + DE + Sahibinin Adı\n\n**Örnek:**\n* **C'est celui de Paul.** (Hayır, bu Paul'ünki.) (Bilgisayar 'le' olduğu için Celui kullandık).\n* **C'est celle de ma mère.** (Hayır, bu anneminki.) (Araba 'la' olduğu için Celle kullandık).",
       examples: [
-        { fr: "C'est l'ordinateur de Paul ? Non, c'est celui de Marie.", tr: "Bu Paul'ün bilgisayarı mı? Hayır, Marie'ninki." },
-        { fr: "Je préfère les idées de Thomas à celles de Sophie.", tr: "Thomas'nın fikirlerini Sophie'ninkilere tercih ederim." }
+        { fr: "C'est celui de mon frère.", tr: "Kardeşiminki." },
+        { fr: "Prends celle de Marie.", tr: "Marie'ninkini al." }
       ]
     },
     {
-      id: "fr-b1-pronoms-demonstratifs-qui-que",
-      title: "📍 Bölüm 4: İlgi Adılıyla Kullanım (qui/que)",
+      id: "fr-b1-demonstratifs-qui-que",
+      title: "📍 BÖLÜM 4: İLGİ ADILIYLA KULLANIM (qui/que)",
       explanation:
-        'Bir nesneyi veya kişiyi tanımlamak için "celui qui", "celle que" vb. yapılar kullanılır.\nTürkçedeki "...yapan kişi" veya "...olan şey" anlamını verir.',
+        "Geçen ders öğrendiğimiz 'Qui ve Que' yapıştırıcılarını bu konuyla birleştiriyoruz. Bir ismi tekrarlamak yerine doğrudan 'Yapan kişi' veya 'Yapılan şey' demek için kullanılır.\n\n**Formül:** Celui / Celle + QUI (Fiil) veya QUE (Şahıs)\n\n**Örnek 1 (QUI - Yapan):** Celui qui parle ! (Konuşan kişi!)\n**Örnek 2 (QUE - Yapılan):** Celle que je porte ! (Benim giydiğim!)",
       examples: [
-        { fr: "Celui qui parle est mon frère.", tr: "Konuşan (o kişi), benim kardeşim." },
-        { fr: "Prends la chaise, celle que tu préfères.", tr: "Sandalyeyi al, hangisini tercih ediyorsan." }
+        { fr: "Celui qui travaille dur.", tr: "Sert çalışan (kişi)." },
+        { fr: "Ceux que nous aimons.", tr: "Sevdiklerimiz / Bizim sevdiklerimiz." }
+      ]
+    },
+    {
+      id: "fr-b1-demonstratifs-mission",
+      title: "🚀 KOÇUN İŞARET GÖREVİ (Şimdi Sen Seçiyorsun)",
+      explanation:
+        "Dostum, isimleri çöpe atıp yerine havalı 'Lego' parçalarını koymayı öğrendin. Şimdi mağazada kasadasın ve arkadaşınla konuşuyorsun. Şu cümleyi Fransızca kur:\n\n**'Hangi pantolon (le pantalon)? Buradaki (bu) mi, yoksa oradaki (şu) mi?'**\n\n*(İpuçları: Quel pantalon ? + [Erkek-bu] + ou + [Erkek-şu])*",
+      examples: [
+        { fr: "Celui-ci ou celui-là ?", tr: "Bu mu yoksa şu mu?" }
       ]
     }
   ]
@@ -288,7 +297,7 @@ const unit366Grammar: UnitGrammar = {
   title: "Le Gérondif (Ulaç Yapısı)",
   rules: [
     {
-      id: "fr-b1-gerondif-formation",
+      id: "fr-b1-gerondif-formation-366",
       title: "🎯 Bölüm 1: Nasıl Oluşturulur?",
       explanation:
         'Le Gérondif (ulaç), eylemlere "-arak, -erek" veya "-iken" anlamı katar.\nOluşturmak için formül şudur: **En + Participe Présent (Şimdiki Zaman Ortacı)**.\n\nParticipe présent elde etmek için: Fiilin geniş zamanda (Présent) "Nous" (Biz) çekimindeki "-ons" takısı atılır ve yerine **"-ant"** eklenir.\n* Parler -> (Nous) parlons -> parlant -> **en parlant**\n* Finir -> (Nous) finissons -> finissant -> **en finissant**',
@@ -298,7 +307,7 @@ const unit366Grammar: UnitGrammar = {
       ]
     },
     {
-      id: "fr-b1-gerondif-simultaneite",
+      id: "fr-b1-gerondif-simultaneite-366",
       title: "🧱 Bölüm 2: Eşzamanlılık (Simultanéité)",
       explanation:
         'Aynı öznenin aynı anda yaptığı iki farklı eylemi anlatmak için kullanılır. Türkçede "-ken, -diği sırada" olarak çevrilebilir.',
@@ -308,7 +317,7 @@ const unit366Grammar: UnitGrammar = {
       ]
     },
     {
-      id: "fr-b1-gerondif-moyen",
+      id: "fr-b1-gerondif-moyen-366",
       title: "📝 Bölüm 3: Yöntem / Araç Belirtme (Le Moyen)",
       explanation:
         'Bir eylemin **nasıl** veya **hangi yolla** yapıldığını gösterir. Türkçede "-arak, -erek" şeklinde çevrilir.',
@@ -318,7 +327,7 @@ const unit366Grammar: UnitGrammar = {
       ]
     },
     {
-      id: "fr-b1-gerondif-exceptions",
+      id: "fr-b1-gerondif-exceptions-366",
       title: "📍 Bölüm 4: İstisnai Fiiller",
       explanation:
         'Üç önemli fiil "nous" çekimi kuralına uymaz ve düzensizdir:\n\n* **Être (Olmak):** en étant\n* **Avoir (Sahip olmak):** en ayant\n* **Savoir (Bilmek):** en sachant',
@@ -476,7 +485,7 @@ const unit370Grammar: UnitGrammar = {
   title: "Le Participe Présent et Le Gérondif (-erek, -arak)",
   rules: [
     {
-      id: "fr-b1-gerondif-formation",
+      id: "fr-b1-gerondif-formation-370",
       title: "🛠️ Bölüm 1: Nasıl Yapılır? (-ant Eki)",
       explanation:
         'Bir fiilden Gérondif (Ulaç) yapmak için fiilin geniş zamandaki "nous" (biz) çekimine bakarız. Sondaki "-ons" ekini atıp yerine **"-ant"** ekleriz. Başına da **"en"** edatını koyarız.\n\nÖrnek:\n*Parler* -> nous parlons -> parlant -> **en parlant** (konuşarak)\n*Finir* -> nous finissons -> finissant -> **en finissant** (bitirerek)',
@@ -486,7 +495,7 @@ const unit370Grammar: UnitGrammar = {
       ]
     },
     {
-      id: "fr-b1-gerondif-exceptions",
+      id: "fr-b1-gerondif-exceptions-370",
       title: "⚠️ Bölüm 2: 3 Önemli İstisna Fiil",
       explanation:
         'Sadece 3 fiil bu kurala uymaz, bunları ezberlemelisiniz:\n1. **Avoir** (sahip olmak) -> en **ayant** (sahip olarak)\n2. **Être** (olmak) -> en **étant** (olarak)\n3. **Savoir** (bilmek) -> en **sachant** (bilerek)',
@@ -496,7 +505,7 @@ const unit370Grammar: UnitGrammar = {
       ]
     },
     {
-      id: "fr-b1-gerondif-simultaneite",
+      id: "fr-b1-gerondif-simultaneite-370",
       title: "⏱️ Bölüm 3: Aynı Anda Gerçekleşen Eylemler",
       explanation:
         'Gérondif, **aynı anda** yapılan iki işi anlatmak için çok kullanılır. Türkçeye "-ken, -erek, -arak" diye çevrilir.',
@@ -506,7 +515,7 @@ const unit370Grammar: UnitGrammar = {
       ]
     },
     {
-      id: "fr-b1-gerondif-maniere-cause",
+      id: "fr-b1-gerondif-maniere-cause-370",
       title: "🌿 Bölüm 4: Yöntem ve Çevre Pratiği",
       explanation:
         'Bir şeyin **nasıl** veya **neden** yapıldığını açıklarken de Gérondif kullanılır. Çevrecilik konularında sorunu nasıl çözeceğimizi anlatırken çok işe yarar.',
@@ -950,36 +959,36 @@ const unit381Grammar: UnitGrammar = {
 
 const unit382Grammar: UnitGrammar = {
   unitId: 382,
-  title: "ReklamcÄ±lÄ±k",
+  title: "Reklamcılık",
   rules: [
     {
       id: "fr-b1-ad-imperatif",
-      title: "ğŸ“£ BÃ¶lÃ¼m 1: Reklam Dilinde Emir Kipi (ImpÃ©ratif)",
+      title: "ğŸ“£ Bölüm 1: Reklam Dilinde Emir Kipi (Impératif)",
       explanation:
-        "Reklamlarda mÃ¼ÅŸteriyi harekete geÃ§irmek iÃ§in emir kipi Ã§ok kullanÄ±lÄ±r.\n\n* **Fiil kÃ¶kÃ¼** kullanÄ±lÄ±r: *Essayez !, DÃ©couvrez !, Profitez !*\n* **Olumsuz emir:** *Ne + fiil + pas*\n\nBu yapÄ±, teklif ve Ã§aÄŸrÄ± cÃ¼mlelerini doÄŸal ve etkili gÃ¶sterir.",
+        "Reklamlarda müşteriyi harekete geçirmek için emir kipi çok kullanılır.\n\n* **Fiil kökü** kullanılır: *Essayez !, Découvrez !, Profitez !*\n* **Olumsuz emir:** *Ne + fiil + pas*\n\nBu yapı, teklif ve çağrı cümlelerini doğal ve etkili gösterir.",
       examples: [
-        { fr: "Essayez notre nouveau produit !", tr: "Yeni Ã¼rÃ¼nÃ¼mÃ¼zÃ¼ deneyin!" },
-        { fr: "Ne manquez pas l'offre spÃ©ciale !", tr: "Ã–zel teklifi kaÃ§Ä±rmayÄ±n!" }
+        { fr: "Essayez notre nouveau produit !", tr: "Yeni ürünümüzü deneyin!" },
+        { fr: "Ne manquez pas l'offre spéciale !", tr: "Özel teklifi kaçırmayın!" }
       ]
     },
     {
       id: "fr-b1-ad-futur",
-      title: "ğŸ“… BÃ¶lÃ¼m 2: Lansman Ä°Ã§in Gelecek Zaman",
+      title: "ğŸ“… Bölüm 2: Lansman İçin Gelecek Zaman",
       explanation:
-        "Reklam ve lansman anlatÄ±mÄ±nda iki gelecek zaman sÄ±k kullanÄ±lÄ±r:\n\n* **Futur Proche:** *aller + mastar* (yakÄ±n plan)\n* **Futur Simple:** kÃ¶k + **-ai, -as, -a, -ons, -ez, -ont** (kesin plan / Ã¶ngÃ¶rÃ¼)\n\nÃ–rnek: *Nous allons lancer la campagne* / *La marque lancera un nouveau produit*.",
+        "Reklam ve lansman anlatımında iki gelecek zaman sık kullanılır:\n\n* **Futur Proche:** *aller + mastar* (yakın plan)\n* **Futur Simple:** kök + **-ai, -as, -a, -ons, -ez, -ont** (kesin plan / öngörü)\n\nÖrnek: *Nous allons lancer la campagne* / *La marque lancera un nouveau produit*.",
       examples: [
-        { fr: "Nous allons lancer la campagne demain.", tr: "KampanyayÄ± yarÄ±n baÅŸlatacaÄŸÄ±z." },
-        { fr: "La marque lancera un nouveau produit en juin.", tr: "Marka haziranda yeni bir Ã¼rÃ¼n Ã§Ä±karacak." }
+        { fr: "Nous allons lancer la campagne demain.", tr: "Kampanyayı yarın başlatacağız." },
+        { fr: "La marque lancera un nouveau produit en juin.", tr: "Marka haziranda yeni bir ürün çıkaracak." }
       ]
     },
     {
       id: "fr-b1-ad-comparatif",
-      title: "âš–ï¸ BÃ¶lÃ¼m 3: KarÅŸÄ±laÅŸtÄ±rma ve SÃ¼perlatif",
+      title: "âš–ï¸ Bölüm 3: Karşılaştırma ve Süperlatif",
       explanation:
-        "Reklamlarda Ã¼rÃ¼nleri karÅŸÄ±laÅŸtÄ±rmak iÃ§in ÅŸu yapÄ±lar kullanÄ±lÄ±r:\n\n* **plus / moins / aussi ... que** = daha / daha az / ... kadar\n* **le / la / les plus + sÄ±fat** = en ... (sÃ¼perlatif)\n\nBu yapÄ±lar Ã¼rÃ¼nÃ¼ vurgulamak iÃ§in sÄ±kÃ§a kullanÄ±lÄ±r.",
+        "Reklamlarda ürünleri karşılaştırmak için şu yapılar kullanılır:\n\n* **plus / moins / aussi ... que** = daha / daha az / ... kadar\n* **le / la / les plus + sıfat** = en ... (süperlatif)\n\nBu yapılar ürünü vurgulamak için sıkça kullanılır.",
       examples: [
-        { fr: "Notre service est plus rapide que celui des concurrents.", tr: "Hizmetimiz rakiplerinkinden daha hÄ±zlÄ±." },
-        { fr: "C'est le slogan le plus mÃ©morable de la marque.", tr: "Bu, markanÄ±n en akÄ±lda kalÄ±cÄ± sloganÄ±dÄ±r." }
+        { fr: "Notre service est plus rapide que celui des concurrents.", tr: "Hizmetimiz rakiplerinkinden daha hızlı." },
+        { fr: "C'est le slogan le plus mémorable de la marque.", tr: "Bu, markanın en akılda kalıcı sloganıdır." }
       ]
     }
   ]
@@ -987,36 +996,36 @@ const unit382Grammar: UnitGrammar = {
 
 const unit383Grammar: UnitGrammar = {
   unitId: 383,
-  title: "Haber MedyasÄ±",
+  title: "Haber Medyası",
   rules: [
     {
       id: "fr-b1-media-source",
-      title: "ğŸ“° BÃ¶lÃ¼m 1: Kaynak Belirtme (selon / d'aprÃ¨s)",
+      title: "ğŸ“° Bölüm 1: Kaynak Belirtme (selon / d'après)",
       explanation:
-        "Haber dilinde bilgi kaynaÄŸÄ±nÄ± belirtmek iÃ§in **selon** ve **d'aprÃ¨s** kullanÄ±lÄ±r:\n\n* **Selon + isim** = ...'e gÃ¶re\n* **D'aprÃ¨s + isim** = ...'e gÃ¶re\n\nBu yapÄ±lar, bilginin kime ait olduÄŸunu aÃ§Ä±klar.",
+        "Haber dilinde bilgi kaynağını belirtmek için **selon** ve **d'après** kullanılır:\n\n* **Selon + isim** = ...'e göre\n* **D'après + isim** = ...'e göre\n\nBu yapılar, bilginin kime ait olduğunu açıklar.",
       examples: [
-        { fr: "Selon la police, l'incident est terminÃ©.", tr: "Polise gÃ¶re olay bitti." },
-        { fr: "D'aprÃ¨s le journal, la route sera fermÃ©e.", tr: "Gazeteye gÃ¶re yol kapatÄ±lacak." }
+        { fr: "Selon la police, l'incident est terminé.", tr: "Polise göre olay bitti." },
+        { fr: "D'après le journal, la route sera fermée.", tr: "Gazeteye göre yol kapatılacak." }
       ]
     },
     {
       id: "fr-b1-media-indirect",
-      title: "ğŸ’¬ BÃ¶lÃ¼m 2: DolaylÄ± AnlatÄ±m (annoncer / dire que)",
+      title: "ğŸ’¬ Bölüm 2: Dolaylı Anlatım (annoncer / dire que)",
       explanation:
-        "Gazetecilikte sÄ±kÃ§a **que** baÄŸlacÄ±yla dolaylÄ± anlatÄ±m kullanÄ±lÄ±r:\n\n* **annoncer que** = duyurmak\n* **dire que / expliquer que** = sÃ¶ylemek / aÃ§Ä±klamak\n\nBu yapÄ±lar haberin iÃ§eriÄŸini aktarÄ±r.",
+        "Gazetecilikte sıkça **que** bağlacıyla dolaylı anlatım kullanılır:\n\n* **annoncer que** = duyurmak\n* **dire que / expliquer que** = söylemek / açıklamak\n\nBu yapılar haberin içeriğini aktarır.",
       examples: [
-        { fr: "Le maire annonce que le projet commence demain.", tr: "Belediye baÅŸkanÄ± projenin yarÄ±n baÅŸlayacaÄŸÄ±nÄ± duyuruyor." },
-        { fr: "La journaliste explique que les chiffres sont vÃ©rifiÃ©s.", tr: "Gazeteci rakamlarÄ±n doÄŸrulandÄ±ÄŸÄ±nÄ± aÃ§Ä±klÄ±yor." }
+        { fr: "Le maire annonce que le projet commence demain.", tr: "Belediye başkanı projenin yarın başlayacağını duyuruyor." },
+        { fr: "La journaliste explique que les chiffres sont vérifiés.", tr: "Gazeteci rakamların doğrulandığını açıklıyor." }
       ]
     },
     {
       id: "fr-b1-media-conditionnel",
-      title: "âš ï¸ BÃ¶lÃ¼m 3: Gazetecilikte Åart Kipi (SÃ¶ylenti)",
+      title: "âš ï¸ Bölüm 3: Gazetecilikte Åart Kipi (Söylenti)",
       explanation:
-        "Kesin olmayan bilgiler aktarÄ±lÄ±rken **Conditionnel PrÃ©sent** kullanÄ±lÄ±r. Bu, bilginin teyit edilmediÄŸini gÃ¶sterir:\n\n* **Il y aurait...** = ... var(dÄ±) deniyor\n* **Il serait...** = ... olabilirmiÅŸ\n\nBu yapÄ±, haber dilinde ihtiyatlÄ± anlatÄ±m saÄŸlar.",
+        "Kesin olmayan bilgiler aktarılırken **Conditionnel Présent** kullanılır. Bu, bilginin teyit edilmediğini gösterir:\n\n* **Il y aurait...** = ... var(dı) deniyor\n* **Il serait...** = ... olabilirmiş\n\nBu yapı, haber dilinde ihtiyatlı anlatım sağlar.",
       examples: [
         { fr: "Il y aurait des retards sur la ligne.", tr: "Hatta gecikmeler var deniyor." },
-        { fr: "Le nouveau service serait gratuit.", tr: "Yeni hizmetin Ã¼cretsiz olabileceÄŸi sÃ¶yleniyor." }
+        { fr: "Le nouveau service serait gratuit.", tr: "Yeni hizmetin ücretsiz olabileceği söyleniyor." }
       ]
     }
   ]
@@ -1028,32 +1037,32 @@ const unit384Grammar: UnitGrammar = {
   rules: [
     {
       id: "fr-b1-politique-obligation",
-      title: "âš–ï¸ BÃ¶lÃ¼m 1: Zorunluluk ve Ä°zin (il faut / devoir)",
+      title: "âš–ï¸ Bölüm 1: Zorunluluk ve İzin (il faut / devoir)",
       explanation:
-        "Siyasi ve toplumsal kurallarda zorunluluk ve izin belirtmek iÃ§in ÅŸu yapÄ±lar kullanÄ±lÄ±r:\n\n* **il faut + mastar** = gereklidir\n* **devoir + mastar** = zorunda olmak\n* **avoir le droit de + mastar** = izinli olmak\n\nBu yapÄ±lar kanun ve kurallarÄ± anlatÄ±rken Ã§ok sÄ±k kullanÄ±lÄ±r.",
+        "Siyasi ve toplumsal kurallarda zorunluluk ve izin belirtmek için şu yapılar kullanılır:\n\n* **il faut + mastar** = gereklidir\n* **devoir + mastar** = zorunda olmak\n* **avoir le droit de + mastar** = izinli olmak\n\nBu yapılar kanun ve kuralları anlatırken çok sık kullanılır.",
       examples: [
         { fr: "Il faut respecter la loi.", tr: "Yasaya uymak gerekir." },
-        { fr: "Les citoyens doivent voter.", tr: "VatandaÅŸlar oy kullanmak zorundadÄ±r." }
+        { fr: "Les citoyens doivent voter.", tr: "Vatandaşlar oy kullanmak zorundadır." }
       ]
     },
     {
       id: "fr-b1-politique-passif",
-      title: "ğŸ“œ BÃ¶lÃ¼m 2: Kanun Dilinde Edilgen YapÄ±",
+      title: "ğŸ“œ Bölüm 2: Kanun Dilinde Edilgen Yapı",
       explanation:
-        "ResmÃ® metinlerde edilgen yapÄ± sÄ±k kullanÄ±lÄ±r:\n\n* **Ãªtre + participe passÃ©** = edilgen\n\nBu yapÄ±, eylemi kimin yaptÄ±ÄŸÄ±ndan Ã§ok, eylemin kendisini vurgular.",
+        "Resmî metinlerde edilgen yapı sık kullanılır:\n\n* **être + participe passé** = edilgen\n\nBu yapı, eylemi kimin yaptığından çok, eylemin kendisini vurgular.",
       examples: [
-        { fr: "La loi est votÃ©e par le parlement.", tr: "Yasa parlamento tarafÄ±ndan kabul edilir." },
-        { fr: "Le projet est approuvÃ©.", tr: "Proje onaylanÄ±r." }
+        { fr: "La loi est votée par le parlement.", tr: "Yasa parlamento tarafından kabul edilir." },
+        { fr: "Le projet est approuvé.", tr: "Proje onaylanır." }
       ]
     },
     {
       id: "fr-b1-politique-relatifs",
-      title: "ğŸ§© BÃ¶lÃ¼m 3: KurumlarÄ± Anlatmada Qui / Que",
+      title: "ğŸ§© Bölüm 3: Kurumları Anlatmada Qui / Que",
       explanation:
-        "KurumlarÄ± tanÄ±mlarken **qui** ve **que** sÄ±k kullanÄ±lÄ±r:\n\n* **qui** = Ã¶zne yerine\n* **que** = nesne yerine\n\nBu yapÄ±lar bilgiyi akÄ±cÄ± verir.",
+        "Kurumları tanımlarken **qui** ve **que** sık kullanılır:\n\n* **qui** = özne yerine\n* **que** = nesne yerine\n\nBu yapılar bilgiyi akıcı verir.",
       examples: [
-        { fr: "Le parti qui gagne les Ã©lections forme le gouvernement.", tr: "SeÃ§imleri kazanan parti hÃ¼kÃ¼meti kurar." },
-        { fr: "La loi que le parlement propose est importante.", tr: "Parlamentonun Ã¶nerdiÄŸi yasa Ã¶nemlidir." }
+        { fr: "Le parti qui gagne les élections forme le gouvernement.", tr: "Seçimleri kazanan parti hükümeti kurar." },
+        { fr: "La loi que le parlement propose est importante.", tr: "Parlamentonun önerdiği yasa önemlidir." }
       ]
     }
   ]
@@ -1207,6 +1216,51 @@ const unit388Grammar: UnitGrammar = {
   ]
 };
 
+
+const unit389Grammar: UnitGrammar = {
+  unitId: 389,
+  title: "Ekonomi ve Sayılar",
+  rules: [
+    {
+      id: "fr-b1-comparatif-adv",
+      title: "🎯 BÖLÜM 1: KARŞILAŞTIRMA (PLUS / MOINS / AUSSI)",
+      explanation:
+        "Ekonomiden bahsederken 'daha pahalı', 'daha az karlı' gibi ifadeler hayat kurtarır.\n\n**Lego Kuralı:**\n- **Daha fazla:** Plus + [Sıfat/Zarf] + Que\n- **Daha az:** Moins + [Sıfat/Zarf] + Que\n- **Aynı:** Aussi + [Sıfat/Zarf] + Que",
+      examples: [
+        { fr: "L'inflation est plus élevée que l'année dernière.", tr: "Enflasyon geçen yıldan daha yüksek." },
+        { fr: "Ce produit est moins cher que l'autre.", tr: "Bu ürün diğerinden daha ucuz." }
+      ]
+    },
+    {
+      id: "fr-b1-superlatif",
+      title: "🧱 BÖLÜM 2: EN'LER (LE PLUS / LE MOINS)",
+      explanation:
+        "En yüksek büyüme, en düşük işsizlik derken 'Le/La/Les' kullanmayı unutma!\n\n**Formül:** Le/La/Les + Plus/Moins + Sıfat",
+      examples: [
+        { fr: "C'est le plus grand défi économique.", tr: "Bu en büyük ekonomik zorluk." },
+        { fr: "C'est la moins bonne solution.", tr: "Bu en az iyi / en kötü çözüm." }
+      ]
+    }
+  ]
+};
+
+const unit390Grammar: UnitGrammar = {
+  unitId: 390,
+  title: "B1 Seviye Özeti",
+  rules: [
+    {
+      id: "fr-b1-summary-tense",
+      title: "🎯 BÖLÜM 1: B1 ZAMANLAR ÖZETİ",
+      explanation:
+        "B1 seviyesinin sonuna geldin şampiyon! İşte cebindeki anahtarlar:\n\n1. **Subjonctif:** Duygu, şüphe, zorunluluk (Il faut que...).\n2. **Conditionnel:** Nezaket ve hayaller (Je voudrais...).\n3. **Gérondif:** Aynı anda iki iş (-erek/arak).\n4. **Pronoms Relatifs:** Cümle yapıştırıcıları (Qui, Que, Où, Dont).\n\nHepsini 'Lego' gibi birleştirmeyi öğrendin. Artık karmaşık fikirleri ifade edebilir, tartışmalara katılabilirsin!",
+      examples: [
+        { fr: "Je suis prêt pour le niveau B2.", tr: "B2 seviyesi için hazırım." },
+        { fr: "J'ai fini le niveau B1 avec succès.", tr: "B1 seviyesini başarıyla bitirdim." }
+      ]
+    }
+  ]
+};
+
 export function getFrB1GrammarForUnit(unitId: number): UnitGrammar | undefined {
 
   const grammar: { [key: number]: UnitGrammar } = {
@@ -1237,7 +1291,9 @@ export function getFrB1GrammarForUnit(unitId: number): UnitGrammar | undefined {
     385: unit385Grammar,
     386: unit386Grammar,
     387: unit387Grammar,
-    388: unit388Grammar
+    388: unit388Grammar,
+    389: unit389Grammar,
+    390: unit390Grammar
   };
   return grammar[unitId];
 }

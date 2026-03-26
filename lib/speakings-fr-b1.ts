@@ -386,7 +386,7 @@ const unit382Speaking: UnitSpeakingFrB1 = {
 
 const unit383Speaking: UnitSpeakingFrB1 = {
   unitId: 383,
-  title: "Haber MedyasÄ±",
+  title: "Haber Medyası",
   exercises: [
     { text: "Tu as vu l'article sur la ville ?", translation: "Şehirle ilgili makaleyi gördün mü?", pronunciation: "tü a vü lar-ti-kl sür la vil" },
     { text: "Oui, le journaliste a fait un bon reportage.", translation: "Evet, gazeteci iyi bir haber yaptı.", pronunciation: "ui, lö jur-na-list a fe an bon rö-por-taj" },
@@ -503,6 +503,24 @@ const unit389Speaking: UnitSpeakingFrB1 = {
     ]
 };
 
+
+const unit390Speaking: UnitSpeakingFrB1 = {
+    unitId: 390,
+    title: "B1 Genel Tekrar (Révision Générale)",
+    exercises: [
+        { text: "Je voudrais poser quelques questions sur ce poste.", translation: "Bu pozisyon hakkında birkaç soru sormak isterdim.", pronunciation: "jö vud-re po-ze kel-kö kes-tyon sür sö post" },
+        { text: "Il faut s'adapter aux changements climatiques.", translation: "İklim değişikliklerine uyum sağlamak gerekir.", pronunciation: "il fo sa-dap-te o şanj-man kli-ma-tik" },
+        { text: "La liberté d'expression est un droit fondamental.", translation: "İfade özgürlüğü temel bir haktır.", pronunciation: "la li-ber-te dek-spres-yon e un drua fon-da-man-tal" },
+        { text: "Nous cherchons des bénévoles pour notre association.", translation: "Derneğimiz için gönüllüler arıyoruz.", pronunciation: "nu şer-şon de be-ne-vol pur not-ra-so-sya-syon" },
+        { text: "L'inflation impacte le prix des produits de base.", translation: "Enflasyon temel ürünlerin fiyatlarını etkiliyor.", pronunciation: "lan-fla-syon an-pakt lö pri de pro-düi dö baz" },
+        { text: "Il a fait beaucoup de progrès en français cette année.", translation: "Bu yıl Fransızcada çok ilerleme kaydetti.", pronunciation: "il a fe bo-ku dö pro-gre an fran-se set a-ne" },
+        { text: "La solidarité permet de surmonter les crises.", translation: "Dayanışma krizlerin üstesinden gelmeyi sağlar.", pronunciation: "la so-li-da-ri-te per-me dö sür-mon-te le kriz" },
+        { text: "L'intelligence artificielle transforme l'industrie.", translation: "Yapay zeka endüstriyi dönüştürüyor.", pronunciation: "lan-te-li-jans ar-ti-fi-syel trans-form lan-düs-tri" },
+        { text: "Je suis prêt pour l'examen final de B1.", translation: "B1 final sınavı için hazırım.", pronunciation: "jö süi pre pur lek-za-man fi-nal dö be-un" },
+        { text: "La diversity culturelle enrichit chaque société.", translation: "Kültürel çeşitlilik her toplumu zenginleştirir.", pronunciation: "la di-ver-si-te kül-tü-rel an-ri-şi şak so-sye-te" }
+    ]
+};
+
 export function getFrB1SpeakingForUnit(unitId: number): SpeakingExerciseFrB1[] {
   const idMapping: { [key: number]: UnitSpeakingFrB1 } = {
     361: unit361Speaking,
@@ -533,7 +551,8 @@ export function getFrB1SpeakingForUnit(unitId: number): SpeakingExerciseFrB1[] {
     386: unit386Speaking,
     387: unit387Speaking,
     388: unit388Speaking,
-    389: unit389Speaking
+    389: unit389Speaking,
+    390: unit390Speaking
   };
   return idMapping[unitId]?.exercises || unit361Speaking.exercises;
 }

@@ -1,0 +1,15 @@
+AUDITING: lib/vocabulary-fr-b1.ts
+
+AUDITING: lib/speakings-fr-b1.ts
+- WARNING: Unit 390 missing
+
+AUDITING: lib/phrases-fr-b1.ts
+- WARNING: Unit 390 missing
+
+AUDITING: lib/readings-fr-b1.ts
+
+AUDITING: lib/questions-fr-b1.ts
+- WARNING: Unit 389 missing
+- WARNING: Unit 390 missing
+- INFO: Total questions found: 2400
+

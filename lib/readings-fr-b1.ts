@@ -1763,78 +1763,78 @@ const unit382Reading: UnitReading = {
 const unit383Reading: UnitReading = {
   unitId: 383,
   title: "La Une du Journal",
-  language: "FransÄ±zca",
+  language: "Fransızca",
   level: "B1",
   story: {
-    text: "Le journal local prÃ©pare un article sur l'ouverture d'une nouvelle ligne de tramway. La rÃ©daction envoie une journaliste sur place pour faire un reportage.\n\nElle interviewe le maire et des habitants. Elle vÃ©rifie les chiffres auprÃ¨s de la source officielle et compare les informations.\n\nSur les rÃ©seaux sociaux, une rumeur affirme que les billets seront gratuits, mais ce n'est pas confirmÃ©. Dans son article, la journaliste explique les faits et le titre de la une attire beaucoup de lecteurs. Le journal publie aussi la version en ligne.",
-    translation: "Yerel gazete yeni bir tramvay hattÄ±nÄ±n aÃ§Ä±lÄ±ÅŸÄ± hakkÄ±nda bir makale hazÄ±rlÄ±yor. Redaksiyon, yerinde bir haber yapmak iÃ§in bir gazeteciyi gÃ¶nderiyor.\n\nGazeteci belediye baÅŸkanÄ± ve bazÄ± sakinlerle rÃ¶portaj yapÄ±yor. Resmi kaynaktan rakamlarÄ± doÄŸruluyor ve bilgileri karÅŸÄ±laÅŸtÄ±rÄ±yor.\n\nSosyal medyada, biletlerin Ã¼cretsiz olacaÄŸÄ±na dair bir sÃ¶ylenti dolaÅŸÄ±yor, ancak bu doÄŸrulanmÄ±yor. Makalesinde gazeteci gerÃ§ekleri aÃ§Ä±klÄ±yor ve manÅŸetin baÅŸlÄ±ÄŸÄ± birÃ§ok okuyucunun dikkatini Ã§ekiyor. Gazete ayrÄ±ca online versiyonu da yayÄ±nlÄ±yor."
+    text: "Le journal local prépare un article sur l'ouverture d'une nouvelle ligne de tramway. La rédaction envoie une journaliste sur place pour faire un reportage.\n\nElle interviewe le maire et des habitants. Elle vérifie les chiffres auprès de la source officielle et compare les informations.\n\nSur les réseaux sociaux, une rumeur affirme que les billets seront gratuits, mais ce n'est pas confirmé. Dans son article, la journaliste explique les faits et le titre de la une attire beaucoup de lecteurs. Le journal publie aussi la version en ligne.",
+    translation: "Yerel gazete yeni bir tramvay hattının açılışı hakkında bir makale hazırlıyor. Redaksiyon, yerinde bir haber yapmak için bir gazeteciyi gönderiyor.\n\nGazeteci belediye başkanı ve bazı sakinlerle röportaj yapıyor. Resmi kaynaktan rakamları doğruluyor ve bilgileri karşılaştırıyor.\n\nSosyal medyada, biletlerin ücretsiz olacağına dair bir söylenti dolaşıyor, ancak bu doğrulanmıyor. Makalesinde gazeteci gerçekleri açıklıyor ve manşetin başlığı birçok okuyucunun dikkatini çekiyor. Gazete ayrıca online versiyonu da yayınlıyor."
   },
   vocabulary: [
-    { word: "La rÃ©daction", meaning: "Redaksiyon" },
-    { word: "Le reportage", meaning: "Haber / RÃ¶portaj" },
+    { word: "La rédaction", meaning: "Redaksiyon" },
+    { word: "Le reportage", meaning: "Haber / Röportaj" },
     { word: "La source", meaning: "Kaynak" },
-    { word: "La rumeur", meaning: "SÃ¶ylenti" },
-    { word: "La une", meaning: "ManÅŸet" }
+    { word: "La rumeur", meaning: "Söylenti" },
+    { word: "La une", meaning: "Manşet" }
   ],
   questions: [
     {
       id: 1,
-      question: "Sur quoi l'article est-il prÃ©parÃ© ?",
-      options: ["L'ouverture d'une nouvelle ligne de tramway", "Une fÃªte sportive", "La mÃ©tÃ©o", "Un concert"],
+      question: "Sur quoi l'article est-il préparé ?",
+      options: ["L'ouverture d'une nouvelle ligne de tramway", "Une fête sportive", "La météo", "Un concert"],
       correctAnswer: "L'ouverture d'une nouvelle ligne de tramway"
     },
     {
       id: 2,
-      question: "Qui la rÃ©daction envoie-t-elle ?",
+      question: "Qui la rédaction envoie-t-elle ?",
       options: ["Une journaliste", "Un photographe uniquement", "Un lecteur", "Un vendeur"],
       correctAnswer: "Une journaliste"
     },
     {
       id: 3,
-      question: "OÃ¹ va la journaliste ?",
-      options: ["Sur place", "Ã€ l'Ã©tranger", "Ã€ l'Ã©cole", "Ã€ l'hÃ´pital"],
+      question: "Où va la journaliste ?",
+      options: ["Sur place", "Ã€ l'étranger", "Ã€ l'école", "Ã€ l'hôpital"],
       correctAnswer: "Sur place"
     },
     {
       id: 4,
       question: "Qui interviewe-t-elle ?",
-      options: ["Le maire et des habitants", "Des touristes", "Des Ã©lÃ¨ves", "Des mÃ©decins"],
+      options: ["Le maire et des habitants", "Des touristes", "Des élèves", "Des médecins"],
       correctAnswer: "Le maire et des habitants"
     },
     {
       id: 5,
       question: "Que fait-elle avec les chiffres ?",
-      options: ["Elle les vÃ©rifie auprÃ¨s de la source officielle", "Elle les invente", "Elle les ignore", "Elle les cache"],
-      correctAnswer: "Elle les vÃ©rifie auprÃ¨s de la source officielle"
+      options: ["Elle les vérifie auprès de la source officielle", "Elle les invente", "Elle les ignore", "Elle les cache"],
+      correctAnswer: "Elle les vérifie auprès de la source officielle"
     },
     {
       id: 6,
-      question: "OÃ¹ circule la rumeur ?",
-      options: ["Sur les rÃ©seaux sociaux", "Ã€ la radio", "Dans la rue seulement", "Dans un musÃ©e"],
-      correctAnswer: "Sur les rÃ©seaux sociaux"
+      question: "Où circule la rumeur ?",
+      options: ["Sur les réseaux sociaux", "Ã€ la radio", "Dans la rue seulement", "Dans un musée"],
+      correctAnswer: "Sur les réseaux sociaux"
     },
     {
       id: 7,
       question: "Que dit la rumeur ?",
-      options: ["Les billets seront gratuits", "Le tramway est annulÃ©", "La ligne est dÃ©jÃ  fermÃ©e", "Les billets sont trÃ¨s chers"],
+      options: ["Les billets seront gratuits", "Le tramway est annulé", "La ligne est déjà fermée", "Les billets sont très chers"],
       correctAnswer: "Les billets seront gratuits"
     },
     {
       id: 8,
-      question: "La rumeur est-elle confirmÃ©e ?",
-      options: ["Non, elle n'est pas confirmÃ©e", "Oui, totalement", "Oui, par le maire", "On ne sait jamais"],
-      correctAnswer: "Non, elle n'est pas confirmÃ©e"
+      question: "La rumeur est-elle confirmée ?",
+      options: ["Non, elle n'est pas confirmée", "Oui, totalement", "Oui, par le maire", "On ne sait jamais"],
+      correctAnswer: "Non, elle n'est pas confirmée"
     },
     {
       id: 9,
       question: "Qu'est-ce qui attire beaucoup de lecteurs ?",
-      options: ["Le titre de la une", "La mÃ©tÃ©o", "Les photos de vacances", "La publicitÃ©"],
+      options: ["Le titre de la une", "La météo", "Les photos de vacances", "La publicité"],
       correctAnswer: "Le titre de la une"
     },
     {
       id: 10,
-      question: "OÃ¹ le journal publie-t-il l'article ?",
-      options: ["En ligne et en version papier", "Seulement Ã  la radio", "Seulement en vidÃ©o", "Uniquement Ã  la tÃ©lÃ©vision"],
+      question: "Où le journal publie-t-il l'article ?",
+      options: ["En ligne et en version papier", "Seulement à la radio", "Seulement en vidéo", "Uniquement à la télévision"],
       correctAnswer: "En ligne et en version papier"
     }
   ]
@@ -1843,7 +1843,7 @@ const unit383Reading: UnitReading = {
 const unit384Reading: UnitReading = {
   unitId: 384,
   title: "Les Élections Municipales",
-  language: "FransÄ±zca",
+  language: "Fransızca",
   level: "B1",
   story: {
     text: "Dans la ville de Morin, les élections municipales approchent. La rédaction du journal publie un reportage pour présenter les programmes des candidats.\n\nLa journaliste interviewe deux candidats et plusieurs citoyens. Le candidat A promet une réforme des transports, tandis que le candidat B insiste sur la sécurité. L'opposition critique le budget proposé.\n\nLa commission électorale annonce que le vote aura lieu dimanche. Le journal rappelle l'importance de la participation et publie aussi l'article en ligne.",
