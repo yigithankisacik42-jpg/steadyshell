@@ -2438,442 +2438,448 @@ function seededRandom(seed: number) {
     return x - Math.floor(x);
 }
 const unit386Quiz1: Question[] = [
-    {
-        id: 2081,
-        type: "SELECT",
-        question: "'İnsan hakları' ifadesinin Fransızcası nedir?",
-        options: [
-            { id: "a", text: "Les droits de l'homme", correct: true },
-            { id: "b", text: "La liberté", correct: false },
-            { id: "c", text: "L'égalité", correct: false },
-            { id: "d", text: "La paix", correct: false }
-        ]
-    },
-    {
-        id: 2082,
-        type: "SELECT",
-        question: "Hangi kelime 'ayrımcılık' anlamına gelir?",
-        options: [
-            { id: "a", text: "La paix", correct: false },
-            { id: "b", text: "La discrimination", correct: true },
-            { id: "c", text: "L'égalité", correct: false },
-            { id: "d", text: "Le racisme", correct: false }
-        ]
-    },
-    {
-        id: 2083,
-        type: "SELECT",
-        question: "'Le réfugié' kelimesinin anlamı nedir?",
-        options: [
-            { id: "a", text: "Vatandaş", correct: false },
-            { id: "b", text: "Mülteci", correct: true },
-            { id: "c", text: "Gösterici", correct: false },
-            { id: "d", text: "Polis", correct: false }
-        ]
-    },
-    {
-        id: 2084,
-        type: "TRANSLATE",
-        question: "Çevir:",
-        hint: "Özgürlük değerli bir haktır.",
-        correctAnswer: "La liberté est un droit précieux."
-    },
-    {
-        id: 2085,
-        type: "LISTENING",
-        question: "Duyduğunu seç:",
-        audioText: "C'est une grande injustice sociale.",
-        options: [
-            { id: "a", text: "Bu büyük bir sosyal adaletsizliktir.", correct: true },
-            { id: "b", text: "Bu büyük bir barıştır.", correct: false },
-            { id: "c", text: "Bu büyük bir eşitliktir.", correct: false },
-            { id: "d", text: "Bu büyük bir haktır.", correct: false }
-        ]
-    }
+    { id: 2081, type: "SELECT", question: "'Les droits de l'homme' ne demek?", options: [{ id: "a", text: "İnsan hakları", correct: true }, { id: "b", text: "İnsan gücü", correct: false }, { id: "c", text: "İnsan kaynakları", correct: false }, { id: "d", text: "İnsan doğası", correct: false }] },
+    { id: 2082, type: "SELECT", question: "'La discrimination' ne demek?", options: [{ id: "a", text: "Ayrımcılık", correct: true }, { id: "b", text: "Adalet", correct: false }, { id: "c", text: "Eşitlik", correct: false }, { id: "d", text: "Özgürlük", correct: false }] },
+    { id: 2083, type: "SELECT", question: "'Le réfugié' ne demek?", options: [{ id: "a", text: "Vatandaş", correct: false }, { id: "b", text: "Mülteci", correct: true }, { id: "c", text: "Gösterici", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 2084, type: "SELECT", question: "'L'égalité' ne demek?", options: [{ id: "a", text: "Eşitlik", correct: true }, { id: "b", text: "Özgürlük", correct: false }, { id: "c", text: "Barış", correct: false }, { id: "d", text: "Adalet", correct: false }] },
+    { id: 2085, type: "SELECT", question: "'La liberté' ne demek?", options: [{ id: "a", text: "Adalet", correct: false }, { id: "b", text: "Özgürlük", correct: true }, { id: "c", text: "Hak", correct: false }, { id: "d", text: "Barış", correct: false }] },
+    { id: 2086, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'injustice", options: [{ id: "a", text: "Adalet", correct: false }, { id: "b", text: "Adaletsizlik", correct: true }, { id: "c", text: "Eşitlik", correct: false }, { id: "d", text: "Barış", correct: false }] },
+    { id: 2087, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le racisme", options: [{ id: "a", text: "Irkçılık", correct: true }, { id: "b", text: "Ayrımcılık", correct: false }, { id: "c", text: "Faşizm", correct: false }, { id: "d", text: "Hoşgörü", correct: false }] },
+    { id: 2088, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La paix", options: [{ id: "a", text: "Savaş", correct: false }, { id: "b", text: "Özgürlük", correct: false }, { id: "c", text: "Barış", correct: true }, { id: "d", text: "Adalet", correct: false }] },
+    { id: 2089, type: "FILL_BLANK", question: "Doldur:", sentence: "Tous les êtres humains naissent libres et ___.", options: [{ id: "a", text: "égaux", correct: true }, { id: "b", text: "justes", correct: false }] },
+    { id: 2090, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut lutter contre la ___.", options: [{ id: "a", text: "discrimination", correct: true }, { id: "b", text: "liberté", correct: false }] },
+    { id: 2091, type: "SELECT", question: "'Manifester' ne demek?", options: [{ id: "a", text: "Gösteri yapmak", correct: true }, { id: "b", text: "Oy kullanmak", correct: false }, { id: "c", text: "Suçlamak", correct: false }, { id: "d", text: "Savunmak", correct: false }] },
+    { id: 2092, type: "SELECT", question: "'La dignité' ne demek?", options: [{ id: "a", text: "Onur / Haysiyet", correct: true }, { id: "b", text: "Zenginlik", correct: false }, { id: "c", text: "Güç", correct: false }, { id: "d", text: "Saygı", correct: false }] },
+    { id: 2093, type: "TRANSLATE", question: "Çevir:", hint: "Özgürlük değerli bir haktır.", correctAnswer: "La liberté est un droit précieux." },
+    { id: 2094, type: "TRANSLATE", question: "Çevir:", hint: "İnsan haklarına saygı temeldir.", correctAnswer: "Le respect des droits de l'homme est fondamental." },
+    { id: 2095, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est une grande injustice sociale.", options: [{ id: "a", text: "Bu büyük bir sosyal adaletsizliktir.", correct: true }, { id: "b", text: "Bu büyük bir barıştır.", correct: false }, { id: "c", text: "Bu büyük bir eşitliktir.", correct: false }, { id: "d", text: "Bu büyük bir haktır.", correct: false }] },
+    { id: 2096, type: "TRANSLATE", question: "Çevir:", hint: "Her vatandaşın oy kullanma hakkı vardır.", correctAnswer: "Chaque citoyen a le droit de voter." },
+    { id: 2097, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ n'a pas sa place dans notre société.", options: [{ id: "a", text: "racisme", correct: true }, { id: "b", text: "respect", correct: false }] },
+    { id: 2098, type: "SELECT", question: "'Protéger' ne demek?", options: [{ id: "a", text: "Protesto etmek", correct: false }, { id: "b", text: "Korumak", correct: true }, { id: "c", text: "Yargılamak", correct: false }, { id: "d", text: "Göstermek", correct: false }] },
+    { id: 2099, type: "SELECT", question: "'L'esclavage' ne demek?", options: [{ id: "a", text: "Kölelik", correct: true }, { id: "b", text: "Sığınma", correct: false }, { id: "c", text: "Baskı", correct: false }, { id: "d", text: "İşkence", correct: false }] },
+    { id: 2100, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le droit de vote est un pilier de la démocratie.", options: [{ id: "a", text: "Oy hakkı demokrasinin bir direğidir.", correct: true }, { id: "b", text: "Oy kullanmak zorunludur.", correct: false }, { id: "c", text: "Herkes oy kullanmalıdır.", correct: false }, { id: "d", text: "Demokrasi bir haktır.", correct: false }] }
 ];
-
 const unit386Quiz2: Question[] = [
-    {
-        id: 2086,
-        type: "FILL_BLANK",
-        question: "Doldur:",
-        sentence: "Il est nécessaire que nous ___ (respecter) les droits.",
-        options: [
-            { id: "a", text: "respections", correct: true },
-            { id: "b", text: "respectons", correct: false }
-        ]
-    },
-    {
-        id: 2087,
-        type: "SELECT",
-        question: "Hangi cümle edilgen yapıdadır (Le Passif)?",
-        options: [
-            { id: "a", text: "Le gouvernement protège les droits.", correct: false },
-            { id: "b", text: "Les réfugiés sont protégés par la loi.", correct: true },
-            { id: "c", text: "Ils demandent la paix.", correct: false },
-            { id: "d", text: "Nous luttons contre le racisme.", correct: false }
-        ]
-    },
-    {
-        id: 2088,
-        type: "TRANSLATE",
-        question: "Çevir:",
-        hint: "Herkesin özgürce yaşama hakkı vardır.",
-        correctAnswer: "Tout le monde a le droit de vivre en liberté."
-    },
-    {
-        id: 2089,
-        type: "FILL_BLANK",
-        question: "Doldur:",
-        sentence: "Ils exigent que la loi ___ (changer).",
-        options: [
-            { id: "a", text: "change", correct: true },
-            { id: "b", text: "changent", correct: false }
-        ]
-    },
-    {
-        id: 2090,
-        type: "LISTENING",
-        question: "Duyduğunu seç:",
-        audioText: "L'égalité est une valeur fondamentale.",
-        options: [
-            { id: "a", text: "Eşitlik temel bir değerdir.", correct: true },
-            { id: "b", text: "Özgürlük temel bir değerdir.", correct: false },
-            { id: "c", text: "Barış temel bir değerdir.", correct: false },
-            { id: "d", text: "Adalet temel bir değerdir.", correct: false }
-        ]
-    }
+    { id: 2101, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Il est nécessaire que nous ___ (respecter) les droits.", options: [{ id: "a", text: "respections", correct: true }, { id: "b", text: "respectons", correct: false }] },
+    { id: 2102, type: "SELECT", question: "Hangi cümle edilgen yapıdadır?", options: [{ id: "a", text: "Le gouvernement protège les droits.", correct: false }, { id: "b", text: "Les réfugiés sont protégés par la loi.", correct: true }, { id: "c", text: "Ils demandent la paix.", correct: false }, { id: "d", text: "Nous luttons contre le racisme.", correct: false }] },
+    { id: 2103, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Ils exigent que la loi ___ (changer).", options: [{ id: "a", text: "change", correct: true }, { id: "b", text: "changent", correct: false }] },
+    { id: 2104, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ d'expression est essentielle.", options: [{ id: "a", text: "liberté", correct: true }, { id: "b", text: "égalité", correct: false }] },
+    { id: 2105, type: "TRANSLATE", question: "Çevir:", hint: "Herkesin özgürce yaşama hakkı vardır.", correctAnswer: "Tout le monde a le droit de vivre en liberté." },
+    { id: 2106, type: "TRANSLATE", question: "Çevir:", hint: "Ayrımcılığa karşı mücadele edilmeli.", correctAnswer: "Il faut lutter contre la discrimination." },
+    { id: 2107, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'égalité est une valeur fondamentale.", options: [{ id: "a", text: "Eşitlik temel bir değerdir.", correct: true }, { id: "b", text: "Özgürlük temel bir değerdir.", correct: false }, { id: "c", text: "Barış temel bir değerdir.", correct: false }, { id: "d", text: "Adalet temel bir değerdir.", correct: false }] },
+    { id: 2108, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Nous devons défendre les droits des enfants.", options: [{ id: "a", text: "Çocukların haklarını savunmalıyız.", correct: true }, { id: "b", text: "Çocuklar haklarını biliyor.", correct: false }, { id: "c", text: "Çocuklar oy kullanmalı.", correct: false }, { id: "d", text: "Çocuklar özgürdür.", correct: false }] },
+    { id: 2109, type: "SELECT", question: "'La tolérance' ne demek?", options: [{ id: "a", text: "Hoşgörü", correct: true }, { id: "b", text: "Sabır", correct: false }, { id: "c", text: "Adalet", correct: false }, { id: "d", text: "Cesaret", correct: false }] },
+    { id: 2110, type: "SELECT", question: "'Revendiquer' ne demek?", options: [{ id: "a", text: "Talep etmek / Hak iddia etmek", correct: true }, { id: "b", text: "Korumak", correct: false }, { id: "c", text: "Reddetmek", correct: false }, { id: "d", text: "Görmezden gelmek", correct: false }] },
+    { id: 2111, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Il est essentiel que le gouvernement ___ (agir).", options: [{ id: "a", text: "agisse", correct: true }, { id: "b", text: "agit", correct: false }] },
+    { id: 2112, type: "TRANSLATE", question: "Çevir:", hint: "İşkence hakların ciddi bir ihlalidir.", correctAnswer: "La torture est une violation grave des droits." },
+    { id: 2113, type: "SELECT", question: "'Violer un droit' ne demek?", options: [{ id: "a", text: "Bir hakkı ihlal etmek", correct: true }, { id: "b", text: "Bir hakkı savunmak", correct: false }, { id: "c", text: "Bir hakkı korumak", correct: false }, { id: "d", text: "Bir hakkı kullanmak", correct: false }] },
+    { id: 2114, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est contraire aux droits humains.", options: [{ id: "a", text: "torture", correct: true }, { id: "b", text: "tolérance", correct: false }] },
+    { id: 2115, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il faut défendre les minorités.", options: [{ id: "a", text: "Azınlıkları savunmak gerekir.", correct: true }, { id: "b", text: "Azınlıklar tehlikelidir.", correct: false }, { id: "c", text: "Azınlıklar oy kullanmalı.", correct: false }, { id: "d", text: "Azınlıklar eşittir.", correct: false }] },
+    { id: 2116, type: "TRANSLATE", question: "Çevir:", hint: "Baskı insan haklarına aykırıdır.", correctAnswer: "L'oppression est contraire aux droits humains." },
+    { id: 2117, type: "SELECT", question: "'La pétition' ne demek?", options: [{ id: "a", text: "Dilekçe / İmza kampanyası", correct: true }, { id: "b", text: "Miting", correct: false }, { id: "c", text: "Seçim", correct: false }, { id: "d", text: "Gösteri", correct: false }] },
+    { id: 2118, type: "SELECT", question: "'Le militant' ne demek?", options: [{ id: "a", text: "Aktivist / Militan", correct: true }, { id: "b", text: "Asker", correct: false }, { id: "c", text: "Politikacı", correct: false }, { id: "d", text: "Gazeteci", correct: false }] },
+    { id: 2119, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est interdit dans le monde entier.", options: [{ id: "a", text: "esclavage", correct: true }, { id: "b", text: "égalité", correct: false }] },
+    { id: 2120, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La Convention européenne protège les droits.", options: [{ id: "a", text: "Avrupa Sözleşmesi hakları korur.", correct: true }, { id: "b", text: "Avrupa Birliği hakları ihlal ediyor.", correct: false }, { id: "c", text: "Avrupa'da haklar sınırlıdır.", correct: false }, { id: "d", text: "Avrupa hakları düzenler.", correct: false }] }
 ];
-
 const unit386Quiz3: Question[] = [
-    {
-        id: 2091,
-        type: "SELECT",
-        question: "Okuma parçasına göre, vatandaşlar neden meydanda toplandı?",
-        options: [
-            { id: "a", text: "Alışveriş yapmak için", correct: false },
-            { id: "b", text: "Barışçıl bir şekilde gösteri yapmak için", correct: true },
-            { id: "c", text: "Miting izlemek için", correct: false },
-            { id: "d", text: "Konser için", correct: false }
-        ]
-    },
-    {
-        id: 2092,
-        type: "SELECT",
-        question: "Pankartlarda ne talep ediliyordu?",
-        options: [
-            { id: "a", text: "Daha fazla eşitlik ve ayrımcılığın sonu", correct: true },
-            { id: "b", text: "Daha fazla iş", correct: false },
-            { id: "c", text: "Daha düşük vergiler", correct: false },
-            { id: "d", text: "Daha fazla tatil", correct: false }
-        ]
-    },
-    {
-        id: 2093,
-        type: "SELECT",
-        question: "Hareketin sözcüsü hangi konu üzerine konuştu?",
-        options: [
-            { id: "a", text: "Ekonomi", correct: false },
-            { id: "b", text: "Çevre", correct: false },
-            { id: "c", text: "İnsan haklarının önemi", correct: true },
-            { id: "d", text: "Eğitim", correct: false }
-        ]
-    },
-    {
-        id: 2094,
-        type: "SELECT",
-        question: "Sözcü sağlıklı bir demokrasi için neyin temel olduğunu söyledi?",
-        options: [
-            { id: "a", text: "Oy hakkının", correct: false },
-            { id: "b", text: "İfade özgürlüğünün", correct: true },
-            { id: "c", text: "Zenginliğin", correct: false },
-            { id: "d", text: "Polisin", correct: false }
-        ]
-    },
-    {
-        id: 2095,
-        type: "SELECT",
-        question: "Gösteri nasıl sona erdi?",
-        options: [
-            { id: "a", text: "Şiddetle", correct: false },
-            { id: "b", text: "Kaosla", correct: false },
-            { id: "c", text: "Sakin bir şekilde (dans le calme)", correct: true },
-            { id: "d", text: "Yağmur nedeniyle", correct: false }
-        ]
-    }
+    { id: 2121, type: "SELECT", question: "Vatandaşlar neden meydanda toplandı?", options: [{ id: "a", text: "Alışveriş yapmak için", correct: false }, { id: "b", text: "Barışçıl gösteri yapmak için", correct: true }, { id: "c", text: "Miting izlemek için", correct: false }, { id: "d", text: "Konser için", correct: false }] },
+    { id: 2122, type: "SELECT", question: "Pankartlarda ne talep ediliyordu?", options: [{ id: "a", text: "Eşitlik ve ayrımcılığın sonu", correct: true }, { id: "b", text: "Daha fazla iş", correct: false }, { id: "c", text: "Düşük vergiler", correct: false }, { id: "d", text: "Daha fazla tatil", correct: false }] },
+    { id: 2123, type: "SELECT", question: "Sözcü hangi konu üzerine konuştu?", options: [{ id: "a", text: "Ekonomi", correct: false }, { id: "b", text: "Çevre", correct: false }, { id: "c", text: "İnsan haklarının önemi", correct: true }, { id: "d", text: "Eğitim", correct: false }] },
+    { id: 2124, type: "SELECT", question: "Demokrasi için neyin temel olduğunu söyledi?", options: [{ id: "a", text: "Oy hakkının", correct: false }, { id: "b", text: "İfade özgürlüğünün", correct: true }, { id: "c", text: "Zenginliğin", correct: false }, { id: "d", text: "Polisin", correct: false }] },
+    { id: 2125, type: "SELECT", question: "Gösteri nasıl sona erdi?", options: [{ id: "a", text: "Şiddetle", correct: false }, { id: "b", text: "Kaosla", correct: false }, { id: "c", text: "Sakin bir şekilde", correct: true }, { id: "d", text: "Yağmur nedeniyle", correct: false }] },
+    { id: 2126, type: "TRANSLATE", question: "Çevir:", hint: "Bütün insanlar özgür ve eşit doğarlar.", correctAnswer: "Tous les êtres humains naissent libres et égaux." },
+    { id: 2127, type: "TRANSLATE", question: "Çevir:", hint: "Bu bir insan hakları ihlalidir.", correctAnswer: "C'est une violation des droits de l'homme." },
+    { id: 2128, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Chaque citoyen a des droits et des devoirs.", options: [{ id: "a", text: "Her vatandaşın hakları ve görevleri vardır.", correct: true }, { id: "b", text: "Her vatandaş oy kullanmalıdır.", correct: false }, { id: "c", text: "Vatandaşlık bir haktır.", correct: false }, { id: "d", text: "Vatandaşlar eşittir.", correct: false }] },
+    { id: 2129, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La manifestation était pacifique.", options: [{ id: "a", text: "Gösteri barışçıldı.", correct: true }, { id: "b", text: "Gösteri şiddetliydi.", correct: false }, { id: "c", text: "Gösteri iptal edildi.", correct: false }, { id: "d", text: "Gösteri kalabalıktı.", correct: false }] },
+    { id: 2130, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous devons ___ contre le racisme.", options: [{ id: "a", text: "lutter", correct: true }, { id: "b", text: "parler", correct: false }] },
+    { id: 2131, type: "SELECT", question: "Halk neyi imzaladı?", options: [{ id: "a", text: "Anlaşma", correct: false }, { id: "b", text: "Dilekçe (pétition)", correct: true }, { id: "c", text: "Sözleşme", correct: false }, { id: "d", text: "Mektup", correct: false }] },
+    { id: 2132, type: "SELECT", question: "Gösteride kaç kişi toplandı?", options: [{ id: "a", text: "Birkaç yüz kişi", correct: false }, { id: "b", text: "Yüzlerce vatandaş", correct: true }, { id: "c", text: "Binlerce kişi", correct: false }, { id: "d", text: "Sadece birkaç kişi", correct: false }] },
+    { id: 2133, type: "TRANSLATE", question: "Çevir:", hint: "Daha fazla sosyal adalet talep ediyorlar.", correctAnswer: "Ils demandent plus de justice sociale." },
+    { id: 2134, type: "TRANSLATE", question: "Çevir:", hint: "Gösteri barışçıldı.", correctAnswer: "La manifestation était pacifique." },
+    { id: 2135, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ont signé une ___ pour l'égalité.", options: [{ id: "a", text: "pétition", correct: true }, { id: "b", text: "manifestation", correct: false }] },
+    { id: 2136, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est une violation des droits de l'homme.", options: [{ id: "a", text: "Bu bir insan hakları ihlalidir.", correct: true }, { id: "b", text: "Bu bir insanlık suçudur.", correct: false }, { id: "c", text: "Bu bir gösteri hakkıdır.", correct: false }, { id: "d", text: "Bu bir vatandaşlık hakkıdır.", correct: false }] },
+    { id: 2137, type: "SELECT", question: "Sözcü ne talep etti?", options: [{ id: "a", text: "Daha fazla maaş", correct: false }, { id: "b", text: "Ayrımcılığın sona ermesi", correct: true }, { id: "c", text: "Daha fazla tatil", correct: false }, { id: "d", text: "Yeni bir yasa", correct: false }] },
+    { id: 2138, type: "FILL_BLANK", question: "Doldur:", sentence: "Les droits de l'___ sont fondamentaux.", options: [{ id: "a", text: "homme", correct: true }, { id: "b", text: "animal", correct: false }] },
+    { id: 2139, type: "TRANSLATE", question: "Çevir:", hint: "Eşitlik için bir dilekçe imzaladılar.", correctAnswer: "Ils ont signé une pétition pour l'égalité." },
+    { id: 2140, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Nous manifestons pour nos droits.", options: [{ id: "a", text: "Haklarımız için gösteri yapıyoruz.", correct: true }, { id: "b", text: "Haklarımız korunuyor.", correct: false }, { id: "c", text: "Haklarımız sınırlıdır.", correct: false }, { id: "d", text: "Haklarımızı savunuyoruz.", correct: false }] }
 ];
-
 const unit386Quiz4: Question[] = [
-    {
-        id: 2096,
-        type: "SELECT",
-        question: "'Protéger' fiilinin anlamı nedir?",
-        options: [
-            { id: "a", text: "Protesto etmek", correct: false },
-            { id: "b", text: "Korumak", correct: true },
-            { id: "c", text: "Yargılamak", correct: false },
-            { id: "d", text: "Göstermek", correct: false }
-        ]
-    },
-    {
-        id: 2097,
-        type: "FILL_BLANK",
-        question: "Doldur:",
-        sentence: "Il est essentiel que le gouvernement ___ (agir).",
-        options: [
-            { id: "a", text: "agisse", correct: true },
-            { id: "b", text: "agit", correct: false }
-        ]
-    },
-    {
-        id: 2098,
-        type: "TRANSLATE",
-        question: "Çevir:",
-        hint: "Haklarımız için gösteri yapıyoruz.",
-        correctAnswer: "Nous manifestons pour nos droits."
-    },
-    {
-        id: 2099,
-        type: "SELECT",
-        question: "Hangi cümle 'İfade özgürlüğü garanti altına alınmalıdır' anlamına gelir?",
-        options: [
-            { id: "a", text: "La liberté d'expression doit être garantie.", correct: true },
-            { id: "b", text: "Tout le monde doit parler.", correct: false },
-            { id: "c", text: "Il faut écouter les réfugiés.", correct: false },
-            { id: "d", text: "Nous luttons pour la liberté.", correct: false }
-        ]
-    },
-    {
-        id: 2100,
-        type: "LISTENING",
-        question: "Duyduğunu seç:",
-        audioText: "Tous les êtres humains naissent libres et égaux.",
-        options: [
-            { id: "a", text: "Bütün insanlar özgür ve eşit doğarlar.", correct: true },
-            { id: "b", text: "İnsan haklarına saygı duymalıyız.", correct: false },
-            { id: "c", text: "Özgürlük bir haktır.", correct: false },
-            { id: "d", text: "Irkçılığa karşı mücadele ediyoruz.", correct: false }
-        ]
-    }
+    { id: 2141, type: "SELECT", question: "'Défendre' ne demek?", options: [{ id: "a", text: "Savunmak", correct: true }, { id: "b", text: "Saldırmak", correct: false }, { id: "c", text: "Suçlamak", correct: false }, { id: "d", text: "Göstermek", correct: false }] },
+    { id: 2142, type: "SELECT", question: "'La solidarité' ne demek?", options: [{ id: "a", text: "Dayanışma", correct: true }, { id: "b", text: "Yalnızlık", correct: false }, { id: "c", text: "Rekabet", correct: false }, { id: "d", text: "Güç", correct: false }] },
+    { id: 2143, type: "SELECT", question: "'L'humanité' ne demek?", options: [{ id: "a", text: "İnsanlık", correct: true }, { id: "b", text: "İnsan hakları", correct: false }, { id: "c", text: "İnsancıllık", correct: false }, { id: "d", text: "İnsanlık dışı", correct: false }] },
+    { id: 2144, type: "SELECT", question: "'La Convention' ne demek?", options: [{ id: "a", text: "Sözleşme / Konvansiyon", correct: true }, { id: "b", text: "Kongre", correct: false }, { id: "c", text: "Toplantı", correct: false }, { id: "d", text: "Gösteri", correct: false }] },
+    { id: 2145, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ humaine est inviolable.", options: [{ id: "a", text: "dignité", correct: true }, { id: "b", text: "liberté", correct: false }] },
+    { id: 2146, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous devons ___ les droits des enfants.", options: [{ id: "a", text: "défendre", correct: true }, { id: "b", text: "violer", correct: false }] },
+    { id: 2147, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ doit s'unir contre l'injustice.", options: [{ id: "a", text: "humanité", correct: true }, { id: "b", text: "égalité", correct: false }] },
+    { id: 2148, type: "TRANSLATE", question: "Çevir:", hint: "Haklarımız için gösteri yapıyoruz.", correctAnswer: "Nous manifestons pour nos droits." },
+    { id: 2149, type: "TRANSLATE", question: "Çevir:", hint: "İfade özgürlüğü garanti altına alınmalıdır.", correctAnswer: "La liberté d'expression doit être garantie." },
+    { id: 2150, type: "TRANSLATE", question: "Çevir:", hint: "Hoşgörü önemli bir değerdir.", correctAnswer: "La tolérance est une valeur importante." },
+    { id: 2151, type: "TRANSLATE", question: "Çevir:", hint: "Karşılıklı saygı toplumun temelidir.", correctAnswer: "Le respect mutuel est la base de la société." },
+    { id: 2152, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Tous les êtres humains naissent libres et égaux.", options: [{ id: "a", text: "Bütün insanlar özgür ve eşit doğarlar.", correct: true }, { id: "b", text: "İnsan haklarına saygı duymalıyız.", correct: false }, { id: "c", text: "Özgürlük bir haktır.", correct: false }, { id: "d", text: "Irkçılığa karşı mücadele ediyoruz.", correct: false }] },
+    { id: 2153, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La liberté d'expression doit être garantie.", options: [{ id: "a", text: "İfade özgürlüğü garanti altına alınmalıdır.", correct: true }, { id: "b", text: "Basın özgürlüğü tehdit altındadır.", correct: false }, { id: "c", text: "Herkes konuşmalıdır.", correct: false }, { id: "d", text: "İfade özgürlüğü yoktur.", correct: false }] },
+    { id: 2154, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La solidarité est essentielle pour la paix.", options: [{ id: "a", text: "Dayanışma barış için elzemdir.", correct: true }, { id: "b", text: "Barış her yerdedir.", correct: false }, { id: "c", text: "Dayanışma gereksizdir.", correct: false }, { id: "d", text: "Barış ve adalet lazımdır.", correct: false }] },
+    { id: 2155, type: "SELECT", question: "'İfade özgürlüğü garanti altına alınmalıdır' cümlesi?", options: [{ id: "a", text: "La liberté d'expression doit être garantie.", correct: true }, { id: "b", text: "Tout le monde doit parler.", correct: false }, { id: "c", text: "Il faut écouter les réfugiés.", correct: false }, { id: "d", text: "Nous luttons pour la liberté.", correct: false }] },
+    { id: 2156, type: "SELECT", question: "'L'oppression' ne demek?", options: [{ id: "a", text: "Baskı / Zulüm", correct: true }, { id: "b", text: "Özgürlük", correct: false }, { id: "c", text: "Destek", correct: false }, { id: "d", text: "Barış", correct: false }] },
+    { id: 2157, type: "FILL_BLANK", question: "Doldur:", sentence: "Les militants organisent des marches ___.", options: [{ id: "a", text: "pacifiques", correct: true }, { id: "b", text: "violentes", correct: false }] },
+    { id: 2158, type: "TRANSLATE", question: "Çevir:", hint: "Daha iyi çalışma koşulları talep ediyorlar.", correctAnswer: "Ils revendiquent de meilleures conditions de travail." },
+    { id: 2159, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'humanité doit s'unir contre l'injustice.", options: [{ id: "a", text: "İnsanlık adaletsizliğe karşı birleşmelidir.", correct: true }, { id: "b", text: "İnsanlar adaletli olmalıdır.", correct: false }, { id: "c", text: "Adaletsizlik artıyor.", correct: false }, { id: "d", text: "İnsanlık zor durumda.", correct: false }] },
+    { id: 2160, type: "SELECT", question: "'La liberté d'expression' ne demek?", options: [{ id: "a", text: "İfade özgürlüğü", correct: true }, { id: "b", text: "Basın özgürlüğü", correct: false }, { id: "c", text: "Din özgürlüğü", correct: false }, { id: "d", text: "Hareket özgürlüğü", correct: false }] }
 ];
 
 const unit387Quiz1: Question[] = [
-    {
-        id: 2101,
-        type: "SELECT",
-        question: "'Gönüllülük' ifadesinin Fransızcası nedir?",
-        options: [
-            { id: "a", text: "Le bénévolat", correct: true },
-            { id: "b", text: "La solidarité", correct: false },
-            { id: "c", text: "La communauté", correct: false },
-            { id: "d", text: "Le soutien", correct: false }
-        ]
-    },
-    {
-        id: 2102,
-        type: "SELECT",
-        question: "Hangi kelime 'hayır kurumu / dernek' anlamına gelir?",
-        options: [
-            { id: "a", text: "La cause", correct: false },
-            { id: "b", text: "L'association caritative", correct: true },
-            { id: "c", text: "Le bénévole", correct: false },
-            { id: "d", text: "La distribution", correct: false }
-        ]
-    },
-    {
-        id: 2103,
-        type: "SELECT",
-        question: "'Faire un don' ne anlama gelir?",
-        options: [
-            { id: "a", text: "Bağış yapmak", correct: true },
-            { id: "b", text: "Yardım etmek", correct: false },
-            { id: "c", text: "Katılmak", correct: false },
-            { id: "d", text: "Dağıtmak", correct: false }
-        ]
-    },
-    {
-        id: 2104,
-        type: "TRANSLATE",
-        question: "Çevir:",
-        hint: "Zor durumdaki çocuklara yardım etmeyi sever.",
-        correctAnswer: "Il aime aider les enfants en difficulté."
-    },
-    {
-        id: 2105,
-        type: "LISTENING",
-        question: "Duyduğunu seç:",
-        audioText: "Les bénévoles aident les personnes démunies.",
-        options: [
-            { id: "a", text: "Gönüllüler yoksul insanlara yardım eder.", correct: true },
-            { id: "b", text: "Doktorlar hastalara yardım eder.", correct: false },
-            { id: "c", text: "Gönüllülük Fransa'da yaygındır.", correct: false },
-            { id: "d", text: "Dernek yeni üyeler arıyor.", correct: false }
-        ]
-    }
+    { id: 2161, type: "SELECT", question: "'Le bénévolat' ne demek?", options: [{ id: "a", text: "Gönüllülük", correct: true }, { id: "b", text: "Dayanışma", correct: false }, { id: "c", text: "Topluluk", correct: false }, { id: "d", text: "Destek", correct: false }] },
+    { id: 2162, type: "SELECT", question: "'L'association caritative' ne demek?", options: [{ id: "a", text: "Hayır kurumu", correct: true }, { id: "b", text: "Şirket", correct: false }, { id: "c", text: "Okul", correct: false }, { id: "d", text: "Hastane", correct: false }] },
+    { id: 2163, type: "SELECT", question: "'Faire un don' ne demek?", options: [{ id: "a", text: "Bağış yapmak", correct: true }, { id: "b", text: "Yardım etmek", correct: false }, { id: "c", text: "Katılmak", correct: false }, { id: "d", text: "Dağıtmak", correct: false }] },
+    { id: 2164, type: "SELECT", question: "'Le soutien' ne demek?", options: [{ id: "a", text: "Destek", correct: true }, { id: "b", text: "Bağış", correct: false }, { id: "c", text: "Topluluk", correct: false }, { id: "d", text: "Dava", correct: false }] },
+    { id: 2165, type: "SELECT", question: "'S'engager' ne demek?", options: [{ id: "a", text: "Gönüllü olmak", correct: true }, { id: "b", text: "Reddetmek", correct: false }, { id: "c", text: "Bağış yapmak", correct: false }, { id: "d", text: "Ayrılmak", correct: false }] },
+    { id: 2166, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le bénévole", options: [{ id: "a", text: "Gönüllü", correct: true }, { id: "b", text: "Bağışçı", correct: false }, { id: "c", text: "Dernek", correct: false }, { id: "d", text: "Başkan", correct: false }] },
+    { id: 2167, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La communauté", options: [{ id: "a", text: "Topluluk", correct: true }, { id: "b", text: "İletişim", correct: false }, { id: "c", text: "Komüne", correct: false }, { id: "d", text: "Dernek", correct: false }] },
+    { id: 2168, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les bénévoles aident les personnes démunies.", options: [{ id: "a", text: "Gönüllüler yoksul insanlara yardım eder.", correct: true }, { id: "b", text: "Doktorlar hastalara yardım eder.", correct: false }, { id: "c", text: "Gönüllülük yaygındır.", correct: false }, { id: "d", text: "Dernek üye arıyor.", correct: false }] },
+    { id: 2169, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ est très répandu en France.", options: [{ id: "a", text: "bénévolat", correct: true }, { id: "b", text: "soutien", correct: false }] },
+    { id: 2170, type: "FILL_BLANK", question: "Doldur:", sentence: "Beaucoup de gens ont fait un ___ pour la cause.", options: [{ id: "a", text: "don", correct: true }, { id: "b", text: "aide", correct: false }] },
+    { id: 2171, type: "SELECT", question: "'Le volontaire' ne demek?", options: [{ id: "a", text: "Gönüllü (resmi)", correct: true }, { id: "b", text: "Asker", correct: false }, { id: "c", text: "İşçi", correct: false }, { id: "d", text: "Öğretmen", correct: false }] },
+    { id: 2172, type: "SELECT", question: "'La collecte' ne demek?", options: [{ id: "a", text: "Bağış toplama", correct: true }, { id: "b", text: "Dağıtım", correct: false }, { id: "c", text: "Koleksiyon", correct: false }, { id: "d", text: "Kampanya", correct: false }] },
+    { id: 2173, type: "TRANSLATE", question: "Çevir:", hint: "Zor durumdaki çocuklara yardım etmeyi sever.", correctAnswer: "Il aime aider les enfants en difficulté." },
+    { id: 2174, type: "TRANSLATE", question: "Çevir:", hint: "Bu asil bir dava.", correctAnswer: "C'est une cause noble." },
+    { id: 2175, type: "LISTENING", question: "Duyduğunu seç:", audioText: "C'est important d'aider les autres.", options: [{ id: "a", text: "Başkalarına yardım etmek önemlidir.", correct: true }, { id: "b", text: "Gönüllü olmak isterdim.", correct: false }, { id: "c", text: "Dayanışma bizi güçlü kılar.", correct: false }, { id: "d", text: "Bağış yapmak önemlidir.", correct: false }] },
+    { id: 2176, type: "TRANSLATE", question: "Çevir:", hint: "Bir dernekte gönüllüyüm.", correctAnswer: "Je suis bénévole dans une association." },
+    { id: 2177, type: "FILL_BLANK", question: "Doldur:", sentence: "Les médecins travaillent ___ ce week-end.", options: [{ id: "a", text: "gratuitement", correct: true }, { id: "b", text: "rapidement", correct: false }] },
+    { id: 2178, type: "SELECT", question: "'La générosité' ne demek?", options: [{ id: "a", text: "Cömertlik", correct: true }, { id: "b", text: "Güç", correct: false }, { id: "c", text: "Zenginlik", correct: false }, { id: "d", text: "Saygı", correct: false }] },
+    { id: 2179, type: "SELECT", question: "'Consacrer' ne demek?", options: [{ id: "a", text: "Adamak / Ayırmak", correct: true }, { id: "b", text: "Satmak", correct: false }, { id: "c", text: "Almak", correct: false }, { id: "d", text: "Vermek", correct: false }] },
+    { id: 2180, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Chaque don compte.", options: [{ id: "a", text: "Her bağış önemlidir.", correct: true }, { id: "b", text: "Her gönüllü önemlidir.", correct: false }, { id: "c", text: "Her dernek önemlidir.", correct: false }, { id: "d", text: "Her kişi önemlidir.", correct: false }] }
 ];
-
 const unit387Quiz2: Question[] = [
-    {
-        id: 2106,
-        type: "FILL_BLANK",
-        question: "Doldur (Amaç):",
-        sentence: "Nous faisons des dons ___ que la recherche avance.",
-        options: [
-            { id: "a", text: "afin", correct: true },
-            { id: "b", text: "pour", correct: false }
-        ]
-    },
-    {
-        id: 2107,
-        type: "FILL_BLANK",
-        question: "Doldur (Belgisiz Zamir):",
-        sentence: "___ peut faire la différence.",
-        options: [
-            { id: "a", text: "Chacun", correct: true },
-            { id: "b", text: "Personne", correct: false }
-        ]
-    },
-    {
-        id: 2108,
-        type: "TRANSLATE",
-        question: "Çevir:",
-        hint: "Yemek dağıtmaya söz verdi.",
-        correctAnswer: "Elle s'est engagée à distribuer des repas."
-    },
-    {
-        id: 2109,
-        type: "FILL_BLANK",
-        question: "Doldur (Subjonctif):",
-        sentence: "Je travaille comme bénévole pour que les enfants ___ (avoir) un avenir.",
-        options: [
-            { id: "a", text: "aient", correct: true },
-            { id: "b", text: "ont", correct: false }
-        ]
-    },
-    {
-        id: 2110,
-        type: "LISTENING",
-        question: "Duyduğunu seç:",
-        audioText: "C'est important d'aider les autres.",
-        options: [
-            { id: "a", text: "Başkalarına yardım etmek önemlidir.", correct: true },
-            { id: "b", text: "Gönüllü olmak isterdim.", correct: false },
-            { id: "c", text: "Dayanışma bizi güçlü kılar.", correct: false },
-            { id: "d", text: "Bağış yapmak önemlidir.", correct: false }
-        ]
-    }
+    { id: 2181, type: "FILL_BLANK", question: "Doldur (Amaç):", sentence: "Nous faisons des dons ___ que la recherche avance.", options: [{ id: "a", text: "afin", correct: true }, { id: "b", text: "pour", correct: false }] },
+    { id: 2182, type: "FILL_BLANK", question: "Doldur:", sentence: "___ peut faire la différence.", options: [{ id: "a", text: "Chacun", correct: true }, { id: "b", text: "Personne", correct: false }] },
+    { id: 2183, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Je travaille pour que les enfants ___ un avenir.", options: [{ id: "a", text: "aient", correct: true }, { id: "b", text: "ont", correct: false }] },
+    { id: 2184, type: "FILL_BLANK", question: "Doldur:", sentence: "___ ne doit être oublié.", options: [{ id: "a", text: "Personne", correct: true }, { id: "b", text: "Tout le monde", correct: false }] },
+    { id: 2185, type: "TRANSLATE", question: "Çevir:", hint: "Yemek dağıtmaya söz verdi.", correctAnswer: "Elle s'est engagée à distribuer des repas." },
+    { id: 2186, type: "TRANSLATE", question: "Çevir:", hint: "Boş zamanımı başkalarına adıyorum.", correctAnswer: "Je consacre mon temps libre aux autres." },
+    { id: 2187, type: "TRANSLATE", question: "Çevir:", hint: "Bağış yapmaktan çekinmeyin.", correctAnswer: "N'hésitez pas à faire un don." },
+    { id: 2188, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La solidarité nous rend plus forts.", options: [{ id: "a", text: "Dayanışma bizi daha güçlü kılar.", correct: true }, { id: "b", text: "Ekip çalışması esastır.", correct: false }, { id: "c", text: "Dernekte gönüllüyüm.", correct: false }, { id: "d", text: "Bağış yapmaktan çekinmeyin.", correct: false }] },
+    { id: 2189, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le don du sang sauve des vies.", options: [{ id: "a", text: "Kan bağışı hayat kurtarır.", correct: true }, { id: "b", text: "Kan bankası açıldı.", correct: false }, { id: "c", text: "Bağış yapmak önemlidir.", correct: false }, { id: "d", text: "Hayat çok güzel.", correct: false }] },
+    { id: 2190, type: "SELECT", question: "'L'entraide' ne demek?", options: [{ id: "a", text: "Karşılıklı yardımlaşma", correct: true }, { id: "b", text: "Giriş", correct: false }, { id: "c", text: "Antrenman", correct: false }, { id: "d", text: "Yardımseverlik", correct: false }] },
+    { id: 2191, type: "SELECT", question: "'Le parrainage' ne demek?", options: [{ id: "a", text: "Hamlik / Sponsorluk", correct: true }, { id: "b", text: "Evlilik", correct: false }, { id: "c", text: "Aile", correct: false }, { id: "d", text: "Arkadaşlık", correct: false }] },
+    { id: 2192, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ de fonds a été un succès.", options: [{ id: "a", text: "collecte", correct: true }, { id: "b", text: "distribution", correct: false }] },
+    { id: 2193, type: "TRANSLATE", question: "Çevir:", hint: "Dernek yeni üyeler arıyor.", correctAnswer: "L'association cherche de nouveaux membres." },
+    { id: 2194, type: "SELECT", question: "'La sensibilisation' ne demek?", options: [{ id: "a", text: "Farkındalık yaratma", correct: true }, { id: "b", text: "Hassasiyet", correct: false }, { id: "c", text: "Duyarlılık", correct: false }, { id: "d", text: "Duygusallık", correct: false }] },
+    { id: 2195, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La banque alimentaire distribue de la nourriture.", options: [{ id: "a", text: "Gıda bankası yiyecek dağıtır.", correct: true }, { id: "b", text: "Banka para dağıtır.", correct: false }, { id: "c", text: "Market yiyecek satar.", correct: false }, { id: "d", text: "Restoran yemek yapar.", correct: false }] },
+    { id: 2196, type: "FILL_BLANK", question: "Doldur:", sentence: "Il ___ tout son temps libre au bénévolat.", options: [{ id: "a", text: "consacre", correct: true }, { id: "b", text: "donne", correct: false }] },
+    { id: 2197, type: "TRANSLATE", question: "Çevir:", hint: "Gönüllülük çok enerji gerektirir.", correctAnswer: "Le bénévolat demande beaucoup d'énergie." },
+    { id: 2198, type: "SELECT", question: "'Le bénéficiaire' ne demek?", options: [{ id: "a", text: "Yararlanıcı", correct: true }, { id: "b", text: "Gönüllü", correct: false }, { id: "c", text: "Bağışçı", correct: false }, { id: "d", text: "Başkan", correct: false }] },
+    { id: 2199, type: "SELECT", question: "'L'action sociale' ne demek?", options: [{ id: "a", text: "Sosyal faaliyet", correct: true }, { id: "b", text: "Sosyal medya", correct: false }, { id: "c", text: "Sosyal hayat", correct: false }, { id: "d", text: "Sosyal güvenlik", correct: false }] },
+    { id: 2200, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Merci pour votre générosité.", options: [{ id: "a", text: "Cömertliğiniz için teşekkürler.", correct: true }, { id: "b", text: "Yardımınız için teşekkürler.", correct: false }, { id: "c", text: "Zamanınız için teşekkürler.", correct: false }, { id: "d", text: "Sabrınız için teşekkürler.", correct: false }] }
 ];
-
 const unit387Quiz3: Question[] = [
-    {
-        id: 2111,
-        type: "SELECT",
-        question: "Okuma parçasına göre, dernek ne organize etti?",
-        options: [
-            { id: "a", text: "Büyük bir yemek dağıtımı", correct: true },
-            { id: "b", text: "Kıyafet toplama kampanyası", correct: false },
-            { id: "c", text: "Bağış gecesi", correct: false },
-            { id: "d", text: "Yürüyüş", correct: false }
-        ]
-    },
-    {
-        id: 2112,
-        type: "SELECT",
-        question: "Kimler gönüllü olarak katıldı?",
-        options: [
-            { id: "a", text: "Sadece yaşlılar", correct: false },
-            { id: "b", text: "Birçok genç", correct: true },
-            { id: "c", text: "Çocuklar", correct: false },
-            { id: "d", text: "Sadece dernek başkanı", correct: false }
-        ]
-    },
-    {
-        id: 2113,
-        type: "SELECT",
-        question: "Yemekler nerede dağıtıldı?",
-        options: [
-            { id: "a", text: "Okullarda", correct: false },
-            { id: "b", text: "Şehir merkezinde", correct: true },
-            { id: "c", text: "Hastanelerde", correct: false },
-            { id: "d", text: "Parklarda", correct: false }
-        ]
-    },
-    {
-        id: 2114,
-        type: "SELECT",
-        question: "Dernek başkanına göre, ne yapmak para vermek kadar önemlidir?",
-        options: [
-            { id: "a", text: "Kıyafet vermek", correct: false },
-            { id: "b", text: "Zamanından bağış yapmak", correct: true },
-            { id: "c", text: "Yemek pişirmek", correct: false },
-            { id: "d", text: "Uyumak", correct: false }
-        ]
-    },
-    {
-        id: 2115,
-        type: "SELECT",
-        question: "Etkinlik neyi kanıtladı?",
-        options: [
-            { id: "a", text: "Herkesin kendi çapında yardım edebileceğini", correct: true },
-            { id: "b", text: "Gönüllü bulmanın zor olduğunu", correct: false },
-            { id: "c", text: "Sadece zenginlerin yardım edebileceğini", correct: false },
-            { id: "d", text: "Yemek yapmanın zor olduğunu", correct: false }
-        ]
-    }
+    { id: 2201, type: "SELECT", question: "Dernek ne organize etti?", options: [{ id: "a", text: "Büyük bir yemek dağıtımı", correct: true }, { id: "b", text: "Kıyafet toplama kampanyası", correct: false }, { id: "c", text: "Bağış gecesi", correct: false }, { id: "d", text: "Yürüyüş", correct: false }] },
+    { id: 2202, type: "SELECT", question: "Kimler gönüllü olarak katıldı?", options: [{ id: "a", text: "Sadece yaşlılar", correct: false }, { id: "b", text: "Birçok genç", correct: true }, { id: "c", text: "Çocuklar", correct: false }, { id: "d", text: "Sadece başkan", correct: false }] },
+    { id: 2203, type: "SELECT", question: "Yemekler nerede dağıtıldı?", options: [{ id: "a", text: "Okullarda", correct: false }, { id: "b", text: "Şehir merkezinde", correct: true }, { id: "c", text: "Hastanelerde", correct: false }, { id: "d", text: "Parklarda", correct: false }] },
+    { id: 2204, type: "SELECT", question: "Para vermek kadar önemli olan nedir?", options: [{ id: "a", text: "Kıyafet vermek", correct: false }, { id: "b", text: "Zamanından bağış yapmak", correct: true }, { id: "c", text: "Yemek pişirmek", correct: false }, { id: "d", text: "Uyumak", correct: false }] },
+    { id: 2205, type: "SELECT", question: "Etkinlik neyi kanıtladı?", options: [{ id: "a", text: "Herkes yardım edebilir", correct: true }, { id: "b", text: "Gönüllü bulmak zor", correct: false }, { id: "c", text: "Sadece zenginler yardım eder", correct: false }, { id: "d", text: "Yemek yapmak zor", correct: false }] },
+    { id: 2206, type: "TRANSLATE", question: "Çevir:", hint: "Gönüllüler sıcak yemekler hazırladı.", correctAnswer: "Les bénévoles ont préparé des plats chauds." },
+    { id: 2207, type: "TRANSLATE", question: "Çevir:", hint: "Bu girişim topluluğu birleştirdi.", correctAnswer: "Cette initiative a rassemblé toute la communauté." },
+    { id: 2208, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ils ont distribué les repas dans le centre-ville.", options: [{ id: "a", text: "Yemekleri şehir merkezinde dağıttılar.", correct: true }, { id: "b", text: "Yemekleri pişirdiler.", correct: false }, { id: "c", text: "Şehir merkezine gittiler.", correct: false }, { id: "d", text: "Yemek yediler.", correct: false }] },
+    { id: 2209, type: "FILL_BLANK", question: "Doldur:", sentence: "Les jeunes se sont ___ comme bénévoles.", options: [{ id: "a", text: "engagés", correct: true }, { id: "b", text: "amusés", correct: false }] },
+    { id: 2210, type: "SELECT", question: "Başkan kime teşekkür etti?", options: [{ id: "a", text: "Herkese", correct: true }, { id: "b", text: "Sadece gençlere", correct: false }, { id: "c", text: "Belediye başkanına", correct: false }, { id: "d", text: "Kimseye", correct: false }] },
+    { id: 2211, type: "SELECT", question: "Etkinlik hangi gün yapıldı?", options: [{ id: "a", text: "Hafta sonu", correct: true }, { id: "b", text: "Pazartesi", correct: false }, { id: "c", text: "Cuma", correct: false }, { id: "d", text: "Bayram", correct: false }] },
+    { id: 2212, type: "TRANSLATE", question: "Çevir:", hint: "Herkes kendi çapında yardım edebilir.", correctAnswer: "Chacun peut aider à son échelle." },
+    { id: 2213, type: "TRANSLATE", question: "Çevir:", hint: "Dayanışma bizi daha güçlü kılar.", correctAnswer: "La solidarité nous rend plus forts." },
+    { id: 2214, type: "FILL_BLANK", question: "Doldur:", sentence: "La présidente a ___ tout le monde.", options: [{ id: "a", text: "remercié", correct: true }, { id: "b", text: "critiqué", correct: false }] },
+    { id: 2215, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'association a organisé une grande distribution.", options: [{ id: "a", text: "Dernek büyük bir dağıtım organize etti.", correct: true }, { id: "b", text: "Dernek toplantı düzenledi.", correct: false }, { id: "c", text: "Restoran yemek dağıttı.", correct: false }, { id: "d", text: "Dernek kapandı.", correct: false }] },
+    { id: 2216, type: "SELECT", question: "Ne tür yemekler hazırlandı?", options: [{ id: "a", text: "Sıcak yemekler", correct: true }, { id: "b", text: "Soğuk içecekler", correct: false }, { id: "c", text: "Tatlılar", correct: false }, { id: "d", text: "Sandviçler", correct: false }] },
+    { id: 2217, type: "FILL_BLANK", question: "Doldur:", sentence: "Cette ___ a rassemblé toute la communauté.", options: [{ id: "a", text: "initiative", correct: true }, { id: "b", text: "loi", correct: false }] },
+    { id: 2218, type: "TRANSLATE", question: "Çevir:", hint: "Herkese dayanışmaları için teşekkür etti.", correctAnswer: "Elle a remercié tout le monde pour leur solidarité." },
+    { id: 2219, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Chacun peut aider à son échelle.", options: [{ id: "a", text: "Herkes kendi çapında yardım edebilir.", correct: true }, { id: "b", text: "Herkes eşittir.", correct: false }, { id: "c", text: "Herkes gönüllü olmalıdır.", correct: false }, { id: "d", text: "Herkes bağış yapmalıdır.", correct: false }] },
+    { id: 2220, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Faire un don de son temps est important.", options: [{ id: "a", text: "Zamanından bağış yapmak önemlidir.", correct: true }, { id: "b", text: "Para vermek önemlidir.", correct: false }, { id: "c", text: "Zaman paradır.", correct: false }, { id: "d", text: "Bağış zorunludur.", correct: false }] }
+];
+const unit387Quiz4: Question[] = [
+    { id: 2221, type: "SELECT", question: "'La solidarité' ne demek?", options: [{ id: "a", text: "Dayanışma", correct: true }, { id: "b", text: "Topluluk", correct: false }, { id: "c", text: "Destek", correct: false }, { id: "d", text: "Bağış", correct: false }] },
+    { id: 2222, type: "SELECT", question: "'Le don du sang' ne demek?", options: [{ id: "a", text: "Kan bağışı", correct: true }, { id: "b", text: "Kan bankası", correct: false }, { id: "c", text: "Kan tahlili", correct: false }, { id: "d", text: "Kan grubu", correct: false }] },
+    { id: 2223, type: "SELECT", question: "'La mission' ne demek?", options: [{ id: "a", text: "Görev / Misyon", correct: true }, { id: "b", text: "Gönderim", correct: false }, { id: "c", text: "Emisyon", correct: false }, { id: "d", text: "İzin", correct: false }] },
+    { id: 2224, type: "SELECT", question: "'Soutenir' ne demek?", options: [{ id: "a", text: "Desteklemek", correct: true }, { id: "b", text: "Sürdürmek", correct: false }, { id: "c", text: "Acı çekmek", correct: false }, { id: "d", text: "Hatırlamak", correct: false }] },
+    { id: 2225, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ alimentaire distribue de la nourriture.", options: [{ id: "a", text: "banque", correct: true }, { id: "b", text: "distribution", correct: false }] },
+    { id: 2226, type: "FILL_BLANK", question: "Doldur:", sentence: "Nous devons ___ les plus vulnérables.", options: [{ id: "a", text: "soutenir", correct: true }, { id: "b", text: "ignorer", correct: false }] },
+    { id: 2227, type: "FILL_BLANK", question: "Doldur:", sentence: "Leur ___ est d'aider les plus fragiles.", options: [{ id: "a", text: "mission", correct: true }, { id: "b", text: "maison", correct: false }] },
+    { id: 2228, type: "FILL_BLANK", question: "Doldur:", sentence: "La campagne de ___ commence demain.", options: [{ id: "a", text: "sensibilisation", correct: true }, { id: "b", text: "distribution", correct: false }] },
+    { id: 2229, type: "TRANSLATE", question: "Çevir:", hint: "Her bağış önemlidir.", correctAnswer: "Chaque don compte, même le plus petit." },
+    { id: 2230, type: "TRANSLATE", question: "Çevir:", hint: "Gıda bankası her gün yemek dağıtıyor.", correctAnswer: "La banque alimentaire distribue des repas tous les jours." },
+    { id: 2231, type: "TRANSLATE", question: "Çevir:", hint: "Kan bağışı hayat kurtarır.", correctAnswer: "Le don du sang sauve des vies." },
+    { id: 2232, type: "TRANSLATE", question: "Çevir:", hint: "En savunmasız kişileri desteklemeliyiz.", correctAnswer: "Nous devons soutenir les plus vulnérables." },
+    { id: 2233, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La campagne de sensibilisation commence demain.", options: [{ id: "a", text: "Farkındalık kampanyası yarın başlıyor.", correct: true }, { id: "b", text: "Bağış kampanyası sona erdi.", correct: false }, { id: "c", text: "Seçim kampanyası başladı.", correct: false }, { id: "d", text: "Kampanya iptal edildi.", correct: false }] },
+    { id: 2234, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'entraide est la base du vivre-ensemble.", options: [{ id: "a", text: "Yardımlaşma birlikte yaşamanın temelidir.", correct: true }, { id: "b", text: "Yardım her zaman gereklidir.", correct: false }, { id: "c", text: "Birlikte yaşamak zordur.", correct: false }, { id: "d", text: "Temel ihtiyaçlar karşılanmalıdır.", correct: false }] },
+    { id: 2235, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le refuge accueille des animaux abandonnés.", options: [{ id: "a", text: "Barınak terk edilmiş hayvanları kabul ediyor.", correct: true }, { id: "b", text: "Hayvanat bahçesi açıldı.", correct: false }, { id: "c", text: "Hayvanlar serbest bırakıldı.", correct: false }, { id: "d", text: "Barınak kapatıldı.", correct: false }] },
+    { id: 2236, type: "SELECT", question: "'C'est une cause noble' ne demek?", options: [{ id: "a", text: "Bu asil bir dava.", correct: true }, { id: "b", text: "Bu önemli bir bağış.", correct: false }, { id: "c", text: "Gönüllülük yaygındır.", correct: false }, { id: "d", text: "Yardım etmeyi sever.", correct: false }] },
+    { id: 2237, type: "SELECT", question: "'Le refuge' ne demek?", options: [{ id: "a", text: "Sığınak / Barınak", correct: true }, { id: "b", text: "Mülteci", correct: false }, { id: "c", text: "Reddetmek", correct: false }, { id: "d", text: "Kaçmak", correct: false }] },
+    { id: 2238, type: "FILL_BLANK", question: "Doldur:", sentence: "Les ___ reçoivent de l'aide chaque semaine.", options: [{ id: "a", text: "bénéficiaires", correct: true }, { id: "b", text: "bénévoles", correct: false }] },
+    { id: 2239, type: "TRANSLATE", question: "Çevir:", hint: "Faaliyetimize katılmak ister misin?", correctAnswer: "Tu veux participer à notre prochaine action ?" },
+    { id: 2240, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'action sociale est très importante.", options: [{ id: "a", text: "Sosyal faaliyet çok önemlidir.", correct: true }, { id: "b", text: "Sosyal medya çok önemlidir.", correct: false }, { id: "c", text: "Sosyal hayat çok güzeldir.", correct: false }, { id: "d", text: "Sosyal güvenlik önemlidir.", correct: false }] }
 ];
 
-const unit387Quiz4: Question[] = [
-    {
-        id: 2116,
-        type: "SELECT",
-        question: "'La solidarité' kelimesinin anlamı nedir?",
-        options: [
-            { id: "a", text: "Dayanışma", correct: true },
-            { id: "b", text: "Topluluk", correct: false },
-            { id: "c", text: "Destek", correct: false },
-            { id: "d", text: "Bağış", correct: false }
-        ]
-    },
-    {
-        id: 2117,
-        type: "FILL_BLANK",
-        question: "Doldur:",
-        sentence: "___ ne doit être oublié.",
-        options: [
-            { id: "a", text: "Personne", correct: true },
-            { id: "b", text: "Tout le monde", correct: false }
-        ]
-    },
-    {
-        id: 2118,
-        type: "TRANSLATE",
-        question: "Çevir:",
-        hint: "Boş zamanımı başkalarına adıyorum.",
-        correctAnswer: "Je consacre mon temps libre aux autres."
-    },
-    {
-        id: 2119,
-        type: "SELECT",
-        question: "Hangi cümle 'Bu asil bir amaç' anlamına gelir?",
-        options: [
-            { id: "a", text: "C'est une cause noble.", correct: true },
-            { id: "b", text: "C'est un don important.", correct: false },
-            { id: "c", text: "Le bénévolat est répandu.", correct: false },
-            { id: "d", text: "Il aime aider.", correct: false }
-        ]
-    },
-    {
-        id: 2120,
-        type: "LISTENING",
-        question: "Duyduğunu seç:",
-        audioText: "La solidarité nous rend plus forts.",
-        options: [
-            { id: "a", text: "Dayanışma bizi daha güçlü kılar.", correct: true },
-            { id: "b", text: "Ekip çalışması esastır.", correct: false },
-            { id: "c", text: "Bir dernekte gönüllüyüm.", correct: false },
-            { id: "d", text: "Bağış yapmaktan çekinmeyin.", correct: false }
-        ]
-    }
+const unit388Quiz1: Question[] = [
+    { id: 2241, type: "SELECT", question: "'Le migrant' ne demek?", options: [{ id: "a", text: "Göçmen", correct: true }, { id: "b", text: "Mülteci", correct: false }, { id: "c", text: "Vatandaş", correct: false }, { id: "d", text: "Gönüllü", correct: false }] },
+    { id: 2242, type: "SELECT", question: "'L'asile' ne demek?", options: [{ id: "a", text: "Sığınma", correct: true }, { id: "b", text: "Göç", correct: false }, { id: "c", text: "Sürgün", correct: false }, { id: "d", text: "Sınır", correct: false }] },
+    { id: 2243, type: "SELECT", question: "'L'intégration' ne demek?", options: [{ id: "a", text: "Entegrasyon / Uyum", correct: true }, { id: "b", text: "Ayrılık", correct: false }, { id: "c", text: "Göç", correct: false }, { id: "d", text: "Sınır", correct: false }] },
+    { id: 2244, type: "SELECT", question: "'La frontière' ne demek?", options: [{ id: "a", text: "Sınır", correct: true }, { id: "b", text: "Köprü", correct: false }, { id: "c", text: "Yol", correct: false }, { id: "d", text: "Duvar", correct: false }] },
+    { id: 2245, type: "SELECT", question: "'L'exil' ne demek?", options: [{ id: "a", text: "Sürgün", correct: true }, { id: "b", text: "Sığınma", correct: false }, { id: "c", text: "Göç", correct: false }, { id: "d", text: "Vatan", correct: false }] },
+    { id: 2246, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le réfugié", options: [{ id: "a", text: "Mülteci", correct: true }, { id: "b", text: "Göçmen", correct: false }, { id: "c", text: "Vatandaş", correct: false }, { id: "d", text: "Turist", correct: false }] },
+    { id: 2247, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La terre d'accueil", options: [{ id: "a", text: "Ev sahibi ülke", correct: true }, { id: "b", text: "Doğduğu ülke", correct: false }, { id: "c", text: "Komşu ülke", correct: false }, { id: "d", text: "Düşman ülke", correct: false }] },
+    { id: 2248, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Les migrants cherchent une vie meilleure.", options: [{ id: "a", text: "Göçmenler daha iyi bir hayat arıyor.", correct: true }, { id: "b", text: "Göçmenler iş bulamıyor.", correct: false }, { id: "c", text: "Göçmenler geri dönüyor.", correct: false }, { id: "d", text: "Göçmenler seyahat ediyor.", correct: false }] },
+    { id: 2249, type: "FILL_BLANK", question: "Doldur:", sentence: "Les ___ fuient la guerre.", options: [{ id: "a", text: "réfugiés", correct: true }, { id: "b", text: "touristes", correct: false }] },
+    { id: 2250, type: "FILL_BLANK", question: "Doldur:", sentence: "L'___ est un processus long.", options: [{ id: "a", text: "intégration", correct: true }, { id: "b", text: "immigration", correct: false }] },
+    { id: 2251, type: "SELECT", question: "'Accueillir' ne demek?", options: [{ id: "a", text: "Karşılamak / Kabul etmek", correct: true }, { id: "b", text: "Reddetmek", correct: false }, { id: "c", text: "Göndermek", correct: false }, { id: "d", text: "Kaçmak", correct: false }] },
+    { id: 2252, type: "SELECT", question: "'Le pays d'origine' ne demek?", options: [{ id: "a", text: "Menşe ülke", correct: true }, { id: "b", text: "Ev sahibi ülke", correct: false }, { id: "c", text: "Komşu ülke", correct: false }, { id: "d", text: "Büyük ülke", correct: false }] },
+    { id: 2253, type: "TRANSLATE", question: "Çevir:", hint: "Göçmenler daha iyi bir hayat arıyor.", correctAnswer: "Les migrants cherchent une vie meilleure." },
+    { id: 2254, type: "TRANSLATE", question: "Çevir:", hint: "Mülteciler savaştan kaçıyor.", correctAnswer: "Les réfugiés fuient la guerre." },
+    { id: 2255, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'intégration est un processus long.", options: [{ id: "a", text: "Entegrasyon uzun bir süreçtir.", correct: true }, { id: "b", text: "Göç kolay bir süreçtir.", correct: false }, { id: "c", text: "Sığınma hakkı önemlidir.", correct: false }, { id: "d", text: "Sınırlar kapalıdır.", correct: false }] },
+    { id: 2256, type: "TRANSLATE", question: "Çevir:", hint: "Yeni bir dil öğrenmek gerekiyor.", correctAnswer: "Il faut apprendre une nouvelle langue." },
+    { id: 2257, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ont traversé la ___ à pied.", options: [{ id: "a", text: "frontière", correct: true }, { id: "b", text: "ville", correct: false }] },
+    { id: 2258, type: "SELECT", question: "'La xénophobie' ne demek?", options: [{ id: "a", text: "Yabancı düşmanlığı", correct: true }, { id: "b", text: "Yabancı sevgisi", correct: false }, { id: "c", text: "Korku", correct: false }, { id: "d", text: "Merak", correct: false }] },
+    { id: 2259, type: "SELECT", question: "'Fuir' ne demek?", options: [{ id: "a", text: "Kaçmak", correct: true }, { id: "b", text: "Gelmek", correct: false }, { id: "c", text: "Kalmak", correct: false }, { id: "d", text: "Dönmek", correct: false }] },
+    { id: 2260, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ils ont demandé l'asile politique.", options: [{ id: "a", text: "Siyasi sığınma talep ettiler.", correct: true }, { id: "b", text: "Vize başvurusu yaptılar.", correct: false }, { id: "c", text: "Vatandaşlık aldılar.", correct: false }, { id: "d", text: "Pasaport istediler.", correct: false }] }
+];
+const unit388Quiz2: Question[] = [
+    { id: 2261, type: "FILL_BLANK", question: "Doldur:", sentence: "Les réfugiés ont besoin d'un ___ sûr.", options: [{ id: "a", text: "refuge", correct: true }, { id: "b", text: "travail", correct: false }] },
+    { id: 2262, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut ___ une nouvelle langue.", options: [{ id: "a", text: "apprendre", correct: true }, { id: "b", text: "oublier", correct: false }] },
+    { id: 2263, type: "FILL_BLANK", question: "Doldur (Subjonctif):", sentence: "Il est important que nous les ___ (accueillir).", options: [{ id: "a", text: "accueillions", correct: true }, { id: "b", text: "accueillons", correct: false }] },
+    { id: 2264, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ est un crime contre l'humanité.", options: [{ id: "a", text: "xénophobie", correct: true }, { id: "b", text: "solidarité", correct: false }] },
+    { id: 2265, type: "TRANSLATE", question: "Çevir:", hint: "Ülkelerini terk etmek zorunda kaldılar.", correctAnswer: "Ils ont été obligés de quitter leur pays." },
+    { id: 2266, type: "TRANSLATE", question: "Çevir:", hint: "Sınırı yürüyerek geçtiler.", correctAnswer: "Ils ont traversé la frontière à pied." },
+    { id: 2267, type: "TRANSLATE", question: "Çevir:", hint: "Sığınma hakkı evrensel bir haktır.", correctAnswer: "Le droit d'asile est un droit universel." },
+    { id: 2268, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La diversité culturelle est une richesse.", options: [{ id: "a", text: "Kültürel çeşitlilik bir zenginliktir.", correct: true }, { id: "b", text: "Kültür farklılıkları sorun yaratır.", correct: false }, { id: "c", text: "Kültürel etkinlik düzenlendi.", correct: false }, { id: "d", text: "Kültür önemli değildir.", correct: false }] },
+    { id: 2269, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ils ont été obligés de quitter leur pays.", options: [{ id: "a", text: "Ülkelerini terk etmek zorunda kaldılar.", correct: true }, { id: "b", text: "Ülkelerine döndüler.", correct: false }, { id: "c", text: "Ülkelerini seviyorlar.", correct: false }, { id: "d", text: "Ülkelerini ziyaret ettiler.", correct: false }] },
+    { id: 2270, type: "SELECT", question: "'La diversité culturelle' ne demek?", options: [{ id: "a", text: "Kültürel çeşitlilik", correct: true }, { id: "b", text: "Kültürel farklılık", correct: false }, { id: "c", text: "Kültürel miras", correct: false }, { id: "d", text: "Kültürel baskı", correct: false }] },
+    { id: 2271, type: "SELECT", question: "'Le permis de séjour' ne demek?", options: [{ id: "a", text: "Oturma izni", correct: true }, { id: "b", text: "Çalışma izni", correct: false }, { id: "c", text: "Ehliyet", correct: false }, { id: "d", text: "Pasaport", correct: false }] },
+    { id: 2272, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ culturelle enrichit la société.", options: [{ id: "a", text: "diversité", correct: true }, { id: "b", text: "différence", correct: false }] },
+    { id: 2273, type: "TRANSLATE", question: "Çevir:", hint: "Oturma izni almak zordur.", correctAnswer: "Obtenir un permis de séjour est difficile." },
+    { id: 2274, type: "SELECT", question: "'L'immigration clandestine' ne demek?", options: [{ id: "a", text: "Yasadışı göç", correct: true }, { id: "b", text: "Yasal göç", correct: false }, { id: "c", text: "Geçici göç", correct: false }, { id: "d", text: "İç göç", correct: false }] },
+    { id: 2275, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Le droit d'asile est un droit universel.", options: [{ id: "a", text: "Sığınma hakkı evrensel bir haktır.", correct: true }, { id: "b", text: "Sığınma hakkı kısıtlıdır.", correct: false }, { id: "c", text: "Sığınma hakkı kaldırıldı.", correct: false }, { id: "d", text: "Sığınma kolaydır.", correct: false }] },
+    { id: 2276, type: "FILL_BLANK", question: "Doldur:", sentence: "Obtenir un ___ de séjour est difficile.", options: [{ id: "a", text: "permis", correct: true }, { id: "b", text: "droit", correct: false }] },
+    { id: 2277, type: "TRANSLATE", question: "Çevir:", hint: "Kültürel çeşitlilik toplumu zenginleştirir.", correctAnswer: "La diversité culturelle enrichit la société." },
+    { id: 2278, type: "SELECT", question: "'Quitter' ne demek?", options: [{ id: "a", text: "Terk etmek / Ayrılmak", correct: true }, { id: "b", text: "Kalmak", correct: false }, { id: "c", text: "Gelmek", correct: false }, { id: "d", text: "Yaşamak", correct: false }] },
+    { id: 2279, type: "SELECT", question: "'La nostalgie' ne demek?", options: [{ id: "a", text: "Hasret / Nostalji", correct: true }, { id: "b", text: "Mutluluk", correct: false }, { id: "c", text: "Hüzün", correct: false }, { id: "d", text: "Korku", correct: false }] },
+    { id: 2280, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'immigration clandestine est dangereuse.", options: [{ id: "a", text: "Yasadışı göç tehlikelidir.", correct: true }, { id: "b", text: "Göç kolaydır.", correct: false }, { id: "c", text: "Göçmenlik yasaldır.", correct: false }, { id: "d", text: "Göç artıyor.", correct: false }] }
+];
+const unit388Quiz3: Question[] = [
+    { id: 2281, type: "SELECT", question: "Mülteciler neden ülkelerini terk etti?", options: [{ id: "a", text: "Savaş ve baskı nedeniyle", correct: true }, { id: "b", text: "Tatil için", correct: false }, { id: "c", text: "İş için", correct: false }, { id: "d", text: "Eğitim için", correct: false }] },
+    { id: 2282, type: "SELECT", question: "En büyük zorluk neydi?", options: [{ id: "a", text: "Yeni bir dil öğrenmek", correct: true }, { id: "b", text: "Yemek yapmak", correct: false }, { id: "c", text: "Araba kullanmak", correct: false }, { id: "d", text: "Alışveriş yapmak", correct: false }] },
+    { id: 2283, type: "SELECT", question: "Yardım derneği ne sağladı?", options: [{ id: "a", text: "Dil kurları ve barınma", correct: true }, { id: "b", text: "Para ve araba", correct: false }, { id: "c", text: "Sadece yemek", correct: false }, { id: "d", text: "Hiçbir şey", correct: false }] },
+    { id: 2284, type: "SELECT", question: "Göçmenler ne hissediyor?", options: [{ id: "a", text: "Ülkelerine hasret", correct: true }, { id: "b", text: "Hiçbir şey", correct: false }, { id: "c", text: "Öfke", correct: false }, { id: "d", text: "Sıkıntı", correct: false }] },
+    { id: 2285, type: "SELECT", question: "Entegrasyon için en önemli şey ne?", options: [{ id: "a", text: "Dil ve toplumsal bağlar", correct: true }, { id: "b", text: "Para", correct: false }, { id: "c", text: "Araba", correct: false }, { id: "d", text: "Şans", correct: false }] },
+    { id: 2286, type: "TRANSLATE", question: "Çevir:", hint: "Dernek dil kurları düzenledi.", correctAnswer: "L'association a organisé des cours de langue." },
+    { id: 2287, type: "TRANSLATE", question: "Çevir:", hint: "Her kültür bir zenginliktir.", correctAnswer: "Chaque culture est une richesse." },
+    { id: 2288, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ils ont trouvé un logement grâce à l'association.", options: [{ id: "a", text: "Dernek sayesinde barınma buldular.", correct: true }, { id: "b", text: "Kendi evlerini aldılar.", correct: false }, { id: "c", text: "Otelde kaldılar.", correct: false }, { id: "d", text: "Arkadaşlarıyla kaldılar.", correct: false }] },
+    { id: 2289, type: "FILL_BLANK", question: "Doldur:", sentence: "L'association a organisé des ___ de langue.", options: [{ id: "a", text: "cours", correct: true }, { id: "b", text: "livres", correct: false }] },
+    { id: 2290, type: "SELECT", question: "Mülteciler hangi yolla geldi?", options: [{ id: "a", text: "Deniz yoluyla", correct: true }, { id: "b", text: "Uçakla", correct: false }, { id: "c", text: "Trenle", correct: false }, { id: "d", text: "Otobüsle", correct: false }] },
+    { id: 2291, type: "SELECT", question: "Çocuklar nereye kaydedildi?", options: [{ id: "a", text: "Okula", correct: true }, { id: "b", text: "Hastaneye", correct: false }, { id: "c", text: "Klübe", correct: false }, { id: "d", text: "Camiye", correct: false }] },
+    { id: 2292, type: "TRANSLATE", question: "Çevir:", hint: "Çocuklar okula kaydedildi.", correctAnswer: "Les enfants ont été inscrits à l'école." },
+    { id: 2293, type: "TRANSLATE", question: "Çevir:", hint: "Yeni bir hayata başlamak cesaret ister.", correctAnswer: "Commencer une nouvelle vie demande du courage." },
+    { id: 2294, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils ressentent de la ___ pour leur pays.", options: [{ id: "a", text: "nostalgie", correct: true }, { id: "b", text: "colère", correct: false }] },
+    { id: 2295, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Commencer une nouvelle vie demande du courage.", options: [{ id: "a", text: "Yeni bir hayata başlamak cesaret ister.", correct: true }, { id: "b", text: "Yeni bir iş bulmak kolaydır.", correct: false }, { id: "c", text: "Yeni bir dil öğrenmek gerekir.", correct: false }, { id: "d", text: "Yeni bir ev almak zordur.", correct: false }] },
+    { id: 2296, type: "SELECT", question: "Parçada topluluk nasıl tepki verdi?", options: [{ id: "a", text: "Sıcak karşıladı", correct: true }, { id: "b", text: "Reddetti", correct: false }, { id: "c", text: "İlgilenmedi", correct: false }, { id: "d", text: "Kızgınlıkla", correct: false }] },
+    { id: 2297, type: "FILL_BLANK", question: "Doldur:", sentence: "Les enfants ont été ___ à l'école.", options: [{ id: "a", text: "inscrits", correct: true }, { id: "b", text: "envoyés", correct: false }] },
+    { id: 2298, type: "TRANSLATE", question: "Çevir:", hint: "Topluluk onları sıcak karşıladı.", correctAnswer: "La communauté les a accueillis chaleureusement." },
+    { id: 2299, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Chaque culture est une richesse.", options: [{ id: "a", text: "Her kültür bir zenginliktir.", correct: true }, { id: "b", text: "Her kültür farklıdır.", correct: false }, { id: "c", text: "Kültür önemli değildir.", correct: false }, { id: "d", text: "Kültürel farklılıklar sorun yaratır.", correct: false }] },
+    { id: 2300, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'association a organisé des cours de langue.", options: [{ id: "a", text: "Dernek dil kurları düzenledi.", correct: true }, { id: "b", text: "Dernek yemek dağıttı.", correct: false }, { id: "c", text: "Dernek kapandı.", correct: false }, { id: "d", text: "Dernek toplantı yaptı.", correct: false }] }
+];
+const unit388Quiz4: Question[] = [
+    { id: 2301, type: "SELECT", question: "'Le demandeur d'asile' ne demek?", options: [{ id: "a", text: "Sığınmacı", correct: true }, { id: "b", text: "Mülteci", correct: false }, { id: "c", text: "Göçmen", correct: false }, { id: "d", text: "Vatandaş", correct: false }] },
+    { id: 2302, type: "SELECT", question: "'La patrie' ne demek?", options: [{ id: "a", text: "Vatan", correct: true }, { id: "b", text: "Parti", correct: false }, { id: "c", text: "Baba", correct: false }, { id: "d", text: "Sınır", correct: false }] },
+    { id: 2303, type: "SELECT", question: "'Le camp de réfugiés' ne demek?", options: [{ id: "a", text: "Mülteci kampı", correct: true }, { id: "b", text: "Kamp alanı", correct: false }, { id: "c", text: "Tatil kampı", correct: false }, { id: "d", text: "Askeri kamp", correct: false }] },
+    { id: 2304, type: "SELECT", question: "'S'adapter' ne demek?", options: [{ id: "a", text: "Uyum sağlamak", correct: true }, { id: "b", text: "Reddetmek", correct: false }, { id: "c", text: "Kaçmak", correct: false }, { id: "d", text: "Unutmak", correct: false }] },
+    { id: 2305, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils vivent dans un ___ de réfugiés.", options: [{ id: "a", text: "camp", correct: true }, { id: "b", text: "ville", correct: false }] },
+    { id: 2306, type: "FILL_BLANK", question: "Doldur:", sentence: "Il faut s'___ à une nouvelle culture.", options: [{ id: "a", text: "adapter", correct: true }, { id: "b", text: "habituer", correct: false }] },
+    { id: 2307, type: "FILL_BLANK", question: "Doldur:", sentence: "La ___ leur manque beaucoup.", options: [{ id: "a", text: "patrie", correct: true }, { id: "b", text: "ville", correct: false }] },
+    { id: 2308, type: "FILL_BLANK", question: "Doldur:", sentence: "Le ___ d'asile attend une réponse.", options: [{ id: "a", text: "demandeur", correct: true }, { id: "b", text: "réfugié", correct: false }] },
+    { id: 2309, type: "TRANSLATE", question: "Çevir:", hint: "Mülteci kampında yaşıyorlar.", correctAnswer: "Ils vivent dans un camp de réfugiés." },
+    { id: 2310, type: "TRANSLATE", question: "Çevir:", hint: "Yeni bir kültüre uyum sağlamak gerekiyor.", correctAnswer: "Il faut s'adapter à une nouvelle culture." },
+    { id: 2311, type: "TRANSLATE", question: "Çevir:", hint: "Vatanlarını çok özlüyorlar.", correctAnswer: "La patrie leur manque beaucoup." },
+    { id: 2312, type: "TRANSLATE", question: "Çevir:", hint: "Sığınmacı bir cevap bekliyor.", correctAnswer: "Le demandeur d'asile attend une réponse." },
+    { id: 2313, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Il faut s'adapter à une nouvelle culture.", options: [{ id: "a", text: "Yeni bir kültüre uyum sağlamak gerekiyor.", correct: true }, { id: "b", text: "Yeni bir dil öğrenmek kolaydır.", correct: false }, { id: "c", text: "Kültür farklılıkları önemlidir.", correct: false }, { id: "d", text: "Yeni bir ülkeye taşındılar.", correct: false }] },
+    { id: 2314, type: "LISTENING", question: "Duyduğunu seç:", audioText: "La patrie leur manque beaucoup.", options: [{ id: "a", text: "Vatanlarını çok özlüyorlar.", correct: true }, { id: "b", text: "Vatanları çok güzel.", correct: false }, { id: "c", text: "Vatanlarına döndüler.", correct: false }, { id: "d", text: "Vatanları tehlikeli.", correct: false }] },
+    { id: 2315, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Ils vivent dans un camp de réfugiés.", options: [{ id: "a", text: "Mülteci kampında yaşıyorlar.", correct: true }, { id: "b", text: "Şehirde yaşıyorlar.", correct: false }, { id: "c", text: "Köyde yaşıyorlar.", correct: false }, { id: "d", text: "Kamptan ayrıldılar.", correct: false }] },
+    { id: 2316, type: "SELECT", question: "'La persécution' ne demek?", options: [{ id: "a", text: "Zulüm / Baskı", correct: true }, { id: "b", text: "Takip", correct: false }, { id: "c", text: "Azim", correct: false }, { id: "d", text: "Sabır", correct: false }] },
+    { id: 2317, type: "SELECT", question: "'L'accueil' ne demek?", options: [{ id: "a", text: "Karşılama / Kabul", correct: true }, { id: "b", text: "Veda", correct: false }, { id: "c", text: "Red", correct: false }, { id: "d", text: "Ayrılık", correct: false }] },
+    { id: 2318, type: "FILL_BLANK", question: "Doldur:", sentence: "Ils fuient la ___ politique.", options: [{ id: "a", text: "persécution", correct: true }, { id: "b", text: "situation", correct: false }] },
+    { id: 2319, type: "TRANSLATE", question: "Çevir:", hint: "Onları sıcak bir şekilde karşılamalıyız.", correctAnswer: "Nous devons les accueillir chaleureusement." },
+    { id: 2320, type: "LISTENING", question: "Duyduğunu seç:", audioText: "L'accueil des réfugiés est un devoir moral.", options: [{ id: "a", text: "Mültecileri kabul etmek ahlaki bir görevdir.", correct: true }, { id: "b", text: "Mülteciler geri gönderilmeli.", correct: false }, { id: "c", text: "Mülteciler tehlikelidir.", correct: false }, { id: "d", text: "Mülteciler çalışmalıdır.", correct: false }] }
+];
+
+const unit389Quiz1: Question[] = [
+    { id: 2321, type: "SELECT", question: "Que signifie 'l'inflation' ?", options: [{ id: "a", text: "La baisse des prix", correct: false }, { id: "b", text: "La hausse généralisée des prix", correct: true }, { id: "c", text: "L'augmentation des salaires", correct: false }, { id: "d", text: "La création de monnaie", correct: false }] },
+    { id: 2322, type: "SELECT", question: "Qu'est-ce que le PIB ?", options: [{ id: "a", text: "Le Poids Intérieur Brut", correct: false }, { id: "b", text: "Le Produit Intérieur Brut", correct: true }, { id: "c", text: "Le Profit Industriel Brut", correct: false }, { id: "d", text: "Le Placement Intérieur Brut", correct: false }] },
+    { id: 2323, type: "SELECT", question: "Que signifie 'le chômage' ?", options: [{ id: "a", text: "Le manque de travail", correct: true }, { id: "b", text: "Le manque d'argent", correct: false }, { id: "c", text: "Le manque de vacances", correct: false }, { id: "d", text: "Le manque de sommeil", correct: false }] },
+    { id: 2324, type: "SELECT", question: "Qu'est-ce qu'une 'entreprise' ?", options: [{ id: "a", text: "Un lieu de vacances", correct: false }, { id: "b", text: "Une organisation qui produit des biens ou services", correct: true }, { id: "c", text: "Un stade de sport", correct: false }, { id: "d", text: "Un type de taxe", correct: false }] },
+    { id: 2325, type: "SELECT", question: "Que signifie 'investir' ?", options: [{ id: "a", text: "Dépenser de l'argent inutilement", correct: false }, { id: "b", text: "Placer de l'argent pour obtenir un profit futur", correct: true }, { id: "c", text: "Économiser tout son argent", correct: false }, { id: "d", text: "Donner de l'argent à une association", correct: false }] },
+    { id: 2326, type: "SELECT", question: "Qu'est-ce que 'le marché' en économie ?", options: [{ id: "a", text: "Un lieu pour acheter des légumes", correct: false }, { id: "b", text: "Le lieu de rencontre entre l'offre et la demande", correct: true }, { id: "c", text: "Le siège d'une banque", correct: false }, { id: "d", text: "Un type de monnaie", correct: false }] },
+    { id: 2327, type: "SELECT", question: "Que signifie 'le profit' ?", options: [{ id: "a", text: "La perte d'argent", correct: false }, { id: "b", text: "Le bénéfice réalisé par une entreprise", correct: true }, { id: "c", text: "Le montant des impôts", correct: false }, { id: "d", text: "Le salaire d'un employé", correct: false }] },
+    { id: 2328, type: "SELECT", question: "Qu'est-ce qu'un 'impôt' ?", options: [{ id: "a", text: "Un cadeau de l'État", correct: false }, { id: "b", text: "Une contribution obligatoire aux charges publiques", correct: true }, { id: "c", text: "Un prêt de la banque", correct: false }, { id: "d", text: "Un type d'investissement", correct: false }] },
+    { id: 2329, type: "SELECT", question: "Que signifie 'la dette' ?", options: [{ id: "a", text: "L'argent que l'on possède", correct: false }, { id: "b", text: "L'argent que l'on debe à quelqu'un", correct: false }, { id: "c", text: "L'argent que l'on gagne", correct: false }, { id: "d", text: "L'argent que l'on cache", correct: false }] },
+    { id: 2330, type: "SELECT", question: "Qu'est-ce que 'la monnaie' ?", options: [{ id: "a", text: "Un type de papier", correct: false }, { id: "b", text: "L'unité de mesure de la valeur et instrument d'échange", correct: true }, { id: "c", text: "Un objet de collection", correct: false }, { id: "d", text: "Un synonyme de richesse", correct: false }] },
+    { id: 2331, type: "SELECT", question: "Que signifie 'la croissance' ?", options: [{ id: "a", text: "La diminution de la richesse", correct: false }, { id: "b", text: "L'augmentation de la production de richesse", correct: true }, { id: "c", text: "Le vieillissement de la population", correct: false }, { id: "d", text: "La hausse du chômage", correct: false }] },
+    { id: 2332, type: "SELECT", question: "Qu'est-ce qu'un 'salarié' ?", options: [{ id: "a", text: "Une personne qui travaille gratuitement", correct: false }, { id: "b", text: "Une personne qui reçoit un salaire en échange de son travail", correct: true }, { id: "c", text: "Un patron d'entreprise", correct: false }, { id: "d", text: "Un actionnaire en bourse", correct: false }] },
+    { id: 2333, type: "SELECT", question: "Que signifie 'la consommation' ?", options: [{ id: "a", text: "La production de biens", correct: false }, { id: "b", text: "L'utilisation de biens et services pour satisfaire des besoins", correct: true }, { id: "c", text: "L'épargne d'argent", correct: false }, { id: "d", text: "L'exportation de produits", correct: false }] },
+    { id: 2334, type: "SELECT", question: "Qu'est-ce que 'la bourse' ?", options: [{ id: "a", text: "Un sac à main", correct: false }, { id: "b", text: "Le marché financier où s'échangent les actions", correct: true }, { id: "c", text: "Une banque centrale", correct: false }, { id: "d", text: "Un type d'impôt", correct: false }] },
+    { id: 2335, type: "SELECT", question: "Que signifie 'le pouvoir d'achat' ?", options: [{ id: "a", text: "La capacité d'acheter des actions", correct: false }, { id: "b", text: "La quantité de biens qu'un revenu permet d'acheter", correct: true }, { id: "c", text: "Le droit de voter", correct: false }, { id: "d", text: "La richesse d'un pays", correct: false }] },
+    { id: 2336, type: "SELECT", question: "Qu'est-ce qu'une 'crise' ?", options: [{ id: "a", text: "Une période de prospérité", correct: false }, { id: "b", text: "Une période de difficultés économiques graves", correct: true }, { id: "c", text: "Une fête nationale", correct: false }, { id: "d", text: "Une nouvelle loi", correct: false }] },
+    { id: 2337, type: "SELECT", question: "Que signifie 'épargner' ?", options: [{ id: "a", text: "Dépenser tout son argent", correct: false }, { id: "b", text: "Mettre de l'argent de côté", correct: true }, { id: "c", text: "Emprunter à la banque", correct: false }, { id: "d", text: "Investir en bourse", correct: false }] },
+    { id: 2338, type: "SELECT", question: "Qu'est-ce qu'un 'syndicat' ?", options: [{ id: "a", text: "Une organisation de patrons", correct: false }, { id: "b", text: "Une organisation de défense des intérêts des travailleurs", correct: true }, { id: "c", text: "Une banque d'investissement", correct: false }, { id: "d", text: "Un service de l'État", correct: false }] },
+    { id: 2339, type: "SELECT", question: "Que signifie 'la concurrence' ?", options: [{ id: "a", text: "L'entente entre les entreprises", correct: false }, { id: "b", text: "La rivalité entre plusieurs entreprises sur un marché", correct: true }, { id: "c", text: "Le monopole d'une seule entreprise", correct: false }, { id: "d", text: "La fermeture d'une entreprise", correct: false }] },
+    { id: 2340, type: "SELECT", question: "Qu'est-ce qu'un 'budget' ?", options: [{ id: "a", text: "Une liste de courses", correct: false }, { id: "b", text: "L'ensemble des recettes et des dépenses prévues", correct: true }, { id: "c", text: "Un prêt bancaire", correct: false }, { id: "d", text: "Un type de compte en banque", correct: false }] }
+];
+const unit389Quiz2: Question[] = [
+    { id: 2341, type: "SELECT", question: "Quelle est la conséquence directe d'une inflation élevée ?", options: [{ id: "a", text: "Les prix baissent", correct: false }, { id: "b", text: "Le pouvoir d'achat diminue", correct: true }, { id: "c", text: "Le chômage s'arrête", correct: false }, { id: "d", text: "La monnaie prend de la valeur", correct: false }] },
+    { id: 2342, type: "SELECT", question: "Que se passe-t-il lors d'une période de récession ?", options: [{ id: "a", text: "Le PIB augmente", correct: false }, { id: "b", text: "Le PIB diminue pendant plusieurs trimestres", correct: true }, { id: "c", text: "Tout le monde trouve un travail", correct: false }, { id: "d", text: "Les banques ferment", correct: false }] },
+    { id: 2343, type: "SELECT", question: "Comment appelle-t-on le fait de ne pas avoir de travail ?", options: [{ id: "a", text: "La grève", correct: false }, { id: "b", text: "Le chômage", correct: true }, { id: "c", text: "Le congé", correct: false }, { id: "d", text: "La retraite", correct: false }] },
+    { id: 2344, type: "SELECT", question: "Quel indicateur mesure la richesse produit par un pays en un an ?", options: [{ id: "a", text: "L'inflation", correct: false }, { id: "b", text: "Le PIB", correct: true }, { id: "c", text: "La dette", correct: false }, { id: "d", text: "Le budget", correct: false }] },
+    { id: 2345, type: "SELECT", question: "Que signifie 'faire faillite' ?", options: [{ id: "a", text: "Gagner beaucoup d'argent", correct: false }, { id: "b", text: "Ne plus pouvoir payer ses dettes et fermer", correct: true }, { id: "c", text: "Ouvrir une nouvelle succursale", correct: false }, { id: "d", text: "Changer de direction", correct: false }] },
+    { id: 2346, type: "SELECT", question: "Quel est le rôle de la Banque Centrale ?", options: [{ id: "a", text: "Prêter de l'argent aux particuliers", correct: false }, { id: "b", text: "Gérer la monnaie et les taux d'intérêt", correct: true }, { id: "c", text: "Vendre des produits au marché", correct: false }, { id: "d", text: "Collecter les impôts", correct: false }] },
+    { id: 2347, type: "SELECT", question: "Pourquoi les prix augmentent-ils souvent ?", options: [{ id: "a", text: "Parce que la demande dépasse l'offre", correct: true }, { id: "b", text: "Parce que tout le monde est riche", correct: false }, { id: "c", text: "Parce que la production est trop facile", correct: false }, { id: "d", text: "Parce que les gens n'achètent rien", correct: false }] },
+    { id: 2348, type: "SELECT", question: "Qu'est-ce qu'une 'subvention' ?", options: [{ id: "a", text: "Une amende à payer", correct: false }, { id: "b", text: "Une aide financière de l'État", correct: true }, { id: "c", text: "Un type d'action en bourse", correct: false }, { id: "d", text: "Une taxe sur la consommation", correct: false }] },
+    { id: 2349, type: "SELECT", question: "Que signifie 'la mondialisation' ?", options: [{ id: "a", text: "Le repli sur soi d'un pays", correct: false }, { id: "b", text: "L'interdépendance croissante des économies mondiales", correct: true }, { id: "c", text: "Le voyage dans l'espace", correct: false }, { id: "d", text: "La fin du commerce", correct: false }] },
+    { id: 2350, type: "SELECT", question: "Quel secteur s'occupe de la finance et du commerce ?", options: [{ id: "a", text: "Le secteur primaire", correct: false }, { id: "b", text: "Le secteur secondaire", correct: false }, { id: "c", text: "Le secteur tertiaire", correct: true }, { id: "d", text: "Le secteur quaternaire", correct: false }] },
+    { id: 2351, type: "SELECT", question: "Que signifie 'le taux d'intérêt' ?", options: [{ id: "a", text: "Le prix de l'argent emprunté", correct: true }, { id: "b", text: "Le montant des impôts", correct: false }, { id: "c", text: "Le salaire minimum", correct: false }, { id: "d", text: "La valeur du dollar", correct: false }] },
+    { id: 2352, type: "SELECT", question: "Quel est le but d'un syndicat ?", options: [{ id: "a", text: "Maximiser les profits", correct: false }, { id: "b", text: "Défendre les droits des salariés", correct: true }, { id: "c", text: "Collecter les taxes", correct: false }, { id: "d", text: "Investir en bourse", correct: false }] },
+    { id: 2353, type: "SELECT", question: "Que signifie 'la précarité' ?", options: [{ id: "a", text: "La richesse extrême", correct: false }, { id: "b", text: "Une situation d'instabilité financière", correct: true }, { id: "c", text: "Un CDI", correct: false }, { id: "d", text: "Une promotion au travail", correct: false }] },
+    { id: 2354, type: "SELECT", question: "Qu'est-ce qu'un 'débit' sur un compte ?", options: [{ id: "a", text: "Une entrée d'argent", correct: false }, { id: "b", text: "Une sortie d'argent", correct: true }, { id: "c", text: "Un gain au loto", correct: false }, { id: "d", text: "Un nouveau prêt", correct: false }] },
+    { id: 2355, type: "SELECT", question: "Que signifie 'l'austérité' ?", options: [{ id: "a", text: "Une politique de grandes dépenses", correct: false }, { id: "b", text: "Une politique de réduction stricte des dépenses publiques", correct: true }, { id: "c", text: "Une période de fête", correct: false }, { id: "d", text: "La fin de la monnaie", correct: false }] },
+    { id: 2356, type: "SELECT", question: "Quelle est la différence entre brut et net pour un salaire ?", options: [{ id: "a", text: "Il n'y a pas de différence", correct: false }, { id: "b", text: "Le net est ce que l'on reçoit après les taxes", correct: true }, { id: "c", text: "Le brut est plus petit que le net", correct: false }, { id: "d", text: "Le brut inclut les vacances", correct: false }] },
+    { id: 2357, type: "SELECT", question: "Que signifie 'délocaliser' une usine ?", options: [{ id: "a", text: "La fermer définitivement", correct: false }, { id: "b", text: "La déplacer dans un pays où les coûts sont plus bas", correct: true }, { id: "c", text: "L'agrandir sur place", correct: false }, { id: "d", text: "La vendre à l'État", correct: false }] },
+    { id: 2358, type: "SELECT", question: "Qu'est-ce que le 'SMIC' en France ?", options: [{ id: "a", text: "Le syndicat des mines", correct: false }, { id: "b", text: "Le Salaire Minimum Interprofessionnel de Croissance", correct: true }, { id: "c", text: "Une taxe sur le café", correct: false }, { id: "d", text: "Un type d'investissement", correct: false }] },
+    { id: 2359, type: "SELECT", question: "Que signifie 'le plein emploi' ?", options: [{ id: "a", text: "Une situation où tout le monde a un travail", correct: true }, { id: "b", text: "Une entreprise qui n'a plus de place", correct: false }, { id: "c", text: "Un réservoir d'essence plein", correct: false }, { id: "d", text: "Un emploi à 40 heures", correct: false }] },
+    { id: 2360, type: "SELECT", question: "Qu'est-ce qu'une 'action' en bourse ?", options: [{ id: "a", text: "Un geste héroïque", correct: false }, { id: "b", text: "Une part du capital d'une entreprise", correct: true }, { id: "c", text: "Une dette envers la banque", correct: false }, { id: "d", text: "Un type de contrat de travail", correct: false }] }
+];
+const unit389Quiz3: Question[] = [
+    { id: 2361, type: "SELECT", question: "Si j'achète un produit à l'étranger pour le vendre ici, c'est une...", options: [{ id: "a", text: "Exportation", correct: false }, { id: "b", text: "Importation", correct: true }, { id: "c", text: "Subvention", correct: false }, { id: "d", text: "Donation", correct: false }] },
+    { id: 2362, type: "SELECT", question: "Si une entreprise vend ses produits aux USA, c'est une...", options: [{ id: "a", text: "Importation", correct: false }, { id: "b", text: "Exportation", correct: true }, { id: "c", text: "Perte", correct: false }, { id: "d", text: "Taxation", correct: false }] },
+    { id: 2363, type: "SELECT", question: "Que signifie 'être à découvert' à la banque ?", options: [{ id: "a", text: "Avoir beaucoup d'argent", correct: false }, { id: "b", text: "Avoir un compte négatif", correct: true }, { id: "c", text: "Avoir perdu ses clefs", correct: false }, { id: "d", text: "Avoir un nouveau compte", correct: false }] },
+    { id: 2364, type: "SELECT", question: "Qu'est-ce qu'un 'virement' ?", options: [{ id: "a", text: "Un licenciement", correct: false }, { id: "b", text: "Un transfert d'argent d'un compte à un autre", correct: true }, { id: "c", text: "Une augmentation de salaire", correct: false }, { id: "d", text: "Une taxe sur les vêtements", correct: false }] },
+    { id: 2365, type: "SELECT", question: "Que signifie 'rentable' ?", options: [{ id: "a", text: "Qui coûte cher", correct: false }, { id: "b", text: "Qui produit un bénéfice", correct: true }, { id: "c", text: "Qui est inutile", correct: false }, { id: "d", text: "Qui est gratuit", correct: false }] },
+    { id: 2366, type: "SELECT", question: "Qu'est-ce que 'la TVA' ?", options: [{ id: "a", text: "Une Taxe sur la Valeur Ajoutée", correct: true }, { id: "b", text: "Un type de voiture", correct: false }, { id: "c", text: "Une aide pour les vacances", correct: false }, { id: "d", text: "Un syndicat d'artistes", correct: false }] },
+    { id: 2367, type: "SELECT", question: "Que signifie 'négocier' un prix ?", options: [{ id: "a", text: "Payer sans discuter", correct: false }, { id: "b", text: "Discuter pour obtenir un meilleur prix", correct: true }, { id: "c", text: "Demander un reçu", correct: false }, { id: "d", text: "Payer par carte", correct: false }] },
+    { id: 2368, type: "SELECT", question: "Qu'est-ce qu'un 'crédit' ?", options: [{ id: "a", text: "Une dette que l'on rembourse", correct: true }, { id: "b", text: "Un cadeau de la banque", correct: false }, { id: "c", text: "Une amende policière", correct: false }, { id: "d", text: "Un type d'épargne", correct: false }] },
+    { id: 2369, type: "SELECT", question: "Que signifie 'solvable' ?", options: [{ id: "a", text: "Qui peut payer ses dettes", correct: true }, { id: "b", text: "Qui est en prison", correct: false }, { id: "c", text: "Qui n'a pas de compte", correct: false }, { id: "d", text: "Qui travaille au soleil", correct: false }] },
+    { id: 2370, type: "SELECT", question: "Qu'est-ce qu'un 'dividende' ?", options: [{ id: "a", text: "Une part du profit versée aux actionnaires", correct: true }, { id: "b", text: "Une taxe sur le pétrole", correct: false }, { id: "c", text: "Un nouveau règlement", correct: false }, { id: "d", text: "Un type de chèque", correct: false }] },
+    { id: 2371, type: "SELECT", question: "Que signifie 'le pouvoir d'achat' ?", options: [{ id: "a", text: "La force physique", correct: false }, { id: "b", text: "La capacité financière d'acheter", correct: true }, { id: "c", text: "Le droit de vote", correct: false }, { id: "d", text: "La publicité", correct: false }] },
+    { id: 2372, type: "SELECT", question: "Si les prix baissent de façon généralisée, on parle de...", options: [{ id: "a", text: "Déflation", correct: true }, { id: "b", text: "Inflation", correct: false }, { id: "c", text: "Croissance", correct: false }, { id: "d", text: "Expansion", correct: false }] },
+    { id: 2373, type: "SELECT", question: "Qu'est-ce qu'une 'pénurie' ?", options: [{ id: "a", text: "Une abondance de produits", correct: false }, { id: "b", text: "Un manque de produits", correct: true }, { id: "c", text: "Une baisse des prix", correct: false }, { id: "d", text: "Une nouvelle monnaie", correct: false }] },
+    { id: 2374, type: "SELECT", question: "Que signifie 'le capital' ?", options: [{ id: "a", text: "La ville principale", correct: false }, { id: "b", text: "Les ressources financières d'une entreprise", correct: true }, { id: "c", text: "Une lettre majuscule", correct: false }, { id: "d", text: "Un type de chapeau", correct: false }] },
+    { id: 2375, type: "SELECT", question: "Qu'est-ce qu'un 'prélèvement' ?", options: [{ id: "a", text: "Un ajout d'argent", correct: false }, { id: "b", text: "Un retrait automatique d'argent", correct: true }, { id: "c", text: "Une prime de Noël", correct: false }, { id: "d", text: "Un type de contrat", correct: false }] },
+    { id: 2376, type: "SELECT", question: "Que signifie 'le marché noir' ?", options: [{ id: "a", text: "Un marché pendant la nuit", correct: false }, { id: "b", text: "Le commerce illégal de marchandises", correct: true }, { id: "c", text: "Un marché de charbon", correct: false }, { id: "d", text: "Un type de bourse", correct: false }] },
+    { id: 2377, type: "SELECT", question: "Qu'est-ce qu'un 'courtier' ?", options: [{ id: "a", text: "Un sportif qui court", correct: false }, { id: "b", text: "Un intermédiaire sur les marchés financiers", correct: true }, { id: "c", text: "Un avocat spécialisé", correct: false }, { id: "d", text: "Un juge", correct: false }] },
+    { id: 2378, type: "SELECT", question: "Que signifie 'la parité' d'une monnaie ?", options: [{ id: "a", text: "Son poids", correct: false }, { id: "b", text: "Sa valeur par rapport à une autre monnaie", correct: true }, { id: "c", text: "Sa couleur", correct: false }, { id: "d", text: "Sa date de création", correct: false }] },
+    { id: 2379, type: "SELECT", question: "Qu'est-ce que 'l'équilibre budgétaire' ?", options: [{ id: "a", text: "Dépenser plus que ce que l'on gagne", correct: false }, { id: "b", text: "Recettes égales aux dépenses", correct: true }, { id: "c", text: "Ne rien dépenser", correct: false }, { id: "d", text: "Ne rien gagner", correct: false }] },
+    { id: 2380, type: "SELECT", question: "Que signifie 'subvenir' à ses besoins ?", options: [{ id: "a", text: "Avoir besoin d'aide", correct: false }, { id: "b", text: "Avoir assez d'argent pour vivre", correct: true }, { id: "c", text: "Vouloir devenir riche", correct: false }, { id: "d", text: "Travailler pour quelqu'un", correct: false }] }
+];
+const unit389Quiz4: Question[] = [
+    { id: 2381, type: "SELECT", question: "La mondialisation favorise surtout...", options: [{ id: "a", text: "L'isolement des pays", correct: false }, { id: "b", text: "Les échanges internationaux", correct: true }, { id: "c", text: "La baisse de la technologie", correct: false }, { id: "d", text: "La fin du tourisme", correct: false }] },
+    { id: 2382, type: "SELECT", question: "Quel est l'un des buts de la taxe carbone ?", options: [{ id: "a", text: "Augmenter la pollution", correct: false }, { id: "b", text: "Réduire les émissions de CO2", correct: true }, { id: "c", text: "Encourager l'achat de voitures", correct: false }, { id: "d", text: "Rendre le pétrole gratuit", correct: false }] },
+    { id: 2383, type: "SELECT", question: "Que signifie 'le secteur public' ?", options: [{ id: "a", text: "Les entreprises privées", correct: false }, { id: "b", text: "Les services et organisations gérés par l'État", correct: true }, { id: "c", text: "Le commerce de rue", correct: false }, { id: "d", text: "Les bars et restaurants", correct: false }] },
+    { id: 2384, type: "SELECT", question: "Qu'est-ce qu'une 'loi de finances' ?", options: [{ id: "a", text: "Une loi sur le sport", correct: false }, { id: "b", text: "Le texte qui prévoit le budget de l'État", correct: true }, { id: "c", text: "Une amende pour excès de vitesse", correct: false }, { id: "d", text: "Un contrat de travail", correct: false }] },
+    { id: 2385, type: "SELECT", question: "Que signifie 'indexer' les salaires sur l'inflation ?", options: [{ id: "a", text: "Les diminuer", correct: false }, { id: "b", text: "Les faire augmenter en suivant les prix", correct: true }, { id: "c", text: "Les supprimer", correct: false }, { id: "d", text: "Les bloquer pendant dix ans", correct: false }] },
+    { id: 2386, type: "SELECT", question: "L'augmentation du prix du pétrole entraîne souvent...", options: [{ id: "a", text: "Une baisse des prix des transports", correct: false }, { id: "b", text: "Une hausse des prix généralisée", correct: true }, { id: "c", text: "La fin de l'économie", correct: false }, { id: "d", text: "La richesse de tout le monde", correct: false }] },
+    { id: 2387, type: "SELECT", question: "Que signifie 'l'autosuffisance' ?", options: [{ id: "a", text: "Dépendre des autres", correct: false }, { id: "b", text: "Produire soi-même ce dont on a besoin", correct: true }, { id: "c", text: "Acheter tout à l'étranger", correct: false }, { id: "d", text: "Vendre tout son stock", correct: false }] },
+    { id: 2388, type: "SELECT", question: "Qu'est-ce que le 'libre-échange' ?", options: [{ id: "a", text: "Le commerce interdit", correct: false }, { id: "b", text: "La libre circulation des biens sans taxes douanières", correct: true }, { id: "c", text: "Un marché gratuit", correct: false }, { id: "d", text: "Un échange de cadeaux", correct: false }] },
+    { id: 2389, type: "SELECT", question: "Que signifie 'le protectionnisme' ?", options: [{ id: "a", text: "Favoriser les importations", correct: false }, { id: "b", text: "Protéger l'économie nationale par des taxes sur l'import", correct: true }, { id: "c", text: "Protéger la nature", correct: false }, { id: "d", text: "Protéger les banques", correct: false }] },
+    { id: 2390, type: "SELECT", question: "Quel est l'effet d'une monnaie forte sur les exportations ?", options: [{ id: "a", text: "Elles deviennent plus faciles", correct: false }, { id: "b", text: "Elles deviennent plus chères et donc plus difficiles", correct: true }, { id: "c", text: "Elles s'arrêtent", correct: false }, { id: "d", text: "Elles ne changent pas", correct: false }] },
+    { id: 2391, type: "SELECT", question: "Que signifie 'le développement durable' ?", options: [{ id: "a", text: "Une croissance rapide et polluante", correct: false }, { id: "b", text: "Une croissance qui respecte l'environnement et le futur", correct: true }, { id: "c", text: "La fin de la technologie", correct: false }, { id: "d", text: "L'achat de vieux produits", correct: false }] },
+    { id: 2392, type: "SELECT", question: "Qu'est-ce qu'un 'paradis fiscal' ?", options: [{ id: "a", text: "Un pays sans soleil", correct: false }, { id: "b", text: "Un pays avec des impôts très bas ou inexistants", correct: true }, { id: "c", text: "Un type de banque en ligne", correct: false }, { id: "d", text: "Une île de vacances gratuite", correct: false }] },
+    { id: 2393, type: "SELECT", question: "Que signifie 'le pouvoir législatif' ?", options: [{ id: "a", text: "Celui qui gouverne", correct: false }, { id: "b", text: "Celui qui vote les lois", correct: true }, { id: "c", text: "Celui qui juge", correct: false }, { id: "d", text: "Celui qui collecte les taxes", correct: false }] },
+    { id: 2394, type: "SELECT", question: "Une économie fleurissante est une économie qui...", options: [{ id: "a", text: "Est en crise", correct: false }, { id: "b", text: "Se développe bien", correct: true }, { id: "c", text: "Est en train de mourir", correct: false }, { id: "d", text: "Est fermée", correct: false }] },
+    { id: 2395, type: "SELECT", question: "Que signifie 'stimuler' l'économie ?", options: [{ id: "a", text: "La ralentir", correct: false }, { id: "b", text: "Prendre des mesures pour encourager la croissance", correct: true }, { id: "c", text: "L'arrêter", correct: false }, { id: "d", text: "La taxer lourdement", correct: false }] },
+    { id: 2396, type: "SELECT", question: "Qu'est-ce que 'l'exode rural' ?", options: [{ id: "a", text: "Le départ des citadins vers la campagne", correct: false }, { id: "b", text: "Le départ des campagnards vers la ville", correct: true }, { id: "c", text: "Le départ vers l'étranger", correct: false }, { id: "d", text: "La fin de l'agriculture", correct: false }] },
+    { id: 2397, type: "SELECT", question: "Que signifie 'le capitalisme' ?", options: [{ id: "a", text: "Système basé sur la propriété privée et le marché", correct: true }, { id: "b", text: "Système où l'État possède tout", correct: false }, { id: "c", text: "Système sans monnaie", correct: false }, { id: "d", text: "Système de pure plantation", correct: false }] },
+    { id: 2398, type: "SELECT", question: "Qu'est-ce qu'une 'prime' ?", options: [{ id: "a", text: "Une amende", correct: false }, { id: "b", text: "Une somme d'argent supplémentaire au salaire", correct: true }, { id: "c", text: "Un type de taxe", correct: false }, { id: "d", text: "Un nouveau prêt", correct: false }] },
+    { id: 2399, type: "SELECT", question: "Que signifie 'faire grève' ?", options: [{ id: "a", text: "Travailler plus", correct: false }, { id: "b", text: "Cesser le travail pour revendiquer des droits", correct: true }, { id: "c", text: "Prendre des vacances", correct: false }, { id: "d", text: "Changer de métier", correct: false }] },
+    { id: 2400, type: "SELECT", question: "Qu'est-ce que 'la redistribution' ?", options: [{ id: "a", text: "Donner tout son argent aux banques", correct: false }, { id: "b", text: "Répartir une partie des richesses via les aides sociales", correct: true }, { id: "c", text: "Tout vendre au marché", correct: false }, { id: "d", text: "Voter pour une nouvelle loi", correct: false }] }
+];
+
+const unit390Quiz1: Question[] = [
+    { id: 2401, type: "SELECT", question: "'Le réchauffement climatique' ne demek?", options: [{ id: "a", text: "İklim ısınması", correct: true }, { id: "b", text: "İklim değişikliği", correct: false }, { id: "c", text: "Hava durumu", correct: false }, { id: "d", text: "Doğa koruma", correct: false }] },
+    { id: 2402, type: "SELECT", question: "'La biodiversité' ne demek?", options: [{ id: "a", text: "Biyoçeşitlilik", correct: true }, { id: "b", text: "Biyolojik savaş", correct: false }, { id: "c", text: "Doğa hayatı", correct: false }, { id: "d", text: "Çevre kirliliği", correct: false }] },
+    { id: 2403, type: "SELECT", question: "'L'énergie renouvelable' ne demek?", options: [{ id: "a", text: "Yenilenebilir enerji", correct: true }, { id: "b", text: "Nükleer enerji", correct: false }, { id: "c", text: "Elektrik enerjisi", correct: false }, { id: "d", text: "Güneş enerjisi", correct: false }] },
+    { id: 2404, type: "SELECT", question: "'La pollution' ne demek?", options: [{ id: "a", text: "Kirlilik", correct: true }, { id: "b", text: "Temizlik", correct: false }, { id: "c", text: "Gürültü", correct: false }, { id: "d", text: "Kalabalık", correct: false }] },
+    { id: 2405, type: "SELECT", question: "'Le média' ne demek?", options: [{ id: "a", text: "Medya", correct: true }, { id: "b", text: "Gazete", correct: false }, { id: "c", text: "Haber", correct: false }, { id: "d", text: "İletişim", correct: false }] },
+    { id: 2406, type: "SELECT", question: "'La publicité' ne demek?", options: [{ id: "a", text: "Reklam", correct: true }, { id: "b", text: "Gazete", correct: false }, { id: "c", text: "Dergi", correct: false }, { id: "d", text: "Televizyon", correct: false }] },
+    { id: 2407, type: "SELECT", question: "'Le réseau social' ne demek?", options: [{ id: "a", text: "Sosyal ağ", correct: true }, { id: "b", text: "Sosyal hayat", correct: false }, { id: "c", text: "Sosyal yardım", correct: false }, { id: "d", text: "Sosyal medya", correct: false }] },
+    { id: 2408, type: "SELECT", question: "'La presse' ne demek?", options: [{ id: "a", text: "Basın", correct: true }, { id: "b", text: "Baskı", correct: false }, { id: "c", text: "Haber", correct: false }, { id: "d", text: "Dergi", correct: false }] },
+    { id: 2409, type: "SELECT", question: "'La justice' ne demek?", options: [{ id: "a", text: "Adalet", correct: true }, { id: "b", text: "Yasa", correct: false }, { id: "c", text: "Mahkeme", correct: false }, { id: "d", text: "Hakim", correct: false }] },
+    { id: 2410, type: "SELECT", question: "'La loi' ne demek?", options: [{ id: "a", text: "Yasa/Kanun", correct: true }, { id: "b", text: "Kural", correct: false }, { id: "c", text: "Dava", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 2411, type: "SELECT", question: "'Le procès' ne demek?", options: [{ id: "a", text: "Dava/Duruşma", correct: true }, { id: "b", text: "Süreç", correct: false }, { id: "c", text: "Karar", correct: false }, { id: "d", text: "Tanıklık", correct: false }] },
+    { id: 2412, type: "SELECT", question: "'Le témoin' ne demek?", options: [{ id: "a", text: "Tanık", correct: true }, { id: "b", text: "Sanık", correct: false }, { id: "c", text: "Avukat", correct: false }, { id: "d", text: "Hakim", correct: false }] },
+    { id: 2413, type: "SELECT", question: "'L'avocat' ne demek?", options: [{ id: "a", text: "Avukat", correct: true }, { id: "b", text: "Hakim", correct: false }, { id: "c", text: "Savcı", correct: false }, { id: "d", text: "Polis", correct: false }] },
+    { id: 2414, type: "SELECT", question: "'L'égalité' ne demek?", options: [{ id: "a", text: "Eşitlik", correct: true }, { id: "b", text: "Özgürlük", correct: false }, { id: "c", text: "Adalet", correct: false }, { id: "d", text: "Barış", correct: false }] },
+    { id: 2415, type: "SELECT", question: "'La liberté' ne demek?", options: [{ id: "a", text: "Özgürlük", correct: true }, { id: "b", text: "Eşitlik", correct: false }, { id: "c", text: "Kardeşlik", correct: false }, { id: "d", text: "Huzur", correct: false }] },
+    { id: 2416, type: "SELECT", question: "'Le citoyen' ne demek?", options: [{ id: "a", text: "Vatandaş", correct: true }, { id: "b", text: "Yabancı", correct: false }, { id: "c", text: "Asker", correct: false }, { id: "d", text: "Politikacı", correct: false }] },
+    { id: 2417, type: "SELECT", question: "'La solidarité' ne demek?", options: [{ id: "a", text: "Dayanışma", correct: true }, { id: "b", text: "Yalnızlık", correct: false }, { id: "c", text: "Yardım", correct: false }, { id: "d", text: "Destek", correct: false }] },
+    { id: 2418, type: "SELECT", question: "'L'économie' ne demek?", options: [{ id: "a", text: "Ekonomi", correct: true }, { id: "b", text: "Ticaret", correct: false }, { id: "c", text: "Piyasa", correct: false }, { id: "d", text: "Para", correct: false }] },
+    { id: 2419, type: "SELECT", question: "'La croissance' ne demek?", options: [{ id: "a", text: "Büyüme", correct: true }, { id: "b", text: "Gelişme", correct: false }, { id: "c", text: "Artış", correct: false }, { id: "d", text: "İlerleme", correct: false }] },
+    { id: 2420, type: "SELECT", question: "'L'inflation' ne demek?", options: [{ id: "a", text: "Enflasyon", correct: true }, { id: "b", text: "Zam", correct: false }, { id: "c", text: "Fiyat", correct: false }, { id: "d", text: "Değer", correct: false }] }
+];
+const unit390Quiz2: Question[] = [
+    { id: 2421, type: "SELECT", question: "Hangi cümle Subjonctif yapısındadır?", options: [{ id: "a", text: "Il faut que tu fasses tes devoirs.", correct: true }, { id: "b", text: "Tu fais tes devoirs.", correct: false }, { id: "c", text: "Tu as fait tes devoirs.", correct: false }, { id: "d", text: "Tu feras tes devoirs.", correct: false }] },
+    { id: 2422, type: "SELECT", question: "'Je veux que vous ___ (venir).'", options: [{ id: "a", text: "veniez", correct: true }, { id: "b", text: "venez", correct: false }, { id: "c", text: "viennent", correct: false }, { id: "d", text: "viendrez", correct: false }] },
+    { id: 2423, type: "SELECT", question: "'Il est possible qu'il ___ (pleuvoir).'", options: [{ id: "a", text: "pleuve", correct: true }, { id: "b", text: "pleut", correct: false }, { id: "c", text: "pleuvra", correct: false }, { id: "d", text: "plu", correct: false }] },
+    { id: 2424, type: "SELECT", question: "Hangi cümle pasif (edilgen) yapıdadır?", options: [{ id: "a", text: "La loi est votée par le Parlement.", correct: true }, { id: "b", text: "Le Parlement vote la loi.", correct: false }, { id: "c", text: "Le Parlement a voté la loi.", correct: false }, { id: "d", text: "La loi changera.", correct: false }] },
+    { id: 2425, type: "SELECT", question: "'Si j'étais riche, je ___ (voyager) beaucoup.'", options: [{ id: "a", text: "voyagerais", correct: true }, { id: "b", text: "voyage", correct: false }, { id: "c", text: "voyagerai", correct: false }, { id: "d", text: "voyageais", correct: false }] },
+    { id: 2426, type: "SELECT", question: "'Bien que' bağlacından sonra ne gelir?", options: [{ id: "a", text: "Subjonctif", correct: true }, { id: "b", text: "Indicatif", correct: false }, { id: "c", text: "Conditionnel", correct: false }, { id: "d", text: "Infinitif", correct: false }] },
+    { id: 2427, type: "SELECT", question: "'Quoique' ne demek?", options: [{ id: "a", text: "Her ne kadar", correct: true }, { id: "b", text: "Çünkü", correct: false }, { id: "c", text: "Bu yüzden", correct: false }, { id: "d", text: "Böylece", correct: false }] },
+    { id: 2428, type: "SELECT", question: "'Afin que' bağlacından sonra ne gelir?", options: [{ id: "a", text: "Subjonctif", correct: true }, { id: "b", text: "Indicatif", correct: false }, { id: "c", text: "Conditionnel", correct: false }, { id: "d", text: "Participe Présent", correct: false }] },
+    { id: 2429, type: "SELECT", question: "Hangi kelime bir amaç bildirir?", options: [{ id: "a", text: "Pour que", correct: true }, { id: "b", text: "Parce que", correct: false }, { id: "c", text: "Car", correct: false }, { id: "d", text: "Alors", correct: false }] },
+    { id: 2430, type: "SELECT", question: "Hangi kelime bir karşıtlık bildirir?", options: [{ id: "a", text: "Malgré", correct: true }, { id: "b", text: "Parce que", correct: false }, { id: "c", text: "Donc", correct: false }, { id: "d", text: "Puisque", correct: false }] },
+    { id: 2431, type: "SELECT", question: "'Je doute qu'elle ___ (réussir).'", options: [{ id: "a", text: "réussisse", correct: true }, { id: "b", text: "réussit", correct: false }, { id: "c", text: "réussira", correct: false }, { id: "d", text: "réussi", correct: false }] },
+    { id: 2432, type: "SELECT", question: "'Il semble que vous ___ (avoir) raison.'", options: [{ id: "a", text: "ayez", correct: true }, { id: "b", text: "avez", correct: false }, { id: "c", text: "auriez", correct: false }, { id: "d", text: "aviez", correct: false }] },
+    { id: 2433, type: "SELECT", question: "'Avant que' bağlacından sonra hangisi gelir?", options: [{ id: "a", text: "tu partas", correct: false }, { id: "b", text: "tu partes", correct: true }, { id: "c", text: "tu pars", correct: false }, { id: "d", text: "tu partira", correct: false }] },
+    { id: 2434, type: "SELECT", question: "Hangi yapı bir varsayım bildirir?", options: [{ id: "a", text: "Conditionnel", correct: true }, { id: "b", text: "Futur Proche", correct: false }, { id: "c", text: "Passé Composé", correct: false }, { id: "d", text: "Présent", correct: false }] },
+    { id: 2435, type: "SELECT", question: "'Si tu ___ (travailler), tu réussirais.'", options: [{ id: "a", text: "travaillais", correct: true }, { id: "b", text: "travailles", correct: false }, { id: "c", text: "travailleras", correct: false }, { id: "d", text: "travaillé", correct: false }] },
+    { id: 2436, type: "SELECT", question: "'Il est important que nous ___ (être) là.'", options: [{ id: "a", text: "soyons", correct: true }, { id: "b", text: "sommes", correct: false }, { id: "c", text: "serons", correct: false }, { id: "d", text: "serions", correct: false }] },
+    { id: 2437, type: "SELECT", question: "'Je ne pense pas qu'il ___ (savoir).'", options: [{ id: "a", text: "sache", correct: true }, { id: "b", text: "sait", correct: false }, { id: "c", text: "saura", correct: false }, { id: "d", text: "su", correct: false }] },
+    { id: 2438, type: "SELECT", question: "'Dès que' bağlacından sonra genellikle ne gelir?", options: [{ id: "a", text: "Indicatif (Futur/Présent)", correct: true }, { id: "b", text: "Subjonctif", correct: false }, { id: "c", text: "Conditionnel", correct: false }, { id: "d", text: "Infinitif", correct: false }] },
+    { id: 2439, type: "SELECT", question: "Hangi kelime bir sonuç bildirir?", options: [{ id: "a", text: "Par conséquent", correct: true }, { id: "b", text: "Puisque", correct: false }, { id: "c", text: "Bien que", correct: false }, { id: "d", text: "Si", correct: false }] },
+    { id: 2440, type: "SELECT", question: "'En attendant que' ne demek?", options: [{ id: "a", text: "... olana kadar", correct: true }, { id: "b", text: "Çünkü", correct: false }, { id: "c", text: "Eğer", correct: false }, { id: "d", text: "Böylece", correct: false }] }
+];
+const unit390Quiz3: Question[] = [
+    { id: 2441, type: "SELECT", question: "La protection de ___ est l'affaire de tous.", options: [{ id: "a", text: "la nature", correct: true }, { id: "b", text: "la voiture", correct: false }, { id: "c", text: "la télé", correct: false }, { id: "d", text: "la banque", correct: false }] },
+    { id: 2442, type: "SELECT", question: "Une source d'information n'est pas toujours ___.", options: [{ id: "a", text: "fiable", correct: true }, { id: "b", text: "grande", correct: false }, { id: "c", text: "belle", correct: false }, { id: "d", text: "rapide", correct: false }] },
+    { id: 2443, type: "SELECT", question: "La liberté d'___ est un droit fondamental.", options: [{ id: "a", text: "expression", correct: true }, { id: "b", text: "impression", correct: false }, { id: "c", text: "vitesse", correct: false }, { id: "d", text: "danse", correct: false }] },
+    { id: 2444, type: "SELECT", question: "Les fake news sont des ___ nouvelles.", options: [{ id: "a", text: "fausses", correct: true }, { id: "b", text: "bonnes", correct: false }, { id: "c", text: "vieilles", correct: false }, { id: "d", text: "longues", correct: false }] },
+    { id: 2445, type: "SELECT", question: "La solidarité est nécessaire en cas de ___.", options: [{ id: "a", text: "crise", correct: true }, { id: "b", text: "fête", correct: false }, { id: "c", text: "vacances", correct: false }, { id: "d", text: "succès", correct: false }] },
+    { id: 2446, type: "SELECT", question: "Réduire son empreinte ___ aide la planète.", options: [{ id: "a", text: "carbone", correct: true }, { id: "b", text: "de chaussure", correct: false }, { id: "c", text: "digitale", correct: false }, { id: "d", text: "bleue", correct: false }] },
+    { id: 2447, type: "SELECT", question: "La justice doit être ___ pour tous.", options: [{ id: "a", text: "la même", correct: true }, { id: "b", text: "différente", correct: false }, { id: "c", text: "chère", correct: false }, { id: "d", text: "lente", correct: false }] },
+    { id: 2448, type: "SELECT", question: "Le chômage touche particulièrement les ___.", options: [{ id: "a", text: "jeunes", correct: true }, { id: "b", text: "arbres", correct: false }, { id: "c", text: "chats", correct: false }, { id: "d", text: "montagnes", correct: false }] },
+    { id: 2449, type: "SELECT", question: "Nous devons ___ nos déchets.", options: [{ id: "a", text: "trier", correct: true }, { id: "b", text: "manger", correct: false }, { id: "c", text: "cacher", correct: false }, { id: "d", text: "perdre", correct: false }] },
+    { id: 2450, type: "SELECT", question: "L'égalité des ___ est un objectif social.", options: [{ id: "a", text: "chances", correct: true }, { id: "b", text: "nuages", correct: false }, { id: "c", text: "kilomètres", correct: false }, { id: "d", text: "prix", correct: false }] },
+    { id: 2451, type: "SELECT", question: "La presse influence l'opinion ___.", options: [{ id: "a", text: "publique", correct: true }, { id: "b", text: "privée", correct: false }, { id: "c", text: "secrète", correct: false }, { id: "d", text: "cachée", correct: false }] },
+    { id: 2452, type: "SELECT", question: "Le citoyen dispose du droit de ___.", options: [{ id: "a", text: "vote", correct: true }, { id: "b", text: "voler", correct: false }, { id: "c", text: "dormir", correct: false }, { id: "d", text: "manger", correct: false }] },
+    { id: 2453, type: "SELECT", question: "La biodiversité est la ___ des espèces.", options: [{ id: "a", text: "diversité", correct: true }, { id: "b", text: "rareté", correct: false }, { id: "c", text: "fin", correct: false }, { id: "d", text: "mort", correct: false }] },
+    { id: 2454, type: "SELECT", question: "L'énergie ___ ne pollue pas.", options: [{ id: "a", text: "propre", correct: true }, { id: "b", text: "sale", correct: false }, { id: "c", text: "noire", correct: false }, { id: "d", text: "vieille", correct: false }] },
+    { id: 2455, type: "SELECT", question: "Le témoin doit dire la ___ au tribunal.", options: [{ id: "a", text: "vérité", correct: true }, { id: "b", text: "blague", correct: false }, { id: "c", text: "chanson", correct: false }, { id: "d", text: "histoire", correct: false }] },
+    { id: 2456, type: "SELECT", question: "L'inflation augmente le coût de la ___.", options: [{ id: "a", text: "vie", correct: true }, { id: "b", text: "mort", correct: false }, { id: "c", text: "mer", correct: false }, { id: "d", text: "terre", correct: false }] },
+    { id: 2457, type: "SELECT", question: "Les syndicats défendent les ___.", options: [{ id: "a", text: "travailleurs", correct: true }, { id: "b", text: "patrons", correct: false }, { id: "c", text: "banques", correct: false }, { id: "d", text: "États", correct: false }] },
+    { id: 2458, type: "SELECT", question: "La croissance verte respecte l'___.", options: [{ id: "a", text: "environnement", correct: true }, { id: "b", text: "argent", correct: false }, { id: "c", text: "vitesse", correct: false }, { id: "d", text: "passé", correct: false }] },
+    { id: 2459, type: "SELECT", question: "Le budget est un plan de ___.", options: [{ id: "a", text: "dépenses", correct: true }, { id: "b", text: "vacances", correct: false }, { id: "c", text: "rêves", correct: false }, { id: "d", text: "chasse", correct: false }] },
+    { id: 2460, type: "SELECT", question: "Il faut lutter contre la ___ rasciale.", options: [{ id: "a", text: "discrimination", correct: true }, { id: "b", text: "collaboration", correct: false }, { id: "c", text: "protection", correct: false }, { id: "d", text: "satisfaction", correct: false }] }
+];
+const unit390Quiz4: Question[] = [
+    { id: 2461, type: "SELECT", question: "Exprimer son opinion: 'À mon ___...'", options: [{ id: "a", text: "avis", correct: true }, { id: "b", text: "yeux", correct: false }, { id: "c", text: "oreilles", correct: false }, { id: "d", text: "main", correct: false }] },
+    { id: 2462, type: "SELECT", question: "Exprimer son opinion: 'Je ___ que...'", options: [{ id: "a", text: "pense", correct: true }, { id: "b", text: "mange", correct: false }, { id: "c", text: "regarde", correct: false }, { id: "d", text: "écoute", correct: false }] },
+    { id: 2463, type: "SELECT", question: "Exprimer une certitude: 'Je suis ___ que...'", options: [{ id: "a", text: "sûr", correct: true }, { id: "b", text: "grand", correct: false }, { id: "c", text: "petit", correct: false }, { id: "d", text: "loin", correct: false }] },
+    { id: 2464, type: "SELECT", question: "Exprimer un doute: 'Je ___ que...'", options: [{ id: "a", text: "doute", correct: true }, { id: "b", text: "vois", correct: false }, { id: "c", text: "marche", correct: false }, { id: "d", text: "bois", correct: false }] },
+    { id: 2465, type: "SELECT", question: "Exprimer une condition: 'Si tu ___ demain...'", options: [{ id: "a", text: "viens", correct: true }, { id: "b", text: "viendras", correct: false }, { id: "c", text: "venais", correct: false }, { id: "d", text: "venez", correct: false }] },
+    { id: 2466, type: "SELECT", question: "Exprimer un souhait: 'Je ___ que tout aille bien.'", options: [{ id: "a", text: "souhaite", correct: true }, { id: "b", text: "regarde", correct: false }, { id: "c", text: "termine", correct: false }, { id: "d", text: "cherche", correct: false }] },
+    { id: 2467, type: "SELECT", question: "Exprimer une obligation: 'Il ___ travailler.'", options: [{ id: "a", text: "faut", correct: true }, { id: "b", text: "veut", correct: false }, { id: "c", text: "peut", correct: false }, { id: "d", text: "sait", correct: false }] },
+    { id: 2468, type: "SELECT", question: "Exprimer une possibilité: 'Il se ___ qu'il vienne.'", options: [{ id: "a", text: "peut", correct: true }, { id: "b", text: "doit", correct: false }, { id: "c", text: "sait", correct: false }, { id: "d", text: "veut", correct: false }] },
+    { id: 2469, type: "SELECT", question: "Exprimer son accord: 'Je suis ___.'", options: [{ id: "a", text: "d'accord", correct: true }, { id: "b", text: "de corps", correct: false }, { id: "c", text: "de bord", correct: false }, { id: "d", text: "de port", correct: false }] },
+    { id: 2470, type: "SELECT", question: "Exprimer son désaccord: 'Je ne suis pas de ton ___.'", options: [{ id: "a", text: "avis", correct: true }, { id: "b", text: "habit", correct: false }, { id: "c", text: "abri", correct: false }, { id: "d", text: "ami", correct: false }] },
+    { id: 2471, type: "SELECT", question: "Évaluer: 'C'est un progrès ___.'", options: [{ id: "a", text: "majeur", correct: true }, { id: "b", text: "vieux", correct: false }, { id: "c", text: "bleu", correct: false }, { id: "d", text: "dur", correct: false }] },
+    { id: 2472, type: "SELECT", question: "Décrire un changement: 'La situation ___.'", options: [{ id: "a", text: "évolue", correct: true }, { id: "b", text: "dort", correct: false }, { id: "c", text: "mange", correct: false }, { id: "d", text: "chante", correct: false }] },
+    { id: 2473, type: "SELECT", question: "Résumer: 'En ___...'", options: [{ id: "a", text: "résumé", correct: true }, { id: "b", text: "sommeil", correct: false }, { id: "c", text: "classe", correct: false }, { id: "d", text: "ville", correct: false }] },
+    { id: 2474, type: "SELECT", question: "Conclure: 'Pour ___...'", options: [{ id: "a", text: "conclure", correct: true }, { id: "b", text: "manger", correct: false }, { id: "c", text: "boire", correct: false }, { id: "d", text: "partir", correct: false }] },
+    { id: 2475, type: "SELECT", question: "Introduction: 'Tout d'___...'", options: [{ id: "a", text: "abord", correct: true }, { id: "b", text: "accord", correct: false }, { id: "c", text: "effort", correct: false }, { id: "d", text: "confort", correct: false }] },
+    { id: 2476, type: "SELECT", question: "Ajout: 'De ___...'", options: [{ id: "a", text: "plus", correct: true }, { id: "b", text: "moins", correct: false }, { id: "c", text: "mieux", correct: false }, { id: "d", text: "pire", correct: false }] },
+    { id: 2477, type: "SELECT", question: "Transition: 'D'un autre ___...'", options: [{ id: "a", text: "côté", correct: true }, { id: "b", text: "mur", correct: false }, { id: "c", text: "dos", correct: false }, { id: "d", text: "lit", correct: false }] },
+    { id: 2478, type: "SELECT", question: "Exemple: 'Par ___...'", options: [{ id: "a", text: "exemple", correct: true }, { id: "b", text: "hasard", correct: false }, { id: "c", text: "cœur", correct: false }, { id: "d", text: "ordre", correct: false }] },
+    { id: 2479, type: "SELECT", question: "Cause: 'À ___ de...'", options: [{ id: "a", text: "cause", correct: true }, { id: "b", text: "chose", correct: false }, { id: "c", text: "pose", correct: false }, { id: "d", text: "dose", correct: false }] },
+    { id: 2480, type: "SELECT", question: "Conséquence: 'C'est pour ___ que...'", options: [{ id: "a", text: "cela", correct: true }, { id: "b", text: "celui", correct: false }, { id: "c", text: "ceux", correct: false }, { id: "d", text: "celles", correct: false }] }
 ];
 
 function shuffle<T>(array: T[], seed: number): T[] {
@@ -3088,6 +3094,29 @@ export function getFrenchB1Quiz(unitId: number, quizIndex: number): Question[] {
         if (quizIndex === 3) return unit387Quiz3;
         if (quizIndex === 4) return unit387Quiz4;
     }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 388
+    if (unitId === 388) {
+        if (quizIndex === 1) return unit388Quiz1;
+        if (quizIndex === 2) return unit388Quiz2;
+        if (quizIndex === 3) return unit388Quiz3;
+        if (quizIndex === 4) return unit388Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 389
+    if (unitId === 389) {
+        if (quizIndex === 1) return unit389Quiz1;
+        if (quizIndex === 2) return unit389Quiz2;
+        if (quizIndex === 3) return unit389Quiz3;
+        if (quizIndex === 4) return unit389Quiz4;
+    }
+    // Return hardcoded, perfectly tailored quizzes for UNIT 390
+    if (unitId === 390) {
+        if (quizIndex === 1) return unit390Quiz1;
+        if (quizIndex === 2) return unit390Quiz2;
+        if (quizIndex === 3) return unit390Quiz3;
+        if (quizIndex === 4) return unit390Quiz4;
+    }
+
+
 
     // Dynamic Generator for rest of the units
     const vocab = getFrB1VocabularyForUnit(unitId);

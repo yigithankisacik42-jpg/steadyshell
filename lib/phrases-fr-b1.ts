@@ -533,7 +533,12 @@ const unit386Phrases: FrenchB1UnitPhrases = {
         { text: "C'est une violation des droits de l'homme.", meaning: "Bu bir insan hakları ihlalidir.", pronunciation: "se tün vi-o-la-syon de dro-a dö lom" },
         { text: "Chaque citoyen a des droits et des devoirs.", meaning: "Her vatandaşın hakları ve görevleri vardır.", pronunciation: "şak si-twa-yen a de dro-a e de dö-vuar" },
         { text: "La manifestation était pacifique.", meaning: "Gösteri barışçıldı.", pronunciation: "la ma-ni-fes-tas-yon e-te pa-si-fik" },
-        { text: "Ils ont signé une pétition pour l'égalité.", meaning: "Eşitlik için bir dilekçe imzaladılar.", pronunciation: "il zon si-nye ün pe-ti-syon pur le-ga-li-te" }
+        { text: "Ils ont signé une pétition pour l'égalité.", meaning: "Eşitlik için bir dilekçe imzaladılar.", pronunciation: "il zon si-nye ün pe-ti-syon pur le-ga-li-te" },
+        { text: "La dignité humaine est inviolable.", meaning: "İnsan onuru dokunulmazdır.", pronunciation: "la di-nyi-te ü-men e en-vyo-labl" },
+        { text: "L'esclavage est interdit dans le monde entier.", meaning: "Kölelik tüm dünyada yasaklanmıştır.", pronunciation: "les-kla-vaj e en-ter-di dan lö mond an-tye" },
+        { text: "Ils revendiquent de meilleures conditions de travail.", meaning: "Daha iyi çalışma koşulları talep ediyorlar.", pronunciation: "il rö-van-dik dö me-yör kon-di-syon dö tra-vay" },
+        { text: "La tolérance est une vertu essentielle.", meaning: "Hoşgörü temel bir erdemdir.", pronunciation: "la to-le-rans e tün ver-tü e-san-syel" },
+        { text: "La Convention européenne protège nos droits.", meaning: "Avrupa Sözleşmesi haklarımızı korur.", pronunciation: "la kon-van-syon ö-ro-pe-en pro-tej no dro-a" }
     ]
 };
 
@@ -550,7 +555,56 @@ const unit387Phrases: FrenchB1UnitPhrases = {
         { text: "Je consacre mon temps libre aux autres.", meaning: "Boş zamanımı başkalarına adıyorum.", pronunciation: "jö kon-sakr mon tan libr o zotr" },
         { text: "L'association cherche de nouveaux membres.", meaning: "Dernek yeni üyeler arıyor.", pronunciation: "la-so-sya-syon şerş dö nu-vo mambr" },
         { text: "N'hésitez pas à faire un don.", meaning: "Bağış yapmaktan çekinmeyin.", pronunciation: "ne-zi-te pa a fer un don" },
-        { text: "La solidarité nous rend plus forts.", meaning: "Dayanışma bizi daha güçlü kılar.", pronunciation: "la so-li-da-ri-te nu ran plü for" }
+        { text: "La solidarité nous rend plus forts.", meaning: "Dayanışma bizi daha güçlü kılar.", pronunciation: "la so-li-da-ri-te nu ran plü for" },
+        { text: "La collecte de fonds a été un succès.", meaning: "Bağış toplama kampanyası başarılı oldu.", pronunciation: "la ko-lekt dö fon a e-te un sük-se" },
+        { text: "Le don du sang sauve des vies.", meaning: "Kan bağışı hayat kurtarır.", pronunciation: "lö don dü san sov de vi" },
+        { text: "L'action sociale est au cœur de notre mission.", meaning: "Sosyal faaliyet misyonumuzun merkezindedir.", pronunciation: "lak-syon so-syal e o kör dö notr mi-syon" },
+        { text: "Les bénéficiaires reçoivent de l'aide chaque semaine.", meaning: "Yararlanıcılar her hafta yardım alıyor.", pronunciation: "le be-ne-fi-syer rö-suav dö led şak sö-men" },
+        { text: "L'entraide est la base du vivre-ensemble.", meaning: "Karşılıklı yardımlaşma birlikte yaşamanın temelidir.", pronunciation: "lan-tred e la baz dü vivr an-sambl" }
+    ]
+};
+
+const unit388Phrases: FrenchB1UnitPhrases = {
+    unitId: 388,
+    title: "Göç ve Mülteciler",
+    phrases: [
+        { text: "Ils ont dû fuir leur pays.", meaning: "Ülkelerinden kaçmak zorunda kaldılar.", pronunciation: "il zon dü füir lör pe-i" },
+        { text: "L'intégration demande du temps et de la patience.", meaning: "Uyum zaman ve sabır gerektirir.", pronunciation: "len-te-gra-syon dö-mand dü tan e dö la pa-syans" },
+        { text: "La diversité est une force pour la société.", meaning: "Çeşitlilik toplum için bir güçtür.", pronunciation: "la di-ver-si-te e tün fors pur la so-sye-te" },
+        { text: "Nous devons accueillir les réfugiés avec dignité.", meaning: "Mültecileri onurlu bir şekilde karşılamalıyız.", pronunciation: "nu dö-von a-kö-yir le re-fü-je a-vek di-nyi-te" },
+        { text: "Le pays d'accueil offre de nouvelles opportunités.", meaning: "Ev sahibi ülke yeni fırsatlar sunar.", pronunciation: "lö pe-i da-köy ofr dö nu-vel o-por-tü-ni-te" },
+        { text: "S'adapter à une nouvelle culture n'est pas facile.", meaning: "Yeni bir kültüre uyum sağlamak kolay değildir.", pronunciation: "sa-dap-te a ün nu-vel kül-tür ne pa fa-sil" },
+        { text: "La solidarité est la clé de l'intégration.", meaning: "Dayanışma uyumun anahtarıdır.", pronunciation: "la so-li-da-ri-te e la kle dö len-te-gra-syon" },
+        { text: "Chaque personne mérite une seconde chance.", meaning: "Herkes ikinci bir şansı hak eder.", pronunciation: "şak per-son me-rit ün sö-gond şans" },
+        { text: "Ils ont traversé la frontière à pied.", meaning: "Sınırı yürüyerek geçtiler.", pronunciation: "il zon tra-ver-se la fron-tyər a pye" },
+        { text: "L'immigration enrichit notre société.", meaning: "Göç toplumumuzu zenginleştirir.", pronunciation: "li-mi-gra-syon an-ri-şi notr so-sye-te" },
+        { text: "Le demandeur d'asile attend la réponse depuis des mois.", meaning: "Sığınmacı aylardır cevap bekliyor.", pronunciation: "lö dö-man-dör da-zil a-tan la re-pons dö-pü de mua" },
+        { text: "La naturalisation est un processus long.", meaning: "Vatandaşlığa geçiş uzun bir süreçtir.", pronunciation: "la na-tü-ra-li-za-syon e un pro-se-süs lon" },
+        { text: "Le multiculturalisme enrichit les sociétés modernes.", meaning: "Çokkültürlülük modern toplumları zenginleştirir.", pronunciation: "lö mül-ti-kül-tü-ra-lism an-ri-şi le so-sye-te mo-dern" },
+        { text: "Il faut un visa pour entrer dans ce pays.", meaning: "Bu ülkeye girmek için vize gerekir.", pronunciation: "il fo un vi-za pur an-tre dan sö pe-i" },
+        { text: "La double culture est une véritable richesse.", meaning: "Çift kültürlülük gerçek bir zenginliktir.", pronunciation: "la dubl kül-tür e ün ve-ri-tabl ri-şes" }
+    ]
+};
+
+const unit389Phrases: FrenchB1UnitPhrases = {
+    unitId: 389,
+    title: "Ekonomik Sorunlar",
+    phrases: [
+        { text: "L'économie mondiale connaît des changements importants.", meaning: "Dünya ekonomisi önemli değişimler yaşıyor.", pronunciation: "le-ko-no-mi mon-dyal ko-ne de şanj-man an-por-tan" },
+        { text: "Le gouvernement a annoncé de nouvelles mesures fiscales.", meaning: "Hükümet yeni vergi önlemleri açıkladı.", pronunciation: "lö gu-ver-nö-man a a-non-se dö nu-vel mö-zür fis-kal" },
+        { text: "Il est difficile de joindre les deux bouts avec l'inflation.", meaning: "Enflasyonla birlikte ayı sonunu getirmek (iki yakayı bir araya getirmek) zor.", pronunciation: "i-le di-fi-sil dö jwan-dr le dö bu a-vek lan-fla-syon" },
+        { text: "Les prix à la consommation ont augmenté rapidement.", meaning: "Tüketici fiyatları hızla arttı.", pronunciation: "le pri a la kon-so-ma-syon on tog-man-te ra-pid-man" },
+        { text: "Le chômage des jeunes reste une priorité politique.", meaning: "Genç işsizliği bir siyasi öncelik olmaya devam ediyor.", pronunciation: "lö şo-maj de jön rest ün pri-o-ri-te po-li-tik" },
+        { text: "Investir en bourse comporte toujours des risques.", meaning: "Borsaya yatırım yapmak her zaman riskler içerir.", pronunciation: "an-ves-tir an burs kon-port tu-jur de risk" },
+        { text: "La banque a refusé ma demande de prêt immobilier.", meaning: "Banka konut kredisi talebimi reddetti.", pronunciation: "la bank a rö-fü-ze ma dö-mand dö pre i-mo-bi-lye" },
+        { text: "Le pouvoir d'achat est au cœur des débats actuels.", meaning: "Alım gücü güncel tartışmaların merkezinde.", pronunciation: "lö pu-vuar da-şa e o kör de de-ba ak-tü-el" },
+        { text: "La croissance verte est l'avenir de notre société.", meaning: "Yeşil büyüme toplumumuzun geleceğidir.", pronunciation: "la krua-sans vert e la-vö-nir dö notr so-sye-te" },
+        { text: "Il faut réduire la dette publique pour les générations futures.", meaning: "Gelecek nesiller için kamu borcunu azaltmak gerekir.", pronunciation: "il fo re-dü-ir la det pü-blik pur le je-ne-ra-syon fü-tür" },
+        { text: "La concurrence internationale est de plus en plus forte.", meaning: "Uluslararası rekabet giderek daha güçlü hale geliyor.", pronunciation: "la kon-kü-rans an-ter-na-syo-nal e dö plü zan plü fort" },
+        { text: "Le secteur des services représente une grande part du PIB.", meaning: "Hizmet sektörü GSYİH'nın büyük bir kısmını temsil ediyor.", pronunciation: "lö sek-tör de ser-vis rö-pre-zant ün grand par dü pe-i-be" },
+        { text: "Les syndicats appellent à une manifestation nationale.", meaning: "Sendikalar ulusal bir gösteri çağrısında bulunuyor.", pronunciation: "le sen-di-ka a-pel a ün ma-ni-fes-ta-syon na-syo-nal" },
+        { text: "Les subventions aident les agriculteurs à moderniser leur matériel.", meaning: "Sübvansiyonlar çiftçilerin ekipmanlarını modernize etmelerine yardımcı oluyor.", pronunciation: "le süb-van-syon ed le za-gri-kül-tör a mo-der-ni-ze lör ma-te-ryel" },
+        { text: "Le commerce extérieur est essentiel pour la richesse du pays.", meaning: "Dış ticaret ülkenin zenginliği için elzemdir.", pronunciation: "lö ko-mers eks-te-ryör e te-san-syel pur la ri-şes dü pe-i" }
     ]
 };
 
@@ -582,7 +636,9 @@ export function getFrB1PhrasesForUnit(unitId: number): FrenchB1Phrase[] {
         384: unit384Phrases,
         385: unit385Phrases,
         386: unit386Phrases,
-        387: unit387Phrases
+        387: unit387Phrases,
+        388: unit388Phrases,
+        389: unit389Phrases
     };
     return idMapping[unitId]?.phrases || unit361Phrases.phrases;
 }

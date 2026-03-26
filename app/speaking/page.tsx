@@ -33,6 +33,7 @@ function SpeakingContent() {
     const [isRecording, setIsRecording] = useState(false);
     const [recordedText, setRecordedText] = useState<string | null>(null);
     const [status, setStatus] = useState<"idle" | "recording" | "success" | "retry">("idle");
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     const [isFinished, setIsFinished] = useState(false);
 
@@ -110,6 +111,7 @@ function SpeakingContent() {
         setIsRecording(true);
         setStatus("recording");
         setRecordedText(null);
+        setErrorMessage(null);
 
         // Web Speech Recognition
         const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
@@ -117,20 +119,24 @@ function SpeakingContent() {
         if (SpeechRecognition) {
             const recognition = new SpeechRecognition();
             recognition.lang = languageCode;
-            recognition.continuous = false;
-            recognition.interimResults = false;
+            recognition.continuous = true;       // Sürekli dinleme modu
+            recognition.interimResults = true;    // Ara sonuçları da al
+            recognition.maxAlternatives = 3;      // Daha iyi tanıma
 
-            recognition.onresult = (event: any) => {
-                const transcript = event.results[0][0].transcript;
+            let hasResult = false;
+            let bestTranscript = '';
+            let autoStopTimer: NodeJS.Timeout | null = null;
+
+            // Temizlenmiş metinler (noktalama ve özel karakterleri kaldır)
+            const cleanText = (text: string) =>
+                text.toLowerCase()
+                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // aksanları kaldır
+                    .replace(/[¿¡?!.,;:'"()]/g, "") // noktalama
+                    .trim();
+
+            const evaluateResult = (transcript: string) => {
                 setRecordedText(transcript);
                 setIsRecording(false);
-
-                // Temizlenmiş metinler (noktalama ve özel karakterleri kaldır)
-                const cleanText = (text: string) =>
-                    text.toLowerCase()
-                        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // aksanları kaldır
-                        .replace(/[¿¡?!.,;:'"()]/g, "") // noktalama
-                        .trim();
 
                 const userSpeech = cleanText(transcript);
                 const expectedSpeech = cleanText(exercise.text);
@@ -147,10 +153,8 @@ function SpeakingContent() {
                 const matchRatio = matchedWords / Math.max(expectedWords.length, 1);
 
                 if (exercise.type === "repeat") {
-                    // %50 üzeri benzerlik = başarılı (esnek karşılaştırma)
                     setStatus(matchRatio >= 0.5 ? "success" : "retry");
                 } else if (exercise.type === "respond" && exercise.expectedKeywords) {
-                    // Cevap tipinde anahtar kelime kontrolü
                     const hasKeyword = exercise.expectedKeywords.some(kw =>
                         userSpeech.includes(cleanText(kw))
                     );
@@ -160,23 +164,85 @@ function SpeakingContent() {
                 }
             };
 
-            recognition.onerror = () => {
+            recognition.onresult = (event: any) => {
+                hasResult = true;
+                let finalTranscript = '';
+                let interimTranscript = '';
+
+                for (let i = 0; i < event.results.length; i++) {
+                    if (event.results[i].isFinal) {
+                        finalTranscript += event.results[i][0].transcript;
+                    } else {
+                        interimTranscript += event.results[i][0].transcript;
+                    }
+                }
+
+                // Canlı olarak ara sonucu göster
+                const currentText = finalTranscript || interimTranscript;
+                if (currentText) {
+                    bestTranscript = currentText;
+                    setRecordedText(currentText);
+                }
+
+                // Final sonuç geldiğinde değerlendir ve durdur
+                if (finalTranscript) {
+                    if (autoStopTimer) clearTimeout(autoStopTimer);
+                    try { recognition.stop(); } catch(e) { /* ignore */ }
+                    evaluateResult(finalTranscript);
+                }
+            };
+
+            recognition.onerror = (event: any) => {
+                console.error('Speech recognition error:', event.error);
+                if (autoStopTimer) clearTimeout(autoStopTimer);
+
+                if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
+                    setErrorMessage('Mikrofon izni gerekli. Tarayıcı ayarlarından mikrofon iznini verin.');
+                } else if (event.error === 'no-speech') {
+                    setErrorMessage('Ses algılanamadı. Mikrofona yakın konuşmayı deneyin.');
+                } else if (event.error === 'audio-capture') {
+                    setErrorMessage('Mikrofon bulunamadı. Mikrofon bağlı olduğundan emin olun.');
+                } else if (event.error === 'network') {
+                    setErrorMessage('İnternet bağlantısı gerekli. Bağlantınızı kontrol edin.');
+                } else {
+                    setErrorMessage('Ses tanıma hatası: ' + event.error);
+                }
+
                 setIsRecording(false);
                 setStatus("retry");
             };
 
             recognition.onend = () => {
+                if (autoStopTimer) clearTimeout(autoStopTimer);
+
+                // Eğer henüz sonuç değerlendirilmediyse
+                if (isRecording || status === "recording") {
+                    if (hasResult && bestTranscript) {
+                        // Ara sonuç vardı ama final gelmedi, en iyi sonucu değerlendir
+                        evaluateResult(bestTranscript);
+                    } else if (!hasResult) {
+                        // Hiç sonuç alınamadı
+                        setErrorMessage('Ses algılanamadı. Mikrofona yakından ve net konuşmayı deneyin.');
+                        setIsRecording(false);
+                        setStatus("retry");
+                    }
+                }
+
                 setIsRecording(false);
             };
 
             recognition.start();
+
+            // 8 saniye sonra otomatik durdur
+            autoStopTimer = setTimeout(() => {
+                try { recognition.stop(); } catch(e) { /* ignore */ }
+            }, 8000);
+
         } else {
             // Fallback - tarayıcı desteklemiyorsa
-            setTimeout(() => {
-                setIsRecording(false);
-                setRecordedText("(Ses tanıma desteklenmiyor - simülasyon)");
-                setStatus("success");
-            }, 2000);
+            setErrorMessage('Tarayıcınız ses tanımayı desteklemiyor. Lütfen Chrome veya Edge kullanın.');
+            setIsRecording(false);
+            setStatus("retry");
         }
     };
 
@@ -193,6 +259,7 @@ function SpeakingContent() {
     const handleRetry = () => {
         setStatus("idle");
         setRecordedText(null);
+        setErrorMessage(null);
     };
 
     return (
@@ -285,11 +352,18 @@ function SpeakingContent() {
                             </button>
 
                             <p className="text-slate-500 font-medium text-center">
-                                {isRecording && "Dinliyorum..."}
+                                {isRecording && "🎤 Dinliyorum... Konuşmaya başlayın"}
                                 {status === "idle" && "Konuşmak için mikrofona dokun"}
                                 {status === "success" && "Harika! 🎉"}
-                                {status === "retry" && "Tekrar deneyelim!"}
+                                {status === "retry" && (errorMessage || "Tekrar deneyelim!")}
                             </p>
+
+                            {/* Hata Mesajı */}
+                            {errorMessage && status === "retry" && (
+                                <div className="mt-2 p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-600 text-sm text-center">
+                                    ⚠️ {errorMessage}
+                                </div>
+                            )}
 
                             {/* Kaydedilen Metin */}
                             {recordedText && (

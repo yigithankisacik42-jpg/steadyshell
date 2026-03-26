@@ -872,7 +872,25 @@ const unit386Vocab: UnitVocabularyFrB1 = {
         { word: "Le réfugié", meaning: "Mülteci", example: "Les réfugiés fuient la guerre.", exampleTranslation: "Mülteciler savaştan kaçıyor.", pronunciation: "re-fü-je" },
         { word: "Le droit de vote", meaning: "Oy hakkı", example: "Le droit de vote est un pilier de la démocratie.", exampleTranslation: "Oy hakkı demokrasinin bir direğidir.", pronunciation: "dro-a dö vot" },
         { word: "Protéger", meaning: "Korumak", example: "L'État doit protéger les plus vulnérables.", exampleTranslation: "Devlet en savunmasızları korumalıdır.", pronunciation: "pro-te-je" },
-        { word: "Manifester", meaning: "Gösteri yapmak / Protesto etmek", example: "Les étudiants vont manifester demain.", exampleTranslation: "Öğrenciler yarın gösteri yapacaklar.", pronunciation: "ma-ni-fes-te" }
+        { word: "Manifester", meaning: "Gösteri yapmak / Protesto etmek", example: "Les étudiants vont manifester demain.", exampleTranslation: "Öğrenciler yarın gösteri yapacaklar.", pronunciation: "ma-ni-fes-te" },
+        { word: "La Déclaration universelle", meaning: "Evrensel Beyanname", example: "La Déclaration universelle des droits de l'homme a été adoptée en 1948.", exampleTranslation: "İnsan Hakları Evrensel Beyannamesi 1948'de kabul edildi.", pronunciation: "la de-kla-ra-syon ü-ni-ver-sel" },
+        { word: "La dignité", meaning: "Onur / Haysiyet", example: "Chaque personne a droit à la dignité.", exampleTranslation: "Herkesin onur hakkı vardır.", pronunciation: "la di-nyi-te" },
+        { word: "L'esclavage (m)", meaning: "Kölelik", example: "L'esclavage est interdit dans le monde entier.", exampleTranslation: "Kölelik tüm dünyada yasaklanmıştır.", pronunciation: "les-kla-vaj" },
+        { word: "La torture", meaning: "İşkence", example: "La torture est une violation grave des droits.", exampleTranslation: "İşkence hakların ciddi bir ihlalidir.", pronunciation: "la tor-tür" },
+        { word: "L'asile (m)", meaning: "Sığınma", example: "Ils ont demandé l'asile politique.", exampleTranslation: "Siyasi sığınma talebinde bulundular.", pronunciation: "la-zil" },
+        { word: "La pétition", meaning: "Dilekçe / İmza kampanyası", example: "Ils ont signé une pétition pour l'égalité.", exampleTranslation: "Eşitlik için dilekçe imzaladılar.", pronunciation: "la pe-ti-syon" },
+        { word: "L'oppression (f)", meaning: "Baskı / Zulüm", example: "L'oppression est contraire aux droits humains.", exampleTranslation: "Baskı insan haklarına aykırıdır.", pronunciation: "lo-pre-syon" },
+        { word: "La solidarité", meaning: "Dayanışma", example: "La solidarité est essentielle pour la paix.", exampleTranslation: "Dayanışma barış için elzemdir.", pronunciation: "la so-li-da-ri-te" },
+        { word: "Le droit d'asile", meaning: "Sığınma hakkı", example: "Le droit d'asile est un droit fondamental.", exampleTranslation: "Sığınma hakkı temel bir haktır.", pronunciation: "lö dro-a da-zil" },
+        { word: "Défendre", meaning: "Savunmak", example: "Nous devons défendre les droits des enfants.", exampleTranslation: "Çocukların haklarını savunmalıyız.", pronunciation: "de-fandr" },
+        { word: "Violer (un droit)", meaning: "İhlal etmek", example: "Certains pays violent les droits de l'homme.", exampleTranslation: "Bazı ülkeler insan haklarını ihlal ediyor.", pronunciation: "vyo-le" },
+        { word: "La tolérance", meaning: "Hoşgörü", example: "La tolérance est une valeur importante.", exampleTranslation: "Hoşgörü önemli bir değerdir.", pronunciation: "la to-le-rans" },
+        { word: "Le respect", meaning: "Saygı", example: "Le respect mutuel est la base de la société.", exampleTranslation: "Karşılıklı saygı toplumun temelidir.", pronunciation: "lö res-pe" },
+        { word: "L'humanité (f)", meaning: "İnsanlık", example: "L'humanité doit s'unir contre l'injustice.", exampleTranslation: "İnsanlık adaletsizliğe karşı birleşmelidir.", pronunciation: "lü-ma-ni-te" },
+        { word: "Le militant / La militante", meaning: "Aktivist / Militan", example: "Les militants organisent des marches pacifiques.", exampleTranslation: "Aktivistler barışçıl yürüyüşler düzenliyor.", pronunciation: "lö mi-li-tan / la mi-li-tant" },
+        { word: "La Convention", meaning: "Sözleşme / Konvansiyon", example: "La Convention européenne protège les droits.", exampleTranslation: "Avrupa Sözleşmesi hakları korur.", pronunciation: "la kon-van-syon" },
+        { word: "Revendiquer", meaning: "Talep etmek / Hak iddia etmek", example: "Les employés revendiquent de meilleures conditions.", exampleTranslation: "Çalışanlar daha iyi koşullar talep ediyor.", pronunciation: "rö-van-di-ke" },
+        { word: "La liberté d'expression", meaning: "İfade özgürlüğü", example: "La liberté d'expression doit être garantie.", exampleTranslation: "İfade özgürlüğü garanti altına alınmalıdır.", pronunciation: "la li-ber-te dek-spres-yon" }
     ]
 };
 
@@ -890,8 +908,137 @@ const unit387Vocab: UnitVocabularyFrB1 = {
         { word: "Le soutien", meaning: "Destek", example: "Leur soutien est très important pour la réussite du projet.", exampleTranslation: "Onların desteği projenin başarısı için çok önemlidir.", pronunciation: "lö su-tyen" },
         { word: "La communauté", meaning: "Topluluk", example: "Ce projet aide toute la communauté.", exampleTranslation: "Bu proje tüm topluluğa yardım eder.", pronunciation: "la ko-mü-no-te" },
         { word: "Gratuitement", meaning: "Ücretsiz olarak", example: "Les médecins travaillent gratuitement ce week-end.", exampleTranslation: "Doktorlar bu hafta sonu ücretsiz çalışıyorlar.", pronunciation: "gra-tü-it-man" },
-        { word: "La cause", meaning: "Dava / Amaç", example: "C'est une cause noble.", exampleTranslation: "Bu asil bir dürüst dava.", pronunciation: "la koz" },
-        { word: "La distribution", meaning: "Dağıtım", example: "La distribution de repas commence à midi.", exampleTranslation: "Yemek dağıtımı öğlen başlıyor.", pronunciation: "la dis-tri-bü-syon" }
+        { word: "La cause", meaning: "Dava / Amaç", example: "C'est une cause noble.", exampleTranslation: "Bu asil bir dava.", pronunciation: "la koz" },
+        { word: "La distribution", meaning: "Dağıtım", example: "La distribution de repas commence à midi.", exampleTranslation: "Yemek dağıtımı öğlen başlıyor.", pronunciation: "la dis-tri-bü-syon" },
+        { word: "Le volontaire", meaning: "Gönüllü (resmi)", example: "Le volontaire travaille sans salaire.", exampleTranslation: "Gönüllü maaş almadan çalışır.", pronunciation: "lö vo-lon-ter" },
+        { word: "La collecte", meaning: "Toplama / Bağış toplama", example: "La collecte de fonds a été un succès.", exampleTranslation: "Bağış toplama kampanyası başarılı oldu.", pronunciation: "la ko-lekt" },
+        { word: "Le parrainage", meaning: "Hamlik / Sponsorluk", example: "Le parrainage d'un enfant coûte 30 euros par mois.", exampleTranslation: "Bir çocuğun hamiliği ayda 30 euro.", pronunciation: "lö pa-re-naj" },
+        { word: "L'entraide (f)", meaning: "Karşılıklı yardımlaşma", example: "L'entraide est la base du bénévolat.", exampleTranslation: "Karşılıklı yardımlaşma gönüllülüğün temelidir.", pronunciation: "lan-tred" },
+        { word: "La générosité", meaning: "Cömertlik", example: "Merci pour votre générosité.", exampleTranslation: "Cömertliğiniz için teşekkürler.", pronunciation: "la je-ne-ro-zi-te" },
+        { word: "Le don", meaning: "Bağış", example: "Chaque don compte.", exampleTranslation: "Her bağış önemlidir.", pronunciation: "lö don" },
+        { word: "L'humanitaire", meaning: "İnsani yardım (sıfat/isim)", example: "Elle travaille dans l'humanitaire.", exampleTranslation: "İnsani yardım alanında çalışıyor.", pronunciation: "lü-ma-ni-ter" },
+        { word: "La mission", meaning: "Görev / Misyon", example: "Leur mission est d'aider les plus fragiles.", exampleTranslation: "Görevleri en hassas kişilere yardım etmektir.", pronunciation: "la mi-syon" },
+        { word: "Consacrer", meaning: "Adamak / Ayırmak", example: "Il consacre tout son temps libre au bénévolat.", exampleTranslation: "Boş zamanının tamamını gönüllülüğe adıyor.", pronunciation: "kon-sa-kre" },
+        { word: "Le refuge", meaning: "Sığınak / Barınak", example: "Le refuge accueille des animaux abandonnés.", exampleTranslation: "Barınak terk edilmiş hayvanları kabul ediyor.", pronunciation: "lö rö-füj" },
+        { word: "La banque alimentaire", meaning: "Gıda bankası", example: "La banque alimentaire distribue de la nourriture.", exampleTranslation: "Gıda bankası yiyecek dağıtır.", pronunciation: "la bank a-li-man-ter" },
+        { word: "La sensibilisation", meaning: "Farkındalık yaratma", example: "La sensibilisation est la première étape.", exampleTranslation: "Farkındalık yaratma ilk adımdır.", pronunciation: "la san-si-bi-li-za-syon" },
+        { word: "Participer", meaning: "Katılmak", example: "Tu veux participer à notre prochaine action ?", exampleTranslation: "Bir sonraki faaliyetimize katılmak ister misin?", pronunciation: "par-ti-si-pe" },
+        { word: "Le bénéficiaire", meaning: "Yararlanıcı / Faydalanan kişi", example: "Les bénéficiaires reçoivent de l'aide chaque semaine.", exampleTranslation: "Yararlanıcılar her hafta yardım alıyor.", pronunciation: "lö be-ne-fi-syer" },
+        { word: "La campagne", meaning: "Kampanya", example: "La campagne de sensibilisation commence demain.", exampleTranslation: "Farkındalık kampanyası yarın başlıyor.", pronunciation: "la kam-pan-y" },
+        { word: "Soutenir", meaning: "Desteklemek", example: "Nous devons soutenir les plus vulnérables.", exampleTranslation: "En savunmasız kişileri desteklemeliyiz.", pronunciation: "su-tö-nir" },
+        { word: "L'action sociale (f)", meaning: "Sosyal faaliyet", example: "L'action sociale est très importante.", exampleTranslation: "Sosyal faaliyet çok önemlidir.", pronunciation: "lak-syon so-syal" },
+        { word: "Le don du sang", meaning: "Kan bağışı", example: "Le don du sang sauve des vies.", exampleTranslation: "Kan bağışı hayat kurtarır.", pronunciation: "lö don dü san" }
+    ]
+};
+
+const unit388Vocab: UnitVocabularyFrB1 = {
+    unitId: 388,
+    title: "Göç ve Mülteciler",
+    words: [
+        { word: "L'immigration (f)", meaning: "Göç (ülkeye giriş)", example: "L'immigration a augmenté ces dernières années.", exampleTranslation: "Son yıllarda göç arttı.", pronunciation: "li-mi-gra-syon" },
+        { word: "L'émigration (f)", meaning: "Göç (ülkeden çıkış)", example: "L'émigration est souvent causée par la pauvreté.", exampleTranslation: "Göç genellikle yoksulluktan kaynaklanır.", pronunciation: "le-mi-gra-syon" },
+        { word: "Le migrant / La migrante", meaning: "Göçmen", example: "Les migrants cherchent une vie meilleure.", exampleTranslation: "Göçmenler daha iyi bir hayat arıyor.", pronunciation: "lö mi-gran / la mi-grant" },
+        { word: "Le réfugié / La réfugiée", meaning: "Mülteci", example: "Les réfugiés fuient les conflits armés.", exampleTranslation: "Mülteciler silahlı çatışmalardan kaçıyor.", pronunciation: "lö re-fü-je / la re-fü-je" },
+        { word: "L'asile (m)", meaning: "Sığınma", example: "Ils ont demandé l'asile politique.", exampleTranslation: "Siyasi sığınma talebinde bulundular.", pronunciation: "la-zil" },
+        { word: "L'intégration (f)", meaning: "Uyum / Entegrasyon", example: "L'intégration des nouveaux arrivants est essentielle.", exampleTranslation: "Yeni gelenlerin uyumu esastır.", pronunciation: "len-te-gra-syon" },
+        { word: "La frontière", meaning: "Sınır", example: "Ils ont traversé la frontière à pied.", exampleTranslation: "Sınırı yürüyerek geçtiler.", pronunciation: "la fron-tyər" },
+        { word: "Le pays d'accueil", meaning: "Ev sahibi ülke", example: "Le pays d'accueil offre des cours de langue.", exampleTranslation: "Ev sahibi ülke dil kursları sunuyor.", pronunciation: "lö pe-i da-köy" },
+        { word: "La diversité", meaning: "Çeşitlilik", example: "La diversité culturelle enrichit la société.", exampleTranslation: "Kültürel çeşitlilik toplumu zenginleştirir.", pronunciation: "la di-ver-si-te" },
+        { word: "Fuir", meaning: "Kaçmak / Sığınmak", example: "Ils ont dû fuir leur pays.", exampleTranslation: "Ülkelerinden kaçmak zorunda kaldılar.", pronunciation: "füir" },
+        { word: "Accueillir", meaning: "Karşılamak / Kabul etmek", example: "La France accueille des milliers de réfugiés chaque année.", exampleTranslation: "Fransa her yıl binlerce mülteciyi kabul ediyor.", pronunciation: "a-kö-yir" },
+        { word: "S'adapter", meaning: "Uyum sağlamak", example: "Il faut du temps pour s'adapter à un nouveau pays.", exampleTranslation: "Yeni bir ülkeye uyum sağlamak zaman alır.", pronunciation: "sa-dap-te" },
+        { word: "Le permis de séjour", meaning: "Oturma izni", example: "Il a obtenu son permis de séjour.", exampleTranslation: "Oturma iznini aldı.", pronunciation: "lö per-mi dö se-jur" },
+        { word: "La naturalisation", meaning: "Vatandaşlığa geçiş", example: "La naturalisation prend plusieurs années.", exampleTranslation: "Vatandaşlığa geçiş birkaç yıl sürer.", pronunciation: "la na-tü-ra-li-za-syon" },
+        { word: "Le pays d'origine", meaning: "Menşe ülke", example: "Ils gardent un lien fort avec leur pays d'origine.", exampleTranslation: "Menşe ülkeleriyle güçlü bir bağ koruyorlar.", pronunciation: "lö pe-i do-ri-jin" },
+        { word: "L'exil (m)", meaning: "Sürgün", example: "Il vit en exil depuis dix ans.", exampleTranslation: "On yıldır sürgünde yaşıyor.", pronunciation: "leg-zil" },
+        { word: "La xénophobie", meaning: "Yabancı düşmanlığı", example: "La xénophobie est un problème grave.", exampleTranslation: "Yabancı düşmanlığı ciddi bir sorundur.", pronunciation: "la gze-no-fo-bi" },
+        { word: "Le demandeur d'asile", meaning: "Sığınmacı", example: "Le demandeur d'asile attend la réponse.", exampleTranslation: "Sığınmacı cevabı bekliyor.", pronunciation: "lö dö-man-dör da-zil" },
+        { word: "Le camp de réfugiés", meaning: "Mülteci kampı", example: "Le camp de réfugiés manque de ressources.", exampleTranslation: "Mülteci kampında kaynak yetersizliği var.", pronunciation: "lö kan dö re-fü-je" },
+        { word: "La langue maternelle", meaning: "Ana dil", example: "Sa langue maternelle est l'arabe.", exampleTranslation: "Ana dili Arapçadır.", pronunciation: "la lang ma-ter-nel" },
+        { word: "Le multiculturalisme", meaning: "Çokkültürlülük", example: "Le multiculturalisme enrichit les sociétés.", exampleTranslation: "Çokkültürlülük toplumları zenginleştirir.", pronunciation: "lö mül-ti-kül-tü-ra-lism" },
+        { word: "La patrie", meaning: "Vatan", example: "Ils ont quitté leur patrie à contrecœur.", exampleTranslation: "Vatanlarını gönülsüz terk ettiler.", pronunciation: "la pa-tri" },
+        { word: "Émigrer", meaning: "Göç etmek (ülkeden)", example: "Beaucoup de jeunes émigrent pour trouver du travail.", exampleTranslation: "Birçok genç iş bulmak için göç ediyor.", pronunciation: "e-mi-gre" },
+        { word: "Immigrer", meaning: "Göç etmek (ülkeye)", example: "Sa famille a immigré en France en 2010.", exampleTranslation: "Ailesi 2010'da Fransa'ya göç etti.", pronunciation: "i-mi-gre" },
+        { word: "La nostalgie", meaning: "Nostalji / Özlem", example: "La nostalgie du pays est parfois difficile à supporter.", exampleTranslation: "Vatan özlemi bazen dayanılması güçtür.", pronunciation: "la nos-tal-ji" },
+        { word: "L'accueil (m)", meaning: "Karşılama / Kabul", example: "L'accueil des nouveaux arrivants est chaleureux.", exampleTranslation: "Yeni gelenlerin karşılanması sıcaktır.", pronunciation: "la-köy" },
+        { word: "Le déracinement", meaning: "Kökünden koparılma", example: "Le déracinement est une source de souffrance.", exampleTranslation: "Kökünden koparılma bir acı kaynağıdır.", pronunciation: "lö de-ra-sin-man" },
+        { word: "La double culture", meaning: "Çift kültürlülük", example: "La double culture est une richesse.", exampleTranslation: "Çift kültürlülük bir zenginliktir.", pronunciation: "la dubl kül-tür" },
+        { word: "Le visa", meaning: "Vize", example: "Il faut un visa pour entrer dans ce pays.", exampleTranslation: "Bu ülkeye girmek için vize gerekir.", pronunciation: "lö vi-za" },
+        { word: "La clandestinité", meaning: "Yasadışı yaşam / Kaçaklık", example: "Beaucoup vivent dans la clandestinité.", exampleTranslation: "Birçoğu yasadışı şekilde yaşıyor.", pronunciation: "la klan-des-ti-ni-te" }
+    ]
+};
+
+const unit389Vocab: UnitVocabularyFrB1 = {
+    unitId: 389,
+    title: "Ekonomik Sorunlar",
+    words: [
+        { word: "L'inflation (f)", meaning: "Enflasyon", example: "L'inflation réduit le pouvoir d'achat.", exampleTranslation: "Enflasyon alım gücünü azaltır.", pronunciation: "len-fla-syon" },
+        { word: "La croissance", meaning: "Büyüme", example: "Le pays connaît une forte croissance économique.", exampleTranslation: "Ülke güçlü bir ekonomik büyüme yaşıyor.", pronunciation: "la krua-sans" },
+        { word: "Le chômage", meaning: "İşsizlik", example: "Le taux de chômage a baissé ce mois-ci.", exampleTranslation: "İşsizlik oranı bu ay düştü.", pronunciation: "lö şo-maj" },
+        { word: "Le marché", meaning: "Pazar / Piyasa", example: "Le marché boursier est instable.", exampleTranslation: "Borsa piyasası istikrarsız.", pronunciation: "lö mar-şe" },
+        { word: "La crise", meaning: "Kriz", example: "La crise économique affecte tout le monde.", exampleTranslation: "Ekonomik kriz herkesi etkiliyor.", pronunciation: "la kriz" },
+        { word: "Le budget", meaning: "Bütçe", example: "Il faut respecter le budget annuel.", exampleTranslation: "Yıllık bütçeye saygı duymak (uymak) gerekir.", pronunciation: "lö büd-je" },
+        { word: "L'impôt (m)", meaning: "Vergi", example: "Les impôts servent à financer les services publics.", exampleTranslation: "Vergiler kamu hizmetlerini finanse etmeye yarar.", pronunciation: "lem-po" },
+        { word: "L'investissement (m)", meaning: "Yatırım", example: "Cet investissement est risqué but rentable.", exampleTranslation: "Bu yatırım riskli ama kârlı.", pronunciation: "len-ves-tis-man" },
+        { word: "La consommation", meaning: "Tüketim", example: "La consommation des ménages augmente.", exampleTranslation: "Hanehalkı tüketimi artıyor.", pronunciation: "la kon-so-ma-syon" },
+        { word: "La dette", meaning: "Borç", example: "La dette publique est une préoccupation majeure.", exampleTranslation: "Kamu borcu büyük bir endişe kaynağıdır.", pronunciation: "la det" },
+        { word: "Le PIB", meaning: "GSYİH", example: "Le PIB est un indicateur de richesse.", exampleTranslation: "GSYİH bir zenginlik göstergesidir.", pronunciation: "lö pe-i-be" },
+        { word: "La bourse", meaning: "Borsa", example: "Elle a investi tout son argent en bourse.", exampleTranslation: "Tüm parasını borsaya yatırdı.", pronunciation: "la burs" },
+        { word: "L'entreprise (f)", meaning: "Şirket / İşletme", example: "Cette entreprise emploie mille personnes.", exampleTranslation: "Bu şirket bin kişiyi istihdam ediyor.", pronunciation: "lan-tre-priz" },
+        { word: "Le profit", meaning: "Kâr", example: "L'entreprise a réalisé un gros profit.", exampleTranslation: "Şirket büyük bir kâr elde etti.", pronunciation: "lö pro-fi" },
+        { word: "La perte", meaning: "Zarar", example: "Nous avons enregistré une perte cette année.", exampleTranslation: "Bu yıl bir zarar kaydettik.", pronunciation: "la pert" },
+        { word: "La monnaie", meaning: "Para birimi", example: "L'euro est notre monnaie commune.", exampleTranslation: "Euro bizim ortak para birimimizdir.", pronunciation: "la mo-ne" },
+        { word: "Le taux d'intérêt", meaning: "Faiz oranı", example: "Le taux d'intérêt a encore augmenté.", exampleTranslation: "Faiz oranı yine arttı.", pronunciation: "lö to den-te-re" },
+        { word: "L'épargne (f)", meaning: "Tasarruf", example: "Il est important d'avoir une épargne de précaution.", exampleTranslation: "İhtiyat tasarrufuna sahip olmak önemlidir.", pronunciation: "le-parn-yö" },
+        { word: "Le pouvoir d'achat", meaning: "Alım gücü", example: "Le pouvoir d'achat des Français stagne.", exampleTranslation: "Fransızların alım gücü durgunlaşıyor.", pronunciation: "lö pu-vuar da-şa" },
+        { word: "La banque centrale", meaning: "Merkez bankası", example: "La banque centrale fixe la politique monétaire.", exampleTranslation: "Merkez bankası para politikasını belirler.", pronunciation: "la bank san-tral" },
+        { word: "La mondialisation", meaning: "Küreselleşme", example: "La mondialisation change les échanges commerciaux.", exampleTranslation: "Küreselleşme ticari değişimleri değiştiriyor.", pronunciation: "la mon-dya-li-za-syon" },
+        { word: "Le commerce", meaning: "Ticaret", example: "Le commerce extérieur est essentiel.", exampleTranslation: "Dış ticaret elzemdir.", pronunciation: "lö ko-mers" },
+        { word: "L'exportation (f)", meaning: "İhracat", example: "Les exportations sont en hausse.", exampleTranslation: "İhracat yükselişte.", pronunciation: "lek-spor-ta-syon" },
+        { word: "L'importation (f)", meaning: "İthalat", example: "Le pays dépend des importations d'énergie.", exampleTranslation: "Ülke enerji ithalatına bağımlı.", pronunciation: "lem-por-ta-syon" },
+        { word: "Le secteur", meaning: "Sektör", example: "Le secteur du tourisme est en crise.", exampleTranslation: "Turizm sektörü krizde.", pronunciation: "lö sek-tör" },
+        { word: "La subvention", meaning: "Sübvansiyon / Destek", example: "L'agriculteur reçoit une subvention de l'État.", exampleTranslation: "Çiftçi devletten bir sübvansiyon alıyor.", pronunciation: "la süb-van-syon" },
+        { word: "La faillite", meaning: "İflas", example: "Cette petite boutique a fait faillite.", exampleTranslation: "Bu küçük dükkan iflas etti.", pronunciation: "la fa-yit" },
+        { word: "Le salarié / La salariée", meaning: "Ücretli çalışan", example: "Le salarié demande une augmentation.", exampleTranslation: "Ücretli çalışan zam istiyor.", pronunciation: "lö sa-la-rye" },
+        { word: "Le syndicat", meaning: "Sendika", example: "Le syndicat négocie les salaires.", exampleTranslation: "Sendika maaşları müzakere ediyor.", pronunciation: "lö sen-di-ka" },
+        { word: "La concurrence", meaning: "Rekabet", example: "La concurrence est rude dans ce domaine.", exampleTranslation: "Bu alanda rekabet sert.", pronunciation: "la kon-kü-rans" }
+    ]
+};
+
+const unit390Vocab: UnitVocabularyFrB1 = {
+    unitId: 390,
+    title: "B1 Genel Tekrar",
+    words: [
+        { word: "L'environnement", meaning: "Çevre", example: "Il faut protéger l'environnement.", exampleTranslation: "Çevreyi korumak gerekir.", pronunciation: "lan-vi-ro-nö-man" },
+        { word: "Le réchauffement", meaning: "Isınma", example: "Le réchauffement climatique est inquiétant.", exampleTranslation: "İklim ısınması (küresel ısınma) endişe verici.", pronunciation: "lö re-şof-man" },
+        { word: "La biodiversité", meaning: "Biyoçeşitlilik", example: "La biodiversité est en danger.", exampleTranslation: "Biyoçeşitlilik tehlikede.", pronunciation: "la bi-yo-di-ver-si-te" },
+        { word: "L'énergie", meaning: "Enerji", example: "Nous utilisons des énergies renouvelables.", exampleTranslation: "Yenilenebilir enerjiler kullanıyoruz.", pronunciation: "le-ner-ji" },
+        { word: "La pollution", meaning: "Kirlilik", example: "La pollution de l'air est un problème.", exampleTranslation: "Hava kirliliği bir sorundur.", pronunciation: "la po-lü-syon" },
+        { word: "Le média", meaning: "Medya", example: "Les médias influencent l'opinion publique.", exampleTranslation: "Medya kamuoyunu etkiler.", pronunciation: "lö me-dya" },
+        { word: "L'information", meaning: "Bilgi / Haber", example: "Il vérifie toujours l'information.", exampleTranslation: "Bilgiyi/haberi her zaman doğrular.", pronunciation: "lan-for-ma-syon" },
+        { word: "La publicité", meaning: "Reklam", example: "Il y a trop de publicité à la télé.", exampleTranslation: "Televizyonda çok fazla reklam var.", pronunciation: "la pü-bli-si-te" },
+        { word: "Le réseau", meaning: "Ağ / Şebeke", example: "Le réseau social est très actif.", exampleTranslation: "Sosyal ağ çok aktif.", pronunciation: "lö re-zo" },
+        { word: "La presse", meaning: "Basın", example: "La presse écrite est en crise.", exampleTranslation: "Yazılı basın krizde.", pronunciation: "la pres" },
+        { word: "La justice", meaning: "Adalet", example: "Il demande que justice soit faite.", exampleTranslation: "Adaletin yerini bulmasını istiyor.", pronunciation: "la jüs-tis" },
+        { word: "La loi", meaning: "Yasa / Kanun", example: "Nul n'est censé ignorer la loi.", exampleTranslation: "Kimse yasayı bilmemezlikten gelemez.", pronunciation: "la lua" },
+        { word: "Le procès", meaning: "Dava / Duruşma", example: "Le procès commencera demain.", exampleTranslation: "Dava yarın başlayacak.", pronunciation: "lö pro-se" },
+        { word: "Le témoin", meaning: "Tanık", example: "Le témoin a prêté serment.", exampleTranslation: "Tanık yemin etti.", pronunciation: "lö te-muan" },
+        { word: "L'avocat", meaning: "Avukat", example: "L'avocat de la défense parle.", exampleTranslation: "Savunma avukatı konuşuyor.", pronunciation: "la-vo-ka" },
+        { word: "La société", meaning: "Toplum", example: "Nous vivons dans une société moderne.", exampleTranslation: "Modern bir toplumda yaşıyoruz.", pronunciation: "la so-sye-te" },
+        { word: "L'égalité", meaning: "Eşitlik", example: "L'égalité des chances est importante.", exampleTranslation: "Fırsat eşitliği önemlidir.", pronunciation: "le-ga-li-te" },
+        { word: "La liberté", meaning: "Özgürlük", example: "La liberté d'expression est un droit.", exampleTranslation: "İfade özgürlüğü bir haktır.", pronunciation: "la li-ber-te" },
+        { word: "Le citoyen", meaning: "Vatandaş", example: "Chaque citoyen doit voter.", exampleTranslation: "Her vatandaş oy kullanmalıdır.", pronunciation: "lö si-tua-yan" },
+        { word: "La solidarité", meaning: "Dayanışma", example: "La solidarité est une force.", exampleTranslation: "Dayanışma bir güçtür.", pronunciation: "la so-li-da-ri-te" },
+        { word: "L'économie", meaning: "Ekonomi", example: "L'économie mondiale est instable.", exampleTranslation: "Dünya ekonomisi istikrarsız.", pronunciation: "le-ko-no-mi" },
+        { word: "La croissance", meaning: "Büyüme", example: "Le pays connaît une forte croissance.", exampleTranslation: "Ülke güçlü bir büyüme yaşıyor.", pronunciation: "la krua-sans" },
+        { word: "Le chômage", meaning: "İşsizlik", example: "Le taux de chômage diminue.", exampleTranslation: "İşsizlik oranı düşüyor.", pronunciation: "lö şo-maj" },
+        { word: "L'inflation", meaning: "Enflasyon", example: "L'inflation réduit le pouvoir d'achat.", exampleTranslation: "Enflasyon alım gücünü azaltıyor.", pronunciation: "lan-fla-syon" },
+        { word: "Le budget", meaning: "Bütçe", example: "Il faut équilibrer le budget annuel.", exampleTranslation: "Yıllık bütçeyi dengelemek gerekir.", pronunciation: "lö bü-dje" },
+        { word: "La révision", meaning: "Gözden geçirme / Tekrar", example: "C'est l'heure de la révision générale.", exampleTranslation: "Genel tekrar vakti.", pronunciation: "la re-vi-zyon" },
+        { word: "Le niveau", meaning: "Seviye", example: "Ton niveau de français s'améliore.", exampleTranslation: "Fransızca seviyen gelişiyor.", pronunciation: "lö ni-vo" },
+        { word: "La compétence", meaning: "Yetkinlik / Beceri", example: "Il a les compétences nécessaires.", exampleTranslation: "Gerekli yetkinliklere sahip.", pronunciation: "la kon-pe-tans" },
+        { word: "L'examen", meaning: "Sınav", example: "L'examen final est difficile.", exampleTranslation: "Final sınavı zor.", pronunciation: "lek-za-man" },
+        { word: "Le progrès", meaning: "İlerleme", example: "Tu as fait beaucoup de progrès.", exampleTranslation: "Çok ilerleme kaydettin.", pronunciation: "lö pro-gre" }
     ]
 };
 
@@ -923,7 +1070,10 @@ export function getFrB1VocabularyForUnit(unitId: number): FrenchB1VocabularyItem
         384: unit384Vocab,
         385: unit385Vocab,
         386: unit386Vocab,
-        387: unit387Vocab
+        387: unit387Vocab,
+        388: unit388Vocab,
+        389: unit389Vocab,
+        390: unit390Vocab
     };
     return idMapping[unitId]?.words || unit361Vocab.words;
 }

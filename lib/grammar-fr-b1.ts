@@ -1125,6 +1125,43 @@ const unit387Grammar: UnitGrammar = {
   ]
 };
 
+const unit388Grammar: UnitGrammar = {
+  unitId: 388,
+  title: "Göç ve Mülteciler (L'Immigration et les Réfugiés)",
+  rules: [
+    {
+      id: "fr-b1-immigration-cause",
+      title: "📌 Bölüm 1: Sebep Bildiren Yapılar (à cause de / grâce à)",
+      explanation:
+        "Göç konusunda sebep-sonuç ilişkilerini anlatırken iki önemli yapı kullanılır:\n\n* **à cause de + isim** = yüzünden (olumsuz sebep)\n* **grâce à + isim** = sayesinde (olumlu sebep)\n\nBu yapılar cümlenin başında veya sonunda kullanılabilir.",
+      examples: [
+        { fr: "Ils ont quitté leur pays à cause de la guerre.", tr: "Savaş yüzünden ülkelerini terk ettiler." },
+        { fr: "Grâce à l'association, elle a trouvé un emploi.", tr: "Dernek sayesinde bir iş buldu." }
+      ]
+    },
+    {
+      id: "fr-b1-immigration-passe-compose",
+      title: "⏳ Bölüm 2: Passé Composé ile Göç Anlatımı",
+      explanation:
+        "Geçmişte yapılan göç eylemlerini anlatırken Passé Composé kullanılır. Özellikle yer değiştirme fiilleri (arriver, partir, venir, aller) **être** yardımcı fiili ile çekilir ve özneyle uyum sağlar.\n\n* Elle **est arrivée** en France.\n* Ils **sont partis** de leur pays.\n* Nous **sommes venus** pour une vie meilleure.",
+      examples: [
+        { fr: "Amara est arrivée en France il y a deux ans.", tr: "Amara iki yıl önce Fransa'ya geldi." },
+        { fr: "Ils ont dû fuir à cause du conflit.", tr: "Çatışma yüzünden kaçmak zorunda kaldılar." }
+      ]
+    },
+    {
+      id: "fr-b1-immigration-expression",
+      title: "🗣️ Bölüm 3: Uyum ve Kabul İfadeleri",
+      explanation:
+        "Entegrasyon sürecini anlatırken sık kullanılan yapılar:\n\n* **s'adapter à** = ...ya uyum sağlamak\n* **se sentir intégré(e)** = uyum sağlamış hissetmek\n* **participer à** = ...ya katılmak\n* **il faut du temps pour** = ... için zaman gerekir",
+      examples: [
+        { fr: "Il faut du temps pour s'adapter à un nouveau pays.", tr: "Yeni bir ülkeye uyum sağlamak zaman alır." },
+        { fr: "Elle se sent intégrée dans sa communauté.", tr: "Topluluğunda uyum sağlamış hissediyor." }
+      ]
+    }
+  ]
+};
+
 export function getFrB1GrammarForUnit(unitId: number): UnitGrammar | undefined {
 
   const grammar: { [key: number]: UnitGrammar } = {
@@ -1154,7 +1191,8 @@ export function getFrB1GrammarForUnit(unitId: number): UnitGrammar | undefined {
     384: unit384Grammar,
     385: unit385Grammar,
     386: unit386Grammar,
-    387: unit387Grammar
+    387: unit387Grammar,
+    388: unit388Grammar
   };
   return grammar[unitId];
 }

@@ -443,7 +443,12 @@ const unit386Speaking: UnitSpeakingFrB1 = {
         { text: "Il faut lutter contre la discrimination.", translation: "Ayrımcılığa karşı mücadele edilmeli.", pronunciation: "il fo lü-te kontr la dis-kri-mi-na-syon" },
         { text: "Nous manifestons pour nos droits.", translation: "Haklarımız için gösteri yapıyoruz.", pronunciation: "nu ma-ni-fes-ton pur no dro-a" },
         { text: "L'égalité est une valeur fondamentale.", translation: "Eşitlik temel bir değerdir.", pronunciation: "le-ga-li-te e tün va-lör fon-da-man-tal" },
-        { text: "Ils demandent plus de justice sociale.", translation: "Daha fazla sosyal adalet talep ediyorlar.", pronunciation: "il dö-mand plüs dö jüs-tis so-syal" }
+        { text: "Ils demandent plus de justice sociale.", translation: "Daha fazla sosyal adalet talep ediyorlar.", pronunciation: "il dö-mand plüs dö jüs-tis so-syal" },
+        { text: "Chaque citoyen a le droit de voter.", translation: "Her vatandaşın oy kullanma hakkı vardır.", pronunciation: "şak si-twa-yen a lö dro-a dö vo-te" },
+        { text: "Le racisme n'a pas sa place dans notre société.", translation: "Irkçılığın toplumumuzda yeri yoktur.", pronunciation: "lö ra-sizm na pa sa plas dan notr so-sye-te" },
+        { text: "La liberté d'expression est menacée.", translation: "İfade özgürlüğü tehdit altında.", pronunciation: "la li-ber-te dek-spres-yon e mö-na-se" },
+        { text: "La Déclaration universelle protège les droits humains.", translation: "Evrensel Beyanname insan haklarını korur.", pronunciation: "la de-kla-ra-syon ü-ni-ver-sel pro-tej le dro-a ü-men" },
+        { text: "Il est interdit de torturer un être humain.", translation: "Bir insana işkence yapmak yasaktır.", pronunciation: "il e en-ter-di dö tor-tü-re un etr ü-men" }
     ]
 };
 
@@ -455,7 +460,46 @@ const unit387Speaking: UnitSpeakingFrB1 = {
         { text: "C'est important d'aider les autres.", translation: "Başkalarına yardım etmek önemlidir.", pronunciation: "se ten-por-tan de-de le zotr" },
         { text: "Nous organisons une distribution de vêtements.", translation: "Bir kıyafet dağıtımı düzenliyoruz.", pronunciation: "nu zor-ga-ni-zon zün dis-tri-bü-syon dö vet-man" },
         { text: "Ils ont fait un don pour cette cause.", translation: "Bu dava için bağış yaptılar.", pronunciation: "il zon fe un don pur set koz" },
-        { text: "Le bénévolat demande beaucoup d'énergie.", translation: "Gönüllülük çok enerji gerektirir.", pronunciation: "lö be-ne-vo-la dö-mand bo-ku de-ner-ji" }
+        { text: "Le bénévolat demande beaucoup d'énergie.", translation: "Gönüllülük çok enerji gerektirir.", pronunciation: "lö be-ne-vo-la dö-mand bo-ku de-ner-ji" },
+        { text: "Tu veux participer à notre prochaine action ?", translation: "Bir sonraki faaliyetimize katılmak ister misin?", pronunciation: "tü vö par-ti-si-pe a notr pro-şen ak-syon" },
+        { text: "La collecte de fonds a été un grand succès.", translation: "Bağış toplama büyük bir başarı oldu.", pronunciation: "la ko-lekt dö fon a e-te un gran sük-se" },
+        { text: "Chaque don compte, même le plus petit.", translation: "Her bağış önemlidir, en küçük olanı bile.", pronunciation: "şak don kont mem lö plü pö-ti" },
+        { text: "La banque alimentaire distribue des repas tous les jours.", translation: "Gıda bankası her gün yemek dağıtıyor.", pronunciation: "la bank a-li-man-ter dis-tri-bü de rö-pa tu le jur" },
+        { text: "Le don du sang sauve des vies humaines.", translation: "Kan bağışı insan hayatlarını kurtarır.", pronunciation: "lö don dü san sov de vi ü-men" }
+    ]
+};
+
+const unit388Speaking: UnitSpeakingFrB1 = {
+    unitId: 388,
+    title: "Göç ve Mülteciler",
+    exercises: [
+        { text: "Les réfugiés ont besoin de notre aide.", translation: "Mültecilerin yardımımıza ihtiyacı var.", pronunciation: "le re-fü-je on bö-zwen dö notr ed" },
+        { text: "L'intégration est un processus long et difficile.", translation: "Uyum uzun ve zor bir süreçtir.", pronunciation: "len-te-gra-syon e tun pro-se-süs lon e di-fi-sil" },
+        { text: "Ils ont traversé la frontière pour fuir la guerre.", translation: "Savaştan kaçmak için sınırı geçtiler.", pronunciation: "il zon tra-ver-se la fron-tyər pur füir la ger" },
+        { text: "La diversité culturelle est une richesse.", translation: "Kültürel çeşitlilik bir zenginliktir.", pronunciation: "la di-ver-si-te kül-tü-rel e tün ri-şes" },
+        { text: "Le pays d'accueil leur offre des cours de langue.", translation: "Ev sahibi ülke onlara dil kursları sunuyor.", pronunciation: "lö pe-i da-köy lör ofr de kur dö lang" },
+        { text: "Il a obtenu son permis de séjour après deux ans.", translation: "İki yıl sonra oturma iznini aldı.", pronunciation: "il a ob-tö-nü son per-mi dö se-jur a-pre dö zan" },
+        { text: "La xénophobie est un problème grave dans certains pays.", translation: "Yabancı düşmanlığı bazı ülkelerde ciddi bir sorundur.", pronunciation: "la gze-no-fo-bi e tun pro-blem grav dan ser-ten pe-i" },
+        { text: "Sa langue maternelle est l'arabe, mais il parle aussi français.", translation: "Ana dili Arapça ama Fransızca da konuşuyor.", pronunciation: "sa lang ma-ter-nel e la-rab me il parl o-si fran-se" },
+        { text: "Beaucoup de jeunes émigrent pour trouver un meilleur avenir.", translation: "Birçok genç daha iyi bir gelecek bulmak için göç ediyor.", pronunciation: "bo-ku dö jön e-mi-gr pur tru-ve un me-yör a-vö-nir" },
+        { text: "La nostalgie du pays d'origine ne disparaît jamais.", translation: "Memleket özlemi asla kaybolmaz.", pronunciation: "la nos-tal-ji dü pe-i do-ri-jin nö dis-pa-re ja-me" }
+    ]
+};
+
+const unit389Speaking: UnitSpeakingFrB1 = {
+    unitId: 389,
+    title: "Ekonomik Sorunlar",
+    exercises: [
+        { text: "L'inflation est très élevée cette année.", translation: "Bu yıl enflasyon çok yüksek.", pronunciation: "lan-fla-syon e tre ze-le-ve se-ta-ne" },
+        { text: "Le taux de chômage a baissé d'un point.", translation: "İşsizlik oranı bir puan düştü.", pronunciation: "lö to dö şo-maj a be-se dun pwan" },
+        { text: "Il faut investir dans les énergies renouvelables.", translation: "Yenilenebilir enerjilere yatırım yapmak gerekir.", pronunciation: "il fo an-ves-tir dan le-ze-ner-ji rö-nu-ve-labl" },
+        { text: "La crise économique touche de nombreux secteurs.", translation: "Ekonomik kriz birçok sektörü etkiliyor.", pronunciation: "la kriz e-ko-no-mik tuş dö non-brö sek-tör" },
+        { text: "La croissance du PIB est de deux pour cent.", translation: "GSYİH büyümesi yüzde iki.", pronunciation: "la krua-sans dü pe-i-be e dö dö pur san" },
+        { text: "Le pouvoir d'achat diminue à cause de la hausse des prix.", translation: "Fiyat artışı nedeniyle alım gücü azalıyor.", pronunciation: "lö pu-vuar da-şa di-mi-nü a koz dö la os de pri" },
+        { text: "Les impôts servent à financer l'éducation publique.", translation: "Vergiler kamu eğitimini finanse etmeye yarar.", pronunciation: "le zan-po ser-va fi-nan-se le-dü-ka-syon pü-blik" },
+        { text: "L'entreprise a fait faillite le mois dernier.", translation: "Şirket geçen ay iflas etti.", pronunciation: "lan-tre-priz a fe fa-yit lö mua der-nye" },
+        { text: "La mondialisation favorise les échanges culturels.", translation: "Küreselleşme kültürel değişimleri teşvik eder.", pronunciation: "la mon-dya-li-za-syon fa-vo-riz le ze-şanj kül-tü-rel" },
+        { text: "Il est prudent de mettre de l'argent de côté pour l'avenir.", translation: "Gelecek için kenara para koymak ihtiyatlıdır (akıllıcadır).", pronunciation: "i-le prü-dan dö metr dö lar-jan dö ko-te pur la-vö-nir" }
     ]
 };
 
@@ -487,7 +531,9 @@ export function getFrB1SpeakingForUnit(unitId: number): SpeakingExerciseFrB1[] {
     384: unit384Speaking,
     385: unit385Speaking,
     386: unit386Speaking,
-    387: unit387Speaking
+    387: unit387Speaking,
+    388: unit388Speaking,
+    389: unit389Speaking
   };
   return idMapping[unitId]?.exercises || unit361Speaking.exercises;
 }

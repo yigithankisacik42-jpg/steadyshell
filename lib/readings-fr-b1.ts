@@ -2094,6 +2094,216 @@ const unit387Reading: UnitReading = {
     ]
 };
 
+const unit388Reading: UnitReading = {
+    unitId: 388,
+    title: "Un nouveau départ",
+    language: "fr",
+    level: "B1",
+    story: {
+        text: "Amara est arrivée en France il y a deux ans avec sa famille. Ils ont dû fuir leur pays à cause de la guerre. Au début, l'adaptation a été très difficile : une nouvelle langue, une nouvelle culture, un nouveau climat. Grâce à une association de quartier, Amara a appris le français et a trouvé un emploi dans une boulangerie. Aujourd'hui, elle se sent intégrée et participe activement à la vie de sa communauté. 'Le pays d'accueil m'a donné une seconde chance,' dit-elle avec émotion. Son histoire montre que l'intégration est possible quand il y a de la solidarité.",
+        translation: "Amara iki yıl önce ailesiyle birlikte Fransa'ya geldi. Savaş nedeniyle ülkelerinden kaçmak zorunda kaldılar. Başlangıçta uyum çok zordu: yeni bir dil, yeni bir kültür, yeni bir iklim. Bir mahalle derneği sayesinde Amara Fransızca öğrendi ve bir fırında iş buldu. Bugün kendini uyum sağlamış hissediyor ve topluluğunun yaşamına aktif olarak katılıyor. 'Ev sahibi ülke bana ikinci bir şans verdi' diyor duygulu bir şekilde. Onun hikayesi, dayanışma olduğunda uyumun mümkün olduğunu gösteriyor."
+    },
+    vocabulary: [
+        { word: "fuir", meaning: "kaçmak" },
+        { word: "l'adaptation", meaning: "uyum sağlama" },
+        { word: "un emploi", meaning: "iş" },
+        { word: "une seconde chance", meaning: "ikinci bir şans" },
+        { word: "la solidarité", meaning: "dayanışma" }
+    ],
+    questions: [
+        {
+            id: 1,
+            question: "Pourquoi Amara a-t-elle quitté son pays ?",
+            options: ["Pour étudier", "À cause de la guerre", "Pour le travail", "Pour voyager"],
+            correctAnswer: "À cause de la guerre"
+        },
+        {
+            id: 2,
+            question: "Qu'est-ce qui a été difficile au début ?",
+            options: ["Le climat seulement", "La nourriture", "L'adaptation à une nouvelle langue, culture et climat", "Trouver un logement"],
+            correctAnswer: "L'adaptation à une nouvelle langue, culture et climat"
+        },
+        {
+            id: 3,
+            question: "Comment Amara a-t-elle appris le français ?",
+            options: ["À l'école", "Grâce à une association de quartier", "Toute seule", "Par internet"],
+            correctAnswer: "Grâce à une association de quartier"
+        },
+        {
+            id: 4,
+            question: "Où travaille Amara maintenant ?",
+            options: ["Dans un restaurant", "Dans une boulangerie", "Dans un hôpital", "Dans une école"],
+            correctAnswer: "Dans une boulangerie"
+        },
+        {
+            id: 5,
+            question: "Que montre l'histoire d'Amara ?",
+            options: ["Que la vie est facile", "Que l'intégration est impossible", "Que l'intégration est possible avec la solidarité", "Que la France est parfaite"],
+            correctAnswer: "Que l'intégration est possible avec la solidarité"
+        }
+    ]
+};
+
+const unit389Reading: UnitReading = {
+  unitId: 389,
+  title: "L'Économie en Crise",
+  language: "fr",
+  level: "B1",
+  story: {
+    text: "Le pays traverse actuellement une période économique difficile. Le taux de chômage a augmenté de manière significative, touchant principalement les jeunes diplômés. L'inflation galopante réduit le pouvoir d'achat des ménages, et la consommation baisse. Face à cette situation, le gouvernement a annoncé un plan de relance ambitieux. L'objectif est de soutenir les entreprises locales et de favoriser les investissements dans les technologies vertes. 'Nous devons agir vite pour éviter une récession prolongée,' a déclaré le ministre de l'Économie. Les économistes restent divisés sur l'efficacité de ces mesures, mais tous s'accordent à dire que la solidarité nationale est essentielle pour surmonter cette crise.",
+    translation: "Ülke şu anda zor bir ekonomik dönemden geçiyor. İşsizlik oranı, özellikle yeni mezunları etkileyerek önemli ölçüde arttı. Hızla artan enflasyon hanehalkının alım gücünü azaltıyor ve tüketim düşüyor. Bu durum karşısında hükümet iddialı bir kurtarma planı açıkladı. Hedef, yerel işletmeleri desteklemek ve yeşil teknolojilere yatırımları teşvik etmektir. Ekonomi Bakanı 'Uzun süreli bir durgunluktan kaçınmak için hızlı hareket etmeliyiz' dedi. Ekonomistler bu önlemlerin etkinliği konusunda bölünmüş durumda; ancak herkes bu krizi aşmak için ulusal dayanışmanın elzem olduğu konusunda hemfikir."
+  },
+  vocabulary: [
+    { word: "Le plan de relance", meaning: "Kurtarma/Canlandırma planı" },
+    { word: "Ambitieux", meaning: "İddialı/Hırslı" },
+    { word: "Favoriser", meaning: "Teşvik etmek/Desteklemek" },
+    { word: "Une récession", meaning: "Resesyon/Durgunluk" },
+    { word: "Ménage", meaning: "Hanehalkı" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Quelle est la situation actuelle du pays ?",
+      options: ["Une période de richesse", "Une période économique difficile", "Une période de guerre", "Une période de vacances"],
+      correctAnswer: "Une period économique difficile"
+    },
+    {
+      id: 2,
+      question: "Qui est principalement touché par l'augmentation du chômage ?",
+      options: ["Les retraités", "Les enfants", "Les jeunes diplômés", "Les touristes"],
+      correctAnswer: "Les jeunes diplômés"
+    },
+    {
+      id: 3,
+      question: "Quel est l'effet de l'inflation galopante ?",
+      options: ["Elle augmente les salaires", "Elle réduit le pouvoir d'achat", "Elle aide les entreprises", "Elle baisse les prix"],
+      correctAnswer: "Elle réduit le pouvoir d'achat"
+    },
+    {
+      id: 4,
+      question: "Qu'a annoncé le gouvernement ?",
+      options: ["De nouveaux impôts", "Un plan de relance ambitieux", "La fin du chômage", "Des vacances pour tous"],
+      correctAnswer: "Un plan de relance ambitieux"
+    },
+    {
+      id: 5,
+      question: "Quel type d'investissement le gouvernement veut-il favoriser ?",
+      options: ["Dans le pétrole", "Dans les technologies vertes", "Dans le sport", "Dans la mode"],
+      correctAnswer: "Dans les technologies vertes"
+    },
+    {
+      id: 6,
+      question: "Que veut éviter le ministre de l'Économie ?",
+      options: ["La pluie", "Une récession prolongée", "Les élections", "La croissance"],
+      correctAnswer: "Une récession prolongée"
+    },
+    {
+      id: 7,
+      question: "Quelle est l'opinion des économistes sur les mesures ?",
+      options: ["Ils sont tous d'accord", "Ils sont divisés", "Ils sont contre", "Ils ne disent rien"],
+      correctAnswer: "Ils sont divisés"
+    },
+    {
+      id: 8,
+      question: "Qu'est-ce qui est considéré comme essentiel pour surmonter la crise ?",
+      options: ["L'argent étranger", "La solidarité nationale", "Le silence", "La patience"],
+      correctAnswer: "La solidarité nationale"
+    },
+    {
+      id: 9,
+      question: "Que signifie 'pouvoir d'achat' ?",
+      options: ["Alım gücü", "Satın alma yeri", "Para birimi", "Mağaza"],
+      correctAnswer: "Alım gücü"
+    },
+    {
+      id: 10,
+      question: "Quelle industrie le plan veut-il soutenir ?",
+      options: ["L'automobile", "Les entreprises locales", "Le tourisme international", "Le luxe"],
+      correctAnswer: "Les entreprises locales"
+    }
+  ]
+};
+
+const unit390Reading: UnitReading = {
+  unitId: 390,
+  title: "Bilan du Niveau B1",
+  language: "fr",
+  level: "B1",
+  story: {
+    text: "Après plusieurs mois d'étude intensive, Lucas termine enfin son parcours au niveau B1. En regardant en arrière, il se rend compte de tout le chemin parcouru. Il a appris à argumenter sur des sujets complexes comme l'environnement et les dangers des réseaux sociaux. Il se souvient de ses premières leçons sur le subjonctif qui lui semblaient si difficiles. Aujourd'hui, il peut exprimer ses doutes, ses souhaits et ses opinions avec beaucoup plus de fluidité. 'Je me sens capable de vivre dans un pays francophone,' se réjouit-il. Pour célébrer son progrès, il a décidé d'organiser une petite fête avec ses camarades de classe. Ce n'est qu'une étape, car Lucas prévoit déjà de s'attaquer au niveau B2 pour continuer à perfectionner ses compétences linguistiques.",
+    translation: "Birkaç aylık yoğun çalışmanın ardından Lucas nihayet B1 seviyesindeki yolculuğunu tamamlıyor. Geriye dönüp baktığında, ne kadar yol kat ettiğinin farkına varıyor. Çevre ve sosyal ağların tehlikeleri gibi karmaşık konularda fikir yürütmeyi (tartışmayı) öğrendi. Kendisine çok zor gelen dilek kipi (subjonctif) üzerine ilk derslerini hatırlıyor. Bugün artık şüphelerini, dileklerini ve fikirlerini çok daha akıcı bir şekilde ifade edebiliyor. 'Kendimi Fransızca konuşulan bir ülkede yaşayabilecek kapasitede hissediyorum' diyerek seviniyor. İlerlemesini kutlamak için sınıf arkadaşlarıyla küçük bir parti düzenlemeye karar verdi. Bu sadece bir aşama, çünkü Lucas dil becerilerini mükemmelleştirmeye devam etmek için şimdiden B2 seviyesine başlamayı planlıyor."
+  },
+  vocabulary: [
+    { word: "Le parcours", meaning: "Yolculuk/Süreç" },
+    { word: "Perfectionner", meaning: "Mükemmelleştirmek" },
+    { word: "Se réjouir", meaning: "Sevinmek" },
+    { word: "Une étape", meaning: "Aşama/Etap" },
+    { word: "Fluidité", meaning: "Akıcılık" }
+  ],
+  questions: [
+    {
+      id: 1,
+      question: "Quel niveau Lucas vient-il de terminer ?",
+      options: ["A1", "B1", "B2", "C1"],
+      correctAnswer: "B1"
+    },
+    {
+      id: 2,
+      question: "Sur quels types de sujets Lucas sait-il maintenant argumenter ?",
+      options: ["La météo et le sport", "L'environnement et les réseaux sociaux", "La cuisine", "Le cinéma"],
+      correctAnswer: "L'environnement et les réseaux sociaux"
+    },
+    {
+      id: 3,
+      question: "Quel point de grammaire semblait difficile à Lucas au début ?",
+      options: ["Le présent", "Le passé composé", "Le subjonctif", "L'impératif"],
+      correctAnswer: "Le subjonctif"
+    },
+    {
+      id: 4,
+      question: "Comment Lucas exprime-t-il ses opinions aujourd'hui ?",
+      options: ["Avec difficulté", "Avec beaucoup plus de fluidité", "En dessinant", "Il ne les exprime pas"],
+      correctAnswer: "Avec beaucoup plus de fluidité"
+    },
+    {
+      id: 5,
+      question: "Où Lucas se sent-il capable de vivre désormais ?",
+      options: ["Aux États-Unis", "Dans un pays francophone", "Au bord de la mer", "Dans une forêt"],
+      correctAnswer: "Dans un pays francophone"
+    },
+    {
+      id: 6,
+      question: "Que fait Lucas pour célébrer son progrès ?",
+      options: ["Il va dormir", "Il organise une petite fête", "Il achète une voiture", "Il part en voyage"],
+      correctAnswer: "Il organise une petite fête"
+    },
+    {
+      id: 7,
+      question: "Avec qui célèbre-t-il ?",
+      options: ["Avec sa famille", "Avec ses camarades de classe", "Seul", "Avec son patron"],
+      correctAnswer: "Avec ses camarades de classe"
+    },
+    {
+      id: 8,
+      question: "Quel est le prochain objectif de Lucas ?",
+      options: ["Arrêter d'étudier", "Le niveau B2", "Apprendre l'Espagnol", "Le niveau A2"],
+      correctAnswer: "Le niveau B2"
+    },
+    {
+      id: 9,
+      question: "Que signifie 'perfectionner' ?",
+      options: ["Mükemmelleştirmek", "Bitirmek", "Başlamak", "Unutmak"],
+      correctAnswer: "Mükemmelleştirmek"
+    },
+    {
+      id: 10,
+      question: "Comment Lucas se sent-il par rapport à son avenir ?",
+      options: ["Triste", "Inquiet", "Il se réjouit", "Indifférent"],
+      correctAnswer: "Il se réjouit"
+    }
+  ]
+};
+
 export function getFrB1ReadingForUnit(unitId: number): UnitReading | undefined {
   const readings: { [key: number]: UnitReading } = {
     361: unit361Reading,
@@ -2122,7 +2332,10 @@ export function getFrB1ReadingForUnit(unitId: number): UnitReading | undefined {
     384: unit384Reading,
     385: unit385Reading,
     386: unit386Reading,
-    387: unit387Reading
+    387: unit387Reading,
+    388: unit388Reading,
+    389: unit389Reading,
+    390: unit390Reading
   };
   return readings[unitId];
 }
