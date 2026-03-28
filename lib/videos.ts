@@ -121,6 +121,15 @@ export const frA1Videos: UnitVideo[] = [
 // Fransızca A2 Videoları (Ünite 331-360)
 export const frA2Videos: UnitVideo[] = [
     { unitId: 331, youtubeId: "YuzDrRApT2k", title: "Geçmiş Tatiller", level: "A2" },
+    { unitId: 332, youtubeId: "JTGIMmD4ZJg", title: "Gelecek Planları", level: "A2" },
+    { unitId: 333, youtubeId: "1X8bLHg72Ew", title: "Sağlık ve Hastalık", level: "A2" },
+    { unitId: 334, youtubeId: "UwQ1VlWMybA", title: "Bankada", level: "A2" },
+    { unitId: 335, youtubeId: "44pzRKHB2dc", title: "Postanede", level: "A2" },
+    { unitId: 336, youtubeId: "y4_0jvl6Ixg", title: "Otel Rezervasyonu", level: "A2" },
+    { unitId: 337, youtubeId: "fuHYpEH4Q-M", title: "Tren İstasyonunda", level: "A2" },
+    { unitId: 338, youtubeId: "8jmQuxBBBEs", title: "Havaalanında", level: "A2" },
+    { unitId: 339, youtubeId: "ZVq4trV-dyw", title: "Restoranda Sipariş", level: "A2" },
+    { unitId: 340, youtubeId: "QvT1M8VQ_dU", title: "Yemek Tarifi", level: "A2" },
     { unitId: 352, youtubeId: "e-4m5QkP-4M", title: "Davet Etme", level: "A2" },
     { unitId: 353, youtubeId: "OB4LFXFWe_g", title: "Özür Dileme", level: "A2" },
     { unitId: 355, youtubeId: "m83JDXvCnSk", title: "Şehir Tanıtımı", level: "A2" },
