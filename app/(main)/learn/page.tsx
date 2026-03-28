@@ -207,7 +207,7 @@ export default function LearnPage() {
                 {isMapMode && isMounted ? (
                     <div className="mb-12">
                         <Map3DView 
-                            units={units.slice(0, 5)} 
+                            units={units} 
                             currentProgress={currentProgress}
                             allLessonsUnlocked={allLessonsUnlocked}
                             getLessonRoute={getLessonRoute}

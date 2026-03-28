@@ -203,17 +203,19 @@ const Island = ({ position, unit, status, onClick }: {
 };
 
 const EnergyPath = ({ points }: { points: THREE.Vector3[] }) => {
+    const curve = useMemo(() => new THREE.CatmullRomCurve3(points), [points]);
+    const geo = useMemo(() => new THREE.TubeGeometry(curve, points.length * 12, 0.15, 8, false), [curve, points]);
+
     return (
-        <group>
-            {points.map((p, i) => (
-                i < points.length - 1 && (
-                    <mesh key={i} position={[(p.x + points[i+1].x)/2, (p.y + points[i+1].y)/2 - 0.2, (p.z + points[i+1].z)/2]}>
-                        <boxGeometry args={[0.2, 0.05, 6]} />
-                        <meshStandardMaterial color="#6366f1" emissive="#6366f1" emissiveIntensity={0.3} transparent opacity={0.6} />
-                    </mesh>
-                )
-            ))}
-        </group>
+        <mesh geometry={geo}>
+            <meshStandardMaterial 
+                color="#6366f1" 
+                emissive="#6366f1" 
+                emissiveIntensity={1} 
+                transparent 
+                opacity={0.7} 
+            />
+        </mesh>
     );
 };
 
@@ -223,8 +225,8 @@ export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLesso
     const islandData = useMemo(() => {
         if (!units || units.length === 0) return [];
         return units.map((unit, index) => {
-            const x = Math.sin(index * 1.5) * 5;
-            const z = index * -8;
+            const x = Math.sin(index * 1.2) * 6;
+            const z = index * -10;
             const y = 0;
 
             const completedLessonCount = unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length;
@@ -241,23 +243,30 @@ export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLesso
         });
     }, [units, currentProgress, allLessonsUnlocked]);
 
+    // Find the current unit position to target camera
+    const currentUnitIndex = useMemo(() => {
+        const idx = islandData.findIndex(d => d.status === 'current');
+        return idx === -1 ? 0 : idx;
+    }, [islandData]);
+
+    const targetPos = islandData[currentUnitIndex]?.position || [0, 0, 0];
     const pathPoints = useMemo(() => islandData.map(d => new THREE.Vector3(...d.position)), [islandData]);
 
     return (
         <div className="relative w-full h-[65vh] rounded-[3.5rem] overflow-hidden bg-gradient-to-b from-sky-300 to-sky-500 border-8 border-white/30 shadow-2xl">
-            <Canvas shadows dpr={[1, 2]} camera={{ position: [12, 12, 12], fov: 40 }}>
+            <Canvas shadows dpr={[1, 2]} camera={{ position: [targetPos[0] + 15, 15, targetPos[2] + 15], fov: 40 }}>
                 <OrbitControls 
                     enablePan={true} 
                     enableZoom={true} 
                     maxPolarAngle={Math.PI / 2.3}
                     minDistance={10}
-                    maxDistance={40}
-                    target={[0, 0, -8]}
+                    maxDistance={100}
+                    target={[targetPos[0], targetPos[1], targetPos[2]]}
                 />
                 
                 <Suspense fallback={<Html center><div className="flex flex-col items-center gap-4 text-white font-black"><div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin" />Dünya Yükleniyor...</div></Html>}>
                     <ambientLight intensity={0.6} />
-                    <directionalLight position={[20, 30, 10]} intensity={1.5} castShadow />
+                    <directionalLight position={[targetPos[0] + 20, 30, targetPos[2] + 10]} intensity={1.5} castShadow />
                     <hemisphereLight args={["#ffffff", "#0ea5e9", 0.5]} />
                     
                     <group>
@@ -270,16 +279,16 @@ export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLesso
                                 onClick={() => setSelectedUnit(data.unit)}
                             />
                         ))}
-                        <EnergyPath points={pathPoints} />
+                        {pathPoints.length > 1 && <EnergyPath points={pathPoints} />}
                     </group>
 
                     <Ocean />
-                    <Cloud position={[-10, 5, -10]} />
-                    <Cloud position={[8, 7, -20]} />
-                    <Cloud position={[-5, 4, -30]} />
-                    <Cloud position={[12, 6, 5]} />
+                    <Cloud position={[-10, 5, targetPos[2] - 10]} />
+                    <Cloud position={[10, 8, targetPos[2] - 25]} />
+                    <Cloud position={[-8, 6, targetPos[2] + 10]} />
+                    <Cloud position={[15, 7, targetPos[2] - 40]} />
 
-                    <ContactShadows position={[0, -2.4, 0]} opacity={0.3} scale={60} blur={2.5} far={10} />
+                    <ContactShadows position={[0, -2.4, 0]} opacity={0.3} scale={200} blur={2.5} far={10} />
                 </Suspense>
             </Canvas>
 
