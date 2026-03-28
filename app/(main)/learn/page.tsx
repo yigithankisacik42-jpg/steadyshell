@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { getVideoForUnit } from "@/lib/videos";
 import { useHearts } from "@/lib/hearts-context";
 import { Map3DView } from "@/components/learn/map-3d-view";
+import { ShelldonMentor } from "@/components/learn/shelldon-mentor";
 import { Map as MapIcon, List as ListIcon } from "lucide-react";
 
 
@@ -345,6 +346,9 @@ export default function LearnPage() {
 
             {/* GRADIENT BOTTOM OVERLAY */}
             <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none z-30" />
+
+            {/* AI MENTOR */}
+            {isMounted && <ShelldonMentor />}
         </div>
     );
 }
