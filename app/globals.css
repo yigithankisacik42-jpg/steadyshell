@@ -92,7 +92,7 @@
   }
 
   body {
-    @apply bg-background text-foreground overflow-x-hidden select-none active:tap-highlight-transparent;
+    @apply bg-background text-foreground overflow-x-hidden select-none;
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
   }
