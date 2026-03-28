@@ -13,7 +13,7 @@ import { Input } from '@/components/ui/input';
 
 export const ShelldonMentor = () => {
     const { user } = useUserProgress();
-    const { currentLanguage } = useLanguage();
+    const { currentLanguage, currentLevel } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const [message, setMessage] = useState<string>("");
     const [isLoading, setIsLoading] = useState(false);
@@ -38,7 +38,7 @@ export const ShelldonMentor = () => {
 
         const aiResponse = await getShelldonAIResponse(
             user, 
-            { name: currentLanguage.name, level: currentLanguage.level }, 
+            { name: currentLanguage.name, level: currentLevel?.code || "A1" }, 
             question
         );
 
