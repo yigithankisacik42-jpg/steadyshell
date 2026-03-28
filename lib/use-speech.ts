@@ -96,23 +96,31 @@ export function useSpeech(languageCode: string = 'es', options?: UseSpeechOption
                 let finalTranscript = '';
                 let interimTranscript = '';
 
+                // event.resultIndex'den başlayarak sadece yeni gelen sonuçları işle
                 for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    const transcriptPart = event.results[i][0].transcript;
                     if (event.results[i].isFinal) {
-                        finalTranscript += event.results[i][0].transcript;
+                        finalTranscript += transcriptPart;
                     } else {
-                        interimTranscript += event.results[i][0].transcript;
+                        interimTranscript += transcriptPart;
                     }
                 }
 
-                // Final varsa onu set et, yoksa interimi set et ki UI'da canlı dalgalanma görünsün.
+                // Eğer yeni bir final sonucumuz varsa veya sadece interim varsa UI'ı güncelle
+                // Not: Transcript state'ini biriktirmek yerine o anki "en iyi" görüntüyü veriyoruz.
+                // Eğer continuousMode açıksa, bileşen tarafında bu sonuçları biriktirmek gerekebilir.
                 const currentText = finalTranscript || interimTranscript;
-                setTranscript(currentText);
+                if (currentText.trim()) {
+                    setTranscript(currentText);
+                }
 
                 // Silence Detection Logic for Call Mode
                 if (options?.continuousMode && options?.onSilence && currentText.trim()) {
                     if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
                     silenceTimerRef.current = setTimeout(() => {
+                        // Sessizlik algılandığında (kullanıcı durakladığında) callback'i tetikle
                         options.onSilence!(currentText);
+                        // Transcript'i temizle ki bir sonraki cümle için taze başlasın
                         setTranscript('');
                     }, options.silenceTimeoutMs || 1500);
                 }

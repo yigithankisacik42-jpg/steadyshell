@@ -22,7 +22,7 @@ export const MobileHeader = () => {
                     <LanguageSwitcher />
 
                     {/* Level Tabs */}
-                    <div className="flex items-center gap-1 bg-slate-100/80 rounded-xl p-1">
+                    <div className="flex items-center gap-1 bg-slate-100/80 rounded-xl p-1 overflow-x-auto no-scrollbar max-w-[45vw]">
                         {levels.map((level) => {
                             const isActive = currentLevel?.code === level.code;
                             return (
@@ -30,7 +30,7 @@ export const MobileHeader = () => {
                                     key={level.code}
                                     onClick={() => setCurrentLevel(level)}
                                     className={cn(
-                                        "px-3 py-1.5 rounded-lg text-xs font-bold transition-all duration-200",
+                                        "px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex-shrink-0",
                                         isActive
                                             ? "bg-white text-indigo-600 shadow-sm"
                                             : "text-slate-500 hover:text-slate-700"

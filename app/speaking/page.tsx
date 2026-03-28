@@ -7,6 +7,8 @@ import { ArrowLeft, Mic, MicOff, Volume2, ArrowRight, CheckCircle2, RotateCcw, T
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { getSpeakingForUnit, UnitSpeaking, SpeakingExercise } from "@/lib/speakings";
+import { useUserProgress } from "@/contexts/user-progress-context";
+import { useQuests } from "@/lib/quests-context";
 
 export default function SpeakingPage() {
     return (
@@ -36,6 +38,19 @@ function SpeakingContent() {
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     const [isFinished, setIsFinished] = useState(false);
+
+    const { addXp, completeLesson } = useUserProgress();
+    const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
+
+    // Ders bittiğinde XP ve Seri güncelle
+    useEffect(() => {
+        if (isFinished) {
+            addXp(15);
+            addQuestXP(15);
+            addQuestLesson();
+            completeLesson();
+        }
+    }, [isFinished]);
 
     // Ünite değiştiğinde içeriği yükle
     useEffect(() => {
@@ -135,6 +150,9 @@ function SpeakingContent() {
                     .trim();
 
             const evaluateResult = (transcript: string) => {
+                // Eğer zaten değerlendirme yapıldıysa çık
+                if (!isRecording && status !== "recording") return;
+
                 setRecordedText(transcript);
                 setIsRecording(false);
 
@@ -169,27 +187,31 @@ function SpeakingContent() {
                 let finalTranscript = '';
                 let interimTranscript = '';
 
+                // Tüm sonuçları dönerek en güncel metni oluştur
                 for (let i = 0; i < event.results.length; i++) {
-                    if (event.results[i].isFinal) {
-                        finalTranscript += event.results[i][0].transcript;
+                    const res = event.results[i];
+                    if (res.isFinal) {
+                        finalTranscript += res[0].transcript;
                     } else {
-                        interimTranscript += event.results[i][0].transcript;
+                        interimTranscript += res[0].transcript;
                     }
                 }
 
-                // Canlı olarak ara sonucu göster
-                const currentText = finalTranscript || interimTranscript;
+                // Canlı olarak ara sonucu veya final sonucu göster
+                const currentText = (finalTranscript + interimTranscript).trim();
                 if (currentText) {
                     bestTranscript = currentText;
                     setRecordedText(currentText);
                 }
 
-                // Final sonuç geldiğinde değerlendir ve durdur
-                if (finalTranscript) {
-                    if (autoStopTimer) clearTimeout(autoStopTimer);
-                    try { recognition.stop(); } catch(e) { /* ignore */ }
-                    evaluateResult(finalTranscript);
-                }
+                // Sessizlik kontrolü: Kullanıcı konuşmayı bıraktıktan 1.5 saniye sonra otomatik durdur ve değerlendir
+                if (autoStopTimer) clearTimeout(autoStopTimer);
+                autoStopTimer = setTimeout(() => {
+                    if (hasResult) {
+                        try { recognition.stop(); } catch(e) { /* ignore */ }
+                        evaluateResult(bestTranscript);
+                    }
+                }, 1500);
             };
 
             recognition.onerror = (event: any) => {

@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, BookOpen, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 import { getReadingForUnit, UnitReading } from "@/lib/readings";
+import { useUserProgress } from "@/contexts/user-progress-context";
+import { useQuests } from "@/lib/quests-context";
 
 export default function ReadingPage() {
     return (
@@ -34,6 +36,18 @@ function ReadingContent() {
     const [answerStatus, setAnswerStatus] = useState<"none" | "correct" | "wrong">("none");
     const [showTranslation, setShowTranslation] = useState(false);
 
+    const { addXp, completeLesson } = useUserProgress();
+    const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
+
+    // Ders bittiğinde XP ve Seri güncelle
+    useEffect(() => {
+        if (step === "finished") {
+            addXp(10);
+            addQuestXP(10);
+            addQuestLesson();
+            completeLesson();
+        }
+    }, [step]);
 
     // Ünite değiştiğinde içeriği yükle
     useEffect(() => {

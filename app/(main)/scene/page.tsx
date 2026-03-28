@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useRef, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
+import { useUserProgress } from "@/contexts/user-progress-context";
+import { useQuests } from "@/lib/quests-context";
 import { Bot, Send, ArrowLeft, Loader2, MessageCircle, Globe, Check, Theater, Sparkles, Mic, MicOff, Volume2, VolumeX, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -46,8 +48,12 @@ export default function SceneModePage() {
 
 // Actual content component
 function SceneContent() {
+    const router = useRouter();
     const searchParams = useSearchParams();
     const unitParam = searchParams.get('unit');
+
+    const { addXp, completeLesson } = useUserProgress();
+    const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
 
     const [selectedLang, setSelectedLang] = useState<string>('');
     const [selectedLevel, setSelectedLevel] = useState<string>('');
@@ -227,6 +233,13 @@ function SceneContent() {
     };
 
     const backToSelection = () => {
+        // Eğer en az 2 mesaj (kullanıcı + AI) varsa XP ver
+        if (isInChat && messages.length >= 2) {
+            addXp(10);
+            addQuestXP(10);
+            addQuestLesson();
+            completeLesson();
+        }
         setIsInChat(false);
         setSelectedScene(null);
         setMessages([]);

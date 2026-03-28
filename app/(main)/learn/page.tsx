@@ -103,7 +103,7 @@ export default function LearnPage() {
                             <span className="font-bold text-sm tracking-wide">{currentLanguage.name}</span>
                         </div>
 
-                        <div className="flex gap-2 p-1 bg-white/5 backdrop-blur-sm rounded-xl overflow-x-auto max-w-[50vw]">
+                        <div className="flex gap-2 p-1 bg-white/5 backdrop-blur-sm rounded-xl overflow-x-auto max-w-[60vw] md:max-w-none no-scrollbar">
                             {currentLanguage.levels.map((level) => {
                                 const isSelected = currentLevel?.code === level.code;
                                 return (
@@ -111,7 +111,7 @@ export default function LearnPage() {
                                         key={level.code}
                                         onClick={() => setCurrentLevel(level)}
                                         className={cn(
-                                            "px-4 py-2 rounded-lg font-bold text-xs transition-all duration-300",
+                                            "px-3 py-2 md:px-4 rounded-lg font-bold text-[10px] md:text-xs transition-all duration-300 flex-shrink-0",
                                             isSelected
                                                 ? "bg-white text-indigo-900 shadow-lg scale-105"
                                                 : "text-white/60 hover:text-white hover:bg-white/10"
@@ -136,14 +136,14 @@ export default function LearnPage() {
                         </div>
 
                         {/* Quick Stats Row */}
-                        <div className="flex gap-3">
+                        <div className="flex gap-2 md:gap-3 w-full md:w-auto overflow-x-auto md:overflow-visible pb-2 md:pb-0 no-scrollbar">
                             {stats.map((stat, i) => (
-                                <div key={i} className="flex flex-col items-center justify-center w-24 h-24 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-colors">
-                                    <div className={`p-2 rounded-full mb-1 ${stat.bg}`}>
-                                        <stat.icon className={`w-5 h-5 ${stat.color}`} />
+                                <div key={i} className="flex flex-col items-center justify-center min-w-[5.5rem] h-20 md:w-24 md:h-24 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-colors flex-shrink-0">
+                                    <div className={`p-1.5 md:p-2 rounded-full mb-0.5 md:mb-1 ${stat.bg}`}>
+                                        <stat.icon className={`w-4 h-4 md:w-5 md:h-5 ${stat.color}`} />
                                     </div>
-                                    <span className="text-2xl font-bold">{stat.value}</span>
-                                    <span className="text-[10px] text-white/60 uppercase tracking-wider font-semibold">{stat.label}</span>
+                                    <span className="text-xl md:text-2xl font-bold">{stat.value}</span>
+                                    <span className="text-[9px] md:text-[10px] text-white/60 uppercase tracking-wider font-semibold">{stat.label}</span>
                                 </div>
                             ))}
                         </div>

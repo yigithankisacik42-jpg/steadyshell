@@ -18,6 +18,14 @@ export const metadata: Metadata = {
   },
   description: "Ücretsiz dil öğrenme uygulaması",
   manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "SteadyShell",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {

@@ -7,6 +7,8 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Trophy, GraduationCap, ChevronRigh
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { getGrammarForUnit, UnitGrammar } from "@/lib/grammar";
+import { useUserProgress } from "@/contexts/user-progress-context";
+import { useQuests } from "@/lib/quests-context";
 
 export default function GrammarPage() {
     return (
@@ -32,6 +34,19 @@ function GrammarContent() {
     const [currentRuleIndex, setCurrentRuleIndex] = useState(0);
 
     const [isFinished, setIsFinished] = useState(false);
+
+    const { addXp, completeLesson } = useUserProgress();
+    const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
+
+    // Ders bittiğinde XP ve Seri güncelle
+    useEffect(() => {
+        if (isFinished) {
+            addXp(20);
+            addQuestXP(20);
+            addQuestLesson();
+            completeLesson();
+        }
+    }, [isFinished]);
 
     useEffect(() => {
         const data = getGrammarForUnit(unitId);
