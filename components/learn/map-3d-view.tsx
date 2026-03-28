@@ -1,11 +1,11 @@
 "use client";
 
-import React, { Suspense, useState, useMemo, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Float, Text, ContactShadows, Html, PerspectiveCamera } from '@react-three/drei';
+import React, { Suspense, useState, useMemo, useRef, useEffect } from 'react';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { OrbitControls, Float, Text, ContactShadows, Html, PerspectiveCamera, ScrollControls, useScroll } from '@react-three/drei';
 import * as THREE from 'three';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, BookOpen, Star, Lock, ChevronRight, X, Cloud as CloudIcon } from 'lucide-react';
+import { Play, BookOpen, Star, Lock, ChevronRight, X, Cloud as CloudIcon, MousePointer2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { LessonType } from '@/lib/curriculum';
 import { Button } from '@/components/ui/button';
@@ -45,7 +45,7 @@ const Ocean = () => {
 
     return (
         <mesh ref={meshRef} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-            <planeGeometry args={[100, 100]} />
+            <planeGeometry args={[200, 200]} />
             <meshStandardMaterial 
                 color="#0ea5e9" 
                 transparent 
@@ -219,6 +219,31 @@ const EnergyPath = ({ points }: { points: THREE.Vector3[] }) => {
     );
 };
 
+// --- SCROLLER CORE ---
+const MapScroller = ({ islandData, targetPosInitial }: { islandData: any[], targetPosInitial: [number, number, number] }) => {
+    const scroll = useScroll();
+    const { camera } = useThree();
+    
+    // Smooth camera movement along Z
+    useFrame((state, delta) => {
+        // scroll.offset goes from 0 to 1
+        const totalDepth = (islandData.length - 1) * 10;
+        const currentZ = scroll.offset * -totalDepth;
+        
+        // Find current X based on index approximation
+        const index = Math.min(islandData.length - 1, Math.floor(scroll.offset * islandData.length));
+        const currentX = Math.sin(index * 1.2) * 6;
+
+        const targetCameraPos = new THREE.Vector3(currentX + 15, 15, currentZ + 15);
+        const targetFocusPos = new THREE.Vector3(currentX, 0, currentZ);
+
+        camera.position.lerp(targetCameraPos, delta * 2);
+        state.camera.lookAt(targetFocusPos);
+    });
+
+    return null;
+};
+
 export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLessonRoute, getLessonDescription }: Map3DViewProps) => {
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
 
@@ -243,52 +268,51 @@ export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLesso
         });
     }, [units, currentProgress, allLessonsUnlocked]);
 
-    // Find the current unit position to target camera
+    // Find current unit for initial focus
     const currentUnitIndex = useMemo(() => {
         const idx = islandData.findIndex(d => d.status === 'current');
         return idx === -1 ? 0 : idx;
     }, [islandData]);
 
-    const targetPos = islandData[currentUnitIndex]?.position || [0, 0, 0];
+    const targetPosInitial = islandData[currentUnitIndex]?.position || [0, 0, 0];
     const pathPoints = useMemo(() => islandData.map(d => new THREE.Vector3(...d.position)), [islandData]);
 
     return (
-        <div className="relative w-full h-[65vh] rounded-[3.5rem] overflow-hidden bg-gradient-to-b from-sky-300 to-sky-500 border-8 border-white/30 shadow-2xl">
-            <Canvas shadows dpr={[1, 2]} camera={{ position: [targetPos[0] + 15, 15, targetPos[2] + 15], fov: 40 }}>
-                <OrbitControls 
-                    enablePan={true} 
-                    enableZoom={true} 
-                    maxPolarAngle={Math.PI / 2.3}
-                    minDistance={10}
-                    maxDistance={100}
-                    target={[targetPos[0], targetPos[1], targetPos[2]]}
-                />
+        <div className="relative w-full h-[70vh] rounded-[3.5rem] overflow-hidden bg-gradient-to-b from-sky-300 to-sky-500 border-8 border-white/30 shadow-2xl">
+            <Canvas shadows dpr={[1, 2]}>
+                <PerspectiveCamera makeDefault position={[targetPosInitial[0] + 15, 15, targetPosInitial[2] + 15]} fov={40} />
                 
                 <Suspense fallback={<Html center><div className="flex flex-col items-center gap-4 text-white font-black"><div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin" />Dünya Yükleniyor...</div></Html>}>
-                    <ambientLight intensity={0.6} />
-                    <directionalLight position={[targetPos[0] + 20, 30, targetPos[2] + 10]} intensity={1.5} castShadow />
-                    <hemisphereLight args={["#ffffff", "#0ea5e9", 0.5]} />
                     
-                    <group>
-                        {islandData.map((data) => (
-                            <Island 
-                                key={data.unit.id}
-                                position={data.position}
-                                unit={data.unit}
-                                status={data.status}
-                                onClick={() => setSelectedUnit(data.unit)}
-                            />
+                    <ScrollControls pages={islandData.length / 2} damping={0.3}>
+                        <MapScroller islandData={islandData} targetPosInitial={targetPosInitial} />
+                        
+                        <ambientLight intensity={0.6} />
+                        <directionalLight position={[targetPosInitial[0] + 20, 30, targetPosInitial[2] + 10]} intensity={1.5} castShadow />
+                        <hemisphereLight args={["#ffffff", "#0ea5e9", 0.5]} />
+                        
+                        <group>
+                            {islandData.map((data) => (
+                                <Island 
+                                    key={data.unit.id}
+                                    position={data.position}
+                                    unit={data.unit}
+                                    status={data.status}
+                                    onClick={() => setSelectedUnit(data.unit)}
+                                />
+                            ))}
+                            {pathPoints.length > 1 && <EnergyPath points={pathPoints} />}
+                        </group>
+
+                        <Ocean />
+                        {/* Clouds distributed along the path */}
+                        {islandData.filter((_, i) => i % 3 === 0).map((data, i) => (
+                            <Cloud key={i} position={[data.position[0] + (i % 2 ? 10 : -10), 6 + (i % 3), data.position[2]]} />
                         ))}
-                        {pathPoints.length > 1 && <EnergyPath points={pathPoints} />}
-                    </group>
 
-                    <Ocean />
-                    <Cloud position={[-10, 5, targetPos[2] - 10]} />
-                    <Cloud position={[10, 8, targetPos[2] - 25]} />
-                    <Cloud position={[-8, 6, targetPos[2] + 10]} />
-                    <Cloud position={[15, 7, targetPos[2] - 40]} />
-
-                    <ContactShadows position={[0, -2.4, 0]} opacity={0.3} scale={200} blur={2.5} far={10} />
+                        <ContactShadows position={[0, -2.4, 0]} opacity={0.3} scale={200} blur={2.5} far={10} />
+                    </ScrollControls>
+                    
                 </Suspense>
             </Canvas>
 
@@ -368,11 +392,10 @@ export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLesso
             {/* Instruction Overlay */}
             <div className="absolute top-8 left-8 pointer-events-none">
                 <div className="bg-white/30 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/40 text-white text-[11px] font-black flex items-center gap-3 shadow-xl">
-                    <span className="flex h-2.5 w-2.5 relative">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                    </span>
-                    KEŞFETMEK İÇİN SÜRÜKLE
+                    <div className="flex flex-col items-center gap-1">
+                        <MousePointer2 className="w-4 h-4 animate-bounce" />
+                        <span>KAYDIR VE İLERLE</span>
+                    </div>
                 </div>
             </div>
         </div>
