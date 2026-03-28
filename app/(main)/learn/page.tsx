@@ -204,7 +204,7 @@ export default function LearnPage() {
 
             {/* CURRICULUM CONTENT */}
             <div className="max-w-3xl mx-auto px-4 w-full -mt-20 z-20 relative">
-                {isMapMode ? (
+                {isMapMode && isMounted ? (
                     <div className="mb-12">
                         <Map3DView 
                             units={units.slice(0, 5)} 

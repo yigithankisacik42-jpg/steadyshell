@@ -43,95 +43,51 @@ const Island = ({ position, color, unit, status, onClick }: {
     const isCompleted = status === 'completed';
     const isCurrent = status === 'current';
     
-    // Low-poly island base
     return (
         <group position={position}>
-            {/* Island Base */}
             <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
                 <mesh receiveShadow castShadow onClick={(e) => { e.stopPropagation(); onClick(); }}>
-                    <cylinderGeometry args={[2.5, 3, 1, 6]} />
+                    <cylinderGeometry args={[2, 2.5, 0.8, 6]} />
                     <meshStandardMaterial 
                         color={isCompleted ? "#4ade80" : isCurrent ? "#6366f1" : "#94a3b8"} 
-                        roughness={0.8}
                     />
                 </mesh>
                 
-                {/* Visual Marker / Landmark based on Unit ID */}
-                <group position={[0, 1, 0]}>
-                    {unit.id % 5 === 1 && ( // House
-                        <mesh castShadow>
-                            <boxGeometry args={[1, 1, 1]} />
-                            <meshStandardMaterial color="#fca5a5" />
-                        </mesh>
-                    )}
-                    {unit.id % 5 === 2 && ( // Tree
-                        <group>
-                            <mesh position={[0, 0.5, 0]} castShadow>
-                                <cylinderGeometry args={[0.2, 0.2, 1, 8]} />
-                                <meshStandardMaterial color="#78350f" />
-                            </mesh>
-                            <mesh position={[0, 1.2, 0]} castShadow>
-                                <coneGeometry args={[0.8, 1.5, 8]} />
-                                <meshStandardMaterial color="#166534" />
-                            </mesh>
-                        </group>
-                    )}
-                    {unit.id % 5 === 3 && ( // Tower
-                        <mesh castShadow>
-                            <cylinderGeometry args={[0.5, 0.7, 2.5, 8]} />
-                            <meshStandardMaterial color="#cbd5e1" />
-                        </mesh>
-                    )}
-                    {unit.id % 5 === 4 && ( // Arch
-                        <mesh castShadow rotation={[0, 0, Math.PI / 2]}>
-                            <torusGeometry args={[0.8, 0.2, 8, 16, Math.PI]} />
-                            <meshStandardMaterial color="#fbbf24" />
-                        </mesh>
-                    )}
-                    {unit.id % 5 === 0 && ( // Pyramid
-                        <mesh castShadow>
-                            <coneGeometry args={[1, 1.5, 4]} />
-                            <meshStandardMaterial color="#f59e0b" />
-                        </mesh>
-                    )}
+                <group position={[0, 0.8, 0]}>
+                    <mesh castShadow>
+                        <boxGeometry args={[0.8, 0.8, 0.8]} />
+                        <meshStandardMaterial color={isCurrent ? "#fbbf24" : "#ffffff"} />
+                    </mesh>
                 </group>
-
-                {/* Legend Text */}
-                <Text
-                    position={[0, -1, 0]}
-                    fontSize={0.4}
-                    color="white"
-                    anchorX="center"
-                    anchorY="middle"
-                    font="/fonts/Inter-Bold.woff" // Adjust if needed
-                >
-                    {`Unit ${unit.id}`}
-                </Text>
             </Float>
         </group>
     );
 };
 
 const Path = ({ points }: { points: THREE.Vector3[] }) => {
-    const curve = useMemo(() => new THREE.CatmullRomCurve3(points), [points]);
-    const geometry = useMemo(() => new THREE.TubeGeometry(curve, 64, 0.1, 8, false), [curve]);
-
     return (
-        <mesh geometry={geometry}>
-            <meshStandardMaterial color="#e2e8f0" opacity={0.5} transparent />
-        </mesh>
+        <group>
+            {points.map((p, i) => (
+                i < points.length - 1 && (
+                    <mesh key={i} position={[ (p.x + points[i+1].x)/2, (p.y + points[i+1].y)/2, (p.z + points[i+1].z)/2 ]}>
+                        <boxGeometry args={[0.1, 0.1, 8]} />
+                        <meshStandardMaterial color="#cbd5e1" transparent opacity={0.3} />
+                    </mesh>
+                )
+            ))}
+        </group>
     );
 };
 
 export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLessonRoute, getLessonDescription }: Map3DViewProps) => {
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
 
-    // Generate positions for islands in a winding path
     const islandData = useMemo(() => {
+        if (!units || units.length === 0) return [];
         return units.map((unit, index) => {
-            const x = Math.sin(index * 1.5) * 5;
-            const z = index * -8;
-            const y = Math.cos(index * 0.5) * 1;
+            const x = Math.sin(index * 1.2) * 4;
+            const z = index * -6;
+            const y = 0;
 
             const completedLessonCount = unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length;
             const isCompleted = completedLessonCount === unit.lessons.length;
@@ -150,25 +106,22 @@ export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLesso
     const pathPoints = useMemo(() => islandData.map(d => new THREE.Vector3(...d.position)), [islandData]);
 
     return (
-        <div className="relative w-full h-[70vh] rounded-[3rem] overflow-hidden bg-gradient-to-b from-sky-400 to-indigo-900 shadow-inner">
-            <Canvas shadows dpr={[1, 2]}>
-                <PerspectiveCamera makeDefault position={[10, 10, 10]} fov={50} />
+        <div className="relative w-full h-[60vh] rounded-[3rem] overflow-hidden bg-gradient-to-b from-sky-400 to-indigo-900 border-4 border-white/20 shadow-2xl">
+            <Canvas shadows dpr={[1, 2]} camera={{ position: [8, 8, 8], fov: 45 }}>
                 <OrbitControls 
                     enablePan={true} 
                     enableZoom={true} 
-                    maxPolarAngle={Math.PI / 2.1} 
-                    minDistance={5}
-                    maxDistance={50}
-                    target={[0, 0, -10]}
+                    maxPolarAngle={Math.PI / 2.2}
+                    target={[0, 0, -5]}
                 />
                 
-                <Suspense fallback={null}>
-                    <Environment preset="city" />
-                    <ambientLight intensity={0.5} />
-                    <pointLight position={[10, 10, 10]} intensity={1} castShadow />
+                <Suspense fallback={<Html center><div className="text-white font-bold">Yükleniyor...</div></Html>}>
+                    <ambientLight intensity={0.8} />
+                    <directionalLight position={[10, 10, 5]} intensity={1.5} castShadow />
+                    <pointLight position={[-10, -10, -10]} intensity={0.5} />
                     
                     <group>
-                        {islandData.map((data, i) => (
+                        {islandData.map((data) => (
                             <Island 
                                 key={data.unit.id}
                                 position={data.position}
@@ -178,10 +131,9 @@ export const Map3DView = ({ units, currentProgress, allLessonsUnlocked, getLesso
                                 onClick={() => setSelectedUnit(data.unit)}
                             />
                         ))}
-                        <Path points={pathPoints} />
                     </group>
 
-                    <ContactShadows position={[0, -5, 0]} opacity={0.4} scale={40} blur={2} far={10} />
+                    <ContactShadows position={[0, -2, 0]} opacity={0.4} scale={20} blur={2} far={5} />
                 </Suspense>
             </Canvas>
 
