@@ -22,6 +22,10 @@ const nextConfig = {
             },
         ],
     },
+    // Turbopack ve Webpack çakışmasını gidermek için (Next.js 15+)
+    experimental: {
+        turbopack: {},
+    },
 };
 
 export default withPWA(nextConfig);
