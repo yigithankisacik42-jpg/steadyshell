@@ -11,6 +11,8 @@ import { APP_CONFIG } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { getVideoForUnit } from "@/lib/videos";
 import { useHearts } from "@/lib/hearts-context";
+import { Map3DView } from "@/components/learn/map-3d-view";
+import { Map as MapIcon, List as ListIcon } from "lucide-react";
 
 
 export default function LearnPage() {
@@ -18,6 +20,8 @@ export default function LearnPage() {
     const { hearts } = useHearts();
     const { user } = useUserProgress();
 
+    const [isMapMode, setIsMapMode] = useState(false);
+    
     // Test modu: Tüm dersler açık
     const allLessonsUnlocked = true;
 
@@ -151,28 +155,66 @@ export default function LearnPage() {
 
                     {/* Quick Access Card */}
                     {isMounted && currentLevel && units.length > 0 && (
-                        <Link
-                            href={getLessonRoute(units[0].lessons[0].type, units[0].id, 0, units[0].lessons)}
-                            className="block w-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 p-6 rounded-3xl flex items-center justify-between group cursor-pointer hover:border-white/40 transition-all hover:scale-[1.02]"
-                        >
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-indigo-600">
-                                    <Play className="w-5 h-5 ml-1" />
+                        <div className="flex flex-col gap-4">
+                            <Link
+                                href={getLessonRoute(units[0].lessons[0].type, units[0].id, 0, units[0].lessons)}
+                                className="block w-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 p-6 rounded-3xl flex items-center justify-between group cursor-pointer hover:border-white/40 transition-all hover:scale-[1.02]"
+                            >
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-indigo-600">
+                                        <Play className="w-5 h-5 ml-1" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-xl">Kaldığın Yerden Devam Et</h3>
+                                        <p className="text-white/70 text-sm">Ünite 1: {units[0].title} • {getLessonDescription(units[0].lessons[0].type)}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 className="font-bold text-xl">Kaldığın Yerden Devam Et</h3>
-                                    <p className="text-white/70 text-sm">Ünite 1: {units[0].title} • {getLessonDescription(units[0].lessons[0].type)}</p>
+                                <ChevronRight className="w-6 h-6 text-white/50 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+
+                            {/* VIEW TOGGLE */}
+                            <div className="flex justify-center mt-2">
+                                <div className="bg-white/10 backdrop-blur-md p-1 rounded-2xl border border-white/10 flex gap-1">
+                                    <button 
+                                        onClick={() => setIsMapMode(false)}
+                                        className={cn(
+                                            "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all",
+                                            !isMapMode ? "bg-white text-indigo-900 shadow-lg" : "text-white/60 hover:text-white"
+                                        )}
+                                    >
+                                        <ListIcon className="w-4 h-4" />
+                                        Liste
+                                    </button>
+                                    <button 
+                                        onClick={() => setIsMapMode(true)}
+                                        className={cn(
+                                            "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all",
+                                            isMapMode ? "bg-white text-indigo-900 shadow-lg" : "text-white/60 hover:text-white"
+                                        )}
+                                    >
+                                        <MapIcon className="w-4 h-4" />
+                                        3D Harita
+                                    </button>
                                 </div>
                             </div>
-                            <ChevronRight className="w-6 h-6 text-white/50 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        </div>
                     )}
                 </div>
             </div>
 
             {/* CURRICULUM CONTENT */}
             <div className="max-w-3xl mx-auto px-4 w-full -mt-20 z-20 relative">
-                {units.length > 0 ? (
+                {isMapMode ? (
+                    <div className="mb-12">
+                        <Map3DView 
+                            units={units.slice(0, 5)} 
+                            currentProgress={currentProgress}
+                            allLessonsUnlocked={allLessonsUnlocked}
+                            getLessonRoute={getLessonRoute}
+                            getLessonDescription={getLessonDescription}
+                        />
+                    </div>
+                ) : units.length > 0 ? (
                     <div className="flex flex-col gap-12">
                         {units.map((unit, unitIndex) => (
                             <div key={unit.id} className="group">
