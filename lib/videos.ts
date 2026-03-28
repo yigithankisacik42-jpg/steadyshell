@@ -120,6 +120,7 @@ export const frA1Videos: UnitVideo[] = [
 
 // Fransızca A2 Videoları (Ünite 331-360)
 export const frA2Videos: UnitVideo[] = [
+    { unitId: 331, youtubeId: "YuzDrRApT2k", title: "Geçmiş Tatiller", level: "A2" },
     { unitId: 352, youtubeId: "e-4m5QkP-4M", title: "Davet Etme", level: "A2" },
     { unitId: 353, youtubeId: "OB4LFXFWe_g", title: "Özür Dileme", level: "A2" },
     { unitId: 355, youtubeId: "m83JDXvCnSk", title: "Şehir Tanıtımı", level: "A2" },
@@ -143,30 +144,34 @@ export const allFrenchVideos = [...frA1Videos, ...frA2Videos];
 export const allEnglishVideos = [...enA1Videos, ...enA2Videos];
 
 // Ünite ID'sine göre video getir (dil otomatik algılanır)
-export function getVideoForUnit(unitId: number): UnitVideo | undefined {
+export function getVideoForUnit(unitId: number | string): UnitVideo | undefined {
+    const id = typeof unitId === 'string' ? parseInt(unitId) : unitId;
+    
+    if (isNaN(id)) return undefined;
+
     // Fransızca: 301-399
-    if (unitId >= 301 && unitId <= 399) {
+    if (id >= 301 && id <= 399) {
         // A1: 301-330, A2: 331-360
-        if (unitId <= 330) {
-            return frA1Videos.find(v => v.unitId === unitId);
+        if (id <= 330) {
+            return frA1Videos.find(v => Number(v.unitId) === id);
         }
-        return frA2Videos.find(v => v.unitId === unitId);
+        return frA2Videos.find(v => Number(v.unitId) === id);
     }
     // İngilizce: 101-199
-    if (unitId >= 101 && unitId <= 199) {
-        if (unitId <= 130) {
-            return enA1Videos.find(v => v.unitId === unitId);
+    if (id >= 101 && id <= 199) {
+        if (id <= 130) {
+            return enA1Videos.find(v => Number(v.unitId) === id);
         }
-        return enA2Videos.find(v => v.unitId === unitId);
+        return enA2Videos.find(v => Number(v.unitId) === id);
     }
     // İspanyolca: 1-99
-    if (unitId <= 30) {
-        return a1Videos.find(v => v.unitId === unitId);
+    if (id <= 30) {
+        return a1Videos.find(v => Number(v.unitId) === id);
     }
-    if (unitId <= 60) {
-        return a2Videos.find(v => v.unitId === unitId);
+    if (id <= 60) {
+        return a2Videos.find(v => Number(v.unitId) === id);
     }
-    return allVideos.find(v => v.unitId === unitId);
+    return allVideos.find(v => Number(v.unitId) === id);
 }
 
 // Seviyeye göre videoları getir
@@ -179,4 +184,3 @@ export function getVideosForLevel(level: string): UnitVideo[] {
         default: return [];
     }
 }
-
