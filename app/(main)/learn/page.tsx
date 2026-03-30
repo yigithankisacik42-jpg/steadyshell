@@ -16,6 +16,7 @@ import { Map3DView } from "@/components/learn/map-3d-view";
 import { ShelldonMentor } from "@/components/learn/shelldon-mentor";
 import { Map as MapIcon, List as ListIcon } from "lucide-react";
 import { useShelldon } from "@/contexts/shelldon-context";
+import { getStoryMetaForUnit } from "@/lib/stories";
 
 
 export default function LearnPage() {
@@ -254,6 +255,15 @@ export default function LearnPage() {
                     <div className="flex flex-col gap-12">
                         {units.map((unit, unitIndex) => (
                             <div key={unit.id} className="group">
+                                {(() => {
+                                    const completedLessonCount = unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length;
+                                    const unitProgressPercent = unit.lessons.length > 0
+                                        ? (completedLessonCount / unit.lessons.length) * 100
+                                        : 0;
+                                    const storyMeta = getStoryMetaForUnit(unit.id);
+                                    const isStoryUnlocked = !!storyMeta && completedLessonCount > 0;
+
+                                    return (
                                 {/* Unit Header Card */}
                                 <div className="relative mb-8 bg-white rounded-3xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
                                     {/* Decorative Gradient Background */}
@@ -283,12 +293,12 @@ export default function LearnPage() {
                                     <div className="mt-6">
                                         <div className="flex justify-between text-xs font-bold text-slate-400 mb-2">
                                             <span>İLERLEME</span>
-                                            <span>%{(unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length / unit.lessons.length * 100).toFixed(0)}</span>
+                                            <span>%{unitProgressPercent.toFixed(0)}</span>
                                         </div>
                                         <div className="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
                                             <div
                                                 className={cn("h-full rounded-full transition-all duration-1000 bg-gradient-to-r", unit.color.replace('bg-', 'from-').replace('text-', 'to-'))}
-                                                style={{ width: `${(unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length / unit.lessons.length * 100)}%` }}
+                                                style={{ width: `${unitProgressPercent}%` }}
                                             />
                                         </div>
                                     </div>
@@ -313,7 +323,36 @@ export default function LearnPage() {
                                                 </div>
                                             </Link>
                                         )}
+
+                                    {/* Story Segment */}
+                                    {storyMeta && (
+                                        <Link href={`/story?unitId=${unit.id}`} className="block mt-4">
+                                            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-200 rounded-2xl hover:border-amber-400 hover:shadow-lg hover:shadow-amber-100 transition-all group cursor-pointer">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-amber-200">
+                                                        <BookOpen className="w-5 h-5" />
+                                                    </div>
+                                                    <div>
+                                                        <p className="font-bold text-amber-800 text-sm">Hikâye Bölümü</p>
+                                                        <p className="text-xs text-amber-700/70">
+                                                            {storyMeta.segment.arcTitle} • Bölüm {storyMeta.index}/{storyMeta.total}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <span className={cn(
+                                                    "px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wide",
+                                                    isStoryUnlocked
+                                                        ? "bg-emerald-100 text-emerald-700"
+                                                        : "bg-amber-100 text-amber-700"
+                                                )}>
+                                                    {isStoryUnlocked ? "Açık" : "Kilitli"}
+                                                </span>
+                                            </div>
+                                        </Link>
+                                    )}
                                 </div>
+                                    );
+                                })()}
 
                                 {/* Lesson Path (Vertical) */}
                                 <div className="flex flex-col items-center relative space-y-4 pb-4">
