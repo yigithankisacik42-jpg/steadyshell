@@ -5,8 +5,9 @@ import { Bot, Send, User, Sparkles, ArrowLeft, Loader2, Lightbulb, BookOpen, Mes
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { sendMessageToAI, type ChatMessage } from "@/lib/ai";
+import { sendMessageToAI, type ChatMessage, type AIMode } from "@/lib/ai";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useUserProgress } from "@/contexts/user-progress-context";
 import { useSpeech } from "@/lib/use-speech";
 import { cn } from "@/lib/utils";
 
@@ -44,8 +45,12 @@ export default function AITutorPage() {
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [userLevel, setUserLevel] = useState("A1");
+    const [currentMode, setCurrentMode] = useState<AIMode>("casual");
+    const [lunaMood, setLunaMood] = useState<"default" | "happy" | "thinking" | "correcting">("default");
+    const [discoveredWords, setDiscoveredWords] = useState<{word: string, translation: string}[]>([]);
     const [selectedLang, setSelectedLang] = useState(currentLanguage?.code || 'es');
     const [hasStarted, setHasStarted] = useState(false);
+    const { addXp } = useUserProgress();
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     // Ses özellikleri
@@ -86,14 +91,42 @@ export default function AITutorPage() {
         setMessages(prev => [...prev, userMessage]);
         setInputValue("");
         setIsLoading(true);
+        setLunaMood("thinking");
         setHasStarted(true);
 
-        const response = await sendMessageToAI([...messages, userMessage], selectedLang, userLevel);
+        const response = await sendMessageToAI([...messages, userMessage], selectedLang, userLevel, currentMode);
 
         if (response.success) {
             const aiMessage: ChatMessage = { role: 'assistant', content: response.message };
             setMessages(prev => [...prev, aiMessage]);
+            
+            // Mood based on content
+            if (response.message.includes("❌ Hata")) {
+                setLunaMood("correcting");
+            } else {
+                setLunaMood("happy");
+            }
+
+            // Parse discovered words: **word** (translation)
+            const wordRegex = /\*\*(.*?)\*\*\s?\((.*?)\)/g;
+            let match;
+            const newWords: {word: string, translation: string}[] = [];
+            while ((match = wordRegex.exec(response.message)) !== null) {
+                newWords.push({ word: match[1], translation: match[2] });
+            }
+            if (newWords.length > 0) {
+                setDiscoveredWords(prev => {
+                    const existing = new Set(prev.map(w => w.word));
+                    const filtered = newWords.filter(nw => !existing.has(nw.word));
+                    return [...prev, ...filtered];
+                });
+            }
+
+            if (messages.length > 0 && (messages.length + 2) % 4 === 0) {
+                addXp(10);
+            }
         } else {
+            setLunaMood("default");
             const errorMessage: ChatMessage = {
                 role: 'assistant',
                 content: `⚠️ ${response.error || 'Bir hata oluştu. Lütfen tekrar deneyin.'}`
@@ -134,7 +167,12 @@ export default function AITutorPage() {
 
                     <div className="flex items-center gap-3">
                         <div className="relative">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                            <div className={cn(
+                                "w-10 h-10 rounded-xl flex items-center justify-center shadow-lg transition-all duration-300",
+                                lunaMood === "thinking" ? "bg-amber-500 scale-110" : 
+                                lunaMood === "correcting" ? "bg-rose-500" :
+                                lunaMood === "happy" ? "bg-emerald-500 scale-105" : "bg-gradient-to-br from-indigo-500 to-violet-600"
+                            )}>
                                 <Bot className="w-6 h-6 text-white" />
                             </div>
                             <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full animate-pulse" />
@@ -154,6 +192,21 @@ export default function AITutorPage() {
                 </div>
 
                 <div className="flex items-center gap-2">
+                    {/* Mode Selector */}
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <MessageCircle className="w-4 h-4 text-indigo-500" />
+                        <select
+                            value={currentMode}
+                            onChange={(e) => setCurrentMode(e.target.value as AIMode)}
+                            className="bg-transparent text-sm font-bold text-slate-600 outline-none cursor-pointer"
+                        >
+                            <option value="casual">Sohbet</option>
+                            <option value="scenario">Senaryo</option>
+                            <option value="grammar">Dilbilgisi</option>
+                            <option value="general">Sınırsız AI</option>
+                        </select>
+                    </div>
+
                     {/* Level Selector */}
                     <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 rounded-lg shadow-sm">
                         <Sparkles className="w-4 h-4 text-amber-500" />
@@ -162,10 +215,10 @@ export default function AITutorPage() {
                             onChange={(e) => setUserLevel(e.target.value)}
                             className="bg-transparent text-sm font-bold text-slate-600 outline-none cursor-pointer"
                         >
-                            <option value="A1">A1 - Başlangıç</option>
-                            <option value="A2">A2 - Temel</option>
-                            <option value="B1">B1 - Orta</option>
-                            <option value="B2">B2 - İleri</option>
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
                         </select>
                     </div>
 
@@ -220,75 +273,97 @@ export default function AITutorPage() {
                         </div>
                     )}
 
-                    {/* Message Bubbles */}
-                    {messages.map((message, index) => (
-                        <div
-                            key={index}
-                            className={cn(
-                                "flex gap-4 animate-in fade-in slide-in-from-bottom-4 duration-300",
-                                message.role === 'user' ? "flex-row-reverse" : ""
-                            )}
-                        >
-                            {/* Avatar */}
-                            <div className={cn(
-                                "w-10 h-10 rounded-xl flex items-center justify-center shadow-md flex-shrink-0",
-                                message.role === 'user'
-                                    ? "bg-indigo-600 text-white"
-                                    : "bg-white text-indigo-600 border border-indigo-100"
-                            )}>
-                                {message.role === 'user'
-                                    ? <User className="w-5 h-5" />
-                                    : <Bot className="w-6 h-6" />
-                                }
-                            </div>
-
-                            {/* Bubble */}
-                            <div className={cn(
-                                "max-w-[85%] rounded-[20px] px-6 py-4 shadow-sm relative group",
-                                message.role === 'user'
-                                    ? "bg-indigo-600 text-white rounded-tr-sm"
-                                    : "bg-white text-slate-700 border border-slate-100 rounded-tl-sm"
-                            )}>
-                                <p className="leading-relaxed whitespace-pre-wrap font-medium">
-                                    {message.content}
-                                </p>
-
-                                {/* AI Actions */}
-                                {message.role === 'assistant' && speechSupported && (
-                                    <div className="flex gap-2 mt-3 pt-3 border-t border-slate-100/50 opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <button
-                                            onClick={() => isSpeaking ? stopSpeaking() : speak(message.content)}
-                                            className="flex items-center gap-1.5 text-xs font-bold text-indigo-500 hover:text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg transition-colors"
-                                        >
-                                            {isSpeaking ? (
-                                                <><VolumeX className="w-3.5 h-3.5" /> Durdur</>
-                                            ) : (
-                                                <><Volume2 className="w-3.5 h-3.5" /> Dinle</>
-                                            )}
-                                        </button>
+                    {/* Message Bubbles - Adjusted for sidebar space if needed */}
+                    <div className="flex gap-6 max-w-5xl mx-auto items-start">
+                        <div className="flex-1 space-y-6 overflow-hidden">
+                            {messages.map((message, index) => (
+                                <div
+                                    key={index}
+                                    className={cn(
+                                        "flex gap-4 animate-in fade-in slide-in-from-bottom-4 duration-300",
+                                        message.role === 'user' ? "flex-row-reverse" : ""
+                                    )}
+                                >
+                                    {/* Avatar */}
+                                    <div className={cn(
+                                        "w-10 h-10 rounded-xl flex items-center justify-center shadow-md flex-shrink-0",
+                                        message.role === 'user'
+                                            ? "bg-indigo-600 text-white"
+                                            : "bg-white text-indigo-600 border border-indigo-100"
+                                    )}>
+                                        {message.role === 'user'
+                                            ? <User className="w-5 h-5" />
+                                            : <Bot className="w-6 h-6" />
+                                        }
                                     </div>
-                                )}
-                            </div>
-                        </div>
-                    ))}
 
-                    {isLoading && (
-                        <div className="flex gap-4">
-                            <div className="w-10 h-10 rounded-xl bg-white text-indigo-600 border border-indigo-100 flex items-center justify-center shadow-md">
-                                <Bot className="w-6 h-6" />
-                            </div>
-                            <div className="bg-white border border-slate-100 rounded-[20px] rounded-tl-sm px-6 py-4 shadow-sm flex items-center gap-3">
-                                <div className="flex space-x-1">
-                                    <div className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                                    <div className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                                    <div className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce"></div>
+                                    {/* Bubble */}
+                                    <div className={cn(
+                                        "max-w-[85%] rounded-[20px] px-6 py-4 shadow-sm relative group",
+                                        message.role === 'user'
+                                            ? "bg-indigo-600 text-white rounded-tr-sm"
+                                            : "bg-white text-slate-700 border border-slate-100 rounded-tl-sm"
+                                    )}>
+                                        <p className="leading-relaxed whitespace-pre-wrap font-medium">
+                                            {message.content}
+                                        </p>
+
+                                        {/* AI Actions */}
+                                        {message.role === 'assistant' && speechSupported && (
+                                            <div className="flex gap-2 mt-3 pt-3 border-t border-slate-100/50 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                <button
+                                                    onClick={() => isSpeaking ? stopSpeaking() : speak(message.content)}
+                                                    className="flex items-center gap-1.5 text-xs font-bold text-indigo-500 hover:text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg transition-colors"
+                                                >
+                                                    {isSpeaking ? (
+                                                        <><VolumeX className="w-3.5 h-3.5" /> Durdur</>
+                                                    ) : (
+                                                        <><Volume2 className="w-3.5 h-3.5" /> Dinle</>
+                                                    )}
+                                                </button>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                                <span className="text-sm font-bold text-slate-400">Luna düşünüyor...</span>
-                            </div>
-                        </div>
-                    )}
+                            ))}
 
-                    <div ref={messagesEndRef} />
+                            {isLoading && (
+                                <div className="flex gap-4">
+                                    <div className="w-10 h-10 rounded-xl bg-white text-indigo-600 border border-indigo-100 flex items-center justify-center shadow-md">
+                                        <Bot className="w-6 h-6" />
+                                    </div>
+                                    <div className="bg-white border border-slate-100 rounded-[20px] rounded-tl-sm px-6 py-4 shadow-sm flex items-center gap-3">
+                                        <div className="flex space-x-1">
+                                            <div className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                                            <div className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                                            <div className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce"></div>
+                                        </div>
+                                        <span className="text-sm font-bold text-slate-400">Luna düşünüyor...</span>
+                                    </div>
+                                </div>
+                            )}
+                            <div ref={messagesEndRef} />
+                        </div>
+
+                        {/* DISCOVERED WORDS SIDEBAR */}
+                        {hasStarted && discoveredWords.length > 0 && (
+                            <div className="hidden xl:block w-64 bg-white border border-indigo-100 rounded-3xl p-6 shadow-sm sticky top-[80px] animate-in slide-in-from-right duration-500">
+                                <div className="flex items-center gap-2 mb-4">
+                                    <BookOpen className="w-4 h-4 text-indigo-500" />
+                                    <h3 className="font-bold text-sm text-slate-800">Yeni Kelimeler</h3>
+                                </div>
+                                <div className="space-y-3">
+                                    {discoveredWords.map((item, idx) => (
+                                        <div key={idx} className="group cursor-help">
+                                            <p className="text-sm font-bold text-indigo-600 mb-0.5">{item.word}</p>
+                                            <p className="text-xs text-slate-400 font-medium">{item.translation}</p>
+                                            <div className="h-0.5 w-0 group-hover:w-full bg-indigo-100 transition-all duration-300 mt-1" />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 
