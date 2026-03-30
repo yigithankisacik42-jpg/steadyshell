@@ -4,6 +4,29 @@ export type StoryLine = {
     tr: string;
 };
 
+export type StoryChoiceOption = {
+    id: string;
+    text: string;
+    correct: boolean;
+};
+
+export type StoryInteraction =
+    | {
+          type: "choice";
+          prompt: string;
+          options: StoryChoiceOption[];
+          correctFeedback?: string;
+          wrongFeedback?: string;
+      }
+    | {
+          type: "fill_blank";
+          prompt: string;
+          sentence: string;
+          options: StoryChoiceOption[];
+          correctFeedback?: string;
+          wrongFeedback?: string;
+      };
+
 export type StorySegment = {
     unitId: number;
     arcId: string;
@@ -11,6 +34,7 @@ export type StorySegment = {
     title: string;
     scene: string;
     lines: StoryLine[];
+    interactive?: StoryInteraction[];
 };
 
 const stories: StorySegment[] = [
@@ -24,6 +48,31 @@ const stories: StorySegment[] = [
             { speaker: "Deniz", fr: "L'année dernière, j'étais à Paris.", tr: "Geçen yıl Paris'teydim." },
             { speaker: "Camille", fr: "Tu as aimé la ville ?", tr: "Şehri sevdin mi?" },
             { speaker: "Deniz", fr: "Oui, mais j'ai perdu un vieux carnet de recettes.", tr: "Evet, ama eski bir tarif defterimi kaybettim." },
+        ],
+        interactive: [
+            {
+                type: "choice",
+                prompt: "Camille soruyor: “Tu as aimé la ville ?” (Şehri sevdin mi?)",
+                options: [
+                    { id: "a", text: "Oui, beaucoup.", correct: true },
+                    { id: "b", text: "Non, c'est trop tôt.", correct: false },
+                    { id: "c", text: "Je veux un café.", correct: false },
+                ],
+                correctFeedback: "Harika! Doğal bir cevap.",
+                wrongFeedback: "Bu cümle soruya cevap olmuyor. Doğru cevap: “Oui, beaucoup.”",
+            },
+            {
+                type: "fill_blank",
+                prompt: "Cümleyi tamamla:",
+                sentence: "J'ai perdu un vieux ___.",
+                options: [
+                    { id: "a", text: "carnet", correct: true },
+                    { id: "b", text: "chat", correct: false },
+                    { id: "c", text: "bouteille", correct: false },
+                ],
+                correctFeedback: "Süper! “carnet” doğru kelime.",
+                wrongFeedback: "Doğru cevap “carnet” olmalı.",
+            },
         ],
     },
     {

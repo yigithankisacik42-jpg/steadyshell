@@ -1,11 +1,11 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { ArrowLeft, BookOpen, Lock, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getStoryMetaForUnit } from "@/lib/stories";
+import { getStoryMetaForUnit, type StoryInteraction } from "@/lib/stories";
 import { findUnitById } from "@/lib/curriculum";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
@@ -73,6 +73,55 @@ function StoryContent() {
     }
 
     const { segment, index, total } = storyMeta;
+    const [answers, setAnswers] = useState<Record<number, { selectedId: string; status: "correct" | "wrong" }>>({});
+
+    const handleAnswer = (interactionIndex: number, optionId: string, isCorrect: boolean) => {
+        setAnswers(prev => ({
+            ...prev,
+            [interactionIndex]: {
+                selectedId: optionId,
+                status: isCorrect ? "correct" : "wrong",
+            },
+        }));
+    };
+
+    const renderOptions = (interaction: StoryInteraction, interactionIndex: number) => {
+        const state = answers[interactionIndex];
+
+        return (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {interaction.options.map(opt => {
+                    const isSelected = state?.selectedId === opt.id;
+                    const showResult = !!state;
+
+                    let optionStyle = "bg-white border-2 border-slate-200 hover:border-indigo-300";
+                    if (isSelected && !showResult) {
+                        optionStyle = "bg-indigo-50 border-2 border-indigo-500";
+                    }
+                    if (showResult && opt.correct) {
+                        optionStyle = "bg-emerald-50 border-2 border-emerald-500";
+                    }
+                    if (showResult && isSelected && !opt.correct) {
+                        optionStyle = "bg-rose-50 border-2 border-rose-500";
+                    }
+
+                    return (
+                        <button
+                            key={opt.id}
+                            onClick={() => !showResult && handleAnswer(interactionIndex, opt.id, opt.correct)}
+                            disabled={showResult}
+                            className={cn(
+                                "p-4 rounded-2xl text-left font-bold transition-all",
+                                optionStyle
+                            )}
+                        >
+                            {opt.text}
+                        </button>
+                    );
+                })}
+            </div>
+        );
+    };
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-indigo-50 via-white to-slate-50 flex flex-col">
@@ -137,6 +186,68 @@ function StoryContent() {
                                 </div>
                             ))}
                         </div>
+
+                        {segment.interactive && segment.interactive.length > 0 && (
+                            <div className="bg-white rounded-3xl border border-amber-100 p-6 shadow-sm space-y-6">
+                                <div className="flex items-center gap-2 text-amber-600 text-xs font-black uppercase tracking-wider">
+                                    <Sparkles className="w-4 h-4" />
+                                    Etkileşimli Hikâye
+                                </div>
+
+                                {segment.interactive.map((interaction, interactionIndex) => {
+                                    const state = answers[interactionIndex];
+                                    const feedback =
+                                        state?.status === "correct"
+                                            ? interaction.correctFeedback
+                                            : state?.status === "wrong"
+                                                ? interaction.wrongFeedback
+                                                : null;
+
+                                    return (
+                                        <div key={interactionIndex} className="bg-amber-50/60 border border-amber-100 rounded-2xl p-5 space-y-4">
+                                            <p className="text-sm font-bold text-amber-800">{interaction.prompt}</p>
+
+                                            {interaction.type === "fill_blank" && (
+                                                <div className="bg-white rounded-xl border border-amber-100 p-4">
+                                                    <p className="text-lg font-bold text-slate-700 text-center">
+                                                        {interaction.sentence.split("___").map((part, idx) => (
+                                                            <span key={idx}>
+                                                                {part}
+                                                                {idx === 0 && (
+                                                                    <span className={cn(
+                                                                        "mx-1 px-3 py-1 rounded-lg border-b-4 inline-block",
+                                                                        state?.status === "correct" && "bg-emerald-100 border-emerald-300 text-emerald-600",
+                                                                        state?.status === "wrong" && "bg-rose-100 border-rose-300 text-rose-600",
+                                                                        !state && "bg-amber-100 border-amber-200 text-amber-700"
+                                                                    )}>
+                                                                        {state
+                                                                            ? interaction.options.find(o => o.id === state.selectedId)?.text
+                                                                            : "___"}
+                                                                    </span>
+                                                                )}
+                                                            </span>
+                                                        ))}
+                                                    </p>
+                                                </div>
+                                            )}
+
+                                            {renderOptions(interaction, interactionIndex)}
+
+                                            {feedback && (
+                                                <div className={cn(
+                                                    "text-sm font-bold rounded-xl p-3",
+                                                    state?.status === "correct"
+                                                        ? "bg-emerald-100 text-emerald-700"
+                                                        : "bg-rose-100 text-rose-700"
+                                                )}>
+                                                    {feedback}
+                                                </div>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
                     </div>
                 )}
             </main>
