@@ -2,7 +2,6 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
-const STORAGE_KEY = "steadyshell_current_user";
 const OFFLINE_QUEUE_KEY = "steadyshell_offline_queue";
 
 export interface UserData {
@@ -52,30 +51,34 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        const flushOfflineQueue = async () => {
+            if (typeof window === 'undefined' || !navigator.onLine) return;
+
+            const queueData = localStorage.getItem(OFFLINE_QUEUE_KEY);
+            if (!queueData) return;
+
+            try {
+                const queue = JSON.parse(queueData);
+                if (queue && queue.length > 0) {
+                    console.log("[Offline Sync] Synchronizing pending actions...");
+                    for (const item of queue) {
+                        await fetch("/api/user-progress", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ action: item.action, amount: item.amount }),
+                        }).catch(() => {}); // ignore individual fails during sync
+                    }
+                    localStorage.removeItem(OFFLINE_QUEUE_KEY);
+                    console.log("[Offline Sync] Completed.");
+                }
+            } catch (e) {
+                console.error("[Offline Sync] Queue error", e);
+            }
+        };
+
         const syncAndFetchUser = async () => {
             // 1. Flush offline queue if online
-            if (typeof window !== 'undefined' && navigator.onLine) {
-                const queueData = localStorage.getItem(OFFLINE_QUEUE_KEY);
-                if (queueData) {
-                    try {
-                        const queue = JSON.parse(queueData);
-                        if (queue && queue.length > 0) {
-                            console.log("[Offline Sync] Synchronizing pending actions...");
-                            for (const item of queue) {
-                                await fetch("/api/user-progress", {
-                                    method: "POST",
-                                    headers: { "Content-Type": "application/json" },
-                                    body: JSON.stringify({ action: item.action, amount: item.amount }),
-                                }).catch(() => {}); // ignore individual fails during sync
-                            }
-                            localStorage.removeItem(OFFLINE_QUEUE_KEY);
-                            console.log("[Offline Sync] Completed.");
-                        }
-                    } catch (e) {
-                        console.error("[Offline Sync] Queue error", e);
-                    }
-                }
-            }
+            await flushOfflineQueue();
 
             // 2. Load latest data
             try {
@@ -101,7 +104,21 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
             }
         };
 
+        const handleOnline = () => {
+            flushOfflineQueue();
+        };
+
+        if (typeof window !== 'undefined') {
+            window.addEventListener('online', handleOnline);
+        }
+
         syncAndFetchUser();
+
+        return () => {
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('online', handleOnline);
+            }
+        };
     }, []);
 
     // --- GÜVENLİ: Sunucuya delta XP gönder ---

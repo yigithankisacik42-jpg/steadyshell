@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { getGrammarForUnit, UnitGrammar } from "@/lib/grammar";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
+import { useLessonProgress } from "@/hooks/use-lesson-progress";
 
 export default function GrammarPage() {
     return (
@@ -37,6 +38,7 @@ function GrammarContent() {
 
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
+    const { markLessonCompleted } = useLessonProgress(unitId);
 
     // Ders bittiğinde XP ve Seri güncelle
     useEffect(() => {
@@ -45,6 +47,7 @@ function GrammarContent() {
             addQuestXP(20);
             addQuestLesson();
             completeLesson();
+            markLessonCompleted("GRAMMAR");
         }
     }, [isFinished]);
 

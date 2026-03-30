@@ -23,6 +23,7 @@ export default function LearnPage() {
     const { hearts } = useHearts();
     const { user } = useUserProgress();
     const { showShelldon } = useShelldon();
+    const displayName = user.name?.trim() || "Gezgin";
 
     const [isMapMode, setIsMapMode] = useState(false);
     
@@ -147,7 +148,7 @@ export default function LearnPage() {
                                     Öğrenmeye Devam Et!
                                 </span>
                             </h1>
-                            <p className="text-indigo-200 font-medium text-lg">Bugün harika bir iş çıkarıyorsun, Yiğithan. 🚀</p>
+                            <p className="text-indigo-200 font-medium text-lg">Bugün harika bir iş çıkarıyorsun, {displayName}. 🚀</p>
                         </div>
 
                         {/* Quick Stats Row */}

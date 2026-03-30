@@ -551,6 +551,38 @@ export function getUnit(langCode: string, levelCode: string, unitId: number): Un
     return units.find(u => u.id === unitId);
 }
 
+export function findUnitById(unitId: number): { langCode: string; levelCode: string; unit: Unit } | null {
+    for (const lang of curriculum) {
+        for (const level of lang.levels) {
+            const unit = level.units.find(u => u.id === unitId);
+            if (unit) {
+                return { langCode: lang.langCode, levelCode: level.levelCode, unit };
+            }
+        }
+    }
+    return null;
+}
+
+export function getLessonIdForUnit(
+    unitId: number,
+    lessonType: LessonType,
+    quizIndex?: number
+): number | null {
+    const found = findUnitById(unitId);
+    if (!found) return null;
+
+    const { unit } = found;
+
+    if (lessonType === "LESSON") {
+        const lessonList = unit.lessons.filter(l => l.type === "LESSON");
+        const index = Math.max(0, (quizIndex ?? 1) - 1);
+        return lessonList[index]?.id ?? null;
+    }
+
+    const lesson = unit.lessons.find(l => l.type === lessonType);
+    return lesson?.id ?? null;
+}
+
 // İstatistikler
 export function getCurriculumStats(langCode: string) {
     const lang = curriculum.find(c => c.langCode === langCode);

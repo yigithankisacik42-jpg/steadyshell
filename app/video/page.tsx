@@ -1,17 +1,25 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { getVideoForUnit } from "@/lib/videos";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, MessageSquare, Headphones } from "lucide-react";
+import { useLessonProgress } from "@/hooks/use-lesson-progress";
 
 function VideoContent() {
     const searchParams = useSearchParams();
     const unitId = parseInt(searchParams.get("unitId") || "1");
 
     const video = getVideoForUnit(unitId);
+    const { markLessonCompleted } = useLessonProgress(unitId);
+
+    useEffect(() => {
+        if (video) {
+            markLessonCompleted("VIDEO");
+        }
+    }, [video]);
 
     // Debugging only - remove before production
     const isDebug = true;

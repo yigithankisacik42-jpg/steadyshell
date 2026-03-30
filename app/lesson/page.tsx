@@ -14,6 +14,7 @@ import { useHearts, formatTime } from "@/lib/hearts-context";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
 import { useShelldon } from "@/contexts/shelldon-context";
+import { useLessonProgress } from "@/hooks/use-lesson-progress";
 
 // Wrapper component to handle Suspense
 export default function LessonPage() {
@@ -42,6 +43,7 @@ function LessonContent() {
 
   // User progress
   const { addXp, completeLesson } = useUserProgress();
+  const { markLessonCompleted } = useLessonProgress(unitId);
 
   // Quests tracking
   const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
@@ -104,6 +106,7 @@ function LessonContent() {
         addQuestXP(xp); // Görevler için XP ekle
         addQuestLesson(); // Görevler için ders sayısı ekle
         completeLesson();
+        markLessonCompleted("LESSON", { quizIndex });
         
         showShelldon(`Dersi başarıyla bitirdin! +${xp} XP kazandın, tebrikler! 🎉`, "celebrate", 4000);
       } else {

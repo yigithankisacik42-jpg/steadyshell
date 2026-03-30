@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { getVocabularyForUnit, UnitVocabulary, Vocabulary } from "@/lib/vocabulary";
 import { useShelldon } from "@/contexts/shelldon-context";
+import { useLessonProgress } from "@/hooks/use-lesson-progress";
 
 export default function VocabularyPage() {
     return (
@@ -34,8 +35,15 @@ function VocabularyContent() {
     const [showMeaning, setShowMeaning] = useState(false);
     const [learnedWords, setLearnedWords] = useState<number[]>([]);
     const { showShelldon } = useShelldon();
+    const { markLessonCompleted } = useLessonProgress(unitId);
 
     const [isFinished, setIsFinished] = useState(false);
+
+    useEffect(() => {
+        if (isFinished) {
+            markLessonCompleted("VOCABULARY");
+        }
+    }, [isFinished]);
 
     useEffect(() => {
         const content = getVocabularyForUnit(unitId);

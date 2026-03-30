@@ -3,16 +3,19 @@
 import { useState, useEffect } from 'react';
 
 export function useNetworkStatus() {
-    const [isOnline, setIsOnline] = useState(true);
+    const [isOnline, setIsOnline] = useState(() => {
+        if (typeof navigator === "undefined") return true;
+        return navigator.onLine;
+    });
     const [wasOffline, setWasOffline] = useState(false);
 
     useEffect(() => {
-        // Not: Mobil cihazlarda (özellikle yerel ağ testlerinde) navigator.onLine 
-        // bazen yanlışlıkla false dönebiliyor. Bu yüzden sadece event'lere odaklanıyoruz.
-        // Başlangıç durumu zaten state'de 'true' olarak ayarlandı.
-        if (typeof navigator !== 'undefined' && navigator.onLine === false) {
-             setIsOnline(false);
-             setWasOffline(true);
+        if (typeof navigator !== "undefined") {
+            const initialOnline = navigator.onLine;
+            setIsOnline(initialOnline);
+            if (!initialOnline) {
+                setWasOffline(true);
+            }
         }
 
         const handleOnline = () => {
@@ -31,7 +34,7 @@ export function useNetworkStatus() {
             window.removeEventListener('online', handleOnline);
             window.removeEventListener('offline', handleOffline);
         };
-    }, [wasOffline]);
+    }, []);
 
     return { isOnline, wasOffline };
 }

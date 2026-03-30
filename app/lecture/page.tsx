@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, GraduationCap, Lightbulb, ArrowRight, BookOpen } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { getLectureForUnit, UnitLecture, LectureSlide } from "@/lib/lectures";
+import { useLessonProgress } from "@/hooks/use-lesson-progress";
 
 export default function LecturePage() {
     return (
@@ -29,6 +30,7 @@ function LectureContent() {
 
     const [lectureContent, setLectureContent] = useState<UnitLecture | null>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const { markLessonCompleted } = useLessonProgress(unitId);
 
 
     // Ünite değiştiğinde lecture'u yükle
@@ -52,6 +54,7 @@ function LectureContent() {
 
     const handleNext = () => {
         if (isLastSlide) {
+            markLessonCompleted("LECTURE");
             router.push(`/lesson?unitId=${unitId}`);
         } else {
             setCurrentSlide(c => c + 1);

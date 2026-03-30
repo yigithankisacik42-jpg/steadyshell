@@ -134,7 +134,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         setProgress(prev => ({
             ...prev,
             [langCode]: {
-                ...prev[langCode],
+                ...(prev[langCode] ?? { ...defaultProgress }),
                 ...updates,
                 lastActivity: new Date().toISOString(),
             },

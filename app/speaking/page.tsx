@@ -10,6 +10,7 @@ import { getSpeakingForUnit, UnitSpeaking, SpeakingExercise } from "@/lib/speaki
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
 import { useShelldon } from "@/contexts/shelldon-context";
+import { useLessonProgress } from "@/hooks/use-lesson-progress";
 
 export default function SpeakingPage() {
     return (
@@ -43,6 +44,7 @@ function SpeakingContent() {
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
     const { showShelldon } = useShelldon();
+    const { markLessonCompleted } = useLessonProgress(unitId);
 
     // Ders bittiğinde XP ve Seri güncelle
     useEffect(() => {
@@ -51,6 +53,7 @@ function SpeakingContent() {
             addQuestXP(15);
             addQuestLesson();
             completeLesson();
+            markLessonCompleted("SPEAKING");
             showShelldon("Telaffuzun harikaydı, aksanın şahane! 🎙️", "celebrate", 4000);
         }
     }, [isFinished]);

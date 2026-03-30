@@ -13,12 +13,13 @@ export interface MentorMessage {
 
 export const getMentorMessage = (user: UserData, currentLanguage: string): MentorMessage => {
     const { streak, totalXp } = user;
+    const displayName = user.name?.trim() || "Gezgin";
     
     // 1. Welcome / Return message
     if (!streak || streak === 0) {
         return {
             type: "WELCOME",
-            text: `Merhaba Yiğithan! Ben Shelldon. Seninle bu maceraya atılmak için sabırsızlanıyorum. İlk dersine hazır mısın? 🐢`,
+            text: `Merhaba ${displayName}! Ben Shelldon. Seninle bu maceraya atılmak için sabırsızlanıyorum. İlk dersine hazır mısın? 🐢`,
             actionLabel: "Hadi Başlayalım",
         };
     }

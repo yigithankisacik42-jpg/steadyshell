@@ -9,6 +9,7 @@ import { getReadingForUnit, UnitReading } from "@/lib/readings";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
 import { useShelldon } from "@/contexts/shelldon-context";
+import { useLessonProgress } from "@/hooks/use-lesson-progress";
 
 export default function ReadingPage() {
     return (
@@ -40,6 +41,7 @@ function ReadingContent() {
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
     const { showShelldon } = useShelldon();
+    const { markLessonCompleted } = useLessonProgress(unitId);
 
     // Ders bittiğinde XP ve Seri güncelle
     useEffect(() => {
@@ -48,6 +50,7 @@ function ReadingContent() {
             addQuestXP(10);
             addQuestLesson();
             completeLesson();
+            markLessonCompleted("READING");
             showShelldon("Müthiş bir okuyucusun! +10 XP kazandın 📖", "celebrate", 4000);
         }
     }, [step]);

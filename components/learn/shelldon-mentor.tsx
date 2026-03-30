@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, X, MessageCircle, Volume2, ArrowRight, Send, Loader2 } from 'lucide-react';
+import { Sparkles, X, Volume2, Send, Loader2 } from 'lucide-react';
 import { useUserProgress } from '@/contexts/user-progress-context';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { getMentorMessage, getShelldonAIResponse, MentorMessage } from '@/lib/mentor-utils';
+import { getMentorMessage, getShelldonAIResponse } from '@/lib/mentor-utils';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';

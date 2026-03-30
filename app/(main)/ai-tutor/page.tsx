@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Bot, Send, User, Sparkles, ArrowLeft, Loader2, Lightbulb, BookOpen, MessageCircle, Globe, Check, Mic, MicOff, Volume2, VolumeX, MoreVertical, RefreshCw } from "lucide-react";
+import { Bot, Send, User, Sparkles, ArrowLeft, BookOpen, MessageCircle, Mic, MicOff, Volume2, VolumeX, MoreVertical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
@@ -187,7 +187,7 @@ export default function AITutorPage() {
                                 </span>
                             </h1>
                             <p className="text-xs font-medium text-slate-400">
-                                {LANGUAGES.find(l => l.code === selectedLang)?.name} • Çevrimiçi
+                                {LANGUAGES.find(l => l.code === selectedLang)?.name} • {isOnline ? "Çevrimiçi" : "Çevrimdışı"}
                             </p>
                         </div>
                     </div>
