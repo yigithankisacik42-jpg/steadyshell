@@ -12,7 +12,7 @@ const unit331Grammar: UnitGrammar = {
       id: "fr-a2-pc-logic",
       title: "🏗️ Bölüm 1: Passé Composé Nedir?",
       explanation:
-        'Adı üzerinde "Composé" yani Birleşik bir zamandır. Tek bir kelimeyle yapılmaz. İki parçanın birleşmesiyle oluşur.\n\n* Türkçede "Geldim" deriz (Tek parça).\n* Fransızlar "Gelmeye sahibim" veya "Gelmiş durumdayım" mantığını kullanır.\n\n**🧱 Formül (1 + 1 = 2):**\n$$\\text{ÖZNE} + \\text{[YARDIMCI FİİL]} + \\text{[ANA FİİLİN GEÇMİŞ HALİ]}$$\n\n* **Yardımcı Fiil (Motor):** Ya AVOIR (Sahip olmak) ya da ÊTRE (Olmak).\n* **Ana Fiil (Vagon):** Buna Participe Passé denir. Fiilin geçmişe dönüşmüş halidir.',
+        'Adı üzerinde "Composé" yani Birleşik bir zamandır. Tek bir kelimeyle yapılmaz. İki parçanın birleşmesiyle oluşur.\n\n* Türkçede "Geldim" deriz (Tek parça).\n* Fransızlar "Gelmeye sahibim" veya "Gelmiş durumdayım" mantığını kullanır.\n\n**🧱 Formül (1 + 1 = 2):**\nÖZNE + [YARDIMCI FİİL] + [ANA FİİLİN GEÇMİŞ HALİ]\n\n* **Yardımcı Fiil (Motor):** Ya AVOIR (Sahip olmak) ya da ÊTRE (Olmak).\n* **Ana Fiil (Vagon):** Buna Participe Passé denir. Fiilin geçmişe dönüşmüş halidir.',
       examples: [
         { fr: "J'ai mangé.", tr: "Yemek yedim (Yemeye sahibim)." },
         { fr: "Je suis parti.", tr: "Gittim (Gitmiş durumdayım)." },
@@ -465,7 +465,7 @@ const unit336Grammar: UnitGrammar = {
       id: "fr-a2-si-equation1",
       title: "🔮 1. Denklem: Gelecek Planı (Söz Verme)",
       explanation:
-        'Durum: "Eğer şu olursa, bunu yapacağım." (Geleceğe dair kesinlik).\n\n**Formül:** $$Si + \\text{Présent (Şimdiki)} \\rightarrow \\text{Futur Simple (Gelecek)}$$\n\n💡 **İpucu:** Konuşma dilinde Futur Simple yerine **Futur Proche (Aller + Fiil)** da kullanabilirsin! Bu çok daha kolaydır.\n* S\'il fait beau, nous allons aller au parc.',
+        'Durum: "Eğer şu olursa, bunu yapacağım." (Geleceğe dair kesinlik).\n\n**Formül:** Si + Présent (Şimdiki) -> Futur Simple (Gelecek)\n\n💡 **İpucu:** Konuşma dilinde Futur Simple yerine **Futur Proche (Aller + Fiil)** da kullanabilirsin! Bu çok daha kolaydır.\n* S\'il fait beau, nous allons aller au parc.',
       examples: [
         {
           fr: "Si il fait beau, nous irons au parc.",
@@ -485,7 +485,7 @@ const unit336Grammar: UnitGrammar = {
       id: "fr-a2-si-equation2",
       title: "🧠 2. Denklem: Genel Gerçekler (Alışkanlıklar)",
       explanation:
-        'Durum: "Eğer şu olursa, (her zaman) şu olur." (Bilimsel gerçekler, rutinler).\n\n**Formül:** $$Si + \\text{Présent (Şimdiki)} \\rightarrow \\text{Présent (Şimdiki)}$$',
+        'Durum: "Eğer şu olursa, (her zaman) şu olur." (Bilimsel gerçekler, rutinler).\n\n**Formül:** Si + Présent (Şimdiki) -> Présent (Şimdiki)',
       examples: [
         {
           fr: "S'il pleut, je prends le bus.",
@@ -498,7 +498,7 @@ const unit336Grammar: UnitGrammar = {
       id: "fr-a2-si-equation3",
       title: "☝️ 3. Denklem: Emir ve Tavsiye",
       explanation:
-        'Durum: "Eğer şöyleysen, şunu yap!"\n\n**Formül:** $$Si + \\text{Présent (Şimdiki)} \\rightarrow \\text{Impératif (Emir)}$$',
+        'Durum: "Eğer şöyleysen, şunu yap!"\n\n**Formül:** Si + Présent (Şimdiki) -> Impératif (Emir)',
       examples: [
         { fr: "Si tu es fatigué, dors!", tr: "Eğer yorgunsan, uyu!" },
         {

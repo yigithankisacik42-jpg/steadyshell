@@ -1020,7 +1020,7 @@ const unit383Grammar: UnitGrammar = {
     },
     {
       id: "fr-b1-media-conditionnel",
-      title: "âš ï¸ Bölüm 3: Gazetecilikte Åart Kipi (Söylenti)",
+      title: "⚠️ Bölüm 3: Gazetecilikte Şart Kipi (Söylenti)",
       explanation:
         "Kesin olmayan bilgiler aktarılırken **Conditionnel Présent** kullanılır. Bu, bilginin teyit edilmediğini gösterir:\n\n* **Il y aurait...** = ... var(dı) deniyor\n* **Il serait...** = ... olabilirmiş\n\nBu yapı, haber dilinde ihtiyatlı anlatım sağlar.",
       examples: [
