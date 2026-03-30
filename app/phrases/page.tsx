@@ -7,6 +7,7 @@ import { ArrowLeft, Volume2, ArrowRight, MessageCircle, RotateCcw, CheckCircle2,
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { getPhrasesForUnit, UnitPhrases } from "@/lib/phrases";
+import { useShelldon } from "@/contexts/shelldon-context";
 
 export default function PhrasesPage() {
     return (
@@ -32,6 +33,7 @@ function PhrasesContent() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showMeaning, setShowMeaning] = useState(false);
     const [learnedWords, setLearnedWords] = useState<number[]>([]);
+    const { showShelldon } = useShelldon();
 
     const [isFinished, setIsFinished] = useState(false);
 
@@ -100,6 +102,7 @@ function PhrasesContent() {
     const handleNext = () => {
         if (isLastPhrase) {
             setIsFinished(true);
+            showShelldon(`Bütün kalıpları öğrendin! Çok havalısın 😎`, "celebrate", 4000);
         } else {
             setCurrentIndex(i => i + 1);
             setShowMeaning(false);
@@ -109,6 +112,10 @@ function PhrasesContent() {
     const markAsLearned = () => {
         if (!learnedWords.includes(currentIndex)) {
             setLearnedWords([...learnedWords, currentIndex]);
+            if (Math.random() > 0.6) {
+                const msgs = ["Süper kelime dağarcığı!", "Bu kalıp cepte!", "Harika gidiyorsun patron!"];
+                showShelldon(msgs[Math.floor(Math.random() * msgs.length)], "happy", 2000);
+            }
         }
         handleNext();
     };

@@ -7,6 +7,7 @@ import { ArrowLeft, Volume2, ArrowRight, BookOpen, RotateCcw, CheckCircle2, Trop
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { getVocabularyForUnit, UnitVocabulary, Vocabulary } from "@/lib/vocabulary";
+import { useShelldon } from "@/contexts/shelldon-context";
 
 export default function VocabularyPage() {
     return (
@@ -32,6 +33,7 @@ function VocabularyContent() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showMeaning, setShowMeaning] = useState(false);
     const [learnedWords, setLearnedWords] = useState<number[]>([]);
+    const { showShelldon } = useShelldon();
 
     const [isFinished, setIsFinished] = useState(false);
 
@@ -100,6 +102,7 @@ function VocabularyContent() {
     const handleNext = () => {
         if (isLastWord) {
             setIsFinished(true);
+            showShelldon(`Harika kelimeler öğrendin! +10 XP cebinde! 🎉`, "celebrate", 4000);
         } else {
             setCurrentIndex(i => i + 1);
             setShowMeaning(false);
@@ -109,6 +112,10 @@ function VocabularyContent() {
     const markAsLearned = () => {
         if (!learnedWords.includes(currentIndex)) {
             setLearnedWords([...learnedWords, currentIndex]);
+            if (Math.random() > 0.6) {
+                const msgs = ["Süper! Bu kelimeyi cebine attın.", "Çok iyi! Bir kelime daha cepte.", "Harika hafıza!"];
+                showShelldon(msgs[Math.floor(Math.random() * msgs.length)], "happy", 2000);
+            }
         }
         handleNext();
     };

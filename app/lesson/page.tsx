@@ -13,6 +13,7 @@ import { compareAnswers, hasMissingAccents } from "@/lib/accent-utils";
 import { useHearts, formatTime } from "@/lib/hearts-context";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
+import { useShelldon } from "@/contexts/shelldon-context";
 
 // Wrapper component to handle Suspense
 export default function LessonPage() {
@@ -44,6 +45,7 @@ function LessonContent() {
 
   // Quests tracking
   const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
+  const { showShelldon } = useShelldon();
 
   // Dinamik sorular
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -102,9 +104,13 @@ function LessonContent() {
         addQuestXP(xp); // Görevler için XP ekle
         addQuestLesson(); // Görevler için ders sayısı ekle
         completeLesson();
+        
+        showShelldon(`Dersi başarıyla bitirdin! +${xp} XP kazandın, tebrikler! 🎉`, "celebrate", 4000);
+      } else {
+        showShelldon("Canın bitti ama pes etmek yok. Dinlen ve tekrar başla!", "sad", 4000);
       }
     }
-  }, [isFinished]);
+  }, [isFinished, hearts, questions.length]);
 
   // Ünite ve quiz değiştiğinde soruları yükle
   useEffect(() => {
@@ -227,10 +233,17 @@ function LessonContent() {
 
     if (isCorrect) {
       setStatus("correct");
+      if (Math.random() > 0.3) {
+        const happyMsgs = ["Harika gidiyorsun!", "İşte bu!", "Aynen öyle!", "Çok iyisin şampiyon!", "Mükemmel!", "Bunu bildiğinden emindim!"];
+        showShelldon(happyMsgs[Math.floor(Math.random() * happyMsgs.length)], "happy", 2000);
+      }
     } else {
       loseHeart(); // Global can kaybet
       setWrongCount(w => w + 1);
       setStatus("wrong");
+      
+      const sadMsgs = ["Biraz daha dikkatli olmalısın.", "Öğrenmek hatalarla başlar, pes etme!", "Bir sonrakini kesin yaparsın.", "Küçük bir hata, dert etme."];
+      showShelldon(sadMsgs[Math.floor(Math.random() * sadMsgs.length)], "sad", 2500);
 
       // Can 0'a düştüyse oyunu bitir
       if (hearts - 1 === 0) {

@@ -55,7 +55,7 @@ const sources = [
 ];
 
 const mascotMessages: Record<Step, string> = {
-    welcome: "Merhaba! Ben Shelby 🐢 Seninle tanıştığıma çok sevindim! Birlikte harika bir dil öğrenme yolculuğuna çıkacağız.",
+    welcome: "Merhaba! Ben Shelldon 🐢 Seninle tanıştığıma çok sevindim! Birlikte harika bir dil öğrenme yolculuğuna çıkacağız.",
     language: "Hangi dili öğrenmek istiyorsun? Birlikte yavaş ama emin adımlarla ilerleyeceğiz!",
     level: "Bu dil hakkında ne kadar bilgin var? Merak etme, her seviye için buradayım!",
     reason: "Neden bu dili öğrenmek istiyorsun? Motivasyonunu bilmek sana daha iyi yardımcı olmamı sağlar.",
@@ -197,10 +197,10 @@ export default function OnboardingPage() {
                         <div className="w-28 h-28 mx-auto mb-4 relative animate-bounce-slow">
                             <Image
                                 src="/mascot_v2.png"
-                                alt="Shelby"
-                                width={112}
-                                height={112}
-                                className="drop-shadow-xl"
+                                alt="Shelldon"
+                                width={200}
+                                height={200}
+                                className="object-contain"
                             />
                         </div>
 

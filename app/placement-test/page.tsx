@@ -10,513 +10,560 @@ import Image from 'next/image';
 // Seviye Testi Soruları - Dil Uzmanı Tarafından Hazırlanmış
 const placementQuestions = {
     es: [
-        // A1 Kolay Sorular (1-5)
+        // A1 Temel - Biraz Daha Zor (1-5)
         {
             id: 1,
             level: 'A1',
-            question: '¿Cómo te llamas?',
-            questionTr: 'Adın ne?',
-            options: ['Me llamo Juan', 'Tengo 20 años', 'Soy de España', 'Estoy bien'],
+            question: 'Yo _____ un café con leche y dos cruasanes, por favor.',
+            questionTr: 'Ben sütlü bir kahve ve iki kruvasan _____, lütfen.',
+            options: ['quiero', 'quieres', 'queremos', 'queréis'],
             correct: 0,
             difficulty: 1
         },
         {
             id: 2,
             level: 'A1',
-            question: '¿Cuántos años tienes?',
-            questionTr: 'Kaç yaşındasın?',
-            options: ['Soy estudiante', 'Tengo veinticinco años', 'Vivo en Madrid', 'Me gusta bailar'],
-            correct: 1,
+            question: '¿A qué hora _____ la clase de español los martes?',
+            questionTr: 'Salı günleri İspanyolca dersi saat kaçta _____?',
+            options: ['empiezas', 'empiezan', 'empieza', 'empezamos'],
+            correct: 2,
             difficulty: 1
         },
         {
             id: 3,
             level: 'A1',
-            question: 'El libro está _____ la mesa.',
-            questionTr: 'Kitap masanın _____ .',
-            options: ['sobre', 'con', 'para', 'sin'],
-            correct: 0,
+            question: 'Mis padres _____ en una casa muy grande cerca del río.',
+            questionTr: 'Ailem nehrin yakınında çok büyük bir evde _____.',
+            options: ['vivo', 'vive', 'vives', 'viven'],
+            correct: 3,
             difficulty: 1
         },
         {
             id: 4,
             level: 'A1',
-            question: '¿Qué hora es?',
-            questionTr: 'Saat kaç?',
-            options: ['Hace calor', 'Son las tres', 'Es grande', 'Está lejos'],
+            question: 'Nosotros _____ muy cansados después del trabajo hoy.',
+            questionTr: 'Bugün işten sonra çok yorgun _____.',
+            options: ['somos', 'estamos', 'son', 'están'],
             correct: 1,
             difficulty: 1
         },
         {
             id: 5,
             level: 'A1',
-            question: 'Yo _____ español.',
-            questionTr: 'Ben İspanyolca _____.',
-            options: ['hablo', 'hablas', 'habla', 'hablamos'],
+            question: '¿Tú y tu hermano _____ al fútbol los fines de semana?',
+            questionTr: 'Sen ve kardeşin hafta sonları futbol _____?',
+            options: ['jugáis', 'juegas', 'jugamos', 'juega'],
             correct: 0,
             difficulty: 1
         },
-        // A2 Orta-Kolay Sorular (6-10)
+        // A2 Orta-Kolay (6-10)
         {
             id: 6,
             level: 'A2',
-            question: 'Ayer _____ al cine con mis amigos.',
-            questionTr: 'Dün arkadaşlarımla sinemaya _____.',
-            options: ['voy', 'fui', 'iré', 'iba'],
+            question: 'Ayer nosotros _____ que trabajar hasta muy tarde en la oficina.',
+            questionTr: 'Dün ofiste çok geç saatlere kadar çalışmak zorunda _____.',
+            options: ['teníamos', 'tuvimos', 'tenemos', 'tendremos'],
             correct: 1,
             difficulty: 2
         },
         {
             id: 7,
             level: 'A2',
-            question: '¿_____ has estado en México?',
-            questionTr: 'Meksika\'da hiç _____ mı?',
-            options: ['Nunca', 'Siempre', 'Alguna vez', 'Todavía'],
-            correct: 2,
+            question: '¿Dónde _____ mis gafas? No las encuentro por ninguna parte.',
+            questionTr: 'Gözlüklerimi nereye _____? Hiçbir yerde bulamıyorum.',
+            options: ['has puesto', 'habías puesto', 'pusisteis', 'pondrás'],
+            correct: 0,
             difficulty: 2
         },
         {
             id: 8,
             level: 'A2',
-            question: 'Me gustaría _____ un café, por favor.',
-            questionTr: 'Bir kahve _____ lütfen.',
-            options: ['tomar', 'tomando', 'tomado', 'tome'],
-            correct: 0,
+            question: 'Antes, mi ciudad _____ mucho más tranquila y segura que ahora.',
+            questionTr: 'Eskiden şehrim şimdikinden çok daha sakin ve güvenli _____.',
+            options: ['fui', 'era', 'estaba', 'fue'],
+            correct: 1,
             difficulty: 2
         },
         {
             id: 9,
             level: 'A2',
-            question: 'Cuando era niño, _____ al parque todos los días.',
-            questionTr: 'Çocukken her gün parka _____.',
-            options: ['voy', 'fui', 'iba', 'iré'],
-            correct: 2,
+            question: 'Me duele muchísimo la garganta, así que _____ tomar un té muy caliente.',
+            questionTr: 'Boğazım çok ağrıyor, bu yüzden çok sıcak bir çay içmeye _____.',
+            options: ['iré a', 'voy a', 'fui a', 'iba a'],
+            correct: 1,
             difficulty: 2
         },
         {
             id: 10,
             level: 'A2',
-            question: 'El coche es más _____ que la bicicleta.',
-            questionTr: 'Araba bisikletten daha _____.',
-            options: ['rápido', 'rápida', 'rápidos', 'rápidas'],
-            correct: 0,
+            question: 'Este restaurante italiano es _____ caro _____ el de la esquina.',
+            questionTr: 'Bu İtalyan restoranı köşedeki _____ pahalı.',
+            options: ['tan / que', 'más / como', 'tan / como', 'menos / de'],
+            correct: 2,
             difficulty: 2
         },
-        // B1 Orta Sorular (11-15)
+        // B1 Orta - Biraz Daha Zor (11-15)
         {
             id: 11,
             level: 'B1',
-            question: 'Si tuviera dinero, _____ un coche nuevo.',
-            questionTr: 'Param olsaydı, yeni bir araba _____.',
-            options: ['compro', 'compraré', 'compraría', 'compraba'],
+            question: 'No creo que Juan _____ a la reunión del comité de mañana.',
+            questionTr: 'Juan\'ın yarınki komite toplantısına _____ sanmıyorum.',
+            options: ['va', 'fuera', 'vaya', 'irá'],
             correct: 2,
             difficulty: 3
         },
         {
             id: 12,
             level: 'B1',
-            question: 'Es importante que _____ a tiempo.',
-            questionTr: 'Zamanında _____ önemli.',
-            options: ['llegas', 'llegues', 'llegarás', 'llegabas'],
-            correct: 1,
+            question: 'Me alegro muchísimo de que ustedes _____ conseguido ese trabajo.',
+            questionTr: 'O işi _____ (olmanıza) çok sevindim.',
+            options: ['hayan', 'habían', 'han', 'hubieran'],
+            correct: 0,
             difficulty: 3
         },
         {
             id: 13,
             level: 'B1',
-            question: 'El libro _____ por García Márquez.',
-            questionTr: 'Kitap García Márquez tarafından _____.',
-            options: ['escribió', 'fue escrito', 'ha escrito', 'escribía'],
-            correct: 1,
+            question: 'Cuando _____ a Madrid el próximo mes, te llamaré sin falta.',
+            questionTr: 'Gelecek ay Madrid\'e _____ seni mutlaka arayacağım.',
+            options: ['llegaré', 'llego', 'llegue', 'llegaba'],
+            correct: 2,
             difficulty: 3
         },
         {
             id: 14,
             level: 'B1',
-            question: 'Aunque _____ mucho, no aprobé el examen.',
-            questionTr: 'Çok _____ rağmen, sınavı geçemedim.',
-            options: ['estudio', 'estudié', 'estudiaba', 'estudiaré'],
+            question: 'Si _____ más tiempo libre, estudiaría otro idioma como el japonés.',
+            questionTr: 'Daha fazla boş zamanım _____ Japonca gibi başka bir dil öğrenirdim.',
+            options: ['tengo', 'tuviera', 'tenía', 'tendré'],
             correct: 1,
             difficulty: 3
         },
         {
             id: 15,
             level: 'B1',
-            question: 'No creo que él _____ la verdad.',
-            questionTr: 'Onun gerçeği _____ sanmıyorum.',
-            options: ['dice', 'diga', 'dirá', 'decía'],
+            question: 'El puente nuevo de la ciudad _____ construido por una empresa extranjera el año pasado.',
+            questionTr: 'Şehrin yeni köprüsü geçen yıl yabancı bir şirket tarafından _____.',
+            options: ['ha sido', 'fue', 'estaba', 'estuvo'],
             correct: 1,
             difficulty: 3
         },
-        // B2 Zor Sorular (16-20)
+        // B2 Zor (16-20)
         {
             id: 16,
             level: 'B2',
-            question: 'De haberlo sabido antes, _____ de otra manera.',
-            questionTr: 'Daha önce bilseydim, başka türlü _____.',
-            options: ['actúo', 'actuaré', 'habría actuado', 'actuaba'],
+            question: 'Por muy difícil que _____, no voy a rendirme en este proyecto.',
+            questionTr: 'Ne kadar zor _____ _____, bu projede pes etmeyeceğim.',
+            options: ['parece', 'parecía', 'parezca', 'parecerá'],
             correct: 2,
             difficulty: 4
         },
         {
             id: 17,
             level: 'B2',
-            question: 'Sea como _____, debemos terminar el proyecto.',
-            questionTr: 'Her nasıl _____, projeyi bitirmeliyiz.',
-            options: ['sea', 'es', 'será', 'fue'],
+            question: 'Te prestaré el coche a condición de que me lo _____ mañana temprano.',
+            questionTr: 'Arabayı yarın erkenden _____ (şartıyla) sana ödünç vereceğim.',
+            options: ['devuelvas', 'devuelves', 'devolviste', 'devolverás'],
             correct: 0,
             difficulty: 4
         },
         {
             id: 18,
             level: 'B2',
-            question: 'Por mucho que _____, no conseguirás convencerme.',
-            questionTr: 'Ne kadar _____, beni ikna edemezsin.',
-            options: ['insistes', 'insistas', 'insistirás', 'insistías'],
+            question: 'Si me hubieras avisado de la situación antes, yo no _____ tanta comida.',
+            questionTr: 'Durumu bana daha önce haber verseydin, o kadar yemek _____.',
+            options: ['había preparado', 'habría preparado', 'prepararía', 'preparé'],
             correct: 1,
             difficulty: 4
         },
         {
             id: 19,
             level: 'B2',
-            question: 'Ojalá _____ más tiempo para viajar.',
-            questionTr: 'Keşke seyahat için daha fazla zamanım _____.',
-            options: ['tengo', 'tenga', 'tuviera', 'tendré'],
-            correct: 2,
+            question: 'Es imprescindible que todos los documentos _____ firmados antes del viernes.',
+            questionTr: 'Cuma gününden önce tüm belgelerin imzalanmış _____ zorunludur.',
+            options: ['estén', 'están', 'sean', 'fueran'],
+            correct: 0,
             difficulty: 4
         },
         {
             id: 20,
             level: 'B2',
-            question: 'A no ser que _____ pronto, perderemos el tren.',
-            questionTr: 'Yakında _____ sürece, treni kaçırırız.',
-            options: ['salimos', 'salgamos', 'saldremos', 'salíamos'],
-            correct: 1,
+            question: 'En aquella época, no había nadie que _____ cómo solucionar el fallo informático.',
+            questionTr: 'O dönemde bilgisayar hatasını nasıl çözeceğini _____ kimse yoktu.',
+            options: ['sabe', 'sabría', 'supiera', 'haya sabido'],
+            correct: 2,
             difficulty: 4
         }
     ],
     en: [
-        // A1 Easy (1-5)
+        // A1 Temel - Biraz Daha Zor (1-5)
         {
             id: 1,
             level: 'A1',
-            question: 'What _____ your name?',
-            questionTr: 'Adın ne?',
-            options: ['is', 'are', 'am', 'be'],
-            correct: 0,
+            question: 'My sister and I _____ breakfast at 7 AM every day.',
+            questionTr: 'Kız kardeşim ve ben her gün sabah 7\'de kahvaltı _____.',
+            options: ['has', 'having', 'have', 'are having'],
+            correct: 2,
             difficulty: 1
         },
         {
             id: 2,
             level: 'A1',
-            question: 'She _____ from Turkey.',
-            questionTr: 'O Türkiye\'den.',
-            options: ['is', 'are', 'am', 'be'],
+            question: 'Excuse me, _____ a pharmacy near here?',
+            questionTr: 'Afedersiniz, buralarda bir eczane _____?',
+            options: ['is there', 'are there', 'there is', 'there are'],
             correct: 0,
             difficulty: 1
         },
         {
             id: 3,
             level: 'A1',
-            question: 'I _____ breakfast at 8 o\'clock.',
-            questionTr: 'Saat 8\'de kahvaltı yaparım.',
-            options: ['have', 'has', 'having', 'had'],
-            correct: 0,
+            question: 'She _____ like playing tennis, she prefers swimming.',
+            questionTr: 'Tenis oynamayı _____ , yüzmeyi tercih eder.',
+            options: ['don\'t', 'doesn\'t', 'isn\'t', 'aren\'t'],
+            correct: 1,
             difficulty: 1
         },
         {
             id: 4,
             level: 'A1',
-            question: 'There _____ three books on the table.',
-            questionTr: 'Masada üç kitap var.',
-            options: ['is', 'are', 'be', 'been'],
-            correct: 1,
+            question: 'I _____ born in 1995 in a small town.',
+            questionTr: '1995 yılında küçük bir kasabada _____.',
+            options: ['am', 'were', 'have been', 'was'],
+            correct: 3,
             difficulty: 1
         },
         {
             id: 5,
             level: 'A1',
-            question: 'He _____ to school every day.',
-            questionTr: 'O her gün okula gider.',
-            options: ['go', 'goes', 'going', 'gone'],
+            question: 'Can you give me _____ apple from the table, please?',
+            questionTr: 'Masadan bana _____ elmayı verir misin lütfen?',
+            options: ['a', 'an', 'some', 'any'],
             correct: 1,
             difficulty: 1
         },
-        // A2 (6-10)
+        // A2 Orta-Kolay (6-10)
         {
             id: 6,
             level: 'A2',
-            question: 'I _____ to Paris last summer.',
-            questionTr: 'Geçen yaz Paris\'e gittim.',
-            options: ['go', 'went', 'have gone', 'was going'],
+            question: 'While I _____ a shower, the phone unexpectedly rang.',
+            questionTr: 'Ben duş _____ , telefon aniden çaldı.',
+            options: ['took', 'was taking', 'have taken', 'am taking'],
             correct: 1,
             difficulty: 2
         },
         {
             id: 7,
             level: 'A2',
-            question: 'She is _____ than her sister.',
-            questionTr: 'O kız kardeşinden daha uzun.',
-            options: ['tall', 'taller', 'tallest', 'more tall'],
-            correct: 1,
+            question: 'This is absolutely the _____ movie I have ever seen!',
+            questionTr: 'Bu kesinlikle izlediğim _____ film!',
+            options: ['worse', 'bad', 'baddest', 'worst'],
+            correct: 3,
             difficulty: 2
         },
         {
             id: 8,
             level: 'A2',
-            question: 'I _____ never been to Japan.',
-            questionTr: 'Japonya\'ya hiç gitmedim.',
-            options: ['have', 'has', 'had', 'am'],
-            correct: 0,
+            question: 'I have known my best friend _____ more than 10 years.',
+            questionTr: 'En iyi arkadaşımı 10 yıldan fazla bir süre_____ tanıyorum.',
+            options: ['since', 'for', 'from', 'during'],
+            correct: 1,
             difficulty: 2
         },
         {
             id: 9,
             level: 'A2',
-            question: 'What _____ you doing when I called?',
-            questionTr: 'Aradığımda ne yapıyordun?',
-            options: ['are', 'were', 'was', 'did'],
-            correct: 1,
+            question: 'You _____ wear a uniform at this school, it\'s a strict rule.',
+            questionTr: 'Bu okulda üniforma _____ , bu katı bir kuraldır.',
+            options: ['must', 'can', 'might', 'could'],
+            correct: 0,
             difficulty: 2
         },
         {
             id: 10,
             level: 'A2',
-            question: 'You _____ smoke here. It\'s forbidden.',
-            questionTr: 'Burada sigara içemezsin. Yasak.',
-            options: ['can\'t', 'mustn\'t', 'don\'t have to', 'shouldn\'t'],
-            correct: 1,
+            question: 'They _____ finished their comprehensive homework yet.',
+            questionTr: 'Onlar kapsamlı ödevlerini henüz _____.',
+            options: ['don\'t', 'didn\'t', 'haven\'t', 'won\'t'],
+            correct: 2,
             difficulty: 2
         },
-        // B1 (11-15)
+        // B1 Orta - Biraz Daha Zor (11-15)
         {
             id: 11,
             level: 'B1',
-            question: 'If I _____ rich, I would travel the world.',
-            questionTr: 'Zengin olsaydım, dünyayı gezerdim.',
-            options: ['am', 'was', 'were', 'be'],
+            question: 'If it rains heavily tomorrow, we _____ the outdoor picnic.',
+            questionTr: 'Yarın şiddetli yağmur yağarsa, açık hava pikniğini _____.',
+            options: ['would cancel', 'cancel', 'will cancel', 'cancelled'],
             correct: 2,
             difficulty: 3
         },
         {
             id: 12,
             level: 'B1',
-            question: 'The report _____ by the manager yesterday.',
-            questionTr: 'Rapor dün müdür tarafından yazıldı.',
-            options: ['wrote', 'was written', 'has written', 'is written'],
+            question: 'I am really looking forward _____ you next week.',
+            questionTr: 'Haftaya seni _____ dört gözle bekliyorum.',
+            options: ['to see', 'to seeing', 'seeing', 'see'],
             correct: 1,
             difficulty: 3
         },
         {
             id: 13,
             level: 'B1',
-            question: 'She asked me where I _____.',
-            questionTr: 'Bana nerede yaşadığımı sordu.',
-            options: ['live', 'lived', 'had lived', 'was living'],
-            correct: 1,
+            question: 'The kitchen window _____ broken by the children playing baseball.',
+            questionTr: 'Mutfak penceresi beysbol oynayan çocuklar tarafından _____.',
+            options: ['was', 'has', 'did', 'is'],
+            correct: 0,
             difficulty: 3
         },
         {
             id: 14,
             level: 'B1',
-            question: 'I wish I _____ more free time.',
-            questionTr: 'Keşke daha fazla boş zamanım olsa.',
-            options: ['have', 'had', 'would have', 'having'],
-            correct: 1,
+            question: 'He asked me what time the express train _____ arrived.',
+            questionTr: 'Bana ekspres trenin ne zaman _____ sordu.',
+            options: ['has', 'will', 'had', 'does'],
+            correct: 2,
             difficulty: 3
         },
         {
             id: 15,
             level: 'B1',
-            question: 'By the time she arrived, we _____ eating.',
-            questionTr: 'O geldiğinde yemeği bitirmiştik.',
-            options: ['finished', 'had finished', 'have finished', 'were finishing'],
-            correct: 1,
+            question: 'You’d better _____ a jacket, it’s getting extremely cold outside.',
+            questionTr: 'Dışarısı aşırı soğuyor, bir ceket _____ iyi edersin.',
+            options: ['takes', 'to take', 'taking', 'take'],
+            correct: 3,
             difficulty: 3
         },
-        // B2 (16-20)
+        // B2 Zor (16-20)
         {
             id: 16,
             level: 'B2',
-            question: 'Had I known about the problem, I _____ differently.',
-            questionTr: 'Problemi bilseydim, farklı davranırdım.',
-            options: ['would act', 'would have acted', 'had acted', 'acted'],
-            correct: 1,
+            question: 'By this time next year, I _____ my university degree.',
+            questionTr: 'Gelecek yıl bu zamanlar üniversite diplomamı _____.',
+            options: ['will have finished', 'am finishing', 'will finish', 'finish'],
+            correct: 0,
             difficulty: 4
         },
         {
             id: 17,
             level: 'B2',
-            question: 'The project is _____ completion by next month.',
-            questionTr: 'Proje gelecek aya kadar tamamlanacak.',
-            options: ['due for', 'about to', 'bound to', 'likely to'],
-            correct: 0,
+            question: 'Not only _____ the difficult exam, but she also got the highest score.',
+            questionTr: 'Zor sınavı _____ kalmadı, aynı zamanda en yüksek puanı aldı.',
+            options: ['she passed', 'did she pass', 'has she passed', 'she did pass'],
+            correct: 1,
             difficulty: 4
         },
         {
             id: 18,
             level: 'B2',
-            question: 'Not until he arrived _____ the truth.',
-            questionTr: 'O gelene kadar gerçeği öğrenmedik.',
-            options: ['we learned', 'did we learn', 'we did learn', 'had we learned'],
-            correct: 1,
+            question: 'I wish I _____ so much strong coffee last night; I couldn\'t sleep at all.',
+            questionTr: 'Keşke dün gece o kadar sek kahve _____ ; hiç uyuyamadım.',
+            options: ['didn\'t drink', 'wouldn\'t drink', 'haven\'t drunk', 'hadn\'t drunk'],
+            correct: 3,
             difficulty: 4
         },
         {
             id: 19,
             level: 'B2',
-            question: 'She speaks English as if she _____ a native speaker.',
-            questionTr: 'Sanki anadili İngilizce gibi konuşuyor.',
-            options: ['is', 'was', 'were', 'had been'],
+            question: 'The multinational company, _____ CEO recently resigned, is facing problems.',
+            questionTr: 'CEO\'su _____ çok uluslu şirket sorunlarla karşı karşıya.',
+            options: ['which', 'who', 'whose', 'whom'],
             correct: 2,
             difficulty: 4
         },
         {
             id: 20,
             level: 'B2',
-            question: 'The more you practice, _____ you become.',
-            questionTr: 'Ne kadar çok pratik yaparsan, o kadar iyi olursun.',
-            options: ['better', 'the better', 'the best', 'best'],
-            correct: 1,
+            question: 'It\'s high time you _____ taking your academic studies seriously.',
+            questionTr: 'Akademik çalışmalarını ciddiye _____ vakti geldi de geçiyor.',
+            options: ['start', 'will start', 'started', 'should start'],
+            correct: 2,
             difficulty: 4
         }
     ],
     fr: [
-        // A1 (1-5)
+        // A1 Temel - Biraz Daha Zor (1-5)
         {
             id: 1,
             level: 'A1',
-            question: 'Comment _____ -vous?',
-            questionTr: 'Adınız ne?',
-            options: ['appelez', 'appelles', 'appelle', 'appelons'],
+            question: 'Est-ce que vous _____ l\'heure exacte, s\'il vous plaît ?',
+            questionTr: 'Saatin tam olarak kaç olduğunu _____ lütfen?',
+            options: ['avez', 'êtes', 'faites', 'allez'],
             correct: 0,
             difficulty: 1
         },
         {
             id: 2,
             level: 'A1',
-            question: 'Je _____ français.',
-            questionTr: 'Ben Fransızcayım.',
-            options: ['suis', 'es', 'est', 'sommes'],
-            correct: 0,
+            question: 'Mon frère aîné _____ vingt-cinq ans et il est médecin.',
+            questionTr: 'Büyük erkek kardeşim 25 _____ ve o bir doktor.',
+            options: ['est', 'a', 'fait', 'prend'],
+            correct: 1,
             difficulty: 1
         },
         {
             id: 3,
             level: 'A1',
-            question: 'Elle _____ à Paris.',
-            questionTr: 'O Paris\'te yaşıyor.',
-            options: ['habite', 'habites', 'habitent', 'habitons'],
-            correct: 0,
+            question: 'Nous _____ au grand cinéma en centre-ville ce soir.',
+            questionTr: 'Bu akşam şehir merkezindeki büyük sinemaya _____.',
+            options: ['sommes', 'faisons', 'avons', 'allons'],
+            correct: 3,
             difficulty: 1
         },
         {
             id: 4,
             level: 'A1',
-            question: 'Tu as _____ frères?',
-            questionTr: 'Kaç kardeşin var?',
-            options: ['combien de', 'comment', 'pourquoi', 'quand'],
-            correct: 0,
+            question: 'Je ne bois _____ de café le soir avant de dormir.',
+            questionTr: 'Uyumadan önce akşamları _____ kahve içmem.',
+            options: ['pas', 'jamais', 'plus', 'rien'],
+            correct: 1,
             difficulty: 1
         },
         {
             id: 5,
             level: 'A1',
-            question: 'Le livre est _____ la table.',
-            questionTr: 'Kitap masanın üstünde.',
-            options: ['sur', 'sous', 'dans', 'avec'],
-            correct: 0,
+            question: 'Les enfants prennent _____ petit-déjeuner très tôt le matin.',
+            questionTr: 'Çocuklar sabah çok erkenden _____ kahvaltıyı yaparlar.',
+            options: ['son', 'sa', 'leur', 'leurs'],
+            correct: 2,
             difficulty: 1
         },
-        // A2-B1-B2 (6-20)
+        // A2 Orta-Kolay (6-10)
         {
             id: 6,
             level: 'A2',
-            question: 'Hier, je _____ au cinéma.',
-            questionTr: 'Dün sinemaya gittim.',
-            options: ['vais', 'suis allé', 'irai', 'allais'],
+            question: 'Hier soir, nous _____ regardé un très bon film français à la télé.',
+            questionTr: 'Dün akşam televizyonda çok güzel bir Fransız filmi _____.',
+            options: ['sommes', 'avons', 'allons', 'avions'],
             correct: 1,
             difficulty: 2
         },
         {
             id: 7,
             level: 'A2',
-            question: 'Elle est plus _____ que son frère.',
-            questionTr: 'O erkek kardeşinden daha uzun.',
-            options: ['grand', 'grande', 'grands', 'grandes'],
-            correct: 1,
+            question: 'Quand il était jeune étudiant, il _____ au football tous les samedis.',
+            questionTr: 'Genç bir öğrenciyken her cumartesi futbol _____.',
+            options: ['joue', 'a joué', 'jouait', 'jouera'],
+            correct: 2,
             difficulty: 2
         },
         {
             id: 8,
             level: 'A2',
-            question: 'Quand j\'étais enfant, je _____ au parc.',
-            questionTr: 'Çocukken parka giderdim.',
-            options: ['vais', 'suis allé', 'allais', 'irai'],
-            correct: 2,
+            question: 'Je te prêterai le livre _____ j\'ai acheté fièrement hier.',
+            questionTr: 'Dün gururla satın _____ kitabı sana ödünç vereceğim.',
+            options: ['qui', 'que', 'dont', 'où'],
+            correct: 1,
             difficulty: 2
         },
         {
             id: 9,
-            level: 'B1',
-            question: 'Il faut que tu _____ tes devoirs.',
-            questionTr: 'Ödevlerini yapman lazım.',
-            options: ['fais', 'fasses', 'feras', 'faisais'],
-            correct: 1,
-            difficulty: 3
+            level: 'A2',
+            question: 'Elle s\'est réveillée en sursaut en _____ un bruit bizarre.',
+            questionTr: 'Tuhaf bir ses _____ irkilerek uyandı.',
+            options: ['entendant', 'entendu', 'entend', 'entendre'],
+            correct: 0,
+            difficulty: 2
         },
         {
             id: 10,
-            level: 'B1',
-            question: 'Si j\'avais de l\'argent, je _____ une maison.',
-            questionTr: 'Param olsaydı, bir ev alırdım.',
-            options: ['achète', 'achèterai', 'achèterais', 'ai acheté'],
-            correct: 2,
-            difficulty: 3
+            level: 'A2',
+            question: 'Tu dois absolument _____ tes devoirs complexes avant de sortir.',
+            questionTr: 'Çıkmadan önce karmaşık ödevlerini kesinlikle _____.',
+            options: ['finis', 'finir', 'fini', 'finissais'],
+            correct: 1,
+            difficulty: 2
         },
+        // B1 Orta - Biraz Daha Zor (11-15)
         {
             id: 11,
             level: 'B1',
-            question: 'Le livre _____ par cet auteur.',
-            questionTr: 'Kitap bu yazar tarafından yazıldı.',
-            options: ['a écrit', 'a été écrit', 'écrit', 'écrivait'],
+            question: 'Il faut absolument que tu _____ voir cette exposition, elle est géniale !',
+            questionTr: 'Bu sergiyi mutlaka görmeye _____ (zorunlu), o harika!',
+            options: ['vas', 'ailles', 'ira', 'allait'],
             correct: 1,
             difficulty: 3
         },
         {
             id: 12,
             level: 'B1',
-            question: 'Bien qu\'il _____ fatigué, il continue à travailler.',
-            questionTr: 'Yorgun olmasına rağmen çalışmaya devam ediyor.',
-            options: ['est', 'soit', 'était', 'serait'],
-            correct: 1,
+            question: 'Si j\'avais plus de temps libre, je _____ autour du monde.',
+            questionTr: 'Daha fazla boş zamanım olsaydı, dünya çapında _____.',
+            options: ['voyageais', 'voyagerai', 'voyagerais', 'voyage'],
+            correct: 2,
             difficulty: 3
         },
         {
             id: 13,
-            level: 'B2',
-            question: 'Si j\'avais su, je _____ autrement.',
-            questionTr: 'Bilseydim, farklı davranırdım.',
-            options: ['aurais agi', 'agirais', 'avais agi', 'agirai'],
+            level: 'B1',
+            question: 'La longue lettre _____ envoyée hier matin par la poste centrale.',
+            questionTr: 'Uzun mektup dün sabah merkez postane tarafından _____.',
+            options: ['a été', 'est', 'avait', 'était'],
             correct: 0,
-            difficulty: 4
+            difficulty: 3
         },
         {
             id: 14,
+            level: 'B1',
+            question: 'Je ne pense pas qu\'elle _____ vraiment la bonne réponse à ce problème.',
+            questionTr: 'Bu sorunun doğru cevabını gerçekten _____ sanmıyorum.',
+            options: ['sait', 'saura', 'savait', 'sache'],
+            correct: 3,
+            difficulty: 3
+        },
+        {
+            id: 15,
+            level: 'B1',
+            question: 'Après _____ ses brillantes études, il a trouvé un travail en Suisse.',
+            questionTr: 'Parlak eğitimini _____ sonra İsviçre\'de bir iş buldu.',
+            options: ['finissant', 'fini', 'avoir fini', 'qu\'il finit'],
+            correct: 2,
+            difficulty: 3
+        },
+        // B2 Zor (16-20)
+        {
+            id: 16,
             level: 'B2',
-            question: 'Quoi qu\'il _____, je ne changerai pas d\'avis.',
-            questionTr: 'Ne söylerse söylesin, fikrimi değiştirmeyeceğim.',
-            options: ['dit', 'dise', 'dira', 'disait'],
+            question: 'Bien qu\'il _____ beaucoup de talent précoce, il manque de confiance en lui.',
+            questionTr: 'Çok erken yeteneği _____ rağmen, kendine güveni eksik.',
+            options: ['a', 'avait', 'aurait', 'ait'],
+            correct: 3,
+            difficulty: 4
+        },
+        {
+            id: 17,
+            level: 'B2',
+            question: 'J\'aurais vraiment préféré qu\'elle m\'_____ la vérité dès le début.',
+            questionTr: 'Gerçeği bana en başından _____ gerçekten tercih ederdim.',
+            options: ['a dit', 'ait dit', 'avait dit', 'aurait dit'],
             correct: 1,
             difficulty: 4
         },
         {
-            id: 15,
+            id: 18,
             level: 'B2',
-            question: 'À moins qu\'il ne _____ bientôt, nous partirons.',
-            questionTr: 'Yakında gelmezse, biz gideceğiz.',
-            options: ['vient', 'vienne', 'viendra', 'venait'],
+            question: 'La grande entreprise pour _____ il travaille va ouvrir une succursale.',
+            questionTr: 'Çalıştığı büyük şirket (kendisi _____) bir şube açacak.',
+            options: ['qui', 'laquelle', 'lesquelles', 'laquel'],
             correct: 1,
+            difficulty: 4
+        },
+        {
+            id: 19,
+            level: 'B2',
+            question: 'À supposer que nous _____ le train de 8h, que ferions-nous exactement ?',
+            questionTr: 'Sabah 8 trenini _____ varsayarsak, tam olarak ne yapardık?',
+            options: ['manquons', 'manquions', 'manquerons', 'manquerions'],
+            correct: 1,
+            difficulty: 4
+        },
+        {
+            id: 20,
+            level: 'B2',
+            question: 'Il s\'est mis à pleuvoir brusquement, _____ nous a obligés à annuler la sortie.',
+            questionTr: 'Aniden yağmur yağmaya başladı, _____ (bu durum) bizi iptal etmeye zorladı.',
+            options: ['ce qui', 'lequel', 'ce que', 'quoi'],
+            correct: 0,
             difficulty: 4
         }
     ]
@@ -627,7 +674,7 @@ export default function PlacementTestPage() {
                             />
                         </div>
                         <h2 className="text-xl font-bold text-slate-800 mb-2">
-                            Merhaba! Ben Shelby 🐢
+                            Merhaba! Ben Shelldon 🐢
                         </h2>
                         <p className="text-slate-600">
                             Senin için en uygun seviyeyi belirlememe yardımcı ol.
@@ -766,7 +813,7 @@ export default function PlacementTestPage() {
                     <div className="bg-violet-50 rounded-xl p-4 mb-6 flex items-start gap-3">
                         <Image
                             src="/mascot_v2.png"
-                            alt="Shelby"
+                            alt="Shelldon"
                             width={48}
                             height={48}
                             className="flex-shrink-0"

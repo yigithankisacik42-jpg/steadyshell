@@ -8,6 +8,8 @@ import { QuestsProvider } from "@/lib/quests-context";
 import { ServiceWorkerRegistration } from "@/components/service-worker-registration";
 import { OfflineIndicator } from "@/components/offline-indicator";
 import { AuthProvider } from "@/components/auth-provider";
+import { ShelldonProvider } from "@/contexts/shelldon-context";
+import { ShelldonBubble } from "@/components/shelldon-bubble";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,9 +51,12 @@ export default function RootLayout({
             <HeartsProvider>
               <UserProgressProvider>
                 <QuestsProvider>
-                  <ServiceWorkerRegistration />
-                  <OfflineIndicator />
-                  {children}
+                  <ShelldonProvider>
+                    <ServiceWorkerRegistration />
+                    <OfflineIndicator />
+                    {children}
+                    <ShelldonBubble />
+                  </ShelldonProvider>
                 </QuestsProvider>
               </UserProgressProvider>
             </HeartsProvider>

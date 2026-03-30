@@ -8,6 +8,7 @@ import { ArrowLeft, BookOpen, CheckCircle2, XCircle, ArrowRight } from "lucide-r
 import { getReadingForUnit, UnitReading } from "@/lib/readings";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
+import { useShelldon } from "@/contexts/shelldon-context";
 
 export default function ReadingPage() {
     return (
@@ -38,6 +39,7 @@ function ReadingContent() {
 
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
+    const { showShelldon } = useShelldon();
 
     // Ders bittiğinde XP ve Seri güncelle
     useEffect(() => {
@@ -46,6 +48,7 @@ function ReadingContent() {
             addQuestXP(10);
             addQuestLesson();
             completeLesson();
+            showShelldon("Müthiş bir okuyucusun! +10 XP kazandın 📖", "celebrate", 4000);
         }
     }, [step]);
 
@@ -79,6 +82,12 @@ function ReadingContent() {
         if (!selectedAnswer) return;
         const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
         setAnswerStatus(isCorrect ? "correct" : "wrong");
+        
+        if (isCorrect) {
+             if (Math.random() > 0.4) showShelldon("Okuduğunu çok iyi anlıyorsun!", "happy", 2000);
+        } else {
+             showShelldon("Parçaya tekrar göz atmaya ne dersin?", "thinking", 2500);
+        }
     };
 
     const handleNext = () => {

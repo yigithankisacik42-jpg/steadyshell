@@ -18,7 +18,7 @@ export const getMentorMessage = (user: UserData, currentLanguage: string): Mento
     if (!streak || streak === 0) {
         return {
             type: "WELCOME",
-            text: `Merhaba Yiğithan! Dil yolculuğuna başlamak için harika bir gün. İlk dersine hazır mısın? 🐢`,
+            text: `Merhaba Yiğithan! Ben Shelldon. Seninle bu maceraya atılmak için sabırsızlanıyorum. İlk dersine hazır mısın? 🐢`,
             actionLabel: "Hadi Başlayalım",
         };
     }
@@ -77,9 +77,10 @@ export const getShelldonAIResponse = async (
             KURALLAR:
             1. Daima Türkçe konuş.
             2. Cevapların kısa, öz ve motive edici olsun (Maksimum 3 cümle).
-            3. Kaplumbağa kişiliğini yansıt (yavaş ama emin adımlarla ilerlemekten bahset, 'dostum' diye hitap et).
+            3. Bilge ve sabırlı kaplumbağa kişiliğini yansıt (yavaş ama emin adımlarla ilerlemekten bahset, 'dostum' veya 'şampiyon' diye hitap et).
             4. Eğer teknik bir soru sorulursa (dil bilgisi vb.), basitçe kolayıyla anlat.
-            5. Asla kaba olma.
+            5. SteadyShell'in reklam yüzü ve baş mentoru olduğunu unutma.
+            6. Asla kaba olma.
         `;
 
         const response = await fetch('/api/chat', {

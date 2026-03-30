@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { getSpeakingForUnit, UnitSpeaking, SpeakingExercise } from "@/lib/speakings";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
+import { useShelldon } from "@/contexts/shelldon-context";
 
 export default function SpeakingPage() {
     return (
@@ -41,6 +42,7 @@ function SpeakingContent() {
 
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
+    const { showShelldon } = useShelldon();
 
     // Ders bittiğinde XP ve Seri güncelle
     useEffect(() => {
@@ -49,6 +51,7 @@ function SpeakingContent() {
             addQuestXP(15);
             addQuestLesson();
             completeLesson();
+            showShelldon("Telaffuzun harikaydı, aksanın şahane! 🎙️", "celebrate", 4000);
         }
     }, [isFinished]);
 
@@ -171,14 +174,26 @@ function SpeakingContent() {
                 const matchRatio = matchedWords / Math.max(expectedWords.length, 1);
 
                 if (exercise.type === "repeat") {
-                    setStatus(matchRatio >= 0.5 ? "success" : "retry");
+                    const ok = matchRatio >= 0.5;
+                    setStatus(ok ? "success" : "retry");
+                    if (ok) {
+                        if (Math.random() > 0.5) showShelldon("Kulağa mükemmel geliyor!", "happy", 2000);
+                    } else {
+                        showShelldon("Biraz daha net söylemeyi dene. Yapabilirsin!", "thinking", 2500);
+                    }
                 } else if (exercise.type === "respond" && exercise.expectedKeywords) {
                     const hasKeyword = exercise.expectedKeywords.some(kw =>
                         userSpeech.includes(cleanText(kw))
                     );
                     setStatus(hasKeyword ? "success" : "retry");
+                    if (hasKeyword) {
+                        if (Math.random() > 0.5) showShelldon("Harika cevap!", "happy", 2000);
+                    } else {
+                        showShelldon("Doğru kelimeleri kullandığına emin ol.", "thinking", 2500);
+                    }
                 } else {
                     setStatus("success");
+                    if (Math.random() > 0.5) showShelldon("Süper!", "happy", 2000);
                 }
             };
 

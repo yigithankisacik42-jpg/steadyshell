@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Star, Zap, BookOpen, Sparkles, GraduationCap, ChevronRight, MessageCircle, Library, Play, Heart, Clock, Award, Flame, Target, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -14,12 +15,14 @@ import { useHearts } from "@/lib/hearts-context";
 import { Map3DView } from "@/components/learn/map-3d-view";
 import { ShelldonMentor } from "@/components/learn/shelldon-mentor";
 import { Map as MapIcon, List as ListIcon } from "lucide-react";
+import { useShelldon } from "@/contexts/shelldon-context";
 
 
 export default function LearnPage() {
     const { currentLanguage, currentLevel, setCurrentLevel, progress } = useLanguage();
     const { hearts } = useHearts();
     const { user } = useUserProgress();
+    const { showShelldon } = useShelldon();
 
     const [isMapMode, setIsMapMode] = useState(false);
     
@@ -31,7 +34,14 @@ export default function LearnPage() {
 
     useEffect(() => {
         setIsMounted(true);
-    }, []);
+        
+        // Hoş geldin mesajı - Rastgele espriler de eklenebilir!
+        const timer = setTimeout(() => {
+             showShelldon("Derslere geri dönmene sevindim şampiyon! 🐢", "happy", 5000);
+        }, 1500);
+
+        return () => clearTimeout(timer);
+    }, [showShelldon]);
 
     const units = getCurriculum(currentLanguage.code, currentLevel?.code || "A1");
     const currentProgress = progress[currentLanguage.code];
@@ -203,8 +213,32 @@ export default function LearnPage() {
                 </div>
             </div>
 
+            {/* SHELLDON'S DAILY WISDOM */}
+            <div className="max-w-3xl mx-auto px-4 w-full mb-8 relative z-20">
+                <div className="bg-white rounded-3xl p-6 shadow-xl shadow-slate-200/40 border border-indigo-50 flex items-center gap-6 group hover:border-indigo-200 transition-all">
+                    <div className="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform overflow-hidden relative">
+                        <Image 
+                            src="/mascot_v2.png" 
+                            alt="Shelldon" 
+                            width={50} 
+                            height={50} 
+                            className="relative z-10"
+                        />
+                    </div>
+                    <div>
+                        <div className="flex items-center gap-2 mb-1">
+                            <Sparkles className="w-3 h-3 text-indigo-500 fill-indigo-500" />
+                            <span className="text-[10px] font-black text-indigo-600 uppercase tracking-widest">Shelldon'ın Günlük Bilgeliği</span>
+                        </div>
+                        <p className="text-slate-700 font-bold text-sm leading-relaxed italic">
+                            "Her gün sadece 5 yeni kelime öğrensen, bir yılın sonunda koca bir sözlüğe selam durursun dostum! 🐢✨"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             {/* CURRICULUM CONTENT */}
-            <div className="max-w-3xl mx-auto px-4 w-full -mt-20 z-20 relative">
+            <div className="max-w-3xl mx-auto px-4 w-full z-20 relative">
                 {isMapMode && isMounted ? (
                     <div className="mb-12">
                         <Map3DView 

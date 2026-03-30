@@ -61,7 +61,7 @@ export const Sidebar = ({ className }: { className?: string }) => {
             <div className="absolute inset-0 bg-indigo-500 blur-lg opacity-20 group-hover:opacity-40 transition-opacity rounded-full"></div>
             <Image
               src="/mascot_v2.png"
-              alt="Shelby"
+              alt="Shelldon"
               width={42}
               height={42}
               className="drop-shadow-md relative z-10"

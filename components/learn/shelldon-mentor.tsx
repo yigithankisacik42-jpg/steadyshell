@@ -79,7 +79,7 @@ export const ShelldonMentor = () => {
 
                         <div className="flex items-center gap-2 mb-3 text-indigo-600">
                             <Sparkles className="w-4 h-4 fill-current" />
-                            <span className="text-[10px] font-black uppercase tracking-widest">Canlı AI Mentör</span>
+                            <span className="text-[10px] font-black uppercase tracking-widest">Canlı Shelldon AI</span>
                         </div>
 
                         <div className="min-h-[60px] mb-4">
@@ -143,7 +143,7 @@ export const ShelldonMentor = () => {
                         src="/mascot_v2.png" 
                         alt="Shelldon Mentor" 
                         fill 
-                        className="object-contain transform -scale-x-100"
+                        className="object-contain"
                     />
                 </div>
                 

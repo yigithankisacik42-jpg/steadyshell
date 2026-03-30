@@ -81,7 +81,7 @@ export default function Home() {
                         <div className="absolute inset-0 bg-indigo-500 blur-lg opacity-40 group-hover:opacity-60 transition-opacity rounded-full"></div>
                         <Image
                             src="/mascot_v2.png"
-                            alt="Shelby"
+                            alt="Shelldon"
                             width={42}
                             height={42}
                             className="relative z-10 drop-shadow-lg transition-transform group-hover:scale-110 duration-300"
@@ -157,7 +157,7 @@ export default function Home() {
 
                                 <Image
                                     src="/mascot_v2.png"
-                                    alt="Shelby"
+                                    alt="Shelldon"
                                     width={280}
                                     height={280}
                                     className="drop-shadow-2xl"
@@ -168,6 +168,44 @@ export default function Home() {
                     </div>
                 </div>
             </main>
+
+            {/* --- SHELLDON WELCOME SECTION --- */}
+            <section className="relative z-10 py-12 px-6 lg:px-12 flex justify-center">
+                <div className="max-w-4xl w-full bg-indigo-600/10 backdrop-blur-2xl border border-white/10 p-8 md:p-12 rounded-[3.5rem] relative overflow-hidden group">
+                    {/* Background Glow */}
+                    <div className="absolute -top-24 -right-24 w-64 h-64 bg-indigo-500/20 blur-[80px] rounded-full group-hover:bg-indigo-500/30 transition-colors" />
+                    
+                    <div className="flex flex-col md:flex-row items-center gap-10 relative z-10">
+                        <div className="flex-shrink-0 relative">
+                            <div className="absolute inset-0 bg-indigo-400 blur-2xl opacity-20 animate-pulse" />
+                            <Image
+                                src="/mascot_v2.png"
+                                alt="Shelldon"
+                                width={160}
+                                height={160}
+                                className="relative z-10 drop-shadow-2xl animate-float"
+                            />
+                        </div>
+                        
+                        <div className="flex-1 text-center md:text-left">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/30 mb-4 text-indigo-300 text-xs font-bold tracking-widest uppercase">
+                                <Sparkles className="w-3 h-3" /> Shelldon'ın Mesajı
+                            </div>
+                            <h2 className="text-3xl lg:text-4xl font-black mb-4 leading-tight">
+                                "Dil öğrenmek bir maratondur, <span className="text-indigo-400">sprint değil.</span>"
+                            </h2>
+                            <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                                Merhaba! Ben Shelldon. SteadyShell'de biz dilleri aceleyle değil, <strong>yavaş ama emin adımlarla</strong> sindirerek öğreniriz. Yapay zeka mentorluğun ve oyunlaştırılmış dünyamızla, her gün sadece 10 dakikada hayalindeki dile kavuşabilirsin. Birlikte zirveye çıkmaya hazır mısın? 🐢✨
+                            </p>
+                            <Link href="/register">
+                                <Button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-8 py-6 rounded-2xl shadow-lg shadow-indigo-500/20 transition-all hover:scale-105 active:scale-95">
+                                    Shelldon ile Başla <ArrowRight className="ml-2 w-5 h-5" />
+                                </Button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* --- FEATURES SECTION --- */}
             <section className="relative z-10 py-24 px-6 lg:px-12">
