@@ -7,15 +7,16 @@ export function useNetworkStatus() {
     const [wasOffline, setWasOffline] = useState(false);
 
     useEffect(() => {
-        // İlk yüklemede durumu kontrol et
-        setIsOnline(navigator.onLine);
+        // Not: Mobil cihazlarda (özellikle yerel ağ testlerinde) navigator.onLine 
+        // bazen yanlışlıkla false dönebiliyor. Bu yüzden sadece event'lere odaklanıyoruz.
+        // Başlangıç durumu zaten state'de 'true' olarak ayarlandı.
+        if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+             setIsOnline(false);
+             setWasOffline(true);
+        }
 
         const handleOnline = () => {
             setIsOnline(true);
-            // Eğer önceden offline idiysek, sayfayı yenile
-            if (wasOffline) {
-                window.location.reload();
-            }
         };
 
         const handleOffline = () => {
