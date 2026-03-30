@@ -8,6 +8,7 @@ import Link from "next/link";
 import { sendMessageToAI, type ChatMessage, type AIMode } from "@/lib/ai";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useUserProgress } from "@/contexts/user-progress-context";
+import { useNetworkStatus } from "@/lib/use-network-status";
 import { useSpeech } from "@/lib/use-speech";
 import { cn } from "@/lib/utils";
 
@@ -51,6 +52,7 @@ export default function AITutorPage() {
     const [selectedLang, setSelectedLang] = useState(currentLanguage?.code || 'es');
     const [hasStarted, setHasStarted] = useState(false);
     const { addXp } = useUserProgress();
+    const { isOnline } = useNetworkStatus();
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     // Ses özellikleri
@@ -378,12 +380,19 @@ export default function AITutorPage() {
 
                     <div className="bg-white p-2 rounded-[24px] shadow-2xl shadow-indigo-500/10 border border-slate-100 flex items-center gap-2 relative">
                         <div className="flex-1 relative">
+                            {!isOnline && (
+                                <div className="absolute inset-0 bg-slate-50/90 backdrop-blur-sm z-10 flex items-center justify-center rounded-2xl">
+                                    <span className="text-xs font-bold text-amber-600 flex items-center gap-1">
+                                        ⚠️ İnternet kapalıyken Luna sohbet edemez.
+                                    </span>
+                                </div>
+                            )}
                             <Input
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyPress={handleKeyPress}
                                 placeholder={isListening ? "Dinleniyor..." : "Mesajınızı yazın..."}
-                                disabled={isLoading || isListening}
+                                disabled={isLoading || isListening || !isOnline}
                                 className={cn(
                                     "border-none shadow-none focus-visible:ring-0 bg-transparent h-12 pl-4 pr-4 font-medium text-slate-700 placeholder:text-slate-400",
                                     isListening && "placeholder:text-indigo-500"
@@ -412,8 +421,8 @@ export default function AITutorPage() {
                             <Button
                                 size="icon"
                                 onClick={() => handleSendMessage()}
-                                disabled={!inputValue.trim() || isLoading}
-                                className="h-10 w-10 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-lg shadow-indigo-500/30 one-click-scale"
+                                disabled={!inputValue.trim() || isLoading || !isOnline}
+                                className="h-10 w-10 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-lg shadow-indigo-500/30 one-click-scale disabled:opacity-50"
                             >
                                 <Send className="w-5 h-5 ml-0.5" />
                             </Button>

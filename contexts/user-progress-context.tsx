@@ -3,6 +3,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 const STORAGE_KEY = "steadyshell_current_user";
+const OFFLINE_QUEUE_KEY = "steadyshell_offline_queue";
 
 export interface UserData {
     name: string;
@@ -34,13 +35,49 @@ interface UserProgressContextType {
 
 const UserProgressContext = createContext<UserProgressContextType | null>(null);
 
+function addActionToQueue(action: string, amount?: number) {
+    if (typeof window === 'undefined') return;
+    try {
+        const existing = localStorage.getItem(OFFLINE_QUEUE_KEY);
+        const queue = existing ? JSON.parse(existing) : [];
+        queue.push({ action, amount, timestamp: Date.now() });
+        localStorage.setItem(OFFLINE_QUEUE_KEY, JSON.stringify(queue));
+    } catch (e) {
+        console.error("Queue save failed", e);
+    }
+}
+
 export function UserProgressProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<UserData>(defaultUser);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Load from API
     useEffect(() => {
-        const fetchUser = async () => {
+        const syncAndFetchUser = async () => {
+            // 1. Flush offline queue if online
+            if (typeof window !== 'undefined' && navigator.onLine) {
+                const queueData = localStorage.getItem(OFFLINE_QUEUE_KEY);
+                if (queueData) {
+                    try {
+                        const queue = JSON.parse(queueData);
+                        if (queue && queue.length > 0) {
+                            console.log("[Offline Sync] Synchronizing pending actions...");
+                            for (const item of queue) {
+                                await fetch("/api/user-progress", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify({ action: item.action, amount: item.amount }),
+                                }).catch(() => {}); // ignore individual fails during sync
+                            }
+                            localStorage.removeItem(OFFLINE_QUEUE_KEY);
+                            console.log("[Offline Sync] Completed.");
+                        }
+                    } catch (e) {
+                        console.error("[Offline Sync] Queue error", e);
+                    }
+                }
+            }
+
+            // 2. Load latest data
             try {
                 const res = await fetch("/api/user-progress");
                 if (res.ok) {
@@ -64,7 +101,7 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
             }
         };
 
-        fetchUser();
+        syncAndFetchUser();
     }, []);
 
     // --- GÜVENLİ: Sunucuya delta XP gönder ---
@@ -74,6 +111,12 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
             ...prev,
             totalXp: prev.totalXp + amount,
         }));
+
+        // Offline check
+        if (typeof window !== 'undefined' && !navigator.onLine) {
+            addActionToQueue("add_xp", amount);
+            return;
+        }
 
         // Sunucuya gönder — sunucu doğrulayacak
         fetch("/api/user-progress", {
@@ -89,7 +132,6 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
                 throw new Error("XP sync failed");
             })
             .then((data) => {
-                // Sunucudan dönen gerçek değerlerle güncelle
                 setUser((prev) => ({
                     ...prev,
                     totalXp: data.totalXp,
@@ -98,11 +140,15 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
             })
             .catch((e) => {
                 console.error("Failed to sync XP with server", e);
-                // Optimistic update'i geri al
-                setUser((prev) => ({
-                    ...prev,
-                    totalXp: Math.max(0, prev.totalXp - amount),
-                }));
+                if (typeof window !== 'undefined' && !navigator.onLine) {
+                    addActionToQueue("add_xp", amount);
+                } else {
+                    // Real server error, rollback
+                    setUser((prev) => ({
+                        ...prev,
+                        totalXp: Math.max(0, prev.totalXp - amount),
+                    }));
+                }
             });
     };
 
@@ -136,6 +182,12 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
             };
         });
 
+        // Offline check
+        if (typeof window !== 'undefined' && !navigator.onLine) {
+            addActionToQueue("complete_lesson");
+            return;
+        }
+
         // Sunucuya gönder
         fetch("/api/user-progress", {
             method: "POST",
@@ -149,7 +201,6 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
                 throw new Error("Lesson sync failed");
             })
             .then((data) => {
-                // Sunucudan dönen gerçek değerlerle güncelle
                 setUser((prev) => ({
                     ...prev,
                     streak: data.streak,
@@ -158,6 +209,9 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
             })
             .catch((e) => {
                 console.error("Failed to sync lesson with server", e);
+                if (typeof window !== 'undefined' && !navigator.onLine) {
+                    addActionToQueue("complete_lesson");
+                }
             });
     };
 
@@ -169,14 +223,23 @@ export function UserProgressProvider({ children }: { children: ReactNode }) {
             if ('totalXp' in data && data.totalXp !== undefined) {
                 const delta = data.totalXp - prev.totalXp;
                 if (delta > 0) {
-                    fetch("/api/user-progress", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                            action: "add_xp",
-                            amount: delta,
-                        }),
-                    }).catch((e) => console.error("Failed to sync updateUser XP", e));
+                    if (typeof window !== 'undefined' && !navigator.onLine) {
+                        addActionToQueue("add_xp", delta);
+                    } else {
+                        fetch("/api/user-progress", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                action: "add_xp",
+                                amount: delta,
+                            }),
+                        }).catch((e) => {
+                            console.error("Failed to sync updateUser XP", e);
+                            if (typeof window !== 'undefined' && !navigator.onLine) {
+                                addActionToQueue("add_xp", delta);
+                            }
+                        });
+                    }
                 }
             }
 
