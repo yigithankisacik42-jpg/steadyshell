@@ -253,17 +253,16 @@ export default function LearnPage() {
                     </div>
                 ) : units.length > 0 ? (
                     <div className="flex flex-col gap-12">
-                        {units.map((unit, unitIndex) => (
-                            <div key={unit.id} className="group">
-                                {(() => {
-                                    const completedLessonCount = unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length;
-                                    const unitProgressPercent = unit.lessons.length > 0
-                                        ? (completedLessonCount / unit.lessons.length) * 100
-                                        : 0;
-                                    const storyMeta = getStoryMetaForUnit(unit.id);
-                                    const isStoryUnlocked = !!storyMeta && completedLessonCount > 0;
+                        {units.map((unit, unitIndex) => {
+                            const completedLessonCount = unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length;
+                            const unitProgressPercent = unit.lessons.length > 0
+                                ? (completedLessonCount / unit.lessons.length) * 100
+                                : 0;
+                            const storyMeta = getStoryMetaForUnit(unit.id);
+                            const isStoryUnlocked = !!storyMeta && completedLessonCount > 0;
 
-                                    return (
+                            return (
+                            <div key={unit.id} className="group">
                                 {/* Unit Header Card */}
                                 <div className="relative mb-8 bg-white rounded-3xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
                                     {/* Decorative Gradient Background */}
@@ -351,8 +350,6 @@ export default function LearnPage() {
                                         </Link>
                                     )}
                                 </div>
-                                    );
-                                })()}
 
                                 {/* Lesson Path (Vertical) */}
                                 <div className="flex flex-col items-center relative space-y-4 pb-4">
@@ -405,7 +402,8 @@ export default function LearnPage() {
                                     })}
                                 </div>
                             </div>
-                        ))}
+                        );
+                        })}
                     </div>
                 ) : (
                     <div className="max-w-3xl mx-auto px-4 flex flex-col items-center justify-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100 text-center">
