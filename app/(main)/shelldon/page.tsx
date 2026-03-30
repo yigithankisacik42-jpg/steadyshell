@@ -10,6 +10,9 @@ import { Scene3D } from "@/components/scene-3d";
 import { SHELLDON_SCENARIOS, buildShelldonPrompt, buildFeedbackPrompt, buildHintPrompt, type ShelldonScenario } from "@/lib/shelldon-ai";
 import { useSpeech } from "@/lib/use-speech";
 import { useUserProgress } from "@/contexts/user-progress-context";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getLanguageByCode } from "@/lib/languages";
+import { findUnitByLessonId } from "@/lib/curriculum";
 
 const LANGUAGES = [
     { code: "fr", name: "Fransızca", flag: "🇫🇷" },
@@ -114,7 +117,6 @@ export default function ShelldonPage() {
     const [isFinished, setIsFinished] = useState(false);
     const [feedback, setFeedback] = useState<FeedbackData | null>(null);
     const [showTextInput, setShowTextInput] = useState(false);
-    const [userLevel] = useState("A1");
     // Memory State
     const [userMemory, setUserMemory] = useState<any>(null);
     // Call Mode State
@@ -123,6 +125,8 @@ export default function ShelldonPage() {
     const [isLoadingHint, setIsLoadingHint] = useState(false);
     const [currentHint, setCurrentHint] = useState<string | null>(null);
     const [completedObjectives, setCompletedObjectives] = useState<number[]>([]);
+    const [sessionSummary, setSessionSummary] = useState<string | null>(null);
+    const [sessionGoal, setSessionGoal] = useState<string | null>(null);
     
     // Slash commands state
     const [showCommandMenu, setShowCommandMenu] = useState(false);
@@ -132,6 +136,7 @@ export default function ShelldonPage() {
 
     // Hooks
     const { addXp, completeLesson } = useUserProgress();
+    const { currentLanguage, currentLevel, progress } = useLanguage();
     const {
         isListening,
         transcript,
@@ -154,7 +159,52 @@ export default function ShelldonPage() {
         }
     });
 
-    const MAX_TURNS = 8;
+    const MAX_TURNS = 3;
+
+    const buildLessonContext = useCallback(
+        (langCode: string, levelCode: string) => {
+            const langMeta = getLanguageByCode(langCode) || currentLanguage;
+            const completedLessons = progress[langCode]?.completedLessons ?? [];
+
+            if (completedLessons.length === 0) {
+                return `Kullanıcı ${langMeta.name} ${levelCode} seviyesinde. Genel pratik yap.`;
+            }
+
+            const lastLessonId = Math.max(...completedLessons);
+            const unitInfo = findUnitByLessonId(lastLessonId);
+            if (!unitInfo) {
+                return `Kullanıcı ${langMeta.name} ${levelCode} seviyesinde. Son ders bilgisi bulunamadı, genel pratik yap.`;
+            }
+
+            const lastLesson = unitInfo.unit.lessons.find(l => l.id === lastLessonId);
+            const lessonTitle = lastLesson?.title ?? lastLesson?.type ?? "Ders";
+
+            return `Kullanıcı ${langMeta.name} ${unitInfo.levelCode} seviyesinde. Son tamamlanan ders: Ünite ${unitInfo.unit.id} (${unitInfo.unit.title}) • ${lessonTitle}. Öncelik: bu ünitenin temasıyla ilgili kısa bir ısınma sorusu ve örnekler.`;
+        },
+        [currentLanguage, progress]
+    );
+
+    const buildSessionSummary = useCallback(() => {
+        if (!selectedScenario) return "Bugün kısa bir pratik yaptın.";
+        if (completedObjectives.length === 0) {
+            return `${selectedScenario.titleTr} içinde temel ifadeleri denedin.`;
+        }
+        if (completedObjectives.length === 1) {
+            return `${selectedScenario.titleTr} içinde 1 hedefi tamamladın.`;
+        }
+        return `${selectedScenario.titleTr} içinde ${completedObjectives.length} hedefi tamamladın.`;
+    }, [selectedScenario, completedObjectives]);
+
+    const buildSessionGoal = useCallback(() => {
+        if (!selectedScenario) return "Mini hedef: Bir sonraki seans kısa cümlelerle devam et.";
+        const langCode = selectedLang || "fr";
+        const objectives = selectedScenario.objectives[langCode] || [];
+        const nextIndex = objectives.findIndex((_, idx) => !completedObjectives.includes(idx));
+        if (nextIndex !== -1) {
+            return `Mini hedef: ${objectives[nextIndex]}`;
+        }
+        return "Mini hedef: Bir sonraki seans daha uzun cümleler kur.";
+    }, [selectedScenario, completedObjectives, selectedLang]);
 
     // === MEMORY LOAD ===
     useEffect(() => {
@@ -198,9 +248,14 @@ export default function ShelldonPage() {
         setIsFinished(false);
         setFeedback(null);
         setCompletedObjectives([]);
+        setSessionSummary(null);
+        setSessionGoal(null);
 
         try {
-            const systemPrompt = buildShelldonPrompt(selectedLang, userLevel, scenario);
+            const langCode = selectedLang || currentLanguage.code;
+            const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
+            const lessonContext = buildLessonContext(langCode, levelCode);
+            const systemPrompt = buildShelldonPrompt(langCode, levelCode, scenario, lessonContext);
             const response = await fetch("/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -300,7 +355,10 @@ export default function ShelldonPage() {
         setSelectedImage(null); // Clear preview
 
         try {
-            let systemPrompt = buildShelldonPrompt(selectedLang, userLevel, selectedScenario);
+            const langCode = selectedLang || currentLanguage.code;
+            const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
+            const lessonContext = buildLessonContext(langCode, levelCode);
+            let systemPrompt = buildShelldonPrompt(langCode, levelCode, selectedScenario, lessonContext);
             
             // Hafıza (Memory) Enjeksiyonu
             if (userMemory && !isSystemCommand) {
@@ -446,6 +504,8 @@ export default function ShelldonPage() {
     const finishConversation = async (allMessages: Message[]) => {
         setIsFinished(true);
         setShelldonState("happy");
+        setSessionSummary(buildSessionSummary());
+        setSessionGoal(buildSessionGoal());
 
         // XP ver
         addXp(15);
@@ -598,6 +658,8 @@ export default function ShelldonPage() {
         setShelldonState("idle");
         setIsFinished(false);
         setFeedback(null);
+        setSessionSummary(null);
+        setSessionGoal(null);
         setTurnCount(0);
         setSelectedImage(null);
     };
@@ -667,6 +729,23 @@ export default function ShelldonPage() {
                     </div>
                 )}
 
+                {(sessionSummary || sessionGoal) && (
+                    <div className="w-full max-w-md space-y-3 mb-6">
+                        {sessionSummary && (
+                            <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-4">
+                                <p className="text-[11px] font-black uppercase tracking-wider text-emerald-600 mb-2">Özet</p>
+                                <p className="text-sm text-emerald-800 font-semibold">{sessionSummary}</p>
+                            </div>
+                        )}
+                        {sessionGoal && (
+                            <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4">
+                                <p className="text-[11px] font-black uppercase tracking-wider text-amber-600 mb-2">Mini Hedef</p>
+                                <p className="text-sm text-amber-900 font-semibold">{sessionGoal}</p>
+                            </div>
+                        )}
+                    </div>
+                )}
+
                 {/* Butonlar */}
                 <div className="flex gap-3 w-full max-w-md">
                     <Button
@@ -680,6 +759,8 @@ export default function ShelldonPage() {
                         onClick={() => {
                             setIsFinished(false);
                             setFeedback(null);
+                            setSessionSummary(null);
+                            setSessionGoal(null);
                             setTurnCount(0);
                             setMessages([]);
                             if (selectedScenario) startScenario(selectedScenario);
@@ -726,8 +807,7 @@ export default function ShelldonPage() {
                                         {selectedScenario.titleTr}
                                     </h1>
                                     <p className="text-[11px] text-slate-400 font-medium">
-                                        {LANGUAGES.find((l) => l.code === selectedLang)?.flag}{" "}
-                                        {selectedScenario.titleTarget[selectedLang]} • Tur {Math.min(turnCount + 1, MAX_TURNS)}/{MAX_TURNS}
+                                        Mikro pratik • Tur {Math.min(turnCount + 1, MAX_TURNS)}/{MAX_TURNS}
                                     </p>
                                 </div>
                             </div>

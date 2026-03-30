@@ -192,7 +192,8 @@ const LANG_NAMES: Record<string, { tr: string; native: string }> = {
 export function buildShelldonPrompt(
     language: string,
     level: string,
-    scenario: ShelldonScenario
+    scenario: ShelldonScenario,
+    lessonContext?: string
 ): string {
     const lang = LANG_NAMES[language] || LANG_NAMES.fr;
     const scenarioTitle = scenario.titleTarget[language] || scenario.titleTr;
@@ -210,6 +211,13 @@ KİŞİLİĞİN:
 SENARYO: ${scenarioTitle}
 ${scenario.context}
 
+DERS BAĞLAMI (ÖNCELİKLİ):
+${lessonContext ? lessonContext : "Genel pratik - seçilen senaryoya odaklan."}
+
+MİKRO-PRATİK KURALI:
+- Bu seans 3 tur sürer. Her turda TEK net görev ver.
+- Gereksiz uzatma yapma. Kısa ve odaklı kal.
+
 GÖREVLER (Kullanıcının Yapması Gerekenler):
 Kullanıcının konuşma sırasında şu görevleri tamamlaması bekleniyor:
 ${objectivesList}
@@ -219,7 +227,14 @@ KRİTİK KURALLAR (ÖNEMLİ! SADECE JSON DÖNDÜR!):
 1. **SADECE JSON FORMATINDA YANIT VER.** Geri kalan her şey (selamlaşma, markdown işaretleri vb.) sistemin çökmesine neden olur. Metni \`\`\`json blokları İÇİNE ALMA.
 2. DİL: Öğretici mesajların haricinde (message alanında) ${lang.native} (${lang.tr}) kullan.
 3. SEVİYE: Kullanıcı ${level} seviyesinde. Yavaş, kısa ve net cümleler kur. MAX 2-3 cümle.
-4. DÜZELTME: Kullanıcı hata yaparsa önce düzelterek tekrarla, sonra kısa bir Türkçe ipucu ver.
+4. DÜZELTME (EĞER HATA VARSA): SADECE 1 düzeltme yap.
+   Formatı AYNEN kullan:
+   ❌ Yanlış: ...
+   ✅ Doğrusu: ...
+   📝 İpucu: ... (Türkçe kısa)
+   Ardından hedef dilde 1 kısa örnek ve 1 kısa tekrar iste:
+   Örnek: ...
+   Şimdi sen: ...
 5. Görevleri (completedObjectives) array'i olarak JSON'a ekle. Kullanıcı görevleri başardıysa indeks numaralarını (0, 1, 2) bu diziye ekle.
 
 BEKLENEN JSON FORMATI:

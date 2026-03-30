@@ -563,6 +563,18 @@ export function findUnitById(unitId: number): { langCode: string; levelCode: str
     return null;
 }
 
+export function findUnitByLessonId(lessonId: number): { langCode: string; levelCode: string; unit: Unit } | null {
+    for (const lang of curriculum) {
+        for (const level of lang.levels) {
+            const unit = level.units.find(u => u.lessons.some(l => l.id === lessonId));
+            if (unit) {
+                return { langCode: lang.langCode, levelCode: level.levelCode, unit };
+            }
+        }
+    }
+    return null;
+}
+
 export function getLessonIdForUnit(
     unitId: number,
     lessonType: LessonType,
