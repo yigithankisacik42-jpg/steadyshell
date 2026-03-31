@@ -13,6 +13,7 @@ import { useUserProgress } from "@/contexts/user-progress-context";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getLanguageByCode } from "@/lib/languages";
 import { findUnitByLessonId } from "@/lib/curriculum";
+import { useShelldon } from "@/contexts/shelldon-context";
 
 const LANGUAGES = [
     { code: "fr", name: "Fransızca", flag: "🇫🇷" },
@@ -124,10 +125,11 @@ export default function ShelldonPage() {
     const [isFinished, setIsFinished] = useState(false);
     const [feedback, setFeedback] = useState<FeedbackData | null>(null);
     const [showTextInput, setShowTextInput] = useState(false);
-    // Memory State
+    
+    // Memory and Mode States
     const [userMemory, setUserMemory] = useState<any>(null);
-    // Call Mode State
     const [isCallMode, setIsCallMode] = useState(false);
+    
     // Yeni stateler (Hint & Görevler)
     const [isLoadingHint, setIsLoadingHint] = useState(false);
     const [currentHint, setCurrentHint] = useState<string | null>(null);
@@ -136,15 +138,16 @@ export default function ShelldonPage() {
     const [sessionGoal, setSessionGoal] = useState<string | null>(null);
     const [repeatQueue, setRepeatQueue] = useState<string[]>([]);
     
-    // Slash commands state
+    // UI states
     const [showCommandMenu, setShowCommandMenu] = useState(false);
-
     const messagesContainerRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
     // Hooks
     const { addXp, completeLesson } = useUserProgress();
     const { currentLanguage, currentLevel, progress } = useLanguage();
+    const { userStats, dailyStats } = useShelldon();
+    
     const {
         isListening,
         transcript,
@@ -159,9 +162,8 @@ export default function ShelldonPage() {
     } = useSpeech(selectedLang || "fr", {
         continuousMode: isCallMode,
         onSilence: (text) => {
-            // Automatically send the message when silence is detected in Call Mode
             if (text.trim() && !isLoading) {
-                stopListening(); // Durdur, cevabı bekle
+                stopListening();
                 handleSendMessage(text.trim());
             }
         }
@@ -265,7 +267,7 @@ export default function ShelldonPage() {
             const langCode = selectedLang || currentLanguage.code;
             const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
             const lessonContext = buildLessonContext(langCode, levelCode);
-            const systemPrompt = buildShelldonPrompt(langCode, levelCode, scenario, lessonContext, practiceMode);
+            const systemPrompt = buildShelldonPrompt(langCode, levelCode, scenario, userStats || undefined, dailyStats, lessonContext, practiceMode);
             const response = await fetch("/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -369,7 +371,7 @@ export default function ShelldonPage() {
             const langCode = selectedLang || currentLanguage.code;
             const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
             const lessonContext = buildLessonContext(langCode, levelCode);
-            let systemPrompt = buildShelldonPrompt(langCode, levelCode, selectedScenario, lessonContext, practiceMode);
+            let systemPrompt = buildShelldonPrompt(langCode, levelCode, selectedScenario, userStats || undefined, dailyStats, lessonContext, practiceMode);
             
             // Hafıza (Memory) Enjeksiyonu
             if (userMemory && !isSystemCommand) {

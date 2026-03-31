@@ -13,9 +13,10 @@ function countWordsPerUnit() {
         return;
     }
 
-    const report = [];
+    const report: { unit: string; count: number }[] = [];
     units.forEach(unit => {
-        const unitName = unit.match(/u\d+/)[0];
+        const unitMatch = unit.match(/u\d+/);
+        const unitName = unitMatch ? unitMatch[0] : "unknown";
         const unitRegex = new RegExp(`${unitName}: EnglishUnitVocabulary = \\{[\\s\\S]*?words: \\[([\\s\\S]*?)\\]`, 'm');
         const match = content.match(unitRegex);
         if (match) {

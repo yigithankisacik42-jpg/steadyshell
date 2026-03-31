@@ -519,7 +519,21 @@ const unitTopics: { [key: number]: string } = {
     86: "İş/Kariyer", 87: "Edebiyat 2", 88: "İspanyol Coğrafyası", 89: "Latin Amerika", 90: "B1 Final",
     // B2 Üniteleri (91-120)
     91: "Subjunctive İleri", 92: "Koşul Cümleleri 3", 93: "Edilgen Çatı", 94: "Dolaylı Anlatım", 95: "Akademik Yazım",
-    96: "Tartışma/Münazara", 97: "İş Müzakereleri", 98: "Hukuk Dili", 99: "Tıp Terminolojisi", 100: "Finans"
+    96: "Tartışma/Münazara", 97: "İş Müzakereleri", 98: "Hukuk Dili", 99: "Tıp Terminolojisi", 100: "Finans",
+    // İngilizce A1 (101-130)
+    101: "Selamlaşma", 102: "Sayılar 1-10", 103: "Aile", 104: "Renkler", 105: "Yiyecekler",
+    106: "İçecekler", 107: "Günler ve Aylar", 108: "Sayılar 11-100", 109: "Ev ve Odalar", 110: "Mobilyalar",
+    111: "Vücut Bölümleri", 112: "Kıyafetler", 113: "Hayvanlar", 114: "Meslekler", 115: "Şehirdeki Yerler",
+    116: "Ulaşım", 117: "Günlük Aktiviteler", 118: "Saat Sorma", 119: "Hava Durumu", 120: "Hobiler ve Spor",
+    121: "Duygular", 122: "Okul ve Eğitim", 123: "Özel Günler", 124: "Ülkeler ve Diller", 125: "Sık Kullanılan Fiiller 1",
+    126: "Sıklık Zarfları", 127: "Soru Kelimeleri", 128: "Temel Sıfatlar", 129: "Edatlar (Prepositions)", 130: "Sık Kullanılan Fiiller 2",
+    // İngilizce A2 (131-160)
+    131: "Geçmiş Zaman (Düzenli)", 132: "Geçmiş Zaman (Düzensiz)", 133: "Dışarıda Yemek", 134: "Alışveriş ve Fiyatlar", 135: "Seyahat Planları",
+    136: "Sağlık ve Tavsiyeler", 137: "Teknoloji Dünyası", 138: "İş Hayatı", 139: "Çevre ve Doğa", 140: "Modern Yaşam",
+    141: "Boş Zaman", 142: "Spor ve Fitness", 143: "Dünya Mutfağı", 144: "Eğlence Medyası", 145: "Bilgisayar Bilimi",
+    146: "Sosyal İlişkiler", 147: "Para ve Bankacılık", 148: "Sosyal Kurallar", 149: "Sanat ve Kültür", 150: "Küresel Sorunlar",
+    151: "Bilimsel Keşifler", 152: "Vahşi Yaşam", 153: "Kişi Betimleme", 154: "İleri Duygular", 155: "Günlük Alışkanlıklar",
+    156: "Dış Görünüş", 157: "Yönler ve Yerler", 158: "Present Perfect 1", 159: "Present Perfect 2", 160: "A2 Genel Tekrar"
 };
 
 // Ana fonksiyon

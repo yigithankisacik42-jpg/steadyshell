@@ -2452,8 +2452,462 @@ const u158q4: EnglishQuestion[] = [
     { question: "Call it a ___.", options: ["day", "night", "week", "job"], correctAnswer: 0, explanation: "Call it a day = Bugünlük bu kadar yeter (deyim).", type: "vocabulary" }
 ];
 
+
+// Unit 155: Daily Habits - FULL 80 QUESTIONS
+const u155q1: EnglishQuestion[] = [
+    { question: "I ___ have breakfast at 7 AM.", options: ["always", "ever", "never", "yet"], correctAnswer: 0, explanation: "'Always' is used for 100% frequency.", type: "grammar" },
+    { question: "She ___ goes to the gym; she hates it.", options: ["hardly ever", "usually", "often", "always"], correctAnswer: 0, explanation: "'Hardly ever' means almost never.", type: "grammar" },
+    { question: "We ___ watch movies on Fridays.", options: ["usually", "always", "sometimes", "never"], correctAnswer: 0, explanation: "'Usually' indicates a regular habit.", type: "grammar" },
+    { question: "Do you ___ play tennis?", options: ["often", "always", "ever", "yet"], correctAnswer: 0, explanation: "'Often' asks about frequency.", type: "grammar" },
+    { question: "He is ___ late for work; he is very punctual.", options: ["never", "always", "sometimes", "usually"], correctAnswer: 0, explanation: "'Never' indicates 0% frequency.", type: "vocabulary" },
+    { question: "I ___ brush my teeth after every meal.", options: ["always", "never", "sometimes", "usually"], correctAnswer: 0, explanation: "A healthy daily habit.", type: "vocabulary" },
+    { question: "They ___ go for a walk in the evening.", options: ["sometimes", "never", "always", "usually"], correctAnswer: 0, explanation: "'Sometimes' indicates occasional frequency.", type: "grammar" },
+    { question: "She ___ drinks coffee in the morning.", options: ["usually", "never", "always", "sometimes"], correctAnswer: 0, explanation: "'Usually' for a typical morning routine.", type: "vocabulary" },
+    { question: "I ___ read a book for an hour before bed.", options: ["often", "never", "always", "sometimes"], correctAnswer: 0, explanation: "'Often' for a frequent habit.", type: "vocabulary" },
+    { question: "We ___ visit our cousins on Sundays.", options: ["usually", "never", "always", "sometimes"], correctAnswer: 0, explanation: "A regular family habit.", type: "grammar" },
+    { question: "He ___ checks his phone in the middle of the night.", options: ["hardly ever", "always", "never", "usually"], correctAnswer: 0, explanation: "Indicates low frequency.", type: "grammar" },
+    { question: "I ___ take a shower right after I wake up.", options: ["always", "never", "sometimes", "usually"], correctAnswer: 0, explanation: "Common morning routine.", type: "vocabulary" },
+    { question: "She ___ eats lunch alone; she prefers company.", options: ["sometimes", "never", "always", "usually"], correctAnswer: 0, explanation: "'Sometimes' for occasional behavior.", type: "vocabulary" },
+    { question: "Do you ___ go to bed before 10 PM?", options: ["always", "never", "sometimes", "usually"], correctAnswer: 0, explanation: "Asks about overall consistency.", type: "grammar" },
+    { question: "We ___ cook dinner together as a family.", options: ["usually", "never", "always", "sometimes"], correctAnswer: 0, explanation: "Standard shared routine.", type: "vocabulary" },
+    { question: "I ___ forget to lock the door.", options: ["hardly ever", "always", "never", "usually"], correctAnswer: 0, explanation: "Indicates a rare mistake.", type: "grammar" },
+    { question: "She ___ calls her best friend during lunch break.", options: ["often", "never", "always", "sometimes"], correctAnswer: 0, explanation: "Frequent communication.", type: "vocabulary" },
+    { question: "They ___ travel abroad during winter.", options: ["usually", "never", "always", "sometimes"], correctAnswer: 0, explanation: "Typical seasonal habit.", type: "grammar" },
+    { question: "He ___ wears a tie to important meetings.", options: ["always", "never", "sometimes", "usually"], correctAnswer: 0, explanation: "Requirement-based frequency.", type: "vocabulary" },
+    { question: "I ___ listen to podcasts while commuting.", options: ["usually", "never", "always", "sometimes"], correctAnswer: 0, explanation: "Common travel habit.", type: "vocabulary" }
+];
+const u155q2: EnglishQuestion[] = [
+    { question: "How ___ do you exercise?", options: ["often", "much", "many", "long"], correctAnswer: 0, explanation: "'How often' asks for frequency.", type: "grammar" },
+    { question: "I go to the dentist ___ a year.", options: ["twice", "two", "second", "double"], correctAnswer: 0, explanation: "'Twice' means two times.", type: "vocabulary" },
+    { question: "She takes a short break ___ hour.", options: ["every", "all", "each of", "the"], correctAnswer: 0, explanation: "'Every' indicates regularity.", type: "grammar" },
+    { question: "He cleans his apartment ___ weekend.", options: ["every", "all", "each", "the"], correctAnswer: 0, explanation: "'Every weekend' is a habit.", type: "vocabulary" },
+    { question: "We visit the local library ___ month.", options: ["once a", "one", "first", "single"], correctAnswer: 0, explanation: "'Once a month' is correct frequency.", type: "grammar" },
+    { question: "I wash my car ___ other week.", options: ["every", "each", "all", "some"], correctAnswer: 0, explanation: "'Every other week' means once in two weeks.", type: "vocabulary" },
+    { question: "How ___ do they go on holiday?", options: ["often", "time", "many", "soon"], correctAnswer: 0, explanation: "'How often' for frequency.", type: "grammar" },
+    { question: "She checks her messages ___ few minutes.", options: ["every", "all", "each", "per"], correctAnswer: 0, explanation: "'Every' for intervals.", type: "vocabulary" },
+    { question: "He plays basketball ___ a week.", options: ["three times", "third", "triple", "thrice"], correctAnswer: 0, explanation: "Standard frequency expression.", type: "grammar" },
+    { question: "I drink a glass of water ___ morning.", options: ["every", "all", "each", "the"], correctAnswer: 0, explanation: "Regular habit.", type: "vocabulary" },
+    { question: "We have a team meeting ___ Friday.", options: ["every", "all", "each", "on"], correctAnswer: 0, explanation: "'Every Friday' shows repetition.", type: "grammar" },
+    { question: "How ___ do your parents visit you?", options: ["often", "many", "much", "long"], correctAnswer: 0, explanation: "Frequency question.", type: "vocabulary" },
+    { question: "She buys fresh fruit ___ day.", options: ["every", "all", "each", "the"], correctAnswer: 0, explanation: "Daily routine.", type: "grammar" },
+    { question: "He calls his grandmother ___ Sunday.", options: ["every", "all", "each", "on"], correctAnswer: 0, explanation: "Routine timing.", type: "vocabulary" },
+    { question: "I go for a jog ___ night.", options: ["every", "all", "each", "the"], correctAnswer: 0, explanation: "Nightly habit.", type: "grammar" },
+    { question: "They have dinner together ___ 8 PM.", options: ["at", "on", "in", "every"], correctAnswer: 0, explanation: "'At' for specific time.", type: "vocabulary" },
+    { question: "She works on her project ___ 4 hours.", options: ["for", "at", "in", "during"], correctAnswer: 0, explanation: "'For' for duration.", type: "grammar" },
+    { question: "He wakes up ___ early on Mondays.", options: ["very", "too", "every", "all"], correctAnswer: 0, explanation: "Intensity of habit.", type: "vocabulary" },
+    { question: "I take the subway ___ the office.", options: ["to", "at", "in", "for"], correctAnswer: 0, explanation: "Direction of habit.", type: "grammar" },
+    { question: "We go grocery shopping ___ Saturday.", options: ["every", "all", "each", "on"], correctAnswer: 0, explanation: "Repeat schedule.", type: "vocabulary" }
+];
+const u155q3: EnglishQuestion[] = [
+    { question: "First, I wake up. ___, I stretch.", options: ["Then", "After", "Before", "When"], correctAnswer: 0, explanation: "'Then' shows sequence.", type: "grammar" },
+    { question: "After ___ the dog, I have breakfast.", options: ["walking", "walk", "walked", "to walk"], correctAnswer: 0, explanation: "'After' is followed by -ing.", type: "grammar" },
+    { question: "Before ___ home, I check my email.", options: ["leaving", "leave", "left", "to leave"], correctAnswer: 0, explanation: "'Before' is followed by -ing.", type: "grammar" },
+    { question: "I have breakfast ___ I leave for work.", options: ["before", "after", "then", "finally"], correctAnswer: 0, explanation: "Action sequence.", type: "vocabulary" },
+    { question: "I arrive at work ___ I have breakfast.", options: ["after", "before", "then", "finally"], correctAnswer: 0, explanation: "Inverse sequence.", type: "vocabulary" },
+    { question: "___, I go to bed at 11 PM.", options: ["Finally", "Then", "First", "After"], correctAnswer: 0, explanation: "'Finally' ends the day's sequence.", type: "grammar" },
+    { question: "I brush my hair ___ I get dressed.", options: ["after", "before", "then", "finally"], correctAnswer: 0, explanation: "Daily order.", type: "vocabulary" },
+    { question: "I wash my face ___ waking up.", options: ["after", "before", "then", "finally"], correctAnswer: 0, explanation: "Immediate sequence.", type: "grammar" },
+    { question: "I check my schedule ___ the morning.", options: ["during", "at", "on", "while"], correctAnswer: 0, explanation: "'During' for a time period.", type: "vocabulary" },
+    { question: "I work shifts ___ 8 AM to 4 PM.", options: ["from", "at", "in", "on"], correctAnswer: 0, explanation: "'From... to...' for time range.", type: "grammar" },
+    { question: "I take my lunch break ___ noon.", options: ["at", "on", "in", "during"], correctAnswer: 0, explanation: "'At' for precise time.", type: "vocabulary" },
+    { question: "I start relaxing ___ I get home.", options: ["when", "during", "while", "before"], correctAnswer: 0, explanation: "'When' for time trigger.", type: "grammar" },
+    { question: "I unwind ___ reading a book.", options: ["by", "at", "in", "on"], correctAnswer: 0, explanation: "'By' shows manner.", type: "vocabulary" },
+    { question: "I listen to music ___ I cook dinner.", options: ["while", "during", "when", "then"], correctAnswer: 0, explanation: "'While' for simultaneous actions.", type: "grammar" },
+    { question: "I sleep ___ roughly 7 hours.", options: ["for", "at", "in", "during"], correctAnswer: 0, explanation: "'For' for duration.", type: "vocabulary" },
+    { question: "I wake up ___ 6:30 AM.", options: ["at", "on", "in", "during"], correctAnswer: 0, explanation: "'At' for time.", type: "grammar" },
+    { question: "I reach the office ___ 9 o'clock.", options: ["at", "on", "in", "during"], correctAnswer: 0, explanation: "Common arrival time.", type: "vocabulary" },
+    { question: "I leave the building ___ 5:30.", options: ["at", "on", "in", "during"], correctAnswer: 0, explanation: "Common departure time.", type: "grammar" },
+    { question: "I am home ___ 6:30 PM.", options: ["at", "on", "in", "during"], correctAnswer: 0, explanation: "Evening arrival.", type: "vocabulary" },
+    { question: "I go to sleep ___ about 11.", options: ["at", "on", "in", "during"], correctAnswer: 0, explanation: "Night routine.", type: "grammar" }
+];
+const u155q4: EnglishQuestion[] = [
+    { question: "A: What is your morning routine? B: I ___ wake up at 7.", options: ["usually", "never", "already", "yet"], correctAnswer: 0, explanation: "Expresses a regular habit.", type: "grammar" },
+    { question: "A: Do you drink tea? B: Yes, ___.", options: ["every afternoon", "every time", "all time", "always time"], correctAnswer: 0, explanation: "Regular frequency.", type: "vocabulary" },
+    { question: "A: How often do you tidy up? B: ___.", options: ["Once a week", "One time week", "First week", "Once time"], correctAnswer: 0, explanation: "Proper frequency expression.", type: "grammar" },
+    { question: "A: Do you exercise? B: No, I ___ gym.", options: ["hardly ever go to", "hardly never go", "never hardly go", "ever hardly"], correctAnswer: 0, explanation: "'Hardly ever' means almost never.", type: "vocabulary" },
+    { question: "A: What do you do after work? B: I ___ meet friends.", options: ["often", "already", "yet", "now"], correctAnswer: 0, explanation: "Routine behavior.", type: "grammar" },
+    { question: "A: Do you eat out? B: No, we ___ cook at home.", options: ["always", "never", "sometimes", "usually"], correctAnswer: 0, explanation: "'Always' if they never eat out.", type: "vocabulary" },
+    { question: "A: Are you busy? B: Yes, I study ___.", options: ["every single day", "all days", "each days", "the days"], correctAnswer: 0, explanation: "Daily schedule.", type: "grammar" },
+    { question: "A: When do you go out? B: ___ Friday nights.", options: ["On", "In", "At", "For"], correctAnswer: 0, explanation: "'On' for days.", type: "vocabulary" },
+    { question: "A: Do you sleep enough? B: Yes, I ___ get 8 hours.", options: ["always", "already", "yet", "ever"], correctAnswer: 0, explanation: "Consistency of habit.", type: "grammar" },
+    { question: "A: Do you travel? B: ___, once in a while.", options: ["Not really", "Not ever", "Never", "Always"], correctAnswer: 0, explanation: "Indicates low frequency politely.", type: "vocabulary" },
+    { question: "A: What time is your classes? B: They're ___ morning.", options: ["every", "all", "each", "at"], correctAnswer: 0, explanation: "Recurring time.", type: "grammar" },
+    { question: "A: Do you like water? B: Yes, I drink it ___.", options: ["constantly", "day", "all day", "every time"], correctAnswer: 0, explanation: "Frequency adverb.", type: "vocabulary" },
+    { question: "A: Where do you study? B: ___ at the library.", options: ["Usually", "Already", "Yet", "Now"], correctAnswer: 0, explanation: "Typical location.", type: "grammar" },
+    { question: "A: How do you go to school? B: I ___ take the bus.", options: ["always", "already", "yet", "ever"], correctAnswer: 0, explanation: "Method of transport habit.", type: "vocabulary" },
+    { question: "A: Do you watch news? B: ___ in the evening.", options: ["Sometimes", "Already", "Yet", "Ever"], correctAnswer: 0, explanation: "Occasional habit.", type: "grammar" },
+    { question: "A: What's your daily hobby? B: I ___ play guitar.", options: ["often", "already", "yet", "ever"], correctAnswer: 0, explanation: "Regular hobby.", type: "vocabulary" },
+    { question: "A: Are you on time? B: Yes, I'm ___ punctual.", options: ["usually", "already", "yet", "ever"], correctAnswer: 0, explanation: "Typical punctuality.", type: "grammar" },
+    { question: "A: Do you workout? B: Yes, I ___.", options: ["sometimes do", "do always", "never do", "already do"], correctAnswer: 0, explanation: "Natural response.", type: "vocabulary" },
+    { question: "A: When is your day off? B: It is ___ Saturday.", options: ["every", "all", "each", "the"], correctAnswer: 1, explanation: "'All Saturday' or 'Every Saturday'.", type: "grammar" },
+    { question: "A: Do you follow a plan? B: Yes, I ___ to it.", options: ["stick", "have", "want", "do"], correctAnswer: 0, explanation: "Preference for habit.", type: "vocabulary" }
+];
+
+// Unit 156: Appearance - FULL 80 QUESTIONS
+const u156q1: EnglishQuestion[] = [
+    { question: "He is very ___. He is over 190 cm tall.", options: ["tall", "short", "slim", "fat"], correctAnswer: 0, explanation: "'Tall' describes high height.", type: "vocabulary" },
+    { question: "She has long ___ hair.", options: ["blonde", "tall", "short", "fat"], correctAnswer: 0, explanation: "'Blonde' is a hair color.", type: "vocabulary" },
+    { question: "He is ___; he doesn't have much hair left.", options: ["bald", "blonde", "hairy", "curly"], correctAnswer: 0, explanation: "'Bald' means no hair.", type: "vocabulary" },
+    { question: "She is very ___. She looks like a professional model.", options: ["slim", "fat", "short", "heavy"], correctAnswer: 0, explanation: "'Slim' means thin in a positive way.", type: "vocabulary" },
+    { question: "He has a thick ___.", options: ["beard", "hair", "eye", "nose"], correctAnswer: 0, explanation: "A beard grows on the face.", type: "vocabulary" },
+    { question: "Her eyes are a beautiful ___.", options: ["blue", "blonde", "tall", "short"], correctAnswer: 0, explanation: "Blue is a common eye color.", type: "vocabulary" },
+    { question: "He has very ___ hair.", options: ["curly", "blonde", "tall", "short"], correctAnswer: 0, explanation: "'Curly' describes hair shape.", type: "vocabulary" },
+    { question: "She is in her ___ thirties.", options: ["early", "tall", "short", "blonde"], correctAnswer: 0, explanation: "Describes age range.", type: "vocabulary" },
+    { question: "He is quite ___. He needs to lose some weight.", options: ["heavy", "slim", "tall", "short"], correctAnswer: 0, explanation: "'Heavy' describes body weight.", type: "vocabulary" },
+    { question: "She has long ___ hair.", options: ["straight", "blonde", "tall", "short"], correctAnswer: 0, explanation: "'Straight' is a hair type.", type: "vocabulary" },
+    { question: "He has a small ___.", options: ["moustache", "hair", "eye", "nose"], correctAnswer: 0, explanation: "Moustache grows above the lip.", type: "vocabulary" },
+    { question: "She is quite ___. She is only 155 cm.", options: ["short", "tall", "slim", "fat"], correctAnswer: 0, explanation: "'Short' describes low height.", type: "vocabulary" },
+    { question: "He looks very ___ in his new suit.", options: ["handsome", "pretty", "short", "blonde"], correctAnswer: 0, explanation: "'Handsome' for men.", type: "vocabulary" },
+    { question: "She looks absolutely ___ in that dress.", options: ["pretty", "handsome", "short", "blonde"], correctAnswer: 0, explanation: "'Pretty' or 'beautiful' for women.", type: "vocabulary" },
+    { question: "He has very ___ skin.", options: ["fair", "tall", "short", "blonde"], correctAnswer: 0, explanation: "Fair describes skin tone.", type: "vocabulary" },
+    { question: "Her hair is extremely ___.", options: ["long", "blonde", "tall", "short"], correctAnswer: 0, explanation: "Describes hair length.", type: "vocabulary" },
+    { question: "His hair is cut very ___.", options: ["short", "blonde", "tall", "long"], correctAnswer: 0, explanation: "Common male hair length.", type: "vocabulary" },
+    { question: "She wears large ___.", options: ["glasses", "hair", "eye", "nose"], correctAnswer: 0, explanation: "Glasses help vision.", type: "vocabulary" },
+    { question: "He has piercing ___ eyes.", options: ["brown", "blonde", "tall", "short"], correctAnswer: 0, explanation: "Brown is a common eye color.", type: "vocabulary" },
+    { question: "She has a very warm ___.", options: ["smile", "blonde", "tall", "short"], correctAnswer: 0, explanation: "Positive description.", type: "vocabulary" }
+];
+const u156q2: EnglishQuestion[] = [
+    { question: "What ___ he look like?", options: ["does", "is", "do", "has"], correctAnswer: 0, explanation: "'What does he look like?' asks for description.", type: "grammar" },
+    { question: "He ___ large green eyes.", options: ["has", "is", "does", "got"], correctAnswer: 0, explanation: "'Has' or 'Has got' for features.", type: "grammar" },
+    { question: "She ___ relatively tall and slim.", options: ["is", "has", "does", "looks like"], correctAnswer: 0, explanation: "'Is' for general description.", type: "grammar" },
+    { question: "He ___ like his famous grandfather.", options: ["looks", "is", "has", "does"], correctAnswer: 0, explanation: "'Looks like' means similar appearance.", type: "vocabulary" },
+    { question: "They ___ both very attractive people.", options: ["are", "have", "do", "is"], correctAnswer: 0, explanation: "Plural description.", type: "grammar" },
+    { question: "She ___ got wavy golden hair.", options: ["has", "is", "does", "not"], correctAnswer: 0, explanation: "'Has got' structure.", type: "grammar" },
+    { question: "He ___ a very thick beard.", options: ["has", "is", "does", "got"], correctAnswer: 0, explanation: "Possession of features.", type: "vocabulary" },
+    { question: "What ___ she like? (Personality)", options: ["is", "does", "has", "do"], correctAnswer: 0, explanation: "'What is she like?' asks for personality.", type: "grammar" },
+    { question: "He ___ very young for his age.", options: ["looks", "has", "does", "is"], correctAnswer: 0, explanation: "'Looks' describes impression.", type: "vocabulary" },
+    { question: "She ___ reading glasses.", options: ["wears", "has", "is", "does"], correctAnswer: 0, explanation: "'Wears' for items on body.", type: "grammar" },
+    { question: "They ___ middle-aged adults.", options: ["are", "look", "is", "has"], correctAnswer: 0, explanation: "Age category.", type: "vocabulary" },
+    { question: "He ___ an old hat.", options: ["is wearing", "has", "does", "is"], correctAnswer: 0, explanation: "Current state of clothing.", type: "grammar" },
+    { question: "She ___ extremely fit.", options: ["is", "has", "does", "looks like"], correctAnswer: 0, explanation: "Physical condition.", type: "vocabulary" },
+    { question: "He ___ a very tall man.", options: ["is", "has", "does", "looks like"], correctAnswer: 0, explanation: "General definition.", type: "grammar" },
+    { question: "What color ___ your brother's hair?", options: ["is", "has", "does", "are"], correctAnswer: 0, explanation: "'Hair' is uncountable.", type: "vocabulary" },
+    { question: "She ___ her father's chin.", options: ["has", "is", "does", "looks like"], correctAnswer: 0, explanation: "Inherited features.", type: "grammar" },
+    { question: "He ___ quite elderly now.", options: ["is", "has", "does", "looks like"], correctAnswer: 0, explanation: "Age progression.", type: "vocabulary" },
+    { question: "They ___ a very elegant couple.", options: ["are", "is", "has", "do"], correctAnswer: 0, explanation: "Plural description.", type: "grammar" },
+    { question: "She ___ an upturned nose.", options: ["has", "is", "does", "got"], correctAnswer: 0, explanation: "Facial feature.", type: "vocabulary" },
+    { question: "He ___ exceptionally strong.", options: ["looks", "is", "has", "does"], correctAnswer: 0, explanation: "Physical strength description.", type: "grammar" }
+];
+const u156q3: EnglishQuestion[] = [
+    { question: "She is in her ___ twenties.", options: ["early", "young", "first", "start"], correctAnswer: 0, explanation: "'Early twenties' means age 20-23.", type: "vocabulary" },
+    { question: "He is in his ___ thirties.", options: ["late", "old", "end", "back"], correctAnswer: 0, explanation: "'Late thirties' means age 37-39.", type: "vocabulary" },
+    { question: "She is about ___ height for a girl.", options: ["average", "middle", "half", "center"], correctAnswer: 0, explanation: "'Average height' is standard.", type: "vocabulary" },
+    { question: "He is of ___ build.", options: ["athletic", "medium", "normal", "thin"], correctAnswer: 0, explanation: "'Athletic build' describes fit body.", type: "vocabulary" },
+    { question: "She is ___ her late teens.", options: ["in", "at", "on", "from"], correctAnswer: 0, explanation: "'In her teens' means age 13-19.", type: "grammar" },
+    { question: "He is a very ___ person.", options: ["well-built", "good-built", "strong-built", "big-built"], correctAnswer: 0, explanation: "'Well-built' means muscular.", type: "vocabulary" },
+    { question: "She is slightly ___.", options: ["overweight", "fatty", "bigly", "heavier"], correctAnswer: 0, explanation: "'Overweight' is a polite term.", type: "grammar" },
+    { question: "He is ___ attractive.", options: ["highly", "already", "already", "yet"], correctAnswer: 0, explanation: "Intensifier.", type: "vocabulary" },
+    { question: "She has beautiful ___ hair.", options: ["shoulder-length", "arm-length", "leg-length", "neck-length"], correctAnswer: 0, explanation: "Describes hair length.", type: "vocabulary" },
+    { question: "He is ___ bald on top.", options: ["completely", "already", "yet", "now"], correctAnswer: 0, explanation: "Degree of hair loss.", type: "grammar" },
+    { question: "She has deeply ___ skin.", options: ["tanned", "browned", "colored", "darked"], correctAnswer: 0, explanation: "'Tanned' from the sun.", type: "vocabulary" },
+    { question: "He is a ___ young man.", options: ["fair-haired", "white-haired", "clear-haired", "light-haired"], correctAnswer: 0, explanation: "'Fair-haired' means blonde/light.", type: "vocabulary" },
+    { question: "She is always quite ___.", options: ["elegant", "strong", "blonde", "short"], correctAnswer: 0, explanation: "Describes style/grace.", type: "vocabulary" },
+    { question: "He is ___ 60 years old.", options: ["over", "above", "upper", "more"], correctAnswer: 0, explanation: "'Over' means older than.", type: "grammar" },
+    { question: "She is ___ 18, so she's a minor.", options: ["under", "below", "down", "less"], correctAnswer: 0, explanation: "'Under' means younger than.", type: "grammar" },
+    { question: "He is a typical ___ man.", options: ["middle-aged", "center-aged", "half-aged", "younger-aged"], correctAnswer: 0, explanation: "Age 40-60 roughly.", type: "vocabulary" },
+    { question: "She is currently ___ her early forties.", options: ["in", "at", "on", "from"], correctAnswer: 0, explanation: "Correct preposition for age range.", type: "grammar" },
+    { question: "He is ___ handsome in that uniform.", options: ["stunningly", "already", "yet", "ever"], correctAnswer: 0, explanation: "Strong intensifier.", type: "vocabulary" },
+    { question: "She is ___ gorgeous.", options: ["absolutely", "already", "yet", "ever"], correctAnswer: 0, explanation: "Strong intensifier.", type: "grammar" },
+    { question: "He has an oval-shaped ___.", options: ["face", "circle", "square", "rectangle"], correctAnswer: 0, explanation: "Face shape description.", type: "vocabulary" }
+];
+const u156q4: EnglishQuestion[] = [
+    { question: "A: What does she look like? B: She ___ very slim.", options: ["is", "has", "looks like", "does"], correctAnswer: 0, explanation: "Simple physical state.", type: "grammar" },
+    { question: "A: Does he have a beard? B: No, he ___ clean-shaven today.", options: ["is", "has", "looks like", "does"], correctAnswer: 0, explanation: "'Clean-shaven' is a state.", type: "vocabulary" },
+    { question: "A: Who is that man? B: He ___ my old teacher.", options: ["looks like", "is", "has", "does"], correctAnswer: 1, explanation: "Identification.", type: "grammar" },
+    { question: "A: Is she young? B: Yes, she is only ___ her teens.", options: ["in", "at", "on", "from"], correctAnswer: 0, explanation: "Age range preposition.", type: "vocabulary" },
+    { question: "A: What color is his hair? B: It is turning ___.", options: ["grey", "old", "short", "long"], correctAnswer: 0, explanation: "Grey is a hair color.", type: "grammar" },
+    { question: "A: Do they look identical? B: Yes, they are ___.", options: ["twins", "double", "pairs", "twice"], correctAnswer: 0, explanation: "Same appearance siblings.", type: "vocabulary" },
+    { question: "A: Is he short? B: No, he's actually quite ___.", options: ["tall", "slim", "blonde", "young"], correctAnswer: 0, explanation: "Opposite of short.", type: "grammar" },
+    { question: "A: Does she wear glasses? B: Yes, he wears them ___.", options: ["constantly", "already", "yet", "ever"], correctAnswer: 0, explanation: "Frequency of accessory.", type: "vocabulary" },
+    { question: "A: Is he muscular? B: Yes, he is very ___.", options: ["well-built", "tall", "blonde", "slim"], correctAnswer: 0, explanation: "Synonym for strong physique.", type: "grammar" },
+    { question: "A: Is she blonde? B: No, she has jet-black ___.", options: ["hair", "tall", "slim", "long"], correctAnswer: 0, explanation: "Contrast to blonde.", type: "vocabulary" },
+    { question: "A: How old is he? B: He ___ around thirty.", options: ["looks", "is", "has", "does"], correctAnswer: 0, explanation: "Estimating age by appearance.", type: "grammar" },
+    { question: "A: What's your father like? B: He ___ very funny.", options: ["is", "looks like", "has", "does"], correctAnswer: 0, explanation: "Personality description.", type: "vocabulary" },
+    { question: "A: Does he look like you? B: No, he ___ a different face shape.", options: ["has", "is", "do", "gotten"], correctAnswer: 0, explanation: "Different features.", type: "grammar" },
+    { question: "A: Is she tall? B: She's about ___ height for her class.", options: ["average", "middle", "center", "normal"], correctAnswer: 0, explanation: "Standard height descriptor.", type: "vocabulary" },
+    { question: "A: Do I look okay? B: Yes, you look ___ tonight.", options: ["fantastic", "well", "goodly", "best"], correctAnswer: 0, explanation: "Compliment.", type: "grammar" },
+    { question: "A: Is he bald? B: No, he has a full ___ of hair.", options: ["head", "many", "much", "few"], correctAnswer: 0, explanation: "Contrast to bald.", type: "vocabulary" },
+    { question: "A: Is she slim? B: Yes, she is very ___.", options: ["thin", "looks", "is", "has"], correctAnswer: 0, explanation: "State of appearance.", type: "vocabulary" },
+    { question: "A: Who is that tall man over there? B: ___ our new boss.", options: ["That's", "It's", "He's", "They're"], correctAnswer: 0, explanation: "Pronoun selection.", type: "grammar" },
+    { question: "A: Does he wear a hat? B: Only ___ the winter.", options: ["in", "at", "on", "during"], correctAnswer: 0, explanation: "Context of clothing.", type: "vocabulary" },
+    { question: "A: You look great! B: Thanks, I ___.", options: ["do", "am", "have", "look"], correctAnswer: 1, explanation: "State confirmation.", type: "grammar" }
+];
+
+// Unit 157: Directions & Places - FULL 80 QUESTIONS
+const u157q1: EnglishQuestion[] = [
+    { question: "Go ___ on this street until the bank.", options: ["straight", "right", "left", "back"], correctAnswer: 0, explanation: "'Go straight' means continue forward.", type: "vocabulary" },
+    { question: "Turn ___ at the corner.", options: ["right", "straight", "over", "under"], correctAnswer: 0, explanation: "'Turn right/left' is a directional change.", type: "vocabulary" },
+    { question: "The hospital is ___ the park.", options: ["next to", "straight", "right", "left"], correctAnswer: 0, explanation: "'Next to' describes proximity.", type: "vocabulary" },
+    { question: "Walk ___ the bridge to cross the river.", options: ["across", "through", "in", "at"], correctAnswer: 0, explanation: "'Across' for bridges.", type: "vocabulary" },
+    { question: "The park is ___ the bus station.", options: ["opposite", "next", "between", "on"], correctAnswer: 0, explanation: "'Opposite' means facing each other.", type: "vocabulary" },
+    { question: "Excuse me, how can I find the ___?", options: ["museum", "straight", "right", "left"], correctAnswer: 0, explanation: "Asking for a place.", type: "vocabulary" },
+    { question: "It's on the ___ street after the lights.", options: ["first", "one", "once", "single"], correctAnswer: 0, explanation: "Ordinal number for directions.", type: "grammar" },
+    { question: "Go ___ the roundabout onto Main Street.", options: ["past", "through", "at", "on"], correctAnswer: 0, explanation: "'Go past' means don't stop there.", type: "vocabulary" },
+    { question: "The cinema is located ___ the shop and the bank.", options: ["between", "next to", "opposite", "among"], correctAnswer: 0, explanation: "'Between' for two objects.", type: "grammar" },
+    { question: "Turn left ___ the next corner.", options: ["at", "on", "in", "to"], correctAnswer: 0, explanation: "'At the corner' is correct.", type: "grammar" },
+    { question: "The library will be on your ___.", options: ["right", "straight", "forward", "back"], correctAnswer: 0, explanation: "Showing relative side.", type: "vocabulary" },
+    { question: "How do I ___ to the train station?", options: ["get", "go", "move", "walk"], correctAnswer: 0, explanation: "'How do I get to...' is standard.", type: "grammar" },
+    { question: "Is there a pharmacy ___ here?", options: ["near", "next", "about", "close"], correctAnswer: 0, explanation: "'Near here' is correct.", type: "grammar" },
+    { question: "Go ___ of the main entrance.", options: ["out", "in", "at", "to"], correctAnswer: 0, explanation: "'Go out of' for exiting.", type: "vocabulary" },
+    { question: "The hotel is at the very ___ of the road.", options: ["end", "back", "first", "stop"], correctAnswer: 0, explanation: "End of the road.", type: "vocabulary" },
+    { question: "Walk ___ the city center.", options: ["towards", "at", "in", "on"], correctAnswer: 0, explanation: "'Towards' shows direction.", type: "vocabulary" },
+    { question: "The airport is ___ far from here.", options: ["not", "no", "never", "nothing"], correctAnswer: 0, explanation: "Negating distance.", type: "grammar" },
+    { question: "It is only 5 minutes away ___ foot.", options: ["on", "by", "with", "at"], correctAnswer: 0, explanation: "'On foot' means walking.", type: "grammar" },
+    { question: "You can reach there ___ bus.", options: ["by", "on", "with", "at"], correctAnswer: 0, explanation: "'By bus' for transport method.", type: "grammar" },
+    { question: "Keep ___ until you see a tall building.", options: ["going", "go", "went", "gone"], correctAnswer: 0, explanation: "'Keep -ing' for continuity.", type: "grammar" }
+];
+const u157q2: EnglishQuestion[] = [
+    { question: "Is the bank very ___ from the university?", options: ["far", "near", "next", "opposite"], correctAnswer: 0, explanation: "'Far from' is correct.", type: "grammar" },
+    { question: "The cafe is ___ the corner of this block.", options: ["on", "in", "at", "by"], correctAnswer: 0, explanation: "'On the corner' is common.", type: "grammar" },
+    { question: "You must ___ the road carefully.", options: ["cross", "walk", "go", "move"], correctAnswer: 0, explanation: "'Cross the road' for safety.", type: "vocabulary" },
+    { question: "The stadium is located ___ the outskirts.", options: ["on", "in", "at", "by"], correctAnswer: 0, explanation: "'On the outskirts' is correct.", type: "grammar" },
+    { question: "There is a car park ___ of the building.", options: ["in front", "front", "before", "next"], correctAnswer: 0, explanation: "'In front of' is the full phrase.", type: "vocabulary" },
+    { question: "The mountains are ___ the lake.", options: ["behind", "back", "after", "next"], correctAnswer: 0, explanation: "'Behind' shows position.", type: "vocabulary" },
+    { question: "The bird flew ___ the house.", options: ["over", "above", "up", "on"], correctAnswer: 0, explanation: "'Over' for flight movement.", type: "grammar" },
+    { question: "The tunnel goes ___ ground.", options: ["under", "below", "down", "in"], correctAnswer: 0, explanation: "'Underground' is correct.", type: "vocabulary" },
+    { question: "The shoes are ___ the bed.", options: ["under", "below", "down", "in"], correctAnswer: 0, explanation: "Location below surface.", type: "grammar" },
+    { question: "The keys are hiding ___ the cushion.", options: ["behind", "back", "at", "on"], correctAnswer: 0, explanation: "Position of concealment.", type: "vocabulary" },
+    { question: "Walk ___ the river until the end.", options: ["along", "across", "through", "past"], correctAnswer: 0, explanation: "'Along' for long paths.", type: "grammar" },
+    { question: "The shop is right ___ to the library.", options: ["next", "near", "close", "opposite"], correctAnswer: 0, explanation: "'Next to' is fixed.", type: "vocabulary" },
+    { question: "My house is ___ to a large park.", options: ["close", "near", "next", "beside"], correctAnswer: 0, explanation: "'Close to' is correct.", type: "grammar" },
+    { question: "The money is ___ the envelope.", options: ["inside", "on", "at", "to"], correctAnswer: 0, explanation: "Location within.", type: "vocabulary" },
+    { question: "Wait for me ___ the entrance.", options: ["at", "on", "in", "to"], correctAnswer: 0, explanation: "'At' for specific locations.", type: "grammar" },
+    { question: "Please sit ___ your friend.", options: ["beside", "next", "close", "along"], correctAnswer: 0, explanation: "'Beside' means next to.", type: "vocabulary" },
+    { question: "The plane is flying ___ the clouds.", options: ["above", "up", "on", "at"], correctAnswer: 0, explanation: "Position higher than.", type: "grammar" },
+    { question: "The desk is ___ the corner of the office.", options: ["in", "at", "on", "by"], correctAnswer: 0, explanation: "'In the corner' for inside space.", type: "vocabulary" },
+    { question: "She is leaning ___ the wall.", options: ["against", "at", "on", "in"], correctAnswer: 0, explanation: "'Against' for contact support.", type: "grammar" },
+    { question: "The poster is hanging ___ the door.", options: ["on", "in", "at", "to"], correctAnswer: 0, explanation: "Surface location.", type: "vocabulary" }
+];
+const u157q3: EnglishQuestion[] = [
+    { question: "A: How do I get to the center? B: Go straight ___.", options: ["ahead", "in", "at", "to"], correctAnswer: 0, explanation: "'Go straight ahead' is correct.", type: "grammar" },
+    { question: "A: Is it far? B: No, it's just a short ___ away.", options: ["walk", "walking", "walked", "to walk"], correctAnswer: 0, explanation: "'A short walk' is a noun phrase.", type: "vocabulary" },
+    { question: "A: Where's the ATM? B: It's just ___ the corner.", options: ["round", "at", "on", "in"], correctAnswer: 0, explanation: "'Round the corner' is correct.", type: "grammar" },
+    { question: "A: I can't find my way. B: Are you ___?", options: ["lost", "losing", "lose", "loser"], correctAnswer: 0, explanation: "'Are you lost?' is the question.", type: "vocabulary" },
+    { question: "A: Where is the park? B: It's ___ the end of this road.", options: ["at", "on", "in", "down"], correctAnswer: 0, explanation: "'At the end' for specific spots.", type: "grammar" },
+    { question: "A: Is there a bus? B: Yes, but you can go ___ foot.", options: ["on", "by", "with", "at"], correctAnswer: 0, explanation: "Method of walking.", type: "vocabulary" },
+    { question: "A: Which turning do I take? B: Take the first ___ on the right.", options: ["turning", "turn", "turned", "to turn"], correctAnswer: 1, explanation: "'Take the first turn' or 'Take the first turning'.", type: "grammar" },
+    { question: "A: Where is the bank? B: It's ___ the city center.", options: ["in", "at", "on", "to"], correctAnswer: 0, explanation: "Location within a large area.", type: "vocabulary" },
+    { question: "A: Is it near? B: Yes, it is right ___ the station.", options: ["next to", "at", "on", "to"], correctAnswer: 0, explanation: "Proximity.", type: "grammar" },
+    { question: "A: How far is the shop? B: It's 100 meters ___ here.", options: ["from", "at", "on", "in"], correctAnswer: 0, explanation: "Reference point.", type: "vocabulary" },
+    { question: "A: Is it on this block? B: No, it's ___ the street.", options: ["across", "in", "at", "to"], correctAnswer: 0, explanation: "On the other side.", type: "grammar" },
+    { question: "A: Which floor is it on? B: It is on the ___ floor.", options: ["top", "three", "triple", "thrice"], correctAnswer: 0, explanation: "Highest level.", type: "grammar" },
+    { question: "A: Can we walk? B: No, the airport is ___.", options: ["quite far", "far quite", "quite near", "near quite"], correctAnswer: 0, explanation: "Magnitude of distance.", type: "vocabulary" },
+    { question: "A: Where should we meet? B: ___ the fountain.", options: ["By", "On", "In", "To"], correctAnswer: 0, explanation: "'By' for nearby point.", type: "grammar" },
+    { question: "A: Is it on the left? B: No, it's on the ___ hand side.", options: ["right", "other", "every", "all"], correctAnswer: 0, explanation: "'Right-hand side'.", type: "vocabulary" },
+    { question: "A: Can I cross here? B: Yes, use the ___.", options: ["crossing", "cross", "crossed", "crosser"], correctAnswer: 0, explanation: "'The crossing' is the area.", type: "grammar" },
+    { question: "A: How do I enter? B: Go ___ the double doors.", options: ["through", "at", "on", "to"], correctAnswer: 0, explanation: "Passing between.", type: "vocabulary" },
+    { question: "A: Is it close? B: Yes, it is ___ walking distance.", options: ["within", "at", "on", "in"], correctAnswer: 0, explanation: "Fixed idiom.", type: "grammar" },
+    { question: "A: Where can I park? B: There is a ___ nearby.", options: ["car park", "park", "parking", "parked"], correctAnswer: 0, explanation: "Area for cars.", type: "vocabulary" },
+    { question: "A: Where's the lift? B: It's ___ the back.", options: ["at", "on", "in", "to"], correctAnswer: 0, explanation: "Specific part location.", type: "grammar" }
+];
+const u157q4: EnglishQuestion[] = [
+    { question: "Go straight ___ until you reach the sea.", options: ["on", "back", "right", "left"], correctAnswer: 0, explanation: "Continuing forward.", type: "vocabulary" },
+    { question: "The library will be ___ your right.", options: ["on", "at", "in", "to"], correctAnswer: 0, explanation: "Directional relative location.", type: "grammar" },
+    { question: "The university is ___ the west of the city.", options: ["in", "at", "on", "by"], correctAnswer: 0, explanation: "Directional areas.", type: "grammar" },
+    { question: "Walk ___ the tunnel to get to the canal.", options: ["through", "at", "on", "in"], correctAnswer: 0, explanation: "Passing inside.", type: "vocabulary" },
+    { question: "The cinema is ___ around the corner.", options: ["just", "after", "before", "next"], correctAnswer: 0, explanation: "Very close proximity.", type: "grammar" },
+    { question: "Follow the signs ___ the museum.", options: ["to", "at", "on", "in"], correctAnswer: 0, explanation: "Direction indicator.", type: "vocabulary" },
+    { question: "Keep on the right-hand ___ of the path.", options: ["side", "part", "way", "place"], correctAnswer: 0, explanation: "Correct side.", type: "grammar" },
+    { question: "There is a path ___ the woods.", options: ["through", "across", "on", "at"], correctAnswer: 0, explanation: "Moving inside a forest.", type: "vocabulary" },
+    { question: "The manager's office is ___ the first floor.", options: ["on", "at", "in", "to"], correctAnswer: 0, explanation: "Floor level.", type: "grammar" },
+    { question: "He lives ___ a large city.", options: ["in", "at", "on", "to"], correctAnswer: 0, explanation: "In a city.", type: "vocabulary" },
+    { question: "The car park is 5 km ___.", options: ["away", "far", "long", "distance"], correctAnswer: 0, explanation: "Magnitude of distance.", type: "grammar" },
+    { question: "Take the stairs ___ the second floor.", options: ["to", "at", "on", "in"], correctAnswer: 0, explanation: "Destination levels.", type: "vocabulary" },
+    { question: "There is a cafe ___ the station.", options: ["inside", "through", "in", "at"], correctAnswer: 0, explanation: "Contained within.", type: "grammar" },
+    { question: "We are meeting ___ the entrance gate.", options: ["at", "in", "on", "to"], correctAnswer: 0, explanation: "Precise meeting point.", type: "vocabulary" },
+    { question: "The shops are ___ easy reach.", options: ["within", "in", "at", "on"], correctAnswer: 0, explanation: "Fixed expression for proximity.", type: "grammar" },
+    { question: "Get out of the car ___ the corner.", options: ["at", "on", "in", "to"], correctAnswer: 0, explanation: "'At the corner'.", type: "vocabulary" },
+    { question: "Walk past the statue and turn ___ left.", options: ["immediately", "usually", "already", "yet"], correctAnswer: 0, explanation: "Clear instructions.", type: "grammar" },
+    { question: "The main door is ___ the side.", options: ["at", "on", "in", "to"], correctAnswer: 0, explanation: "Position on an object.", type: "vocabulary" },
+    { question: "Look at the map ___ the wall.", options: ["on", "in", "at", "to"], correctAnswer: 0, explanation: "Visible on surface.", type: "grammar" },
+    { question: "I'll wait for you ___ the bus stop.", options: ["at", "on", "in", "to"], correctAnswer: 0, explanation: "Standard point preposition.", type: "vocabulary" }
+];
+
+
+// Unit 159: Present Perfect 2 - FULL 80 QUESTIONS
+const u159q1: EnglishQuestion[] = [
+    { question: "I have ___ finished my homework.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "'Already' is used for actions completed sooner than expected.", type: "grammar" },
+    { question: "Have you seen that movie ___?", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "'Yet' is used in questions about completion.", type: "grammar" },
+    { question: "She hasn't called me ___.", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "'Yet' is used in negative sentences.", type: "grammar" },
+    { question: "We have ___ booked our flights.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "'Already' for positive completed actions.", type: "grammar" },
+    { question: "Has the train arrived ___?", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Standard question about arrival.", type: "vocabulary" },
+    { question: "I have ___ heard that song before.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "Prior experience.", type: "vocabulary" },
+    { question: "They haven't finished the project ___.", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Incompleteness.", type: "grammar" },
+    { question: "He has ___ eaten breakfast.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "Early completion.", type: "vocabulary" },
+    { question: "Have they started the meeting ___?", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Inquiry about start.", type: "grammar" },
+    { question: "I haven't visited Paris ___.", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Unachieved travel goal.", type: "vocabulary" },
+    { question: "She has ___ sold her car.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "Completed transaction.", type: "grammar" },
+    { question: "Have you told him the news ___?", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Inquiry about communication.", type: "vocabulary" },
+    { question: "We haven't received the package ___.", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Negative state.", type: "grammar" },
+    { question: "I have ___ read the first chapter.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "Progress marker.", type: "vocabulary" },
+    { question: "Has she woken up ___?", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Morning inquiry.", type: "grammar" },
+    { question: "They have ___ moved to their new house.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "Completed relocation.", type: "vocabulary" },
+    { question: "I haven't seen the doctor ___.", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Medical context.", type: "grammar" },
+    { question: "Have you paid the bill ___?", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Financial inquiry.", type: "vocabulary" },
+    { question: "She has ___ found her keys.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "Recovery of items.", type: "grammar" },
+    { question: "We haven't decided where to go ___.", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Planning state.", type: "vocabulary" }
+];
+const u159q2: EnglishQuestion[] = [
+    { question: "I have ___ seen a ghost.", options: ["never", "ever", "just", "yet"], correctAnswer: 0, explanation: "'Never' for zero experience.", type: "grammar" },
+    { question: "Have you ___ been to Japan?", options: ["ever", "never", "just", "already"], correctAnswer: 0, explanation: "'Ever' asks about any time in life.", type: "grammar" },
+    { question: "He has ___ arrived home.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "'Just' for very recent actions.", type: "grammar" },
+    { question: "This is the best pizza I have ___ eaten.", options: ["ever", "never", "just", "already"], correctAnswer: 0, explanation: "'Ever' with superlatives.", type: "grammar" },
+    { question: "She has ___ finished her coffee.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Recent action.", type: "vocabulary" },
+    { question: "I have ___ tried sushi.", options: ["never", "ever", "just", "already"], correctAnswer: 0, explanation: "Zero experience.", type: "vocabulary" },
+    { question: "Have you ___ met a celebrity?", options: ["ever", "never", "just", "already"], correctAnswer: 0, explanation: "Life experience inquiry.", type: "grammar" },
+    { question: "We have ___ bought a new car.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Recent purchase.", type: "vocabulary" },
+    { question: "He has ___ won a race.", options: ["never", "ever", "just", "already"], correctAnswer: 0, explanation: "Indicates zero achievement.", type: "grammar" },
+    { question: "Has she ___ called you?", options: ["ever", "never", "just", "already"], correctAnswer: 0, explanation: "Inquiry about occurrence.", type: "vocabulary" },
+    { question: "I have ___ woke up.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Extremely recent action.", type: "grammar" },
+    { question: "They have ___ lost a game.", options: ["never", "ever", "just", "already"], correctAnswer: 0, explanation: "Undefeated status.", type: "vocabulary" },
+    { question: "Have you ___ forgotten your password?", options: ["ever", "never", "just", "already"], correctAnswer: 0, explanation: "Common occurrence inquiry.", type: "grammar" },
+    { question: "She has ___ sent the email.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Communication completed now.", type: "vocabulary" },
+    { question: "We have ___ seen such a beautiful view.", options: ["never", "ever", "just", "already"], correctAnswer: 0, explanation: "Unique experience.", type: "grammar" },
+    { question: "He has ___ left work.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Recent departure.", type: "vocabulary" },
+    { question: "Have they ___ visited you?", options: ["ever", "never", "just", "already"], correctAnswer: 0, explanation: "Past occurrence.", type: "grammar" },
+    { question: "I have ___ heard of this app.", options: ["never", "ever", "just", "already"], correctAnswer: 0, explanation: "Lack of knowledge.", type: "vocabulary" },
+    { question: "She has ___ graduated.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Academic milestone today.", type: "grammar" },
+    { question: "It has ___ started raining.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Immediate weather change.", type: "vocabulary" }
+];
+const u159q3: EnglishQuestion[] = [
+    { question: "I have lived here ___ three years.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "'For' is used for a period of time.", type: "grammar" },
+    { question: "She has worked here ___ 2010.", options: ["since", "for", "from", "at"], correctAnswer: 0, explanation: "'Since' is used for a point in time.", type: "grammar" },
+    { question: "We haven't seen him ___ last week.", options: ["since", "for", "from", "at"], correctAnswer: 0, explanation: "Point in time reference.", type: "grammar" },
+    { question: "He has been sick ___ two days.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Duration reference.", type: "grammar" },
+    { question: "I haven't eaten anything ___ breakfast.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Time marker.", type: "vocabulary" },
+    { question: "They have been married ___ 25 years.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Long period.", type: "vocabulary" },
+    { question: "She has known him ___ childhood.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Starting point.", type: "grammar" },
+    { question: "I have had this car ___ a long time.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Indefinite period.", type: "vocabulary" },
+    { question: "He hasn't traveled ___ months.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Plural duration.", type: "grammar" },
+    { question: "We have been friends ___ we were kids.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Clause as starting point.", type: "grammar" },
+    { question: "I have been awake ___ 5 AM.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Specific hour start.", type: "vocabulary" },
+    { question: "They have stayed there ___ a month.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Stay duration.", type: "grammar" },
+    { question: "It hasn't rained ___ January.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Month marker.", type: "vocabulary" },
+    { question: "I have loved music ___ I can remember.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Memory limit.", type: "grammar" },
+    { question: "She hasn't played piano ___ ages.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Enormous period (idiom).", type: "vocabulary" },
+    { question: "We've been in this meeting ___ an hour.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Meeting time.", type: "grammar" },
+    { question: "He has lived abroad ___ half his life.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Life span fraction.", type: "vocabulary" },
+    { question: "I haven't updated my blog ___ Monday.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Day marker.", type: "grammar" },
+    { question: "They've been waiting ___ 20 minutes.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Short duration.", type: "vocabulary" },
+    { question: "She has been a teacher ___ she graduated.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Career start.", type: "grammar" }
+];
+const u159q4: EnglishQuestion[] = [
+    { question: "A: How long have you been here? B: ___ about an hour.", options: ["For", "Since", "By", "At"], correctAnswer: 0, explanation: "Reporting duration.", type: "grammar" },
+    { question: "A: Have you finished? B: Yes, I've ___ done it.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Immediate completion.", type: "vocabulary" },
+    { question: "A: Want some cake? B: No thanks, I've ___ eaten.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "Prior action prevents current need.", type: "grammar" },
+    { question: "A: Is John here? B: No, he hasn't arrived ___.", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Expecting someone.", type: "vocabulary" },
+    { question: "A: Do you know her? B: Yes, we've known each other ___ years.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Relationship duration.", type: "grammar" },
+    { question: "A: Where's the bus? B: It has ___ left.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Missed it by a bit.", type: "vocabulary" },
+    { question: "A: Have you ___ been to China? B: No, never.", options: ["ever", "never", "just", "already"], correctAnswer: 0, explanation: "Travel experience inquiry.", type: "grammar" },
+    { question: "A: Are you hungry? B: No, I've ___ had lunch.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Recent meal.", type: "vocabulary" },
+    { question: "A: Do you like this city? B: Yes, I've lived here ___ 2015.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Resident history.", type: "grammar" },
+    { question: "A: Where is your key? B: I don't know, I've ___ lost it.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Recent loss.", type: "vocabulary" },
+    { question: "A: Is the shop open? B: It hasn't opened ___.", options: ["yet", "already", "ever", "never"], correctAnswer: 0, explanation: "Daily schedule.", type: "grammar" },
+    { question: "A: Do you play golf? B: No, I've ___ tried it.", options: ["never", "ever", "just", "already"], correctAnswer: 0, explanation: "Lack of hobby experience.", type: "vocabulary" },
+    { question: "A: How is the book? B: Good, I've ___ read half of it.", options: ["already", "yet", "ever", "never"], correctAnswer: 0, explanation: "Reading progress.", type: "grammar" },
+    { question: "A: Is she back? B: No, she's been away ___ Monday.", options: ["since", "for", "during", "at"], correctAnswer: 0, explanation: "Absence start.", type: "vocabulary" },
+    { question: "A: Are they coming? B: They've ___ called to say yes.", options: ["just", "ever", "never", "already"], correctAnswer: 0, explanation: "Recent confirmation.", type: "grammar" },
+    { question: "A: Do you own a car? B: Yes, I've had it ___ ten years.", options: ["for", "since", "during", "at"], correctAnswer: 0, explanation: "Ownership length.", type: "vocabulary" },
+    { question: "A: Have you seen my phone? B: No, have you ___ for it?", options: ["looked", "looking", "look", "to look"], correctAnswer: 0, explanation: "Action in present perfect.", type: "grammar" },
+    { question: "A: Is the game over? B: No, it has only ___ started.", options: ["just", "ever", "never", "yet"], correctAnswer: 0, explanation: "Initial stage.", type: "vocabulary" },
+    { question: "A: How long has she been out? B: ___ 3 o'clock.", options: ["Since", "For", "During", "At"], correctAnswer: 0, explanation: "Time marker.", type: "grammar" },
+    { question: "A: Are you tired? B: Yes, I've ___ cleaned the house.", options: ["just", "already", "ever", "never"], correctAnswer: 0, explanation: "Reason for fatigue.", type: "vocabulary" }
+];
+
+// Unit 160: A2 Review - FULL 80 QUESTIONS
+const u160q1: EnglishQuestion[] = [
+    { question: "Yesterday, I ___ to the cinema.", options: ["went", "gone", "go", "have gone"], correctAnswer: 0, explanation: "Past Simple for finished time.", type: "grammar" },
+    { question: "I have ___ to London twice.", options: ["been", "go", "went", "going"], correctAnswer: 0, explanation: "Present Perfect for experience.", type: "grammar" },
+    { question: "Look at those clouds! It ___ rain.", options: ["is going to", "will", "was", "has"], correctAnswer: 0, explanation: "Predictions with evidence.", type: "grammar" },
+    { question: "She is ___ than her sister.", options: ["taller", "tallest", "tall", "as tall"], correctAnswer: 0, explanation: "Comparative degree.", type: "grammar" },
+    { question: "I was sleeping when the phone ___.", options: ["rang", "ring", "rung", "was ringing"], correctAnswer: 0, explanation: "Past continuous interrupted by past simple.", type: "grammar" },
+    { question: "They ___ playing football now.", options: ["are", "is", "were", "been"], correctAnswer: 0, explanation: "Present continuous.", type: "grammar" },
+    { question: "How ___ sugar do you want?", options: ["much", "many", "few", "any"], correctAnswer: 0, explanation: "Uncountable quantity.", type: "grammar" },
+    { question: "There are ___ people in the park.", options: ["some", "any", "much", "little"], correctAnswer: 0, explanation: "Positive countable plural.", type: "grammar" },
+    { question: "You ___ smoke here. It's forbidden.", options: ["mustn't", "shouldn't", "don't", "needn't"], correctAnswer: 0, explanation: "Prohibition.", type: "grammar" },
+    { question: "He ___ a car last month.", options: ["bought", "buys", "buy", "has bought"], correctAnswer: 0, explanation: "Past Simple finished action.", type: "grammar" },
+    { question: "I ___ do my homework tonight. (Obligation)", options: ["have to", "mustn't", "won't", "am"], correctAnswer: 0, explanation: "Obligation.", type: "grammar" },
+    { question: "___ you ever eaten snails?", options: ["Have", "Do", "Did", "Are"], correctAnswer: 0, explanation: "Present Perfect question.", type: "grammar" },
+    { question: "The book is ___ the table.", options: ["on", "at", "in", "by"], correctAnswer: 0, explanation: "Preposition of place.", type: "vocabulary" },
+    { question: "Wait ___ me!", options: ["for", "to", "at", "on"], correctAnswer: 0, explanation: "Wait for someone.", type: "vocabulary" },
+    { question: "She ___ French very well.", options: ["speaks", "speak", "is speak", "speaking"], correctAnswer: 0, explanation: "Present simple habit.", type: "grammar" },
+    { question: "We ___ to the beach next Sunday.", options: ["are going", "go", "went", "were"], correctAnswer: 0, explanation: "Future plan.", type: "grammar" },
+    { question: "___ you help me, please?", options: ["Can", "Do", "Are", "Have"], correctAnswer: 0, explanation: "Requesting help.", type: "grammar" },
+    { question: "He is the ___ player in the team.", options: ["best", "better", "good", "as good"], correctAnswer: 0, explanation: "Superlative degree.", type: "grammar" },
+    { question: "I didn't ___ anything last night.", options: ["see", "saw", "seen", "seeing"], correctAnswer: 0, explanation: "Base form after didn't.", type: "grammar" },
+    { question: "Do you like ___?", options: ["cooking", "cook", "to cook", "cooked"], correctAnswer: 0, explanation: "Gerund after like.", type: "grammar" }
+];
+const u160q2: EnglishQuestion[] = [
+    { question: "I need to go to the ___ to buy bread.", options: ["bakery", "chemist", "library", "gym"], correctAnswer: 0, explanation: "Place for bread.", type: "vocabulary" },
+    { question: "A ___ helps sick people.", options: ["doctor", "pilot", "chef", "waiter"], correctAnswer: 0, explanation: "Profession.", type: "vocabulary" },
+    { question: "The opposite of 'cheap' is ___.", options: ["expensive", "fast", "easy", "clean"], correctAnswer: 0, explanation: "Antonym.", type: "vocabulary" },
+    { question: "You use a ___ to eat soup.", options: ["spoon", "fork", "knife", "plate"], correctAnswer: 0, explanation: "Kitchen tool.", type: "vocabulary" },
+    { question: "Italy is a ___ in Europe.", options: ["country", "city", "village", "town"], correctAnswer: 0, explanation: "Category.", type: "vocabulary" },
+    { question: "My father's brother is my ___.", options: ["uncle", "aunt", "cousin", "grandfather"], correctAnswer: 0, explanation: "Family relation.", type: "vocabulary" },
+    { question: "It is ___ today. Take an umbrella.", options: ["raining", "sunny", "hot", "windy"], correctAnswer: 0, explanation: "Weather context.", type: "vocabulary" },
+    { question: "I am ___ because I didn't sleep well.", options: ["tired", "happy", "excited", "bored"], correctAnswer: 0, explanation: "Feelings.", type: "vocabulary" },
+    { question: "You can buy stamps at the ___.", options: ["post office", "bank", "police station", "cinema"], correctAnswer: 0, explanation: "Public building.", type: "vocabulary" },
+    { question: "A ___ flies an airplane.", options: ["pilot", "driver", "captain", "mechanic"], correctAnswer: 0, explanation: "Profession roles.", type: "vocabulary" },
+    { question: "The opposite of 'early' is ___.", options: ["late", "fast", "soon", "now"], correctAnswer: 0, explanation: "Punctuality antonym.", type: "vocabulary" },
+    { question: "I wear ___ when it's sunny.", options: ["sunglasses", "gloves", "boots", "scaff"], correctAnswer: 0, explanation: "Summer clothing.", type: "vocabulary" },
+    { question: "A ___ cooks in a restaurant.", options: ["chef", "server", "manager", "cleaner"], correctAnswer: 0, explanation: "Food industry role.", type: "vocabulary" },
+    { question: "They live in a large ___ with a garden.", options: ["house", "flat", "office", "tent"], correctAnswer: 0, explanation: "Types of living.", type: "vocabulary" },
+    { question: "We go to the ___ to watch a film.", options: ["cinema", "theatre", "library", "museum"], correctAnswer: 0, explanation: "Entertainment venue.", type: "vocabulary" },
+    { question: "I use a ___ to brush my hair.", options: ["brush", "comb", "toothbrush", "mirror"], correctAnswer: 0, explanation: "Personal care.", type: "vocabulary" },
+    { question: "The opposite of 'hot' is ___.", options: ["cold", "warm", "cool", "dry"], correctAnswer: 0, explanation: "Temperature antonym.", type: "vocabulary" },
+    { question: "My mother's sister is my ___.", options: ["aunt", "uncle", "cousin", "niece"], correctAnswer: 0, explanation: "Family relation female.", type: "vocabulary" },
+    { question: "I need a ___ to call my friend.", options: ["phone", "book", "pen", "bag"], correctAnswer: 0, explanation: "Technology tool.", type: "vocabulary" },
+    { question: "A ___ of water.", options: ["bottle", "bag", "box", "can"], correctAnswer: 0, explanation: "Container vocabulary.", type: "vocabulary" }
+];
+const u160q3: EnglishQuestion[] = [
+    { question: "He drives very ___.", options: ["slowly", "slow", "slowness", "slowest"], correctAnswer: 0, explanation: "Adverb modifying verb.", type: "grammar" },
+    { question: "She is a ___ singer.", options: ["wonderful", "wonderfully", "wonder", "wonders"], correctAnswer: 0, explanation: "Adjective modifying noun.", type: "grammar" },
+    { question: "I speak English ___.", options: ["fluently", "fluent", "fluency", "most fluent"], correctAnswer: 0, explanation: "Adverb of manner.", type: "grammar" },
+    { question: "This exercise is ___ than the last one.", options: ["easier", "easyer", "more easy", "easiest"], correctAnswer: 0, explanation: "Comparative of short adjective.", type: "grammar" },
+    { question: "He works ___ than me.", options: ["harder", "more hard", "hardly", "hardest"], correctAnswer: 0, explanation: "Comparative of hard.", type: "grammar" },
+    { question: "She runs as ___ as a cat.", options: ["fast", "fastly", "faster", "fastest"], correctAnswer: 0, explanation: "Equality comparison.", type: "grammar" },
+    { question: "It was the ___ day of my life.", options: ["happiest", "happyest", "most happy", "happier"], correctAnswer: 0, explanation: "Superlative of happy.", type: "grammar" },
+    { question: "You should speak ___ in the library.", options: ["quietly", "quiet", "quietness", "quieter"], correctAnswer: 0, explanation: "Adverb for behavior.", type: "grammar" },
+    { question: "The test was very ___.", options: ["difficult", "difficultly", "difficulty", "more difficult"], correctAnswer: 0, explanation: "Adjective for state.", type: "vocabulary" },
+    { question: "He plays the piano ___.", options: ["well", "good", "mostly good", "betterly"], correctAnswer: 0, explanation: "Irregular adverb of good.", type: "grammar" },
+    { question: "She is the ___ intelligent girl in class.", options: ["most", "more", "much", "very"], correctAnswer: 0, explanation: "Superlative of long adjective.", type: "grammar" },
+    { question: "The train arrived ___.", options: ["late", "lately", "lateness", "latest"], correctAnswer: 0, explanation: "Adverb of time.", type: "vocabulary" },
+    { question: "Please listen ___.", options: ["carefully", "careful", "carefulness", "carefully"], correctAnswer: 0, explanation: "Request for attention.", type: "grammar" },
+    { question: "He looks ___ today.", options: ["happy", "happily", "happiness", "happier"], correctAnswer: 0, explanation: "Adjective after linking verb.", type: "vocabulary" },
+    { question: "They finished the job ___.", options: ["quickly", "quick", "quicker", "quickest"], correctAnswer: 0, explanation: "Adverb for completion.", type: "grammar" },
+    { question: "This is a ___ car.", options: ["expensive", "expensively", "expense", "more expensive"], correctAnswer: 0, explanation: "Simple adjective.", type: "vocabulary" },
+    { question: "He is ___ than his brother.", options: ["stronger", "more strong", "strongest", "strong"], correctAnswer: 0, explanation: "Physical comparison.", type: "grammar" },
+    { question: "The movie was ___ boring.", options: ["really", "real", "realness", "reality"], correctAnswer: 0, explanation: "Modifier for adjective.", type: "vocabulary" },
+    { question: "Walk ___ on the ice.", options: ["slowly", "slow", "slowness", "slower"], correctAnswer: 0, explanation: "Safety instruction adverb.", type: "grammar" },
+    { question: "It is a ___ day.", options: ["sunny", "sun", "sunnily", "sunnier"], correctAnswer: 0, explanation: "Weather adjective.", type: "vocabulary" }
+];
+const u160q4: EnglishQuestion[] = [
+    { question: "A: Check-in is at 2 PM. B: OK, we have ___.", options: ["plenty of time", "many times", "few time", "no time"], correctAnswer: 0, explanation: "Sufficient time expression.", type: "vocabulary" },
+    { question: "A: How is your meal? B: It tastes ___.", options: ["delicious", "deliciously", "goodly", "well"], correctAnswer: 0, explanation: "Adjective after taste.", type: "vocabulary" },
+    { question: "A: Can I help you? B: Yes, I'm ___ for the mall.", options: ["looking", "look", "looked", "to look"], correctAnswer: 0, explanation: "Present continuous inquiry.", type: "grammar" },
+    { question: "A: Did you see the news? B: Yes, it was ___.", options: ["shocking", "shocks", "shock", "shockly"], correctAnswer: 0, explanation: "Participial adjective.", type: "vocabulary" },
+    { question: "A: Where is the manager? B: He's ___ a meeting.", options: ["in", "at", "on", "to"], correctAnswer: 0, explanation: "Business location.", type: "grammar" },
+    { question: "A: Is the water cold? B: No, it's ___.", options: ["warm", "ice", "cool", "boiling"], correctAnswer: 0, explanation: "Temperature contrast.", type: "vocabulary" },
+    { question: "A: Have you finished? B: Yes, ___.", options: ["nearly", "near", "nearness", "nearest"], correctAnswer: 0, explanation: "Almost finished.", type: "grammar" },
+    { question: "A: Is she here? B: Yes, she ___ 5 minutes ago.", options: ["arrived", "arrives", "has arrived", "was arriving"], correctAnswer: 0, explanation: "Past Simple finished time.", type: "grammar" },
+    { question: "A: What do you do? B: I ___ an engineer.", options: ["am", "do", "have", "make"], correctAnswer: 0, explanation: "Occupation identity.", type: "vocabulary" },
+    { question: "A: Where do you live? B: ___ London.", options: ["In", "At", "On", "To"], correctAnswer: 0, explanation: "City location.", type: "grammar" },
+    { question: "A: How do you feel? B: I feel ___ better.", options: ["much", "more", "very", "many"], correctAnswer: 0, explanation: "Comparative intensifier.", type: "vocabulary" },
+    { question: "A: Is he coming? B: Yes, he's ___ his way.", options: ["on", "in", "at", "by"], correctAnswer: 0, explanation: "Movement state.", type: "grammar" },
+    { question: "A: Can we start? B: Yes, let's ___.", options: ["go", "going", "gone", "went"], correctAnswer: 0, explanation: "Let's + base form.", type: "grammar" },
+    { question: "A: Was it expensive? B: No, it was a ___.", options: ["bargain", "sale", "cheap", "costly"], correctAnswer: 0, explanation: "Good price noun.", type: "vocabulary" },
+    { question: "A: He is very tall. B: Yes, he ___ like a giant.", options: ["looks", "is", "has", "seems"], correctAnswer: 0, explanation: "Appearance impression.", type: "vocabulary" },
+    { question: "A: Do you have a pet? B: Yes, I ___ a cat.", options: ["have", "am", "do", "own"], correctAnswer: 0, explanation: "Possession.", type: "grammar" },
+    { question: "A: Is it far? B: No, it's ___ the corner.", options: ["around", "at", "in", "to"], correctAnswer: 0, explanation: "Proximity idiom.", type: "vocabulary" },
+    { question: "A: Did you sleep well? B: Yes, I slept like a ___.", options: ["log", "dog", "cat", "bird"], correctAnswer: 0, explanation: "Sleeping idiom (A2).", type: "vocabulary" },
+    { question: "A: Are you ready? B: Yes, let's ___ out.", options: ["head", "go", "move", "walk"], correctAnswer: 0, explanation: "Common phrasal verb for leaving.", type: "vocabulary" },
+    { question: "A: Goodbye! B: ___ you later!", options: ["See", "Watch", "Look", "Check"], correctAnswer: 0, explanation: "Common farewell.", type: "vocabulary" }
+];
+
 // Helper to handle multiple quizzes per unit
 export function getEnglishA2QuestionsForUnit(unitId: number, quizIndex: number = 1): EnglishQuestion[] {
+
+
     const unitMap: { [key: number]: (index: number) => EnglishQuestion[] } = {
         131: (idx) => {
             if (idx === 1) return u131q1;
@@ -2623,12 +3077,47 @@ export function getEnglishA2QuestionsForUnit(unitId: number, quizIndex: number =
             if (idx === 4) return u154q4;
             return u154q1;
         },
+        155: (idx) => {
+            if (idx === 1) return u155q1;
+            if (idx === 2) return u155q2;
+            if (idx === 3) return u155q3;
+            if (idx === 4) return u155q4;
+            return u155q1;
+        },
+        156: (idx) => {
+            if (idx === 1) return u156q1;
+            if (idx === 2) return u156q2;
+            if (idx === 3) return u156q3;
+            if (idx === 4) return u156q4;
+            return u156q1;
+        },
+        157: (idx) => {
+            if (idx === 1) return u157q1;
+            if (idx === 2) return u157q2;
+            if (idx === 3) return u157q3;
+            if (idx === 4) return u157q4;
+            return u157q1;
+        },
         158: (idx) => {
             if (idx === 1) return u158q1;
             if (idx === 2) return u158q2;
             if (idx === 3) return u158q3;
             if (idx === 4) return u158q4;
             return u158q1;
+        },
+        159: (idx) => {
+            if (idx === 1) return u159q1;
+            if (idx === 2) return u159q2;
+            if (idx === 3) return u159q3;
+            if (idx === 4) return u159q4;
+            return u159q1;
+        },
+        160: (idx) => {
+            if (idx === 1) return u160q1;
+            if (idx === 2) return u160q2;
+            if (idx === 3) return u160q3;
+            if (idx === 4) return u160q4;
+            return u160q1;
         }
     };
 
