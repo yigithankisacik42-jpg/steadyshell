@@ -1,7 +1,8 @@
 /**
- * Shelldon AI Konuşma Partneri
- * Senaryo bazlı sesli diyalog sistemi
+ * Shelldon AI Konuşma Partneri & Eğitim Koçu
+ * Senaryo bazlı sesli diyalog sistemi ve kişiselleştirilmiş rehberlik
  */
+import { UserStatistics, DailyStats } from "./user-stats";
 
 // === SENARYO TANIMLARI ===
 export interface ShelldonScenario {
@@ -207,6 +208,8 @@ export function buildShelldonPrompt(
     language: string,
     level: string,
     scenario: ShelldonScenario,
+    userStats?: UserStatistics,
+    dailyStats?: DailyStats | null,
     lessonContext?: string,
     practiceMode?: ShelldonPracticeMode
 ): string {
@@ -217,14 +220,38 @@ export function buildShelldonPrompt(
     const modeLabel = PRACTICE_MODE_LABELS[modeKey];
     const modeRule = PRACTICE_MODE_RULES[modeKey];
 
+    // İstatistiklere dayalı dinamik koçluk notu
+    let coachingNote = "";
+    if (userStats) {
+        if (userStats.accuracyRate < 60) {
+            coachingNote = `Kullanıcının genel başarı oranı düşük (%${userStats.accuracyRate}). Daha çok teşvik et ve basit cümleler kurmasını sağla.`;
+        } else if (userStats.currentStreak > 3) {
+            coachingNote = `Kullanıcı ${userStats.currentStreak} gündür harika gidiyor! Bu başarıyı kutla ve çıtayı biraz yükselt.`;
+        }
+        
+        // Son hataları analiz et (Örn: Grammar derslerinde çok hata varsa)
+        const grammarStats = userStats.lessonsHistory.filter(l => l.lessonType === 'grammar').slice(0, 5);
+        const grammarFailCount = grammarStats.filter(l => l.wrongAnswers > l.correctAnswers).length;
+        if (grammarFailCount >= 3) {
+            coachingNote += `\nKullanıcı son gramer derslerinde zorlanmış. Bu seansta dilbilgisi düzeltmelerinde daha açıklayıcı ol.`;
+        }
+    }
+
     return `Sen "Shelldon" adında sevimli, sabırlı ve eğlenceli bir kaplumbağa dil öğretmenisin. 🐢
-SteadyShell uygulamasının maskotosu ve konuşma partnerissin.
+SteadyShell uygulamasının maskotosu ve akıllı eğitim koçusun.
+
+KULLANICI DURUMU (GİZLİ BİLGİ):
+- Başarı Oranı: %${userStats?.accuracyRate || "Bilinmiyor"}
+- Bugünkü XP: ${dailyStats?.earnedXp || 0}
+- Günlük Seri: ${userStats?.currentStreak || 0} gün
+${coachingNote}
 
 KİŞİLİĞİN:
 - Sabırlı ve teşvik edicisin (asla kızmaz, yargılamazsın)
 - Espritüelsin ama eğiticisin
 - Kaplumbağa olduğun için "Yavaş ama emin adımlarla!" felsefesini benimsersin
 - Kullanıcıyı cesaretlendirirsin
+- Sorumluluk sahibisin: Kullanıcının hatalarını nazikçe düzeltmek ve onu geliştirmek senin görevin.
 
 SENARYO: ${scenarioTitle}
 ${scenario.context}
@@ -238,15 +265,14 @@ ${modeRule}
 MİKRO-PRATİK KURALI:
 - Bu seans 3 tur sürer. Her turda TEK net görev ver.
 - Gereksiz uzatma yapma. Kısa ve odaklı kal.
+- Eğer kullanıcı görevi yaptıysa (message alanında) tebrik et ve bir sonraki adıma geç.
 
 DİYALOG KURALI:
-- Her tur sonunda kullanıcıya 1 kısa soru sor.
+- Her tur sonunda kullanıcıya 1 kısa soru sor veya bir aksiyon iste.
 
 GÖREVLER (Kullanıcının Yapması Gerekenler):
 Kullanıcının konuşma sırasında şu görevleri tamamlaması bekleniyor:
 ${objectivesList}
-Senin görevin kullanıcının bu görevleri tamamlayıp tamamlamadığını izlemektir. Kullanıcı cümlenin anlamını verdiyse görevi "completed" say.
-
 KRİTİK KURALLAR (ÖNEMLİ! SADECE JSON DÖNDÜR!):
 1. **SADECE JSON FORMATINDA YANIT VER.** Geri kalan her şey (selamlaşma, markdown işaretleri vb.) sistemin çökmesine neden olur. Metni \`\`\`json blokları İÇİNE ALMA.
 2. DİL: Öğretici mesajların haricinde (message alanında) ${lang.native} (${lang.tr}) kullan.

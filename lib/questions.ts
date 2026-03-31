@@ -535,8 +535,8 @@ export async function getQuestionsForUnit(unitId: number, quizIndex: number = 1)
 
     if (unitId >= 131 && unitId <= 160) {
         const { getEnglishA2QuestionsForUnit } = await import('./questions-en-a2');
-        const enQuiz = getEnglishA2QuestionsForUnit(unitId);
-        return enQuiz.questions.map((q, i) => ({
+        const questions = getEnglishA2QuestionsForUnit(unitId, quizIndex);
+        return questions.map((q, i) => ({
             id: i + 1,
             type: "SELECT" as QuestionType,
             question: q.question,
@@ -548,6 +548,7 @@ export async function getQuestionsForUnit(unitId: number, quizIndex: number = 1)
             hint: q.explanation
         }));
     }
+
 
     // Fransızca A1 (301-330)
     if (unitId >= 301 && unitId <= 330) {

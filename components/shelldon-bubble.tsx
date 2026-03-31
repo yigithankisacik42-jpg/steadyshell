@@ -7,7 +7,7 @@ import { Heart, Smile, Frown, Lightbulb, PartyPopper } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const ShelldonBubble = () => {
-  const { isVisible, message, mood, hideShelldon } = useShelldon();
+  const { isVisible, message, mood, action, hideShelldon } = useShelldon();
 
   // Avatar ya da ikon (Ruh haline göre şekillenir)
   const getIcon = () => {
@@ -51,32 +51,48 @@ export const ShelldonBubble = () => {
           className="fixed bottom-24 left-6 z-[9999] pointer-events-auto"
         >
           {/* Çizgi Roman Balonu Tarzı Kutucuk */}
-          <div onClick={hideShelldon} className="cursor-pointer group relative">
-            
+          <div className="group relative">
             <div className={cn(
-              "flex items-start gap-4 p-4 rounded-3xl rounded-bl-sm",
+              "flex flex-col gap-3 p-4 rounded-3xl rounded-bl-sm",
               "bg-white border-2 shadow-xl hover:shadow-2xl transition-all max-w-[280px]",
               getBackgroundColor()
             )}>
-              {/* Avatar Kısmı */}
-              <div className="shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 border-2 border-slate-200 group-hover:scale-110 transition-transform shadow-inner relative overflow-hidden">
-                <div className="absolute inset-0 pb-1 flex items-end justify-center text-4xl leading-none select-none">
-                  🐢
+              <div className="flex items-start gap-4" onClick={hideShelldon}>
+                {/* Avatar Kısmı */}
+                <div className="shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 border-2 border-slate-200 group-hover:scale-110 transition-transform shadow-inner relative overflow-hidden">
+                  <div className="absolute inset-0 pb-1 flex items-end justify-center text-4xl leading-none select-none">
+                    🐢
+                  </div>
+                  {/* Ruh hali ikonu köşe amblemi */}
+                  <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-0.5 shadow-sm border border-slate-200">
+                      <div className="scale-50 origin-center">{getIcon()}</div>
+                  </div>
                 </div>
-                {/* Ruh hali ikonu köşe amblemi */}
-                <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-0.5 shadow-sm border border-slate-200">
-                    <div className="scale-50 origin-center">{getIcon()}</div>
+
+                {/* Mesaj Kısmı */}
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-bold text-slate-700 leading-snug">
+                    {message}
+                  </p>
                 </div>
               </div>
 
-              {/* Mesaj Kısmı */}
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold text-slate-700 leading-snug">
-                  {message}
-                </p>
-                <div className="mt-1 text-[10px] text-slate-400 font-medium uppercase tracking-wider">
-                  Tıkla Kapat
-                </div>
+              {/* Aksiyon Butonu */}
+              {action && (
+                  <button 
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        action.onClick();
+                        hideShelldon();
+                    }}
+                    className="w-full py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition-colors shadow-md shadow-indigo-200"
+                  >
+                    {action.label}
+                  </button>
+              )}
+
+              <div onClick={hideShelldon} className="text-[10px] text-slate-400 font-medium uppercase tracking-wider text-center cursor-pointer">
+                Kapat
               </div>
             </div>
 
