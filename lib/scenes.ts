@@ -352,6 +352,80 @@ export const SCENE_CATEGORIES: SceneCategory[] = [
             { id: "unit-49", icon: "💻", title: "Tecnología", titleTr: "Teknoloji", category: "es-a2-practice", description: "Bilgisayar, telefon", systemPrompt: "es-a2-49" },
             { id: "unit-50", icon: "📱", title: "Redes sociales", titleTr: "Sosyal Medya", category: "es-a2-practice", description: "İnternet kullanımı", systemPrompt: "es-a2-50" }
         ]
+    },
+    {
+        id: "en-a1-practice",
+        title: "🇬🇧 İngilizce A1",
+        icon: "🌱",
+        scenes: [
+            { id: "unit-101", icon: "👋", title: "Greetings", titleTr: "Selamlaşma ve Tanışma", category: "en-a1-practice", description: "Hello, Hi, My name is", systemPrompt: "en-a1-101" },
+            { id: "unit-102", icon: "🔢", title: "Numbers 1-20", titleTr: "Sayılar 1-20", category: "en-a1-practice", description: "One, Two, Three", systemPrompt: "en-a1-102" },
+            { id: "unit-103", icon: "👨‍👩‍👧", title: "Family", titleTr: "Aile Üyeleri", category: "en-a1-practice", description: "Mother, Father, Brother", systemPrompt: "en-a1-103" },
+            { id: "unit-104", icon: "🎨", title: "Colors", titleTr: "Renkler", category: "en-a1-practice", description: "Red, Blue, Green", systemPrompt: "en-a1-104" },
+            { id: "unit-105", icon: "🍎", title: "Food", titleTr: "Yiyecekler", category: "en-a1-practice", description: "Bread, Fruit, Vegetables", systemPrompt: "en-a1-105" },
+            { id: "unit-106", icon: "☕", title: "Drinks", titleTr: "İçecekler", category: "en-a1-practice", description: "Water, Coffee, Tea", systemPrompt: "en-a1-106" },
+            { id: "unit-107", icon: "📅", title: "Time", titleTr: "Günler ve Aylar", category: "en-a1-practice", description: "Monday, January", systemPrompt: "en-a1-107" },
+            { id: "unit-108", icon: "💯", title: "Numbers 21-100", titleTr: "Sayılar 21-100", category: "en-a1-practice", description: "Twenty, Fifty, Hundred", systemPrompt: "en-a1-108" },
+            { id: "unit-109", icon: "🏠", title: "Home", titleTr: "Ev Odaları", category: "en-a1-practice", description: "Kitchen, Bedroom", systemPrompt: "en-a1-109" },
+            { id: "unit-110", icon: "🪑", title: "Furniture", titleTr: "Mobilyalar", category: "en-a1-practice", description: "Table, Chair, Bed", systemPrompt: "en-a1-110" },
+            { id: "unit-111", icon: "🦵", title: "Body", titleTr: "Vücut Bölümleri", category: "en-a1-practice", description: "Head, Eyes, Arms", systemPrompt: "en-a1-111" },
+            { id: "unit-112", icon: "👕", title: "Clothes", titleTr: "Giysiler", category: "en-a1-practice", description: "Shirt, Pants, Shoes", systemPrompt: "en-a1-112" },
+            { id: "unit-113", icon: "🐕", title: "Animals", titleTr: "Hayvanlar", category: "en-a1-practice", description: "Dog, Cat, Bird", systemPrompt: "en-a1-113" },
+            { id: "unit-114", icon: "👔", title: "Jobs", titleTr: "Meslekler", category: "en-a1-practice", description: "Doctor, Teacher", systemPrompt: "en-a1-114" },
+            { id: "unit-115", icon: "🏪", title: "City", titleTr: "Şehirde Yerler", category: "en-a1-practice", description: "Bank, Park, School", systemPrompt: "en-a1-115" },
+            { id: "unit-116", icon: "🚌", title: "Transport", titleTr: "Ulaşım Araçları", category: "en-a1-practice", description: "Car, Bus, Train", systemPrompt: "en-a1-116" },
+            { id: "unit-117", icon: "☀️", title: "Routine", titleTr: "Günlük Rutinler", category: "en-a1-practice", description: "Wake up, Sleep", systemPrompt: "en-a1-117" },
+            { id: "unit-118", icon: "🕐", title: "Time", titleTr: "Saat Kaç?", category: "en-a1-practice", description: "Half past, O'clock", systemPrompt: "en-a1-118" },
+            { id: "unit-119", icon: "☁️", title: "Weather", titleTr: "Hava Durumu", category: "en-a1-practice", description: "Sunny, Rainy", systemPrompt: "en-a1-119" },
+            { id: "unit-120", icon: "⚽", title: "Hobbies", titleTr: "Hobiler", category: "en-a1-practice", description: "Sports, Reading", systemPrompt: "en-a1-120" },
+            { id: "unit-121", icon: "😊", title: "Feelings", titleTr: "Duygular", category: "en-a1-practice", description: "Happy, Sad", systemPrompt: "en-a1-121" },
+            { id: "unit-122", icon: "🏫", title: "School", titleTr: "Okul ve Sınıf", category: "en-a1-practice", description: "Book, Pen, Student", systemPrompt: "en-a1-122" },
+            { id: "unit-123", icon: "🎉", title: "Holidays", titleTr: "Tatiller", category: "en-a1-practice", description: "Christmas, Birthday", systemPrompt: "en-a1-123" },
+            { id: "unit-124", icon: "🌍", title: "Countries", titleTr: "Ülkeler", category: "en-a1-practice", description: "Where are you from?", systemPrompt: "en-a1-124" },
+            { id: "unit-125", icon: "🏃", title: "Verbs", titleTr: "Temel Fiiller", category: "en-a1-practice", description: "Go, Come, Do", systemPrompt: "en-a1-125" },
+            { id: "unit-126", icon: "🔄", title: "Habits", titleTr: "Present Simple", category: "en-a1-practice", description: "Always, Usually", systemPrompt: "en-a1-126" },
+            { id: "unit-127", icon: "🕒", title: "Now", titleTr: "Present Continuous", category: "en-a1-practice", description: "Thinking, Working", systemPrompt: "en-a1-127" },
+            { id: "unit-128", icon: "📏", title: "Adjectives", titleTr: "Sıfatlar", category: "en-a1-practice", description: "Big, Small", systemPrompt: "en-a1-128" },
+            { id: "unit-129", icon: "📍", title: "Prepositions", titleTr: "Edatlar", category: "en-a1-practice", description: "In, On, At", systemPrompt: "en-a1-129" },
+            { id: "unit-130", icon: "🏆", title: "A1 Review", titleTr: "A1 Genel Tekrar", category: "en-a1-practice", description: "Check your level", systemPrompt: "en-a1-130" }
+        ]
+    },
+    {
+        id: "en-a2-practice",
+        title: "🇬🇧 İngilizce A2",
+        icon: "📚",
+        scenes: [
+            { id: "unit-131", icon: "⏪", title: "Past Simple 1", titleTr: "Düzenli Geçmiş Zaman", category: "en-a2-practice", description: "Watched, Played, Visited", systemPrompt: "en-a2-131" },
+            { id: "unit-132", icon: "⏪", title: "Past Simple 2", titleTr: "Düzensiz Geçmiş Zaman", category: "en-a2-practice", description: "Went, Saw, Had, Did", systemPrompt: "en-a2-132" },
+            { id: "unit-133", icon: "🍽️", title: "Restaurant", titleTr: "Restoranda Sipariş", category: "en-a2-practice", description: "I'd like to order, bill please", systemPrompt: "en-a2-133" },
+            { id: "unit-134", icon: "🛍️", title: "Shopping", titleTr: "Alışveriş ve Fiyat", category: "en-a2-practice", description: "How much is this?, size", systemPrompt: "en-a2-134" },
+            { id: "unit-135", icon: "✈️", title: "Travel Plans", titleTr: "Seyahat Planları", category: "en-a2-practice", description: "Going to visit, planning", systemPrompt: "en-a2-135" },
+            { id: "unit-136", icon: "🏨", title: "Hotel", titleTr: "Otel Rezervasyonu", category: "en-a2-practice", description: "Double room, vacancy", systemPrompt: "en-a2-136" },
+            { id: "unit-137", icon: "🛫", title: "Airport", titleTr: "Havalimanında", category: "en-a2-practice", description: "Check-in, boarding pass", systemPrompt: "en-a2-137" },
+            { id: "unit-138", icon: "🏥", title: "Doctor", titleTr: "Doktorda Şikayet", category: "en-a2-practice", description: "Headache, sore throat", systemPrompt: "en-a2-138" },
+            { id: "unit-139", icon: "💊", title: "Pharmacy", titleTr: "Eczanede İlaç", category: "en-a2-practice", description: "Medicine, cold, pain", systemPrompt: "en-a2-139" },
+            { id: "unit-140", icon: "👔", title: "Jobs", titleTr: "Meslekler", category: "en-a2-practice", description: "Engineer, software, work", systemPrompt: "en-a2-140" },
+            { id: "unit-141", icon: "💼", title: "Interview", titleTr: "İş Görüşmesi", category: "en-a2-practice", description: "Experience, strengths", systemPrompt: "en-a2-141" },
+            { id: "unit-142", icon: "📞", title: "Phone", titleTr: "Telefonda Konuşma", category: "en-a2-practice", description: "Speak to, message", systemPrompt: "en-a2-142" },
+            { id: "unit-143", icon: "📧", title: "Email", titleTr: "E-posta Yazma", category: "en-a2-practice", description: "Attach, send, reply", systemPrompt: "en-a2-143" },
+            { id: "unit-144", icon: "💭", title: "Feelings", titleTr: "Duygular", category: "en-a2-practice", description: "Nervous, excited, worried", systemPrompt: "en-a2-144" },
+            { id: "unit-145", icon: "😊", title: "Personality", titleTr: "Kişilik Özellikleri", category: "en-a2-practice", description: "Friendly, hardworking", systemPrompt: "en-a2-145" },
+            { id: "unit-146", icon: "⚽", title: "Sports", titleTr: "Spor ve Fitness", category: "en-a2-practice", description: "Gym, workout, yoga", systemPrompt: "en-a2-146" },
+            { id: "unit-147", icon: "🎸", title: "Music & Art", titleTr: "Müzik ve Sanat", category: "en-a2-practice", description: "Guitar, concert, museum", systemPrompt: "en-a2-147" },
+            { id: "unit-148", icon: "🎬", title: "Movies", titleTr: "Sinema ve Dizi", category: "en-a2-practice", description: "Action, plot, episode", systemPrompt: "en-a2-148" },
+            { id: "unit-149", icon: "💻", title: "Tech", titleTr: "Teknoloji Kullanımı", category: "en-a2-practice", description: "Update, wifi, camera", systemPrompt: "en-a2-149" },
+            { id: "unit-150", icon: "📱", title: "Social", titleTr: "Sosyal Medya", category: "en-a2-practice", description: "Post, follow, share", systemPrompt: "en-a2-150" },
+            { id: "unit-151", icon: "🏠", title: "Home", titleTr: "Ev ve Taşınma", category: "en-a2-practice", description: "Rent, apartment, furniture", systemPrompt: "en-a2-151" },
+            { id: "unit-152", icon: "🌍", title: "Environment", titleTr: "Çevre ve Doğa", category: "en-a2-practice", description: "Recycle, green energy", systemPrompt: "en-a2-152" },
+            { id: "unit-153", icon: "📰", title: "News", titleTr: "Haberler ve Medya", category: "en-a2-practice", description: "Headline, breaking news", systemPrompt: "en-a2-153" },
+            { id: "unit-154", icon: "🏮", title: "Culture", titleTr: "Kültür ve Gelenek", category: "en-a2-practice", description: "Tradition, holiday, festival", systemPrompt: "en-a2-154" },
+            { id: "unit-155", icon: "📜", title: "Perfect", titleTr: "Present Perfect", category: "en-a2-practice", description: "Have been, Tried, Visited", systemPrompt: "en-a2-155" },
+            { id: "unit-156", icon: "⚖️", title: "Compare 1", titleTr: "Karşılaştırmalar", category: "en-a2-practice", description: "Bigger, Faster, Better", systemPrompt: "en-a2-156" },
+            { id: "unit-157", icon: "🥇", title: "Superlative", titleTr: "En Üstünlük", category: "en-a2-practice", description: "Biggest, Best, Most", systemPrompt: "en-a2-157" },
+            { id: "unit-158", icon: "💡", title: "Modals", titleTr: "Modal Fiiller", category: "en-a2-practice", description: "Should, Must, Could", systemPrompt: "en-a2-158" },
+            { id: "unit-159", icon: "❓", title: "Question Tags", titleTr: "Ek Sorular", category: "en-a2-practice", description: "Don't you, isn't it?", systemPrompt: "en-a2-159" },
+            { id: "unit-160", icon: "🏆", title: "A2 Review", titleTr: "A2 Genel Tekrar", category: "en-a2-practice", description: "Check your A2 level", systemPrompt: "en-a2-160" }
+        ]
     }
 ];
 
@@ -375,7 +449,7 @@ export function buildSceneSystemPrompt(
     const levelPrompt = LEVEL_PROMPTS[level];
 
     // Ünite pratiği için özel prompt (tüm kategoriler için)
-    const practiceCategories = ["fr-a2-practice", "fr-a1-practice", "es-a1-practice", "es-a2-practice"];
+    const practiceCategories = ["fr-a2-practice", "fr-a1-practice", "es-a1-practice", "es-a2-practice", "en-a1-practice"];
     if (practiceCategories.includes(scene.category)) {
         return buildUnitPracticePrompt(language, level, scene);
     }
@@ -521,6 +595,74 @@ const ES_A2_PRACTICE_DATA: Record<string, { scenario: string, targetPhrases: str
     "es-a2-50": { scenario: "Sosyal medyayı anlatan biri", targetPhrases: ["Las redes sociales", "Publicar", "Seguir", "Me gusta", "Compartir"], example: "Publico fotos en Instagram todos los días." }
 };
 
+// İngilizce A1 pratiği
+const EN_A1_PRACTICE_DATA: Record<string, { scenario: string, targetPhrases: string[], example: string }> = {
+    "en-a1-101": { scenario: "Meeting someone for the first time", targetPhrases: ["Hello", "Hi", "My name is...", "Nice to meet you", "How are you?", "Goodbye"], example: "Hello, my name is John. Nice to meet you!" },
+    "en-a1-102": { scenario: "Saying numbers in a shop", targetPhrases: ["One, two, three...", "How many?", "I have...", "Ten, twenty"], example: "I have five apples, please." },
+    "en-a1-103": { scenario: "Describing your family", targetPhrases: ["Mother", "Father", "Brother", "Sister", "This is my...", "I have..."], example: "This is my sister. Her name is Sarah." },
+    "en-a1-104": { scenario: "Talking about colors", targetPhrases: ["Red", "Blue", "Green", "What color is it?", "It is...", "My favorite color is..."], example: "The sky is blue today." },
+    "en-a1-105": { scenario: "Ordering food", targetPhrases: ["I like...", "I want...", "Bread", "Fruit", "Vegetables", "Can I have...?"], example: "I like pizza and pasta." },
+    "en-a1-106": { scenario: "Asking for a drink", targetPhrases: ["Water", "Coffee", "Tea", "Milk", "I drink...", "Would you like...?"], example: "I drink coffee every morning." },
+    "en-a1-107": { scenario: "Talking about dates", targetPhrases: ["Monday, Tuesday...", "January, February...", "When is...?", "Today is..."], example: "My birthday is in June." },
+    "en-a1-108": { scenario: "Buying things with larger numbers", targetPhrases: ["Thirty", "Fifty", "One hundred", "How much is it?", "It costs..."], example: "This shirt costs forty dollars." },
+    "en-a1-109": { scenario: "Describing your house", targetPhrases: ["Kitchen", "Bedroom", "Bathroom", "Living room", "In the...", "There is..."], example: "There is a bed in my bedroom." },
+    "en-a1-110": { scenario: "Talking about furniture", targetPhrases: ["Table", "Chair", "Bed", "Sofa", "Desk", "Where is the...?"], example: "The book is on the desk." },
+    "en-a1-111": { scenario: "Describing body parts", targetPhrases: ["Head", "Eyes", "Arms", "Legs", "Hand", "My ... hurts", "I have ... eyes"], example: "My head hurts today." },
+    "en-a1-112": { scenario: "Talking about what you're wearing", targetPhrases: ["Shirt", "Pants", "Dress", "Shoes", "I am wearing...", "Blue/Red shirt"], example: "I am wearing a black jacket." },
+    "en-a1-113": { scenario: "Talking about pets", targetPhrases: ["Dog", "Cat", "Bird", "Fish", "I have a...", "My pet is..."], example: "I have a small cat named Luna." },
+    "en-a1-114": { scenario: "Talking about what people do", targetPhrases: ["Doctor", "Teacher", "Nurse", "Engineer", "I am a...", "What is your job?"], example: "My father is an engineer." },
+    "en-a1-115": { scenario: "Asking about city locations", targetPhrases: ["School", "Hospital", "Bank", "Park", "Where is the...?", "Next to/Near"], example: "The park is next to the bank." },
+    "en-a1-116": { scenario: "Talking about travel", targetPhrases: ["Car", "Bus", "Train", "Plane", "By bus/car", "How do you go to...?"], example: "I go to school by bus." },
+    "en-a1-117": { scenario: "Describing your day", targetPhrases: ["Wake up", "Eat breakfast", "Go to work", "Go to sleep", "At ... o'clock", "Every day"], example: "I wake up at seven o'clock every day." },
+    "en-a1-118": { scenario: "Asking for the time", targetPhrases: ["What time is it?", "It is ... o'clock", "Half past...", "Quarter past/to"], example: "It is half past ten." },
+    "en-a1-119": { scenario: "Talking about the weather", targetPhrases: ["Sunny", "Rainy", "Cloudy", "Cold/Hot", "How is the weather?", "It is..."], example: "It is very sunny and hot today." },
+    "en-a1-120": { scenario: "Sharing interests", targetPhrases: ["I like...", "My hobby is...", "Playing sports", "Reading", "Do you like...?"], example: "I like playing football with my friends." },
+    "en-a1-121": { scenario: "Expressing how you feel", targetPhrases: ["Happy", "Sad", "Angry", "Tired", "Excited", "How do you feel?", "I am..."], example: "I am very excited about the party!" },
+    "en-a1-122": { scenario: "Talking about school life", targetPhrases: ["Book", "Pen", "Classroom", "Student", "Open your...", "I study..."], example: "There are twenty students in my classroom." },
+    "en-a1-123": { scenario: "Talking about celebrations", targetPhrases: ["Birthday", "Holiday", "Christmas", "Party", "Happy...!", "We celebrate..."], example: "We go on holiday in the summer." },
+    "en-a1-124": { scenario: "Saying where you are from", targetPhrases: ["Country", "Nationality", "I am from...", "I am [Turkish/English]", "Where are you from?"], example: "I am from Turkey. I am Turkish." },
+    "en-a1-125": { scenario: "Using simple actions", targetPhrases: ["Go", "Come", "Eat", "Sleep", "Make", "Do", "I [verb] every day"], example: "I make dinner for my family." },
+    "en-a1-126": { scenario: "Talking about habits", targetPhrases: ["Always", "Never", "Sometimes", "Usually", "I work...", "She works..."], example: "She usually reads books in the evening." },
+    "en-a1-127": { scenario: "Describing what's happening now", targetPhrases: ["I am ...ing", "You are ...ing", "He is ...ing", "Right now", "Look!"], example: "I am studying English right now." },
+    "en-a1-128": { scenario: "Describing things with opposites", targetPhrases: ["Big/Small", "Good/Bad", "Old/New", "Fast/Slow", "Very [adjective]"], example: "This is a very big and beautiful city." },
+    "en-a1-129": { scenario: "Saying where things are", targetPhrases: ["In", "On", "At", "Under", "Behind", "In front of", "The ... is ... the ..."], example: "The keys are on the table." },
+    "en-a1-130": { scenario: "Reviewing A1 level topics", targetPhrases: ["Hello", "I am...", "I live in...", "I like...", "I can...", "Yesterday", "Now"], example: "Hello, I am a student and I like reading books." },
+};
+
+// İngilizce A2 pratiği
+const EN_A2_PRACTICE_DATA: Record<string, { scenario: string, targetPhrases: string[], example: string }> = {
+    "en-a2-131": { scenario: "Talking about what you did yesterday", targetPhrases: ["I watched...", "I played...", "I visited...", "Yesterday", "Last night", "-ed verbs"], example: "I watched a movie at home yesterday." },
+    "en-a2-132": { scenario: "Talking about past events with irregular verbs", targetPhrases: ["I went...", "I saw...", "I had...", "I did...", "I ate...", "Last weekend"], example: "I went to the park and saw my friends." },
+    "en-a2-133": { scenario: "Ordering a meal at a restaurant", targetPhrases: ["I'd like to order...", "Can I have...?", "The bill, please", "Anything else?", "To drink?"], example: "I'd like to order the grilled chicken, please." },
+    "en-a2-134": { scenario: "Shopping for clothes and asking about price", targetPhrases: ["How much is this?", "Do you have it in [size]?", "Can I try it on?", "Which one?", "Too expensive"], example: "How much is this blue shirt? Can I try it on?" },
+    "en-a2-135": { scenario: "Discussing your next holiday plans", targetPhrases: ["I'm going to visit...", "I'm planning to...", "How long stay?", "Next summer", "Where going?"], example: "I'm going to visit London next summer with my family." },
+    "en-a2-136": { scenario: "Booking a room at a hotel", targetPhrases: ["I'd like to book a room", "Double/Single room", "How many nights?", "Is breakfast included?", "Checking in"], example: "I'd like to book a double room for three nights, please." },
+    "en-a2-137": { scenario: "Checking in at the airport", targetPhrases: ["Here is my passport", "Boarding pass", "Gate number", "Check-in counter", "Window seat"], example: "Where is the check-in counter for my flight?" },
+    "en-a2-138": { scenario: "Describing your symptoms to a doctor", targetPhrases: ["I have a headache", "My throat hurts", "I feel tired", "How long?", "I have a fever"], example: "I have a terrible headache and I feel very tired." },
+    "en-a2-139": { scenario: "Buying medicine at a pharmacy", targetPhrases: ["I need something for a cold", "How often should I take it?", "Twice a day", "Medicine", "Pharmacist"], example: "I need something for a cold. How often should I take this medicine?" },
+    "en-a2-140": { scenario: "Talking about your job and workplace", targetPhrases: ["I'm a [job name]", "I work as a...", "Where do you work?", "It's my dream job", "Software engineer"], example: "I work as a teacher in a high school." },
+    "en-a2-141": { scenario: "Answering questions in a job interview", targetPhrases: ["I have experience in...", "My strengths are...", "Why want this job?", "Challenges", "Experience"], example: "I have three years of experience in marketing." },
+    "en-a2-142": { scenario: "Making a formal phone call", targetPhrases: ["Hello, this is [name]", "Can I speak to...?", "Can I take a message?", "Hold a moment", "Call back"], example: "Hello, this is Mark. Can I speak to the manager, please?" },
+    "en-a2-143": { scenario: "Asking and giving info about emails", targetPhrases: ["Did you see the email?", "I attached the file", "Please reply", "Send an email", "Check your inbox"], example: "I attached the report to the email I sent yesterday." },
+    "en-a2-144": { scenario: "Expressing how you feel about something", targetPhrases: ["I'm feeling nervous", "I'm excited about...", "Don't worry", "Surprised", "Disappointed"], example: "I'm very excited about our trip next week!" },
+    "en-a2-145": { scenario: "Describing the personality of a friend", targetPhrases: ["He/She is [adjective]", "Friendly/Shy", "Kind/Generous", "Hardworking", "Honest"], example: "My best friend is very kind and hardworking." },
+    "en-a2-146": { scenario: "Talking about your sports routine", targetPhrases: ["I play tennis", "I go to the gym", "Do yoga", "Twice a week", "Every morning", "Fitness"], example: "I go to the gym three times a week to stay fit." },
+    "en-a2-147": { scenario: "Sharing your interests in music and art", targetPhrases: ["I play the guitar", "I love concerts", "Visit a museum", "Listen to...", "Artist/Band"], example: "I love listening to rock music and I play the guitar." },
+    "en-a2-148": { scenario: "Talking about a movie or series you like", targetPhrases: ["Action movie", "The plot is...", "Have you seen...?", "My favorite show", "Ending"], example: "The plot of this movie is really interesting and exciting." },
+    "en-a2-149": { scenario: "Discussing the tech gadgets you use", targetPhrases: ["I need to update...", "Connect to wifi", "Download an app", "Smartphone", "Laptop"], example: "Can you help me connect to the wifi on my new laptop?" },
+    "en-a2-150": { scenario: "Talking about your social media habits", targetPhrases: ["I posted a photo", "How many followers?", "Share/Like/Comment", "Instagram/Facebook", "Profile"], example: "I post photos of my travels on Instagram every week." },
+    "en-a2-151": { scenario: "Talking about living in an apartment", targetPhrases: ["Rent an apartment", "Landlord", "Furniture", "Moving in", "Balcony/Kitchen"], example: "I'm moving into a new apartment next month." },
+    "en-a2-152": { scenario: "Discussing how to save the planet", targetPhrases: ["Recycle more", "Climate change", "Pollution", "Nature", "Protecting", "Save energy"], example: "We should recycle paper and plastic to protect the nature." },
+    "en-a2-153": { scenario: "Talking about a news story you read", targetPhrases: ["Did you see the news?", "The headline is...", "Reporter/Article", "Breakthrough", "Interesting"], example: "I read an interesting news article about space travel today." },
+    "en-a2-154": { scenario: "Describing a tradition from your country", targetPhrases: ["It's a tradition in...", "We celebrate...", "Special food", "Customs", "Festival/Holiday"], example: "We celebrate Bayram with our families every year." },
+    "en-a2-155": { scenario: "Talking about your life experiences", targetPhrases: ["I have never...", "Have you ever...?", "I've been to...", "Twice/Many times", " 경험"], example: "I have been to London three times. It's a great city!" },
+    "en-a2-156": { scenario: "Comparing two cities or items", targetPhrases: ["Bigger than...", "More expensive", "Better/Worse", "Fastest", "Comparison"], example: "London is much bigger than Oxford, isn't it?" },
+    "en-a2-157": { scenario: "Talking about the best of everything", targetPhrases: ["The best...", "The most beautiful", "The tallest", "In the world", "Superlative"], example: "This is the most beautiful place I've ever seen." },
+    "en-a2-158": { scenario: "Giving advice or talking about rules", targetPhrases: ["You should...", "You must...", "Could you...?", "I might...", "Possibility/Advice"], example: "You should see a doctor if you feel sick." },
+    "en-a2-159": { scenario: "Confirming info with tag questions", targetPhrases: ["..., isn't it?", "..., don't you?", "..., can't you?", "Checking facts", "Right?"], example: "It's a beautiful day, isn't it?" },
+    "en-a2-160": { scenario: "Reviewing everything from A2 level", targetPhrases: ["I've learned...", "Improvements", "難しい(Hard)", "Vocabulary/Grammar", "Next level"], example: "I've learned a lot of new things in English this year." },
+};
+
 // Ünite pratiği için özel prompt oluştur
 function buildUnitPracticePrompt(language: string, level: string, scene: Scene): string {
     const langInfo = LANGUAGE_NAMES[language] || LANGUAGE_NAMES['es'];
@@ -536,6 +678,10 @@ function buildUnitPracticePrompt(language: string, level: string, scene: Scene):
         unitData = ES_A2_PRACTICE_DATA[scene.systemPrompt];
     } else if (scene.systemPrompt.startsWith("es-a1-")) {
         unitData = ES_A1_PRACTICE_DATA[scene.systemPrompt];
+    } else if (scene.systemPrompt.startsWith("en-a2-")) {
+        unitData = EN_A2_PRACTICE_DATA[scene.systemPrompt];
+    } else if (scene.systemPrompt.startsWith("en-a1-")) {
+        unitData = EN_A1_PRACTICE_DATA[scene.systemPrompt];
     }
 
     // Varsayılan veri
@@ -550,8 +696,8 @@ function buildUnitPracticePrompt(language: string, level: string, scene: Scene):
     const phrasesFormatted = unitData.targetPhrases.map(p => `• ${p}`).join("\n");
 
     // Dil adını belirle
-    const languageName = language === 'fr' ? 'FRANSIZCA' : language === 'es' ? 'İSPANYOLCA' : langInfo.native.toUpperCase();
-    const languageNative = language === 'fr' ? 'Fransızca' : language === 'es' ? 'İspanyolca' : langInfo.native;
+    const languageName = language === 'fr' ? 'FRANSIZCA' : language === 'es' ? 'İSPANYOLCA' : language === 'en' ? 'İNGİLİZCE' : langInfo.native.toUpperCase();
+    const languageNative = language === 'fr' ? 'Fransızca' : language === 'es' ? 'İspanyolca' : language === 'en' ? 'İngilizce' : langInfo.native;
 
     return `Sen ${languageNative} öğreten bir AI asistanısın. Kullanıcı "${scene.titleTr}" ünitesini pratik yapmak istiyor.
 Seviye: ${level}

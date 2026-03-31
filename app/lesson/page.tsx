@@ -75,29 +75,6 @@ function LessonContent() {
     if (isFinished && questions.length > 0) {
       const isGameOver = hearts === 0;
       if (!isGameOver) {
-        // Calculate stats
-        const wrongAnswers = 5 - hearts;
-        // Note: index represents the last question index we saw. 
-        // If we finished successfully, we answered all questions.
-        // However, Render logic uses 'index' which might be confusing.
-        // Let's rely on questions.length since we are successful.
-
-        const totalQuestions = questions.length;
-        const correctAnswers = totalQuestions - wrongAnswers; // Simplified approximation or we can track 'correctCount' state explicitly in future.
-
-        // Re-using the render logic's approximation:
-        // In render: correctAnswers = Math.max(0, index - wrongAnswers + (status === ... ? 1 : 0));
-        // When finished via onNext from last question, index is questions.length - 1. status is 'correct'/'wrong'.
-        // Wait, 'status' resets to 'none' in onNext?
-        // No, onNext sets status to 'none'.
-        // So 'status' is 'none' when isFinished becoming true via onNext.
-
-        // Let's count correct answers more reliably:
-        // We know total questions = questions.length
-        // We know wrong answers = wrongCount (which I see is tracked in state!)
-        // So correct = total - wrongCount (assuming we only proceeded after correct or finished with failure)
-        // Actually onCheck increments wrongCount.
-
         const correct = Math.max(0, questions.length - wrongCount);
         const accuracy = Math.round((correct / questions.length) * 100);
         const xp = correct + (accuracy >= 80 ? 5 : 0);
@@ -117,8 +94,12 @@ function LessonContent() {
 
   // Ünite ve quiz değiştiğinde soruları yükle
   useEffect(() => {
-    const loadedQuestions = getQuestionsForUnit(unitId, quizIndex);
-    setQuestions(loadedQuestions);
+    const fetchQuestions = async () => {
+      const loadedQuestions = await getQuestionsForUnit(unitId, quizIndex);
+      setQuestions(loadedQuestions);
+    };
+
+    fetchQuestions();
     setIndex(0);
     setSelectedOption(null);
     setTextInput("");
@@ -159,7 +140,6 @@ function LessonContent() {
       setUnitTitle(`${unit.title} - Quiz ${quizIndex}`);
     }
   }, [unitId, quizIndex]);
-
 
   const challenge = questions[index];
   const progress = questions.length > 0 ? ((index + 1) / questions.length) * 100 : 0;

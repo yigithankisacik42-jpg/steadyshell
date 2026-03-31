@@ -7,7 +7,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ShelldonAvatar } from "@/components/shelldon-avatar";
 import { Scene3D } from "@/components/scene-3d";
-import { SHELLDON_SCENARIOS, buildShelldonPrompt, buildFeedbackPrompt, buildHintPrompt, type ShelldonScenario } from "@/lib/shelldon-ai";
+import { SHELLDON_SCENARIOS, buildShelldonPrompt, buildFeedbackPrompt, buildHintPrompt, type ShelldonScenario, type ShelldonPracticeMode } from "@/lib/shelldon-ai";
 import { useSpeech } from "@/lib/use-speech";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -18,6 +18,12 @@ const LANGUAGES = [
     { code: "fr", name: "Fransızca", flag: "🇫🇷" },
     { code: "es", name: "İspanyolca", flag: "🇪🇸" },
     { code: "en", name: "İngilizce", flag: "🇬🇧" },
+];
+
+const PRACTICE_MODES: { id: ShelldonPracticeMode; label: string; description: string; icon: string }[] = [
+    { id: "speaking", label: "Konuşma", description: "Doğal diyalog ve akıcılık", icon: "💬" },
+    { id: "vocab", label: "Kelime", description: "Hedef kelimelerle pratik", icon: "📚" },
+    { id: "grammar", label: "Gramer", description: "Tek yapı, net örnek", icon: "🧩" },
 ];
 
 interface Correction {
@@ -105,6 +111,7 @@ function UserMessageBubble({ content, corrections }: { content: string, correcti
 export default function ShelldonPage() {
     // === STATE ===
     const [selectedLang, setSelectedLang] = useState("");
+    const [practiceMode, setPracticeMode] = useState<ShelldonPracticeMode>("speaking");
     const [selectedScenario, setSelectedScenario] = useState<ShelldonScenario | null>(null);
     const [isInChat, setIsInChat] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
@@ -127,6 +134,7 @@ export default function ShelldonPage() {
     const [completedObjectives, setCompletedObjectives] = useState<number[]>([]);
     const [sessionSummary, setSessionSummary] = useState<string | null>(null);
     const [sessionGoal, setSessionGoal] = useState<string | null>(null);
+    const [repeatQueue, setRepeatQueue] = useState<string[]>([]);
     
     // Slash commands state
     const [showCommandMenu, setShowCommandMenu] = useState(false);
@@ -160,6 +168,7 @@ export default function ShelldonPage() {
     });
 
     const MAX_TURNS = 3;
+    const practiceModeLabel = PRACTICE_MODES.find((mode) => mode.id === practiceMode)?.label ?? "Konuşma";
 
     const buildLessonContext = useCallback(
         (langCode: string, levelCode: string) => {
@@ -250,12 +259,13 @@ export default function ShelldonPage() {
         setCompletedObjectives([]);
         setSessionSummary(null);
         setSessionGoal(null);
+        setRepeatQueue([]);
 
         try {
             const langCode = selectedLang || currentLanguage.code;
             const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
             const lessonContext = buildLessonContext(langCode, levelCode);
-            const systemPrompt = buildShelldonPrompt(langCode, levelCode, scenario, lessonContext);
+            const systemPrompt = buildShelldonPrompt(langCode, levelCode, scenario, lessonContext, practiceMode);
             const response = await fetch("/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -287,8 +297,8 @@ export default function ShelldonPage() {
                     setCompletedObjectives(parsed.completedObjectives);
                 }
                 // Parse and strip inner corrections if AI started with errors right away (rare on first load)
-                const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanlış:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?=\n\n|\n?$|$)/gi;
-                let cleanAiMessage = aiMessage.replace(correctionRegex, "").replace(/💡\s*(Küçük bir d|D)üzeltme:?\s*\n?/gi, "").trim();
+                const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanl(?:i|ı)ş:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?:\n\s*Örnek:?\s*[\s\S]*?)?(?:\n\s*Şimdi sen:?\s*[\s\S]*?)?(?=\n\n|\n?$|$)/gi;
+                let cleanAiMessage = aiMessage.replace(correctionRegex, "").replace(/💡[^\n]*\n?/gi, "").trim();
                 aiMessage = cleanAiMessage;
             } catch (e) {
                 // Eğer AI JSON döndürmediyse düz metni al
@@ -326,6 +336,7 @@ export default function ShelldonPage() {
         if (messageText.startsWith("/clear")) {
             setMessages([]);
             setTurnCount(0);
+            setRepeatQueue([]);
             setIsLoading(false);
             setShelldonState("idle");
             return;
@@ -358,7 +369,7 @@ export default function ShelldonPage() {
             const langCode = selectedLang || currentLanguage.code;
             const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
             const lessonContext = buildLessonContext(langCode, levelCode);
-            let systemPrompt = buildShelldonPrompt(langCode, levelCode, selectedScenario, lessonContext);
+            let systemPrompt = buildShelldonPrompt(langCode, levelCode, selectedScenario, lessonContext, practiceMode);
             
             // Hafıza (Memory) Enjeksiyonu
             if (userMemory && !isSystemCommand) {
@@ -434,7 +445,7 @@ export default function ShelldonPage() {
 
             // --- INLINE CORRECTION PARSING LOGIC ---
             const corrections: Correction[] = [];
-            const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanlış:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?=\n\n|\n?$|$)/gi;
+            const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanl(?:i|ı)ş:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?:\n\s*Örnek:?\s*[\s\S]*?)?(?:\n\s*Şimdi sen:?\s*[\s\S]*?)?(?=\n\n|\n?$|$)/gi;
             let match;
             while ((match = correctionRegex.exec(aiMessage)) !== null) {
                 if (match[1] && match[2] && match[3]) {
@@ -448,7 +459,21 @@ export default function ShelldonPage() {
 
             let cleanAiMessage = aiMessage;
             if (corrections.length > 0) {
-                cleanAiMessage = aiMessage.replace(correctionRegex, "").replace(/💡\s*(Küçük bir d|D)üzeltme:?\s*\n?/gi, "").trim();
+                setRepeatQueue((prev) => {
+                    const next = [...prev];
+                    corrections.forEach((corr) => {
+                        const phrase = corr.right.trim();
+                        if (!phrase) return;
+                        const existingIndex = next.indexOf(phrase);
+                        if (existingIndex !== -1) {
+                            next.splice(existingIndex, 1);
+                        }
+                        next.push(phrase);
+                    });
+                    return next.slice(-5);
+                });
+
+                cleanAiMessage = aiMessage.replace(correctionRegex, "").replace(/💡[^\n]*\n?/gi, "").trim();
                 
                 // Attach corrections to the last user message
                 setMessages(prev => {
@@ -639,6 +664,12 @@ export default function ShelldonPage() {
         }
     };
 
+    const handleRepeatClick = (phrase: string) => {
+        if (isLoading) return;
+        setRepeatQueue((prev) => prev.filter((item) => item !== phrase));
+        handleSendMessage(phrase);
+    };
+
     // === GERİ DÖN ===
     const goBack = () => {
         if (messages.length > 2) {
@@ -662,6 +693,7 @@ export default function ShelldonPage() {
         setSessionGoal(null);
         setTurnCount(0);
         setSelectedImage(null);
+        setRepeatQueue([]);
     };
 
     // =============================================
@@ -763,6 +795,7 @@ export default function ShelldonPage() {
                             setSessionGoal(null);
                             setTurnCount(0);
                             setMessages([]);
+                            setRepeatQueue([]);
                             if (selectedScenario) startScenario(selectedScenario);
                         }}
                         className="flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl py-5 font-bold shadow-lg"
@@ -807,7 +840,7 @@ export default function ShelldonPage() {
                                         {selectedScenario.titleTr}
                                     </h1>
                                     <p className="text-[11px] text-slate-400 font-medium">
-                                        Mikro pratik • Tur {Math.min(turnCount + 1, MAX_TURNS)}/{MAX_TURNS}
+                                        Mikro pratik • {practiceModeLabel} • Tur {Math.min(turnCount + 1, MAX_TURNS)}/{MAX_TURNS}
                                     </p>
                                 </div>
                             </div>
@@ -985,8 +1018,24 @@ export default function ShelldonPage() {
                             <p className="text-xs text-rose-500 font-bold text-center mb-2">⚠️ {speechError}</p>
                         )}
 
+                        {/* Hata tekrarları */}
+                        {repeatQueue.length > 0 && (
+                            <div className="flex gap-2 overflow-x-auto pb-3 scrollbar-hide">
+                                {repeatQueue.map((phrase, i) => (
+                                    <button
+                                        key={`${phrase}-${i}`}
+                                        onClick={() => handleRepeatClick(phrase)}
+                                        disabled={isLoading}
+                                        className="shrink-0 px-3 py-1.5 bg-amber-50 text-amber-800 text-xs font-bold rounded-full border border-amber-200 hover:bg-amber-100 transition-colors disabled:opacity-50 whitespace-nowrap"
+                                    >
+                                        Tekrar: {phrase}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+
                         {/* Öneri cümleleri */}
-                        {suggestions.length > 0 && turnCount < 3 && (
+                        {suggestions.length > 0 && turnCount < MAX_TURNS && (
                             <div className="flex gap-2 overflow-x-auto pb-3 scrollbar-hide">
                                 {suggestions.map((phrase, i) => (
                                     <button
@@ -1218,11 +1267,46 @@ export default function ShelldonPage() {
                     </div>
                 </section>
 
-                {/* Step 2: Senaryo Seçimi */}
+                {/* Step 2: Hedef Seçimi */}
                 {selectedLang && (
                     <section className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                         <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                             <span className="w-6 h-6 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-xs font-black">2</span>
+                            Hedef Seç
+                        </h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            {PRACTICE_MODES.map((mode) => (
+                                <button
+                                    key={mode.id}
+                                    onClick={() => setPracticeMode(mode.id)}
+                                    className={cn(
+                                        "group bg-white hover:bg-emerald-50 border border-slate-100 hover:border-emerald-200 rounded-2xl p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10 border-b-4",
+                                        practiceMode === mode.id
+                                            ? "border-emerald-300 bg-emerald-50 shadow-lg shadow-emerald-500/10"
+                                            : "border-b-slate-100 hover:border-b-emerald-300"
+                                    )}
+                                >
+                                    <div className="flex items-center justify-between mb-2">
+                                        <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
+                                            {mode.icon}
+                                        </div>
+                                        {practiceMode === mode.id && <Check className="w-4 h-4 text-emerald-500" />}
+                                    </div>
+                                    <div className="text-slate-700 font-bold text-sm mb-1">{mode.label}</div>
+                                    <div className="text-slate-400 text-[11px] leading-relaxed">
+                                        {mode.description}
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+                    </section>
+                )}
+
+                {/* Step 3: Senaryo Seçimi */}
+                {selectedLang && (
+                    <section className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                            <span className="w-6 h-6 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-xs font-black">3</span>
                             Senaryo Seç
                         </h3>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">

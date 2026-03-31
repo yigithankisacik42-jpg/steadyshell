@@ -143,7 +143,38 @@ export const frA2Videos: UnitVideo[] = [
 ];
 
 // ====== İNGİLİZCE VİDEOLARI ======
-export const enA1Videos: UnitVideo[] = [];
+export const enA1Videos: UnitVideo[] = [
+    { unitId: 101, youtubeId: "", title: "To Be (Am, Is, Are)", level: "A1" },
+    { unitId: 102, youtubeId: "", title: "There Is / There Are", level: "A1" },
+    { unitId: 103, youtubeId: "", title: "Possessive Adjectives", level: "A1" },
+    { unitId: 104, youtubeId: "", title: "Articles (A, An, The)", level: "A1" },
+    { unitId: 105, youtubeId: "", title: "Some and Any", level: "A1" },
+    { unitId: 106, youtubeId: "", title: "Countable & Uncountable", level: "A1" },
+    { unitId: 107, youtubeId: "", title: "Prepositions of Time", level: "A1" },
+    { unitId: 108, youtubeId: "", title: "Sıra Sayıları", level: "A1" },
+    { unitId: 109, youtubeId: "", title: "Yer Edatları", level: "A1" },
+    { unitId: 110, youtubeId: "", title: "Demonstratives (This/That)", level: "A1" },
+    { unitId: 111, youtubeId: "", title: "Sahiplik (Have/Has got)", level: "A1" },
+    { unitId: 112, youtubeId: "", title: "Çoğul İsimler", level: "A1" },
+    { unitId: 113, youtubeId: "", title: "Sıfat Sıralaması", level: "A1" },
+    { unitId: 114, youtubeId: "", title: "Can (Yetenek)", level: "A1" },
+    { unitId: 115, youtubeId: "", title: "Emir Kipi (Imperatives)", level: "A1" },
+    { unitId: 116, youtubeId: "", title: "Hareket Edatları", level: "A1" },
+    { unitId: 117, youtubeId: "", title: "Present Simple", level: "A1" },
+    { unitId: 118, youtubeId: "", title: "Saat Söyleme", level: "A1" },
+    { unitId: 119, youtubeId: "", title: "Hava Durumu", level: "A1" },
+    { unitId: 120, youtubeId: "", title: "Like + -ing Fiiller", level: "A1" },
+    { unitId: 121, youtubeId: "", title: "Feel + Adjective", level: "A1" },
+    { unitId: 122, youtubeId: "", title: "Nesne Zamirleri", level: "A1" },
+    { unitId: 123, youtubeId: "", title: "Would Like (Kibar İstek)", level: "A1" },
+    { unitId: 124, youtubeId: "", title: "Where are you from?", level: "A1" },
+    { unitId: 125, youtubeId: "", title: "Present Simple Tam Yapı", level: "A1" },
+    { unitId: 126, youtubeId: "", title: "Sıklık Zarfları", level: "A1" },
+    { unitId: 127, youtubeId: "", title: "Şimdiki Zaman", level: "A1" },
+    { unitId: 128, youtubeId: "", title: "Karşılaştırma Sıfatları", level: "A1" },
+    { unitId: 129, youtubeId: "", title: "Edatlar Genel Tekrar", level: "A1" },
+    { unitId: 130, youtubeId: "", title: "A1 Genel Tekrar", level: "A1" },
+];
 export const enA2Videos: UnitVideo[] = [];
 
 // Tüm videoları birleştir (İspanyolca)

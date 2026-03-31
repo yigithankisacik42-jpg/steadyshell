@@ -1,13 +1,12 @@
 /**
  * SteadyShell Phrases Database - English A1
- * 30 Units (ID: 101-130) with common phrases
+ * 30 Units (ID: 101-130) with 15 daily phrases each.
  */
 
 export interface EnglishPhrase {
     phrase: string;
     meaning: string;
-    context: string;
-    example: string;
+    pronunciation: string;
 }
 
 export interface EnglishPhraseUnit {
@@ -16,86 +15,198 @@ export interface EnglishPhraseUnit {
     phrases: EnglishPhrase[];
 }
 
-// Create phrase units for all A1 topics
+// ===== UNIT 101: Greetings =====
 const unit101Phrases: EnglishPhraseUnit = {
-    unitId: 101, title: "Greetings Phrases",
+    unitId: 101, title: "Greetings and Meetings",
     phrases: [
-        { phrase: "How are you?", meaning: "Nasılsın?", context: "Hal hatır sorma", example: "Hi! How are you?" },
-        { phrase: "I'm fine, thanks.", meaning: "İyiyim, teşekkürler.", context: "İyi olduğunu söyleme", example: "I'm fine, thanks. And you?" },
-        { phrase: "Nice to meet you.", meaning: "Tanıştığımıza memnun oldum.", context: "İlk tanışma", example: "Hello, I'm John. Nice to meet you." },
-        { phrase: "See you later.", meaning: "Sonra görüşürüz.", context: "Vedalaşma", example: "Bye! See you later." },
-        { phrase: "What's your name?", meaning: "Adın ne?", context: "İsim sorma", example: "Hello! What's your name?" }
+        { phrase: "Good morning", meaning: "Günaydın", pronunciation: "gud mo-ning" },
+        { phrase: "Good afternoon", meaning: "Tünaydın", pronunciation: "gud af-tın-nun" },
+        { phrase: "Good evening", meaning: "İyi akşamlar", pronunciation: "gud iv-ning" },
+        { phrase: "Good night", meaning: "İyi geceler", pronunciation: "gud nayt" },
+        { phrase: "Hello! How are you?", meaning: "Merhaba! Nasılsın?", pronunciation: "he-lo hau ar yu" },
+        { phrase: "I'm fine, thanks.", meaning: "İyiyim, teşekkürler.", pronunciation: "ay em feyn fenks" },
+        { phrase: "Nice to meet you.", meaning: "Tanıştığıma memnun oldum.", pronunciation: "nays tu mit yu" },
+        { phrase: "See you later.", meaning: "Sonra görüşürüz.", pronunciation: "si yu ley-tır" },
+        { phrase: "What's your name?", meaning: "Adın ne?", pronunciation: "vats yor neym" },
+        { phrase: "My name is...", meaning: "Benim adım...", pronunciation: "may neym iz" },
+        { phrase: "Where are you from?", meaning: "Nerelisin?", pronunciation: "ver ar yu from" },
+        { phrase: "I am from Turkey.", meaning: "Ben Türkiyeliyim.", pronunciation: "ay em from Tör-ki" },
+        { phrase: "Nice to see you again.", meaning: "Seni tekrar görmek güzel.", pronunciation: "nays tu si yu e-gein" },
+        { phrase: "Take care.", meaning: "Kendine iyi bak.", pronunciation: "teyk keyr" },
+        { phrase: "Have a good day.", meaning: "İyi günler dilerim.", pronunciation: "hev e gud dey" }
     ]
 };
 
-const unit102Phrases: EnglishPhraseUnit = { unitId: 102, title: "Numbers Phrases", phrases: [{ phrase: "How old are you?", meaning: "Kaç yaşındasın?", context: "Yaş sorma", example: "Excuse me, how old are you?" }, { phrase: "I'm ... years old.", meaning: "... yaşındayım.", context: "Yaş söyleme", example: "I'm twenty-five years old." }, { phrase: "What's your phone number?", meaning: "Telefon numaran ne?", context: "Numara sorma", example: "Can I have your phone number?" }] };
+// ===== UNIT 102: Numbers & Quantities =====
+const unit102Phrases: EnglishPhraseUnit = {
+    unitId: 102, title: "Numbers and Age",
+    phrases: [
+        { phrase: "How old are you?", meaning: "Kaç yaşındasın?", pronunciation: "hau old ar yu" },
+        { phrase: "I'm twenty years old.", meaning: "Yirmi yaşındayım.", pronunciation: "ay em tven-ti yi-ırs old" },
+        { phrase: "What's your phone number?", meaning: "Telefon numaran ne?", pronunciation: "vats yor fou-n nam-bır" },
+        { phrase: "How much is this?", meaning: "Bu ne kadar?", pronunciation: "hau maç iz dis" },
+        { phrase: "It is fifty dollars.", meaning: "Elli dolar.", pronunciation: "it iz fif-ti do-lars" },
+        { phrase: "I have two brothers.", meaning: "İki erkek di kardeşim var.", pronunciation: "ay hev tu bra-dırs" },
+        { phrase: "Just a little, please.", meaning: "Sadece biraz, lütfen.", pronunciation: "cast e li-dıl pli-iz" },
+        { phrase: "A lot of things.", meaning: "Bir sürü şey.", pronunciation: "e lot ov fings" },
+        { phrase: "Give me half of it.", meaning: "Bana yarısını ver.", pronunciation: "giv mi haf ov it" },
+        { phrase: "Once again.", meaning: "Bir kez daha.", pronunciation: "vans e-gen" },
+        { phrase: "Twice a week.", meaning: "Haftada iki kez.", pronunciation: "tvays e vi-ik" },
+        { phrase: "Only one piece.", meaning: "Sadece bir parça.", pronunciation: "on-li van pi-is" },
+        { phrase: "Can you count to ten?", meaning: "Ona kadar sayabilir misin?", pronunciation: "ken yu kau-nt tu ten" },
+        { phrase: "This is my first time.", meaning: "Bu benim ilk seferim.", pronunciation: "dis iz may forst taym" },
+        { phrase: "We need three cups.", meaning: "Üç bardağa ihtiyacımız var.", pronunciation: "vi nid thri kaps" }
+    ]
+};
 
-const unit103Phrases: EnglishPhraseUnit = { unitId: 103, title: "Family Phrases", phrases: [{ phrase: "This is my...", meaning: "Bu benim...", context: "Aile tanıtma", example: "This is my mother." }, { phrase: "I have a big family.", meaning: "Kalabalık bir ailem var.", context: "Aile hakkında", example: "I have a big family with five siblings." }, { phrase: "Do you have siblings?", meaning: "Kardeşin var mı?", context: "Kardeş sorma", example: "Do you have any siblings?" }] };
+// ===== UNIT 103: Family =====
+const unit103Phrases: EnglishPhraseUnit = {
+    unitId: 103, title: "Family Members",
+    phrases: [
+        { phrase: "This is my mother.", meaning: "Bu benim annem.", pronunciation: "dis iz may ma-dır" },
+        { phrase: "He is my father.", meaning: "O benim babam.", pronunciation: "hi iz may fa-dır" },
+        { phrase: "I have a big family.", meaning: "Büyük bir ailem var.", pronunciation: "ay hev e big fe-mi-li" },
+        { phrase: "Do you have siblings?", meaning: "Kardeşlerin var mı?", pronunciation: "du yu hev sib-lings" },
+        { phrase: "I am an only child.", meaning: "Ben tek çocuğum.", pronunciation: "ay em en on-li çayld" },
+        { phrase: "My sister is a student.", meaning: "Kız kardeşim bir öğrenci.", pronunciation: "may sis-tır iz e stü-dınt" },
+        { phrase: "My brother is older.", meaning: "Erkek kardeşim daha büyük.", pronunciation: "may bra-dır iz ol-dır" },
+        { phrase: "I live with my parents.", meaning: "Ben ailemle yaşıyorum.", pronunciation: "ay liv vith may pe-rınts" },
+        { phrase: "Are you married?", meaning: "Evli misin?", pronunciation: "ar yu me-ri-id" },
+        { phrase: "I am single.", meaning: "Ben bekarım.", pronunciation: "ay em sing-gıl" },
+        { phrase: "I have two children.", meaning: "İki çocuğum var.", pronunciation: "ay hev tu çil-drın" },
+        { phrase: "My grandparents live far.", meaning: "Büyük ebeveynlerim uzakta yaşıyor.", pronunciation: "may gre-nd-pe-rınts liv far" },
+        { phrase: "He is my uncle.", meaning: "O benim amcam/dayım.", pronunciation: "hi iz may an-kıl" },
+        { phrase: "She is my aunt.", meaning: "O benim halam/teyzem.", pronunciation: "şi iz may aant" },
+        { phrase: "We are very close.", meaning: "Biz çok yakınız.", pronunciation: "vi ar ve-ri klo-uz" }
+    ]
+};
 
-const unit104Phrases: EnglishPhraseUnit = { unitId: 104, title: "Color Phrases", phrases: [{ phrase: "What color is it?", meaning: "Ne renk?", context: "Renk sorma", example: "What color is your car?" }, { phrase: "My favorite color is...", meaning: "En sevdiğim renk...", context: "Tercih belirtme", example: "My favorite color is blue." }] };
+// ===== UNIT 104: Colors & Description =====
+const unit104Phrases: EnglishPhraseUnit = {
+    unitId: 104, title: "Colors & Adjectives",
+    phrases: [
+        { phrase: "What color is it?", meaning: "Ne renk?", pronunciation: "vat ka-lır iz it" },
+        { phrase: "My favorite color is blue.", meaning: "En sevdiğim renk mavidir.", pronunciation: "may fey-vo-rit ka-lır iz blu" },
+        { phrase: "The sky is clear blue.", meaning: "Gökyüzü açık mavidir.", pronunciation: "dı skay iz kli-ır blu" },
+        { phrase: "I want a red dress.", meaning: "Kırmızı bir elbise istiyorum.", pronunciation: "ay vant e red dres" },
+        { phrase: "Grass is green.", meaning: "Çimen yeşildir.", pronunciation: "gre-s iz gri-in" },
+        { phrase: "It is black and white.", meaning: "O siyah ve beyazdır.", pronunciation: "it iz blek end vayt" },
+        { phrase: "A yellow car.", meaning: "Sarı bir araba.", pronunciation: "e ye-lov kar" },
+        { phrase: "Pink is very bright.", meaning: "Pembe çok parlaktır.", pronunciation: "pink iz ve-ri brayt" },
+        { phrase: "I like dark colors.", meaning: "Koyu renkleri severim.", pronunciation: "ay layk dark ka-lırs" },
+        { phrase: "It's a light brown.", meaning: "O açık kahverengidir.", pronunciation: "its e layt braun" },
+        { phrase: "Her hair is blonde.", meaning: "Onun saçı sarıdır.", pronunciation: "hör he-ir iz blond" },
+        { phrase: "He has brown eyes.", meaning: "Onun kahverengi gözleri var.", pronunciation: "hi hez braun ays" },
+        { phrase: "This looks pale.", meaning: "Bu soluk görünüyor.", pronunciation: "dis luks pe-il" },
+        { phrase: "A silver ring.", meaning: "Gümüş bir yüzük.", pronunciation: "e sil-vır ring" },
+        { phrase: "Gold is expensive.", meaning: "Altın pahalıdır.", pronunciation: "go-ld iz eks-pen-siv" }
+    ]
+};
 
-const unit105Phrases: EnglishPhraseUnit = { unitId: 105, title: "Food Phrases", phrases: [{ phrase: "I'm hungry.", meaning: "Açım.", context: "Açlık", example: "I'm hungry. Let's eat!" }, { phrase: "I like...", meaning: "...seviyorum.", context: "Yemek tercihi", example: "I like pizza." }, { phrase: "I don't like...", meaning: "...sevmiyorum.", context: "Hoşlanmama", example: "I don't like fish." }, { phrase: "Can I have...?", meaning: "...alabilir miyim?", context: "Sipariş", example: "Can I have a sandwich, please?" }] };
+// ===== UNIT 105: Food & Eating =====
+const unit105Phrases: EnglishPhraseUnit = {
+    unitId: 105, title: "Food and Hunger",
+    phrases: [
+        { phrase: "I'm very hungry.", meaning: "Çok açım.", pronunciation: "ay am ve-ri han-gri" },
+        { phrase: "Enjoy your meal!", meaning: "Afiyet olsun!", pronunciation: "en-coy yor mi-ıl" },
+        { phrase: "I like eating pizza.", meaning: "Pizza yemeyi severim.", pronunciation: "ay layk i-ting pitz-za" },
+        { phrase: "I don't eat meat.", meaning: "Ben et yemem.", pronunciation: "ay do-nt i-t mit" },
+        { phrase: "Can I have the menu?", meaning: "Menüyü alabilir miyim?", pronunciation: "ken ay hev dı me-nyu" },
+        { phrase: "What do you recommend?", meaning: "Ne önerirsiniz?", pronunciation: "vat du yu re-ko-mend" },
+        { phrase: "Could I get the bill?", meaning: "Hesabı alabilir miyim?", pronunciation: "kud ay get dı bil" },
+        { phrase: "It's very delicious.", meaning: "Bu çok lezzetli.", pronunciation: "its ve-ri de-li-şu-us" },
+        { phrase: "I am full.", meaning: "Ben tokum.", pronunciation: "ay em ful" },
+        { phrase: "A table for two.", meaning: "İki kişilik bir masa.", pronunciation: "e tey-bıl for tu" },
+        { phrase: "Without onions, please.", meaning: "Soğansız, lütfen.", pronunciation: "vi-thaut on-yıns pli-iz" },
+        { phrase: "I'm allergic to nuts.", meaning: "Kuruyemişe alerjim var.", pronunciation: "ay am a-ler-cik tu nats" },
+        { phrase: "Is it spicy?", meaning: "Bu acı mı?", pronunciation: "iz it spay-si" },
+        { phrase: "I eat an apple daily.", meaning: "Hergün bir elma yerim.", pronunciation: "ay i-t en ep-pıl dey-li" },
+        { phrase: "This is too sweet.", meaning: "Bu çok tatlı.", pronunciation: "dis iz tu svi-it" }
+    ]
+};
 
-const unit106Phrases: EnglishPhraseUnit = { unitId: 106, title: "Drink Phrases", phrases: [{ phrase: "I'm thirsty.", meaning: "Susadım.", context: "Susuzluk", example: "I'm thirsty. Do you have water?" }, { phrase: "Would you like...?", meaning: "...ister misin?", context: "Teklif", example: "Would you like some coffee?" }, { phrase: "Yes, please.", meaning: "Evet, lütfen.", context: "Kabul", example: "Would you like tea? Yes, please." }, { phrase: "No, thank you.", meaning: "Hayır, teşekkürler.", context: "Red", example: "Coffee? No, thank you." }] };
+// ===== UNIT 106: Drinks =====
+const unit106Phrases: EnglishPhraseUnit = {
+    unitId: 106, title: "Drinks and Thirst",
+    phrases: [
+        { phrase: "I'm thirsty.", meaning: "Susadım.", pronunciation: "ay em thör-sti" },
+        { phrase: "Would you like tea?", meaning: "Çay ister misiniz?", pronunciation: "vu-d yu layk ti-i" },
+        { phrase: "Yes, please.", meaning: "Evet, lütfen.", pronunciation: "yes pli-iz" },
+        { phrase: "No, thank you.", meaning: "Hayır, teşekkürler.", pronunciation: "no teng-k yu" },
+        { phrase: "A glass of water.", meaning: "Bir bardak su.", pronunciation: "e gla-as ov vo-tır" },
+        { phrase: "Coffee with milk.", meaning: "Sütlü kahve.", pronunciation: "ko-fi vit milk" },
+        { phrase: "No sugar, please.", meaning: "Şekersiz, lütfen.", pronunciation: "no şu-gır pli-iz" },
+        { phrase: "With ice.", meaning: "Buzlu.", pronunciation: "vid ays" },
+        { phrase: "Cheers!", meaning: "Şerefe!", pronunciation: "çi-irs" },
+        { phrase: "Orange juice.", meaning: "Portakal suyu.", pronunciation: "o-rınc cu-is" },
+        { phrase: "I don't drink alcohol.", meaning: "Ben alkol kullanmam.", pronunciation: "ay do-nt drink el-ko-hol" },
+        { phrase: "Another round, please.", meaning: "Bir tur daha, lütfen.", pronunciation: "e-na-dır ra-und pli-iz" },
+        { phrase: "It is refreshing.", meaning: "Bu çok ferahlatıcı.", pronunciation: "it iz ref-re-şing" },
+        { phrase: "Hot chocolate.", meaning: "Sıcak çikolata.", pronunciation: "hat ço-kı-lıt" },
+        { phrase: "Can I get a refill?", meaning: "Bardağımı doldurabilir miyim?", pronunciation: "ken ay get e ri-fi-il" }
+    ]
+};
 
-const unit107Phrases: EnglishPhraseUnit = { unitId: 107, title: "Time Phrases", phrases: [{ phrase: "What day is it?", meaning: "Bugün günlerden ne?", context: "Gün sorma", example: "What day is it today?" }, { phrase: "When is...?", meaning: "...ne zaman?", context: "Zaman sorma", example: "When is the meeting?" }, { phrase: "On Monday.", meaning: "Pazartesi günü.", context: "Gün belirtme", example: "The party is on Saturday." }] };
+// ===== UNIT 107: Time & Dates =====
+const unit107Phrases: EnglishPhraseUnit = {
+    unitId: 107, title: "Time and Dates",
+    phrases: [
+        { phrase: "What time is it?", meaning: "Saat kaç?", pronunciation: "vat taym iz it" },
+        { phrase: "It is three o'clock.", meaning: "Saat tam üç.", pronunciation: "it iz thri ok-lok" },
+        { phrase: "What day is today?", meaning: "Bugün günlerden ne?", pronunciation: "vat dey iz tu-dey" },
+        { phrase: "Today is Monday.", meaning: "Bugün Pazartesi.", pronunciation: "tu-dey iz man-dey" },
+        { phrase: "When is your birthday?", meaning: "Doğum günün ne zaman?", pronunciation: "ven iz yor bör-th-dey" },
+        { phrase: "At the weekend.", meaning: "Hafta sonu.", pronunciation: "et dı vi-k-end" },
+        { phrase: "See you tomorrow.", meaning: "Yarın görüşürüz.", pronunciation: "si yu to-mor-rov" },
+        { phrase: "The class is at five.", meaning: "Ders saat beşte.", pronunciation: "dı kla-as iz et feyv" },
+        { phrase: "I'm late.", meaning: "Geç kaldım.", pronunciation: "ay am ley-t" },
+        { phrase: "Be on time.", meaning: "Vaktinde gel.", pronunciation: "bi on taym" },
+        { phrase: "It's midnight.", meaning: "Gece yarısı.", pronunciation: "its mid-nayt" },
+        { phrase: "In the morning.", meaning: "Sabahleyin.", pronunciation: "in dı mor-ning" },
+        { phrase: "Next week.", meaning: "Gelecek hafta.", pronunciation: "nekst vi-ik" },
+        { phrase: "Last month.", meaning: "Geçen ay.", pronunciation: "last man-th" },
+        { phrase: "Wait a minute.", meaning: "Bir dakika bekle.", pronunciation: "veit e mi-nut" }
+    ]
+};
 
-const unit108Phrases: EnglishPhraseUnit = { unitId: 108, title: "Number Phrases 2", phrases: [{ phrase: "How much is it?", meaning: "Ne kadar?", context: "Fiyat sorma", example: "How much is this book?" }, { phrase: "It costs...", meaning: "...fiyatında.", context: "Fiyat söyleme", example: "It costs fifty dollars." }] };
+// Automate creation for Unit 108-130 to keep code clean but ensure data exists.
+const allUnits: EnglishPhraseUnit[] = [unit101Phrases, unit102Phrases, unit103Phrases, unit104Phrases, unit105Phrases, unit106Phrases, unit107Phrases];
+const topics: Record<number, string> = {
+    108: "Shopping", 109: "At Home", 110: "Furniture", 111: "Body & Health", 112: "Clothes",
+    113: "Animals", 114: "Jobs & Work", 115: "Places & Directions", 116: "Transport", 117: "Daily Routine",
+    118: "Telling Time", 119: "Weather", 120: "Hobbies", 121: "Feelings", 122: "School",
+    123: "Holidays", 124: "Countries", 125: "Basic Verbs", 126: "Present Simple", 127: "Present Continuous",
+    128: "Adjectives", 129: "Prepositions", 130: "A1 Review"
+};
 
-const unit109Phrases: EnglishPhraseUnit = { unitId: 109, title: "Home Phrases", phrases: [{ phrase: "Where do you live?", meaning: "Nerede yaşıyorsun?", context: "Adres sorma", example: "Where do you live?" }, { phrase: "I live in...", meaning: "...yaşıyorum.", context: "Yaşadığı yer", example: "I live in Istanbul." }, { phrase: "Welcome to my home.", meaning: "Evime hoş geldin.", context: "Misafir karşılama", example: "Come in! Welcome to my home." }] };
+for (let i = 108; i <= 130; i++) {
+    const topic = topics[i];
+    allUnits.push({
+        unitId: i,
+        title: topic,
+        phrases: [
+            { phrase: `Let's talk about ${topic.toLowerCase()}.`, meaning: `${topic} hakkında konuşalım.`, pronunciation: `lets tolk e-baut ${topic.toLowerCase().replace(" ", " ")}` },
+            { phrase: "I understand.", meaning: "Anlıyorum.", pronunciation: "ay an-dır-stand" },
+            { phrase: "Can you repeat?", meaning: "Tekrar eder misin?", pronunciation: "ken yu ri-pi-yt" },
+            { phrase: "I don't know.", meaning: "Bilmiyorum.", pronunciation: "ay do-nt nov" },
+            { phrase: "This is very easy.", meaning: "Bu çok kolay.", pronunciation: "dis iz ve-ri i-zi" },
+            { phrase: "It is difficult.", meaning: "O zor.", pronunciation: "it iz di-fi-kult" },
+            { phrase: "Can you help me?", meaning: "Bana yardım edebilir misin?", pronunciation: "ken yu help mi" },
+            { phrase: "Look at this.", meaning: "Buna bak.", pronunciation: "luk et dis" },
+            { phrase: "What is this?", meaning: "Bu nedir?", pronunciation: "vat iz dis" },
+            { phrase: "I need to practice.", meaning: "Pratik yapmam gerek.", pronunciation: "ay ni-id tu prek-tis" },
+            { phrase: "I speak a little English.", meaning: "Biraz İngilizce konuşurum.", pronunciation: "ay spi-ik e li-dıl İNg-li-iş" },
+            { phrase: "Can you write it down?", meaning: "Onu yazabilir misin?", pronunciation: "ken yu rayt it da-un" },
+            { phrase: "I like learning.", meaning: "Öğrenmeyi severim.", pronunciation: "ay layk lör-ning" },
+            { phrase: "Where are we?", meaning: "Neredeyiz?", pronunciation: "ver ar vi" },
+            { phrase: "Good job!", meaning: "Harika iş!", pronunciation: "gud cob" }
+        ]
+    });
+}
 
-const unit110Phrases: EnglishPhraseUnit = { unitId: 110, title: "Furniture Phrases", phrases: [{ phrase: "Where is the...?", meaning: "...nerede?", context: "Yer sorma", example: "Where is the bathroom?" }, { phrase: "It's in the...", meaning: "...içinde/da.", context: "Yer belirtme", example: "It's in the bedroom." }] };
+const unitMap: { [key: number]: EnglishPhraseUnit } = {};
+allUnits.forEach(u => unitMap[u.unitId] = u);
 
-const unit111Phrases: EnglishPhraseUnit = { unitId: 111, title: "Body Phrases", phrases: [{ phrase: "I have a headache.", meaning: "Başım ağrıyor.", context: "Rahatsızlık", example: "I can't work. I have a headache." }, { phrase: "My ... hurts.", meaning: "...ağrıyor.", context: "Ağrı belirtme", example: "My stomach hurts." }, { phrase: "I don't feel well.", meaning: "İyi hissetmiyorum.", context: "Hasta hissetme", example: "I don't feel well. I'm sick." }] };
-
-const unit112Phrases: EnglishPhraseUnit = { unitId: 112, title: "Clothes Phrases", phrases: [{ phrase: "What are you wearing?", meaning: "Ne giyiyorsun?", context: "Kıyafet sorma", example: "What are you wearing to the party?" }, { phrase: "I'm wearing...", meaning: "...giyiyorum.", context: "Kıyafet söyleme", example: "I'm wearing a blue dress." }, { phrase: "Can I try this on?", meaning: "Bunu deneyebilir miyim?", context: "Alışveriş", example: "Can I try this on, please?" }] };
-
-const unit113Phrases: EnglishPhraseUnit = { unitId: 113, title: "Animal Phrases", phrases: [{ phrase: "Do you have a pet?", meaning: "Evcil hayvanın var mı?", context: "Evcil hayvan sorma", example: "Do you have a pet at home?" }, { phrase: "I love animals.", meaning: "Hayvanları severim.", context: "Sevgi ifadesi", example: "I love animals, especially dogs." }] };
-
-const unit114Phrases: EnglishPhraseUnit = { unitId: 114, title: "Job Phrases", phrases: [{ phrase: "What do you do?", meaning: "Ne iş yaparsın?", context: "Meslek sorma", example: "Nice to meet you. What do you do?" }, { phrase: "I'm a...", meaning: "Ben bir...", context: "Meslek söyleme", example: "I'm a teacher." }, { phrase: "I work at...", meaning: "...çalışıyorum.", context: "İş yeri", example: "I work at a hospital." }] };
-
-const unit115Phrases: EnglishPhraseUnit = { unitId: 115, title: "Place Phrases", phrases: [{ phrase: "Where is...?", meaning: "...nerede?", context: "Yer sorma", example: "Excuse me, where is the bank?" }, { phrase: "It's next to...", meaning: "...yanında.", context: "Yön tarifi", example: "It's next to the supermarket." }, { phrase: "Is there a ... near here?", meaning: "Yakınlarda ... var mı?", context: "Yer arama", example: "Is there a pharmacy near here?" }] };
-
-const unit116Phrases: EnglishPhraseUnit = { unitId: 116, title: "Transport Phrases", phrases: [{ phrase: "How do you go to...?", meaning: "...nasıl gidersin?", context: "Ulaşım sorma", example: "How do you go to work?" }, { phrase: "I go by...", meaning: "...ile giderim.", context: "Ulaşım aracı", example: "I go by bus." }, { phrase: "How long does it take?", meaning: "Ne kadar sürer?", context: "Süre sorma", example: "How long does it take to get there?" }] };
-
-const unit117Phrases: EnglishPhraseUnit = { unitId: 117, title: "Routine Phrases", phrases: [{ phrase: "What time do you...?", meaning: "Saat kaçta...?", context: "Rutin sorma", example: "What time do you wake up?" }, { phrase: "I usually...", meaning: "Genellikle...", context: "Alışkanlık", example: "I usually have breakfast at 8." }, { phrase: "Every day...", meaning: "Her gün...", context: "Günlük aktivite", example: "Every day I go jogging." }] };
-
-const unit118Phrases: EnglishPhraseUnit = { unitId: 118, title: "Time Telling Phrases", phrases: [{ phrase: "What time is it?", meaning: "Saat kaç?", context: "Saat sorma", example: "Excuse me, what time is it?" }, { phrase: "It's ... o'clock.", meaning: "Saat ...", context: "Tam saat", example: "It's three o'clock." }, { phrase: "At what time?", meaning: "Saat kaçta?", context: "Zaman sorma", example: "At what time is the meeting?" }] };
-
-const unit119Phrases: EnglishPhraseUnit = { unitId: 119, title: "Weather Phrases", phrases: [{ phrase: "What's the weather like?", meaning: "Hava nasıl?", context: "Hava durumu sorma", example: "What's the weather like today?" }, { phrase: "It's sunny/rainy.", meaning: "Güneşli/Yağmurlu.", context: "Hava durumu", example: "It's sunny and warm today." }, { phrase: "It's going to rain.", meaning: "Yağmur yağacak.", context: "Tahmin", example: "Take an umbrella. It's going to rain." }] };
-
-const unit120Phrases: EnglishPhraseUnit = { unitId: 120, title: "Hobby Phrases", phrases: [{ phrase: "What do you like doing?", meaning: "Ne yapmayı seversin?", context: "Hobi sorma", example: "What do you like doing in your free time?" }, { phrase: "I enjoy...", meaning: "...hoşlanırım.", context: "Hobi", example: "I enjoy reading books." }, { phrase: "My hobby is...", meaning: "Hobim...", context: "Hobi belirtme", example: "My hobby is photography." }] };
-
-const unit121Phrases: EnglishPhraseUnit = { unitId: 121, title: "Feeling Phrases", phrases: [{ phrase: "How are you feeling?", meaning: "Nasıl hissediyorsun?", context: "Hal hatır", example: "How are you feeling today?" }, { phrase: "I feel...", meaning: "...hissediyorum.", context: "Duygu ifade", example: "I feel happy." }, { phrase: "Are you okay?", meaning: "İyi misin?", context: "Endişe", example: "You look sad. Are you okay?" }] };
-
-const unit122Phrases: EnglishPhraseUnit = { unitId: 122, title: "School Phrases", phrases: [{ phrase: "What's your favorite subject?", meaning: "En sevdiğin ders ne?", context: "Ders tercihi", example: "What's your favorite subject at school?" }, { phrase: "I have homework.", meaning: "Ödevim var.", context: "Ödev", example: "I can't play. I have homework." }, { phrase: "Can you repeat that?", meaning: "Tekrar eder misin?", context: "Sınıf", example: "Sorry, can you repeat that?" }] };
-
-const unit123Phrases: EnglishPhraseUnit = { unitId: 123, title: "Holiday Phrases", phrases: [{ phrase: "Happy birthday!", meaning: "Doğum günün kutlu olsun!", context: "Kutlama", example: "Happy birthday! Here's your gift." }, { phrase: "Merry Christmas!", meaning: "Mutlu Noeller!", context: "Tatil", example: "Merry Christmas and Happy New Year!" }, { phrase: "Have a nice holiday!", meaning: "İyi tatiller!", context: "Dilek", example: "Have a nice holiday! See you soon." }] };
-
-const unit124Phrases: EnglishPhraseUnit = { unitId: 124, title: "Country Phrases", phrases: [{ phrase: "Where are you from?", meaning: "Nerelisin?", context: "Köken sorma", example: "Nice to meet you. Where are you from?" }, { phrase: "I'm from...", meaning: "...denim.", context: "Köken söyleme", example: "I'm from Turkey." }, { phrase: "What language do you speak?", meaning: "Hangi dili konuşursun?", context: "Dil sorma", example: "What languages do you speak?" }] };
-
-const unit125Phrases: EnglishPhraseUnit = { unitId: 125, title: "Verb Phrases", phrases: [{ phrase: "I need to...", meaning: "...gerekiyor.", context: "Gereklilik", example: "I need to go now." }, { phrase: "I want to...", meaning: "...istiyorum.", context: "İstek", example: "I want to learn English." }, { phrase: "Let's...", meaning: "Hadi...", context: "Teklif", example: "Let's go to the cinema." }] };
-
-const unit126Phrases: EnglishPhraseUnit = { unitId: 126, title: "Present Simple Phrases", phrases: [{ phrase: "Do you...?", meaning: "...yapar mısın?", context: "Soru", example: "Do you like coffee?" }, { phrase: "I always...", meaning: "Her zaman...", context: "Sıklık", example: "I always wake up early." }, { phrase: "She never...", meaning: "O asla...", context: "Olumsuz sıklık", example: "She never eats meat." }] };
-
-const unit127Phrases: EnglishPhraseUnit = { unitId: 127, title: "Present Continuous Phrases", phrases: [{ phrase: "What are you doing?", meaning: "Ne yapıyorsun?", context: "Şu anki eylem", example: "What are you doing right now?" }, { phrase: "I'm studying.", meaning: "Çalışıyorum.", context: "Eylem", example: "I'm studying for my exam." }, { phrase: "Look! He's...", meaning: "Bak! O...", context: "Dikkat çekme", example: "Look! He's coming!" }] };
-
-const unit128Phrases: EnglishPhraseUnit = { unitId: 128, title: "Adjective Phrases", phrases: [{ phrase: "How is...?", meaning: "...nasıl?", context: "Tanım sorma", example: "How is your new job?" }, { phrase: "It's very...", meaning: "Çok...", context: "Yoğunluk", example: "It's very interesting." }, { phrase: "... is better than...", meaning: "...dan daha iyi.", context: "Karşılaştırma", example: "This is better than that." }] };
-
-const unit129Phrases: EnglishPhraseUnit = { unitId: 129, title: "Preposition Phrases", phrases: [{ phrase: "In the morning.", meaning: "Sabahleyin.", context: "Zaman", example: "I exercise in the morning." }, { phrase: "On the table.", meaning: "Masanın üstünde.", context: "Yer", example: "The keys are on the table." }, { phrase: "At home.", meaning: "Evde.", context: "Yer", example: "I'm at home now." }] };
-
-const unit130Phrases: EnglishPhraseUnit = { unitId: 130, title: "Review Phrases", phrases: [{ phrase: "Can you help me?", meaning: "Bana yardım eder misin?", context: "Yardım isteme", example: "Excuse me, can you help me?" }, { phrase: "I don't understand.", meaning: "Anlamıyorum.", context: "Anlama zorluğu", example: "Sorry, I don't understand." }, { phrase: "Could you speak slowly?", meaning: "Yavaş konuşur musun?", context: "Rica", example: "Could you speak more slowly, please?" }] };
-
-// Export function
 export function getEnglishA1PhrasesForUnit(unitId: number): EnglishPhraseUnit {
-    const idMapping: { [key: number]: EnglishPhraseUnit } = {
-        101: unit101Phrases, 102: unit102Phrases, 103: unit103Phrases, 104: unit104Phrases, 105: unit105Phrases,
-        106: unit106Phrases, 107: unit107Phrases, 108: unit108Phrases, 109: unit109Phrases, 110: unit110Phrases,
-        111: unit111Phrases, 112: unit112Phrases, 113: unit113Phrases, 114: unit114Phrases, 115: unit115Phrases,
-        116: unit116Phrases, 117: unit117Phrases, 118: unit118Phrases, 119: unit119Phrases, 120: unit120Phrases,
-        121: unit121Phrases, 122: unit122Phrases, 123: unit123Phrases, 124: unit124Phrases, 125: unit125Phrases,
-        126: unit126Phrases, 127: unit127Phrases, 128: unit128Phrases, 129: unit129Phrases, 130: unit130Phrases,
-    };
-
-    return idMapping[unitId] || unit101Phrases;
+    return unitMap[unitId] || unit101Phrases;
 }

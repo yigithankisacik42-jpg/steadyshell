@@ -15,6 +15,8 @@ export interface ShelldonScenario {
     objectives: Record<string, string[]>; // Dile göre hedefler/yönergeler
 }
 
+export type ShelldonPracticeMode = "speaking" | "vocab" | "grammar";
+
 export const SHELLDON_SCENARIOS: ShelldonScenario[] = [
     {
         id: "cafe",
@@ -188,16 +190,32 @@ const LANG_NAMES: Record<string, { tr: string; native: string }> = {
     en: { tr: "İngilizce", native: "English" },
 };
 
+const PRACTICE_MODE_LABELS: Record<ShelldonPracticeMode, string> = {
+    speaking: "Konuşma Odaklı",
+    vocab: "Kelime Odaklı",
+    grammar: "Gramer Odaklı",
+};
+
+const PRACTICE_MODE_RULES: Record<ShelldonPracticeMode, string> = {
+    speaking: "Doğal diyalog kur. Kısa soru-cevap akışıyla konuş.",
+    vocab: "2-3 hedef kelimeyi öne çıkar. Kullanıcıdan bu kelimeleri kullanmasını iste.",
+    grammar: "Tek bir gramer yapısına odaklan. Kısa örnek ver ve kullanıcıdan aynı yapıyla cümle iste.",
+};
+
 // === SYSTEM PROMPT ===
 export function buildShelldonPrompt(
     language: string,
     level: string,
     scenario: ShelldonScenario,
-    lessonContext?: string
+    lessonContext?: string,
+    practiceMode?: ShelldonPracticeMode
 ): string {
     const lang = LANG_NAMES[language] || LANG_NAMES.fr;
     const scenarioTitle = scenario.titleTarget[language] || scenario.titleTr;
     const objectivesList = scenario.objectives[language]?.map((obj, i) => `${i + 1}. [${obj}]`).join("\n") || "";
+    const modeKey = practiceMode && PRACTICE_MODE_LABELS[practiceMode] ? practiceMode : "speaking";
+    const modeLabel = PRACTICE_MODE_LABELS[modeKey];
+    const modeRule = PRACTICE_MODE_RULES[modeKey];
 
     return `Sen "Shelldon" adında sevimli, sabırlı ve eğlenceli bir kaplumbağa dil öğretmenisin. 🐢
 SteadyShell uygulamasının maskotosu ve konuşma partnerissin.
@@ -214,9 +232,15 @@ ${scenario.context}
 DERS BAĞLAMI (ÖNCELİKLİ):
 ${lessonContext ? lessonContext : "Genel pratik - seçilen senaryoya odaklan."}
 
+PRAKTİK MODU: ${modeLabel}
+${modeRule}
+
 MİKRO-PRATİK KURALI:
 - Bu seans 3 tur sürer. Her turda TEK net görev ver.
 - Gereksiz uzatma yapma. Kısa ve odaklı kal.
+
+DİYALOG KURALI:
+- Her tur sonunda kullanıcıya 1 kısa soru sor.
 
 GÖREVLER (Kullanıcının Yapması Gerekenler):
 Kullanıcının konuşma sırasında şu görevleri tamamlaması bekleniyor:

@@ -362,18 +362,16 @@ export function getSpeakingForUnit(unitId: number): UnitSpeaking {
     // === İNGİLİZCE ÜNİTELER (ID 101-220) ===
     // İngilizce A1 (101-130)
     if (unitId >= 101 && unitId <= 130) {
-        const enSpeaking = getEnglishA1SpeakingForUnit(unitId);
+        const enSpeakingMap = getEnglishA1SpeakingForUnit(unitId);
         return {
-            unitId: enSpeaking.unitId,
-            title: enSpeaking.title,
-            language: "en",
-            level: "A1",
-            exercises: enSpeaking.dialogues.map((d, i) => ({
-                id: i + 1,
-                type: "repeat" as const,
-                prompt: "Bu cümleyi tekrar et:",
-                text: d.text,
-                translation: d.translation
+            ...enSpeakingMap,
+            exercises: enSpeakingMap.exercises.map(e => ({
+                id: e.id,
+                type: e.type,
+                prompt: e.prompt,
+                text: e.text,
+                translation: e.translation,
+                expectedKeywords: e.expectedKeywords
             }))
         };
     }

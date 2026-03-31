@@ -24,36 +24,7 @@ export interface Question {
     audioText?: string;
 }
 
-// Ayrı dosyalardan import
-import { unit3Quiz1, unit3Quiz2, unit3Quiz3, unit3Quiz4 } from "./questions-unit3";
-import { unit4Quiz1, unit4Quiz2, unit4Quiz3, unit4Quiz4 } from "./questions-unit4";
-import { unit5Quiz1, unit5Quiz2, unit5Quiz3, unit5Quiz4 } from "./questions-unit5";
-import { unit6Quiz1, unit6Quiz2, unit6Quiz3, unit6Quiz4 } from "./questions-unit6";
-import { unit7Quiz1, unit7Quiz2, unit7Quiz3, unit7Quiz4 } from "./questions-unit7";
-import { unit8Quiz1, unit8Quiz2, unit8Quiz3, unit8Quiz4 } from "./questions-unit8";
-import { unit9Quiz1, unit9Quiz2, unit9Quiz3, unit9Quiz4 } from "./questions-unit9";
-import { unit10Quiz1, unit10Quiz2, unit10Quiz3, unit10Quiz4 } from "./questions-unit10";
-import { unit11Quiz1, unit11Quiz2, unit11Quiz3, unit11Quiz4 } from "./questions-unit11";
-import { unit12Quiz1, unit12Quiz2, unit12Quiz3, unit12Quiz4 } from "./questions-unit12";
-import { unit13Quiz1, unit13Quiz2, unit13Quiz3, unit13Quiz4 } from "./questions-unit13";
-import { unit14Quiz1, unit14Quiz2, unit14Quiz3, unit14Quiz4 } from "./questions-unit14";
-import { unit15Quiz1, unit15Quiz2, unit15Quiz3, unit15Quiz4 } from "./questions-unit15";
-import { unit16Quiz1, unit16Quiz2, unit16Quiz3, unit16Quiz4 } from "./questions-unit16";
-import { unit17Quiz1, unit17Quiz2, unit17Quiz3, unit17Quiz4 } from "./questions-unit17";
-import { unit18Quiz1, unit18Quiz2, unit18Quiz3, unit18Quiz4 } from "./questions-unit18";
-import { unit19Quiz1, unit19Quiz2, unit19Quiz3, unit19Quiz4 } from "./questions-unit19";
-import { unit20Quiz1, unit20Quiz2, unit20Quiz3, unit20Quiz4 } from "./questions-unit20";
-// A1 Üniteleri 21-30 (Gramer Odaklı)
-import { unit21Quiz1, unit21Quiz2, unit21Quiz3, unit21Quiz4 } from "./questions-unit21";
-import { unit22Quiz1, unit22Quiz2, unit22Quiz3, unit22Quiz4 } from "./questions-unit22";
-import { unit23Quiz1, unit23Quiz2, unit23Quiz3, unit23Quiz4 } from "./questions-unit23";
-import { unit24Quiz1, unit24Quiz2, unit24Quiz3, unit24Quiz4 } from "./questions-unit24";
-import { unit25Quiz1, unit25Quiz2, unit25Quiz3, unit25Quiz4 } from "./questions-unit25";
-import { unit26Quiz1, unit26Quiz2, unit26Quiz3, unit26Quiz4 } from "./questions-unit26";
-import { unit27Quiz1, unit27Quiz2, unit27Quiz3, unit27Quiz4 } from "./questions-unit27";
-import { unit28Quiz1, unit28Quiz2, unit28Quiz3, unit28Quiz4 } from "./questions-unit28";
-import { unit29Quiz1, unit29Quiz2, unit29Quiz3, unit29Quiz4 } from "./questions-unit29";
-import { unit30Quiz1, unit30Quiz2, unit30Quiz3, unit30Quiz4 } from "./questions-unit30";
+// Ayrı dosyalardan importlar artık getQuestionsForUnit içinde dinamik yapılacak.
 
 // ===== ÜNİTE 1: SER FİİLİ VE TANITMA (YENİ - 25 SORU) =====
 const unit1Quiz1: Question[] = [
@@ -518,39 +489,10 @@ function generateQuiz(unitId: number, quizIndex: number, topic: string): Questio
 }
 
 
-// Tüm quiz verileri
+// Tüm quiz verileri (Küçük olanlar burada kalabilir, büyükler dinamik yüklenecek)
 const allQuizzes: { [key: string]: Question[] } = {
     "1-1": unit1Quiz1, "1-2": unit1Quiz2, "1-3": unit1Quiz3, "1-4": unit1Quiz4,
     "2-1": unit2Quiz1, "2-2": unit2Quiz2, "2-3": unit2Quiz3, "2-4": unit2Quiz4,
-    "3-1": unit3Quiz1, "3-2": unit3Quiz2, "3-3": unit3Quiz3, "3-4": unit3Quiz4,
-    "4-1": unit4Quiz1, "4-2": unit4Quiz2, "4-3": unit4Quiz3, "4-4": unit4Quiz4,
-    "5-1": unit5Quiz1, "5-2": unit5Quiz2, "5-3": unit5Quiz3, "5-4": unit5Quiz4,
-    "6-1": unit6Quiz1, "6-2": unit6Quiz2, "6-3": unit6Quiz3, "6-4": unit6Quiz4,
-    "7-1": unit7Quiz1, "7-2": unit7Quiz2, "7-3": unit7Quiz3, "7-4": unit7Quiz4,
-    "8-1": unit8Quiz1, "8-2": unit8Quiz2, "8-3": unit8Quiz3, "8-4": unit8Quiz4,
-    "9-1": unit9Quiz1, "9-2": unit9Quiz2, "9-3": unit9Quiz3, "9-4": unit9Quiz4,
-    "10-1": unit10Quiz1, "10-2": unit10Quiz2, "10-3": unit10Quiz3, "10-4": unit10Quiz4,
-    "11-1": unit11Quiz1, "11-2": unit11Quiz2, "11-3": unit11Quiz3, "11-4": unit11Quiz4,
-    "12-1": unit12Quiz1, "12-2": unit12Quiz2, "12-3": unit12Quiz3, "12-4": unit12Quiz4,
-    "13-1": unit13Quiz1, "13-2": unit13Quiz2, "13-3": unit13Quiz3, "13-4": unit13Quiz4,
-    "14-1": unit14Quiz1, "14-2": unit14Quiz2, "14-3": unit14Quiz3, "14-4": unit14Quiz4,
-    "15-1": unit15Quiz1, "15-2": unit15Quiz2, "15-3": unit15Quiz3, "15-4": unit15Quiz4,
-    "16-1": unit16Quiz1, "16-2": unit16Quiz2, "16-3": unit16Quiz3, "16-4": unit16Quiz4,
-    "17-1": unit17Quiz1, "17-2": unit17Quiz2, "17-3": unit17Quiz3, "17-4": unit17Quiz4,
-    "18-1": unit18Quiz1, "18-2": unit18Quiz2, "18-3": unit18Quiz3, "18-4": unit18Quiz4,
-    "19-1": unit19Quiz1, "19-2": unit19Quiz2, "19-3": unit19Quiz3, "19-4": unit19Quiz4,
-    "20-1": unit20Quiz1, "20-2": unit20Quiz2, "20-3": unit20Quiz3, "20-4": unit20Quiz4,
-    "21-1": unit21Quiz1, "21-2": unit21Quiz2, "21-3": unit21Quiz3, "21-4": unit21Quiz4,
-    "22-1": unit22Quiz1, "22-2": unit22Quiz2, "22-3": unit22Quiz3, "22-4": unit22Quiz4,
-    "23-1": unit23Quiz1, "23-2": unit23Quiz2, "23-3": unit23Quiz3, "23-4": unit23Quiz4,
-    "24-1": unit24Quiz1, "24-2": unit24Quiz2, "24-3": unit24Quiz3, "24-4": unit24Quiz4,
-    "25-1": unit25Quiz1, "25-2": unit25Quiz2, "25-3": unit25Quiz3, "25-4": unit25Quiz4,
-    // A1 Üniteleri (26-30) - Gramer Odaklı
-    "26-1": unit26Quiz1, "26-2": unit26Quiz2, "26-3": unit26Quiz3, "26-4": unit26Quiz4,
-    "27-1": unit27Quiz1, "27-2": unit27Quiz2, "27-3": unit27Quiz3, "27-4": unit27Quiz4,
-    "28-1": unit28Quiz1, "28-2": unit28Quiz2, "28-3": unit28Quiz3, "28-4": unit28Quiz4,
-    "29-1": unit29Quiz1, "29-2": unit29Quiz2, "29-3": unit29Quiz3, "29-4": unit29Quiz4,
-    "30-1": unit30Quiz1, "30-2": unit30Quiz2, "30-3": unit30Quiz3, "30-4": unit30Quiz4,
 };
 
 const unitTopics: { [key: number]: string } = {
@@ -581,32 +523,18 @@ const unitTopics: { [key: number]: string } = {
 };
 
 // Ana fonksiyon
-import { getEnglishA1QuestionsForUnit } from './questions-en-a1';
-import { getEnglishA2QuestionsForUnit } from './questions-en-a2';
-import { getFrenchA1QuestionsForUnit } from './questions-fr-a1';
-import { getFrenchA2Quiz } from './questions-fr-a2';
-import { getFrenchB1Quiz } from './questions-fr-b1';
+// Dinamik yükleme fonksiyonları
+// export function getQuestionsForUnit ... (aşağıdaki refactor edilmiş versiyon)
 
-export function getQuestionsForUnit(unitId: number, quizIndex: number = 1): Question[] {
+export async function getQuestionsForUnit(unitId: number, quizIndex: number = 1): Promise<Question[]> {
     // === İNGİLİZCE ÜNİTELER (ID 101-220) ===
-    // İngilizce A1 (101-130)
     if (unitId >= 101 && unitId <= 130) {
-        const enQuiz = getEnglishA1QuestionsForUnit(unitId);
-        return enQuiz.questions.map((q, i) => ({
-            id: i + 1,
-            type: "SELECT" as QuestionType,
-            question: q.question,
-            options: q.options.map((opt, idx) => ({
-                id: String(idx),
-                text: opt,
-                correct: idx === q.correctAnswer
-            })),
-            hint: q.explanation
-        }));
+        const { getEnglishA1QuestionsForUnit } = await import('./questions-en-a1');
+        return getEnglishA1QuestionsForUnit(unitId, quizIndex);
     }
 
-    // İngilizce A2 (131-160)
     if (unitId >= 131 && unitId <= 160) {
+        const { getEnglishA2QuestionsForUnit } = await import('./questions-en-a2');
         const enQuiz = getEnglishA2QuestionsForUnit(unitId);
         return enQuiz.questions.map((q, i) => ({
             id: i + 1,
@@ -623,22 +551,34 @@ export function getQuestionsForUnit(unitId: number, quizIndex: number = 1): Ques
 
     // Fransızca A1 (301-330)
     if (unitId >= 301 && unitId <= 330) {
+        const { getFrenchA1QuestionsForUnit } = await import('./questions-fr-a1');
         return getFrenchA1QuestionsForUnit(unitId, quizIndex);
     }
 
     // Fransızca A2 (331-360)
     if (unitId >= 331 && unitId <= 360) {
+        const { getFrenchA2Quiz } = await import('./questions-fr-a2');
         return getFrenchA2Quiz(unitId, quizIndex);
     }
 
     // Fransızca B1 (361-390)
     if (unitId >= 361 && unitId <= 390) {
+        const { getFrenchB1Quiz } = await import('./questions-fr-b1');
         return getFrenchB1Quiz(unitId, quizIndex);
     }
 
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===
+    // Dinamik dosyadan çek (Unit 3-30 arası dış dosyalarda)
+    if (unitId >= 3 && unitId <= 30) {
+        const module = await import(`./questions-unit${unitId}`);
+        const quizKey = `unit${unitId}Quiz${quizIndex}`;
+        if (module[quizKey]) return module[quizKey];
+    }
+
+    // Yerel sabitlerden çek (Unit 1-2)
     const key = `${unitId}-${quizIndex}`;
     if (allQuizzes[key]) return allQuizzes[key];
-    // A1 (9-20) ve A2 (21-40) için dinamik oluştur
+
+    // Geri kalanlar (A1/A2/B1/B2 dinamik oluşturucu)
     return generateQuiz(unitId, quizIndex, unitTopics[unitId] || "Ders");
 }
