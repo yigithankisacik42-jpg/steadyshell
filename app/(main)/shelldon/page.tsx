@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle, Check, Loader2, Lightbulb, CheckCircle2, Circle, Phone, PhoneOff } from "lucide-react";
+import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle, Check, Loader2, Lightbulb, CheckCircle2, Circle, Phone, PhoneOff, XCircle, ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -47,7 +47,7 @@ interface FeedbackData {
     tip: string;
 }
 
-type ShelldonState = "idle" | "speaking" | "listening" | "happy" | "thinking";
+type ShelldonAvatarState = "idle" | "speaking" | "listening" | "happy" | "thinking" | "surprised" | "sad";
 
 // Component for Interactive Inline Corrections
 function UserMessageBubble({ content, corrections }: { content: string, corrections?: Correction[] }) {
@@ -119,7 +119,7 @@ export default function ShelldonPage() {
     const [inputValue, setInputValue] = useState("");
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
-    const [shelldonState, setShelldonState] = useState<ShelldonState>("idle");
+    const [shelldonState, setShelldonState] = useState<ShelldonAvatarState>("idle");
     const [currentBubbleText, setCurrentBubbleText] = useState("");
     const [turnCount, setTurnCount] = useState(0);
     const [isFinished, setIsFinished] = useState(false);
@@ -169,7 +169,7 @@ export default function ShelldonPage() {
         }
     });
 
-    const MAX_TURNS = 3;
+    const MAX_TURNS = 10;
     const practiceModeLabel = PRACTICE_MODES.find((mode) => mode.id === practiceMode)?.label ?? "Konuşma";
 
     const buildLessonContext = useCallback(
@@ -229,7 +229,7 @@ export default function ShelldonPage() {
 
     // === TTS bittiğinde idle'a dön ===
     useEffect(() => {
-        if (!isSpeaking && shelldonState === "speaking") {
+        if (!isSpeaking && (shelldonState === "speaking" || shelldonState === "happy" || shelldonState === "surprised")) {
             setShelldonState("idle");
         }
     }, [isSpeaking, shelldonState]);
@@ -289,6 +289,7 @@ export default function ShelldonPage() {
             const data = await response.json();
             const raw = data.choices?.[0]?.message?.content || "";
             let aiMessage = "Merhaba! 🐢";
+            let aiMood: ShelldonAvatarState = "speaking";
             
             // Try parsing JSON response
             try {
@@ -298,18 +299,14 @@ export default function ShelldonPage() {
                 if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
                     setCompletedObjectives(parsed.completedObjectives);
                 }
-                // Parse and strip inner corrections if AI started with errors right away (rare on first load)
-                const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanl(?:i|ı)ş:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?:\n\s*Örnek:?\s*[\s\S]*?)?(?:\n\s*Şimdi sen:?\s*[\s\S]*?)?(?=\n\n|\n?$|$)/gi;
-                let cleanAiMessage = aiMessage.replace(correctionRegex, "").replace(/💡[^\n]*\n?/gi, "").trim();
-                aiMessage = cleanAiMessage;
+                if (parsed.mood) aiMood = (parsed.mood.toLowerCase() === "neutral" ? "speaking" : parsed.mood.toLowerCase()) as ShelldonAvatarState;
             } catch (e) {
-                // Eğer AI JSON döndürmediyse düz metni al
                 aiMessage = raw;
             }
 
             setMessages([{ role: "assistant", content: aiMessage }]);
             setCurrentBubbleText(aiMessage);
-            setShelldonState("speaking");
+            setShelldonState(aiMood);
             speak(aiMessage);
         } catch {
             setCurrentBubbleText("⚠️ Bağlantı hatası. İnternet bağlantını kontrol et!");
@@ -333,8 +330,7 @@ export default function ShelldonPage() {
         // --- COMMAND INTERCEPTION ---
         let isSystemCommand = false;
         let commandPrompt = "";
-        let commandDisplayName = messageText;
-
+        
         if (messageText.startsWith("/clear")) {
             setMessages([]);
             setTurnCount(0);
@@ -351,11 +347,9 @@ export default function ShelldonPage() {
                 return;
             }
             isSystemCommand = true;
-            commandDisplayName = `🎭 Rol Değişimi: ${role}`;
             commandPrompt = `Şu andan itibaren senaryomuzu koruyarak, karakterini DEĞİŞTİRİYORSUN. Artık kesinlikle bir "${role}" olarak davranmalısın. Konuşma tarzını, üslubunu ve kelimelerini tamamen bu yeni role uydur. Sadece hedef dilde konuşmaya devam et. Lütfen bu yeni role girerek bana hemen bir şeyler söyle.`;
         } else if (messageText.startsWith("/game")) {
             isSystemCommand = true;
-            commandDisplayName = `🎮 Kelime Oyunu`;
             commandPrompt = `Hadi kelime oyunu oynayalım! Bana arka arkaya aralarında boşluk olan 5 tane rastgele (günlük eşya, hayvan veya yiyecek) emojisi gönder. Sadece emojiler olsun, yazı veya açıklama yazma. Ben de bu emojilerin hedef dildeki isimlerini sırayla bilmeye çalışacağım. Başla!`;
         }
 
@@ -364,8 +358,8 @@ export default function ShelldonPage() {
         setMessages(updatedMessages);
         setTurnCount((t) => t + 1);
         
-        const attachedImage = selectedImage; // Store it for API call
-        setSelectedImage(null); // Clear preview
+        const attachedImage = selectedImage;
+        setSelectedImage(null);
 
         try {
             const langCode = selectedLang || currentLanguage.code;
@@ -373,7 +367,6 @@ export default function ShelldonPage() {
             const lessonContext = buildLessonContext(langCode, levelCode);
             let systemPrompt = buildShelldonPrompt(langCode, levelCode, selectedScenario, userStats || undefined, dailyStats, lessonContext, practiceMode);
             
-            // Hafıza (Memory) Enjeksiyonu
             if (userMemory && !isSystemCommand) {
                 const details = [];
                 if (userMemory.hobbies) details.push(`- Hobiler: ${userMemory.hobbies}`);
@@ -383,11 +376,10 @@ export default function ShelldonPage() {
                 if (userMemory.notes) details.push(`- Genel Notların: ${userMemory.notes}`);
                 
                 if (details.length > 0) {
-                    systemPrompt += `\n\n--- KULLANICI HAFIZASI (MEMORY) ---\nÖnceki sohbetlerden kullanıcı hakkında öğrendiklerin:\n${details.join("\n")}\nBu bilgileri yeri geldiğinde çok doğal ve samimi bir şekilde sohbete kat, onu hatırladığını hissettir, ancak sürekli bahsetme.`;
+                    systemPrompt += `\n\n--- KULLANICI HAFIZASI (MEMORY) ---\nÖnceki sohbetlerden kullanıcı hakkında öğrendiklerin:\n${details.join("\n")}\nBu bilgileri yeri geldiğinde çok doğal ve samimi bir şekilde sohbete kat, onu hatırladığını hissettir.`;
                 }
             }
             
-            // Eğer sistem komutuysa son mesajı gizlice özel prompt'a çeviriyoruz
             const apiMessages = [
                 { role: "system", content: systemPrompt },
                 ...messages.map((m) => {
@@ -430,54 +422,58 @@ export default function ShelldonPage() {
             const data = await response.json();
             const raw = data.choices?.[0]?.message?.content || "";
             let aiMessage = "Devam edelim!";
+            let aiMood: ShelldonAvatarState = "speaking";
             let newCompletedObj: number[] = [];
+            let correction: Correction | null = null;
 
-            // Try parsing JSON response
             try {
                 const cleanJson = raw.replace(/```json?\n?/g, "").replace(/```/g, "").trim();
                 const parsed = JSON.parse(cleanJson);
                 if (parsed.message) aiMessage = parsed.message;
+                if (parsed.mood) aiMood = (parsed.mood.toLowerCase() === "neutral" ? "speaking" : parsed.mood.toLowerCase()) as ShelldonAvatarState;
                 if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
                     newCompletedObj = parsed.completedObjectives;
                 }
+                if (parsed.correction && parsed.correction.wrong && parsed.correction.right) {
+                    correction = {
+                        wrong: parsed.correction.wrong,
+                        right: parsed.correction.right,
+                        explanation: parsed.correction.explanation || "Daha doğal bir ifade."
+                    };
+                }
             } catch (e) {
-                // fallback
                 aiMessage = raw;
             }
 
-            // --- INLINE CORRECTION PARSING LOGIC ---
-            const corrections: Correction[] = [];
-            const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanl(?:i|ı)ş:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?:\n\s*Örnek:?\s*[\s\S]*?)?(?:\n\s*Şimdi sen:?\s*[\s\S]*?)?(?=\n\n|\n?$|$)/gi;
-            let match;
-            while ((match = correctionRegex.exec(aiMessage)) !== null) {
-                if (match[1] && match[2] && match[3]) {
-                    corrections.push({
-                        wrong: match[1].trim(),
-                        right: match[2].trim(),
-                        explanation: match[3].trim()
-                    });
+            const corrections: Correction[] = correction ? [correction] : [];
+            
+            // Eğer JSON'dan gelmediyse eski usul regex ile ara (Geriye dönük uyumluluk)
+            if (corrections.length === 0) {
+                const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanl(?:i|ı)ş:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?=\n\n|\n?$|$)/gi;
+                let match;
+                while ((match = correctionRegex.exec(aiMessage)) !== null) {
+                    if (match[1] && match[2] && match[3]) {
+                        corrections.push({
+                            wrong: match[1].trim(),
+                            right: match[2].trim(),
+                            explanation: match[3].trim()
+                        });
+                    }
                 }
+                aiMessage = aiMessage.replace(correctionRegex, "").replace(/💡[^\n]*\n?/gi, "").trim();
             }
 
-            let cleanAiMessage = aiMessage;
             if (corrections.length > 0) {
                 setRepeatQueue((prev) => {
                     const next = [...prev];
                     corrections.forEach((corr) => {
                         const phrase = corr.right.trim();
                         if (!phrase) return;
-                        const existingIndex = next.indexOf(phrase);
-                        if (existingIndex !== -1) {
-                            next.splice(existingIndex, 1);
-                        }
-                        next.push(phrase);
+                        if (!next.includes(phrase)) next.push(phrase);
                     });
                     return next.slice(-5);
                 });
 
-                cleanAiMessage = aiMessage.replace(correctionRegex, "").replace(/💡[^\n]*\n?/gi, "").trim();
-                
-                // Attach corrections to the last user message
                 setMessages(prev => {
                     const newMsgs = [...prev];
                     const lastUserIndex = newMsgs.findLastIndex(m => m.role === "user");
@@ -488,34 +484,16 @@ export default function ShelldonPage() {
                 });
             }
 
-            // Fallback: If AI just left empty text after removing corrections, give a generic reply
-            if (!cleanAiMessage.trim()) {
-                cleanAiMessage = "Devam edelim!";
-            }
-            aiMessage = cleanAiMessage;
+            if (!aiMessage.trim()) aiMessage = "Devam edelim!";
 
-            // Objeleri güncelle (önceki tamamlananları tut, yenileri ekle, unique yap)
-            setCompletedObjectives(prev => {
-                const merged = [...prev, ...newCompletedObj];
-                return Array.from(new Set(merged));
-            });
+            setCompletedObjectives(prev => Array.from(new Set([...prev, ...newCompletedObj])));
 
             const aiMsg: Message = { role: "assistant", content: aiMessage };
             setMessages((prev) => [...prev, aiMsg]);
             setCurrentBubbleText(aiMessage);
-
-            // Duygu analizi (basit emoji kontrolü)
-            if (aiMessage.includes("✅") || aiMessage.includes("Bravo") || aiMessage.includes("Harika") || aiMessage.includes("Parfait") || aiMessage.includes("Excelente") || aiMessage.includes("Excellent") || aiMessage.includes("Très bien") || aiMessage.includes("Muy bien") || aiMessage.includes("Very good")) {
-                setShelldonState("happy");
-            } else if (aiMessage.includes("?") && !aiMessage.includes("✅")) {
-                setShelldonState("speaking"); // Normal soru soruyor
-            } else {
-                setShelldonState("speaking");
-            }
-
+            setShelldonState(aiMood);
             speak(aiMessage);
 
-            // Max tura ulaşıldıysa bitir
             if (turnCount + 1 >= MAX_TURNS) {
                 setTimeout(() => finishConversation([...updatedMessages, aiMsg]), 3000);
             }
@@ -881,10 +859,8 @@ export default function ShelldonPage() {
                                 onClick={() => {
                                     setIsCallMode(!isCallMode);
                                     if (!isCallMode) {
-                                        // Açılırken otomatik dinlemeye başla
                                         startListening();
                                     } else {
-                                        // Kapatırken dinlemeyi kes
                                         stopListening();
                                     }
                                 }}
@@ -958,10 +934,10 @@ export default function ShelldonPage() {
                         )}
                     </div>
 
-                    {/* Mesaj Geçmişi (küçük, kaydırılabilir) */}
+                    {/* Mesaj Geçmişi */}
                     <div
                         ref={messagesContainerRef}
-                        className="flex-1 w-full max-w-lg px-6 overflow-y-auto space-y-3 pb-4 scroll-smooth"
+                        className="flex-1 w-full max-w-lg px-6 overflow-y-auto space-y-3 pb-[180px] lg:pb-4 scroll-smooth"
                     >
                         {messages.slice(0, -1).map((msg, i) => (
                             <div
@@ -1013,7 +989,7 @@ export default function ShelldonPage() {
                 </div>
 
                 {/* === ALT PANEL === */}
-                <div className="sticky bottom-0 bg-white/90 backdrop-blur-xl border-t border-emerald-100 p-4 z-50">
+                <div className="fixed bottom-20 lg:bottom-0 left-0 right-0 lg:left-auto lg:right-auto lg:sticky bg-white/90 backdrop-blur-xl border-t border-emerald-100 p-4 z-50">
                     <div className="max-w-lg mx-auto">
                         {/* Hata mesajı */}
                         {speechError && (
@@ -1120,7 +1096,7 @@ export default function ShelldonPage() {
                                                     onClick={cancelImage}
                                                     className="absolute -top-2 -right-2 bg-rose-500 text-white rounded-full p-1 shadow-md hover:bg-rose-600 transition-colors"
                                                 >
-                                                    <VolumeX className="w-3 h-3 rotate-45" /> {/* Close icon using VolumeX rotate */}
+                                                    <XCircle className="w-5 h-5" />
                                                 </button>
                                             </div>
                                         </div>
@@ -1133,7 +1109,7 @@ export default function ShelldonPage() {
                                             className="p-2 text-slate-400 hover:text-emerald-500 hover:bg-emerald-50 rounded-xl transition-colors shrink-0"
                                             title="Fotoğraf Yükle"
                                         >
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                                            <ImageIcon className="w-5 h-5" />
                                         </button>
                                         <input 
                                             type="file" 
@@ -1178,15 +1154,15 @@ export default function ShelldonPage() {
                                 >
                                     {isListening ? (
                                         <>
-                                            <MicOff className="w-5 h-5" /> Dinliyorum...
+                                        <MicOff className="w-5 h-5" /> Dinliyorum...
                                         </>
                                     ) : isLoading ? (
                                         <>
-                                            <Loader2 className="w-5 h-5 animate-spin" /> Shelldon düşünüyor...
+                                        <Loader2 className="w-5 h-5 animate-spin" /> Shelldon düşünüyor...
                                         </>
                                     ) : (
                                         <>
-                                            <Mic className="w-5 h-5" /> Konuş
+                                        <Mic className="w-5 h-5" /> Konuş
                                         </>
                                     )}
                                 </button>

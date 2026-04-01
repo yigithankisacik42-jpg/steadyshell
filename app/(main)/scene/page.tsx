@@ -429,7 +429,7 @@ function SceneContent() {
                     </div>
 
                     {/* Messages for 2D */}
-                    <div className="flex-1 overflow-y-auto pt-4 pb-[120px] px-4 relative z-10">
+                    <div className="flex-1 overflow-y-auto pt-4 pb-[180px] lg:pb-[120px] px-4 relative z-10">
                 <div className="max-w-3xl mx-auto space-y-5">
                     {messages.map((message, index) => (
                         <div
@@ -493,7 +493,7 @@ function SceneContent() {
             )}
 
             {/* Floating Input */}
-            <div className="fixed bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-950/80 via-slate-950/60 to-transparent pt-10 z-50">
+            <div className="fixed bottom-20 lg:bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-950/80 via-slate-950/60 to-transparent pt-10 z-50">
                 <div className="max-w-3xl mx-auto">
                     {speechError && (
                         <div className="mb-2 p-2 bg-red-500/20 text-red-300 text-xs font-bold rounded-lg text-center border border-red-500/30">

@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useCallback, ReactNode, use
 import { loadUserStats, getTodayStats, UserStatistics, DailyStats } from "@/lib/user-stats";
 import { useQuests } from "@/lib/quests-context";
 
-type Mood = "happy" | "sad" | "thinking" | "default" | "celebrate";
+type Mood = "happy" | "sad" | "thinking" | "default" | "celebrate" | "surprised";
 
 interface ShelldonState {
   isVisible: boolean;

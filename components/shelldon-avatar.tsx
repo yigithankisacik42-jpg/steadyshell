@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 
-type ShelldonState = "idle" | "speaking" | "listening" | "happy" | "thinking";
+type ShelldonState = "idle" | "speaking" | "listening" | "happy" | "thinking" | "surprised" | "sad";
 
 interface ShelldonAvatarProps {
     state?: ShelldonState;
@@ -67,7 +67,8 @@ export function ShelldonAvatar({
                     className={cn(
                         "transition-all duration-500",
                         state === "speaking" && "animate-[shellPulse_1s_ease-in-out_infinite]",
-                        state === "happy" && "animate-[shellGlow_0.8s_ease-in-out_infinite]"
+                        state === "happy" && "animate-[shellGlow_0.8s_ease-in-out_infinite]",
+                        state === "surprised" && "animate-bounce"
                     )}
                 />
                 {/* Kabuk deseni */}
@@ -106,7 +107,8 @@ export function ShelldonAvatar({
                 {/* === BAŞ === */}
                 <g className={cn(
                     "transition-transform duration-300",
-                    state === "listening" && "animate-[headTilt_2s_ease-in-out_infinite]"
+                    state === "listening" && "animate-[headTilt_2s_ease-in-out_infinite]",
+                    state === "surprised" && "scale-105 origin-bottom"
                 )}>
                     <ellipse
                         cx="100"
@@ -122,33 +124,46 @@ export function ShelldonAvatar({
                     {/* === GÖZLER === */}
                     <g className={cn(
                         state === "idle" && "animate-[blink_4s_ease-in-out_infinite]",
-                        state === "happy" && "animate-[squint_0.5s_ease-in-out_forwards]"
+                        state === "happy" && "animate-[squint_0.5s_ease-in-out_forwards]",
+                        state === "surprised" && "scale-110 origin-center"
                     )}>
                         {/* Sol göz */}
-                        <ellipse cx="88" cy="58" rx="7" ry="8" fill="white" />
+                        <ellipse 
+                            cx="88" 
+                            cy="58" 
+                            rx={state === "surprised" ? "9" : "7"} 
+                            ry={state === "surprised" ? "10" : "8"} 
+                            fill={state === "sad" ? "#e2e8f0" : "white"} 
+                        />
                         <circle
                             cx="89"
-                            cy="58"
-                            r="4"
+                            cy={state === "sad" ? "61" : "58"}
+                            r={state === "surprised" ? "5" : "4"}
                             fill="#2d3748"
                             className={cn(
                                 state === "listening" && "animate-[lookUp_2s_ease-in-out_infinite]"
                             )}
                         />
-                        <circle cx="90.5" cy="56.5" r="1.5" fill="white" />
+                        <circle cx="90.5" cy={state === "sad" ? "59.5" : "56.5"} r="1.5" fill="white" />
 
                         {/* Sağ göz */}
-                        <ellipse cx="112" cy="58" rx="7" ry="8" fill="white" />
+                        <ellipse 
+                            cx="112" 
+                            cy="58" 
+                            rx={state === "surprised" ? "9" : "7"} 
+                            ry={state === "surprised" ? "10" : "8"} 
+                            fill={state === "sad" ? "#e2e8f0" : "white"} 
+                        />
                         <circle
                             cx="113"
-                            cy="58"
-                            r="4"
+                            cy={state === "sad" ? "61" : "58"}
+                            r={state === "surprised" ? "5" : "4"}
                             fill="#2d3748"
                             className={cn(
                                 state === "listening" && "animate-[lookUp_2s_ease-in-out_infinite]"
                             )}
                         />
-                        <circle cx="114.5" cy="56.5" r="1.5" fill="white" />
+                        <circle cx="114.5" cy={state === "sad" ? "59.5" : "56.5"} r="1.5" fill="white" />
                     </g>
 
                     {/* === AĞIZ === */}
@@ -167,6 +182,21 @@ export function ShelldonAvatar({
                             fill="none"
                             stroke="#5b8c3e"
                             strokeWidth="2.5"
+                            strokeLinecap="round"
+                        />
+                    ) : state === "surprised" ? (
+                        <circle
+                            cx="100"
+                            cy="75"
+                            r="5"
+                            fill="#6b8c3e"
+                        />
+                    ) : state === "sad" ? (
+                        <path
+                            d="M92 78 Q100 72 108 78"
+                            fill="none"
+                            stroke="#5b8c3e"
+                            strokeWidth="2"
                             strokeLinecap="round"
                         />
                     ) : (
