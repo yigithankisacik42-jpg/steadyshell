@@ -419,7 +419,29 @@ function SceneContent() {
 
             {/* Main view switch based on mode */}
             {is3DMode ? (
-                <Scene3D sceneData={selectedScene} messages={messages} isLoading={isLoading} />
+                <div className="relative flex-1">
+                    <Scene3D sceneData={selectedScene} messages={messages} isLoading={isLoading} />
+                    
+                    {/* Subtitle Overlay */}
+                    {messages.filter(m => m.role === 'assistant').length > 0 && (
+                        <div className="absolute bottom-[100px] inset-x-0 px-6 z-20 pointer-events-none animate-in fade-in slide-in-from-bottom-2 duration-500">
+                            <div className="max-w-2xl mx-auto">
+                                <div className="bg-slate-950/80 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl">
+                                    <div className="flex gap-3">
+                                        <div className="shrink-0 w-8 h-8 bg-violet-600/20 rounded-lg flex items-center justify-center text-xl">
+                                            {selectedScene?.icon}
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-white font-medium leading-relaxed">
+                                                {messages.filter(m => m.role === 'assistant').pop()?.content}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
             ) : (
                 <>
                     {/* Background for 2D */}

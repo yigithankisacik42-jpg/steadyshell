@@ -105,8 +105,8 @@ function Character({
     <group ref={groupRef} position={position} rotation={[0, rotationY, 0]}>
       {/* Speech Bubble */}
       {(message || isTyping) && (
-        <Html position={[0, 2.3, 0]} center zIndexRange={[100, 0]}>
-          <div className={`backdrop-blur-md border p-3 rounded-xl min-w-[150px] max-w-[280px] shadow-2xl animate-in fade-in zoom-in duration-300 ${isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 text-white" : "bg-slate-900/90 border-white/20 text-white"}`}>
+        <Html position={[0, 2.1, 0]} zIndexRange={[100, 0]}>
+          <div className={`-translate-x-1/2 -translate-y-full mb-4 backdrop-blur-md border p-3 rounded-xl min-w-[150px] max-w-[280px] shadow-2xl animate-in fade-in zoom-in duration-300 ${isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 text-white" : "bg-slate-900/90 border-white/20 text-white"}`}>
             {isTyping ? (
               <div className="flex space-x-1.5 items-center justify-center p-2">
                 <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
@@ -114,11 +114,14 @@ function Character({
                 <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce"></div>
               </div>
             ) : (
-              <p className="text-sm font-medium leading-relaxed">
-                {message}
-              </p>
+              <div className="max-h-[160px] overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-white/20">
+                <p className="text-sm font-medium leading-relaxed whitespace-pre-wrap">
+                  {message}
+                </p>
+              </div>
             )}
-            <div className={`absolute -bottom-2 w-4 h-4 border-b border-r rotate-45 ${isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 right-6" : "bg-slate-900/90 border-white/20 left-1/2 -translate-x-1/2"}`}></div>
+            {/* Bubble Tail */}
+            <div className={`absolute bottom-[-6px] w-3 h-3 border-b border-r rotate-45 ${isPlayer ? "bg-fuchsia-900/90 border-fuchsia-400/30 right-4" : "bg-slate-900/90 border-white/20 left-1/2 -translate-x-1/2"}`}></div>
           </div>
         </Html>
       )}
