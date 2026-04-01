@@ -533,7 +533,14 @@ const unitTopics: { [key: number]: string } = {
     141: "Boş Zaman", 142: "Spor ve Fitness", 143: "Dünya Mutfağı", 144: "Eğlence Medyası", 145: "Bilgisayar Bilimi",
     146: "Sosyal İlişkiler", 147: "Para ve Bankacılık", 148: "Sosyal Kurallar", 149: "Sanat ve Kültür", 150: "Küresel Sorunlar",
     151: "Bilimsel Keşifler", 152: "Vahşi Yaşam", 153: "Kişi Betimleme", 154: "İleri Duygular", 155: "Günlük Alışkanlıklar",
-    156: "Dış Görünüş", 157: "Yönler ve Yerler", 158: "Present Perfect 1", 159: "Present Perfect 2", 160: "A2 Genel Tekrar"
+    156: "Dış Görünüş", 157: "Yönler ve Yerler", 158: "Present Perfect 1", 159: "Present Perfect 2", 160: "A2 Genel Tekrar",
+    // İngilizce B1 (161-190)
+    161: "Gelecek Zaman", 162: "Koşul Cümleleri 1", 163: "Koşul Cümleleri 2", 164: "Passive Voice", 165: "Reported Speech",
+    166: "Phrasal Verbs 1", 167: "Phrasal Verbs 2", 168: "Haberler ve Medya", 169: "Çevre Sorunları", 170: "Sürdürülebilirlik",
+    171: "Kültür ve Gelenekler", 172: "Ekonomi Temelleri", 173: "Tartışma Becerileri", 174: "Sunum Yapma", 175: "Edebiyat 1",
+    176: "Akademik Yazma", 177: "Bilim ve Teknoloji", 178: "Sağlık ve Beslenme", 179: "Psikoloji Temelleri", 180: "İş İngilizcesi 1",
+    181: "Past Perfect", 182: "Future Perfect", 183: "Relative Clauses", 184: "Causatives", 185: "Wish Clauses",
+    186: "Collocations", 187: "Connectors", 188: "Formal vs Informal", 189: "Debate Skills", 190: "B1 Tekrar"
 };
 
 // Ana fonksiyon

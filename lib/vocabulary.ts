@@ -1061,18 +1061,6 @@ const unit29Vocab: UnitVocabulary = {
 const unit30Vocab: UnitVocabulary = {
     unitId: 30, title: "Poder Fiili ve Yetenek İfadeleri",
     words: [
-        { word: "Poder", meaning: "Yapabilmek", pronunciation: "po-der", example: "Puedo hablar español.", exampleTranslation: "İspanyolca konuşabiliyorum." },
-        { word: "Puedo", meaning: "Yapabilirim", pronunciation: "pue-do", example: "Puedo ayudarte.", exampleTranslation: "Sana yardım edebilirim." },
-        { word: "Puedes", meaning: "Yapabilirsin", pronunciation: "pue-des", example: "¿Puedes venir?", exampleTranslation: "Gelebilir misin?" },
-        { word: "Puede", meaning: "Yapabilir", pronunciation: "pue-de", example: "Él puede nadar.", exampleTranslation: "O yüzebilir." },
-        { word: "Podemos", meaning: "Yapabiliriz", pronunciation: "po-de-mos", example: "Podemos ir juntos.", exampleTranslation: "Birlikte gidebiliriz." },
-        { word: "Pueden", meaning: "Yapabilirler", pronunciation: "pue-den", example: "Ellos pueden jugar.", exampleTranslation: "Onlar oynayabilir." },
-        { word: "Capaz", meaning: "Yetenekli/Muktedir", pronunciation: "ka-pas", example: "Soy capaz de hacerlo.", exampleTranslation: "Onu yapabilecek kapasitedeyim." },
-        { word: "Imposible", meaning: "İmkansız", pronunciation: "im-po-si-ble", example: "Es imposible.", exampleTranslation: "İmkansız." },
-        { word: "Posible", meaning: "Mümkün", pronunciation: "po-si-ble", example: "Es posible.", exampleTranslation: "Mümkün." },
-        { word: "Fácil", meaning: "Kolay", pronunciation: "fa-sil", example: "Es muy fácil.", exampleTranslation: "Çok kolay." },
-        { word: "Difícil", meaning: "Zor", pronunciation: "di-fi-sil", example: "Es difícil.", exampleTranslation: "Zor." },
-        { word: "Permiso", meaning: "İzin", pronunciation: "per-mi-so", example: "¿Me das permiso?", exampleTranslation: "Bana izin verir misin?" },
         { word: "Permitir", meaning: "İzin vermek", pronunciation: "per-mi-tir", example: "No está permitido.", exampleTranslation: "İzin verilmiyor." },
         { word: "Prohibido", meaning: "Yasak", pronunciation: "pro-i-bi-do", example: "Está prohibido fumar.", exampleTranslation: "Sigara içmek yasak." },
         { word: "Intentar", meaning: "Denemek", pronunciation: "in-ten-tar", example: "Voy a intentar.", exampleTranslation: "Deneyeceğim." },
@@ -1090,6 +1078,7 @@ import { getB1VocabularyForUnit } from './vocabulary-b1';
 import { getB2VocabularyForUnit } from './vocabulary-b2';
 import { getEnglishA1VocabularyForUnit } from './vocabulary-en-a1';
 import { getEnglishA2VocabularyForUnit } from './vocabulary-en-a2';
+import { getEnglishB1VocabularyForUnit } from './vocabulary-en-b1';
 import { getFrenchA1VocabularyForUnit } from './vocabulary-fr-a1';
 import { getFrenchA2VocabularyForUnit } from './vocabulary-fr-a2';
 import { getFrB1VocabularyForUnit } from './vocabulary-fr-b1';
@@ -1115,6 +1104,22 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
     // İngilizce A2 (131-160)
     if (unitId >= 131 && unitId <= 160) {
         const enVocab = getEnglishA2VocabularyForUnit(unitId);
+        return {
+            unitId: enVocab.unitId,
+            title: enVocab.title,
+            words: enVocab.words.map(v => ({
+                word: v.word,
+                meaning: v.meaning,
+                pronunciation: v.pronunciation,
+                example: v.example,
+                exampleTranslation: v.exampleTranslation
+            }))
+        };
+    }
+
+    // İngilizce B1 (161-190)
+    if (unitId >= 161 && unitId <= 190) {
+        const enVocab = getEnglishB1VocabularyForUnit(unitId);
         return {
             unitId: enVocab.unitId,
             title: enVocab.title,
