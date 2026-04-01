@@ -21,9 +21,6 @@ function VideoContent() {
         }
     }, [video]);
 
-    // Debugging only - remove before production
-    const isDebug = true;
-
     if (!video) {
         return (
             <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white flex items-center justify-center">
@@ -31,15 +28,6 @@ function VideoContent() {
                     <h1 className="text-3xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-400">Video Henüz Eklenmedi</h1>
                     <p className="text-slate-400 mb-8 max-w-md mx-auto">Bu ünite için video henüz hazırlanmadı veya sistemde bir eşleşme sorunu var.</p>
                     
-                    {isDebug && (
-                        <div className="mb-8 p-4 bg-black/40 rounded-xl text-left font-mono text-xs text-emerald-400 border border-emerald-500/20">
-                            <p className="mb-1 font-bold">🔍 HATA AYIKLAMA BİLGİSİ:</p>
-                            <p>Target Unit ID: {unitId}</p>
-                            <p>Unit ID Type: {typeof unitId}</p>
-                            <p>URL Param: {searchParams.get("unitId")}</p>
-                        </div>
-                    )}
-
                     <Link href="/learn">
                         <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-xl px-8 h-12 font-bold transition-all hover:scale-105">
                             <ArrowLeft className="w-4 h-4 mr-2" />

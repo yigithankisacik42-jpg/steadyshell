@@ -589,6 +589,34 @@ export async function getQuestionsForUnit(unitId: number, quizIndex: number = 1)
         return getFrenchB1Quiz(unitId, quizIndex);
     }
 
+    // === İNGİLİZCE B1 (ID 161-190) ===
+    if (unitId >= 161 && unitId <= 190) {
+        const { getEnglishB1GrammarForUnit } = await import('./grammar-en-b1');
+        const grammarUnit = getEnglishB1GrammarForUnit(unitId);
+        
+        // 1. Gramer dosyasındaki 10 özel alıştırmayı al
+        const curriculumQuestions: Question[] = (grammarUnit.exercises || []).map((ex, i) => ({
+            id: i + 1,
+            type: "SELECT" as QuestionType,
+            question: ex.question,
+            options: ex.options.map((text, idx) => ({
+                id: String.fromCharCode(97 + idx),
+                text: text,
+                correct: idx === ex.correct
+            })),
+            hint: ex.explanation
+        }));
+
+        // 2. Eksik kalan 10 soruyu generateQuiz ile tamamla (Toplam 20 soru)
+        const fallbackQuestions = generateQuiz(unitId, quizIndex, unitTopics[unitId] || "English Lesson");
+        const additionalQuestions = fallbackQuestions.slice(0, 10).map((q, i) => ({
+            ...q,
+            id: curriculumQuestions.length + i + 1
+        }));
+
+        return [...curriculumQuestions, ...additionalQuestions];
+    }
+
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===
     // Dinamik dosyadan çek (Unit 3-30 arası dış dosyalarda)
     if (unitId >= 3 && unitId <= 30) {
