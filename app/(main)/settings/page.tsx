@@ -12,6 +12,8 @@ import { getStatsSummary, getWeeklyStats, formatTimeShort, type DailyStats } fro
 import { cn } from "@/lib/utils";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { UserAvatar } from "@/components/user-avatar";
+
 
 const settingsItems = [
     { icon: Bell, label: "Bildirimler", description: "Hatırlatma ve güncellemeler", href: "/settings/notifications" },
@@ -47,12 +49,11 @@ export default function SettingsPage() {
     useEffect(() => {
         if (session?.user) {
             const u = session.user;
-            // Type assertion or check if properties exist
             setUser(prev => ({
                 ...prev,
                 name: u.name || prev.name,
                 email: u.email || prev.email,
-                avatar: u.image || (u.name ? u.name.charAt(0).toUpperCase() : prev.avatar),
+                avatar: u.image || prev.avatar,
             }));
             setName(u.name || "");
             setEmail(u.email || "");
@@ -146,9 +147,13 @@ export default function SettingsPage() {
                 <section className="bg-white rounded-3xl border border-slate-200 border-b-4 shadow-sm p-6 overflow-hidden relative">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2" />
                     <div className="flex items-center gap-5 mb-6 relative z-10">
-                        <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white font-black text-3xl shadow-lg shadow-indigo-500/30">
-                            {name.charAt(0).toUpperCase()}
-                        </div>
+                        <UserAvatar 
+                            src={user.avatar} 
+                            name={name} 
+                            size={80} 
+                            className="rounded-2xl shadow-lg shadow-indigo-500/30" 
+                        />
+
                         <div>
                             <div className="flex items-center gap-2">
                                 <h2 className="text-xl font-black text-slate-800">{name}</h2>

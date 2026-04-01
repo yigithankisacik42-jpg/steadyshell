@@ -5,7 +5,8 @@ import { ArrowLeft, Mic, MicOff, Send, Volume2, VolumeX, Sparkles, MessageCircle
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ShelldonAvatar } from "@/components/shelldon-avatar";
+import { ShelldonAvatar, type ShelldonState } from "@/components/shelldon-avatar";
+
 import { Scene3D } from "@/components/scene-3d";
 import { SHELLDON_SCENARIOS, buildShelldonPrompt, buildFeedbackPrompt, buildHintPrompt, type ShelldonScenario, type ShelldonPracticeMode } from "@/lib/shelldon-ai";
 import { useSpeech } from "@/lib/use-speech";
@@ -47,7 +48,7 @@ interface FeedbackData {
     tip: string;
 }
 
-type ShelldonAvatarState = "idle" | "speaking" | "listening" | "happy" | "thinking" | "surprised" | "sad";
+
 
 // Component for Interactive Inline Corrections
 function UserMessageBubble({ content, corrections }: { content: string, corrections?: Correction[] }) {
@@ -119,7 +120,7 @@ export default function ShelldonPage() {
     const [inputValue, setInputValue] = useState("");
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
-    const [shelldonState, setShelldonState] = useState<ShelldonAvatarState>("idle");
+    const [shelldonState, setShelldonState] = useState<ShelldonState>("idle");
     const [currentBubbleText, setCurrentBubbleText] = useState("");
     const [turnCount, setTurnCount] = useState(0);
     const [isFinished, setIsFinished] = useState(false);
@@ -227,12 +228,12 @@ export default function ShelldonPage() {
             .catch(console.error);
     }, []);
 
-    // === TTS bittiğinde idle'a dön ===
     useEffect(() => {
         if (!isSpeaking && (shelldonState === "speaking" || shelldonState === "happy" || shelldonState === "surprised")) {
             setShelldonState("idle");
         }
     }, [isSpeaking, shelldonState]);
+
 
     // === Ses tanıma sonucunu input'a yaz ===
     useEffect(() => {
@@ -289,7 +290,7 @@ export default function ShelldonPage() {
             const data = await response.json();
             const raw = data.choices?.[0]?.message?.content || "";
             let aiMessage = "Merhaba! 🐢";
-            let aiMood: ShelldonAvatarState = "speaking";
+            let aiMood: ShelldonState = "speaking";
             
             // Try parsing JSON response
             try {
@@ -299,7 +300,8 @@ export default function ShelldonPage() {
                 if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
                     setCompletedObjectives(parsed.completedObjectives);
                 }
-                if (parsed.mood) aiMood = (parsed.mood.toLowerCase() === "neutral" ? "speaking" : parsed.mood.toLowerCase()) as ShelldonAvatarState;
+                if (parsed.mood) aiMood = (parsed.mood.toLowerCase() === "neutral" ? "speaking" : parsed.mood.toLowerCase()) as ShelldonState;
+
             } catch (e) {
                 aiMessage = raw;
             }
@@ -422,7 +424,7 @@ export default function ShelldonPage() {
             const data = await response.json();
             const raw = data.choices?.[0]?.message?.content || "";
             let aiMessage = "Devam edelim!";
-            let aiMood: ShelldonAvatarState = "speaking";
+            let aiMood: ShelldonState = "speaking";
             let newCompletedObj: number[] = [];
             let correction: Correction | null = null;
 
@@ -430,7 +432,8 @@ export default function ShelldonPage() {
                 const cleanJson = raw.replace(/```json?\n?/g, "").replace(/```/g, "").trim();
                 const parsed = JSON.parse(cleanJson);
                 if (parsed.message) aiMessage = parsed.message;
-                if (parsed.mood) aiMood = (parsed.mood.toLowerCase() === "neutral" ? "speaking" : parsed.mood.toLowerCase()) as ShelldonAvatarState;
+                if (parsed.mood) aiMood = (parsed.mood.toLowerCase() === "neutral" ? "speaking" : parsed.mood.toLowerCase()) as ShelldonState;
+
                 if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
                     newCompletedObj = parsed.completedObjectives;
                 }

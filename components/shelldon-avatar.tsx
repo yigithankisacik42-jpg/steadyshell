@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 
-type ShelldonState = "idle" | "speaking" | "listening" | "happy" | "thinking" | "surprised" | "sad";
+export type ShelldonState = "idle" | "speaking" | "listening" | "happy" | "thinking" | "surprised" | "sad";
 
 interface ShelldonAvatarProps {
     state?: ShelldonState;

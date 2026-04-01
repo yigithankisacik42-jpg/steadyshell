@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { useHearts, formatTime } from "@/lib/hearts-context";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { UserAvatar } from "@/components/user-avatar";
 
 const menuItems = [
   { href: "/learn", icon: Home, label: "Öğren", color: "text-indigo-500" },
@@ -175,9 +176,12 @@ export const Sidebar = ({ className }: { className?: string }) => {
         <div className="relative group p-3 rounded-2xl bg-white/50 border border-slate-100 hover:border-indigo-200 hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm shadow-md group-hover:scale-105 transition-transform">
-                {displayUser.avatar}
-              </div>
+              <UserAvatar 
+                src={displayUser.avatar} 
+                name={displayUser.name} 
+                size={40} 
+                className="rounded-xl shadow-md group-hover:scale-105 transition-transform" 
+              />
               <div className="absolute -bottom-1 -right-1 bg-yellow-400 border-2 border-white rounded-full p-0.5">
                 <Crown className="w-2.5 h-2.5 text-yellow-900" />
               </div>

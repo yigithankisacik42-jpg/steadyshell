@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { UserAvatar } from "@/components/user-avatar";
 
 const getRankStyle = (rank: number) => {
     switch (rank) {
@@ -99,9 +100,12 @@ export default function LeaderboardPage() {
                             <p className="text-amber-100 font-bold text-sm uppercase tracking-wider mb-1">Haftanın Şampiyonu</p>
 
                             <div className="flex items-center gap-4 mt-4 w-full px-4 sm:px-8">
-                                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl shadow-lg shrink-0">
-                                    {champion.avatar || "👤"}
-                                </div>
+                                <UserAvatar 
+                                    src={champion.avatar} 
+                                    name={champion.name} 
+                                    size={80} 
+                                    className="bg-white/20 backdrop-blur-sm rounded-2xl shadow-lg shrink-0 border-2 border-white/30" 
+                                />
                                 <div className="flex-1 min-w-0">
                                     <h2 className="text-2xl font-black truncate w-full text-left" title={champion.name || "Misafir"}>
                                         {champion.name || "Misafir"}
@@ -146,14 +150,17 @@ export default function LeaderboardPage() {
                                 </div>
 
                                 {/* Avatar */}
-                                <div className={cn(
-                                    "w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-md shrink-0",
-                                    data.isCurrentUser
-                                        ? "bg-gradient-to-br from-indigo-500 to-violet-500 text-white"
-                                        : "bg-gradient-to-br from-slate-200 to-slate-300"
-                                )}>
-                                    {data.avatar || "👤"}
-                                </div>
+                                <UserAvatar 
+                                    src={data.avatar} 
+                                    name={data.name} 
+                                    size={56} 
+                                    className={cn(
+                                        "rounded-2xl shadow-md shrink-0",
+                                        data.isCurrentUser
+                                            ? "bg-gradient-to-br from-indigo-500 to-violet-500"
+                                            : "bg-gradient-to-br from-slate-200 to-slate-300"
+                                    )} 
+                                />
 
                                 {/* Name & Status */}
                                 <div className="flex-1 min-w-0 max-w-[60%] sm:max-w-full">
