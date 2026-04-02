@@ -36,14 +36,7 @@ export default function LearnPage() {
 
     useEffect(() => {
         setIsMounted(true);
-        
-        // Hoş geldin mesajı - Rastgele espriler de eklenebilir!
-        const timer = setTimeout(() => {
-             showShelldon("Derslere geri dönmene sevindim şampiyon! 🐢", "happy", 5000);
-        }, 1500);
-
-        return () => clearTimeout(timer);
-    }, [showShelldon]);
+    }, []);
 
     const units = getCurriculum(currentLanguage.code, currentLevel?.code || "A1");
     const currentProgress = progress[currentLanguage.code];
@@ -424,3 +417,4 @@ export default function LearnPage() {
         </div>
     );
 }
+
