@@ -15,11 +15,26 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "SteadyShell",
+    default: "SteadyShell | Dil Öğrenmenin En Akıllı Yolu",
     template: "%s | SteadyShell",
   },
-  description: "Ücretsiz dil öğrenme uygulaması",
+  description: "Yapay zeka asistanı Shelldon ile İspanyolca, Fransızca ve İngilizceyi eğlenerek öğrenin. Ücretsiz ve etkili dil eğitimi.",
+  keywords: ["dil öğrenme", "ispanyolca", "ingilizce", "fransızca", "yapay zeka", "tutor", "eğitim"],
   manifest: "/manifest.json",
+  authors: [{ name: "SteadyShell Team" }],
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    url: "https://steadyshell.com",
+    title: "SteadyShell - Akıllı Dil Öğrenme Platformu",
+    description: "Shelldon ile tanışın, dil öğrenme yolculuğunuzda size eşlik etsin.",
+    siteName: "SteadyShell",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SteadyShell - Akıllı Dil Öğrenme",
+    description: "Yapay zeka ile dil öğrenme deneyimi.",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",

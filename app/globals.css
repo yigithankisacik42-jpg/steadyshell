@@ -96,6 +96,10 @@
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
   }
+
+  ::selection {
+    @apply bg-indigo-500/20 text-indigo-900;
+  }
 }
 
 @layer utilities {
@@ -105,6 +109,20 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-200/50 rounded-full hover:bg-indigo-500/30 transition-colors;
   }
 }
 

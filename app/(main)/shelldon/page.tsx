@@ -107,7 +107,7 @@ function UserMessageBubble({ content, corrections }: { content: string, correcti
         elements = newElements;
     });
 
-    return <div className="leading-relaxed whitespace-pre-wrap">{elements}</div>;
+    return <div className="leading-relaxed whitespace-pre-wrap break-words">{elements}</div>;
 }
 
 export default function ShelldonPage() {
@@ -914,39 +914,19 @@ export default function ShelldonPage() {
                         </div>
                     )}
 
-                    {/* Konuşma Balonu */}
-                    <div className="px-6 w-full max-w-lg mb-4">
-                        {currentBubbleText && (
-                            <div className="bg-white rounded-2xl px-5 py-4 shadow-lg border border-emerald-100 relative">
-                                {/* Üçgen */}
-                                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-emerald-100 rotate-45" />
-                                <p className="text-slate-700 font-medium leading-relaxed text-sm relative z-10 whitespace-pre-wrap">
-                                    {currentBubbleText}
-                                </p>
-                                {/* Dinle butonu */}
-                                {speechSupported && (
-                                    <button
-                                        onClick={() => isSpeaking ? stopSpeaking() : speak(currentBubbleText)}
-                                        className="mt-2 flex items-center gap-1 text-xs font-bold text-emerald-500 hover:text-emerald-700"
-                                    >
-                                        {isSpeaking ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
-                                        {isSpeaking ? "Durdur" : "Tekrar Dinle"}
-                                    </button>
-                                )}
-                            </div>
-                        )}
-                    </div>
-
                     {/* Mesaj Geçmişi */}
                     <div
                         ref={messagesContainerRef}
-                        className="flex-1 w-full max-w-lg px-6 overflow-y-auto space-y-3 pb-[180px] lg:pb-4 scroll-smooth"
+                        className="flex-1 w-full max-w-lg px-6 overflow-y-auto space-y-4 pb-2 lg:pb-4 scroll-smooth"
                     >
-                        {messages.slice(0, -1).map((msg, i) => (
+                        {/* Tooltip Padding Spacer */}
+                        <div className="h-16 shrink-0" aria-hidden="true" />
+                        
+                        {messages.map((msg, i) => (
                             <div
                                 key={i}
                                 className={cn(
-                                    "text-sm px-4 py-2.5 rounded-2xl max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 shadow-sm flex flex-col gap-2",
+                                    "text-sm px-4 py-3 rounded-2xl max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 shadow-sm flex flex-col gap-2",
                                     msg.role === "user"
                                         ? "bg-emerald-500 text-white ml-auto rounded-br-sm"
                                         : "bg-white text-slate-700 border border-slate-100 rounded-bl-sm"
@@ -958,10 +938,52 @@ export default function ShelldonPage() {
                                 {msg.role === "user" ? (
                                     <UserMessageBubble content={msg.content} corrections={msg.corrections} />
                                 ) : (
-                                    <div className="whitespace-pre-wrap leading-relaxed">{msg.content}</div>
+                                    <div className="flex flex-col gap-2">
+                                        <div className="whitespace-pre-wrap leading-relaxed">{msg.content}</div>
+                                        {speechSupported && i === messages.length - 1 && !currentBubbleText && (
+                                            <button
+                                                onClick={() => isSpeaking ? stopSpeaking() : speak(msg.content)}
+                                                className="mt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-500 hover:text-emerald-700 w-fit"
+                                            >
+                                                {isSpeaking ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+                                                {isSpeaking ? "Durdur" : "Tekrar Dinle"}
+                                            </button>
+                                        )}
+                                    </div>
                                 )}
                             </div>
                         ))}
+
+                        {/* Typing Indicator */}
+                        {isLoading && !currentBubbleText && (
+                            <div className="flex items-center gap-2 px-4 py-3 bg-white border border-slate-100 rounded-2xl rounded-bl-sm w-fit animate-in fade-in zoom-in-95 shadow-sm">
+                                <div className="flex gap-1">
+                                    <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce [animation-delay:-0.3s]" />
+                                    <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce [animation-delay:-0.15s]" />
+                                    <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce" />
+                                </div>
+                                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider ml-1">Shelldon Düşünüyor</span>
+                            </div>
+                        )}
+
+                        {/* Canlı AI Yanıtı (Streaming) */}
+                        {currentBubbleText && (
+                            <div className="bg-white text-slate-700 border border-slate-100 rounded-2xl rounded-bl-sm text-sm px-4 py-3 max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 shadow-sm flex flex-col gap-2">
+                                <div className="whitespace-pre-wrap leading-relaxed">
+                                    {currentBubbleText}
+                                    <span className="inline-block w-1.5 h-4 ml-1 bg-emerald-500/40 animate-pulse align-middle" />
+                                </div>
+                                {speechSupported && (
+                                    <button
+                                        onClick={() => isSpeaking ? stopSpeaking() : speak(currentBubbleText)}
+                                        className="mt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-500 hover:text-emerald-700 w-fit"
+                                    >
+                                        {isSpeaking ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+                                        {isSpeaking ? "Durdur" : "Dinle"}
+                                    </button>
+                                )}
+                            </div>
+                        )}
 
                         {/* Canlı Dinleme Balonu */}
                         {isListening && transcript && (
@@ -992,7 +1014,7 @@ export default function ShelldonPage() {
                 </div>
 
                 {/* === ALT PANEL === */}
-                <div className="fixed bottom-20 lg:bottom-0 left-0 right-0 lg:left-auto lg:right-auto lg:sticky bg-white/90 backdrop-blur-xl border-t border-emerald-100 p-4 z-50">
+                <div className="fixed bottom-20 lg:bottom-0 left-0 right-0 lg:left-auto lg:right-auto lg:sticky bg-white/95 backdrop-blur-xl border-t border-emerald-100 p-4 z-50 shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
                     <div className="max-w-lg mx-auto">
                         {/* Hata mesajı */}
                         {speechError && (

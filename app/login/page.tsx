@@ -19,6 +19,7 @@ function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [isLocked, setIsLocked] = useState(false);
   const [lockoutTime, setLockoutTime] = useState(0);
+  const [showForgotAlert, setShowForgotAlert] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,13 +72,19 @@ function LoginForm() {
     }
   };
 
-  const handleDemoLogin = () => {
-    const demoUser = {
-      id: 1, name: "Demo Kullanıcı", email: "demo@user.com", avatar: "D",
-      createdAt: new Date().toISOString(), streak: 3, totalXp: 1250, hearts: 5, completedLessons: [],
-    };
-    localStorage.setItem("steadyshell_current_user", JSON.stringify(demoUser));
-    router.push("/learn");
+  const handleDemoLogin = async () => {
+    setIsLoading(true);
+    try {
+      await signIn("credentials", {
+        redirect: true,
+        callbackUrl: "/learn",
+        email: "demo@user.com",
+        password: "demo",
+      });
+    } catch (err) {
+      setError("Demo girişi şu an kapalı.");
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -114,9 +121,17 @@ function LoginForm() {
             <form onSubmit={handleLogin} className="space-y-5 relative z-10">
 
               {error && (
-                <div className="flex items-center gap-3 p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl text-rose-300 text-sm font-bold animate-shake">
+                <div className="flex items-center gap-3 p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl text-rose-300 text-sm font-bold animate-shake" role="alert">
                   <AlertCircle className="w-5 h-5 shrink-0" />
                   {error}
+                </div>
+              )}
+
+              {showForgotAlert && (
+                <div className="flex items-center gap-3 p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-indigo-300 text-sm font-bold animate-in fade-in slide-in-from-top-1" role="alert">
+                  <AlertCircle className="w-5 h-5 shrink-0" />
+                  Şifre sıfırlama yakında eklenecektir. Destek için support@steadyshell.com
+                  <button onClick={() => setShowForgotAlert(false)} className="ml-auto underline">Kapat</button>
                 </div>
               )}
 
@@ -129,6 +144,8 @@ function LoginForm() {
                     placeholder="ornek@mail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    aria-label="Email adresi"
+                    required
                     className="h-12 pl-12 bg-slate-900/50 border-white/10 text-white placeholder:text-slate-600 focus-visible:ring-indigo-500/50 focus-visible:border-indigo-500/50 rounded-xl transition-all"
                   />
                 </div>
@@ -139,7 +156,10 @@ function LoginForm() {
                   <Label className="text-slate-300 text-xs font-bold uppercase tracking-wider">Şifre</Label>
                   <button
                     type="button"
-                    onClick={() => alert("Şifre sıfırlama özelliği yakında eklenecektir. Lütfen support@steadyshell.com ile iletişime geçin.")}
+                    onClick={() => {
+                        setError("");
+                        setShowForgotAlert(true);
+                    }}
                     className="text-indigo-400 hover:text-indigo-300 text-xs font-bold transition-colors"
                   >
                     Unuttum?
@@ -152,6 +172,8 @@ function LoginForm() {
                     placeholder="••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    aria-label="Şifre"
+                    required
                     className="h-12 pl-12 bg-slate-900/50 border-white/10 text-white placeholder:text-slate-600 focus-visible:ring-indigo-500/50 focus-visible:border-indigo-500/50 rounded-xl transition-all"
                   />
                 </div>

@@ -40,10 +40,10 @@ const reasons = [
 ];
 
 const timeOptions = [
-    { minutes: 5, label: '5 dk/gün', description: 'Rahat tempo' },
-    { minutes: 10, label: '10 dk/gün', description: 'Düzenli' },
-    { minutes: 15, label: '15 dk/gün', description: 'Ciddi' },
-    { minutes: 30, label: '30 dk/gün', description: 'Yoğun' },
+    { minutes: 10, label: '10 dk/gün', description: 'Rahat tempo' },
+    { minutes: 15, label: '15 dk/gün', description: 'Düzenli' },
+    { minutes: 30, label: '30 dk/gün', description: 'Ciddi' },
+    { minutes: 60, label: '60 dk/gün', description: 'Yoğun' },
 ];
 
 const sources = [

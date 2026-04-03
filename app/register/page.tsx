@@ -142,6 +142,8 @@ export default function RegisterPage() {
                     placeholder="Adın ne?"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    aria-label="Ad Soyad"
+                    required
                     className="h-12 pl-12 bg-slate-900/50 border-white/10 text-white placeholder:text-slate-600 focus-visible:ring-indigo-500/50 focus-visible:border-indigo-500/50 rounded-xl transition-all"
                   />
                 </div>
@@ -156,6 +158,8 @@ export default function RegisterPage() {
                     placeholder="ornek@mail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    aria-label="Email adresi"
+                    required
                     className="h-12 pl-12 bg-slate-900/50 border-white/10 text-white placeholder:text-slate-600 focus-visible:ring-indigo-500/50 focus-visible:border-indigo-500/50 rounded-xl transition-all"
                   />
                 </div>
@@ -173,6 +177,8 @@ export default function RegisterPage() {
                       setPassword(e.target.value);
                       checkPasswordStrength(e.target.value);
                     }}
+                    aria-label="Şifre"
+                    required
                     className="h-12 pl-12 bg-slate-900/50 border-white/10 text-white placeholder:text-slate-600 focus-visible:ring-indigo-500/50 focus-visible:border-indigo-500/50 rounded-xl transition-all"
                   />
                 </div>

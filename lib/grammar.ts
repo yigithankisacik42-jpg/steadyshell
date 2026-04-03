@@ -46,7 +46,7 @@ const unit1Grammar: UnitGrammar = {
         {
             id: "ser-intro",
             title: "🎯 Ser Fiili Nedir?",
-            explanation: "İspanyolca'da 'olmak' fiili için iki farklı fiil kullanılır: **SER** ve **ESTAR**. Bu ilk ünitemizde **SER** fiilini öğreneceğiz.\n\n**SER fiili**, bir nesnenin veya kişinin **özünü, kimliğini ve değişmez niteliklerini** ifade etmek için kullanılır. Türkçe'de 'Ben bakkalkım', 'O doktordur' gibi cümlelerde gizli olan 'olmak' fiiline karşılık gelir.\n\n**Önemli:** İspanyolca'da özne genellikle düşer çünkü fiil çekimi özneyi belli eder:\n* 'Soy médico' = 'Ben doktorum' ('Yo' düşmüş)\n* 'Es alto' = 'O uzundur' ('Él' düşmüş)",
+            explanation: "İspanyolca'da 'olmak' fiili için iki farklı fiil kullanılır: **SER** ve **ESTAR**. Bu ilk ünitemizde **SER** fiilini öğreneceğiz.\n\n**SER fiili**, bir nesnenin veya kişinin **özünü, kimliğini ve değişmez niteliklerini** ifade etmek için kullanılır. Türkçe'de 'Ben bakkalım', 'O doktordur' gibi cümlelerde gizli olan 'olmak' fiiline karşılık gelir.\n\n**Önemli:** İspanyolca'da özne genellikle düşer çünkü fiil çekimi özneyi belli eder:\n* 'Soy médico' = 'Ben doktorum' ('Yo' düşmüş)\n* 'Es alto' = 'O uzundur' ('Él' düşmüş)",
             examples: [
                 { es: "Soy estudiante", tr: "Ben öğrenciyim" },
                 { es: "Eres inteligente", tr: "Sen zekisin" },

@@ -8,7 +8,7 @@ import { ArrowLeft, Heart, Check, AlertCircle, Volume2, Trophy, ArrowRight, X, C
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { getQuestionsForUnit, Question } from "@/lib/questions";
-import { getUnit } from "@/lib/curriculum";
+import { getUnit, findUnitById } from "@/lib/curriculum";
 import { compareAnswers, hasMissingAccents } from "@/lib/accent-utils";
 import { useHearts, formatTime } from "@/lib/hearts-context";
 import { useUserProgress } from "@/contexts/user-progress-context";
@@ -106,38 +106,9 @@ function LessonContent() {
     setStatus("none");
     setIsFinished(false);
 
-    // Ünite başlığını al - unitId'ye göre doğru seviyeyi belirle
-    let language = "es";
-    let level = "A1";
-
-    // İngilizce ünite aralıkları
-    if (unitId >= 101 && unitId <= 130) {
-      language = "en";
-      level = "A1";
-    } else if (unitId >= 131 && unitId <= 160) {
-      language = "en";
-      level = "A2";
-    } else if (unitId >= 161 && unitId <= 190) {
-      language = "en";
-      level = "B1";
-    } else if (unitId >= 191 && unitId <= 220) {
-      language = "en";
-      level = "B2";
-    }
-    // İspanyolca ünite aralıkları - curriculum.ts ile senkron
-    else if (unitId >= 1 && unitId <= 20) {
-      level = "A1";
-    } else if (unitId >= 21 && unitId <= 60) {
-      level = "A2";
-    } else if (unitId >= 61 && unitId <= 90) {
-      level = "B1";
-    } else if (unitId >= 91 && unitId <= 110) {
-      level = "B2";
-    }
-
-    const unit = getUnit(language, level, unitId);
-    if (unit) {
-      setUnitTitle(`${unit.title} - Quiz ${quizIndex}`);
+    const unitInfo = findUnitById(unitId);
+    if (unitInfo) {
+      setUnitTitle(`${unitInfo.unit.title} - Quiz ${quizIndex}`);
     }
   }, [unitId, quizIndex]);
 
@@ -150,12 +121,13 @@ function LessonContent() {
       const utterance = new SpeechSynthesisUtterance(challenge.audioText);
 
       // Dil belirleme
+      const unitData = findUnitById(unitId);
+      const langCode = unitData?.langCode || "es";
+      
       let targetLang = "es-ES";
-      if (unitId >= 301 && unitId <= 360) {
-        targetLang = "fr-FR"; // Fransızca A1 ve A2
-      } else if (unitId >= 101 && unitId <= 220) {
-        targetLang = "en-US";
-      }
+      if (langCode === "fr") targetLang = "fr-FR";
+      else if (langCode === "en") targetLang = "en-US";
+      else if (langCode === "tr") targetLang = "tr-TR";
 
       utterance.lang = targetLang;
 

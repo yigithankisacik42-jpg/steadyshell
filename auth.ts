@@ -30,6 +30,17 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 const password = credentials.password as string;
                 const clientIp = (credentials.clientIp as string) || "unknown";
 
+                // 🛠️ Demo Account Bypass
+                if (email.toLowerCase() === "demo@user.com") {
+                    console.log("[Auth] 🧪 Demo Login detected");
+                    return {
+                        id: "demo-user-id",
+                        name: "Demo Kullanıcı",
+                        email: "demo@user.com",
+                        image: "D",
+                    };
+                }
+
                 // 🔒 Server-side rate limiting
                 const rateLimitResult = checkLoginRateLimit(clientIp);
                 if (!rateLimitResult.success) {
