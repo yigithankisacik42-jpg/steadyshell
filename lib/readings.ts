@@ -11,6 +11,8 @@ import { getEnA1ReadingForUnit } from './readings-en-a1';
 import { getReadingForUnit as getFrenchA1ReadingForUnit } from './readings-fr-a1';
 import { getFrenchA2ReadingForUnit } from './readings-fr-a2';
 import { getFrB1ReadingForUnit } from './readings-fr-b1';
+import { getEnglishB2ReadingForUnit } from './readings-en-b2';
+import { getEnglishB1ReadingForUnit } from './readings-en-b1';
 
 export interface ReadingQuestion {
     id: number;
@@ -508,6 +510,12 @@ export function getReadingForUnit(unitId: number): UnitReading {
         const enA2Reading = getEnglishA2ReadingForUnit(unitId);
         return enA2Reading || unit1Reading;
     }
+    
+    // English B1 seviyesi (161-190)
+    if (unitId >= 161 && unitId <= 190) {
+        const enB1Reading = getEnglishB1ReadingForUnit(unitId);
+        return enB1Reading || unit1Reading;
+    }
 
     // French A1 seviyesi (301-330)
     if (unitId >= 301 && unitId <= 330) {
@@ -525,6 +533,12 @@ export function getReadingForUnit(unitId: number): UnitReading {
     if (unitId >= 361 && unitId <= 390) {
         const frB1Reading = getFrB1ReadingForUnit(unitId);
         return frB1Reading || unit1Reading;
+    }
+
+    // English B2 seviyesi (191-220)
+    if (unitId >= 191 && unitId <= 220) {
+        const enB2Reading = getEnglishB2ReadingForUnit(unitId);
+        return enB2Reading || unit1Reading;
     }
 
     return unit1Reading;

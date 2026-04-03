@@ -358,6 +358,7 @@ const unit30Speaking: UnitSpeaking = {
 import { getEnglishA1SpeakingForUnit } from './speakings-en-a1';
 import { getEnglishA2SpeakingForUnit } from './speakings-en-a2';
 import { getEnglishB1SpeakingForUnit } from './speakings-en-b1';
+import { getEnglishB2SpeakingForUnit } from './speakings-en-b2';
 
 export function getSpeakingForUnit(unitId: number): UnitSpeaking {
     // === İNGİLİZCE ÜNİTELER (ID 101-220) ===
@@ -403,6 +404,24 @@ export function getSpeakingForUnit(unitId: number): UnitSpeaking {
             title: enSpeaking.title,
             language: "en",
             level: "B1",
+            exercises: enSpeaking.dialogues.map((d, i) => ({
+                id: i + 1,
+                type: "repeat" as const,
+                prompt: "Bu cümleyi tekrar et:",
+                text: d.text,
+                translation: d.translation
+            }))
+        };
+    }
+
+    // İngilizce B2 (191-220)
+    if (unitId >= 191 && unitId <= 220) {
+        const enSpeaking = getEnglishB2SpeakingForUnit(unitId);
+        return {
+            unitId: enSpeaking.unitId,
+            title: enSpeaking.title,
+            language: "en",
+            level: "B2",
             exercises: enSpeaking.dialogues.map((d, i) => ({
                 id: i + 1,
                 type: "repeat" as const,
