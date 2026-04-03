@@ -13,3 +13,9 @@ type B2QuestionData = {
 };
 
 export const b2Questions: B2QuestionData = allB2Questions;
+
+export function getEnglishB2QuestionsForUnit(unitId: number, quizIndex: number = 1): Question[] {
+    const unit = b2Questions[unitId];
+    if (!unit) return [];
+    return unit[quizIndex] || [];
+}

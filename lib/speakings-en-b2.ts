@@ -382,7 +382,7 @@ const u220: EnglishSpeaking = {
 };
 
 // Export individual units
-export function getEnglishB2SpeakingForUnit(unitId: number): EnglishSpeaking | null {
+export function getEnglishB2SpeakingForUnit(unitId: number): EnglishSpeaking {
     const units: { [key: number]: EnglishSpeaking } = {
         191: u191, 192: u192, 193: u193, 194: u194, 195: u195,
         196: u196, 197: u197, 198: u198, 199: u199, 200: u200,
@@ -391,6 +391,6 @@ export function getEnglishB2SpeakingForUnit(unitId: number): EnglishSpeaking | n
         211: u211, 212: u212, 213: u213, 214: u214, 215: u215,
         216: u216, 217: u217, 218: u218, 219: u219, 220: u220,
     };
-    return units[unitId] || null;
+    return units[unitId] || u191;
 }
 
