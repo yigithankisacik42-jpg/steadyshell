@@ -13,6 +13,7 @@ import { getFrenchA1GrammarForUnit } from './grammar-fr-a1';
 import { getFrenchA2GrammarForUnit } from './grammar-fr-a2';
 import { getFrB1GrammarForUnit } from './grammar-fr-b1';
 import { getEnglishB1GrammarForUnit } from './grammar-en-b1';
+import { getEnglishB2GrammarForUnit } from './grammar-en-b2';
 
 export interface GrammarExample {
     es?: string;
@@ -3213,6 +3214,21 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
             title: enGrammar.title,
             rules: enGrammar.rules.map((r, i) => ({
                 id: `en-b1-${unitId}-${i}`,
+                title: r.title,
+                explanation: r.explanation,
+                examples: r.examples.map(ex => ({ es: ex.english, tr: ex.turkish }))
+            }))
+        };
+    }
+
+    // İngilizce B2 (191-220)
+    if (unitId >= 191 && unitId <= 220) {
+        const enGrammar = getEnglishB2GrammarForUnit(unitId);
+        return {
+            unitId: enGrammar.unitId,
+            title: enGrammar.title,
+            rules: enGrammar.rules.map((r, i) => ({
+                id: `en-b2-${unitId}-${i}`,
                 title: r.title,
                 explanation: r.explanation,
                 examples: r.examples.map(ex => ({ es: ex.english, tr: ex.turkish }))

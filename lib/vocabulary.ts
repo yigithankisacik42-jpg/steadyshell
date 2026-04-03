@@ -1,3 +1,5 @@
+import { getEnglishB2VocabularyForUnit } from './vocabulary-en-b2';
+
 /**
  * SteadyShell Kelime Veritabanı - İspanyolca A1
  * Her ünite için ayrı kelime listesi
@@ -1120,6 +1122,22 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
     // İngilizce B1 (161-190)
     if (unitId >= 161 && unitId <= 190) {
         const enVocab = getEnglishB1VocabularyForUnit(unitId);
+        return {
+            unitId: enVocab.unitId,
+            title: enVocab.title,
+            words: enVocab.words.map(v => ({
+                word: v.word,
+                meaning: v.meaning,
+                pronunciation: v.pronunciation,
+                example: v.example,
+                exampleTranslation: v.exampleTranslation
+            }))
+        };
+    }
+
+    // İngilizce B2 (191-220)
+    if (unitId >= 191 && unitId <= 220) {
+        const enVocab = getEnglishB2VocabularyForUnit(unitId);
         return {
             unitId: enVocab.unitId,
             title: enVocab.title,

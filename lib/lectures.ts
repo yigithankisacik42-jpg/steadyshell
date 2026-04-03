@@ -710,6 +710,7 @@ import { getB1LectureForUnit } from './lectures-b1';
 import { getB2LectureForUnit } from './lectures-b2';
 import { getEnglishA1LectureForUnit } from './lectures-en-a1';
 import { getEnglishA2LectureForUnit } from './lectures-en-a2';
+import { getEnglishB2LectureForUnit } from './lectures-en-b2';
 import { getFrenchA1LectureForUnit } from './lectures-fr-a1';
 import { getFrenchA2LectureForUnit } from './lectures-fr-a2';
 
@@ -743,6 +744,24 @@ export function getLectureForUnit(unitId: number): UnitLecture {
             language: "en",
             level: "A2",
             slides: enLecture.sections.map((s: { title: string; content: string; tips?: string[] }, i: number) => ({
+                id: i + 1,
+                type: "vocabulary" as const,
+                title: s.title,
+                content: s.content,
+                points: s.tips || undefined
+            }))
+        };
+    }
+
+    // İngilizce B2 (191-220)
+    if (unitId >= 191 && unitId <= 220) {
+        const enLecture = getEnglishB2LectureForUnit(unitId);
+        return {
+            unitId: enLecture.unitId,
+            title: enLecture.title,
+            language: "en",
+            level: "B2",
+            slides: enLecture.sections.map((s, i) => ({
                 id: i + 1,
                 type: "vocabulary" as const,
                 title: s.title,

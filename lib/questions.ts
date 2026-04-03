@@ -617,6 +617,12 @@ export async function getQuestionsForUnit(unitId: number, quizIndex: number = 1)
         return [...curriculumQuestions, ...additionalQuestions];
     }
 
+    // === İNGİLİZCE B2 (ID 191-220) ===
+    if (unitId >= 191 && unitId <= 220) {
+        const { getEnglishB2QuestionsForUnit } = await import('./questions-en-b2');
+        return getEnglishB2QuestionsForUnit(unitId, quizIndex);
+    }
+
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===
     // Dinamik dosyadan çek (Unit 3-30 arası dış dosyalarda)
     if (unitId >= 3 && unitId <= 30) {
