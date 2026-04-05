@@ -12,9 +12,8 @@ import { APP_CONFIG } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { getVideoForUnit } from "@/lib/videos";
 import { useHearts } from "@/lib/hearts-context";
-import { Map3DView } from "@/components/learn/map-3d-view";
 import { ShelldonMentor } from "@/components/learn/shelldon-mentor";
-import { Map as MapIcon, List as ListIcon } from "lucide-react";
+import { List as ListIcon } from "lucide-react";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { getStoryMetaForUnit } from "@/lib/stories";
 
@@ -26,8 +25,6 @@ export default function LearnPage() {
     const { showShelldon } = useShelldon();
     const displayName = user.name?.trim() || "Gezgin";
 
-    const [isMapMode, setIsMapMode] = useState(false);
-    
     // Test modu: Tüm dersler açık
     const allLessonsUnlocked = true;
 
@@ -177,32 +174,6 @@ export default function LearnPage() {
                                 </div>
                                 <ChevronRight className="w-6 h-6 text-white/50 group-hover:translate-x-1 transition-transform" />
                             </Link>
-
-                            {/* VIEW TOGGLE */}
-                            <div className="flex justify-center mt-2">
-                                <div className="bg-white/10 backdrop-blur-md p-1 rounded-2xl border border-white/10 flex gap-1">
-                                    <button 
-                                        onClick={() => setIsMapMode(false)}
-                                        className={cn(
-                                            "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all",
-                                            !isMapMode ? "bg-white text-indigo-900 shadow-lg" : "text-white/60 hover:text-white"
-                                        )}
-                                    >
-                                        <ListIcon className="w-4 h-4" />
-                                        Liste
-                                    </button>
-                                    <button 
-                                        onClick={() => setIsMapMode(true)}
-                                        className={cn(
-                                            "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all",
-                                            isMapMode ? "bg-white text-indigo-900 shadow-lg" : "text-white/60 hover:text-white"
-                                        )}
-                                    >
-                                        <MapIcon className="w-4 h-4" />
-                                        3D Harita
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                     )}
                 </div>
@@ -234,17 +205,7 @@ export default function LearnPage() {
 
             {/* CURRICULUM CONTENT */}
             <div className="max-w-3xl mx-auto px-4 w-full z-20 relative">
-                {isMapMode && isMounted ? (
-                    <div className="mb-12">
-                        <Map3DView 
-                            units={units} 
-                            currentProgress={currentProgress}
-                            allLessonsUnlocked={allLessonsUnlocked}
-                            getLessonRoute={getLessonRoute}
-                            getLessonDescription={getLessonDescription}
-                        />
-                    </div>
-                ) : units.length > 0 ? (
+                {units.length > 0 ? (
                     <div className="flex flex-col gap-12">
                         {units.map((unit, unitIndex) => {
                             const completedLessonCount = unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length;

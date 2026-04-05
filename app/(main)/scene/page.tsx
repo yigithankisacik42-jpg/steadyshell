@@ -339,7 +339,12 @@ function SceneContent() {
                                 Senaryo Seç
                             </h2>
 
-                            {SCENE_CATEGORIES.map(category => (
+                            {SCENE_CATEGORIES.filter(category => {
+                                const langPrefix = selectedLang.toLowerCase();
+                                const levelPrefix = selectedLevel.toLowerCase();
+                                // Sadece seçili dil ve seviye kombinasyonuyla başlayanları göster (örn: fr-a1-practice)
+                                return category.id.startsWith(`${langPrefix}-${levelPrefix}`);
+                            }).map(category => (
                                 <div key={category.id} className="mb-8">
                                     <h3 className="text-white/50 text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                                         <span>{category.icon}</span>
@@ -422,25 +427,7 @@ function SceneContent() {
                 <div className="relative flex-1">
                     <Scene3D sceneData={selectedScene} messages={messages} isLoading={isLoading} />
                     
-                    {/* Subtitle Overlay */}
-                    {messages.filter(m => m.role === 'assistant').length > 0 && (
-                        <div className="absolute bottom-[100px] inset-x-0 px-6 z-20 pointer-events-none animate-in fade-in slide-in-from-bottom-2 duration-500">
-                            <div className="max-w-2xl mx-auto">
-                                <div className="bg-slate-950/80 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl">
-                                    <div className="flex gap-3">
-                                        <div className="shrink-0 w-8 h-8 bg-violet-600/20 rounded-lg flex items-center justify-center text-xl">
-                                            {selectedScene?.icon}
-                                        </div>
-                                        <div className="flex-1">
-                                            <p className="text-white font-medium leading-relaxed">
-                                                {messages.filter(m => m.role === 'assistant').pop()?.content}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
+                    {/* Subtitle Overlay removed because speech bubbles exist in 3D props */}
                 </div>
             ) : (
                 <>
@@ -449,9 +436,9 @@ function SceneContent() {
                         <div className="absolute top-[20%] left-[-10%] w-[40rem] h-[40rem] bg-violet-600/10 rounded-full blur-[100px]" />
                         <div className="absolute bottom-[10%] right-[-10%] w-[30rem] h-[30rem] bg-fuchsia-500/10 rounded-full blur-[80px]" />
                     </div>
-
+ 
                     {/* Messages for 2D */}
-                    <div className="flex-1 overflow-y-auto pt-4 pb-[180px] lg:pb-[120px] px-4 relative z-10">
+                    <div className="flex-1 overflow-y-auto pt-24 pb-[180px] lg:pb-[120px] px-4 relative z-10">
                 <div className="max-w-3xl mx-auto space-y-5">
                     {messages.map((message, index) => (
                         <div
