@@ -100,7 +100,7 @@ const lectures: { [key: number]: UnitLecture } = {
                 { target: "sich erkälten", native: "soğuk almak", pronunciation: "zih er-kel-tın" }
             ]},
             { id: 3, type: "grammar", title: "Ağrım Var!", rules: [
-                { rule: "Ich habe ...schmerzen", examples: ["Ich habe Kopfschmerzen."] },
+                { rule: "Ich habe ...schmerzen", explanation: "Genel ağrılar için (Baş ağrısı vb.).", examples: ["Ich habe Kopfschmerzen."] },
                 { rule: "Mein/e ... tut weh", explanation: "Daha spesifik ağrılar için.", examples: ["Mein Bein tut weh."] }
             ]},
             { id: 4, type: "culture", title: "'Weh tun' ve Dativ", content: "Ağrıdan bahsederken şahsı belirtmek isterseniz Dativ kullanın: 'Mein Kopf tut MIR weh.' (Başım ağrıyor)." }
@@ -310,8 +310,8 @@ const lectures: { [key: number]: UnitLecture } = {
         slides: [
             { id: 1, type: "intro", title: "Daha ve En ⚖️", content: "Nesneleri birbirleriyle karşılaştırmayı ve 'en' iyiyi söylemeyi öğreneceğiz." },
             { id: 2, type: "grammar", title: "Komparativ & Superlativ", rules: [
-                { rule: "schnell -> schneller", explanation: "Daha hızlı." },
-                { rule: "am schnellsten", explanation: "En hızlı." }
+                { rule: "schnell -> schneller", explanation: "Daha hızlı.", examples: ["Der Zug ist schneller als der Bus."] },
+                { rule: "am schnellsten", explanation: "En hızlı.", examples: ["Das Flugzeug ist am schnellsten."] }
             ]}
         ]
     },
