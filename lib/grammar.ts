@@ -14,16 +14,27 @@ import { getFrenchA2GrammarForUnit } from './grammar-fr-a2';
 import { getFrB1GrammarForUnit } from './grammar-fr-b1';
 import { getEnglishB1GrammarForUnit } from './grammar-en-b1';
 import { getEnglishB2GrammarForUnit } from './grammar-en-b2';
+import { getGermanA1GrammarForUnit } from './grammar-de-a1';
+import { getGermanA2GrammarForUnit } from './grammar-de-a2';
+import { getGermanB1GrammarForUnit } from './grammar-de-b1';
 
 export interface GrammarExample {
     es?: string;
     fr?: string;
+    de?: string;
     tr: string;
 }
 
 export interface GrammarTable {
     headers: string[];
     rows: string[][];
+}
+
+export interface GrammarExercise {
+    question: string;
+    options: string[];
+    correct: number;
+    explanation: string;
 }
 
 export interface GrammarRule {
@@ -3309,6 +3320,21 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
         if (frB1Grammar) {
             return frB1Grammar;
         }
+    }
+
+    // Almanca A1 (501-530)
+    if (unitId >= 501 && unitId <= 530) {
+        return getGermanA1GrammarForUnit(unitId);
+    }
+    
+    // Almanca A2 (531-560)
+    if (unitId >= 531 && unitId <= 560) {
+        return getGermanA2GrammarForUnit(unitId);
+    }
+
+    // Almanca B1 (561-590)
+    if (unitId >= 561 && unitId <= 590) {
+        return getGermanB1GrammarForUnit(unitId);
     }
 
 

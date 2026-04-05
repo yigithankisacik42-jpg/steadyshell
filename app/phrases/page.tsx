@@ -43,7 +43,7 @@ function PhrasesContent() {
         if (isFinished) {
             markLessonCompleted("PHRASES");
         }
-    }, [isFinished]);
+    }, [isFinished, markLessonCompleted]);
 
     useEffect(() => {
         const data = getPhrasesForUnit(unitId);
@@ -65,10 +65,12 @@ function PhrasesContent() {
 
         // Dil belirleme
         let targetLang = "es-ES";
-        if (content.unitId >= 301 && content.unitId <= 360) {
-            targetLang = "fr-FR"; // Fransızca A1 ve A2
+        if (content.unitId >= 301 && content.unitId <= 390) {
+            targetLang = "fr-FR"; // Fransızca
         } else if (content.unitId >= 101 && content.unitId <= 220) {
-            targetLang = "en-US";
+            targetLang = "en-US"; // İngilizce
+        } else if (content.unitId >= 501 && content.unitId <= 620) {
+            targetLang = "de-DE"; // Almanca
         }
 
         utterance.lang = targetLang;
@@ -94,6 +96,9 @@ function PhrasesContent() {
                 v.name.toLowerCase().includes('karen') ||
                 v.name.toLowerCase().includes('victoria') ||
                 v.name.toLowerCase().includes('zira') ||
+                v.name.toLowerCase().includes('katja') ||
+                v.name.toLowerCase().includes('vicki') ||
+                v.name.toLowerCase().includes('marlene') ||
                 v.name.includes('Google') && v.name.toLowerCase().includes('female'))
         ) || voices.find(v => v.lang.startsWith(targetLang.split('-')[0]));
 
@@ -101,8 +106,8 @@ function PhrasesContent() {
             utterance.voice = femaleVoice;
         }
 
-        utterance.rate = 0.9; // Biraz yavaş konuşsun
-        utterance.pitch = 1.1; // Kadın sesi için biraz daha yüksek pitch
+        utterance.rate = 0.9;
+        utterance.pitch = 1.1;
 
         speechSynthesis.speak(utterance);
     };
@@ -135,9 +140,6 @@ function PhrasesContent() {
 
     return (
         <div className="fixed inset-0 z-[99999] bg-gradient-to-b from-indigo-50 via-white to-slate-50 flex flex-col h-full w-full text-foreground">
-
-
-
             {/* Bitiş Ekranı */}
             {isFinished ? (
                 <div className="flex-1 flex flex-col items-center justify-center p-6">
@@ -179,9 +181,10 @@ function PhrasesContent() {
                             {content.level && (
                                 <div className="flex items-center gap-2 mb-2">
                                     <span className="text-2xl">
-                                        {content.unitId >= 301 && content.unitId <= 330 ? "🇫🇷" :
+                                        {content.unitId >= 301 && content.unitId <= 390 ? "🇫🇷" :
                                             content.unitId >= 101 && content.unitId <= 220 ? "🇬🇧" :
-                                                "🇪🇸"}
+                                                content.unitId >= 501 && content.unitId <= 620 ? "🇩🇪" :
+                                                    "🇪🇸"}
                                     </span>
                                     <span className="font-bold text-slate-600">{content.level}</span>
                                 </div>
@@ -219,7 +222,7 @@ function PhrasesContent() {
 
                             {/* Alt Butonlar */}
                             {showMeaning && (
-                                <div className="flex gap-4 mt-8 w-full max-w-md">
+                                <div className="flex gap-4 mt-8 w-full max-w-md animate-in fade-in slide-in-from-bottom-4 duration-300">
                                     <Button
                                         onClick={handleNext}
                                         variant="outline"

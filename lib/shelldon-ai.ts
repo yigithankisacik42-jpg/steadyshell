@@ -23,162 +23,180 @@ export const SHELLDON_SCENARIOS: ShelldonScenario[] = [
         id: "cafe",
         icon: "☕",
         titleTr: "Kafede Sipariş",
-        titleTarget: { fr: "Au café", es: "En la cafetería", en: "At the café" },
+        titleTarget: { fr: "Au café", es: "En la cafetería", en: "At the café", de: "Im Café" },
         description: "Bir kafede sipariş ver, menüyü anla",
         context: "You are a friendly barista/waiter at a cozy café. The user is a customer who just walked in. Start by greeting them and asking what they'd like to order. Offer menu items naturally. The café serves coffee, tea, pastries, sandwiches.",
         suggestedPhrases: {
             fr: ["Un café, s'il vous plaît", "Qu'est-ce que vous recommandez?", "L'addition, s'il vous plaît"],
             es: ["Un café, por favor", "¿Qué me recomienda?", "La cuenta, por favor"],
             en: ["A coffee, please", "What do you recommend?", "The check, please"],
+            de: ["Einen Kaffee, bitte", "Was können Sie empfehlen?", "Die Rechnung, bitte"],
         },
         objectives: {
             fr: ["Baristaya selam ver", "Bir içecek sipariş et", "Hesabı iste"],
             es: ["Saluda al barista", "Pide una bebida", "Pide la cuenta"],
-            en: ["Greet the barista", "Order a drink", "Ask for the bill"]
+            en: ["Greet the barista", "Order a drink", "Ask for the bill"],
+            de: ["Grüße den Barista", "Bestelle ein Getränk", "Verlange die Rechnung"]
         }
     },
     {
         id: "market",
         icon: "🛒",
         titleTr: "Markette Alışveriş",
-        titleTarget: { fr: "Au marché", es: "En el mercado", en: "At the market" },
+        titleTarget: { fr: "Au marché", es: "En el mercado", en: "At the market", de: "Auf dem Markt" },
         description: "Meyve, sebze, et alışverişi yap",
         context: "You are a friendly market vendor. The user is shopping for groceries. Offer fruits, vegetables, bread, cheese, and meat. Mention prices naturally. Help them find what they need.",
         suggestedPhrases: {
             fr: ["Je voudrais des pommes", "Combien ça coûte?", "C'est tout, merci"],
             es: ["Quiero manzanas", "¿Cuánto cuesta?", "Eso es todo, gracias"],
             en: ["I'd like some apples", "How much is it?", "That's all, thanks"],
+            de: ["Ich hätte gerne Äpfel", "Wie viel kostet das?", "Das ist alles, danke"],
         },
         objectives: {
             fr: ["Ne almak istediğini söyle", "Fiyatını sor", "Teşekkür edip ayrıl"],
             es: ["Di lo que quieres comprar", "Pregunta el precio", "Da las gracias y despídete"],
-            en: ["Say what you want to buy", "Ask the price", "Say thanks and goodbye"]
+            en: ["Say what you want to buy", "Ask the price", "Say thanks and goodbye"],
+            de: ["Sag, was du kaufen möchtest", "Frag nach dem Preis", "Bedanke dich und verabschiede dich"]
         }
     },
     {
         id: "airport",
         icon: "✈️",
         titleTr: "Havalimanında",
-        titleTarget: { fr: "À l'aéroport", es: "En l'aeropuerto", en: "At the airport" },
+        titleTarget: { fr: "À l'aéroport", es: "En l'aeropuerto", en: "At the airport", de: "Am Flughafen" },
         description: "Check-in yap, kapını bul, bilgi sor",
-        context: "You are a helpful airport staff member at the check-in counter. The user is a traveler checking in for a flight. Help them with boarding passes, luggage, gate information, and answer questions about the flight.",
+        context: "You are a helpful airport staff member at the check-in counter. The user is a traveler checking in for a flight. Help with boarding passes, luggage, gate information, and answer questions about the flight.",
         suggestedPhrases: {
             fr: ["Voici mon passeport", "Quelle est la porte d'embarquement?", "À quelle heure est le vol?"],
             es: ["Aquí está mi pasaporte", "¿Cuál es la puerta de embarque?", "¿A qué hora sale el vuelo?"],
             en: ["Here's my passport", "Which gate is it?", "What time is the flight?"],
+            de: ["Hier ist mein Reisepass", "Wo ist das Gate?", "Um wie viel Uhr ist der Flug?"],
         },
         objectives: {
             fr: ["Pasaportunu ver", "Uçağın saatini sor", "Biniş kapısını öğren"],
             es: ["Entrega tu pasaporte", "Pregunta la hora del vuelo", "Averigua la puerta de embarque"],
-            en: ["Hand over your passport", "Ask the flight time", "Find out the boarding gate"]
+            en: ["Hand over your passport", "Ask the flight time", "Find out the boarding gate"],
+            de: ["Gib deinen Pass ab", "Frag nach der Flugzeit", "Finde das Gate heraus"]
         }
     },
     {
         id: "doctor",
         icon: "🏥",
         titleTr: "Doktorda",
-        titleTarget: { fr: "Chez le médecin", es: "En el médico", en: "At the doctor's" },
+        titleTarget: { fr: "Chez le médecin", es: "En el médico", en: "At the doctor's", de: "Beim Arzt" },
         description: "Semptomlarını anlat, tavsiye al",
         context: "You are a friendly doctor. The user is a patient who came for a check-up. Ask about their symptoms, give advice, and recommend treatment. Be caring and patient.",
         suggestedPhrases: {
             fr: ["J'ai mal à la tête", "Depuis hier", "Merci docteur"],
             es: ["Me duele la cabeza", "Desde ayer", "Gracias doctor"],
             en: ["I have a headache", "Since yesterday", "Thank you, doctor"],
+            de: ["Ich habe Kopfschmerzen", "Seit gestern", "Danke, Herr Doktor"],
         },
         objectives: {
             fr: ["Semptomlarını açıkla", "Ne zamandır hasta olduğunu söyle", "Tavsiyesini kabul et"],
             es: ["Explica tus síntomas", "Di desde cuándo estás enfermo", "Acepta su consejo"],
-            en: ["Explain your symptoms", "Say how long you've been sick", "Accept the advice"]
+            en: ["Explain your symptoms", "Say how long you've been sick", "Accept the advice"],
+            de: ["Erkläre deine Symptome", "Sag, wie lange du schon krank bist", "Akzeptiere den Rat"]
         }
     },
     {
         id: "hotel",
         icon: "🏨",
         titleTr: "Otelde",
-        titleTarget: { fr: "À l'hôtel", es: "En el hotel", en: "At the hotel" },
+        titleTarget: { fr: "À l'hôtel", es: "En el hotel", en: "At the hotel", de: "Im Hotel" },
         description: "Oda rezervasyonu yap, check-in yap",
         context: "You are a hotel receptionist at a nice hotel. The user is checking in or making a reservation. Help with room types, prices, check-in/out times, and hotel amenities like breakfast, wifi, pool.",
         suggestedPhrases: {
             fr: ["J'ai une réservation", "Une chambre pour deux nuits", "Le petit-déjeuner est inclus?"],
             es: ["Tengo una reservación", "Una habitación para dos noches", "¿El desayuno está incluido?"],
             en: ["I have a reservation", "A room for two nights", "Is breakfast included?"],
+            de: ["Ich habe eine Reservierung", "Ein Zimmer für zwei Nächte", "Ist das Frühstück inklusive?"],
         },
         objectives: {
             fr: ["Rezervasyonun olduğunu söyle", "Kahvaltının dahil olup olmadığını sor", "Anahtarını al"],
             es: ["Di que tienes una reserva", "Pregunta si el desayuno está incluido", "Recibe tu llave"],
-            en: ["Say you have a reservation", "Ask if breakfast is included", "Get your key"]
+            en: ["Say you have a reservation", "Ask if breakfast is included", "Get your key"],
+            de: ["Sag, dass du eine Reservierung hast", "Frag, ob Frühstück inklusive ist", "Hol deinen Schlüssel ab"]
         }
     },
     {
         id: "friend",
         icon: "👋",
         titleTr: "Arkadaşla Sohbet",
-        titleTarget: { fr: "Bavardage entre amis", es: "Charla con amigos", en: "Chatting with a friend" },
+        titleTarget: { fr: "Bavardage entre amis", es: "Charla con amigos", en: "Chatting with a friend", de: "Plaudern mit einem Freund" },
         description: "Günlük sohbet, hobiler, plan yapma",
         context: "You are the user's friend. Have a casual, fun conversation. Ask about their day, hobbies, weekend plans, favorite movies/music. Be casual and use everyday language. Suggest doing activities together.",
         suggestedPhrases: {
             fr: ["Salut, ça va?", "Qu'est-ce que tu fais ce weekend?", "J'aime beaucoup la musique"],
             es: ["¡Hola! ¿Qué tal?", "¿Qué haces este fin de semana?", "Me gusta mucho la música"],
             en: ["Hey, how's it going?", "What are you doing this weekend?", "I really like music"],
+            de: ["Hallo, wie geht's?", "Was machst du am Wochenende?", "Ich mag Musik sehr"],
         },
         objectives: {
             fr: ["Nasıl olduğunu sor", "Hafta sonu planlarından bahset", "Ortak bir etkinlik öner"],
             es: ["Pregunta cómo está", "Habla de tus planes para el fin de semana", "Propón una actividad juntos"],
-            en: ["Ask how they are", "Talk about your weekend plans", "Suggest a shared activity"]
+            en: ["Ask how they are", "Talk about your weekend plans", "Suggest a shared activity"],
+            de: ["Frag, wie es ihm/ihr geht", "Erzähl von deinen Wochenendplänen", "Schlag eine gemeinsame Aktivität vor"]
         }
     },
     {
         id: "rendezvous",
         icon: "📅",
         titleTr: "Buluşma Ayarlama",
-        titleTarget: { fr: "Un rendez-vous", es: "Una cita", en: "Making plans" },
+        titleTarget: { fr: "Un rendez-vous", es: "Una cita", en: "Making plans", de: "Pläne machen" },
         description: "Bir arkadaşla dışarı çıkmak için plan yap",
         context: "You are the user's friend. The user wants to meet up to do something fun (like going to the cinema or a restaurant). Ask them when and where they want to meet. Negotiate the time if necessary.",
         suggestedPhrases: {
             fr: ["On va au cinéma ce soir?", "À quelle heure?", "Rendez-vous à 20h devant le parc"],
             es: ["¿Vamos al cine esta noche?", "¿A qué hora?", "Nos vemos a las 8 frente al parque"],
-            en: ["Shall we go to the cinema tonight?", "At what time?", "Let's meet at 8 in front of the park"]
+            en: ["Shall we go to the cinema tonight?", "At what time?", "Let's meet at 8 in front of the park"],
+            de: ["Gehen wir heute Abend ins Kino?", "Um wie viel Uhr?", "Treffen wir uns um acht Uhr vor dem Park"],
         },
         objectives: {
             fr: ["Bir mekan öner (sinema vs.)", "Saati belirle", "Buluşma noktasında anlaş"],
             es: ["Propón un lugar (cine, etc.)", "Fija la hora", "Acuerda un punto de encuentro"],
-            en: ["Suggest a place (cinema, etc.)", "Set the time", "Agree on a meeting point"]
+            en: ["Suggest a place (cinema, etc.)", "Set the time", "Agree on a meeting point"],
+            de: ["Schlag einen Ort vor (Kino vb.)", "Leg die Uhrzeit fest", "Einigt euch auf einen Treffpunkt"]
         }
     },
     {
         id: "restaurant",
         icon: "🍽️",
         titleTr: "Akşam Yemeği",
-        titleTarget: { fr: "Au restaurant", es: "En el restaurante", en: "At the restaurant" },
+        titleTarget: { fr: "Au restaurant", es: "En el restaurante", en: "At the restaurant", de: "Im Restaurant" },
         description: "Restoranda bir masa iste, yemek ve tatlı sipariş et",
         context: "You are a waiter at a traditional local restaurant. Welcome the user, ask if they have a reservation, present the menu, take their food and dessert order, and finally bring the bill when asked.",
         suggestedPhrases: {
             fr: ["Une table pour deux, s'il vous plaît", "Je prendrai le poulet frites", "Quel est le dessert du jour?"],
             es: ["Una mesa para dos, por favor", "Tomaré el pollo con papas", "¿Cuál es el postre del día?"],
-            en: ["A table for two, please", "I'll have the chicken and fries", "What's the dessert of the day?"]
+            en: ["A table for two, please", "I'll have the chicken and fries", "What's the dessert of the day?"],
+            de: ["Ein Tisch für zwei Personen, bitte", "Ich nehme das Hähnchen mit Pommes", "Was ist das Dessert des Tages?"],
         },
         objectives: {
             fr: ["Kişi sayısına göre masa iste", "Ana yemek siparişi ver", "Günün tatlısını sor"],
             es: ["Pide mesa según el número de personas", "Pide el plato principal", "Pregunta por el postre del día"],
-            en: ["Ask for a table", "Order the main course", "Ask for the dessert of the day"]
+            en: ["Ask for a table", "Order the main course", "Ask for the dessert of the day"],
+            de: ["Bestell einen Tisch", "Bestell das Hauptgericht", "Frag nach dem Dessert des Tages"]
         }
     },
     {
         id: "direction",
         icon: "🗺️",
         titleTr: "Yol Tarifi Sorma",
-        titleTarget: { fr: "Demander son chemin", es: "Pedir indicaciones", en: "Asking for directions" },
+        titleTarget: { fr: "Demander son chemin", es: "Pedir indicaciones", en: "Asking for directions", de: "Nach dem Weg fragen" },
         description: "Sokakta kayboldun, bir yere nasıl gidileceğini öğren",
         context: "You are a local local resident walking on the street. The user is a tourist who is lost and looking for a specific landmark (museum, train station). Give them clear, simple directions (turn left, go straight).",
         suggestedPhrases: {
             fr: ["Excusez-moi, où est la gare?", "Je suis perdido", "C'est loin d'ici?"],
             es: ["Disculpe, ¿dónde está la estación?", "Estoy perdido", "¿Está lejos de aquí?"],
-            en: ["Excuse me, where is the station?", "I'm lost", "Is it far from here?"]
+            en: ["Excuse me, where is the station?", "I'm lost", "Is it far from here?"],
+            de: ["Entschuldigung, wo ist der Bahnhof?", "Ich habe mich verlaufen", "Ist es weit von hier?"],
         },
         objectives: {
             fr: ["Kibarca dikkatini çek", "Gitmek istediğin yeri sor", "Uzak olup olmadığını sor"],
             es: ["Atrae su atención amablemente", "Pregunta por el lugar al que quieres ir", "Pregunta si está lejos"],
-            en: ["Excuse yourself politely", "Ask how to get your destination", "Ask if it's far"]
+            en: ["Excuse yourself politely", "Ask how to get your destination", "Ask if it's far"],
+            de: ["Entschuldige dich höflich", "Frag nach dem Weg zum Ziel", "Frag, ob es weit ist"]
         }
     }
 ];
@@ -188,6 +206,7 @@ const LANG_NAMES: Record<string, { tr: string; native: string }> = {
     fr: { tr: "Fransızca", native: "Français" },
     es: { tr: "İspanyolca", native: "Español" },
     en: { tr: "İngilizce", native: "English" },
+    de: { tr: "Almanca", native: "Deutsch" },
 };
 
 const PRACTICE_MODE_LABELS: Record<ShelldonPracticeMode, string> = {
@@ -212,7 +231,7 @@ export function buildShelldonPrompt(
     lessonContext?: string,
     practiceMode?: ShelldonPracticeMode
 ): string {
-    const lang = LANG_NAMES[language] || LANG_NAMES.fr;
+    const lang = LANG_NAMES[language] || LANG_NAMES.en;
     const scenarioTitle = scenario.titleTarget[language] || scenario.titleTr;
     const objectivesList = scenario.objectives[language]?.map((obj, i) => `${i + 1}. [${obj}]`).join("\n") || "";
     const modeKey = practiceMode && PRACTICE_MODE_LABELS[practiceMode] ? practiceMode : "speaking";
@@ -289,7 +308,7 @@ export function buildFeedbackPrompt(
     language: string,
     conversationHistory: string
 ): string {
-    const lang = LANG_NAMES[language] || LANG_NAMES.fr;
+    const lang = LANG_NAMES[language] || LANG_NAMES.en;
 
     return `Aşağıdaki ${lang.tr} konuşmasını analiz et ve JSON formatında feedback ver.
 
@@ -316,7 +335,7 @@ export function buildHintPrompt(
     scenarioTitle: string,
     conversationHistory: string
 ): string {
-    const lang = LANG_NAMES[language] || LANG_NAMES.fr;
+    const lang = LANG_NAMES[language] || LANG_NAMES.en;
 
     return `Aşağıdaki konuşma geçmişini ve senaryoyu incele. Kullanıcı sıradaki cümleyi kurmakta zorlanıyor.
 Senaryo: ${scenarioTitle}

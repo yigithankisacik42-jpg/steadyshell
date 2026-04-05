@@ -84,6 +84,7 @@ function SpeakingContent() {
     const getLanguageCode = (unitId: number): string => {
         if (unitId >= 301 && unitId <= 420) return "fr-FR"; // Fransızca
         if (unitId >= 101 && unitId <= 230) return "en-US"; // İngilizce
+        if (unitId >= 501 && unitId <= 560) return "de-DE"; // Almanca
         return "es-ES"; // İspanyolca (varsayılan)
     };
 
@@ -96,8 +97,10 @@ function SpeakingContent() {
 
         // Kadın sesi tercih et
         const voices = speechSynthesis.getVoices();
+        const langPrefix = languageCode.split('-')[0];
+        
         const femaleVoice = voices.find(v =>
-            v.lang.startsWith(languageCode.split('-')[0]) &&
+            v.lang.startsWith(langPrefix) &&
             (v.name.toLowerCase().includes('female') ||
                 v.name.toLowerCase().includes('woman') ||
                 v.name.toLowerCase().includes('amelie') ||
@@ -108,6 +111,9 @@ function SpeakingContent() {
                 v.name.toLowerCase().includes('lea') ||
                 v.name.toLowerCase().includes('julie') ||
                 v.name.toLowerCase().includes('virginie') ||
+                v.name.toLowerCase().includes('katja') || // Almanca kadın sesi
+                v.name.toLowerCase().includes('vicki') || // Almanca kadın sesi 
+                v.name.toLowerCase().includes('marlene') || // Almanca kadın sesi
                 v.name.toLowerCase().includes('paulina') ||
                 v.name.toLowerCase().includes('monica') ||
                 v.name.toLowerCase().includes('helena') ||
@@ -116,7 +122,7 @@ function SpeakingContent() {
                 v.name.toLowerCase().includes('victoria') ||
                 v.name.toLowerCase().includes('zira') ||
                 v.name.includes('Google') && v.name.toLowerCase().includes('female'))
-        ) || voices.find(v => v.lang.startsWith(languageCode.split('-')[0]));
+        ) || voices.find(v => v.lang.startsWith(langPrefix));
 
         if (femaleVoice) {
             utterance.voice = femaleVoice;
@@ -151,7 +157,8 @@ function SpeakingContent() {
             // Temizlenmiş metinler (noktalama ve özel karakterleri kaldır)
             const cleanText = (text: string) =>
                 text.toLowerCase()
-                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // aksanları kaldır
+                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // aksanları kaldır (ö -> o gibi)
+                    .replace(/ß/g, "ss") // Almanca özel karakter dönüşümü
                     .replace(/[¿¡?!.,;:'"()]/g, "") // noktalama
                     .trim();
 

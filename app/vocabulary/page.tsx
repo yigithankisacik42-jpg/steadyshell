@@ -43,7 +43,7 @@ function VocabularyContent() {
         if (isFinished) {
             markLessonCompleted("VOCABULARY");
         }
-    }, [isFinished]);
+    }, [isFinished, markLessonCompleted]);
 
     useEffect(() => {
         const content = getVocabularyForUnit(unitId);
@@ -65,10 +65,12 @@ function VocabularyContent() {
 
         // Dil belirleme
         let targetLang = "es-ES";
-        if (vocabContent.unitId >= 301 && vocabContent.unitId <= 360) {
-            targetLang = "fr-FR"; // Fransızca A1 ve A2
+        if (vocabContent.unitId >= 301 && vocabContent.unitId <= 390) {
+            targetLang = "fr-FR"; // Fransızca
         } else if (vocabContent.unitId >= 101 && vocabContent.unitId <= 220) {
-            targetLang = "en-US";
+            targetLang = "en-US"; // İngilizce
+        } else if (vocabContent.unitId >= 501 && vocabContent.unitId <= 620) {
+            targetLang = "de-DE"; // Almanca
         }
 
         utterance.lang = targetLang;
@@ -94,6 +96,9 @@ function VocabularyContent() {
                 v.name.toLowerCase().includes('karen') ||
                 v.name.toLowerCase().includes('victoria') ||
                 v.name.toLowerCase().includes('zira') ||
+                v.name.toLowerCase().includes('katja') ||
+                v.name.toLowerCase().includes('vicki') ||
+                v.name.toLowerCase().includes('marlene') ||
                 v.name.includes('Google') && v.name.toLowerCase().includes('female'))
         ) || voices.find(v => v.lang.startsWith(targetLang.split('-')[0]));
 
@@ -101,8 +106,8 @@ function VocabularyContent() {
             utterance.voice = femaleVoice;
         }
 
-        utterance.rate = 0.9; // Biraz yavaş konuşsun
-        utterance.pitch = 1.1; // Kadın sesi için biraz daha yüksek pitch
+        utterance.rate = 0.9;
+        utterance.pitch = 1.1;
 
         speechSynthesis.speak(utterance);
     };
@@ -135,9 +140,6 @@ function VocabularyContent() {
 
     return (
         <div className="fixed inset-0 z-[99999] bg-gradient-to-b from-emerald-50 to-white flex flex-col h-full w-full">
-
-
-
             {/* Bitiş Ekranı */}
             {isFinished ? (
                 <div className="flex-1 flex flex-col items-center justify-center p-6">
@@ -210,7 +212,10 @@ function VocabularyContent() {
                         {/* Ses Çalma */}
                         <Button
                             variant="outline"
-                            onClick={() => playAudio(word.word)}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                playAudio(word.word);
+                            }}
                             className="mt-6 rounded-xl border-2 border-emerald-200 text-emerald-600 hover:bg-emerald-50"
                         >
                             <Volume2 className="w-5 h-5 mr-2" /> Dinle
@@ -218,7 +223,7 @@ function VocabularyContent() {
 
                         {/* Alt Butonlar */}
                         {showMeaning && (
-                            <div className="flex gap-4 mt-8 w-full max-w-md">
+                            <div className="flex gap-4 mt-8 w-full max-w-md animate-in fade-in slide-in-from-bottom-4 duration-300">
                                 <Button
                                     onClick={handleNext}
                                     variant="outline"

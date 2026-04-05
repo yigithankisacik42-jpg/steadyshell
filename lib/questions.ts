@@ -623,6 +623,30 @@ export async function getQuestionsForUnit(unitId: number, quizIndex: number = 1)
         return getEnglishB2QuestionsForUnit(unitId, quizIndex);
     }
 
+    // === ALMANCA A1 (ID 501-530) ===
+    if (unitId >= 501 && unitId <= 530) {
+        const { getGermanA1QuestionsForUnit } = await import('./questions-de-a1');
+        return getGermanA1QuestionsForUnit(unitId, quizIndex);
+    }
+
+    // === ALMANCA A2 (ID 531-560) ===
+    if (unitId >= 531 && unitId <= 560) {
+        const { getGermanA2QuestionsForUnit } = await import('./questions-de-a2');
+        return getGermanA2QuestionsForUnit(unitId, quizIndex);
+    }
+
+    // === ALMANCA B1 (ID 561-590) ===
+    if (unitId >= 561 && unitId <= 590) {
+        const { getGermanB1QuestionsForUnit } = await import('./questions-de-b1');
+        return getGermanB1QuestionsForUnit(unitId, quizIndex);
+    }
+
+    // === ALMANCA B2 (ID 591-620) ===
+    if (unitId >= 591 && unitId <= 620) {
+        const { getGermanB2QuestionsForUnit } = await import('./questions-de-b2');
+        return getGermanB2QuestionsForUnit(unitId, quizIndex);
+    }
+
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===
     // Dinamik dosyadan çek (Unit 3-30 arası dış dosyalarda)
     if (unitId >= 3 && unitId <= 30) {

@@ -40,8 +40,32 @@ const defaultProgress: LanguageProgress = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-    const [currentLanguage, setCurrentLanguage] = useState<Language>(getDefaultLanguage());
-    const [currentLevel, setCurrentLevel] = useState<Level | null>(null);
+    const [currentLanguage, setCurrentLanguage] = useState<Language>(() => {
+        // Client-side initialization to avoid flashes
+        if (typeof window !== "undefined") {
+            const saved = localStorage.getItem('steadyshell_selected_language');
+            if (saved) {
+                const lang = getLanguageByCode(saved);
+                if (lang) return lang;
+            }
+        }
+        return getDefaultLanguage();
+    });
+
+    const [currentLevel, setCurrentLevel] = useState<Level | null>(() => {
+        // Client-side initialization
+        if (typeof window !== "undefined") {
+            const savedLang = localStorage.getItem('steadyshell_selected_language');
+            const savedLevel = localStorage.getItem('steadyshell_selected_level');
+            if (savedLang && savedLevel) {
+                const lang = getLanguageByCode(savedLang);
+                if (lang && lang.levels) {
+                    return lang.levels.find(l => l.code === savedLevel) || null;
+                }
+            }
+        }
+        return null;
+    });
 
     // Her dil için ayrı ilerleme - localStorage'dan yükle
     const [progress, setProgress] = useState<Record<string, LanguageProgress>>(() => {
@@ -51,18 +75,23 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
                 es: { ...defaultProgress },
                 en: { ...defaultProgress },
                 fr: { ...defaultProgress },
+                de: { ...defaultProgress },
             };
         }
 
         const saved = localStorage.getItem("steadyshell_progress");
         if (saved) {
             try {
-                return JSON.parse(saved);
+                const parsed = JSON.parse(saved);
+                // Ensure 'de' exists if it was missing from an older save
+                if (!parsed.de) parsed.de = { ...defaultProgress };
+                return parsed;
             } catch {
                 return {
                     es: { ...defaultProgress },
                     en: { ...defaultProgress },
                     fr: { ...defaultProgress },
+                    de: { ...defaultProgress },
                 };
             }
         }
@@ -72,6 +101,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
             es: { ...defaultProgress },
             en: { ...defaultProgress },
             fr: { ...defaultProgress },
+            de: { ...defaultProgress },
         };
     });
 

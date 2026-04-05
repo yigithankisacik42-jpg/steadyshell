@@ -20,6 +20,7 @@ const languages = [
     { code: 'es', name: 'İspanyolca', flag: '🇪🇸' },
     { code: 'en', name: 'İngilizce', flag: '🇬🇧' },
     { code: 'fr', name: 'Fransızca', flag: '🇫🇷' },
+    { code: 'de', name: 'Almanca', flag: '🇩🇪' },
 ];
 
 const levels = [

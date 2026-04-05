@@ -13,6 +13,8 @@ import { getFrenchA2ReadingForUnit } from './readings-fr-a2';
 import { getFrB1ReadingForUnit } from './readings-fr-b1';
 import { getEnglishB2ReadingForUnit } from './readings-en-b2';
 import { getEnglishB1ReadingForUnit } from './readings-en-b1';
+import { getGermanA1ReadingForUnit } from './readings-de-a1';
+import { getGermanA2ReadingForUnit } from './readings-de-a2';
 
 export interface ReadingQuestion {
     id: number;
@@ -539,6 +541,18 @@ export function getReadingForUnit(unitId: number): UnitReading {
     if (unitId >= 191 && unitId <= 220) {
         const enB2Reading = getEnglishB2ReadingForUnit(unitId);
         return enB2Reading || unit1Reading;
+    }
+
+    // German A1 seviyesi (501-530)
+    if (unitId >= 501 && unitId <= 530) {
+        const deA1Reading = getGermanA1ReadingForUnit(unitId);
+        return deA1Reading || unit1Reading;
+    }
+
+    // German A2 seviyesi (531-560)
+    if (unitId >= 531 && unitId <= 560) {
+        const deA2Reading = getGermanA2ReadingForUnit(unitId);
+        return deA2Reading || unit1Reading;
     }
 
     return unit1Reading;

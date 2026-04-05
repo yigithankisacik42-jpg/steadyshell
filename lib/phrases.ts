@@ -23,9 +23,14 @@ import { getB1PhrasesForUnit } from './phrases-b1';
 import { getB2PhrasesForUnit } from './phrases-b2';
 import { getEnglishA1PhrasesForUnit } from './phrases-en-a1';
 import { getEnglishA2PhrasesForUnit } from './phrases-en-a2';
+import { getEnglishB1PhrasesForUnit } from './phrases-en-b1';
+import { getEnglishB2PhrasesForUnit } from './phrases-en-b2';
 import { getFrenchA1PhrasesForUnit } from './phrases-fr-a1';
 import { getFrenchA2PhrasesForUnit } from './phrases-fr-a2';
 import { getFrB1PhrasesForUnit } from './phrases-fr-b1';
+import { getGermanA1PhrasesForUnit } from './phrases-de-a1';
+import { getGermanA2PhrasesForUnit } from './phrases-de-a2';
+import { getGermanB1PhrasesForUnit } from './phrases-de-b1';
 import { getUnit } from './curriculum';
 
 export function getPhrasesForUnit(unitId: number): UnitPhrases {
@@ -38,7 +43,7 @@ export function getPhrasesForUnit(unitId: number): UnitPhrases {
             unitId: enPhrases.unitId,
             title: unitInfo?.title || enPhrases.title,
             level: "A1",
-            phrases: enPhrases.phrases.map(p => ({
+            phrases: enPhrases.phrases.map((p: any) => ({
                 target: p.phrase,
                 native: p.meaning,
                 pronunciation: p.pronunciation || ""
@@ -54,10 +59,42 @@ export function getPhrasesForUnit(unitId: number): UnitPhrases {
             unitId: enPhrases.unitId,
             title: unitInfo?.title || enPhrases.title,
             level: "A2",
-            phrases: enPhrases.phrases.map(p => ({
+            phrases: enPhrases.phrases.map((p: any) => ({
                 target: p.phrase,
                 native: p.meaning,
                 pronunciation: ""
+            }))
+        };
+    }
+
+    // İngilizce B1 (161-190)
+    if (unitId >= 161 && unitId <= 190) {
+        const enPhrases = getEnglishB1PhrasesForUnit(unitId);
+        const unitInfo = getUnit("en", "B1", unitId);
+        return {
+            unitId: enPhrases.unitId,
+            title: unitInfo?.title || enPhrases.title,
+            level: "B1",
+            phrases: enPhrases.phrases.map((p: any) => ({
+                target: p.phrase,
+                native: p.meaning,
+                pronunciation: p.pronunciation || ""
+            }))
+        };
+    }
+
+    // İngilizce B2 (191-220)
+    if (unitId >= 191 && unitId <= 220) {
+        const enPhrases = getEnglishB2PhrasesForUnit(unitId);
+        const unitInfo = getUnit("en", "B2", unitId);
+        return {
+            unitId: enPhrases.unitId,
+            title: unitInfo?.title || enPhrases.title,
+            level: "B2",
+            phrases: enPhrases.phrases.map((p: any) => ({
+                target: p.phrase,
+                native: p.meaning,
+                pronunciation: p.pronunciation || ""
             }))
         };
     }
@@ -108,6 +145,55 @@ export function getPhrasesForUnit(unitId: number): UnitPhrases {
                 target: p.text,
                 native: p.meaning,
                 pronunciation: p.pronunciation
+            }))
+        };
+    }
+
+    // === ALMANCA ÜNİTELER (ID 501-620) ===
+    // Almanca A1 (501-530)
+    if (unitId >= 501 && unitId <= 530) {
+        const dePhrases = getGermanA1PhrasesForUnit(unitId);
+        const unitInfo = getUnit("de", "A1", unitId);
+        return {
+            unitId: dePhrases.unitId,
+            title: unitInfo?.title || dePhrases.title,
+            level: "A1",
+            phrases: dePhrases.phrases.map((p: any) => ({
+                target: p.phrase,
+                native: p.meaning,
+                pronunciation: p.pronunciation || ""
+            }))
+        };
+    }
+
+    // Almanca A2 (531-560)
+    if (unitId >= 531 && unitId <= 560) {
+        const dePhrases = getGermanA2PhrasesForUnit(unitId);
+        const unitInfo = getUnit("de", "A2", unitId);
+        return {
+            unitId: dePhrases.unitId,
+            title: unitInfo?.title || dePhrases.title,
+            level: "A2",
+            phrases: dePhrases.phrases.map((p: any) => ({
+                target: p.phrase,
+                native: p.meaning,
+                pronunciation: p.pronunciation || ""
+            }))
+        };
+    }
+
+    // Almanca B1 (561-590)
+    if (unitId >= 561 && unitId <= 590) {
+        const dePhrases = getGermanB1PhrasesForUnit(unitId);
+        const unitInfo = getUnit("de", "B1", unitId);
+        return {
+            unitId: dePhrases.unitId,
+            title: unitInfo?.title || dePhrases.title,
+            level: "B1",
+            phrases: dePhrases.phrases.map((p: any) => ({
+                target: p.phrase,
+                native: p.meaning,
+                pronunciation: p.pronunciation || ""
             }))
         };
     }

@@ -70,6 +70,19 @@ export const languages: Language[] = [
             { ...cefrLevels.B2, unitsCount: 30 },
         ],
     },
+    {
+        code: "de",
+        name: "Almanca",
+        nativeName: "Deutsch",
+        flag: "🇩🇪",
+        available: true,
+        levels: [
+            { ...cefrLevels.A1, unitsCount: 30 },
+            { ...cefrLevels.A2, unitsCount: 30 },
+            { ...cefrLevels.B1, unitsCount: 30 },
+            { ...cefrLevels.B2, unitsCount: 30 },
+        ],
+    },
 ];
 
 // Yardımcı fonksiyonlar
@@ -82,5 +95,5 @@ export function getAvailableLanguages(): Language[] {
 }
 
 export function getDefaultLanguage(): Language {
-    return languages[0]; // İspanyolca varsayılan
+    return languages.find(l => l.code === "de") || languages[0];
 }

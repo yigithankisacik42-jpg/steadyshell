@@ -713,6 +713,9 @@ import { getEnglishA2LectureForUnit } from './lectures-en-a2';
 import { getEnglishB2LectureForUnit } from './lectures-en-b2';
 import { getFrenchA1LectureForUnit } from './lectures-fr-a1';
 import { getFrenchA2LectureForUnit } from './lectures-fr-a2';
+import { getGermanA1LectureForUnit } from './lectures-de-a1';
+import { getGermanA2LectureForUnit } from './lectures-de-a2';
+import { getGermanB1LecturesForUnit } from './lectures-de-b1';
 
 
 export function getLectureForUnit(unitId: number): UnitLecture {
@@ -780,6 +783,21 @@ export function getLectureForUnit(unitId: number): UnitLecture {
     if (unitId >= 331 && unitId <= 360) {
         const frA2Lecture = getFrenchA2LectureForUnit(unitId);
         if (frA2Lecture) return frA2Lecture;
+    }
+
+    // Almanca A1 (501-530)
+    if (unitId >= 501 && unitId <= 530) {
+        return getGermanA1LectureForUnit(unitId);
+    }
+
+    // Almanca A2 (531-560)
+    if (unitId >= 531 && unitId <= 560) {
+        return getGermanA2LectureForUnit(unitId);
+    }
+
+    // Almanca B1 (561-590)
+    if (unitId >= 561 && unitId <= 590) {
+        return getGermanB1LecturesForUnit(unitId);
     }
 
     // === İSPANYOLCA ÜNİTELER (ID 1-100) ===

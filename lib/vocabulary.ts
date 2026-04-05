@@ -1,4 +1,7 @@
 import { getEnglishB2VocabularyForUnit } from './vocabulary-en-b2';
+import { getGermanA1VocabularyForUnit } from './vocabulary-de-a1';
+import { getGermanA2VocabularyForUnit } from './vocabulary-de-a2';
+import { getGermanB1VocabularyForUnit } from './vocabulary-de-b1';
 
 /**
  * SteadyShell Kelime Veritabanı - İspanyolca A1
@@ -1171,6 +1174,55 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
             unitId: unitId,
             title: `Ünite ${unitId}`,
             words: frB1Vocab.map(v => ({
+                word: v.word,
+                meaning: v.meaning,
+                pronunciation: v.pronunciation,
+                example: v.example,
+                exampleTranslation: v.exampleTranslation
+            }))
+        };
+    }
+
+    // === ALMANCA ÜNİTELER (ID 501-620) ===
+    // Almanca A1 (501-530)
+    if (unitId >= 501 && unitId <= 530) {
+        const deVocab = getGermanA1VocabularyForUnit(unitId);
+        return {
+            unitId: deVocab.unitId,
+            title: deVocab.title,
+            words: deVocab.words.map(v => ({
+                word: v.word,
+                meaning: v.meaning,
+                pronunciation: v.pronunciation,
+                example: v.example,
+                exampleTranslation: v.exampleTranslation
+            }))
+        };
+    }
+
+    // Almanca A2 (531-560)
+    if (unitId >= 531 && unitId <= 560) {
+        const deVocab = getGermanA2VocabularyForUnit(unitId);
+        return {
+            unitId: deVocab.unitId,
+            title: deVocab.title,
+            words: deVocab.words.map(v => ({
+                word: v.word,
+                meaning: v.meaning,
+                pronunciation: v.pronunciation,
+                example: v.example,
+                exampleTranslation: v.exampleTranslation
+            }))
+        };
+    }
+
+    // Almanca B1 (561-590)
+    if (unitId >= 561 && unitId <= 590) {
+        const deVocab = getGermanB1VocabularyForUnit(unitId);
+        return {
+            unitId: deVocab.unitId,
+            title: deVocab.title,
+            words: deVocab.words.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
                 pronunciation: v.pronunciation,

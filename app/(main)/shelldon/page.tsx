@@ -20,6 +20,7 @@ const LANGUAGES = [
     { code: "fr", name: "Fransızca", flag: "🇫🇷" },
     { code: "es", name: "İspanyolca", flag: "🇪🇸" },
     { code: "en", name: "İngilizce", flag: "🇬🇧" },
+    { code: "de", name: "Almanca", flag: "🇩🇪" },
 ];
 
 const PRACTICE_MODES: { id: ShelldonPracticeMode; label: string; description: string; icon: string }[] = [
@@ -112,7 +113,10 @@ function UserMessageBubble({ content, corrections }: { content: string, correcti
 
 export default function ShelldonPage() {
     // === STATE ===
-    const [selectedLang, setSelectedLang] = useState("");
+    const { currentLanguage, currentLevel, progress } = useLanguage();
+    
+    // === STATE ===
+    const [selectedLang, setSelectedLang] = useState(currentLanguage?.code || "");
     const [practiceMode, setPracticeMode] = useState<ShelldonPracticeMode>("speaking");
     const [selectedScenario, setSelectedScenario] = useState<ShelldonScenario | null>(null);
     const [isInChat, setIsInChat] = useState(false);
@@ -146,8 +150,14 @@ export default function ShelldonPage() {
 
     // Hooks
     const { addXp, completeLesson } = useUserProgress();
-    const { currentLanguage, currentLevel, progress } = useLanguage();
     const { userStats, dailyStats } = useShelldon();
+
+    // Sync selectedLang with global language
+    useEffect(() => {
+        if (currentLanguage?.code) {
+            setSelectedLang(currentLanguage.code);
+        }
+    }, [currentLanguage]);
     
     const {
         isListening,
@@ -160,7 +170,7 @@ export default function ShelldonPage() {
         isSupported: speechSupported,
         error: speechError,
         isMouthOpen,
-    } = useSpeech(selectedLang || "fr", {
+    } = useSpeech(selectedLang || currentLanguage?.code || "de", {
         continuousMode: isCallMode,
         onSilence: (text) => {
             if (text.trim() && !isLoading) {
@@ -170,7 +180,7 @@ export default function ShelldonPage() {
         }
     });
 
-    const MAX_TURNS = 10;
+    const MAX_TURNS = 15;
     const practiceModeLabel = PRACTICE_MODES.find((mode) => mode.id === practiceMode)?.label ?? "Konuşma";
 
     const buildLessonContext = useCallback(
@@ -209,14 +219,14 @@ export default function ShelldonPage() {
 
     const buildSessionGoal = useCallback(() => {
         if (!selectedScenario) return "Mini hedef: Bir sonraki seans kısa cümlelerle devam et.";
-        const langCode = selectedLang || "fr";
+        const langCode = selectedLang || currentLanguage?.code || "de";
         const objectives = selectedScenario.objectives[langCode] || [];
         const nextIndex = objectives.findIndex((_, idx) => !completedObjectives.includes(idx));
         if (nextIndex !== -1) {
             return `Mini hedef: ${objectives[nextIndex]}`;
         }
         return "Mini hedef: Bir sonraki seans daha uzun cümleler kur.";
-    }, [selectedScenario, completedObjectives, selectedLang]);
+    }, [selectedScenario, completedObjectives, selectedLang, currentLanguage]);
 
     // === MEMORY LOAD ===
     useEffect(() => {
@@ -265,7 +275,7 @@ export default function ShelldonPage() {
         setRepeatQueue([]);
 
         try {
-            const langCode = selectedLang || currentLanguage.code;
+            const langCode = selectedLang || currentLanguage?.code || "de";
             const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
             const lessonContext = buildLessonContext(langCode, levelCode);
             const systemPrompt = buildShelldonPrompt(langCode, levelCode, scenario, userStats || undefined, dailyStats, lessonContext, practiceMode);
@@ -364,7 +374,7 @@ export default function ShelldonPage() {
         setSelectedImage(null);
 
         try {
-            const langCode = selectedLang || currentLanguage.code;
+            const langCode = selectedLang || currentLanguage?.code || "de";
             const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
             const lessonContext = buildLessonContext(langCode, levelCode);
             let systemPrompt = buildShelldonPrompt(langCode, levelCode, selectedScenario, userStats || undefined, dailyStats, lessonContext, practiceMode);
@@ -525,7 +535,8 @@ export default function ShelldonPage() {
                 .filter((m) => m.role === "user")
                 .map((m) => m.content)
                 .join("\n");
-            const feedbackPrompt = buildFeedbackPrompt(selectedLang, userMsgs);
+            const langCode = selectedLang || currentLanguage?.code || "en";
+            const feedbackPrompt = buildFeedbackPrompt(langCode, userMsgs);
 
             const response = await fetch("/api/chat", {
                 method: "POST",
@@ -562,8 +573,9 @@ export default function ShelldonPage() {
 
         setIsLoadingHint(true);
         try {
+            const langCode = selectedLang || currentLanguage?.code || "en";
             const userMsgs = messages.map(m => `${m.role === 'user' ? 'Kullanıcı' : 'Shelldon'}: ${m.content}`).join("\n");
-            const hintPrompt = buildHintPrompt(selectedLang, selectedScenario.titleTr, userMsgs);
+            const hintPrompt = buildHintPrompt(langCode, selectedScenario.titleTr, userMsgs);
 
             const response = await fetch("/api/chat", {
                 method: "POST",
@@ -686,89 +698,110 @@ export default function ShelldonPage() {
         return (
             <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-teal-50 flex flex-col items-center justify-center p-6">
                 {/* Avatar */}
-                <ShelldonAvatar state="happy" language={selectedLang} size={160} className="mb-6" />
+                <ShelldonAvatar state="happy" language={selectedLang || currentLanguage?.code || "en"} size={160} className="mb-6" />
 
-                <h1 className="text-3xl font-extrabold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">
+                <h1 className="text-3xl font-extrabold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2 text-center">
                     Harika Konuşma! 🎉
                 </h1>
-                <p className="text-slate-500 mb-6">
+                <p className="text-slate-500 mb-6 font-medium text-center">
                     {selectedScenario?.titleTr} senaryosunu tamamladın!
                 </p>
 
                 {/* XP */}
-                <div className="bg-white rounded-2xl p-4 shadow-lg border border-emerald-100 mb-6 flex items-center gap-4">
+                <div className="bg-white rounded-2xl p-4 shadow-lg border border-emerald-100 mb-6 flex items-center gap-4 w-full max-w-md">
                     <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center">
                         <Sparkles className="w-6 h-6 text-white" />
                     </div>
                     <div>
                         <p className="text-2xl font-black text-emerald-600">+15 XP</p>
-                        <p className="text-xs text-slate-400 font-bold">Konuşma pratiği bonus</p>
+                        <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Konuşma pratiği bonus</p>
                     </div>
                 </div>
 
                 {/* Feedback */}
                 {feedback ? (
-                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 w-full max-w-md mb-6 space-y-4">
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 w-full max-w-md mb-6 space-y-5 animate-in slide-in-from-bottom-4 duration-500">
                         {/* Skor */}
                         <div className="text-center">
                             <p className="text-5xl font-black text-emerald-500 mb-1">{feedback.score}</p>
-                            <p className="text-sm text-slate-400 font-bold">Puan</p>
+                            <p className="text-sm text-slate-400 font-bold uppercase tracking-widest">Puan</p>
                         </div>
 
-                        <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                        <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden shadow-inner">
                             <div
                                 className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full transition-all duration-1000"
                                 style={{ width: `${feedback.score}%` }}
                             />
                         </div>
 
-                        <div className="space-y-3 text-sm">
-                            <div className="flex gap-3">
-                                <span className="font-bold text-indigo-500 shrink-0">📝 Gramer:</span>
-                                <span className="text-slate-600">{feedback.grammar}</span>
+                        <div className="space-y-4 text-sm">
+                            <div className="flex gap-4 items-start bg-slate-50/50 p-3 rounded-xl border border-slate-100/50">
+                                <div className="bg-indigo-100 p-2 rounded-lg shrink-0">
+                                    <MessageCircle className="w-4 h-4 text-indigo-600" />
+                                </div>
+                                <div>
+                                    <span className="font-bold text-indigo-600 text-[11px] uppercase tracking-wider block mb-1">Gramer</span>
+                                    <span className="text-slate-600 font-medium leading-relaxed">{feedback.grammar}</span>
+                                </div>
                             </div>
-                            <div className="flex gap-3">
-                                <span className="font-bold text-amber-500 shrink-0">📚 Kelime:</span>
-                                <span className="text-slate-600">{feedback.vocabulary}</span>
+                            <div className="flex gap-4 items-start bg-slate-50/50 p-3 rounded-xl border border-slate-100/50">
+                                <div className="bg-amber-100 p-2 rounded-lg shrink-0">
+                                    <Sparkles className="w-4 h-4 text-amber-600" />
+                                </div>
+                                <div>
+                                    <span className="font-bold text-amber-600 text-[11px] uppercase tracking-wider block mb-1">Kelime</span>
+                                    <span className="text-slate-600 font-medium leading-relaxed">{feedback.vocabulary}</span>
+                                </div>
                             </div>
-                            <div className="flex gap-3">
-                                <span className="font-bold text-emerald-500 shrink-0">💡 İpucu:</span>
-                                <span className="text-slate-600">{feedback.tip}</span>
+                            <div className="flex gap-4 items-start bg-slate-50/50 p-3 rounded-xl border border-slate-100/50">
+                                <div className="bg-emerald-100 p-2 rounded-lg shrink-0">
+                                    <Lightbulb className="w-4 h-4 text-emerald-600" />
+                                </div>
+                                <div>
+                                    <span className="font-bold text-emerald-600 text-[11px] uppercase tracking-wider block mb-1">Öneri</span>
+                                    <span className="text-slate-600 font-medium leading-relaxed">{feedback.tip}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 ) : (
-                    <div className="flex items-center gap-2 text-slate-400 mb-6">
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        <span className="text-sm font-bold">Analiz yapılıyor...</span>
+                    <div className="flex flex-col items-center gap-4 py-12 text-slate-400 mb-6 bg-white/50 rounded-2xl w-full max-w-md border border-dashed border-slate-200">
+                        <Loader2 className="w-8 h-8 animate-spin text-emerald-400" />
+                        <span className="text-sm font-bold uppercase tracking-widest animate-pulse">Analiz yapılıyor...</span>
                     </div>
                 )}
 
                 {(sessionSummary || sessionGoal) && (
-                    <div className="w-full max-w-md space-y-3 mb-6">
+                    <div className="w-full max-w-md space-y-4 mb-8">
                         {sessionSummary && (
-                            <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-4">
-                                <p className="text-[11px] font-black uppercase tracking-wider text-emerald-600 mb-2">Özet</p>
-                                <p className="text-sm text-emerald-800 font-semibold">{sessionSummary}</p>
+                            <div className="bg-emerald-50 border border-emerald-100/50 rounded-2xl p-5 shadow-sm">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-600/70">Oturum Özeti</p>
+                                </div>
+                                <p className="text-sm text-emerald-900 font-semibold leading-relaxed">{sessionSummary}</p>
                             </div>
                         )}
                         {sessionGoal && (
-                            <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4">
-                                <p className="text-[11px] font-black uppercase tracking-wider text-amber-600 mb-2">Mini Hedef</p>
-                                <p className="text-sm text-amber-900 font-semibold">{sessionGoal}</p>
+                            <div className="bg-amber-50 border border-amber-100/50 rounded-2xl p-5 shadow-sm">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-600/70">Sıradaki Hedef</p>
+                                </div>
+                                <p className="text-sm text-amber-900 font-semibold leading-relaxed">{sessionGoal}</p>
                             </div>
                         )}
                     </div>
                 )}
 
                 {/* Butonlar */}
-                <div className="flex gap-3 w-full max-w-md">
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
                     <Button
                         onClick={goBack}
                         variant="outline"
-                        className="flex-1 rounded-xl py-5 font-bold"
+                        className="flex-1 rounded-2xl py-7 font-black uppercase tracking-widest text-xs border-slate-200 hover:bg-slate-50 hover:text-slate-900 transition-all shadow-sm"
                     >
-                        Senaryolara Dön
+                        Senaryolar
                     </Button>
                     <Button
                         onClick={() => {
@@ -781,7 +814,7 @@ export default function ShelldonPage() {
                             setRepeatQueue([]);
                             if (selectedScenario) startScenario(selectedScenario);
                         }}
-                        className="flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl py-5 font-bold shadow-lg"
+                        className="flex-1 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl py-7 font-black uppercase tracking-widest text-xs shadow-lg shadow-emerald-200 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all border-none"
                     >
                         Tekrar Dene
                     </Button>
@@ -794,7 +827,8 @@ export default function ShelldonPage() {
     // === KONUŞMA EKRANI ===
     // =============================================
     if (isInChat && selectedScenario) {
-        const suggestions = selectedScenario.suggestedPhrases[selectedLang] || [];
+        const langCode = selectedLang || currentLanguage?.code || "en";
+        const suggestions = selectedScenario.suggestedPhrases[langCode] || [];
 
         return (
             <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-teal-50 flex flex-col relative">
@@ -846,11 +880,11 @@ export default function ShelldonPage() {
                             </div>
                         ) : (
                             <div className="w-full h-full flex items-center justify-center pt-6 pb-2">
-                                <ShelldonAvatar
-                                    state={shelldonState}
-                                    language={selectedLang}
-                                    size={150}
-                                />
+                                    <ShelldonAvatar
+                                        state={shelldonState}
+                                        language={selectedLang || currentLanguage?.code || "en"}
+                                        size={150}
+                                    />
                             </div>
                         )}
 
@@ -1234,7 +1268,7 @@ export default function ShelldonPage() {
             <main className="max-w-2xl mx-auto px-4 py-8 relative z-10 space-y-8">
                 {/* Hero */}
                 <div className="flex flex-col items-center text-center">
-                    <ShelldonAvatar state="idle" language={selectedLang || "fr"} size={140} className="mb-4" />
+                    <ShelldonAvatar state="idle" language={selectedLang || currentLanguage?.code || "de"} size={140} className="mb-4" />
                     <h2 className="text-2xl font-extrabold text-slate-800 mb-2">
                         Merhaba! Ben Shelldon 🐢
                     </h2>
