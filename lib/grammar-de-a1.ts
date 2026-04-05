@@ -15,45 +15,53 @@ const unit501Grammar: GermanGrammarUnit = {
         {
             id: "de-sein-intro",
             title: "1. Sein Fiili Nedir?",
-            explanation: "Almancada en temel fiil 'sein' (olmak) fiilidir. İngilizcedeki 'to be' (am/is/are) gibidir. Durum, kimlik veya özellik belirtirken kullanılır. Çekimi düzensizdir, yani ezberlenmesi gerekir.",
+            explanation: "Almancada en temel ve en sık kullanılan fiil **'sein'** (olmak) fiilidir. İngilizcedeki 'to be' (am/is/are) yapısının tam karşılığıdır. Bir kişinin kim olduğunu, nerede olduğunu, nasıl biri olduğunu veya bir nesnenin özelliğini belirtmek için kullanılır.\n\n**Önemli Not:** 'Sein' fiili tamamen düzensizdir. Bu yüzden çekimlerini her şahıs için tek tek ezberlemek, Almanca öğrenimine sağlam bir başlangıç yapmak için kritiktir.",
             examples: [
-                { de: "Ich bin Ali.", tr: "Ben Ali'yim." },
-                { de: "Du bist Student.", tr: "Sen öğrencisin." },
-                { de: "Er ist Lehrer.", tr: "O öğretmendir." }
+                { de: "Ich bin Ali.", tr: "Ben Ali'yim. (Kimlik bildirir)" },
+                { de: "Das Wetter ist schön.", tr: "Hava güzel. (Durum bildirir)" },
+                { de: "Wir sind im Garten.", tr: "Biz bahçedeyiz. (Konum bildirir)" },
+                { de: "Du bist sehr nett.", tr: "Sen çok naziksin. (Özellik bildirir)" },
+                { de: "Seid ihr bereit?", tr: "Hazır mısınız? (Soru hali)" }
             ]
         },
         {
             id: "de-pronouns",
             title: "2. Şahıs Zamirleri (Personalpronomen)",
-            explanation: "Almancada şahıslar şöyledir:\n\n* **Ich:** Ben\n* **Du:** Sen\n* **Er:** O (Erkek)\n* **Sie:** O (Kadın)\n* **Es:** O (Nötr)\n* **Wir:** Biz\n* **Ihr:** Siz (Çoğul)\n* **Sie:** Onlar\n* **Sie:** Siz (Resmi)",
+            explanation: "Almancada cümle kurarken özneleri (ben, sen, o...) belirtmek için şahıs zamirlerini kullanırız. Almancayı diğer dillerden ayıran en büyük fark 'O' zamirinin nesnenin artikeline göre üç farklı şekilde (Er, Sie, Es) söylenmesidir.\n\n*   **Ich:** Ben\n*   **Du:** Sen (Samimi)\n*   **Er / Sie / Es:** O (Eril / Dişil / Nötr)\n*   **Wir:** Biz\n*   **Ihr:** Siz (Çoğul ve samimi)\n*   **Sie:** Onlar\n*   **Sie:** Siz (Resmi ve kibar - Her zaman büyük harfle yazılır!)",
             table: {
-                headers: ["Zamir", "Türkçe", "Sein Çekimi"],
+                headers: ["Zamir (Özne)", "Türkçe Karşılığı", "Sein (Olmak) Çekimi", "Örnek Kullanım"],
                 rows: [
-                    ["Ich", "Ben", "bin"],
-                    ["Du", "Sen", "bist"],
-                    ["Er / Sie / Es", "O", "ist"],
-                    ["Wir", "Biz", "sind"],
-                    ["Ihr", "Siz", "seid"],
-                    ["Sie / sie", "Siz / Onlar", "sind"]
+                    ["Ich", "Ben", "bin", "Ich bin glücklich."],
+                    ["Du", "Sen", "bist", "Du bist müde."],
+                    ["Er", "O (Erkek)", "ist", "Er ist Lehrer."],
+                    ["Sie", "O (Kadın)", "ist", "Sie ist Ärztin."],
+                    ["Es", "O (Cansız/Hayvan)", "ist", "Es ist kalt."],
+                    ["Wir", "Biz", "sind", "Wir sind müde."],
+                    ["Ihr", "Siz (Hepiniz)", "seid", "Ihr seid schnell."],
+                    ["sie", "Onlar", "sind", "sie sind hier."],
+                    ["Sie", "Siz (Kibar)", "sind", "Sie sind freundlich."]
                 ]
             },
             examples: [
-                { de: "Wer sind Sie?", tr: "Siz kimsiniz? (Resmi)" },
-                { de: "Wir sind hier.", tr: "Biz buradayız." }
+                { de: "Wer sind Sie?", tr: "Siz kimsiniz? (Resmi ortamda sorulur)" },
+                { de: "Wir sind hier.", tr: "Biz buradayız." },
+                { de: "Bist du zu Hause?", tr: "Evde misin?" },
+                { de: "Er ist mein Freund.", tr: "O benim arkadaşım." },
+                { de: "Ihr seid sehr fleißig.", tr: "Siz (hepiniz) çok çalışkansınız." }
             ]
         }
     ],
     exercises: [
-        { question: "Ich ___ Ali.", options: ["bin", "bist", "ist", "sind"], correct: 0, explanation: "'Ich' ile 'bin' kullanılır." },
-        { question: "Du ___ nett.", options: ["bin", "bist", "ist", "sind"], correct: 1, explanation: "'Du' ile 'bist' kullanılır." },
-        { question: "Er ___ Lehrer.", options: ["bin", "bist", "ist", "sind"], correct: 2, explanation: "'Er' ile 'ist' kullanılır." },
-        { question: "Wir ___ glücklich.", options: ["bin", "bist", "ist", "sind"], correct: 3, explanation: "'Wir' ile 'sind' kullanılır." },
-        { question: "Ihr ___ Studenten.", options: ["bin", "seid", "ist", "sind"], correct: 1, explanation: "'Ihr' ile 'seid' kullanılır." },
-        { question: "Es ___ kalt.", options: ["bin", "bist", "ist", "sind"], correct: 2, explanation: "'Es' ile 'ist' kullanılır." },
-        { question: "Sie (onlar) ___ müde.", options: ["bin", "bist", "ist", "sind"], correct: 3, explanation: "Çoğul 'sie' ile 'sind' kullanılır." },
-        { question: "___ du hazır?", options: ["Bin", "Bist", "Ist", "Sind"], correct: 1, explanation: "Soru cümlesinde 'bist' başa gelir." },
-        { question: "Das ___ ein Buch.", options: ["bin", "bist", "ist", "sind"], correct: 2, explanation: "Nesneler (es) için 'ist' kullanılır." },
-        { question: "Meine Mutter ___ güzel.", options: ["bin", "bist", "ist", "sind"], correct: 2, explanation: "'Mutter' (sie) için 'ist' kullanılır." }
+        { question: "Ich ___ Ali.", options: ["bin", "bist", "ist", "sind"], correct: 0, explanation: "'Ich' öznesi ile her zaman 'bin' çekimi kullanılır." },
+        { question: "Du ___ nett.", options: ["bin", "bist", "ist", "sind"], correct: 1, explanation: "'Du' öznesi ile her zaman 'bist' çekimi kullanılır." },
+        { question: "Er ___ Lehrer.", options: ["bin", "bist", "ist", "sind"], correct: 2, explanation: "'Er/Sie/Es' tekil şahısları için 'ist' kullanılır." },
+        { question: "Wir ___ glücklich.", options: ["bin", "bist", "ist", "sind"], correct: 3, explanation: "'Wir' ve 'Sie/sie' çoğulları için 'sind' kullanılır." },
+        { question: "Ihr ___ Studenten.", options: ["bin", "seid", "ist", "sind"], correct: 1, explanation: "'Ihr' (sizler) öznesi için 'seid' kullanılır." },
+        { question: "Es ___ kalt.", options: ["bin", "bist", "ist", "sind"], correct: 2, explanation: "Cansız varlıklar/durumlar (es) için 'ist' kullanılır." },
+        { question: "Sie (onlar) ___ müde.", options: ["bin", "bist", "ist", "sind"], correct: 3, explanation: "Çoğul olan 'onlar' (sie) için 'sind' kullanılır." },
+        { question: "___ du bereit?", options: ["Bin", "Bist", "Ist", "Sind"], correct: 1, explanation: "Soru yapılırken fiil başa gelir: 'Bist du...?'" },
+        { question: "Das ___ ein Buch.", options: ["bin", "bist", "ist", "sind"], correct: 2, explanation: "'Das' (bu) ifadesi teklik bildirirse 'ist' alır." },
+        { question: "Meine Mutter ___ schön.", options: ["bin", "bist", "ist", "sind"], correct: 2, explanation: "'Mutter' (anne) 'Sie' şahsına girdiği için 'ist' kullanılır." }
     ]
 };
 
@@ -96,7 +104,10 @@ const unit502Grammar: GermanGrammarUnit = {
                     ["1000", "tausend", "-"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich bin einundzwanzig Jahre alt.", tr: "Yirmi bir yaşındayım." },
+                { de: "Das Ticket kostet hundert Euro.", tr: "Bilet yüz Euro tutuyor." }
+            ]
         }
     ],
     exercises: [
@@ -116,40 +127,49 @@ const unit502Grammar: GermanGrammarUnit = {
 // ===== UNIT 503: POSSESSIVARTIKEL (İYELİK ARTIKELLERİ) =====
 const unit503Grammar: GermanGrammarUnit = {
     unitId: 503,
-    title: "İyelik Artikelleri (Mein, Dein...)",
+    title: "İyelik Artikelleri (Benim, Senin, Onun...)",
     rules: [
         {
             id: "de-pos-intro",
-            title: "1. Benim, Senin, Onun",
-            explanation: "Bir şeyin kime ait olduğunu belirtmek için iyelik artikelleri kullanılır. Artikeller, ait olunan nesnenin cinsiyetine (der, die, das) göre ek alır.",
+            title: "1. Aitlik Bildirme (Benim, Senin, Onun)",
+            explanation: "Bir nesnenin veya kişinin kime ait olduğunu belirtmek için iyelik artikellerini (Possessivartikel) kullanırız. \n\n**Önemli Kural:** İyelik artikelleri, ait olunan nesnenin artikeline göre sonuna ek alır.\n1. Eğer nesne **der** veya **das** artikeline sahipse; iyelik artikeli yalın halde kalır (mein, dein).\n2. Eğer nesne **die** artikeline sahipse veya **çoğulsa**; iyelik artikelinin sonuna **'-e'** eklenir (meine, deine, seine).",
             table: {
-                headers: ["Kişi", "Eril/Nötr (der/das)", "Dişil (die) / Çoğul"],
+                headers: ["Kişi (Özne)", "Eril/Nötr Nesne (der/das)", "Dişil/Çoğul Nesne (die/Pl.)", "Türkçe Anlamı"],
                 rows: [
-                    ["Ich (Ben)", "mein", "meine"],
-                    ["Du (Sen)", "dein", "deine"],
-                    ["Er (O - Erkek)", "sein", "seine"],
-                    ["Sie (O - Kadın)", "ihr", "ihre"],
-                    ["Es (O - Nötr)", "sein", "seine"],
-                    ["Wir (Biz)", "unser", "unsere"]
+                    ["Ich (Ben)", "mein", "meine", "Benim"],
+                    ["Du (Sen)", "dein", "deine", "Senin"],
+                    ["Er (O - Erkek)", "sein", "seine", "Onun"],
+                    ["Sie (O - Kadın)", "ihr", "ihre", "Onun"],
+                    ["Es (O - Nötr)", "sein", "seine", "Onun"],
+                    ["Wir (Biz)", "unser", "unsere", "Bizim"],
+                    ["Ihr (Siz)", "euer", "eure", "Sizin"],
+                    ["sie (Onlar)", "ihr", "ihre", "Onların"],
+                    ["Sie (Siz - Resmi)", "Ihr", "Ihre", "Sizin (Resmi)"]
                 ]
             },
             examples: [
-                { de: "Mein Vater ist hier.", tr: "Babam burada." },
-                { de: "Ist das deine Tasche?", tr: "Bu senin çantan mı?" }
+                { de: "Mein Vater ist hier.", tr: "Babam (der Vater) burada." },
+                { de: "Meine Mutter kocht.", tr: "Annem (die Mutter) yemek pişiriyor." },
+                { de: "Ist das dein Buch?", tr: "Bu senin kitabın (das Buch) mı?" },
+                { de: "Seine Tasche ist neu.", tr: "Onun (erkek) çantası (die Tasche) yeni." },
+                { de: "Ihre Katze ist süß.", tr: "Onun (kadın) kedisi (die Katze) tatlı." },
+                { de: "Unser Haus ist groß.", tr: "Evimiz (das Haus) büyük." },
+                { de: "Wo sind eure Kinder?", tr: "Çocuklarınız (Plural) nerede?" },
+                { de: "Ihr Name ist Maria.", tr: "Sizin (Resmi) isminiz Maria." }
             ]
         }
     ],
     exercises: [
-        { question: "Das ist ___ (benim) Bruder.", options: ["mein", "meine", "meinen", "meiner"], correct: 0, explanation: "'Bruder' (der) olduğu için 'mein' kullanılır." },
-        { question: "Wo ist ___ (senin) Mutter?", options: ["dein", "deine", "deinen", "deiner"], correct: 1, explanation: "'Mutter' (die) olduğu için 'deine' kullanılır." },
-        { question: "Das ist ___ (onun - kadın) Buch.", options: ["ihr", "ihre", "sein", "seine"], correct: 0, explanation: "'Buch' (das) olduğu için 'ihr' kullanılır." },
-        { question: "___ (bizim) Haus ist groß.", options: ["unser", "unsere", "mein", "meine"], correct: 0, explanation: "'Haus' (das) olduğu için 'unser' kullanılır." },
-        { question: "Sind das ___ (senin) Kinder?", options: ["dein", "deine", "mein", "meine"], correct: 1, explanation: "Çoğul (Kinder) için 'deine' kullanılır." },
+        { question: "Das ist ___ (benim) Bruder.", options: ["mein", "meine", "meinen", "meiner"], correct: 0, explanation: "'Bruder' (der) olduğu için ve özne durumunda olduğu için 'mein' kullanılır." },
+        { question: "Wo ist ___ (senin) Mutter?", options: ["dein", "deine", "deinen", "deiner"], correct: 1, explanation: "'Mutter' (die) olduğu için sonuna '-e' gelir: 'deine'." },
+        { question: "Das ist ___ (onun - kadın) Buch.", options: ["ihr", "ihre", "sein", "seine"], correct: 0, explanation: "'Buch' (das) olduğu için ve sahibi 'kadın' olduğu için 'ihr' kullanılır." },
+        { question: "___ (bizim) Haus ist groß.", options: ["unser", "unsere", "mein", "meine"], correct: 0, explanation: "'Haus' (das) olduğu için ek almaz: 'unser'." },
+        { question: "Sind das ___ (senin) Kinder?", options: ["dein", "deine", "mein", "meine"], correct: 1, explanation: "Çoğul (Kinder) nesneler her zaman '-e' eki alır: 'deine'." },
         { question: "___ (onun - erkek) Auto ist neu.", options: ["sein", "seine", "ihr", "ihre"], correct: 0, explanation: "'Auto' (das) olduğu için 'sein' kullanılır." },
         { question: "Hier ist ___ (benim) Tasche.", options: ["mein", "meine", "meinen", "meiner"], correct: 1, explanation: "'Tasche' (die) olduğu için 'meine' kullanılır." },
         { question: "Wie heißt ___ (senin) Hund?", options: ["dein", "deine", "mein", "meine"], correct: 0, explanation: "'Hund' (der) olduğu için 'dein' kullanılır." },
-        { question: "___ (onların) Eltern sind alt.", options: ["ihr", "ihre", "unser", "unsere"], correct: 1, explanation: "Çoğul 'Eltern' için 'ihre' (onların - dişil/çoğul hali) kullanılır." },
-        { question: "___ (sizin - resmi) Name, bitte?", options: ["Ihr", "Ihre", "Mein", "Meine"], correct: 0, explanation: "Resmi 'Siz' için 'Ihr' kullanılır." }
+        { question: "___ (onların) Eltern sind alt.", options: ["ihr", "ihre", "unser", "unsere"], correct: 1, explanation: "Çoğul 'Eltern' için sonu '-e'li 'ihre' (onların) kullanılır." },
+        { question: "___ (sizin - resmi) Name, bitte?", options: ["Ihr", "Ihre", "Mein", "Meine"], correct: 0, explanation: "Resmi 'Siz' için 'Ihr' kullanılır (Der Name)." }
     ]
 };
 
@@ -160,41 +180,53 @@ const unit504Grammar: GermanGrammarUnit = {
     rules: [
         {
             id: "de-adj",
-            title: "1. Sıfatların Kullanımı",
-            explanation: "Sıfatlar bir ismi veya bir durumu nitelemek için kullanılır. 'sein' fiili ile kullanıldıklarında ek almazlar (özne-sıfat yapısı).",
+            title: "1. Sıfatların Cümle İçindeki Kullanımı",
+            explanation: "Almancada sıfatlar bir ismi veya bir durumu nitelemek için kullanılır. Eğer sıfat 'sein' (olmak) gibi bir fiilden sonra geliyorsa ve özneyi niteliyorsa, hiçbir ek almaz (Yalın halde kalır). \n\n**Örnek Yapı:** [Özne] + [Fiil] + [Sıfat]",
             examples: [
                 { de: "Der Baum ist groß.", tr: "Ağaç büyüktür." },
-                { de: "Das Auto ist schnell.", tr: "Araba hızlıdır." }
+                { de: "Das Auto ist schnell.", tr: "Araba hızlıdır." },
+                { de: "Die Blumen sind schön.", tr: "Çiçekler güzeldir." },
+                { de: "Ich bin müde.", tr: "Yorgunum." },
+                { de: "Du bist sehr klug.", tr: "Sen çok zekisin." }
             ]
         },
         {
             id: "de-adj-opposites",
-            title: "2. Zıt Sıfatlar",
+            title: "2. Sık Kullanılan Zıt Sıfatlar",
+            explanation: "Almancada sıfatları zıt anlamlılarıyla birlikte öğrenmek kelime dağarcığınızı hızla geliştirir. İşte günlük hayatta en çok karşınıza çıkacak olanlar:",
             table: {
-                headers: ["Sıfat", "Zıttı", "Türkçeleri"],
+                headers: ["Sıfat (Pozitif)", "Sıfat (Negatif)", "Türkçe Karşılıkları", "Örnek"],
                 rows: [
-                    ["groß", "klein", "büyük - küçük"],
-                    ["gut", "schlecht", "iyi - kötü"],
-                    ["neu", "alt", "yeni - eski"],
-                    ["teuer", "billig", "pahalı - ucuz"],
-                    ["hell", "dunkel", "aydınlık - karanlık"]
+                    ["groß (büyük)", "klein (küçük)", "Büyük - Küçük", "Der Elefant ist groß."],
+                    ["gut (iyi)", "schlecht (kötü)", "İyi - Kötü", "Das Essen ist gut."],
+                    ["neu (yeni)", "alt (eski/yaşlı)", "Yeni/Genç - Eski/Yaşlı", "Mein Handy ist neu."],
+                    ["teuer (pahalı)", "billig (ucuz)", "Pahalı - Ucuz", "Das Auto ist teuer."],
+                    ["hell (aydınlık)", "dunkel (karanlık)", "Aydınlık - Karanlık", "Das Zimmer ist hell."],
+                    ["schnell (hızlı)", "langsam (yavaş)", "Hızlı - Yavaş", "Der Zug ist schnell."],
+                    ["sauber (temiz)", "schmutzig (kirli)", "Temiz - Kirli", "Die Küche ist sauber."],
+                    ["heiß (sıcak)", "kalt (soğuk)", "Sıcak - Soğuk", "Der Kaffee ist heiß."]
                 ]
             },
-            explanation: "Sıfatlar zıt anlamlılarıyla öğrenilirse daha kalıcı olur.",
-            examples: []
+            examples: [
+                { de: "Mein Auto ist nicht neu, es ist alt.", tr: "Arabam yeni değil, eski." },
+                { de: "Das Hotel ist sehr teuer, aber das Zimmer ist groß.", tr: "Otel çok pahalı ama oda büyük." },
+                { de: "Ist das Wasser kalt veya warm?", tr: "Su soğuk mu yoksa ılık mı?" },
+                { de: "Der Film ist langweilig, ich bin müde.", tr: "Film sıkıcı, yorgunum." },
+                { de: "Die Straße ist schmutzig.", tr: "Cadde kirli." }
+            ]
         }
     ],
     exercises: [
-        { question: "Das Buch ist ___ (pahalı).", options: ["billig", "teuer", "klein", "alt"], correct: 1, explanation: "Teuer = Pahalı." },
-        { question: "Der Mann ist ___ (yaşlı).", options: ["jung", "alt", "neu", "groß"], correct: 1, explanation: "Alt = Yaşlı/Eski." },
+        { question: "Das Buch ist ___ (pahalı).", options: ["billig", "teuer", "klein", "alt"], correct: 1, explanation: "Teuer = Pahalı. Billig = Ucuz." },
+        { question: "Der Mann ist ___ (yaşlı).", options: ["jung", "alt", "neu", "groß"], correct: 1, explanation: "Alt = Yaşlı veya Eski anlamına gelir." },
         { question: "Mein Auto ist ___ (hızlı).", options: ["langsam", "schnell", "schmutzig", "kalt"], correct: 1, explanation: "Schnell = Hızlı." },
-        { question: "Die Wohnung ist ___ (aydınlık).", options: ["dunkel", "hell", "klein", "groß"], correct: 1, explanation: "Hell = Aydınlık." },
+        { question: "Die Wohnung ist ___ (aydınlık).", options: ["dunkel", "hell", "klein", "groß"], correct: 1, explanation: "Hell = Aydınlık / Işıklı." },
         { question: "Wasser ist ___ (soğuk).", options: ["heiß", "kalt", "warm", "süß"], correct: 1, explanation: "Kalt = Soğuk." },
-        { question: "Das Gegenteil von 'groß' ist ___.", options: ["alt", "klein", "gut", "teuer"], correct: 1, explanation: "Büyüğün zıttı küçüktür (klein)." },
-        { question: "Kaffee ist ___ (sıcak).", options: ["kalt", "heiß", "billig", "langsam"], correct: 1, explanation: "Heiß = Sıcak." },
-        { question: "Der Film ist ___ (sıkıcı).", options: ["interessant", "langweilig", "lustig", "kurz"], correct: 1, explanation: "Langweilig = Sıkıcı." },
-        { question: "Die Tasche ist ___ (hafif).", options: ["schwer", "leicht", "groß", "klein"], correct: 1, explanation: "Leicht = Hafif/Kolay." },
-        { question: "Das Gegenteil von 'teuer' ist ___.", options: ["billig", "neu", "hell", "kurz"], correct: 0, explanation: "Pahalının zıttı ucuştur (billig)." }
+        { question: "Das Gegenteil von 'groß' ist ___.", options: ["alt", "klein", "gut", "teuer"], correct: 1, explanation: "Büyüğün (groß) zıttı küçüktür (klein)." },
+        { question: "Kaffee ist ___ (sıcak).", options: ["kalt", "heiß", "billig", "langsam"], correct: 1, explanation: "Heiß = Çok sıcak." },
+        { question: "Der Film ist ___ (sıkıcı).", options: ["interessant", "langweilig", "lustig", "kurz"], correct: 1, explanation: "Langweilig = Sıkıcı. Interessant = İlginç." },
+        { question: "Die Tasche ist ___ (hafif).", options: ["schwer", "leicht", "groß", "klein"], correct: 1, explanation: "Leicht = Hem hafif hem kolay demektir." },
+        { question: "Das Gegenteil von 'teuer' ist ___.", options: ["billig", "neu", "hell", "kurz"], correct: 0, explanation: "Pahalının (teuer) zıttı ucuzdur (billig)." }
     ]
 };
 
@@ -206,37 +238,57 @@ const unit505Grammar: GermanGrammarUnit = {
         {
             id: "de-art-def",
             title: "1. Belirli Artikeller (Bestimmte Artikel)",
-            explanation: "Almancada her ismin bir cinsiyeti vardır. 'der' (eril), 'die' (dişil), 'das' (nötr). Çoğul isimlerin tamamı 'die' artikeli ile kullanılır.",
+            explanation: "Almancada her ismin bir cinsiyeti (cinsi) vardır. Bir ismi ilk defa değil de, bilinen veya daha önce bahsedilen bir nesneden bahsederken kullanıyorsak **'Bestimmte Artikel'** (Belirli Artikel) kullanırız. \n\n*   **Der:** Eril (erkek) cinsiyetli isimler için.\n*   **Die:** Dişil (kadın) cinsiyetli isimler için.\n*   **Das:** Nötr (cinsiyetsiz) isimler için.\n*   **Çoğul:** Tüm çoğul isimlerin artikeli her zaman **'die'** olur.",
             table: {
-                headers: ["Cinsiyet", "Belirli Artikel", "Belirsiz Artikel", "Olumsuz (kein)"],
+                headers: ["Cinsiyet (Genus)", "Belirli Artikel", "Örnek Kelime", "Türkçe Anlamı"],
                 rows: [
-                    ["Eril (Maskulin)", "der", "ein", "kein"],
-                    ["Nötr (Neutral)", "das", "ein", "kein"],
-                    ["Dişil (Feminin)", "die", "eine", "keine"],
-                    ["Çoğul (Plural)", "die", "-", "keine"]
+                    ["Eril (Maskulin)", "der", "der Mann", "adam"],
+                    ["Dişil (Feminin)", "die", "die Frau", "kadın"],
+                    ["Nötr (Neutral)", "das", "das Kind", "çocuk"],
+                    ["Çoğullar (Plural)", "die", "die Kinder", "çocuklar"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Der Hund ist im Garten.", tr: "Köpek (bilinen köpek) bahçededir." },
+                { de: "Die Sonne scheint.", tr: "Güneş parlıyor. (Güneş tektir ve bellidir)" },
+                { de: "Das Kind spielt im Park.", tr: "Çocuk parkta oynuyor." },
+                { de: "Die Kinder sind in der Schule.", tr: "Çocuklar okuldalar." },
+                { de: "Wo ist der Schlüssel?", tr: "Anahtar nerede? (Belirli bir anahtar)" },
+                { de: "Das Buch ist sehr interessant.", tr: "Kitap çok ilginç." }
+            ]
         },
         {
             id: "de-art-indef",
             title: "2. Belirsiz Artikeller (Unbestimmte Artikel)",
-            explanation: "Herhangi bir nesneden bahsederken kullanılır (Türkçedeki 'bir' kelimesi gibi). Çoğul isimlerin belirsiz artikeli yoktur.",
+            explanation: "Herhangi bir nesneden (bir masa, bir elma) bahsederken veya bir nesneyi ilk defa tanıtırken **'Unbestimmte Artikel'** (Belirsiz Artikel) kullanırız. \n\n**Dikkat:** Çoğul isimlerin belirsiz artikeli (birler) yoktur!",
+            table: {
+                headers: ["Cinsiyet", "Belirsiz Artikel", "Örnek", "Anlamı"],
+                rows: [
+                    ["Eril (der)", "ein", "ein Tisch", "bir masa"],
+                    ["Dişil (die)", "eine", "eine Lampe", "bir lamba"],
+                    ["Nötr (das)", "ein", "ein Buch", "bir kitap"],
+                    ["Çoğul (die)", "-", "Bücher", "kitaplar (belirsiz)"]
+                ]
+            },
             examples: [
                 { de: "Das ist ein Tisch.", tr: "Bu bir masadır. (Herhangi bir masa)" },
-                { de: "Der Tisch ist blau.", tr: "(O) masa mavidir. (Belirli bir masa)" }
+                { de: "Ich habe eine Schwester.", tr: "Bir kız kardeşim var." },
+                { de: "Hast du ein Handy?", tr: "Cep telefonun var mı?" },
+                { de: "Dort stehen Autos.", tr: "Orada arabalar duruyor. (Sayı belirtmeden belirsiz çoğul)" },
+                { de: "Ein Mann wartet draußen.", tr: "Dışarıda bir adam bekliyor." },
+                { de: "Ich esse einen Apfel.", tr: "Bir elma yiyorum. (Akkusativ: einen)" }
             ]
         }
     ],
     exercises: [
-        { question: "Das ist ___ Haus (das).", options: ["der", "die", "das", "ein"], correct: 2, explanation: "'Haus'un belirli artikeli 'das'tır." },
-        { question: "Ich habe ___ Apfel (der).", options: ["ein", "eine", "einer", "eines"], correct: 0, explanation: "Der ismin belirsiz artikeli 'ein'dır." },
+        { question: "Das ist ___ Haus (das).", options: ["der", "die", "das", "ein"], correct: 3, explanation: "Cümle tanıtım cümlesi (Bu bir...); Das Haus olduğu için 'ein' kullanılır." },
+        { question: "Ich habe ___ Apfel (der).", options: ["ein", "eine", "einer", "einen"], correct: 3, explanation: "Akkusativ yapısıdır; 'haben' fiili der -> den / ein -> einen yapar." },
         { question: "Das ist ___ Blume (die).", options: ["ein", "eine", "einer", "eines"], correct: 1, explanation: "Die ismin belirsiz artikeli 'eine'dır." },
         { question: "___ Kinder (plural) spielen.", options: ["Der", "Die", "Das", "Ein"], correct: 1, explanation: "Çoğulların belirli artikeli her zaman 'die'dır." },
-        { question: "İst das ___ (bir) Buch (das)?", options: ["ein", "eine", "einer", "das"], correct: 0, explanation: "Das ismin belirsiz artikeli 'ein'dır." },
-        { question: "___ Sonne (die) scheint.", options: ["Der", "Die", "Das", "Ein"], correct: 1, explanation: "Sonne (die) artikeline sahiptir." },
-        { question: "___ Hund (der) ist groß.", options: ["Der", "Die", "Das", "Ein"], correct: 0, explanation: "Hund (der) artikeline sahiptir." },
-        { question: "Das sind ___ (birkaç) Bücher (plural).", options: ["ein", "eine", "-", "keine"], correct: 2, explanation: "Almancada çoğul isimlerin önünde belirsiz artikel (bir) kullanılmaz." },
+        { question: "Ist das ___ (bir) Buch (das)?", options: ["ein", "eine", "einer", "das"], correct: 0, explanation: "Das ismin belirsiz artikeli 'ein'dır." },
+        { question: "___ Sonne (die) scheint.", options: ["Der", "Die", "Das", "Ein"], correct: 1, explanation: "Sonne tek ve belirgin olduğu için 'die Sonne' denir." },
+        { question: "___ Hund (der) ist groß.", options: ["Der", "Die", "Das", "Ein"], correct: 0, explanation: "Cümle başında belirli bir köpekten bahsedilir: 'Der Hund'." },
+        { question: "Das sind ___ (birkaç) Bücher (plural).", options: ["ein", "eine", "-", "keine"], correct: 2, explanation: "Çoğullarda 'bir' kelimesi (ein/eine) kullanılmaz." },
         { question: "Kayıp bir anahtar için hangisi söylenir? (Schlüssel - der)", options: ["Die Schlüssel", "Ein Schlüssel", "Eine Schlüssel", "Das Schlüssel"], correct: 1, explanation: "Eril isim belirsiz artikeli 'ein' alır." },
         { question: "Masadaki lamba için hangisi söylenir? (Lampe - die)", options: ["Der Lampe", "Das Lampe", "Die Lampe", "Ein Lampe"], correct: 2, explanation: "Belirli bir lamba için 'Die Lampe' kullanılır." }
     ]
@@ -249,34 +301,57 @@ const unit506Grammar: GermanGrammarUnit = {
     rules: [
         {
             id: "de-neg-kein",
-            title: "1. Kein Kullanımı",
-            explanation: "Önünde 'ein/eine' artikeli olan veya artikelsiz kullanılan isimleri olumsuz yapmak için 'kein/keine' kullanılır.",
+            title: "1. Kein Kullanımı (İsimleri Olumsuz Yapma)",
+            explanation: "**'Kein'** kelimesi, belirsiz artikeli (ein/eine) olan isimleri veya artikelsiz kullanılan isimleri olumsuz yapmak için kullanılır. Türkçedeki 'değil' veya 'hiç yok' anlamlarına gelir.\n\n**Önemli:** 'Kein', iyelik artikelleri gibi ismin cinsiyetine göre ek alır (kein, keine).",
+            table: {
+                headers: ["Cinsiyet", "Olumlu", "Olumsuz (Kein)", "Anlamı"],
+                rows: [
+                    ["Eril (der)", "ein Apfel", "kein Apfel", "elma değil / elma yok"],
+                    ["Dişil (die)", "eine Tasche", "keine Tasche", "çanta değil / çanta yok"],
+                    ["Nötr (das)", "ein Buch", "kein Buch", "kitap değil / kitap yok"],
+                    ["Çoğul (die)", "Bücher", "keine Bücher", "kitaplar değil / kitap yok"]
+                ]
+            },
             examples: [
                 { de: "Das ist ein Buch. -> Das ist kein Buch.", tr: "Bu bir kitap. -> Bu bir kitap değil." },
-                { de: "Ich habe Kinder. -> Ich habe keine Kinder.", tr: "Çocuklarım var. -> Çocuklarım yok." }
+                { de: "Benim çocuklarım yok.", tr: "Ich habe keine Kinder." },
+                { de: "Hast du ein Auto? Nein, ich habe kein Auto.", tr: "Araban var mı? Hayır, arabam yok." },
+                { de: "Das ist keine gute Idee.", tr: "Bu iyi bir fikir değil." }
             ]
         },
         {
             id: "de-neg-nicht",
-            title: "2. Nicht Kullanımı",
-            explanation: "Fiilleri, sıfatları, belirli isimleri veya tüm cümleyi olumsuz yapmak için 'nicht' kullanılır.",
+            title: "2. Nicht Kullanımı (Fiil, Sıfat ve Özel İsimler)",
+            explanation: "**'Nicht'** kelimesi, isimler dışındaki öğeleri olumsuz yapmak için kullanılır. Fiilleri, sıfatları, zarfları ve belirli isimleri (önünde 'der/die/das' olanlar) olumsuz yapar.",
+            table: {
+                headers: ["Kullanım Alanı", "Olumlu Cümle", "Olumsuz (Nicht)", "Anlamı"],
+                rows: [
+                    ["Fiil", "Ich lerne.", "Ich lerne nicht.", "Çalışmıyorum."],
+                    ["Sıfat", "Er ist groß.", "Er ist nicht groß.", "Büyük değil."],
+                    ["Belirli İsim", "Das ist der Schlüssel.", "Das ist nicht der Schlüssel.", "Anahtar bu değil."],
+                    ["Özel İsim", "Er ist Ali.", "Er ist nicht Ali.", "O Ali değil."]
+                ]
+            },
             examples: [
-                { de: "Ich lerne nicht.", tr: "Çalışmıyorum (öğrenmiyorum)." },
-                { de: "Der Baum ist nicht groß.", tr: "Ağaç büyük değil." }
+                { de: "Ich schlafe nicht.", tr: "Uyumuyorum." },
+                { de: "Der Kurs ist nicht teuer.", tr: "Kurs pahalı değil." },
+                { de: "Wir kommen heute nicht.", tr: "Bugün gelmiyoruz." },
+                { de: "Das Wetter ist nicht schön.", tr: "Hava güzel değil." },
+                { de: "Du bist nicht mein Freund.", tr: "Sen benim arkadaşım değilsin." }
             ]
         }
     ],
     exercises: [
-        { question: "Das ist ___ Auto.", options: ["nicht", "kein", "keine", "nichts"], correct: 1, explanation: "'Auto' (das) olduğu için 'kein' kullanılır." },
-        { question: "Ich komme ___.", options: ["nicht", "kein", "keine", "keiner"], correct: 0, explanation: "Fiili olumsuz yapmak için 'nicht' kullanılır." },
-        { question: "Er ist ___ nett.", options: ["kein", "keine", "nicht", "nichts"], correct: 2, explanation: "Sıfatı olumsuz yapmak için 'nicht' kullanılır." },
-        { question: "Ich habe ___ Zeit.", options: ["nicht", "kein", "keine", "nichts"], correct: 2, explanation: "'Zeit' (die) olduğu için 'keine' kullanılır." },
-        { question: "Das ist ___ (benim) Buch.", options: ["nicht mein", "kein mein", "meine değil", "nicht"], correct: 0, explanation: "İyelik artikelleri ile 'nicht' kullanılır." },
-        { question: "Wir essen ___.", options: ["kein", "keine", "nicht", "nichts"], correct: 2, explanation: "Eylemi olumsuz yapmak için 'nicht' kullanılır." },
-        { question: "Hast du Hunger? Nein, ___.", options: ["nicht", "keinen Hunger", "kein", "nichts"], correct: 1, explanation: "Hunger (der) olduğu için 'keinen' (Akkusativ) veya isimsiz 'nein' denir. En uygunu 'keinen Hunger'." },
-        { question: "Das ist ___ (bir) Blume.", options: ["nicht", "kein", "keine", "nichts"], correct: 2, explanation: "'Blume' (die) olduğu için 'keine' kullanılır." },
-        { question: "Sie trinkt ___ Wasser.", options: ["nicht", "kein", "keine", "nichts"], correct: 1, explanation: "Artikelsiz isimlerde 'kein' kullanılır." },
-        { question: "Das Buch ist ___ teuer.", options: ["kein", "nicht", "keine", "nichts"], correct: 1, explanation: "Sıfatları olumsuz yaparken 'nicht' kullanılır." }
+        { question: "Das ist ___ Auto (das).", options: ["nicht", "kein", "keine", "nichts"], correct: 1, explanation: "Önünde 'ein' gelebilecek tekil bir ismi olumsuz yaparken 'kein' kullanılır." },
+        { question: "Ich komme ___.", options: ["nicht", "kein", "keine", "keiner"], correct: 0, explanation: "Fiilleri olumsuz yapmak için 'nicht' kullanılır." },
+        { question: "Er ist ___ nett.", options: ["kein", "keine", "nicht", "nichts"], correct: 2, explanation: "Sıfatları (nett) olumsuz yapmak için 'nicht' kullanılır." },
+        { question: "Ich habe ___ Zeit (die).", options: ["nicht", "kein", "keine", "nichts"], correct: 2, explanation: "'Zeit' (die) ismi artikelsiz kullanıldığı için 'keine' ile olumsuzlanır." },
+        { question: "Das ist ___ (benim) Buch.", options: ["nicht mein", "kein mein", "meine değil", "nicht"], correct: 0, explanation: "İyelik artikelleri (mein, dein...) 'nicht' ile olumsuzlanır." },
+        { question: "Wir essen ___.", options: ["kein", "keine", "nicht", "nichts"], correct: 2, explanation: "Eylemi (fiili) olumsuz yapmak için 'nicht' kullanılır." },
+        { question: "Hast du Hunger? Nein, ___.", options: ["nicht", "keinen Hunger", "kein", "nichts"], correct: 1, explanation: "Hunger (der) ismi için 'keinen' kullanılır (Akkusativ)." },
+        { question: "Das ist ___ (bir) Blume (die).", options: ["nicht", "kein", "keine", "nichts"], correct: 2, explanation: "'Blume' dişil bir isimdir, 'keine' kullanılır." },
+        { question: "Sie trinkt ___ Wasser.", options: ["nicht", "kein", "keine", "nichts"], correct: 1, explanation: "Artikelsiz (belirsiz) isimlerde 'kein' kullanılır." },
+        { question: "Das Buch ist ___ teuer.", options: ["kein", "nicht", "keine", "nichts"], correct: 1, explanation: "Sıfatları (teuer) olumsuz yaparken 'nicht' kullanılır." }
     ]
 };
 
@@ -287,17 +362,30 @@ const unit507Grammar: GermanGrammarUnit = {
     rules: [
         {
             id: "de-prep-time",
-            title: "1. Zaman Bildiren Edatlar",
-            explanation: "Almancada zaman ifadelerinin önüne belirli edatlar gelir. Hangi zaman diliminden bahsettiğimize göre edat değişir.\n\n**İstisna:** 'gece' ifadesi 'in der Nacht' şeklinde kullanılır.",
+            title: "1. Zaman Bildiren Temel Edatlar",
+            explanation: "Almancada zaman ifadelerinin (günler, saatler, aylar) önüne belirli edatlar gelir. Hangi zaman diliminden bahsettiğimize göre doğru edatı seçmek cümle doğruluğu için çok önemlidir. \n\n**Önemli İpucu:**\n*   **am:** Günler ve günün bölümleri için.\n*   **um:** Kesin nokta saatler için.\n*   **im:** Aylar, mevsimler ve yıllar (isteğe bağlı) için kullanılır.",
             table: {
-                headers: ["Edat", "Kullanım Alanı", "Örnek"],
+                headers: ["Edat", "Kullanım Alanı", "Almanca Örnek", "Türkçe Anlamı"],
                 rows: [
-                    ["am", "Günler ve Günün bölümleri", "am Montag, am Morgen"],
-                    ["um", "Saatler", "um 8 Uhr"],
-                    ["im", "Aylar ve Mevsimler", "im Januar, im Sommer"]
+                    ["am (an + dem)", "Haftanın günleri", "am Montag", "Pazartesi günü"],
+                    ["am", "Günün bölümleri", "am Morgen / am Abend", "Sabahleyin / Akşamleyin"],
+                    ["am", "Tarihler", "am 1. Mai", "1 Mayıs'ta"],
+                    ["um", "Kesin saatler", "um 8:30 Uhr", "Saat 8:30'da"],
+                    ["im (in + dem)", "Aylar", "im Januar / im Juli", "Ocak ayında / Temmuz'da"],
+                    ["im", "Mevsimler", "im Sommer / im Winter", "Yazın / Kışın"],
+                    ["im", "Yıllar (isteğe bağlı)", "im Jahr 2024", "2024 yılında"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Am Montag habe ich frei.", tr: "Pazartesi günü boşum (izniyim)." },
+                { de: "Der Kurs beginnt um 9:00 Uhr.", tr: "Kurs saat 9:00'da başlıyor." },
+                { de: "Im Winter ist es oft sehr kalt.", tr: "Kışın hava sıkça çok soğuk olur." },
+                { de: "Am Abend sehen wir fern.", tr: "Akşamleyin televizyon izliyoruz." },
+                { de: "Mein Geburtstag ist im August.", tr: "Doğum günüm Ağustos ayında." },
+                { de: "Wir treffen uns um halb acht.", tr: "Yedi buçukta buluşuyoruz." },
+                { de: "Im Sommer fahren wir ans Meer.", tr: "Yazın denize gidiyoruz." },
+                { de: "Am 15. Juni haben wir eine Prüfung.", tr: "15 Haziran'da bir sınavımız var." }
+            ]
         }
     ],
     exercises: [
@@ -306,10 +394,10 @@ const unit507Grammar: GermanGrammarUnit = {
         { question: "Wir fahren ___ Sommer.", options: ["am", "um", "im", "in"], correct: 2, explanation: "Mevsimler için 'im' kullanılır." },
         { question: "Mein Geburtstag ist ___ März.", options: ["am", "um", "im", "in"], correct: 2, explanation: "Aylar için 'im' kullanılır." },
         { question: "___ Abend bin ich zu Hause.", options: ["Am", "Um", "Im", "In"], correct: 0, explanation: "Günün bölümleri (istisnalar hariç) 'am' alır." },
-        { question: "Es ist ___ Mitternacht.", options: ["am", "um", "im", "in"], correct: 1, explanation: "Gece yarısı (saat bazlı) 'um' ile kullanılır." },
+        { question: "Es ist ___ Mitternacht.", options: ["am", "um", "im", "in"], correct: 1, explanation: "Gece yarısı (saat bazlı bir nokta) 'um' ile kullanılır." },
         { question: "___ Vormittag arbeite ich.", options: ["Am", "Um", "Im", "In"], correct: 0, explanation: "Günün bölümleri için 'am' kullanılır." },
         { question: "Das Fest ist ___ Dezember.", options: ["am", "um", "im", "in"], correct: 2, explanation: "Aylar için 'im' kullanılır." },
-        { question: "___ Wochenende habe ich frei.", options: ["Am", "Um", "Im", "In"], correct: 0, explanation: "Hafta sonu için 'am' kullanılır." },
+        { question: "___ Wochenende habe ich frei.", options: ["Am", "Um", "Im", "In"], correct: 0, explanation: "Hafta sonu (Wochenende) için 'am' kullanılır." },
         { question: "Der Kurs beginnt ___ 9:00.", options: ["am", "um", "im", "in"], correct: 1, explanation: "Kesin saatler için 'um' kullanılır." }
     ]
 };
@@ -333,7 +421,10 @@ const unit508Grammar: GermanGrammarUnit = {
                     ["(değişmez)", "Bazı -er, -el, -en bitenler", "der Lehrer -> die Lehrer"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Drei Kinder spielen im Park.", tr: "Üç çocuk parkta oynuyor." },
+                { de: "Ich habe zwei Autos.", tr: "İki arabam var." }
+            ]
         }
     ],
     exercises: [
@@ -367,7 +458,10 @@ const unit509Grammar: GermanGrammarUnit = {
                     ["Wir", "wohnen", "in Berlin."]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Morgen komme ich zu dir.", tr: "Yarın sana geleceğim." },
+                { de: "Ich trinke jetzt einen Tee.", tr: "Şimdi bir çay içiyorum." }
+            ]
         }
     ],
     exercises: [
@@ -403,7 +497,11 @@ const unit510Grammar: GermanGrammarUnit = {
                     ["Wohin", "Nereye?", "Wohin gehst du?"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Wer ist das?", tr: "Bu kim?" },
+                { de: "Wo wohnst du?", tr: "Nerede yaşıyorsun?" },
+                { de: "Was machst du?", tr: "Ne yapıyorsun?" }
+            ]
         },
         {
             id: "de-ja-nein-questions",
@@ -448,7 +546,10 @@ const unit511Grammar: GermanGrammarUnit = {
                     ["der Fuß", "Ayak", "die Füße"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Meine Hände sind kalt.", tr: "Ellerim soğuk." },
+                { de: "Seine Beine sind lang.", tr: "Onun bacakları uzun." }
+            ]
         },
         {
             id: "de-pain",
@@ -493,7 +594,10 @@ const unit512Grammar: GermanGrammarUnit = {
                     ["breit", "schmal", "geniş - dar"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Der Mann ist sehr stark.", tr: "Adam çok güçlü." },
+                { de: "Das Zimmer ist sauber.", tr: "Oda temiz." }
+            ]
         },
         {
             id: "de-sehr-zu",
@@ -578,7 +682,10 @@ const unit514Grammar: GermanGrammarUnit = {
                     ["der Koch", "die Köchin", "Aşçı"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Mein Vater ist Arzt.", tr: "Babam doktordur." },
+                { de: "Meine Mutter ist Lehrerin.", tr: "Annem öğretmendir." }
+            ]
         },
         {
             id: "de-job-prep",
@@ -622,7 +729,10 @@ const unit515Grammar: GermanGrammarUnit = {
                     ["zu", "Ev (orada)", "zu Hause (Dikkat: Bu 'evde' demektir)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Nach dem Essen gehe ich nach Hause.", tr: "Yemekten sonra eve gidiyorum." },
+                { de: "Ich fahre morgen nach Deutschland.", tr: "Yarın Almanya'ya gidiyorum." }
+            ]
         }
     ],
     exercises: [
@@ -658,7 +768,10 @@ const unit516Grammar: GermanGrammarUnit = {
                     ["das Fahrrad", "mit dem Fahrrad", "Bisikletle"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich fahre mit dem Zug.", tr: "Trenle gidiyorum." },
+                { de: "Kommst du mit dem Auto?", tr: "Arabayla mı geliyorsun?" }
+            ]
         }
     ],
     exercises: [
@@ -701,7 +814,10 @@ const unit517Grammar: GermanGrammarUnit = {
                     ["mitkommen", "Birlikte gelmek", "Kommst du mit?"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Kaufst du heute ein?", tr: "Bugün alışveriş yapar mısın?" },
+                { de: "Ruf mich am Abend an!", tr: "Beni akşam ara!" }
+            ]
         }
     ],
     exercises: [
@@ -736,7 +852,10 @@ const unit518Grammar: GermanGrammarUnit = {
                     ["8:45", "Viertel vor neun", "Dokuza çeyrek var"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Es ist genau acht Uhr.", tr: "Saat tam sekiz." },
+                { de: "Es ist halb eins.", tr: "Saat yarım (on iki buçuk)." }
+            ]
         }
     ],
     exercises: [
@@ -771,7 +890,10 @@ const unit519Grammar: GermanGrammarUnit = {
                     ["es ist + sıfat", "es ist windig", "Rüzgarlı"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Heute regnet es stark.", tr: "Bugün kuvvetli yağmur yağıyor." },
+                { de: "Morgen wird es sonnig.", tr: "Yarın hava güneşli olacak." }
+            ]
         }
     ],
     exercises: [
@@ -816,7 +938,10 @@ const unit520Grammar: GermanGrammarUnit = {
                     ["reisen", "seyahat etmek"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich wandere gern in den Bergen.", tr: "Dağlarda yürüyüş yapmayı severim." },
+                { de: "Tanzt du gern?", tr: "Dans etmeyi sever misin?" }
+            ]
         }
     ],
     exercises: [
@@ -1043,7 +1168,10 @@ const unit526Grammar: GermanGrammarUnit = {
                     ["von", "-den/-dan / -in", "von dem (vom) Vater"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich fahre mit meiner Schwester.", tr: "Kız kardeşimle gidiyorum." },
+                { de: "Sie wohnt seit einem Jahr in Berlin.", tr: "O bir yıldır Berlin'de yaşıyor." }
+            ]
         }
     ],
     exercises: [
@@ -1151,7 +1279,10 @@ const unit529Grammar: GermanGrammarUnit = {
                     ["hören", "hör", "gehört"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Wir haben Fußball gespielt.", tr: "Futbol oynadık." },
+                { de: "Hast du Musik gehört?", tr: "Müzik dinledin mi?" }
+            ]
         }
     ],
     exercises: [
@@ -1187,7 +1318,10 @@ const unit530Grammar: GermanGrammarUnit = {
                     ["sehen", "görmek", "gesehen (H.F: haben)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich bin ins Kino gegangen.", tr: "Sinemaya gittim." },
+                { de: "Hast du die Pizza gegessen?", tr: "Pizzayı yedin mi?" }
+            ]
         }
     ],
     exercises: [
