@@ -5,8 +5,7 @@ import { Bot, Send, User, Sparkles, ArrowLeft, BookOpen, MessageCircle, Mic, Mic
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { createLunaReply } from "@/lib/luna-offline";
-import { type ChatMessage } from "@/lib/ai";
+import { createLunaReply, type ChatMessage } from "@/lib/luna-offline";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useSpeech } from "@/lib/use-speech";

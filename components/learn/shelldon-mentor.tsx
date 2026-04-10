@@ -79,7 +79,7 @@ export const ShelldonMentor = () => {
 
                         <div className="flex items-center gap-2 mb-3 text-indigo-600">
                             <Sparkles className="w-4 h-4 fill-current" />
-                            <span className="text-[10px] font-black uppercase tracking-widest">Canlı Shelldon AI</span>
+                            <span className="text-[10px] font-black uppercase tracking-widest">Shelldon Mentor</span>
                         </div>
 
                         <div className="min-h-[60px] mb-4">

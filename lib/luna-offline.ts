@@ -8,6 +8,11 @@
 type SupportedLang = "es" | "en" | "fr" | "de";
 type Topic = "greeting" | "grammar" | "vocabulary" | "correction" | "scenario" | "general";
 
+export interface ChatMessage {
+    role: 'user' | 'assistant' | 'system';
+    content: string;
+}
+
 export interface LunaOfflineReply {
     success: boolean;
     message: string;

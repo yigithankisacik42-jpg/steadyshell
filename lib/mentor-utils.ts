@@ -63,43 +63,40 @@ export const getShelldonAIResponse = async (
     currentLanguageState: { name: string; level: string },
     userMessage: string
 ): Promise<string> => {
-    try {
-        const systemPrompt = `
-            Sen Shelldon adında yardımsever, bilge ve neşeli bir kaplumbağa mentorsun. 
-            Kullanıcının dil öğrenme yolculuğuna eşlik ediyorsun.
-            
-            KULLANICI VERİLERİ:
-            - İsim: ${user.name}
-            - Seviye: ${currentLanguageState.level}
-            - Öğrenilen Dil: ${currentLanguageState.name}
-            - Toplam XP: ${user.totalXp}
-            - Günlük Seri (Streak): ${user.streak}
-            
-            KURALLAR:
-            1. Daima Türkçe konuş.
-            2. Cevapların kısa, öz ve motive edici olsun (Maksimum 3 cümle).
-            3. Bilge ve sabırlı kaplumbağa kişiliğini yansıt (yavaş ama emin adımlarla ilerlemekten bahset, 'dostum' veya 'şampiyon' diye hitap et).
-            4. Eğer teknik bir soru sorulursa (dil bilgisi vb.), basitçe kolayıyla anlat.
-            5. SteadyShell'in reklam yüzü ve baş mentoru olduğunu unutma.
-            6. Asla kaba olma.
-        `;
+    // 100% Offline Static Response System for the Mentor Bubble
+    const txt = userMessage.toLowerCase();
 
-        const response = await fetch('/api/chat', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                messages: [
-                    { role: 'system', content: systemPrompt },
-                    { role: 'user', content: userMessage }
-                ]
-            })
-        });
-
-        if (!response.ok) throw new Error("AI API hatası");
-        const data = await response.json();
-        return data.choices[0].message.content;
-    } catch (error) {
-        console.error("Shelldon AI Error:", error);
-        return "Şu an biraz dinleniyorum dostum, ama dil öğrenmeye devam etmeni öneririm! 💪";
+    // Intent/Keyword based response logic
+    if (txt.includes("merhaba") || txt.includes("selam")) {
+        return `Merhaba şampiyon! 🌟 Harika görünüyorsun. ${currentLanguageState.name} öğrenmende bugün sana nasıl yardımcı olabilirim?`;
     }
+
+    if (txt.includes("zor") || txt.includes("yapamıyorum") || txt.includes("sıkıldım")) {
+        return `Hey dostum, derin bir nefes al! Bazen konular zorlayabilir ama unutma, yavaş ve emin adımlarla ilerlemek en iyisidir. Ben buradayım! 🐢💪`;
+    }
+
+    if (txt.includes("nasıl") || txt.includes("tavsiye") || txt.includes("ipucu")) {
+        return `Günde sadece 10 dakika pratik yapmak, o dili hayatının bir parçası haline getirir. ⏳ Küçük testler çözerek hafızanı taze tutmalısın!`;
+    }
+
+    if (txt.includes("ilerle") || txt.includes("seviye") || txt.includes("xp")) {
+        return `Şu an ${currentLanguageState.level} seviyesindesin ve tam ${user.totalXp} XP kazandın! 🔥 Çizgini (${user.streak} gün) bozmadan devam et!`;
+    }
+
+    if (txt.includes("teşekkür")) {
+        return `Rica ederim dostum! Bir kaplumbağa her zaman yardım için buradadır. Başka sorun olursa çekinme. 🐢✨`;
+    }
+
+    // Default Fallbacks
+    const fallbacks = [
+        `Çok iyi dedin dostum! Eğitim ekranından bir ders seçerek hemen pratik yapabilirsin. 📚`,
+        `Bu çok ilginç! Ben daha çok gramer ve kelime ezberleme konularında ustayım. Hemen bir kategori seçip deneyelim mi? 🐢🚀`,
+        `Hımm, anladım. Bugün yeni bir kelime grubu öğrenmeye ne dersin? "Kelime" modunu mutlaka dene! 🌟`,
+        `Kapabildiğin kadar kelime kap şampiyon! Her hata, mükemmelliğe giden yolda bir adımdır. 💪`
+    ];
+
+    // Simulate thinking delay to preserve mentor feeling (but zero cost!)
+    await new Promise(resolve => setTimeout(resolve, 800));
+
+    return fallbacks[Math.floor(Math.random() * fallbacks.length)];
 };
