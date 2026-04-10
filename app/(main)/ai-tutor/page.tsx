@@ -5,10 +5,10 @@ import { Bot, Send, User, Sparkles, ArrowLeft, BookOpen, MessageCircle, Mic, Mic
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { sendMessageToAI, type ChatMessage, type AIMode } from "@/lib/ai";
+import { createLunaReply } from "@/lib/luna-offline";
+import { type ChatMessage } from "@/lib/ai";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useUserProgress } from "@/contexts/user-progress-context";
-import { useNetworkStatus } from "@/lib/use-network-status";
 import { useSpeech } from "@/lib/use-speech";
 import { cn } from "@/lib/utils";
 
@@ -46,13 +46,12 @@ export default function AITutorPage() {
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [userLevel, setUserLevel] = useState("A1");
-    const [currentMode, setCurrentMode] = useState<AIMode>("casual");
+    const [currentMode, setCurrentMode] = useState<string>("casual");
     const [lunaMood, setLunaMood] = useState<"default" | "happy" | "thinking" | "correcting">("default");
     const [discoveredWords, setDiscoveredWords] = useState<{word: string, translation: string}[]>([]);
     const [selectedLang, setSelectedLang] = useState(currentLanguage?.code || 'es');
     const [hasStarted, setHasStarted] = useState(false);
     const { addXp } = useUserProgress();
-    const { isOnline } = useNetworkStatus();
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     // Ses özellikleri
@@ -96,7 +95,7 @@ export default function AITutorPage() {
         setLunaMood("thinking");
         setHasStarted(true);
 
-        const response = await sendMessageToAI([...messages, userMessage], selectedLang, userLevel, currentMode);
+        const response = createLunaReply(messageText, selectedLang, userLevel, currentMode);
 
         if (response.success) {
             const aiMessage: ChatMessage = { role: 'assistant', content: response.message };
@@ -187,7 +186,7 @@ export default function AITutorPage() {
                                 </span>
                             </h1>
                             <p className="text-xs font-medium text-slate-400">
-                                {LANGUAGES.find(l => l.code === selectedLang)?.name} • {isOnline ? "Çevrimiçi" : "Çevrimdışı"}
+                                {LANGUAGES.find(l => l.code === selectedLang)?.name} • "Çevrimdışı Mod ✨"
                             </p>
                         </div>
                     </div>
@@ -199,13 +198,12 @@ export default function AITutorPage() {
                         <MessageCircle className="w-4 h-4 text-indigo-500" />
                         <select
                             value={currentMode}
-                            onChange={(e) => setCurrentMode(e.target.value as AIMode)}
+                            onChange={(e) => setCurrentMode(e.target.value)}
                             className="bg-transparent text-sm font-bold text-slate-600 outline-none cursor-pointer"
                         >
                             <option value="casual">Sohbet</option>
                             <option value="scenario">Senaryo</option>
                             <option value="grammar">Dilbilgisi</option>
-                            <option value="general">Sınırsız AI</option>
                         </select>
                     </div>
 
@@ -380,19 +378,13 @@ export default function AITutorPage() {
 
                     <div className="bg-white p-2 rounded-[24px] shadow-2xl shadow-indigo-500/10 border border-slate-100 flex items-center gap-2 relative">
                         <div className="flex-1 relative">
-                            {!isOnline && (
-                                <div className="absolute inset-0 bg-slate-50/90 backdrop-blur-sm z-10 flex items-center justify-center rounded-2xl">
-                                    <span className="text-xs font-bold text-amber-600 flex items-center gap-1">
-                                        ⚠️ İnternet kapalıyken Luna sohbet edemez.
-                                    </span>
-                                </div>
-                            )}
+    
                             <Input
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyPress={handleKeyPress}
                                 placeholder={isListening ? "Dinleniyor..." : "Mesajınızı yazın..."}
-                                disabled={isLoading || isListening || !isOnline}
+                                disabled={isLoading || isListening}
                                 className={cn(
                                     "border-none shadow-none focus-visible:ring-0 bg-transparent h-12 pl-4 pr-4 font-medium text-slate-700 placeholder:text-slate-400",
                                     isListening && "placeholder:text-indigo-500"
@@ -421,7 +413,7 @@ export default function AITutorPage() {
                             <Button
                                 size="icon"
                                 onClick={() => handleSendMessage()}
-                                disabled={!inputValue.trim() || isLoading || !isOnline}
+                                disabled={!inputValue.trim() || isLoading}
                                 className="h-10 w-10 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-lg shadow-indigo-500/30 one-click-scale disabled:opacity-50"
                             >
                                 <Send className="w-5 h-5 ml-0.5" />

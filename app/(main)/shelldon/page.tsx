@@ -8,7 +8,8 @@ import { cn } from "@/lib/utils";
 import { ShelldonAvatar, type ShelldonState } from "@/components/shelldon-avatar";
 
 import { Scene3D } from "@/components/scene-3d";
-import { SHELLDON_SCENARIOS, buildShelldonPrompt, buildFeedbackPrompt, buildHintPrompt, type ShelldonScenario, type ShelldonPracticeMode } from "@/lib/shelldon-ai";
+import { SHELLDON_SCENARIOS, type ShelldonScenario, type ShelldonPracticeMode } from "@/lib/shelldon-ai";
+import { createShelldonIntro, createShelldonReply, createShelldonFeedback, createShelldonHint, getEmojiGame } from "@/lib/shelldon-offline";
 import { useSpeech } from "@/lib/use-speech";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -228,15 +229,7 @@ export default function ShelldonPage() {
         return "Mini hedef: Bir sonraki seans daha uzun cümleler kur.";
     }, [selectedScenario, completedObjectives, selectedLang, currentLanguage]);
 
-    // === MEMORY LOAD ===
-    useEffect(() => {
-        fetch('/api/memory')
-            .then(r => r.json())
-            .then(data => {
-                if (!data.error) setUserMemory(data);
-            })
-            .catch(console.error);
-    }, []);
+    // === MEMORY LOAD (REMOVED - offline mode) ===
 
     useEffect(() => {
         if (!isSpeaking && (shelldonState === "speaking" || shelldonState === "happy" || shelldonState === "surprised")) {
@@ -259,7 +252,7 @@ export default function ShelldonPage() {
         }
     }, [messages, currentBubbleText]);
 
-    // === SAHNE BAŞLAT ===
+    // === SAHNE BAŞLAT (OFFLINE) ===
     const startScenario = async (scenario: ShelldonScenario) => {
         setSelectedScenario(scenario);
         setIsInChat(true);
@@ -274,61 +267,19 @@ export default function ShelldonPage() {
         setSessionGoal(null);
         setRepeatQueue([]);
 
-        try {
-            const langCode = selectedLang || currentLanguage?.code || "de";
-            const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
-            const lessonContext = buildLessonContext(langCode, levelCode);
-            const systemPrompt = buildShelldonPrompt(langCode, levelCode, scenario, userStats || undefined, dailyStats, lessonContext, practiceMode);
-            const response = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    model: "llama-3.3-70b-versatile",
-                    messages: [
-                        { role: "system", content: systemPrompt },
-                        { role: "user", content: "Sahneyi başlat. Beni senaryoya uygun şekilde karşıla." },
-                    ],
-                }),
-            });
+        const langCode = selectedLang || currentLanguage?.code || "de";
 
-            if (!response.ok) {
-                setCurrentBubbleText("⚠️ Bir hata oluştu. Tekrar deneyelim!");
-                setShelldonState("idle");
-                return;
-            }
-
-            const data = await response.json();
-            const raw = data.choices?.[0]?.message?.content || "";
-            let aiMessage = "Merhaba! 🐢";
-            let aiMood: ShelldonState = "speaking";
-            
-            // Try parsing JSON response
-            try {
-                const cleanJson = raw.replace(/```json?\n?/g, "").replace(/```/g, "").trim();
-                const parsed = JSON.parse(cleanJson);
-                if (parsed.message) aiMessage = parsed.message;
-                if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
-                    setCompletedObjectives(parsed.completedObjectives);
-                }
-                if (parsed.mood) aiMood = (parsed.mood.toLowerCase() === "neutral" ? "speaking" : parsed.mood.toLowerCase()) as ShelldonState;
-
-            } catch (e) {
-                aiMessage = raw;
-            }
-
-            setMessages([{ role: "assistant", content: aiMessage }]);
-            setCurrentBubbleText(aiMessage);
-            setShelldonState(aiMood);
-            speak(aiMessage);
-        } catch {
-            setCurrentBubbleText("⚠️ Bağlantı hatası. İnternet bağlantını kontrol et!");
-            setShelldonState("idle");
-        } finally {
-            setIsLoading(false);
-        }
+        // Offline intro — no API call
+        const intro = createShelldonIntro(scenario, langCode, progress[langCode]?.currentLevel || currentLevel?.code || "A1");
+        
+        setMessages([{ role: "assistant", content: intro.message }]);
+        setCurrentBubbleText(intro.message);
+        setShelldonState(intro.mood as ShelldonState);
+        speak(intro.message);
+        setIsLoading(false);
     };
 
-    // === MESAJ GÖNDER ===
+    // === MESAJ GÖNDER (OFFLINE) ===
     const handleSendMessage = async (text?: string) => {
         const messageText = text || inputValue.trim();
         if (!messageText || isLoading || !selectedScenario) return;
@@ -340,9 +291,6 @@ export default function ShelldonPage() {
         setIsLoading(true);
 
         // --- COMMAND INTERCEPTION ---
-        let isSystemCommand = false;
-        let commandPrompt = "";
-        
         if (messageText.startsWith("/clear")) {
             setMessages([]);
             setTurnCount(0);
@@ -350,175 +298,76 @@ export default function ShelldonPage() {
             setIsLoading(false);
             setShelldonState("idle");
             return;
-        } else if (messageText.startsWith("/roleplay")) {
-            const role = messageText.replace("/roleplay", "").trim();
-            if (!role) {
-                setCurrentBubbleText("⚠️ Lütfen '/roleplay [rol]' şeklinde bir rol belirt. Örn: /roleplay polis");
-                setIsLoading(false);
-                setShelldonState("idle");
-                return;
-            }
-            isSystemCommand = true;
-            commandPrompt = `Şu andan itibaren senaryomuzu koruyarak, karakterini DEĞİŞTİRİYORSUN. Artık kesinlikle bir "${role}" olarak davranmalısın. Konuşma tarzını, üslubunu ve kelimelerini tamamen bu yeni role uydur. Sadece hedef dilde konuşmaya devam et. Lütfen bu yeni role girerek bana hemen bir şeyler söyle.`;
         } else if (messageText.startsWith("/game")) {
-            isSystemCommand = true;
-            commandPrompt = `Hadi kelime oyunu oynayalım! Bana arka arkaya aralarında boşluk olan 5 tane rastgele (günlük eşya, hayvan veya yiyecek) emojisi gönder. Sadece emojiler olsun, yazı veya açıklama yazma. Ben de bu emojilerin hedef dildeki isimlerini sırayla bilmeye çalışacağım. Başla!`;
+            const langCode = selectedLang || currentLanguage?.code || "de";
+            const emojis = getEmojiGame(langCode, Date.now());
+            const aiMsg: Message = { role: "assistant", content: emojis };
+            setMessages(prev => [...prev, { role: "user", content: messageText }, aiMsg]);
+            setCurrentBubbleText(emojis);
+            setShelldonState("happy");
+            setIsLoading(false);
+            return;
         }
 
-        const userMsg: Message = { role: "user", content: messageText, imageUrl: selectedImage || undefined };
+        const userMsg: Message = { role: "user", content: messageText };
         const updatedMessages = [...messages, userMsg];
         setMessages(updatedMessages);
         setTurnCount((t) => t + 1);
-        
-        const attachedImage = selectedImage;
-        setSelectedImage(null);
 
-        try {
-            const langCode = selectedLang || currentLanguage?.code || "de";
-            const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
-            const lessonContext = buildLessonContext(langCode, levelCode);
-            let systemPrompt = buildShelldonPrompt(langCode, levelCode, selectedScenario, userStats || undefined, dailyStats, lessonContext, practiceMode);
-            
-            if (userMemory && !isSystemCommand) {
-                const details = [];
-                if (userMemory.hobbies) details.push(`- Hobiler: ${userMemory.hobbies}`);
-                if (userMemory.weaknesses) details.push(`- Zayıf Yönler/Hatalar: ${userMemory.weaknesses}`);
-                if (userMemory.profession) details.push(`- Meslek/Eğitim: ${userMemory.profession}`);
-                if (userMemory.goals) details.push(`- Hedefler: ${userMemory.goals}`);
-                if (userMemory.notes) details.push(`- Genel Notların: ${userMemory.notes}`);
-                
-                if (details.length > 0) {
-                    systemPrompt += `\n\n--- KULLANICI HAFIZASI (MEMORY) ---\nÖnceki sohbetlerden kullanıcı hakkında öğrendiklerin:\n${details.join("\n")}\nBu bilgileri yeri geldiğinde çok doğal ve samimi bir şekilde sohbete kat, onu hatırladığını hissettir.`;
-                }
-            }
-            
-            const apiMessages = [
-                { role: "system", content: systemPrompt },
-                ...messages.map((m) => {
-                    if (m.imageUrl) {
-                        return {
-                            role: m.role,
-                            content: [
-                                { type: "text", text: m.content },
-                                { type: "image_url", image_url: { url: m.imageUrl } }
-                            ]
-                        };
-                    }
-                    return { role: m.role, content: m.content };
-                }),
-                { 
-                    role: "user", 
-                    content: attachedImage ? [
-                        { type: "text", text: isSystemCommand ? commandPrompt : messageText },
-                        { type: "image_url", image_url: { url: attachedImage } }
-                    ] : (isSystemCommand ? commandPrompt : messageText) 
-                }
-            ];
+        // Offline reply — no API call
+        const langCode = selectedLang || currentLanguage?.code || "de";
+        const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
 
-            const response = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    model: attachedImage ? "llama-3.2-11b-vision-preview" : "llama-3.3-70b-versatile",
-                    messages: apiMessages,
-                }),
+        const reply = createShelldonReply({
+            scenario: selectedScenario,
+            language: langCode,
+            level: levelCode,
+            userMessage: messageText,
+            messages: updatedMessages.map(m => ({ role: m.role, content: m.content })),
+            turnIndex: turnCount,
+            completedObjectives,
+            practiceMode,
+        });
+
+        // Handle corrections
+        const corrections: Correction[] = reply.correction ? [reply.correction] : [];
+        if (corrections.length > 0) {
+            setRepeatQueue((prev) => {
+                const next = [...prev];
+                corrections.forEach((corr) => {
+                    const phrase = corr.right.trim();
+                    if (!phrase) return;
+                    if (!next.includes(phrase)) next.push(phrase);
+                });
+                return next.slice(-5);
             });
 
-            if (!response.ok) {
-                setCurrentBubbleText("Hmm, anlayamadım. Tekrar söyler misin? 🐢");
-                setShelldonState("idle");
-                setIsLoading(false);
-                return;
-            }
-
-            const data = await response.json();
-            const raw = data.choices?.[0]?.message?.content || "";
-            let aiMessage = "Devam edelim!";
-            let aiMood: ShelldonState = "speaking";
-            let newCompletedObj: number[] = [];
-            let correction: Correction | null = null;
-
-            try {
-                const cleanJson = raw.replace(/```json?\n?/g, "").replace(/```/g, "").trim();
-                const parsed = JSON.parse(cleanJson);
-                if (parsed.message) aiMessage = parsed.message;
-                if (parsed.mood) aiMood = (parsed.mood.toLowerCase() === "neutral" ? "speaking" : parsed.mood.toLowerCase()) as ShelldonState;
-
-                if (parsed.completedObjectives && Array.isArray(parsed.completedObjectives)) {
-                    newCompletedObj = parsed.completedObjectives;
+            setMessages(prev => {
+                const newMsgs = [...prev];
+                const lastUserIndex = newMsgs.findLastIndex(m => m.role === "user");
+                if (lastUserIndex !== -1) {
+                    newMsgs[lastUserIndex] = { ...newMsgs[lastUserIndex], corrections };
                 }
-                if (parsed.correction && parsed.correction.wrong && parsed.correction.right) {
-                    correction = {
-                        wrong: parsed.correction.wrong,
-                        right: parsed.correction.right,
-                        explanation: parsed.correction.explanation || "Daha doğal bir ifade."
-                    };
-                }
-            } catch (e) {
-                aiMessage = raw;
-            }
-
-            const corrections: Correction[] = correction ? [correction] : [];
-            
-            // Eğer JSON'dan gelmediyse eski usul regex ile ara (Geriye dönük uyumluluk)
-            if (corrections.length === 0) {
-                const correctionRegex = /(?:💡\s*(?:Küçük bir |D|d)üzeltme:?\s*\n?)?❌\s*Yanl(?:i|ı)ş:?\s*([\s\S]*?)\n\s*✅\s*Doğrusu?:?\s*([\s\S]*?)\n\s*📝\s*(?:İpucu|Açıklama):?\s*([\s\S]*?)(?=\n\n|\n?$|$)/gi;
-                let match;
-                while ((match = correctionRegex.exec(aiMessage)) !== null) {
-                    if (match[1] && match[2] && match[3]) {
-                        corrections.push({
-                            wrong: match[1].trim(),
-                            right: match[2].trim(),
-                            explanation: match[3].trim()
-                        });
-                    }
-                }
-                aiMessage = aiMessage.replace(correctionRegex, "").replace(/💡[^\n]*\n?/gi, "").trim();
-            }
-
-            if (corrections.length > 0) {
-                setRepeatQueue((prev) => {
-                    const next = [...prev];
-                    corrections.forEach((corr) => {
-                        const phrase = corr.right.trim();
-                        if (!phrase) return;
-                        if (!next.includes(phrase)) next.push(phrase);
-                    });
-                    return next.slice(-5);
-                });
-
-                setMessages(prev => {
-                    const newMsgs = [...prev];
-                    const lastUserIndex = newMsgs.findLastIndex(m => m.role === "user");
-                    if (lastUserIndex !== -1) {
-                        newMsgs[lastUserIndex] = { ...newMsgs[lastUserIndex], corrections };
-                    }
-                    return newMsgs;
-                });
-            }
-
-            if (!aiMessage.trim()) aiMessage = "Devam edelim!";
-
-            setCompletedObjectives(prev => Array.from(new Set([...prev, ...newCompletedObj])));
-
-            const aiMsg: Message = { role: "assistant", content: aiMessage };
-            setMessages((prev) => [...prev, aiMsg]);
-            setCurrentBubbleText(aiMessage);
-            setShelldonState(aiMood);
-            speak(aiMessage);
-
-            if (turnCount + 1 >= MAX_TURNS) {
-                setTimeout(() => finishConversation([...updatedMessages, aiMsg]), 3000);
-            }
-        } catch {
-            setCurrentBubbleText("Bağlantı hatası oldu! 😢");
-            setShelldonState("idle");
-        } finally {
-            setIsLoading(false);
+                return newMsgs;
+            });
         }
+
+        setCompletedObjectives(reply.completedObjectives);
+
+        const aiMsg: Message = { role: "assistant", content: reply.message };
+        setMessages((prev) => [...prev, aiMsg]);
+        setCurrentBubbleText(reply.message);
+        setShelldonState(reply.mood as ShelldonState);
+        speak(reply.message);
+
+        if (turnCount + 1 >= MAX_TURNS) {
+            setTimeout(() => finishConversation([...updatedMessages, aiMsg]), 3000);
+        }
+
+        setIsLoading(false);
     };
 
-    // === KONUŞMAYI BİTİR ===
+    // === KONUŞMAYI BİTİR (OFFLINE) ===
     const finishConversation = async (allMessages: Message[]) => {
         setIsFinished(true);
         setShelldonState("happy");
@@ -529,75 +378,27 @@ export default function ShelldonPage() {
         addXp(15);
         completeLesson();
 
-        // Feedback al
-        try {
-            const userMsgs = allMessages
-                .filter((m) => m.role === "user")
-                .map((m) => m.content)
-                .join("\n");
-            const langCode = selectedLang || currentLanguage?.code || "en";
-            const feedbackPrompt = buildFeedbackPrompt(langCode, userMsgs);
-
-            const response = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    model: "llama-3.3-70b-versatile",
-                    messages: [
-                        { role: "system", content: "Sen bir dil analiz asistanısın. SADECE JSON formatında cevap ver." },
-                        { role: "user", content: feedbackPrompt },
-                    ],
-                }),
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                const raw = data.choices?.[0]?.message?.content || "";
-                // JSON parse — markdown code block varsa temizle
-                const jsonStr = raw.replace(/```json?\n?/g, "").replace(/```/g, "").trim();
-                try {
-                    const parsed = JSON.parse(jsonStr);
-                    setFeedback(parsed);
-                } catch {
-                    setFeedback({ score: 75, grammar: "İyi gidiyorsun!", vocabulary: "Kelime dağarcığını geliştir.", tip: "Daha uzun cümleler kur." });
-                }
-            }
-        } catch {
-            setFeedback({ score: 75, grammar: "İyi gidiyorsun!", vocabulary: "Kelime dağarcığını geliştir.", tip: "Daha uzun cümleler kur." });
-        }
+        // Offline feedback — no API call
+        const langCode = selectedLang || currentLanguage?.code || "en";
+        const objectives = selectedScenario?.objectives[langCode] || [];
+        const fb = createShelldonFeedback(
+            allMessages.map(m => ({ role: m.role, content: m.content })),
+            langCode,
+            completedObjectives,
+            objectives.length
+        );
+        setFeedback(fb);
     };
 
-    // === İPUCU AL ===
+    // === İPUCU AL (OFFLINE) ===
     const handleGetHint = async () => {
         if (!selectedScenario || isLoading || isLoadingHint) return;
 
         setIsLoadingHint(true);
-        try {
-            const langCode = selectedLang || currentLanguage?.code || "en";
-            const userMsgs = messages.map(m => `${m.role === 'user' ? 'Kullanıcı' : 'Shelldon'}: ${m.content}`).join("\n");
-            const hintPrompt = buildHintPrompt(langCode, selectedScenario.titleTr, userMsgs);
-
-            const response = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    model: "llama-3.3-70b-versatile",
-                    messages: [
-                        { role: "system", content: "Sen sadece istenen ipucunu (tek cümlelik Türkçe ve hedef dil çevirisiyle veya doğrudan) veren bir asistansın. Açıklama yapma." },
-                        { role: "user", content: hintPrompt },
-                    ],
-                }),
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                setCurrentHint(data.choices?.[0]?.message?.content || "Bir hata oluştu.");
-            }
-        } catch {
-            setCurrentHint("İpucu alınamadı.");
-        } finally {
-            setIsLoadingHint(false);
-        }
+        const langCode = selectedLang || currentLanguage?.code || "en";
+        const hint = createShelldonHint(selectedScenario, langCode, completedObjectives, turnCount);
+        setCurrentHint(hint);
+        setIsLoadingHint(false);
     };
 
     // === MİKROFON TOGGLE ===
@@ -667,14 +468,7 @@ export default function ShelldonPage() {
 
     // === GERİ DÖN ===
     const goBack = () => {
-        if (messages.length > 2) {
-            // Arka planda hafıza çıkarımı yap
-            fetch('/api/memory/extract', {
-                method: 'POST',
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ messages })
-            }).catch(console.error);
-        }
+        // Memory extraction removed — offline mode
 
         stopSpeaking();
         setIsInChat(false);

@@ -195,7 +195,7 @@ function isPracticeScene(scene: Scene): boolean {
 }
 
 function extractPracticeData(scene: Scene, language: SupportedLanguage): PracticeData | null {
-    if (!isPracticeScene(scene)) return null;
+    // REMOVED
 
     const scenePracticeData = getScenePracticeData(scene);
     const fromSceneData = scenePracticeData?.targetPhrases || [];

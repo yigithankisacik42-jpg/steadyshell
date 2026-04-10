@@ -51,7 +51,7 @@ export default function SceneModePage() {
 // Actual content component
 function SceneContent() {
     const searchParams = useSearchParams();
-    const unitParam = searchParams.get('unit');
+    
 
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
@@ -82,53 +82,6 @@ function SceneContent() {
         isSupported: speechSupported,
         error: speechError
     } = useSpeech(selectedLang || 'es');
-
-    // Auto-start unit practice if unit parameter is provided
-    useEffect(() => {
-        if (unitParam && !hasAutoStarted) {
-            const unitId = parseInt(unitParam);
-            const langParam = searchParams.get('lang');
-            const levelParam = searchParams.get('level');
-
-            // Determine category based on unit ID
-            let categoryId = '';
-            let lang = langParam || 'es';
-            let level = levelParam || 'A1';
-
-            if (unitId >= 352 && unitId <= 359) {
-                categoryId = 'fr-a2-practice';
-                lang = 'fr';
-                level = 'A2';
-            } else if (unitId >= 301 && unitId <= 320) {
-                categoryId = 'fr-a1-practice';
-                lang = 'fr';
-                level = 'A1';
-            } else if (unitId >= 1 && unitId <= 20) {
-                categoryId = 'es-a1-practice';
-                lang = 'es';
-                level = 'A1';
-            } else if (unitId >= 31 && unitId <= 50) {
-                categoryId = 'es-a2-practice';
-                lang = 'es';
-                level = 'A2';
-            }
-
-            if (categoryId) {
-                const category = SCENE_CATEGORIES.find(c => c.id === categoryId);
-                const scene = category?.scenes.find(s => s.id === `unit-${unitId}`);
-
-                if (scene) {
-                    setSelectedLang(lang);
-                    setSelectedLevel(level);
-                    setHasAutoStarted(true);
-                    setTimeout(() => {
-                        startScene(scene, lang, level);
-                    }, 100);
-                }
-            }
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [unitParam, hasAutoStarted]);
 
     useEffect(() => {
         if (transcript && !isListening) {
@@ -311,12 +264,7 @@ function SceneContent() {
                                 Senaryo Seç
                             </h2>
 
-                            {SCENE_CATEGORIES.filter(category => {
-                                const langPrefix = selectedLang.toLowerCase();
-                                const levelPrefix = selectedLevel.toLowerCase();
-                                // Sadece seçili dil ve seviye kombinasyonuyla başlayanları göster (örn: fr-a1-practice)
-                                return category.id.startsWith(`${langPrefix}-${levelPrefix}`);
-                            }).map(category => (
+                            {SCENE_CATEGORIES.map(category => (
                                 <div key={category.id} className="mb-8">
                                     <h3 className="text-white/50 text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                                         <span>{category.icon}</span>
@@ -397,7 +345,7 @@ function SceneContent() {
             {/* Main view switch based on mode */}
             {is3DMode ? (
                 <div className="relative flex-1">
-                    <Scene3D sceneData={selectedScene} messages={messages} isLoading={isLoading} />
+                    <Scene3D sceneData={selectedScene} messages={messages} isLoading={isLoading} isMouthOpen={isSpeaking} />
                     
                     {/* Subtitle Overlay removed because speech bubbles exist in 3D props */}
                 </div>

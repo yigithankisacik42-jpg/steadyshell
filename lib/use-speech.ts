@@ -169,7 +169,7 @@ export function useSpeech(languageCode: string = 'es', options?: UseSpeechOption
 
         // Metni temizle: Türkçe açıklamaları (💡, ✨ vb.) filtrele
         let cleanText = text;
-        const delimiters = ['💡', '✨', '📝', '❌', '✅', '\n\nTürkçe:', '\n\nNot:'];
+        const delimiters = ['💡', '✨', '📝', '❌', '✅', '\n\nTürkçe:', '\n\nNot:', 'Not (TR):', '\n\nNot (TR):', 'Not:'];
 
         for (const delimiter of delimiters) {
             if (cleanText.includes(delimiter)) {
