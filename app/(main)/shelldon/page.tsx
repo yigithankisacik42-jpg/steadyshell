@@ -126,7 +126,6 @@ export default function ShelldonPage() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [shelldonState, setShelldonState] = useState<ShelldonState>("idle");
-    const [currentBubbleText, setCurrentBubbleText] = useState("");
     const [turnCount, setTurnCount] = useState(0);
     const [isFinished, setIsFinished] = useState(false);
     const [feedback, setFeedback] = useState<FeedbackData | null>(null);
@@ -250,7 +249,7 @@ export default function ShelldonPage() {
         if (messagesContainerRef.current) {
             messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
         }
-    }, [messages, currentBubbleText]);
+    }, [messages]);
 
     // === SAHNE BAŞLAT (OFFLINE) ===
     const startScenario = async (scenario: ShelldonScenario) => {
@@ -270,10 +269,9 @@ export default function ShelldonPage() {
         const langCode = selectedLang || currentLanguage?.code || "de";
 
         // Offline intro — no API call
-        const intro = createShelldonIntro(scenario, langCode, progress[langCode]?.currentLevel || currentLevel?.code || "A1");
+        const intro = createShelldonIntro(scenario, langCode, progress[langCode]?.currentLevel || currentLevel?.code || "A1", practiceMode);
         
         setMessages([{ role: "assistant", content: intro.message }]);
-        setCurrentBubbleText(intro.message);
         setShelldonState(intro.mood as ShelldonState);
         speak(intro.message);
         setIsLoading(false);
@@ -303,7 +301,6 @@ export default function ShelldonPage() {
             const emojis = getEmojiGame(langCode, Date.now());
             const aiMsg: Message = { role: "assistant", content: emojis };
             setMessages(prev => [...prev, { role: "user", content: messageText }, aiMsg]);
-            setCurrentBubbleText(emojis);
             setShelldonState("happy");
             setIsLoading(false);
             return;
@@ -356,7 +353,6 @@ export default function ShelldonPage() {
 
         const aiMsg: Message = { role: "assistant", content: reply.message };
         setMessages((prev) => [...prev, aiMsg]);
-        setCurrentBubbleText(reply.message);
         setShelldonState(reply.mood as ShelldonState);
         speak(reply.message);
 
@@ -474,7 +470,6 @@ export default function ShelldonPage() {
         setIsInChat(false);
         setSelectedScenario(null);
         setMessages([]);
-        setCurrentBubbleText("");
         setShelldonState("idle");
         setIsFinished(false);
         setFeedback(null);
@@ -768,7 +763,7 @@ export default function ShelldonPage() {
                                 ) : (
                                     <div className="flex flex-col gap-2">
                                         <div className="whitespace-pre-wrap leading-relaxed">{msg.content}</div>
-                                        {speechSupported && i === messages.length - 1 && !currentBubbleText && (
+                                        {speechSupported && i === messages.length - 1 && (
                                             <button
                                                 onClick={() => isSpeaking ? stopSpeaking() : speak(msg.content)}
                                                 className="mt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-500 hover:text-emerald-700 w-fit"
@@ -783,7 +778,7 @@ export default function ShelldonPage() {
                         ))}
 
                         {/* Typing Indicator */}
-                        {isLoading && !currentBubbleText && (
+                        {isLoading && (
                             <div className="flex items-center gap-2 px-4 py-3 bg-white border border-slate-100 rounded-2xl rounded-bl-sm w-fit animate-in fade-in zoom-in-95 shadow-sm">
                                 <div className="flex gap-1">
                                     <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce [animation-delay:-0.3s]" />
@@ -791,25 +786,6 @@ export default function ShelldonPage() {
                                     <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce" />
                                 </div>
                                 <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider ml-1">Shelldon Düşünüyor</span>
-                            </div>
-                        )}
-
-                        {/* Canlı AI Yanıtı (Streaming) */}
-                        {currentBubbleText && (
-                            <div className="bg-white text-slate-700 border border-slate-100 rounded-2xl rounded-bl-sm text-sm px-4 py-3 max-w-[85%] animate-in fade-in slide-in-from-bottom-2 duration-300 shadow-sm flex flex-col gap-2">
-                                <div className="whitespace-pre-wrap leading-relaxed">
-                                    {currentBubbleText}
-                                    <span className="inline-block w-1.5 h-4 ml-1 bg-emerald-500/40 animate-pulse align-middle" />
-                                </div>
-                                {speechSupported && (
-                                    <button
-                                        onClick={() => isSpeaking ? stopSpeaking() : speak(currentBubbleText)}
-                                        className="mt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-500 hover:text-emerald-700 w-fit"
-                                    >
-                                        {isSpeaking ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
-                                        {isSpeaking ? "Durdur" : "Dinle"}
-                                    </button>
-                                )}
                             </div>
                         )}
 

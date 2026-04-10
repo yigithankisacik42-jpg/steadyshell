@@ -264,7 +264,11 @@ function SceneContent() {
                                 Senaryo Seç
                             </h2>
 
-                            {SCENE_CATEGORIES.map(category => (
+                            {SCENE_CATEGORIES.filter(category => {
+                                if (!category.id.includes('-practice')) return true;
+                                const prefix = `${selectedLang}-${selectedLevel?.toLowerCase()}-`;
+                                return category.id.startsWith(prefix);
+                            }).map(category => (
                                 <div key={category.id} className="mb-8">
                                     <h3 className="text-white/50 text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                                         <span>{category.icon}</span>

@@ -369,11 +369,43 @@ export function getEmojiGame(language: string, seed: number): string {
 export function createShelldonIntro(
     scenario: ShelldonScenario,
     language: string,
-    level: string
+    level: string,
+    practiceMode: string = "speaking"
 ): ShelldonOfflineReply {
     const l = lang(language);
     const pool = getResponsePool(scenario.id, l);
     const seed = computeSeed(scenario.id, 0);
+
+    if (practiceMode === "vocab") {
+        const vocabIntroByLang: Record<SupportedLang, string> = {
+            es: `¡Hoy vamos a practicar vocabulario con el tema '${scenario.titleTr}'! Empecemos con un juego rápido. ¿Qué significa: ${getEmojiGame(l, seed)}? 🐢`,
+            en: `Today we are practicing vocabulary with the theme '${scenario.titleTr}'! Let's start with a quick game. What does this mean: ${getEmojiGame(l, seed)}? 🐢`,
+            fr: `Aujourd'hui, nous pratiquons le vocabulaire sur le thème '${scenario.titleTr}' ! Commençons par un petit jeu. Que signifie : ${getEmojiGame(l, seed)} ? 🐢`,
+            de: `Heute üben wir Vokabeln zum Thema '${scenario.titleTr}'! Lass uns mit einem kurzen Spiel beginnen. Was bedeutet das: ${getEmojiGame(l, seed)}? 🐢`,
+        };
+        return {
+            message: vocabIntroByLang[l],
+            mood: "happy",
+            completedObjectives: [],
+            correction: null,
+        };
+    }
+
+    if (practiceMode === "grammar") {
+        const grammarIntroByLang: Record<SupportedLang, string> = {
+            es: `¡Vamos a enfocarnos en la gramática hoy! En el escenario '${scenario.titleTr}', asegúrate de usar frases completas. ¿Puedes construir una oración con tus propias palabras para empezar? 🐢`,
+            en: `Let's focus on grammar today! In the scenario '${scenario.titleTr}', make sure to use complete sentences. Can you build a sentence in your own words to start? 🐢`,
+            fr: `Concentrons-nous sur la grammaire aujourd'hui ! Dans le scénario '${scenario.titleTr}', veillez à faire des phrases complètes. Pouvez-vous construire une phrase avec vos propres mots pour commencer ? 🐢`,
+            de: `Konzentrieren wir uns heute auf die Grammatik! Achte im Szenario '${scenario.titleTr}' darauf, ganze Sätze zu bilden. Kannst du zum Start einen Satz mit eigenen Worten bilden? 🐢`,
+        };
+        return {
+            message: grammarIntroByLang[l],
+            mood: "thinking",
+            completedObjectives: [],
+            correction: null,
+        };
+    }
+
     const greeting = choose(pool.greeting, seed);
 
     // Add objective hint
@@ -399,28 +431,44 @@ export function createShelldonIntro(
 // MAIN API: createShelldonReply
 // ============================================================
 export function createShelldonReply(options: ReplyOptions): ShelldonOfflineReply {
-    const { scenario, language, userMessage, turnIndex, completedObjectives } = options;
+    const { scenario, language, userMessage, turnIndex, completedObjectives, practiceMode } = options;
     const l = lang(language);
     const seed = computeSeed(userMessage, turnIndex);
 
     // 1. Intent Detection
     const intent = detectIntent(userMessage, l);
 
-    // 2. Get response from pool
+    // 2. Format response based on practiceMode
+    let message = "";
     const pool = getResponsePool(scenario.id, l);
-    const response = choose(pool[intent] || pool.statement, seed);
+    
+    if (practiceMode === "vocab") {
+        const emojiSet = getEmojiGame(l, seed + 1);
+        const vocabRepliesByLang: Record<SupportedLang, string> = {
+            es: `¡Interesante! Sigue así. 🌟 Ahora intenta decir los nombres de estos emojis: ${emojiSet}`,
+            en: `Interesting! Keep it up. 🌟 Now try to name these emojis: ${emojiSet}`,
+            fr: `Intéressant ! Continue comme ça. 🌟 Maintenant, essaie de nommer ces emojis : ${emojiSet}`,
+            de: `Interessant! Weiter so. 🌟 Versuch nun, diese Emojis zu benennen: ${emojiSet}`,
+        };
+        message = vocabRepliesByLang[l];
+    } else if (practiceMode === "grammar") {
+        message = choose(pool[intent] || pool.statement, seed);
+        // Grammar mode provides stricter corrections and focuses less on roleplay objectives
+    } else {
+        message = choose(pool[intent] || pool.statement, seed);
+    }
 
-    // 3. Check objectives
-    const newObjectives = checkObjectives(userMessage, scenario, l, completedObjectives);
+    // 3. Check objectives (only in speaking/grammar)
+    let newObjectives: number[] = [];
+    if (practiceMode !== "vocab") {
+        newObjectives = checkObjectives(userMessage, scenario, l, completedObjectives);
+    }
     const allCompleted = [...new Set([...completedObjectives, ...newObjectives])];
 
     // 4. Grammar correction
     const correction = findCorrection(userMessage, l);
 
-    // 5. Build message
-    let message = response;
-
-    if (newObjectives.length > 0) {
+    if (newObjectives.length > 0 && practiceMode !== "vocab") {
         const objectives = scenario.objectives[l] || [];
         const completedNames = newObjectives.map(i => objectives[i]).filter(Boolean);
         const celebrateByLang: Record<SupportedLang, string> = {
@@ -434,7 +482,8 @@ export function createShelldonReply(options: ReplyOptions): ShelldonOfflineReply
 
     // 6. Determine mood
     let mood: ShelldonOfflineReply["mood"] = "neutral";
-    if (newObjectives.length > 0) mood = "happy";
+    if (practiceMode === "vocab") mood = "happy";
+    else if (newObjectives.length > 0) mood = "happy";
     else if (correction) mood = "thinking";
     else if (intent === "greeting") mood = "happy";
     else if (intent === "farewell") mood = "sad";

@@ -197,7 +197,12 @@ function isPracticeScene(scene: Scene): boolean {
 function extractPracticeData(scene: Scene, language: SupportedLanguage): PracticeData | null {
     // REMOVED
 
-    const scenePracticeData = getScenePracticeData(scene);
+    // Safety: check if the scene's practice category matches the selected language
+    // e.g., "fr-a1-practice" should only use its data when language is "fr"
+    const categoryLang = scene.category.split("-")[0]; // "fr", "es", "en", "de"
+    const isLangMatch = !isPracticeScene(scene) || categoryLang === language;
+
+    const scenePracticeData = isLangMatch ? getScenePracticeData(scene) : null;
     const fromSceneData = scenePracticeData?.targetPhrases || [];
     const fromDescription = scene.description
         .split(/[;,|/]/g)
