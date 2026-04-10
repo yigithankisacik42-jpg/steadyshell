@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useRef, useEffect, Suspense } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
-import { Bot, Send, ArrowLeft, Loader2, MessageCircle, Globe, Check, Theater, Sparkles, Mic, MicOff, Volume2, VolumeX, User } from "lucide-react";
+import { Send, ArrowLeft, Loader2, Check, Theater, Sparkles, Mic, MicOff, Volume2, VolumeX, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { SCENE_CATEGORIES, getSceneById, buildSceneSystemPrompt, Scene, LANGUAGE_NAMES } from "@/lib/scenes";
+import { SCENE_CATEGORIES, Scene } from "@/lib/scenes";
+import { createOfflineSceneIntro, createOfflineSceneReply } from "@/lib/scene-offline";
 import { useSpeech } from "@/lib/use-speech";
 import { cn } from "@/lib/utils";
 import { Scene3D } from "@/components/scene-3d";
@@ -49,7 +50,6 @@ export default function SceneModePage() {
 
 // Actual content component
 function SceneContent() {
-    const router = useRouter();
     const searchParams = useSearchParams();
     const unitParam = searchParams.get('unit');
 
@@ -66,6 +66,7 @@ function SceneContent() {
     const [inputValue, setInputValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [hasAutoStarted, setHasAutoStarted] = useState(false);
+    const [matchedPhrases, setMatchedPhrases] = useState<string[]>([]);
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -121,11 +122,12 @@ function SceneContent() {
                     setSelectedLevel(level);
                     setHasAutoStarted(true);
                     setTimeout(() => {
-                        startScene(scene);
+                        startScene(scene, lang, level);
                     }, 100);
                 }
             }
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [unitParam, hasAutoStarted]);
 
     useEffect(() => {
@@ -138,43 +140,24 @@ function SceneContent() {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
 
-    const startScene = async (scene: Scene) => {
+    const startScene = async (scene: Scene, langOverride?: string, levelOverride?: string) => {
+        const activeLang = langOverride || selectedLang || 'es';
+        const activeLevel = levelOverride || selectedLevel || 'A1';
+
+        setSelectedLang(activeLang);
+        setSelectedLevel(activeLevel);
         setSelectedScene(scene);
         setIsInChat(true);
         setIsLoading(true);
         setMessages([]);
+        setMatchedPhrases([]);
 
         try {
-            const systemPrompt = buildSceneSystemPrompt(selectedLang, selectedLevel, scene);
-            const response = await fetch('/api/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    model: 'llama-3.3-70b-versatile',
-                    messages: [
-                        { role: 'system', content: systemPrompt },
-                        { role: 'user', content: 'Sohbeti başlat.' }
-                    ]
-                })
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                setMessages([{ role: 'assistant', content: `⚠️ API Hatası: ${errorData?.error?.message || 'Lütfen tekrar deneyin.'}` }]);
-                return;
-            }
-
-            const data = await response.json();
-            const aiMessage = data.choices?.[0]?.message?.content;
-
-            if (!aiMessage) {
-                setMessages([{ role: 'assistant', content: '⚠️ AI yanıt vermedi. Lütfen tekrar deneyin.' }]);
-                return;
-            }
-
-            setMessages([{ role: 'assistant', content: aiMessage }]);
-        } catch (error) {
-            setMessages([{ role: 'assistant', content: '⚠️ Bağlantı hatası. İnternet bağlantınızı kontrol edin.' }]);
+            const intro = createOfflineSceneIntro(scene, activeLang, activeLevel);
+            await new Promise(resolve => setTimeout(resolve, 280));
+            setMessages([{ role: 'assistant', content: intro.message }]);
+        } catch {
+            setMessages([{ role: 'assistant', content: 'Sahne baslatilamadi. Lutfen tekrar deneyin.' }]);
         } finally {
             setIsLoading(false);
             setTimeout(() => inputRef.current?.focus(), 100);
@@ -185,42 +168,29 @@ function SceneContent() {
         if (!inputValue.trim() || isLoading || !selectedScene) return;
 
         const userMessage = inputValue.trim();
+        const nextTurnIndex = messages.length + 1;
         setInputValue('');
         setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
         setIsLoading(true);
 
         try {
-            const systemPrompt = buildSceneSystemPrompt(selectedLang, selectedLevel, selectedScene);
-            const response = await fetch('/api/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    model: 'llama-3.3-70b-versatile',
-                    messages: [
-                        { role: 'system', content: systemPrompt },
-                        ...messages.map(m => ({ role: m.role, content: m.content })),
-                        { role: 'user', content: userMessage }
-                    ]
-                })
+            await new Promise(resolve => setTimeout(resolve, 240));
+            const reply = createOfflineSceneReply({
+                scene: selectedScene,
+                language: selectedLang || 'es',
+                level: selectedLevel || 'A1',
+                userMessage,
+                matchedPhrases,
+                turnIndex: nextTurnIndex
             });
 
-            if (!response.ok) {
-                const errorData = await response.json();
-                setMessages(prev => [...prev, { role: 'assistant', content: `⚠️ API Hatası: ${errorData?.error?.message || 'Lütfen tekrar deneyin.'}` }]);
-                return;
+            if (reply.newlyMatchedPhrases.length > 0) {
+                setMatchedPhrases(prev => Array.from(new Set([...prev, ...reply.newlyMatchedPhrases])));
             }
 
-            const data = await response.json();
-            const aiMessage = data.choices?.[0]?.message?.content;
-
-            if (!aiMessage) {
-                setMessages(prev => [...prev, { role: 'assistant', content: '⚠️ AI yanıt vermedi.' }]);
-                return;
-            }
-
-            setMessages(prev => [...prev, { role: 'assistant', content: aiMessage }]);
-        } catch (error) {
-            setMessages(prev => [...prev, { role: 'assistant', content: '⚠️ Bağlantı hatası.' }]);
+            setMessages(prev => [...prev, { role: 'assistant', content: reply.message }]);
+        } catch {
+            setMessages(prev => [...prev, { role: 'assistant', content: 'Sahne yaniti olusturulamadi. Lutfen tekrar deneyin.' }]);
         } finally {
             setIsLoading(false);
         }
@@ -234,7 +204,7 @@ function SceneContent() {
     };
 
     const backToSelection = () => {
-        // Eğer en az 2 mesaj (kullanıcı + AI) varsa XP ver
+        // Eğer en az 2 mesaj varsa XP ver
         if (isInChat && messages.length >= 2) {
             addXp(10);
             addQuestXP(10);
@@ -244,6 +214,7 @@ function SceneContent() {
         setIsInChat(false);
         setSelectedScene(null);
         setMessages([]);
+        setMatchedPhrases([]);
     };
 
     // --- Selection Screen ---

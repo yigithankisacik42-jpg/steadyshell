@@ -954,33 +954,54 @@ const DE_B2_PRACTICE_DATA: Record<string, { scenario: string, targetPhrases: str
 };
 
 // Ünite pratiği için özel prompt oluştur
+interface ScenePracticeData {
+    scenario: string;
+    targetPhrases: string[];
+    example: string;
+}
+
+function getUnitPracticeData(systemPrompt: string): ScenePracticeData | undefined {
+    if (systemPrompt.startsWith("fr-a2-")) {
+        return FR_A2_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("fr-a1-")) {
+        return FR_A1_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("es-a2-")) {
+        return ES_A2_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("es-a1-")) {
+        return ES_A1_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("en-a2-")) {
+        return EN_A2_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("en-a1-")) {
+        return EN_A1_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("de-a1-")) {
+        return DE_A1_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("de-a2-")) {
+        return DE_A2_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("de-b1-")) {
+        return DE_B1_PRACTICE_DATA[systemPrompt];
+    } else if (systemPrompt.startsWith("de-b2-")) {
+        return DE_B2_PRACTICE_DATA[systemPrompt];
+    }
+    return undefined;
+}
+
+export function getScenePracticeData(scene: Scene): ScenePracticeData | null {
+    if (!scene.category.endsWith("-practice")) {
+        return null;
+    }
+
+    return getUnitPracticeData(scene.systemPrompt) || {
+        scenario: scene.titleTr || "Genel konuşma",
+        targetPhrases: [scene.description || "Temel kalıplar"],
+        example: "",
+    };
+}
+
 function buildUnitPracticePrompt(language: string, level: string, scene: Scene): string {
     const langInfo = LANGUAGE_NAMES[language] || LANGUAGE_NAMES['es'];
 
     // Doğru veri setini bul
-    let unitData: { scenario: string, targetPhrases: string[], example: string } | undefined;
-
-    if (scene.systemPrompt.startsWith("fr-a2-")) {
-        unitData = FR_A2_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("fr-a1-")) {
-        unitData = FR_A1_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("es-a2-")) {
-        unitData = ES_A2_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("es-a1-")) {
-        unitData = ES_A1_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("en-a2-")) {
-        unitData = EN_A2_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("en-a1-")) {
-        unitData = EN_A1_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("de-a1-")) {
-        unitData = DE_A1_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("de-a2-")) {
-        unitData = DE_A2_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("de-b1-")) {
-        unitData = DE_B1_PRACTICE_DATA[scene.systemPrompt];
-    } else if (scene.systemPrompt.startsWith("de-b2-")) {
-        unitData = DE_B2_PRACTICE_DATA[scene.systemPrompt];
-    }
+    let unitData = getUnitPracticeData(scene.systemPrompt);
 
     // Varsayılan veri
     if (!unitData) {
