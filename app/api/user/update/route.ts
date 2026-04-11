@@ -43,7 +43,7 @@ export async function PUT(req: Request) {
             }
         }
 
-        const updateData: any = {
+        const updateData: Record<string, string> = {
             name: cleanName,
             email: cleanEmail,
             avatar: cleanName.charAt(0).toUpperCase(),

@@ -4,7 +4,6 @@ import { NextResponse } from "next/server";
 
 // ===== GÜVENLIK SABİTLERİ =====
 const MAX_XP_PER_REQUEST = 30;      // Bir istekte max kazanılabilecek XP
-const MAX_HEARTS = 5;               // Maksimum can sayısı
 const MAX_STREAK = 3650;            // Makul maksimum seri (10 yıl)
 const MAX_LEVEL = 200;              // Maksimum seviye
 
@@ -56,7 +55,7 @@ function calculateStreak(currentStreak: number, lastActiveDate: Date | null): nu
 }
 
 // ===== GET: Kullanıcı verilerini getir =====
-export async function GET(req: Request) {
+export async function GET() {
     const session = await auth();
 
     if (!session || !session.user || !session.user.email) {
