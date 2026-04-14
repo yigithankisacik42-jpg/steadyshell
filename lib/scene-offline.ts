@@ -9,6 +9,7 @@ type Intent =
     | "direction"
     | "reservation"
     | "question"
+    | "order"
     | "statement";
 
 export interface OfflineSceneReply {
@@ -61,44 +62,274 @@ const GREETING_BY_LANG: Record<SupportedLanguage, string[]> = {
 
 const INTENT_BY_LANG: Record<SupportedLanguage, Record<Intent, string[]>> = {
     es: {
-        greeting: ["Hola, encantado de hablar contigo.", "Muy bien, seguimos en este escenario."],
-        thanks: ["De nada, con mucho gusto.", "Perfecto, seguimos practicando."],
-        goodbye: ["Hasta luego. Antes de irte, una frase mas.", "Vale, cerramos bien este dialogo."],
-        price: ["Claro, te doy un precio aproximado.", "Buena pregunta, te explico el costo."],
-        direction: ["Te indico el camino con gusto.", "Vale, vamos con direcciones claras."],
-        reservation: ["Perfecto, te ayudo con la reserva.", "Muy bien, revisamos disponibilidad."],
-        question: ["Buena pregunta.", "Te respondo y seguimos."],
-        statement: ["Entendido, buen aporte.", "Perfecto, vamos bien."],
+        greeting: [
+            "Hola, encantado de hablar contigo.", 
+            "Muy bien, seguimos en este escenario.",
+            "¡Hola! Qué alegría practicar español contigo hoy.",
+            "Buenas tardes, es un placer saludarte.",
+            "¡Hola! Me alegra mucho verte de nuevo por aquí.",
+            "¡Buenas! ¿Cómo te va el día hoy?"
+        ],
+        thanks: [
+            "De nada, con mucho gusto.", 
+            "Perfecto, seguimos practicando.",
+            "¡No hay de qué! Para eso estoy aquí.",
+            "Gracias a ti por tu esfuerzo y dedicación.",
+            "Es un placer ayudarte, ¡sigamos!"
+        ],
+        goodbye: [
+            "Hasta luego. Antes de irte, una frase más.", 
+            "Vale, cerramos bien este diálogo.",
+            "¡Adiós! Ha sido una gran sesión de práctica.",
+            "Nos vemos pronto, que tengas un excelente día.",
+            "¡Chao! Espero verte mañana para seguir mejorando."
+        ],
+        price: [
+            "Claro, te doy un precio aproximado.", 
+            "Buena pregunta, te explico el costo.",
+            "Eso cuesta unos 10 euros aproximadamente.",
+            "Es un precio muy razonable, ¿quieres saber más?",
+            "Depende del tamaño, pero ronda los 5 euros."
+        ],
+        direction: [
+            "Te indico el camino con gusto.", 
+            "Vale, vamos con direcciones claras.",
+            "Está muy cerca de aquí, a unos dos minutos.",
+            "Gira a la derecha en la próxima esquina.",
+            "Sigue todo recto hasta llegar a la plaza principal."
+        ],
+        reservation: [
+            "Perfecto, te ayudo con la reserva.", 
+            "Muy bien, revisamos disponibilidad ahora mismo.",
+            "Claro, ¿para cuántas personas sería la reserva?",
+            "Entendido, déjame comprobar el calendario de reservas."
+        ],
+        question: [
+            "Buena pregunta.", 
+            "Te respondo con gusto y seguimos con la práctica.",
+            "Es una duda muy común, te explico...",
+            "Claro, déjame darte los detalles que necesitas."
+        ],
+        order: [
+            "¡Excelente elección! Te lo traigo enseguida.",
+            "Perfecto, marchando un pedido de lo más rico.",
+            "Muy bien, anotado. ¿Deseas acompañarlo con algo más?",
+            "Claro que sí, buena elección. ¿Algo más para ti?",
+            "¡Marchando! Enseguida estará listo para disfrutar."
+        ],
+        statement: [
+            "Entendido, buen aporte.", 
+            "Perfecto, vamos muy bien con la práctica.",
+            "Me parece un punto muy interesante.",
+            "¡Genial! Me gusta cómo construyes las frases.",
+            "Muy bien, sigamos adelante con la conversación."
+        ],
     },
     en: {
-        greeting: ["Hi, happy to practice with you.", "Great, let's continue this scene."],
-        thanks: ["You're welcome.", "Nice, let's keep practicing."],
-        goodbye: ["See you soon. Let's do one last sentence.", "Alright, let's close the scene well."],
-        price: ["Sure, I can give you an estimated price.", "Good question, let's check the cost."],
-        direction: ["Of course, I'll guide you clearly.", "Great, let's go step by step with directions."],
-        reservation: ["Perfect, I'll help with the booking.", "Great, let's check availability."],
-        question: ["Good question.", "Let me answer and continue."],
-        statement: ["Got it, nice sentence.", "Good, you're on track."],
+        greeting: [
+            "Hi, happy to practice with you.", 
+            "Great, let's continue this scene.",
+            "Hello! It's a pleasure to speak with you today.",
+            "Hi there! I'm ready to keep our conversation going.",
+            "Hello! Welcome back to our practice session.",
+            "Hey! How is your day going so far?"
+        ],
+        thanks: [
+            "You're welcome.", 
+            "Nice, let's keep practicing.",
+            "No problem at all! I'm here to help.",
+            "My pleasure! You're doing a great job.",
+            "You are very welcome! Let's continue.",
+            "Don't mention it! Happy to assist you."
+        ],
+        goodbye: [
+            "See you soon. Let's do one last sentence.", 
+            "Alright, let's close the scene well.",
+            "Goodbye! It was a very productive session.",
+            "See you later! Have a wonderful day ahead.",
+            "Bye for now! Keep practicing and stay motivated.",
+            "Take care! I look forward to our next talk."
+        ],
+        price: [
+            "Sure, I can give you an estimated price.", 
+            "Good question, let's check the cost.",
+            "That would be around 10 dollars, I believe.",
+            "The price is quite reasonable for this quality.",
+            "It depends on the size, but expect about 5 euros.",
+            "Certainly! The total comes to twenty dollars."
+        ],
+        direction: [
+            "Of course, I'll guide you clearly.", 
+            "Great, let's go step by step with directions.",
+            "It's very close from here, about a two-minute walk.",
+            "Turn right at the next intersection.",
+            "Go straight ahead until you reach the main square.",
+            "Follow this street and you'll see it on your left."
+        ],
+        reservation: [
+            "Perfect, I'll help with the booking.", 
+            "Great, let's check availability.",
+            "Certainly, how many people is the reservation for?",
+            "Sure thing! Let me check the booking calendar for you.",
+            "I can handle that. Which date were you thinking of?",
+            "No problem! Let's secure your spot right now."
+        ],
+        question: [
+            "Good question.", 
+            "Let me answer and continue.",
+            "That's a very interesting point you've raised.",
+            "Certainly! Let me give you all the details you need.",
+            "Great question! Here is how it works...",
+            "I'm glad you asked. Let me explain it clearly."
+        ],
+        order: [
+            "Great choice! I'll get that for you right away.", 
+            "Alright, I'm taking your order. Anything else?",
+            "Excellent! I'll bring that to you in just a moment.",
+            "Noted! I'll start preparing that for you immediately.",
+            "Perfect selection! It's one of our most popular items.",
+            "Coming right up! Just a second while I process this."
+        ],
+        statement: [
+            "Got it, nice sentence.", 
+            "Good, you're on track.",
+            "That's a very interesting observation.",
+            "I see what you mean. Let's move forward.",
+            "Great! You're building your sentences very well.",
+            "Understood. Tell me more about that if you'd like."
+        ],
     },
     fr: {
-        greeting: ["Salut, ravi de pratiquer avec toi.", "Tres bien, on continue ce scenario."],
-        thanks: ["Avec plaisir.", "Parfait, on continue la pratique."],
-        goodbye: ["A bientot. Faisons encore une phrase.", "D'accord, on termine bien ce dialogue."],
-        price: ["Bien sur, je te donne un prix approximatif.", "Bonne question, on verifie le cout."],
-        direction: ["Je t'indique le chemin clairement.", "Parfait, on y va etape par etape."],
-        reservation: ["Parfait, je t'aide pour la reservation.", "Tres bien, on verifie les disponibilites."],
-        question: ["Bonne question.", "Je reponds et on continue."],
-        statement: ["Compris, bonne phrase.", "Tres bien, on avance."],
+        greeting: [
+            "Salut, ravi de pratiquer avec toi.", 
+            "Très bien, on continue ce scénario.",
+            "Bonjour ! C'est un plaisir de pratiquer le français avec vous.",
+            "Salut ! Je suis content de vous revoir pour cette session.",
+            "Bonjour ! Prêt pour une nouvelle conversation en français ?",
+            "Coucou ! Comment allez-vous aujourd'hui ?"
+        ],
+        thanks: [
+            "Avec plaisir.", 
+            "Parfait, on continue la pratique.",
+            "De rien ! Je suis là pour vous aider.",
+            "Merci à vous pour votre enthousiasme !",
+            "C'est un plaisir d'aider quelqu'un d'aussi motivé.",
+            "Pas de quoi, on progresse bien ensemble !"
+        ],
+        goodbye: [
+            "À bientôt. Faisons encore une phrase.", 
+            "D'accord, on termine bien ce dialogue.",
+            "Au revoir ! C'était une excellente session.",
+            "À la prochaine ! Bonne continuation dans votre apprentissage.",
+            "Salut ! On se retrouve demain pour la suite ?",
+            "Bonne journée et à très bientôt pour pratiquer !"
+        ],
+        price: [
+            "Bien sûr, je te donne un prix approximatif.", 
+            "Bonne question, on vérifie le coût.",
+            "Ça coûterait environ 10 euros, je pense.",
+            "C'est un prix très raisonnable pour la qualité.",
+            "Le tarif dépend de la taille, mais comptez environ 5 euros."
+        ],
+        direction: [
+            "Je t'indique le chemin clairement.", 
+            "Parfait, on y va étape par étape.",
+            "C'est tout près d'ici, à environ deux minutes à pied.",
+            "Tournez à droite au prochain croisement.",
+            "Allez tout droit jusqu'à la place principale."
+        ],
+        reservation: [
+            "Parfait, je t'aide pour la réservation.", 
+            "Très bien, on vérifie les disponibilités.",
+            "Bien sûr, c'est pour combien de personnes ?",
+            "Entendu, je regarde le calendrier des réservations tout de suite."
+        ],
+        question: [
+            "Bonne question.", 
+            "Je réponds et on continue.",
+            "C'est une question très intéressante, laissez-moi vous répondre.",
+            "Bien sûr, je vais vous donner tous les détails nécessaires."
+        ],
+        order: [
+            "Très bon choix ! Je m'en occupe tout de suite.", 
+            "D'accord, je prends votre commande. Autre chose ?",
+            "Excellent ! Je vous apporte ça dans quelques instants.",
+            "C'est noté, je lance la préparation immédiatement.",
+            "Parfait, un très bon choix pour aujourd'hui !"
+        ],
+        statement: [
+            "Compris, bonne phrase.", 
+            "Très bien, on avance.",
+            "C'est un point de vue très intéressant.",
+            "D'accord, je vois ce que vous voulez dire.",
+            "Génial ! Vous construisez très bien vos phrases."
+        ],
     },
     de: {
-        greeting: ["Hallo, ich freue mich auf die Ubung.", "Sehr gut, wir machen mit der Szene weiter."],
-        thanks: ["Gern geschehen.", "Super, wir uben weiter."],
-        goodbye: ["Bis bald. Eine letzte Aussage ware gut.", "Okay, wir beenden den Dialog sauber."],
-        price: ["Klar, ich nenne dir einen ungefahren Preis.", "Gute Frage, wir schauen auf die Kosten."],
-        direction: ["Ich erklare dir den Weg klar.", "Gut, wir machen die Wegbeschreibung Schritt fur Schritt."],
-        reservation: ["Perfekt, ich helfe bei der Reservierung.", "Sehr gut, wir prufen die Verfugbarkeit."],
-        question: ["Gute Frage.", "Ich antworte und wir machen weiter."],
-        statement: ["Verstanden, guter Satz.", "Sehr gut, du bist auf dem richtigen Weg."],
+        greeting: [
+            "Hallo, ich freue mich auf die Übung.", 
+            "Sehr gut, wir machen mit der Szene weiter.",
+            "Schön, dich zu sehen! Womit fangen wir an?",
+            "Freut mich sehr! Ich bin bereit für unser Gespräch.",
+            "Hallo! Möchtest du drinnen oder draußen üben?",
+            "Willkommen! Legen wir direkt mit der Praxis los."
+        ],
+        thanks: [
+            "Gern geschehen.", 
+            "Super, wir üben weiter.",
+            "Nichts zu danken! Ich helfe dir immer gerne.",
+            "Kein Problem, du machst tolle Fortschritte!",
+            "Immer wieder gerne! Das hast du sehr gut gesagt.",
+            "Vielen Dank auch dir für dein Engagement!"
+        ],
+        goodbye: [
+            "Bis bald. Eine letzte Aussage wäre gut.", 
+            "Okay, wir beenden den Dialog sauber.",
+            "Auf Wiedersehen! Das war eine tolle Übung heute.",
+            "Tschüss! Wir sehen uns beim nächsten Mal hoffentlich wieder.",
+            "Bis morgen! Übe fleißig weiter, du wirst immer besser.",
+            "Einen schönen Tag noch! Mach's gut!"
+        ],
+        price: [
+            "Klar, ich nenne dir einen ungefähren Preis.", 
+            "Gute Frage, wir schauen auf die Kosten.",
+            "Das würde etwa 10 Euro kosten, denke ich.",
+            "Das ist ein sehr fairer Preis für diese Qualität.",
+            "Es kommt auf die Größe an, aber rechnen Sie mit 5 Euro."
+        ],
+        direction: [
+            "Ich erkläre dir den Weg klar.", 
+            "Gut, wir machen die Wegbeschreibung Schritt für Schritt.",
+            "Es ist ganz in der Nähe, etwa zwei Minuten zu Fuß.",
+            "Biegen Sie an der nächsten Kreuzung rechts ab.",
+            "Gehen Sie geradeaus bis zum Hauptplatz."
+        ],
+        reservation: [
+            "Perfekt, ich helfe bei der Reservierung.", 
+            "Sehr gut, wir prüfen die Verfügbarkeit.",
+            "Natürlich, für wie viele Personen soll ich reservieren?",
+            "Gerne, ich schaue sofort in den Belegungskalender."
+        ],
+        question: [
+            "Gute Frage.", 
+            "Ich antworte und wir machen weiter.",
+            "Das ist eine sehr interessante Frage, lass mich nachschauen.",
+            "Natürlich, ich gebe dir alle Details, die du brauchst."
+        ],
+        order: [
+            "Gute Wahl! Ich bereite das sofort vor.", 
+            "Alles klar, ich nehme Ihre Bestellung auf. Sonst noch etwas?",
+            "Ausgezeichnet! Ich bringe Ihnen das in wenigen Augenblicken.",
+            "Notiert, ich fange sofort mit der Zubereitung an.",
+            "Perfekt, eine sehr gute Wahl für heute!"
+        ],
+        statement: [
+            "Verstanden, guter Satz.", 
+            "Sehr gut, du bist auf dem richtigen Weg.",
+            "Das ist ein sehr interessanter Aspekt.",
+            "Ich verstehe, was du meinst. Machen wir weiter.",
+            "Klasse! Du baust deine Sätze schon sehr gut auf."
+        ],
     },
 };
 
@@ -148,38 +379,42 @@ const KEYWORDS_BY_LANG: Record<SupportedLanguage, Record<Intent, string[]>> = {
         goodbye: ["adios", "hasta luego", "nos vemos"],
         price: ["precio", "cuanto", "cuesta", "barato", "caro", "euro"],
         direction: ["donde", "izquierda", "derecha", "recto", "camino", "estacion"],
-        reservation: ["reserva", "reservar", "habitacion", "mesa", "disponible"],
+        reservation: ["reserva", "reservar", "habitacion", "mesa", "disponible", "confirmar"],
         question: ["que", "como", "cuando", "por que", "puedes", "podria", "?"],
+        order: ["quiero", "quisiera", "me gustaria", "dame", "traeme", "un cafe", "una cerveza", "agua", "la carta", "el menu", "pido"],
         statement: [],
     },
     en: {
-        greeting: ["hello", "hi", "good morning", "hey"],
-        thanks: ["thanks", "thank you"],
-        goodbye: ["bye", "goodbye", "see you"],
-        price: ["price", "cost", "cheap", "expensive", "dollar", "euro", "how much"],
-        direction: ["where", "left", "right", "straight", "station", "route", "way"],
-        reservation: ["book", "booking", "reserve", "reservation", "room", "table", "available"],
-        question: ["what", "how", "when", "why", "can", "could", "?"],
+        greeting: ["hello", "hi", "good morning", "hey", "good afternoon", "good evening", "welcome", "pleasure"],
+        thanks: ["thanks", "thank you", "appreciate", "grateful"],
+        goodbye: ["bye", "goodbye", "see you", "farewell", "take care", "have a nice day"],
+        price: ["price", "cost", "cheap", "expensive", "dollar", "euro", "how much", "pay", "bill", "money", "rate"],
+        direction: ["where", "left", "right", "straight", "station", "route", "way", "street", "turn", "find", "distance", "near", "location"],
+        reservation: ["book", "booking", "reserve", "reservation", "room", "table", "available", "confirm", "appointment", "check-in"],
+        question: ["what", "how", "when", "why", "can", "could", "may", "which", "?"],
+        order: ["i want", "i would like", "order", "buy", "get", "give me", "bring me", "choose", "take", "menu", "coffee", "water", "beer"],
         statement: [],
     },
     fr: {
-        greeting: ["bonjour", "salut", "bonsoir", "coucou"],
-        thanks: ["merci", "merci beaucoup"],
-        goodbye: ["au revoir", "a bientot", "a plus"],
-        price: ["prix", "combien", "coute", "cher", "euro"],
-        direction: ["ou", "gauche", "droite", "tout droit", "gare", "chemin"],
-        reservation: ["reserver", "reservation", "chambre", "table", "disponible"],
-        question: ["quoi", "comment", "quand", "pourquoi", "pouvez", "peux", "?"],
+        greeting: ["bonjour", "salut", "bonsoir", "coucou", "ca va", "enchante"],
+        thanks: ["merci", "merci beaucoup", "remercie", "remerciez"],
+        goodbye: ["au revoir", "a bientot", "a plus", "ciao", "bonne journee", "bonne soiree"],
+        price: ["prix", "combien", "coute", "cher", "euro", "tarif", "argent", "payer"],
+        direction: ["ou", "gauche", "droite", "tout droit", "gare", "chemin", "rue", "avenue", "tourner", "aller"],
+        reservation: ["reserver", "reservation", "chambre", "table", "disponible", "confirmer", "place"],
+        question: ["quoi", "comment", "quand", "pourquoi", "pouvez", "peux", "pourriez", "serait", "?"],
+        order: ["je veux", "je voudrais", "commander", "commande", "acheter", "donnez-moi", "prends", "prendre", "choisis", "choisir"],
         statement: [],
     },
     de: {
-        greeting: ["hallo", "guten tag", "hi", "servus"],
-        thanks: ["danke", "vielen dank"],
-        goodbye: ["tschuss", "auf wiedersehen", "bis bald"],
-        price: ["preis", "kosten", "teuer", "billig", "euro", "wie viel"],
-        direction: ["wo", "links", "rechts", "geradeaus", "bahnhof", "weg"],
-        reservation: ["reservieren", "reservierung", "zimmer", "tisch", "verfugbar"],
-        question: ["was", "wie", "wann", "warum", "kann", "konnte", "?"],
+        greeting: ["hallo", "guten tag", "hi", "servus", "moin", "gruss", "willkommen", "freut mich"],
+        thanks: ["danke", "vielen dank", "bedanken", "dankeschon", "merci"],
+        goodbye: ["tschuss", "auf wiedersehen", "bis bald", "ciao", "schonen tag", "machs gut", "gute fahrt"],
+        price: ["preis", "kosten", "teuer", "billig", "euro", "wie viel", "kostet", "bezahlen", "rechnung", "geld", "tarif"],
+        direction: ["wo", "links", "rechts", "geradeaus", "bahnhof", "weg", "strasse", "platz", "abbiegen", "finden", "entfernung", "entfernt", "nahe"],
+        reservation: ["reservieren", "reservierung", "zimmer", "tisch", "verfugbar", "buchen", "platz", "frei", "bestatigen", "termin"],
+        question: ["was", "wie", "wann", "warum", "kann", "konnte", "dürfte", "wieso", "weshalb", "?"],
+        order: ["ich mochte", "ich hatte gerne", "bestellen", "bestellung", "kaufen", "nehmen", "geben sie mir", "bring mir", "nehme", "wahl", "kuchen", "kaffee", "bier", "karte"],
         statement: [],
     },
 };
@@ -300,13 +535,17 @@ function detectIntent(message: string, lang: SupportedLanguage): Intent {
     const keywordMap = KEYWORDS_BY_LANG[lang];
     const check = (intent: Intent) => keywordMap[intent].some((keyword) => normalized.includes(normalizeText(keyword)));
 
+    // ÖNCELİK SIRALAMASI: Aksiyon içeren niyetler (Order, Price vb.) 
+    // Sosyal niyetlerden (Greeting, Thanks) önce kontrol edilmeli.
+    if (check("order")) return "order";
+    if (check("price")) return "price";
+    if (check("reservation")) return "reservation";
+    if (check("direction")) return "direction";
+    if (check("question") || message.includes("?")) return "question";
     if (check("greeting")) return "greeting";
     if (check("thanks")) return "thanks";
     if (check("goodbye")) return "goodbye";
-    if (check("price")) return "price";
-    if (check("direction")) return "direction";
-    if (check("reservation")) return "reservation";
-    if (check("question") || message.includes("?")) return "question";
+    
     return "statement";
 }
 
