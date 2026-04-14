@@ -9,7 +9,16 @@ import { ShelldonAvatar, type ShelldonState } from "@/components/shelldon-avatar
 
 import { Scene3D } from "@/components/scene-3d";
 import { SHELLDON_SCENARIOS, type ShelldonScenario, type ShelldonPracticeMode } from "@/lib/shelldon-ai";
-import { createShelldonIntro, createShelldonReply, createShelldonFeedback, createShelldonHint, getEmojiGame } from "@/lib/shelldon-offline";
+import { 
+    createShelldonIntro, 
+    createShelldonReply, 
+    createShelldonFeedback, 
+    createShelldonHint, 
+    getEmojiGame,
+    createEmptyMemory,
+    type ConversationMemory,
+    type ShelldonPersona,
+} from "@/lib/shelldon-offline";
 import { useSpeech } from "@/lib/use-speech";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -142,6 +151,7 @@ export default function ShelldonPage() {
     const [sessionSummary, setSessionSummary] = useState<string | null>(null);
     const [sessionGoal, setSessionGoal] = useState<string | null>(null);
     const [repeatQueue, setRepeatQueue] = useState<string[]>([]);
+    const [memory, setMemory] = useState<ConversationMemory>(createEmptyMemory());
     
     // UI states
     const [showCommandMenu, setShowCommandMenu] = useState(false);
@@ -265,6 +275,7 @@ export default function ShelldonPage() {
         setSessionSummary(null);
         setSessionGoal(null);
         setRepeatQueue([]);
+        setMemory(createEmptyMemory());
 
         const langCode = selectedLang || currentLanguage?.code || "de";
 
@@ -293,6 +304,7 @@ export default function ShelldonPage() {
             setMessages([]);
             setTurnCount(0);
             setRepeatQueue([]);
+            setMemory(createEmptyMemory());
             setIsLoading(false);
             setShelldonState("idle");
             return;
@@ -302,6 +314,24 @@ export default function ShelldonPage() {
             const aiMsg: Message = { role: "assistant", content: emojis };
             setMessages(prev => [...prev, { role: "user", content: messageText }, aiMsg]);
             setShelldonState("happy");
+            setIsLoading(false);
+            return;
+        } else if (messageText.startsWith("/sert")) {
+            setMemory(prev => ({ ...prev, persona: "strict" }));
+            const aiMsg: Message = { role: "assistant", content: "Tamam, artık daha ciddi ve sert bir öğretmen olacağım. Hata yapmamaya çalış! 🐢🔥" };
+            setMessages(prev => [...prev, { role: "user", content: messageText }, aiMsg]);
+            setIsLoading(false);
+            return;
+        } else if (messageText.startsWith("/arkadas")) {
+            setMemory(prev => ({ ...prev, persona: "friendly" }));
+            const aiMsg: Message = { role: "assistant", content: "Harika! Artık kankayız. Rahat takılalım! 🐢✨" };
+            setMessages(prev => [...prev, { role: "user", content: messageText }, aiMsg]);
+            setIsLoading(false);
+            return;
+        } else if (messageText.startsWith("/resmi") || messageText.startsWith("/formal")) {
+            setMemory(prev => ({ ...prev, persona: "formal" }));
+            const aiMsg: Message = { role: "assistant", content: "Anlaşıldı. Bundan sonra daha profesyonel ve resmi bir üslup kullanacağım. 🐢💼" };
+            setMessages(prev => [...prev, { role: "user", content: messageText }, aiMsg]);
             setIsLoading(false);
             return;
         }
@@ -324,7 +354,11 @@ export default function ShelldonPage() {
             turnIndex: turnCount,
             completedObjectives,
             practiceMode,
+            memory,
         });
+
+        // Update memory
+        setMemory(reply.updatedMemory);
 
         // Handle corrections
         const corrections: Correction[] = reply.correction ? [reply.correction] : [];
@@ -468,8 +502,9 @@ export default function ShelldonPage() {
 
         stopSpeaking();
         setIsInChat(false);
-        setSelectedScenario(null);
-        setMessages([]);
+        setCompletedObjectives([]);
+        setTurnCount(0);
+        setMemory(createEmptyMemory());
         setShelldonState("idle");
         setIsFinished(false);
         setFeedback(null);

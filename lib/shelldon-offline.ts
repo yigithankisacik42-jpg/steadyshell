@@ -10,13 +10,47 @@ import { SHELLDON_SCENARIOS, type ShelldonScenario, type ShelldonPracticeMode } 
 // TYPES
 // ============================================================
 type SupportedLang = "es" | "en" | "fr" | "de";
-type Intent = "greeting" | "farewell" | "order" | "question" | "thanks" | "agree" | "describe" | "statement";
+type Intent = "greeting" | "farewell" | "order" | "question" | "thanks" | "agree" | "describe" | "statement"
+    | "price" | "help" | "complain" | "preference" | "negotiate" | "emotion"
+    | "location" | "time_ask" | "food" | "weather" | "hobby" | "opinion";
+
+// ============================================================
+// PERSONA & CONVERSATION MEMORY
+// ============================================================
+export type ShelldonPersona = "default" | "strict" | "friendly" | "formal";
+
+export interface ConversationMemory {
+    userName: string | null;
+    mentionedItems: string[];
+    lastIntent: Intent;
+    topicStack: string[];
+    userPreferences: string[];
+    userMood: "positive" | "neutral" | "negative";
+    repeatedMistakes: string[];
+    persona: ShelldonPersona;
+    turnCount: number;
+}
+
+export function createEmptyMemory(): ConversationMemory {
+    return {
+        userName: null,
+        mentionedItems: [],
+        lastIntent: "statement",
+        topicStack: [],
+        userPreferences: [],
+        userMood: "neutral",
+        repeatedMistakes: [],
+        persona: "default",
+        turnCount: 0,
+    };
+}
 
 export interface ShelldonOfflineReply {
     message: string;
     mood: "happy" | "thinking" | "neutral" | "surprised" | "sad";
     completedObjectives: number[];
     correction: { wrong: string; right: string; explanation: string } | null;
+    updatedMemory: ConversationMemory;
 }
 
 export interface ShelldonOfflineFeedback {
@@ -35,6 +69,7 @@ interface ReplyOptions {
     turnIndex: number;
     completedObjectives: number[];
     practiceMode: ShelldonPracticeMode;
+    memory?: ConversationMemory;
 }
 
 // ============================================================
@@ -68,41 +103,89 @@ const KEYWORD_MAP: Record<SupportedLang, Record<Intent, string[]>> = {
     es: {
         greeting: ["hola", "buenos dias", "buenas tardes", "que tal", "buenas"],
         farewell: ["adios", "hasta luego", "nos vemos", "chao"],
-        order: ["quiero", "quisiera", "me gustaria", "pedir", "tomar", "dame", "un cafe", "una mesa", "reserva"],
+        order: ["quiero", "quisiera", "me gustaria", "pedir", "tomar", "dame", "una mesa", "reserva"],
         question: ["donde", "cuando", "como", "cuanto", "que es", "cual", "por que", "puede", "hay", "tiene", "?"],
         thanks: ["gracias", "muchas gracias", "te agradezco"],
         agree: ["si", "vale", "claro", "por supuesto", "perfecto", "de acuerdo", "bien", "bueno"],
         describe: ["tengo", "estoy", "soy", "me duele", "siento", "necesito", "busco"],
+        price: ["precio", "cuanto cuesta", "cuanto vale", "caro", "barato", "euros", "dolares"],
+        help: ["no entiendo", "no se", "ayuda", "ayudame", "no comprendo", "dificil", "explicar"],
+        complain: ["malo", "horrible", "terrible", "no me gusta", "demasiado", "peor"],
+        preference: ["prefiero", "me gusta mas", "mejor", "quisiera mas bien", "en vez de"],
+        negotiate: ["descuento", "mas barato", "rebaja", "oferta", "reducir"],
+        emotion: ["feliz", "triste", "contento", "enojado", "cansado", "emocionado", "nervioso", "aburrido"],
+        location: ["donde esta", "direccion", "cerca", "lejos", "aqui", "alli", "al lado"],
+        time_ask: ["que hora", "a que hora", "manana", "hoy", "ahora", "tarde", "temprano"],
+        food: ["pizza", "cafe", "cerveza", "pollo", "ensalada", "pan", "agua", "vino", "carne", "pescado", "postre", "tarta", "sopa", "arroz"],
+        weather: ["clima", "lluvia", "sol", "frio", "calor", "nublado", "viento", "nieve"],
+        hobby: ["deporte", "musica", "leer", "pelicula", "jugar", "bailar", "cocinar", "viajar", "futbol"],
+        opinion: ["creo que", "pienso que", "en mi opinion", "me parece", "segun yo"],
         statement: [],
     },
     en: {
         greeting: ["hello", "hi", "hey", "good morning", "good afternoon", "good evening"],
         farewell: ["bye", "goodbye", "see you", "take care"],
-        order: ["i want", "i would like", "i'd like", "can i have", "give me", "a coffee", "a table", "book", "reserve"],
+        order: ["i want", "i would like", "i'd like", "can i have", "give me", "a table", "book", "reserve"],
         question: ["where", "when", "how", "what", "which", "why", "can", "do you", "is there", "?"],
         thanks: ["thanks", "thank you", "appreciate"],
         agree: ["yes", "sure", "of course", "perfect", "alright", "okay", "great", "fine"],
         describe: ["i have", "i am", "i feel", "it hurts", "i need", "i'm looking"],
+        price: ["price", "how much", "cost", "expensive", "cheap", "euros", "dollars"],
+        help: ["i don't understand", "i don't know", "help", "help me", "difficult", "confused", "explain"],
+        complain: ["bad", "horrible", "terrible", "i don't like", "too much", "worst"],
+        preference: ["i prefer", "i like more", "i'd rather", "better", "instead of"],
+        negotiate: ["discount", "cheaper", "deal", "offer", "lower price"],
+        emotion: ["happy", "sad", "angry", "tired", "excited", "bored", "nervous", "worried"],
+        location: ["where is", "address", "near", "far", "here", "there", "direction", "next to"],
+        time_ask: ["what time", "at what time", "tomorrow", "today", "now", "late", "early"],
+        food: ["pizza", "coffee", "beer", "chicken", "salad", "bread", "water", "wine", "meat", "fish", "dessert", "cake", "soup", "rice"],
+        weather: ["weather", "rain", "sun", "cold", "hot", "cloudy", "wind", "snow", "sunny"],
+        hobby: ["sport", "music", "read", "movie", "play", "dance", "cook", "travel", "football", "soccer", "game"],
+        opinion: ["i think", "i believe", "in my opinion", "it seems", "i feel that"],
         statement: [],
     },
     fr: {
         greeting: ["bonjour", "salut", "bonsoir", "coucou", "comment allez"],
         farewell: ["au revoir", "a bientot", "a plus", "salut", "bonne journee"],
-        order: ["je voudrais", "je veux", "je prends", "donnez-moi", "un cafe", "une table", "reserver"],
+        order: ["je voudrais", "je veux", "je prends", "donnez-moi", "une table", "reserver"],
         question: ["ou", "quand", "comment", "combien", "quel", "pourquoi", "est-ce que", "?"],
         thanks: ["merci", "merci beaucoup", "je vous remercie"],
         agree: ["oui", "bien sur", "d'accord", "parfait", "volontiers", "exactement"],
         describe: ["j'ai", "je suis", "j'ai mal", "je me sens", "je cherche", "il me faut"],
+        price: ["prix", "combien coute", "cher", "pas cher", "euros", "gratuit"],
+        help: ["je ne comprends pas", "je ne sais pas", "aide", "aidez-moi", "difficile", "expliquer"],
+        complain: ["mauvais", "horrible", "terrible", "je n'aime pas", "trop", "pire"],
+        preference: ["je prefere", "j'aime mieux", "plutot", "je voudrais plutot", "au lieu de"],
+        negotiate: ["reduction", "moins cher", "remise", "offre", "promotion"],
+        emotion: ["heureux", "triste", "content", "fache", "fatigue", "excite", "nerveux", "ennuye"],
+        location: ["ou est", "adresse", "pres", "loin", "ici", "la-bas", "a cote"],
+        time_ask: ["quelle heure", "a quelle heure", "demain", "aujourd'hui", "maintenant", "tard", "tot"],
+        food: ["pizza", "cafe", "biere", "poulet", "salade", "pain", "eau", "vin", "viande", "poisson", "dessert", "gateau", "soupe", "riz"],
+        weather: ["meteo", "pluie", "soleil", "froid", "chaud", "nuageux", "vent", "neige"],
+        hobby: ["sport", "musique", "lire", "film", "jouer", "danser", "cuisiner", "voyager", "football"],
+        opinion: ["je crois que", "je pense que", "a mon avis", "il me semble", "selon moi"],
         statement: [],
     },
     de: {
         greeting: ["hallo", "guten tag", "guten morgen", "guten abend", "hi", "servus"],
         farewell: ["tschuss", "auf wiedersehen", "bis bald", "mach's gut"],
-        order: ["ich mochte", "ich hatte gerne", "ich nehme", "geben sie mir", "einen kaffee", "einen tisch", "reservieren"],
+        order: ["ich mochte", "ich hatte gerne", "ich nehme", "geben sie mir", "einen tisch", "reservieren"],
         question: ["wo", "wann", "wie", "was", "welch", "warum", "konnen", "gibt es", "haben sie", "?"],
         thanks: ["danke", "vielen dank", "dankeschon"],
         agree: ["ja", "klar", "naturlich", "perfekt", "einverstanden", "gut", "genau"],
         describe: ["ich habe", "ich bin", "mir tut", "ich fuhle", "ich brauche", "ich suche"],
+        price: ["preis", "wie viel kostet", "teuer", "billig", "gunstig", "euros", "kostenlos"],
+        help: ["ich verstehe nicht", "ich weiss nicht", "hilfe", "hilf mir", "schwierig", "erklaren"],
+        complain: ["schlecht", "schrecklich", "furchtbar", "ich mag nicht", "zu viel", "schlimm"],
+        preference: ["ich bevorzuge", "ich mag lieber", "lieber", "ich hatte lieber", "anstatt"],
+        negotiate: ["rabatt", "gunstiger", "angebot", "billiger", "reduziert"],
+        emotion: ["glucklich", "traurig", "wutend", "mude", "aufgeregt", "gelangweilt", "nervos", "besorgt"],
+        location: ["wo ist", "adresse", "nah", "weit", "hier", "dort", "richtung", "neben"],
+        time_ask: ["wie spat", "um wie viel uhr", "morgen", "heute", "jetzt", "spat", "fruh"],
+        food: ["pizza", "kaffee", "bier", "hahnchen", "salat", "brot", "wasser", "wein", "fleisch", "fisch", "nachtisch", "kuchen", "suppe", "reis"],
+        weather: ["wetter", "regen", "sonne", "kalt", "heiss", "wolkig", "wind", "schnee"],
+        hobby: ["sport", "musik", "lesen", "film", "spielen", "tanzen", "kochen", "reisen", "fussball"],
+        opinion: ["ich glaube", "ich denke", "meiner meinung nach", "es scheint mir", "ich finde"],
         statement: [],
     },
 };
@@ -112,10 +195,23 @@ function detectIntent(message: string, language: SupportedLang): Intent {
     const map = KEYWORD_MAP[language];
     const check = (intent: Intent) => map[intent].some(kw => normalized.includes(normalizeText(kw)));
 
+    // Specific intents first (more precise matches)
     if (check("greeting")) return "greeting";
     if (check("farewell")) return "farewell";
     if (check("thanks")) return "thanks";
+    if (check("help")) return "help";
+    if (check("negotiate")) return "negotiate";
+    if (check("price")) return "price";
+    if (check("complain")) return "complain";
+    if (check("preference")) return "preference";
+    if (check("emotion")) return "emotion";
+    if (check("opinion")) return "opinion";
     if (check("order")) return "order";
+    if (check("food")) return "food";
+    if (check("hobby")) return "hobby";
+    if (check("weather")) return "weather";
+    if (check("location")) return "location";
+    if (check("time_ask")) return "time_ask";
     if (check("describe")) return "describe";
     if (check("question")) return "question";
     if (check("agree")) return "agree";
@@ -125,7 +221,7 @@ function detectIntent(message: string, language: SupportedLang): Intent {
 // ============================================================
 // SCENARIO-BASED RESPONSE POOLS
 // ============================================================
-const SCENARIO_RESPONSES: Record<string, Record<SupportedLang, Record<Intent, string[]>>> = {
+const SCENARIO_RESPONSES: Record<string, Record<SupportedLang, Partial<Record<Intent, string[]>>>> = {
     cafe: {
         es: {
             greeting: ["¡Hola! Bienvenido a nuestro café. ¿Qué le puedo ofrecer? ☕", "¡Buenas! ¿Quiere sentarse aquí o en la terraza? 🐢"],
@@ -516,6 +612,18 @@ const GENERIC_RESPONSES: Record<SupportedLang, Record<Intent, string[]>> = {
         thanks: ["¡De nada! Siempre es un gusto ayudar. 🐢", "¡Gracias a ti! ¿Necesitas algo más?"],
         agree: ["¡Genial! Sigamos adelante.", "¡Perfecto! Vamos bien."],
         describe: ["Entiendo. Cuéntame más.", "Muy bien, eso es interesante. ¿Hay algo más?"],
+        price: ["El precio es muy razonable. ¿Quieres saber el total? 💰", "¡Buena pregunta sobre el precio! Te digo enseguida."],
+        help: ["¡No te preocupes! Estoy aquí para ayudarte. Vamos paso a paso. 🐢", "Tranquilo, es normal. Te lo explico de otra manera."],
+        complain: ["Entiendo tu frustración. Vamos a solucionarlo. 🐢", "Lo siento mucho. ¿Cómo puedo mejorarlo?"],
+        preference: ["¡Buena elección! Eso es muy popular.", "Entiendo tu preferencia. Es una opción excelente."],
+        negotiate: ["Hmm, déjame ver qué puedo hacer por ti. 🤔", "Tenemos algunas ofertas especiales hoy."],
+        emotion: ["¡Me alegra que te sientas así! 😊", "Entiendo cómo te sientes. Estoy aquí para ti. 🐢"],
+        location: ["Está muy cerca de aquí. Te explico cómo llegar.", "¡Conozco bien ese lugar! Sigue todo recto."],
+        time_ask: ["Son las diez en punto. ¿Tienes prisa?", "Todavía hay tiempo. No te preocupes. 🐢"],
+        food: ["¡Mmm, eso suena delicioso! Buena elección. 🍽️", "¡Excelente gusto! ¿Quieres algo más para acompañar?"],
+        weather: ["¡Hoy hace un día estupendo! ☀️", "El clima está agradable hoy. Perfecto para practicar."],
+        hobby: ["¡Qué interesante! Cuéntame más sobre eso. 🎯", "¡Genial! Es un hobby muy divertido."],
+        opinion: ["¡Interesante punto de vista! ¿Por qué piensas eso? 🤔", "Respeto tu opinión. Cuéntame más."],
         statement: ["Interesante. ¿Quieres continuar practicando?", "Muy bien dicho. ¡Sigue así! 🐢"],
     },
     en: {
@@ -526,6 +634,18 @@ const GENERIC_RESPONSES: Record<SupportedLang, Record<Intent, string[]>> = {
         thanks: ["You're welcome! Always happy to help. 🐢", "Thank you too! Need anything else?"],
         agree: ["Great! Let's keep going.", "Perfect! We're doing well."],
         describe: ["I understand. Tell me more.", "Alright, that's interesting. Anything else?"],
+        price: ["The price is very reasonable. Want to know the total? 💰", "Great question about the price! Let me check."],
+        help: ["Don't worry! I'm here to help. Let's take it step by step. 🐢", "That's totally okay. Let me explain it differently."],
+        complain: ["I understand your frustration. Let's fix that. 🐢", "I'm sorry about that. How can I make it better?"],
+        preference: ["Great choice! That's very popular.", "I understand your preference. Excellent option!"],
+        negotiate: ["Hmm, let me see what I can do for you. 🤔", "We have some special offers today."],
+        emotion: ["I'm glad you feel that way! 😊", "I understand how you feel. I'm here for you. 🐢"],
+        location: ["It's very close to here. Let me explain how to get there.", "I know that place well! Just go straight ahead."],
+        time_ask: ["It's ten o'clock. Are you in a hurry?", "There's still time. Don't worry. 🐢"],
+        food: ["Mmm, that sounds delicious! Great choice. 🍽️", "Excellent taste! Would you like something to go with that?"],
+        weather: ["It's a wonderful day today! ☀️", "The weather is lovely today. Perfect for practicing!"],
+        hobby: ["How interesting! Tell me more about that. 🎯", "That's awesome! What a fun hobby."],
+        opinion: ["Interesting point of view! Why do you think that? 🤔", "I respect your opinion. Tell me more."],
         statement: ["Interesting. Would you like to keep practicing?", "Well said. Keep it up! 🐢"],
     },
     fr: {
@@ -536,6 +656,18 @@ const GENERIC_RESPONSES: Record<SupportedLang, Record<Intent, string[]>> = {
         thanks: ["De rien ! Toujours un plaisir d'aider. 🐢", "Merci à vous ! Besoin d'autre chose ?"],
         agree: ["Super ! Continuons.", "Parfait ! On avance bien."],
         describe: ["Je comprends. Dites-m'en plus.", "D'accord, c'est intéressant. Autre chose ?"],
+        price: ["Le prix est très raisonnable. Voulez-vous connaître le total ? 💰", "Bonne question sur le prix ! Je vérifie."],
+        help: ["Ne vous inquiétez pas ! Je suis là pour vous aider. Allons-y étape par étape. 🐢", "C'est tout à fait normal. Laissez-moi vous expliquer autrement."],
+        complain: ["Je comprends votre frustration. Réglons ça ensemble. 🐢", "Je suis désolé. Comment puis-je améliorer les choses ?"],
+        preference: ["Excellent choix ! C'est très populaire.", "Je comprends votre préférence. C'est une option excellente."],
+        negotiate: ["Hmm, laissez-moi voir ce que je peux faire. 🤔", "Nous avons des offres spéciales aujourd'hui."],
+        emotion: ["Je suis content que vous vous sentiez ainsi ! 😊", "Je comprends ce que vous ressentez. Je suis là pour vous. 🐢"],
+        location: ["C'est tout près d'ici. Je vous explique comment y aller.", "Je connais bien cet endroit ! Allez tout droit."],
+        time_ask: ["Il est dix heures. Vous êtes pressé ?", "Il y a encore du temps. Ne vous inquiétez pas. 🐢"],
+        food: ["Mmm, ça a l'air délicieux ! Bon choix. 🍽️", "Excellent goût ! Voulez-vous un accompagnement ?"],
+        weather: ["Il fait un temps magnifique aujourd'hui ! ☀️", "Le temps est agréable. Parfait pour pratiquer !"],
+        hobby: ["Comme c'est intéressant ! Dites-m'en plus. 🎯", "Super ! C'est un hobby très amusant."],
+        opinion: ["Point de vue intéressant ! Pourquoi pensez-vous ça ? 🤔", "Je respecte votre opinion. Dites-m'en plus."],
         statement: ["Intéressant. Voulez-vous continuer à pratiquer ?", "Bien dit. Continuez comme ça ! 🐢"],
     },
     de: {
@@ -546,12 +678,28 @@ const GENERIC_RESPONSES: Record<SupportedLang, Record<Intent, string[]>> = {
         thanks: ["Gern geschehen! Immer gerne. 🐢", "Danke Ihnen! Brauchen Sie noch etwas?"],
         agree: ["Super! Machen wir weiter.", "Perfekt! Wir machen gute Fortschritte."],
         describe: ["Verstehe. Erzählen Sie mir mehr.", "In Ordnung, das ist interessant. Noch etwas?"],
+        price: ["Der Preis ist sehr günstig. Möchten Sie den Gesamtpreis wissen? 💰", "Gute Frage zum Preis! Ich schaue nach."],
+        help: ["Keine Sorge! Ich bin hier, um zu helfen. Schritt für Schritt. 🐢", "Das ist völlig normal. Ich erkläre es anders."],
+        complain: ["Ich verstehe Ihre Frustration. Wir lösen das zusammen. 🐢", "Das tut mir leid. Wie kann ich es verbessern?"],
+        preference: ["Tolle Wahl! Das ist sehr beliebt.", "Ich verstehe Ihre Vorliebe. Ausgezeichnete Option!"],
+        negotiate: ["Hmm, mal sehen, was ich tun kann. 🤔", "Wir haben heute einige Sonderangebote."],
+        emotion: ["Es freut mich, dass Sie sich so fühlen! 😊", "Ich verstehe, wie Sie sich fühlen. Ich bin für Sie da. 🐢"],
+        location: ["Das ist ganz in der Nähe. Ich erkläre Ihnen den Weg.", "Ich kenne den Ort gut! Gehen Sie einfach geradeaus."],
+        time_ask: ["Es ist zehn Uhr. Haben Sie es eilig?", "Es ist noch genug Zeit. Keine Sorge. 🐢"],
+        food: ["Mmm, das klingt lecker! Tolle Wahl. 🍽️", "Ausgezeichneter Geschmack! Möchten Sie eine Beilage dazu?"],
+        weather: ["Heute ist ein wunderschöner Tag! ☀️", "Das Wetter ist angenehm. Perfekt zum Üben!"],
+        hobby: ["Wie interessant! Erzählen Sie mir mehr darüber. 🎯", "Super! Das ist ein tolles Hobby."],
+        opinion: ["Interessanter Standpunkt! Warum denken Sie das? 🤔", "Ich respektiere Ihre Meinung. Erzählen Sie mehr."],
         statement: ["Interessant. Möchten Sie weiter üben?", "Gut gesagt. Weiter so! 🐢"],
     },
 };
 
 function getResponsePool(scenarioId: string, language: SupportedLang): Record<Intent, string[]> {
-    return SCENARIO_RESPONSES[scenarioId]?.[language] || GENERIC_RESPONSES[language];
+    const scenario = SCENARIO_RESPONSES[scenarioId]?.[language];
+    const generic = GENERIC_RESPONSES[language];
+    if (!scenario) return generic;
+    // Merge: scenario-specific intents override generic, but fallback to generic for missing intents
+    return { ...generic, ...scenario } as Record<Intent, string[]>;
 }
 
 // ============================================================
@@ -732,6 +880,152 @@ export function getEmojiGame(language: string, seed: number): string {
 }
 
 // ============================================================
+// CONVERSATION HELPERS (Memory, Entities, Templates)
+// ============================================================
+
+/**
+ * Kullanıcının mesajından isim, yiyecek, eşya gibi bilgileri cımbızla çeker.
+ */
+function extractEntities(message: string, language: SupportedLang): { name: string | null; items: string[] } {
+    const normalized = normalizeText(message);
+    let name: string | null = null;
+    const items: string[] = [];
+
+    // Ad yakalama (Basit desenler)
+    const namePatterns = {
+        es: [/\bme llamo ([a-z]+)\b/i, /\bsoy ([a-z]+)\b/i, /\bmi nombre es ([a-z]+)\b/i],
+        en: [/\bim ([a-z]+)\b/i, /\bi am ([a-z]+)\b/i, /\bmy name is ([a-z]+)\b/i, /\bcall me ([a-z]+)\b/i],
+        fr: [/\bje m appelle ([a-z]+)\b/i, /\bje suis ([a-z]+)\b/i, /\bmon nom est ([a-z]+)\b/i],
+        de: [/\bich bin ([a-z]+)\b/i, /\bich heisse ([a-z]+)\b/i, /\bmein name ist ([a-z]+)\b/i],
+    };
+
+    const patterns = namePatterns[language];
+    for (const p of patterns) {
+        const match = message.match(p);
+        if (match && match[1] && match[1].length > 2) {
+            name = match[1].charAt(0).toUpperCase() + match[1].slice(1).toLowerCase();
+            break;
+        }
+    }
+
+    // Yiyecek/Eşya yakalama (KEYWORD_MAP içindeki food listesini kullanabiliriz)
+    const foodKeywords = KEYWORD_MAP[language].food;
+    for (const food of foodKeywords) {
+        if (normalized.includes(food)) {
+            items.push(food);
+        }
+    }
+
+    return { name, items };
+}
+
+/**
+ * Konuşma hafızasını günceller.
+ */
+function updateMemory(
+    message: string,
+    intent: Intent,
+    currentMemory: ConversationMemory | undefined,
+    language: SupportedLang
+): ConversationMemory {
+    const mem = currentMemory || createEmptyMemory();
+    const entities = extractEntities(message, language);
+
+    const newMemory: ConversationMemory = {
+        ...mem,
+        lastIntent: intent,
+        turnCount: mem.turnCount + 1,
+    };
+
+    if (entities.name) newMemory.userName = entities.name;
+    if (entities.items.length > 0) {
+        newMemory.mentionedItems = [...new Set([...mem.mentionedItems, ...entities.items])].slice(-5);
+        newMemory.topicStack = [...new Set([...mem.topicStack, "food"])].slice(-3);
+    }
+
+    // Basit duygu analizi
+    if (intent === "emotion" || intent === "complain") {
+        const neg = ["triste", "bad", "mauvais", "schlecht", "terrible", "horrible", "angry", "fache", "wutend"];
+        if (neg.some(w => normalizeText(message).includes(w))) {
+            newMemory.userMood = "negative";
+        } else {
+            newMemory.userMood = "positive";
+        }
+    }
+
+    return newMemory;
+}
+
+/**
+ * {userName}, {item} gibi etiketleri hafızadaki gerçek verilerle doldurur.
+ */
+function fillTemplate(text: string, memory: ConversationMemory, language: SupportedLang): string {
+    let result = text;
+    
+    // İsim doldurma
+    if (memory.userName) {
+        const greets = { es: "Hola ", en: "Hello ", fr: "Salut ", de: "Hallo " };
+        result = result.replace(/¡?Hola!?|Hello|Bonjour|Hallo/i, `${greets[language]}${memory.userName}`);
+    }
+
+    // Eşya/Yiyecek doldurma
+    if (memory.mentionedItems.length > 0) {
+        const lastItem = memory.mentionedItems[memory.mentionedItems.length - 1];
+        result = result.replace(/\{item\}/g, lastItem);
+    } else {
+        // Fallback if no item mentioned
+        const fallbacks = { es: "esto", en: "it", fr: "ceci", de: "das" };
+        result = result.replace(/\{item\}/g, fallbacks[language]);
+    }
+
+    return result;
+}
+
+/**
+ * Diyaloğu sürdürmek için rastgele ama bağlamla uyumlu bir soru ekler.
+ */
+function getFollowUp(intent: Intent, language: SupportedLang, memory: ConversationMemory): string {
+    const followUps: Record<SupportedLang, Partial<Record<Intent, string[]>>> = {
+        es: {
+            order: ["¿Algo más para acompañar?", "¿Desea la cuenta también?", "¿Le gusta mucho ese plato?"],
+            greeting: ["¿Cómo te va hoy?", "¿En qué puedo ayudarte?", "¿Buscas algo específico?"],
+            food: ["¿Es tu comida favorita?", "¿Prefieres dulce o salado?", "¿Has probado nuestra especialidad?"],
+            emotion: ["¿Quieres contarme más?", "¿Puedo ayudarte con eso?", "¿Desde cuándo te sientes así?"],
+            opinion: ["¿Por qué piensas eso?", "¿Es un tema que te interesa mucho?", "¿Qué opinan tus amigos?"],
+            statement: ["Cuéntame más, por favor.", "¿Y qué pasó después?", "¿Qué piensas hacer ahora?"],
+        },
+        en: {
+            order: ["Anything else with that?", "Would you like the bill too?", "Do you like that dish a lot?"],
+            greeting: ["How's it going today?", "How can I help you?", "Are you looking for something specific?"],
+            food: ["Is that your favorite food?", "Do you prefer sweet or savory?", "Have you tried our specialty?"],
+            emotion: ["Want to tell me more?", "Can I help you with that?", "How long have you felt this way?"],
+            opinion: ["Why do you think that?", "Is this a topic you're interested in?", "What do your friends think?"],
+            statement: ["Tell me more, please.", "And what happened next?", "What are you planning to do now?"],
+        },
+        fr: {
+            order: ["Autre chose avec ça ?", "Voulez-vous l'addition aussi ?", "Aimez-vous beaucoup ce plat ?"],
+            greeting: ["Comment ça va aujourd'hui ?", "Comment puis-je vous aider ?", "Cherchez-vous quelque chose de précis ?"],
+            food: ["Est-ce votre plat préféré ?", "Préférez-vous le sucré ou le salé ?", "Avez-vous goûté notre spécialité ?"],
+            emotion: ["Voulez-vous m'en dire plus ?", "Puis-je vous aider ?", "Depuis quand vous sentez-vous ainsi ?"],
+            opinion: ["Pourquoi pensez-vous cela ?", "Est-ce un sujet qui vous intéresse ?", "Qu'en pensent vos amis ?"],
+            statement: ["Dites-m'en plus, s'il vous plaît.", "Et que s'est-il passé ensuite ?", "Que comptez-vous faire maintenant ?"],
+        },
+        de: {
+            order: ["Noch etwas dazu?", "Möchten Sie auch die Rechnung?", "Mögen Sie dieses Gericht sehr?"],
+            greeting: ["Wie geht es dir heute?", "Wie kann ich dir helfen?", "Suchst du etwas Bestimmtes?"],
+            food: ["Ist das dein Lieblingsessen?", "Magst du es lieber süß oder salzig?", "Hast du unsere Spezialität probiert?"],
+            emotion: ["Möchtest du mir mehr erzählen?", "Kann ich dir dabei helfen?", "Seit wann fühlst du dich so?"],
+            opinion: ["Warum denkst du das?", "Interessiert dich dieses Thema sehr?", "Was denken deine Freunde darüber?"],
+            statement: ["Erzähl mir bitte mehr.", "Und was ist dann passiert?", "Was hast du jetzt vor?"],
+        },
+    };
+
+    const pool = followUps[language][intent] || followUps[language].statement || ["..."];
+    const seed = computeSeed(intent + (memory.userName || ""), memory.turnCount);
+    return "\n\n" + choose(pool, seed);
+}
+
+// ============================================================
 // MAIN API: createShelldonIntro
 // ============================================================
 export function createShelldonIntro(
@@ -756,6 +1050,7 @@ export function createShelldonIntro(
             mood: "happy",
             completedObjectives: [],
             correction: null,
+            updatedMemory: createEmptyMemory(),
         };
     }
 
@@ -771,6 +1066,7 @@ export function createShelldonIntro(
             mood: "thinking",
             completedObjectives: [],
             correction: null,
+            updatedMemory: createEmptyMemory(),
         };
     }
 
@@ -792,6 +1088,7 @@ export function createShelldonIntro(
         mood: "happy",
         completedObjectives: [],
         correction: null,
+        updatedMemory: createEmptyMemory(),
     };
 }
 
@@ -799,14 +1096,17 @@ export function createShelldonIntro(
 // MAIN API: createShelldonReply
 // ============================================================
 export function createShelldonReply(options: ReplyOptions): ShelldonOfflineReply {
-    const { scenario, language, userMessage, turnIndex, completedObjectives, practiceMode } = options;
+    const { scenario, language, userMessage, turnIndex, completedObjectives, practiceMode, memory } = options;
     const l = lang(language);
     const seed = computeSeed(userMessage, turnIndex);
 
     // 1. Intent Detection
     const intent = detectIntent(userMessage, l);
 
-    // 2. Format response based on practiceMode
+    // 2. Memory Update
+    const updatedMemory = updateMemory(userMessage, intent, memory, l);
+
+    // 3. Format response based on practiceMode
     let message = "";
     const pool = getResponsePool(scenario.id, l);
     
@@ -819,26 +1119,38 @@ export function createShelldonReply(options: ReplyOptions): ShelldonOfflineReply
             de: `Interessant! Weiter so. 🌟 Versuch nun, diese Emojis zu benennen: ${emojiSet}`,
         };
         message = vocabRepliesByLang[l];
-    } else if (practiceMode === "grammar") {
-        message = choose(pool[intent] || pool.statement, seed);
-        // Grammar mode provides stricter corrections and focuses less on roleplay objectives
     } else {
-        message = choose(pool[intent] || pool.statement, seed);
+        // Normal or Grammar mode
+        const rawMessage = choose(pool[intent] || pool.statement, seed);
+        
+        // Şablon doldurma (e.g. {item} -> "pizza")
+        message = fillTemplate(rawMessage, updatedMemory, l);
+
+        // Persona ve Hafıza bazlı dokunuşlar
+        if (updatedMemory.persona === "friendly" && updatedMemory.userName) {
+            message = `¡${updatedMemory.userName}! ` + message;
+        }
+
+        // Takip sorusu ekleme (Diyaloğu canlı tutmak için)
+        if (practiceMode !== "grammar" && !userMessage.includes("?")) {
+            message += getFollowUp(intent, l, updatedMemory);
+        }
     }
 
-    // 3. Check objectives (only in speaking/grammar)
+    // 4. Check objectives (only in speaking/grammar)
     let newObjectives: number[] = [];
     if (practiceMode !== "vocab") {
         newObjectives = checkObjectives(userMessage, scenario, l, completedObjectives);
     }
     const allCompleted = [...new Set([...completedObjectives, ...newObjectives])];
 
-    // 4. Grammar correction
+    // 5. Grammar correction
     const correction = findCorrection(userMessage, l);
 
+    // 6. Celebration if objective completed
     if (newObjectives.length > 0 && practiceMode !== "vocab") {
-        const objectives = scenario.objectives[l] || [];
-        const completedNames = newObjectives.map(i => objectives[i]).filter(Boolean);
+        const scenarioObjectives = scenario.objectives[l] || [];
+        const completedNames = newObjectives.map(i => scenarioObjectives[i]).filter(Boolean);
         const celebrateByLang: Record<SupportedLang, string> = {
             es: `\n\n✨ ¡Objetivo completado! ${completedNames.join(", ")}`,
             en: `\n\n✨ Objective completed! ${completedNames.join(", ")}`,
@@ -848,20 +1160,22 @@ export function createShelldonReply(options: ReplyOptions): ShelldonOfflineReply
         message += celebrateByLang[l];
     }
 
-    // 6. Determine mood
+    // 7. Determine mood
     let mood: ShelldonOfflineReply["mood"] = "neutral";
     if (practiceMode === "vocab") mood = "happy";
     else if (newObjectives.length > 0) mood = "happy";
     else if (correction) mood = "thinking";
     else if (intent === "greeting") mood = "happy";
     else if (intent === "farewell") mood = "sad";
-    else if (intent === "question") mood = "thinking";
+    else if (intent === "question" || intent === "opinion") mood = "thinking";
+    else if (updatedMemory.userMood === "negative") mood = "sad";
 
     return {
         message,
         mood,
         completedObjectives: allCompleted,
         correction,
+        updatedMemory,
     };
 }
 

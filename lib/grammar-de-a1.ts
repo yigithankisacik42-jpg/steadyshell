@@ -36,7 +36,11 @@ const unit501Grammar: GermanGrammarUnit = {
                     ["Sie", "zi", "Siz (Kibar/Resmi)", "Saygı duyduğun, tanımadığın kişilere (Her zaman BÜYÜK harfle yazılır!)."]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich bin hier.", tr: "Ben buradayım. (🔊 İh bin hia.)" },
+                { de: "Du bist mein Freund.", tr: "Sen benim arkadaşımsın. (🔊 Du bist mayn froynt.)" },
+                { de: "Wer ist sie?", tr: "O (kadın) kim? (🔊 Vea ist zi?)" }
+            ]
         },
         {
             id: "de-sein-intro",
@@ -53,7 +57,11 @@ const unit501Grammar: GermanGrammarUnit = {
                     ["sie / Sie", "sind", "zi zint", "Onlar ...-dirler / Siz ...-siniz (Kibar)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich bin Lehrer.", tr: "Ben öğretmenim. (🔊 İh bin lera.)" },
+                { de: "Das ist ein Buch.", tr: "Bu bir kitaptır. (🔊 Das ist ayn buh.)" },
+                { de: "Wir sind glücklich.", tr: "Biz mutluyuz. (🔊 Vir zint glük-lih.)" }
+            ]
         },
         {
             id: "de-sein-examples",
@@ -129,19 +137,29 @@ const unit502Grammar: GermanGrammarUnit = {
                     ["100", "hundert", "hundat (veya einhundert)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Wie alt ist der Mann? Er ist achtzig Jahre alt.", tr: "Adam kaç yaşında? O seksen (80) yaşında. (🔊 ... ea ist aht-tsih...) " },
+                { de: "Das Ticket kostet vierzig Euro.", tr: "Bilet kırk (40) Euro tutuyor. (🔊 ... fiyatsih ...)" }
+            ]
         },
         {
             id: "de-numbers-logic",
             title: "🏗️ BÖLÜM 3: SAYILARI BİRLEŞTİRME (Lego Zamanı)",
             explanation: "Hadi şu \"Tersten okuma\" formülünü uygulayalım. Unutma, sayılar Almancada bitişik yazılır.\n\n**Örnek: 24 (Yirmi Dört)**\n• Önce 4'ü al: vier (fiya)\n• Araya \"ve\" koy: und (unt)\n• Sonra 20'yi ekle: zwanzig (tsvantsih)\n• Sonuç: vierundzwanzig (🔊 fiya-unt-tsvantsih)\n\n**Örnek: 35 (Otuz Beş)**\n• 5 (fünf) + und + 30 (dreißig)\n• Sonuç: fünfunddreißig (🔊 fünf-unt-draysih)\n\n**Örnek: 99 (Doksan Dokuz)**\n• 9 (neun) + und + 90 (neunzig)\n• Sonuç: neunundneunzig (🔊 noyn-unt-noyntsih)\n\n⚠️ **MİNİK BİR KURAL:** \"1\" sayısı normalde \"eins\" (ayns) olarak okunur. Ama 21, 31, 41 gibi sayılarda araya girerken sondaki 's' harfini atar!\n• 21 = **ein**undzwanzig (ein**s**undzwanzig DEĞİL!)",
-            examples: []
+            examples: [
+                { de: "vierundzwanzig (24)", tr: "Yirmi dört (🔊 fiya unt tsvantsih)" },
+                { de: "einundfünfzig (51)", tr: "Elli bir (🔊 ayn unt fünfsih)" },
+                { de: "dreiundsiebzig (73)", tr: "Yetmiş üç (🔊 dray unt ziipsih)" }
+            ]
         },
         {
             id: "de-haben-numbers-mix",
             title: "🎬 BÖLÜM 4: HABEN VE SAYILARI BİRLEŞTİRİYORUZ",
             explanation: "Şimdi bu iki konuyu birleştirip tam bir Alman gibi varlıklarımızı sayalım.\n\n🏢 **Senaryo:** Ofiste arkadaşınla sohbet ediyorsun ve elindeki kitaplardan/paradan bahsediyorsunuz.\n\n**👦 Sen:** Ich brauche ein Buch. Hast du Bücher? (Bir kitaba ihtiyacım var. Senin kitapların var mı?) 🔊 İh brauhe ayn buh. Hast du büha?\n\n**👨 Arkadaşın:** Ja, ich habe viele Bücher. Ich habe fünfunddreißig (35) Bücher zu Hause! (Evet, benim çok kitabım var. Evde 35 kitabım var!) 🔊 Ya, ih habe fiile büha. İh habe fünf-unt-draysih büha tsu hauze!\n\n**👦 Sen:** Wow! Und Geld? Ich habe nur zweiundzwanzig (22) Euro. (Vay canına! Peki ya para? Benim sadece 22 eurom var.) 🔊 Vav! Unt gelt? İh habe nua tsvay-unt-tsvantsih oyro.\n\n**👨 Arkadaşın:** Kein Problem, ich habe hundert (100) Euro. Ich lade dich ein! (Problem değil, benim 100 eurom var. Sana ısmarlıyorum!) 🔊 Kayn problem, ih habe hundat oyro. İh lade dih ayn!\n\n🧠 **KOÇUN BÜYÜK UYARISI (Yaş Söyleme Tuzağı):**\nİngilizcede \"I am 25 years old\" (Sein fiili) kullanılır. Türkçede \"Ben 25 yaşındayım\" denir. Almancada yaş söylerken ASLA Haben (Sahip olmak) KULLANILMAZ! İngilizcedeki gibi \"Sein\" (Olmak) kullanılır.\n• ❌ **YANLIŞ:** Ich habe 25 Jahre alt. (Ben 25 yaşa sahibim denmez!)\n• ✅ **DOĞRU:** Ich bin fünfundzwanzig (25) Jahre alt. (🔊 İh bin fünf-unt-tsvantsih yare alt.)",
-            examples: []
+            examples: [
+                { de: "Hast du fünf Euro?", tr: "Beş euron var mı? (🔊 Hast du fünf oyro?)" },
+                { de: "Ich habe zweiundneunzig Bücher.", tr: "Doksan iki (92) kitabım var. (🔊 ... tsvay unt noyntsih ...)" }
+            ]
         }
     ],
     exercises: [
@@ -167,7 +185,10 @@ const unit503Grammar: GermanGrammarUnit = {
             id: "de-pos-intro",
             title: "📜 MASTER REHBER: İYELİK ARTIKELLERİ (Benim, Senin, Onun)",
             explanation: "Almancada bir eşyaya \"Benim\" demek için iki şeye karar vermen gerekir:\n1. **Sahibi kim?** (Ben mi, Sen mi, O mu?)\n2. **Eşyanın (Nesnenin) artikeli ne?** (der/das mı, yoksa die mi?)",
-            examples: []
+            examples: [
+                { de: "Mein Vater ist hier.", tr: "Benim babam burada. (🔊 Mayn fata ist hia.)" },
+                { de: "Wo ist dein Auto?", tr: "Senin araban nerede? (🔊 Vo ist dayn auto?)" }
+            ]
         },
         {
             id: "de-pos-roots",
@@ -187,7 +208,10 @@ const unit503Grammar: GermanGrammarUnit = {
                     ["Sie (Siz - Kibar)", "Ihr", "ia", "Sizin (Kibar - Büyük harf!)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Das ist sein Hund.", tr: "Bu onun (erkeğin) köpeği. (🔊 Das ist zayn hunt.)" },
+                { de: "Ihre Katze ist sehr süß.", tr: "Onun (kadının) kedisi çok tatlı. (🔊 irö katsö ...)" }
+            ]
         },
         {
             id: "de-pos-endings",
@@ -202,7 +226,10 @@ const unit503Grammar: GermanGrammarUnit = {
                     ["Onun (K)", "ihr Hund", "ihr Auto", "ihre Katze", "ihre Bücher"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Meine Tasche ist klein.", tr: "Benim çantam küçük. (🔊 Maynö taşö ist klayn.)" },
+                { de: "Unsere Kinder spielen.", tr: "Bizim çocuklarımız oynuyorlar. (🔊 Unzarö kinda...)" }
+            ]
         },
         {
             id: "de-pos-examples",
@@ -221,7 +248,10 @@ const unit503Grammar: GermanGrammarUnit = {
             id: "de-pos-dialogue",
             title: "🎬 BÖLÜM 4: KISA BİR DİYALOG (Kayıp Eşya Bürosunda)",
             explanation: "🏢 **Senaryo:** Ofiste bir cüzdan (das Portemonnaie) ve bir çanta (die Tasche) bulundu.\n\n**👦 Sen:** Entschuldigung, ist das deine Tasche? (Afedersin, bu senin çantan mı? -> die Tasche) 🔊 Entşuldigung, ist das daynö taşö?\n\n**👨 Lukas:** Nein, das ist nicht meine Tasche. Das ist ihre Tasche. (*Anna'yı gösterir*) (Hayır, o benim çantam değil. O onun [Anna'nın] çantası.) 🔊 Nayn, das ist niht maynö taşö. Das ist irö taşö.\n\n**👦 Sen:** Okay. Und das Portemonnaie? Ist das dein Portemonnaie? (Tamam. Peki cüzdan? Bu senin cüzdanın mı? -> das Portemonnaie) 🔊 Okey. Unt das portmone? İst das dayn portmone?\n\n**👨 Lukas:** Ja! Das ist mein Portemonnaie! Danke! (Evet! O benim cüzdanım! Teşekkürler!) 🔊 Ya! Das ist mayn portmone! Dankö!",
-            examples: []
+            examples: [
+                { de: "Ist das dein Portemonnaie?", tr: "Bu senin cüzdanın mı? (🔊 İst das dayn port-mone?)" },
+                { de: "Nein, bu benim çantam değil.", tr: "Hayır, bu benim çantam değil. (🔊 Nayn, das ist niht maynö taşö.)" }
+            ]
         }
     ],
     exercises: [
@@ -270,7 +300,10 @@ const unit504Grammar: GermanGrammarUnit = {
                     ["einfach / schwer", "ayn-fah / şvea", "Kolay (Basit) / Zor (Ağır)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Das Wetter ist heute heiß.", tr: "Hava bugün sıcak. (🔊 ... hays.)" },
+                { de: "Das Buch ist billig, aber gut.", tr: "Kitap ucuz ama iyi. (🔊 ... bil-lih ...)" }
+            ]
         },
         {
             id: "de-sehr-zu",
@@ -285,7 +318,10 @@ const unit504Grammar: GermanGrammarUnit = {
             id: "de-adj-dialogue",
             title: "🎬 BÖLÜM 4: KISA BİR DİYALOG (Ev Ararken)",
             explanation: "🏢 **Senaryo:** Almanya'da ev kiralayacaksın ve emlakçı (Lukas) ile bir evi geziyorsunuz. Önceki derste öğrendiğimiz \"Benim/Senin\" (mein/dein) kelimelerini de işin içine katıyoruz!\n\n**👨 Lukas:** Schau mal, das ist das Haus. Es ist sehr groß und neu! (Bak, bu ev. O çok büyük ve yeni!) 🔊 Şau mal, das ist das haus. Es ist zea groos unt noy!\n\n**👦 Sen:** Ja, das Haus ist schön. Aber ist es teuer? (Evet, ev güzel. Ama pahalı mı?) 🔊 Ya, das haus ist şön. Aba ist es toya?\n\n**👨 Lukas:** Nein, es ist billig. Und dein Zimmer ist sehr groß. (Hayır, ucuz. Ve senin odan çok büyük.) 🔊 Nayn, es ist bil-lih. Unt dayn tsima ist zea groos.\n\n**👦 Sen:** Super! Aber das Bad (Banyo) ist zu klein. (Süper! Ama banyo aşırı küçük.) 🔊 Zuper! Aba das baat ist tsu klayn.\n\n🚀 **KOÇUN SIFAT GÖREVİ (Şimdi Sen Niteliyorsun)**\nDostum, artık Almancada eşyaların ve insanların nasıl olduğunu en temiz şekilde anlatabiliyorsun! Şimdi tüm öğrendiklerimizi (Benim kelimesi + sein fiili + baharat + zıt sıfat) tek bir cümlede birleştirmeni istiyorum.\nBana şu cümleyi Almanca olarak kur ve yüksek sesle oku:\n\n*\"Benim arabam (das Auto) çok hızlıdır.\"*\n*(İpuçları: Benim arabam (das olduğu için e almaz) + ist + çok + hızlı)*",
-            examples: []
+            examples: [
+                { de: "Mein Zimmer ist sehr groß.", tr: "Odam çok büyük. (🔊 Mayn tsima ist zea groos.)" },
+                { de: "Die Schule ist zu alt.", tr: "Okul aşırı eski. (🔊 Di şulö ist tsu alt.)" }
+            ]
         }
     ],
     exercises: [
@@ -319,7 +355,10 @@ const unit505Grammar: GermanGrammarUnit = {
                     ["das", "das", "Nötr (Neutral)", "Bebekler, hayvan yavruları, bazı nesneler", "das Kind (Çocuk), das Auto (Araba)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Der Mann ist groß.", tr: "Adam uzundur. (🔊 Dea man ist groos.)" },
+                { de: "Das Auto ist neu.", tr: "Araba yenidir. (🔊 Das auto ist noy.)" }
+            ]
         },
         {
             id: "de-art-indef",
@@ -333,19 +372,28 @@ const unit505Grammar: GermanGrammarUnit = {
                     ["die (Dişi)", "eine", "aynö", "Orijinali 'die' olduğu için sonuna +e alır!", "eine Tasche (Bir çanta)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich habe ein Problem.", tr: "Bir problemim var. (🔊 İh habe ayn problem.)" },
+                { de: "Das ist eine Blume.", tr: "Bu bir çiçektir. (🔊 Das ist aynö blumö.)" }
+            ]
         },
         {
             id: "de-art-compare",
             title: "🆚 BÖLÜM 3: KARŞILAŞTIRMA (Farkı Hisset)",
             explanation: "Hadi aynı kelimeyi hem belirli (Bilinen) hem de belirsiz (Herhangi bir) olarak cümlede kullanalım ki mantık tam otursun.\n\n**Senaryo 1: Erkek Kelime (der Apfel - Elma)**\n• 🔊 İh esse aynen apföl. -> Ben bir elma yiyorum. (Herhangi bir elma, masadaki elmalardan biri)\n• 🔊 İh esse den apföl. -> Ben (o) elmayı yiyorum. (Senin getirdiğin, belirli olan o elma)\n*(Not: 'der' ve 'ein' nesne durumunda 'den' ve 'einen' olur, bu sonraki konunun sürprizi ama mantığı anlaman için harika bir örnektir!)*\n\n**Senaryo 2: Nötr Kelime (das Buch - Kitap)**\n• Das ist ein Buch. -> 🔊 Das ist ayn buh. (Bu bir kitaptır. -> Genel bir bilgi)\n• Das Buch ist sehr gut! -> 🔊 Das buh ist zea gut! (O/Bu kitap çok iyidir! -> Belirli, okuduğum kitap)\n\n**Senaryo 3: Dişi Kelime (die Frau - Kadın)**\n• Da ist eine Frau. -> 🔊 Da ist aynö frau. (Orada bir kadın var. -> Tanımadığım biri)\n• Die Frau ist meine Mutter. -> 🔊 Di frau ist maynö muta. (O kadın benim annemdir. -> Belirli kişi)",
-            examples: []
+            examples: [
+                { de: "Hier ist ein Apfel. Der Apfel ist rot.", tr: "İşte bir elma. Elma kırmızıdır." },
+                { de: "Ich sehe ein Buch. Das Buch ist alt.", tr: "Bir kitap görüyorum. Kitap eskidir." }
+            ]
         },
         {
             id: "de-art-dialogue",
             title: "🎬 BÖLÜM 4: KISA BİR DİYALOG (Alışverişte)",
             explanation: "**👦 Sen:** Entschuldigung, ich brauche einen Stift. (Afedersiniz, bir kaleme ihtiyacım var.) 🔊 Entşuldigung, ih brauhö aynön ştift. (der Stift = Erkek)\n\n**👨 Satıcı:** Hier ist ein Stift. (İşte burada bir kalem var.) 🔊 Hia ist ayn ştift.\n\n**👦 Sen:** Nein, der Stift ist blau. Ich brauche einen roten Stift. (Hayır, bu/o kalem mavi. Benim kırmızı bir kaleme ihtiyacım var.) 🔊 Nayn, dea ştift ist blau. İh brauhö aynön rotön ştift.\n\n**👨 Satıcı:** Ah, okay. Und brauchen Sie auch eine Tasche? (Ah, tamam. Ve bir çantaya da ihtiyacınız var mı?) 🔊 A, okey. Unt brauhön zi auh aynö taşö? (die Tasche = Dişi)\n\n**👦 Sen:** Ja, danke. Die Tasche ist sehr schön! (Evet, teşekkürler. Bu/o çanta çok güzel!) 🔊 Ya, dankö. Di taşö ist zea şön!",
-            examples: []
+            examples: [
+                { de: "Ich brauche eine Tasche.", tr: "Bir çantaya ihtiyacım var." },
+                { de: "Die Tasche ist sehr schön.", tr: "Çanta çok güzel." }
+            ]
         }
     ],
     exercises: [
@@ -388,7 +436,10 @@ const unit506Grammar: GermanGrammarUnit = {
             id: "de-neg-nicht",
             title: "🛑 BÖLÜM 2: \"NICHT\" KULLANIMI (Fiil, Sıfat ve Özel İsimler)",
             explanation: "Eğer ortada \"bir (ein)\" nesne yoksa; yani bir sıfatı, bir eylemi (fiili) veya \"Benimki, Ahmet, O (der/die/das)\" gibi belirli/özel bir şeyi olumsuz yapıyorsan her zaman **NICHT** (niht diye okunur) kullanırsın! Bu İngilizcedeki \"Not\" kelimesinin tam karşılığıdır.\n\n**1. Sıfatları Olumsuz Yaparken (Hemen sıfatın önüne gelir):**\n• Das Auto ist schnell. (Araba hızlıdır.)\n• Das Auto ist nicht schnell. (Araba hızlı değildir.) 🔊 Das auto ist niht şnel.\n\n**2. Fiilleri/Eylemleri Olumsuz Yaparken (Genelde cümlenin sonuna gelir):**\n• Ich arbeite. (Ben çalışıyorum.)\n• Ich arbeite nicht. (Ben çalışmıyorum.) 🔊 İh arbaytö niht.\n\n**3. Özel İsimleri veya \"Benim/Senin\" Kelimelerini Olumsuz Yaparken:**\n• Das ist mein Buch. -> Das ist nicht mein Buch. (Bu benim kitabım değil.) 🔊 Das ist niht mayn buh.\n• Das ist Lukas. -> Das ist nicht Lukas. (Bu Lukas değil.)",
-            examples: []
+            examples: [
+                { de: "Das ist nicht mein Auto.", tr: "Bu benim arabam değil. (🔊 Das ist niht mayn auto.)" },
+                { de: "Er lacht nicht.", tr: "O gülmüyor. (🔊 Ea laht niht.)" }
+            ]
         },
         {
             id: "de-neg-compare",
@@ -402,13 +453,19 @@ const unit506Grammar: GermanGrammarUnit = {
                     ["Kişi Örneği", "Das ist keine Frau. (Bu bir kadın değil, bu bir adam!)", "Das ist nicht meine Frau! (Bu benim karım değil! - Belirli Kişi)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Das ist kein Hund, das ist eine Katze.", tr: "Bu bir köpek değil, bu bir kedi." },
+                { de: "Ich habe nicht gearbeitet.", tr: "Çalışmadım." }
+            ]
         },
         {
             id: "de-neg-dialogue",
             title: "🎬 BÖLÜM 4: KISA BİR DİYALOG (Polis Çevirmesinde)",
             explanation: "👮 **Senaryo:** Almanya'da arabayla gidiyorsun ve polis seni durdurdu.\n\n**👮‍♂️ Polis:** Guten Tag! Ist das Ihr Auto? 🔊 Gutön taag! İst das ia auto? (İyi günler! Bu sizin (kibar) arabanız mı? -> Belirli bir sahiplik)\n\n**👦 Sen:** Nein, das ist nicht mein Auto. Es ist das Auto von meinem Freund. 🔊 Nayn, das ist niht mayn auto. Es ist das auto fon maynöm froynt. (Hayır, bu benim arabam değil. O, arkadaşımın arabası. -> Sahipliği inkar ettin -> nicht)\n\n**👮‍♂️ Polis:** Haben Sie ein Problem? 🔊 Habön zi ayn problem? (Bir probleminiz mi var?)\n\n**👦 Sen:** Nein, ich habe kein Problem. Aber mein Freund fährt nicht schnell. Er ist sehr langsam! 🔊 Nayn, ih habe kayn problem. Aba mayn froynt fert niht şnel. Ee ist zea lang-zam! (Hayır, hiçbir problemim yok [Problem isimdir -> kein]. Ama arkadaşım hızlı sürmüyor [Hızlı sıfattır -> nicht]. O çok yavaş!)\n\n🚀 **KOÇUN \"HAYIR!\" GÖREVİ (Senin Sıran)**\nDostum, artık nerede neye \"Hayır / Yok\" diyeceğini kusursuzca biliyorsun! Şimdi öğrendiğin bu iki kuralı test etme vakti. Bana şu iki cümleyi Almanca olarak kur ve yüksek sesle oku:\n\n*1. \"Bu bir kitap (ein Buch) değil.\"* -> (İpucu: 'ein' kelimesinin başına ne geliyordu?)\n*2. \"Kitap (das Buch) iyi (gut) değil.\"* -> (İpucu: 'İyi' bir sıfattır, sıfatları neyle olumsuz yapıyorduk?)",
-            examples: []
+            examples: [
+                { de: "Haben Sie ein Problem?", tr: "Bir probleminiz mi var?" },
+                { de: "Nein, ich habe kein Problem.", tr: "Hayır, bir problemim yok." }
+            ]
         }
     ],
     exercises: [
@@ -442,7 +499,10 @@ const unit507Grammar: GermanGrammarUnit = {
             id: "de-prep-am",
             title: "📅 BÖLÜM 2: \"AM\" KULLANIMI (Günler ve Günün Bölümleri)",
             explanation: "**Kural:** Saatlerden biraz daha geniş bir zaman dilimine, yani 24 saatlik periyotlara çıktığımızda **am** kullanırız. Haftanın günlerinde, tarihlerde ve günün bölümlerinde (sabah, akşam) bu edat devreye girer.\n\n**1. Haftanın Günleri:**\n• am Montag (Pazartesi günü) -> 🔊 am mon-taag\n• am Freitag (Cuma günü) -> 🔊 am fray-taag\n• am Wochenende (Hafta sonu) -> 🔊 am vohön-endö\n\n**2. Günün Bölümleri:**\n• am Morgen (Sabahleyin) -> 🔊 am morgön\n• am Nachmittag (Öğleden sonra) -> 🔊 am nah-mit-taag\n• am Abend (Akşamleyin) -> 🔊 am abönt\n\n🚨 **KOÇUN BÜYÜK İSTİSNASI (Bunu Sınavlarda Hep Sorarlar!):**\nGünün bütün bölümleri \"am\" alır ama GECE (Nacht) kelimesi bu kuralı bozar! Geceleyin demek için \"am Nacht\" DENMEZ.\n👉 in der Nacht (Geceleyin) -> 🔊 in dea naht",
-            examples: []
+            examples: [
+                { de: "Wir treffen uns am Samstag.", tr: "Cumartesi günü buluşuyoruz." },
+                { de: "Am Morgen trinke ich Tee.", tr: "Sabahleyin çay içerim." }
+            ]
         },
         {
             id: "de-prep-im",
@@ -464,13 +524,19 @@ const unit507Grammar: GermanGrammarUnit = {
                     ["IM", "🌍 Geniş Zaman", "Aylar, Mevsimler", "im Sommer (Yazın), im März (Martta)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Der Kurs ist am Dienstag um 10 Uhr.", tr: "Kurs Salı günü saat 10'dadır." },
+                { de: "Im Winter ist es kalt.", tr: "Kışın hava soğuktur." }
+            ]
         },
         {
             id: "de-prep-dialogue",
             title: "🎬 BÖLÜM 5: KISA BİR DİYALOG (Randevu Ayarlama)",
             explanation: "📅 **Senaryo:** Alman arkadaşın Lukas ile kahve içmek için plan yapıyorsun. Bütün edatları aynı diyalogda birleştirelim!\n\n**👨 Lukas:** Hallo! Hast du Zeit? Trinken wir einen Kaffee? 🔊 Halo! Hast du tsayt? Trinkön via aynön kafe? (Selam! Zamanın var mı? Bir kahve içelim mi?)\n\n**👦 Sen:** Gerne! Wann? Am Wochenende? 🔊 Gernö! Van? Am vohön-endö? (Memnuniyetle! Ne zaman? Hafta sonu (am) mu?)\n\n**👨 Lukas:** Nein, ich arbeite am Wochenende. Hast du am Mittwoch Zeit? 🔊 Nayn, ih arbaytö am vohön-endö. Hast du am mit-voh tsayt? (Hayır, ben hafta sonu çalışıyorum. Çarşamba günü (am) zamanın var mı?)\n\n**👦 Sen:** Ja, am Mittwoch ist super. Um wie viel Uhr? 🔊 Ya, am mit-voh ist zuper. Um vi fiil ua? (Evet, Çarşamba süper. Saat kaçta?)\n\n**👨 Lukas:** Um 15 Uhr? Am Nachmittag. 🔊 Um fümpf-tsen ua? Am nah-mit-taag. (Saat 15'te (um)? Öğleden sonra (am).)\n\n**👦 Sen:** Perfekt. Bis dann! 🔊 Perfekt. Bis dan! (Mükemmel. Görüşürüz!)\n\n🚀 **KOÇUN AJANDA GÖREVİ (Planı Sen Yapıyorsun)**\nDostum, artık Almanlar gibi saniyesi saniyesine plan yapmayı öğrendin! Nereye \"am\", nereye \"um\" geleceğini şıp diye biliyorsun. Şimdi senden tek bir cümle içinde iki edatı birden kullanmanı istiyorum.\nBana şu cümleyi Almanca olarak kur ve yüksek sesle oku:\n\n*\"Ben Pazartesi günü (Montag) saat 8'de (8 Uhr) çalışıyorum (arbeite).\"*\n*(İpuçları: Ich arbeite + [Pazartesi edatı] Montag + [Saat edatı] 8 Uhr.)*",
-            examples: []
+            examples: [
+                { de: "Ich habe am Mittwoch um 15 Uhr Zeit.", tr: "Çarşamba günü saat 15'te vaktim var." },
+                { de: "Bis dann!", tr: "Görüşürüz! / O zamana kadar!" }
+            ]
         }
     ],
     exercises: [
@@ -496,13 +562,19 @@ const unit508Grammar: GermanGrammarUnit = {
             id: "de-plural-intro",
             title: "👑 BÖLÜM 1: ÇOĞULLARIN TEK PATRONU (\"die\")",
             explanation: "Kelimeleri tekil olarak öğrenirken \"der Tisch (masa), das Auto (araba), die Tasche (çanta)\" diye 3 farklı artikel ezberlemiştik.\n\n🎯 **ALTIN KURAL:** Kelimenin orijinal artikeli ne olursa olsun, o kelime ÇOĞUL olduğu an artikeli otomatik olarak \"die\" ye dönüşür! Çoğul dünyasının tek patronu \"die\"dir.\n• der Tisch (Masa) -> die Tische (Masalar)\n• das Auto (Araba) -> die Autos (Arabalar)\n• die Frau (Kadın) -> die Frauen (Kadınlar)\n\n🚫 **BÜYÜK TUZAK (ein/eine):** Hatırlarsan \"Bir\" demek için ein/eine kullanıyorduk. \"Bir arabalar\" diyemeyeceğin için, çoğul kelimelerin önüne ASLA ein/eine gelmez! Ya sadece kelimeyi söylersin (Autos) ya da \"die Autos\" (O arabalar) dersin.",
-            examples: []
+            examples: [
+                { de: "Das sind Autos.", tr: "Bunlar arabalardır. (🔊 Das zint autos.)" },
+                { de: "Die Tische sind neu.", tr: "Masalar yenidir." }
+            ]
         },
         {
             id: "de-plural-types",
             title: "🧱 BÖLÜM 2: 5 FARKLI ÇOĞUL EKİ (Lego Parçaları)",
             explanation: "Almancada kelimelerin sonuna gelen 5 farklı çoğul eki vardır. Bazen de kelimenin içindeki sesli harf noktalanır (a -> ä, o -> ö, u -> ü). Buna **Umlaut** denir.\nİşte en çok karşılaşacağın 5 grup:\n\n**1. Sadece \"-e\" Ekleyenler (En Yaygın Grup)**\nGenellikle \"der\" ve \"das\" artikelli kelimeler bu eği alır. Bazen içindeki harf noktalanır.\n• der Hund (Köpek) -> die Hunde (🔊 di hundö) = Köpekler\n• der Tisch (Masa) -> die Tische (🔊 di tişö) = Masalar\n• der Stuhl (Sandalye) -> die Stühle (🔊 di ştülö) = Sandalyeler (Dikkat: u, ü oldu!)\n\n**2. \"-er\" Ekleyenler (Bebekler ve Eşyalar)**\nGenellikle \"das\" artikelli kısa kelimeler bu eği alır ve içindeki harf hep noktalanır.\n• das Kind (Çocuk) -> die Kinder (🔊 di kinda) = Çocuklar\n• das Buch (Kitap) -> die Bücher (🔊 di büha) = Kitaplar\n• der Mann (Adam) -> die Männer (🔊 di mena) = Adamlar\n\n**3. \"-n\" veya \"-en\" Ekleyenler (Kadınların Grubu)**\nEğer kelime \"die\" artikeline sahipse ve sonu \"e\" ile bitiyorsa %99 bu eği alır!\n• die Frau (Kadın) -> die Frauen (🔊 di frau-ön) = Kadınlar\n• die Tasche (Çanta) -> die Taschen (🔊 di taşön) = Çantalar\n• die Blume (Çiçek) -> die Blumen (🔊 di blumön) = Çiçekler\n\n**4. \"-s\" Ekleyenler (Yabancılar Grubu)**\nİngilizceden, Fransızcadan gelen veya sonu a, i, o, u ile biten kelimeler bu eği alır.\n• das Auto (Araba) -> die Autos (🔊 di autos) = Arabalar\n• das Sofa (Kanepe) -> die Sofas (🔊 di zofas) = Kanepeler\n• das Hotel (Otel) -> die Hotels (🔊 di hotels) = Oteller\n\n**5. Hiç Ek Almayanlar (Hayalet Grup)**\nKelimenin sonu zaten -er, -en, -el ile bitiyorsa, sonuna bir daha ek getirilmez. Çoğul olduğunu sadece başındaki \"die\" artikelinden anlarız! (Bazen içindeki harf noktalanır).\n• der Lehrer (Öğretmen) -> die Lehrer (🔊 di lera) = Öğretmenler (Ek yok!)\n• der Apfel (Elma) -> die Äpfel (🔊 di epföl) = Elmalar (Sadece a, ä oldu)\n• das Fenster (Pencere) -> die Fenster (🔊 di fensta) = Pencereler",
-            examples: []
+            examples: [
+                { de: "die Kinder", tr: "Çocuklar (🔊 di kinda)" },
+                { de: "die Frauen", tr: "Kadınlar (🔊 di frau-ön)" }
+            ]
         },
         {
             id: "de-plural-table",
@@ -518,13 +590,19 @@ const unit508Grammar: GermanGrammarUnit = {
                     ["Yok (-)", "Sonu -er, -en, -el bitenler", "der Lehrer (lera)", "die Lehrer (lera)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "die Hotels", tr: "Oteller (🔊 di hotels)" },
+                { de: "die Äpfel", tr: "Elmalar (🔊 di epföl)" }
+            ]
         },
         {
             id: "de-plural-dialogue",
             title: "🎬 BÖLÜM 4: KISA BİR DİYALOG (Ofis Siparişi)",
             explanation: "🏢 **Senaryo:** Ofis için malzeme sipariş ediyorsun. Tekiller ve çoğullar havada uçuşuyor!\n\n**👦 Sen:** Hallo. Ich brauche einen Tisch und einen Stuhl. 🔊 Halo. İh brauhö aynön tiş unt aynön ştuul. (Merhaba. Benim bir masaya ve bir sandalyeye ihtiyacım var.)\n\n**👨 Satıcı:** Nur einen? Wir haben sehr gute Tische und Stühle! 🔊 Nua aynön? Via habön zea gutö tişö unt ştülö! (Sadece bir tane mi? Bizim çok iyi masalarımız ve sandalyelerimiz var! -> Çoğul kullandığı için ein yok!)\n\n**👦 Sen:** Okay. Dann brauche ich drei Tische und fünf Stühle. Haben Sie auch Computer? 🔊 Okey. Dan brauhö ih dray tişö unt fünf ştülö. Habön zi auh kompyuta? (Tamam. O zaman üç masa ve beş sandalyeye ihtiyacım var. Bilgisayarlarınız [Computer: Ek almayan grup] da var mı?)\n\n**👨 Satıcı:** Ja, die Computer sind hier. 🔊 Ya, di kompyuta zint hia. (Evet, bilgisayarlar burada.)\n\n🚀 **KOÇUN KLONLAMA GÖREVİ (Şimdi Sen Çoğaltıyorsun)**\nDostum, Almancada isimleri nasıl çoğaltacağını ve başlarına \"die\" getireceğini çok iyi anladın! Şimdi sana tekil bir cümle veriyorum. Senden bunu tamamen çoğul bir cümleye çevirmeni istiyorum.\n\n*Tekil Cümle: Das ist ein Buch. (Bu bir kitaptır.)*\n*(Hatırlatma: 'ein' kelimesi çoğullarda buharlaşıp yok olur! Buch kelimesi \"-er\" grubundandır ve noktalanır.)*\n\n**Görevin:** Bu cümleyi \"Bunlar kitaplardır.\" (Das sind ...) şeklinde Almanca kur ve yüksek sesle oku!",
-            examples: []
+            examples: [
+                { de: "Haben Sie Computer?", tr: "Bilgisayarlarınız var mı?" },
+                { de: "Das sind Bücher.", tr: "Bunlar kitaplardır." }
+            ]
         }
     ],
     exercises: [
@@ -550,13 +628,19 @@ const unit509Grammar: GermanGrammarUnit = {
             id: "de-syntax-pos2",
             title: "👑 BÖLÜM 1: ALTIN KURAL (Position 2)",
             explanation: "Almancada düz bir cümle kurarken, zamanı ve mekanı ne kadar değiştirirsen değiştir, tek bir kural ASLA değişmez:\n\n🎯 **Çekimlenmiş fiil HER ZAMAN 2. SIRADA (Position 2) yer alır!**\n\n**Lego Formülü (Standart Cümle):**\n1. ÖZNE (Kim?) + 2. FİİL (Eylem) + 3. ZAMAN (Ne zaman?) + 4. NESNE (Ne?)\n\n• Ich + lerne + heute + Deutsch.\n• 🔊 İh lernö hoytö doytş.\n• (Ben bugün Almanca öğreniyorum.)\n\nGördüğün gibi, \"lerne\" (öğreniyorum) fiili kral tahtına, yani 2. sıraya oturdu!",
-            examples: []
+            examples: [
+                { de: "Ich lerne heute Deutsch.", tr: "Bugün Almanca öğreniyorum." },
+                { de: "Er spielt Fußball.", tr: "O futbol oynuyor." }
+            ]
         },
         {
             id: "de-syntax-inverse",
             title: "🔀 BÖLÜM 2: YER DEĞİŞTİRME SİHRİ (Zamanı Başa Almak)",
             explanation: "İşte Alman mantığının en havalı kısmına geldik! Diyelim ki vurguyu değiştirmek istedin ve \"Ben bugün...\" demek yerine \"BUGÜN, ben...\" diye cümleye başlamak istedin.\n\n• **Türkçede:** Bugün ben Almanca öğreniyorum. (Fiil yine sonda).\n• **Almancada:** Zamanı (Heute) 1. sıraya koyarsan, Fiil (lerne) YİNE 2. SIRADA KALMAK ZORUNDADIR! Bu yüzden fiil ile özne yer değiştirir.\n\n**Lego Formülü (Zaman Başta):**\n1. ZAMAN + 2. FİİL + 3. ÖZNE + 4. NESNE\n\n• Heute + lerne + ich + Deutsch.\n• 🔊 Hoytö lernö ih doytş.\n• (Bugün öğreniyorum ben Almanca.) -> Türkçeye çevirince devrik gibi dursa da, Almancada en doğru, en kusursuz ve en yaygın cümle yapısı budur!",
-            examples: []
+            examples: [
+                { de: "Heute lerne ich Deutsch.", tr: "Bugün Almanca öğreniyorum." },
+                { de: "Am Sonntag schlafe ich.", tr: "Pazar günü uyuyorum." }
+            ]
         },
         {
             id: "de-syntax-table",
@@ -570,19 +654,28 @@ const unit509Grammar: GermanGrammarUnit = {
                     ["Fußball (Futbol)", "spiele (oynuyorum)", "ich (ben)", "am Sonntag (Pazar günü).", "Futbol oynuyorum ben Pazar günü."]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Mein Bruder lernt Deutsch.", tr: "Erkek kardeşim Almanca öğreniyor." },
+                { de: "Am Nachmittag trinke ich Kaffee.", tr: "Öğleden sonra kahve içerim." }
+            ]
         },
         {
             id: "de-syntax-questions",
             title: "❓ BÖLÜM 4: SORU CÜMLELERİ (Fiil 1. Sıraya Geçerse Ne Olur?)",
             explanation: "Düz cümlelerde fiil 2. sıradadır. Peki \"Sen Almanca öğreniyor musun?\" diye Evet/Hayır sorusu soracaksak ne yapacağız?\nÇok basit: **Fiili 1. sıraya, cümlenin en başına fırlatacaksın!**\n\n• **Düz:** Du lernst Deutsch. (Sen Almanca öğreniyorsun.)\n• **Soru:** Lernst du Deutsch? (Sen Almanca öğreniyor musun?) 🔊 Lernst du doytş?\n• **Cevap:** Ja, ich lerne Deutsch. (Evet, ben Almanca öğreniyorum.)",
-            examples: []
+            examples: [
+                { de: "Lernst du Deutsch?", tr: "Almanca öğreniyor musun?" },
+                { de: "Spielst du Fußball?", tr: "Futbol oynuyor musun?" }
+            ]
         },
         {
             id: "de-syntax-dialogue",
             title: "🎬 BÖLÜM 5: KISA BİR DİYALOG (Hafta Sonu Planı)",
             explanation: "📅 **Senaryo:** Alman arkadaşın Lukas ile plan yapıyorsun. Cümlelerin dizilişine dikkat et!\n\n**👨 Lukas:** Hallo! Spielst du am Samstag Fußball? 🔊 Halo! Şpiilst du am zamstaag fusbal? (Selam! Cumartesi günü futbol oynuyor musun? -> Fiil başta = Soru)\n\n**👦 Sen:** Nein, ich arbeite am Samstag. 🔊 Nayn, ih arbaytö am zamstaag. (Hayır, ben Cumartesi günü çalışıyorum. -> Özne 1. sırada, Fiil 2. sırada)\n\n**👨 Lukas:** Schade! Und am Sonntag? Hast du Zeit? 🔊 Şaadö! Unt am zontaag? Hast du tsayt? (Yazık/Tüh! Peki Pazar günü? Zamanın var mı? -> Fiil başta = Soru)\n\n**👦 Sen:** Ja! Am Sonntag habe ich Zeit. 🔊 Ya! Am zontaag habö ih tsayt. (Evet! Pazar günü zamanım var. -> Zaman 1. sırada, Fiil 2. sırada, Özne 3. sıraya kaçtı!)\n\n🚀 **KOÇUN MÜHENDİSLİK GÖREVİ (Cümleyi Sen İnşa Ediyorsun)**\nDostum, fiilin 2. sıradaki o sarsılmaz tahtını mükemmel bir şekilde anladın. Şimdi senden bu kuralı uygulamanı istiyorum.\nSana standart bir cümle veriyorum:\n👉 Ich trinke am Morgen Kaffee. (Ben sabahleyin kahve içiyorum.)\n*(İpuçları: trinke = içiyorum, am Morgen = sabahleyin)*\n\n**GÖREVİN:** Bu cümleyi \"Sabahleyin\" (Am Morgen) ile başlatarak yeniden kur ve sesli oku! (Unutma, fiil yerinden kıpırdamaz, özne kaçar!)",
-            examples: []
+            examples: [
+                { de: "Am Sonntag habe ich Zeit.", tr: "Pazar günü vaktim var." },
+                { de: "Ich trinke am Morgen Kaffee.", tr: "Sabahleyin kahve içerim." }
+            ]
         }
     ],
     exercises: [
@@ -647,13 +740,19 @@ const unit510Grammar: GermanGrammarUnit = {
                     ["Ja/Nein", "Wohnst (Yaşıyor)", "du (sen)", "in Berlin?", "Berlin'de yaşıyor musun sen?"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Wo wohnst du?", tr: "Nerede yaşıyorsun?" },
+                { de: "Wie heißt du?", tr: "Adın ne?" }
+            ]
         },
         {
             id: "de-questions-dialogue",
             title: "🎬 BÖLÜM 4: KISA BİR DİYALOG (Sokakta Tanışma)",
             explanation: "🏙️ **Senaryo:** Sokakta biriyle tanışıyorsun. Sorular havada uçuşuyor! (Okurken fiilin nerede olduğuna dikkat et).\n\n**👦 Sen:** Hallo! Wie heißt du? 🔊 Halo! Vi hayst du? (Merhaba! Adın ne? / Nasıl adlandırılırsın? -> W-Sorusu: Fiil 2. sırada)\n\n**👩 Anna:** Ich heiße Anna. Und du? Wer bist du? 🔊 İh haysö Anna. Unt du? Vea bist du? (Benim adım Anna. Ya sen? Sen kimsin? -> W-Sorusu)\n\n**👦 Sen:** Ich bin Yiğithan. Woher kommst du, Anna? 🔊 İh bin Yiğithan. Vo-hea komst du, Anna? (Ben Yiğithan. Nereden geliyorsun Anna? -> W-Sorusu)\n\n**👩 Anna:** Ich komme aus Deutschland. Lernst du Deutsch? 🔊 İh komö aus doytşlant. Lernst du doytş? (Ben Almanya'dan geliyorum. Sen Almanca öğreniyor musun? -> Ja/Nein Sorusu: Fiil 1. sırada!)\n\n**👦 Sen:** Ja, ich lerne Deutsch! Trinken wir einen Kaffee? 🔊 Ya, ih lernö doytş! Trinkön via aynön kafe? (Evet, Almanca öğreniyorum! Bir kahve içelim mi? -> Ja/Nein Sorusu)\n\n🚀 **KOÇUN SORGU GÖREVİ (Dedektif Sensin)**\nDostum, soruların mantığını da cebe indirdik! Fiili ne zaman 2. sırada tutacağını, ne zaman başa fırlatacağını çok iyi biliyorsun. Şimdi senden bu iki kuralı da test edeceğim iki cümle kurmanı istiyorum:\n\n*1. \"Nerede çalışıyorsun?\"* -> (İpucu: Nerede (Wo) + çalışıyorsun (arbeitest) + sen (du))\n*2. \"Çalışıyor musun?\"* -> (İpucu: Sadece evet/hayır bekliyorum, fiili başa fırlat!)",
-            examples: []
+            examples: [
+                { de: "Nerede çalışıyorsun?", tr: "Wo arbeitest du?" },
+                { de: "Arbeitest du?", tr: "Çalışıyor musun?" }
+            ]
         }
     ],
     exercises: [
@@ -694,19 +793,28 @@ const unit511Grammar: GermanGrammarUnit = {
                     ["die Nase", "di nazö", "Burun", "die Nasen (di nazön)"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Mein Kopf ist heiß.", tr: "Başım sıcak / ateşim var." },
+                { de: "Deine Hände sind kalt.", tr: "Ellerin soğuk." }
+            ]
         },
         {
             id: "de-pain-wehtun",
             title: "🤕 BÖLÜM 2: 1. AĞRI YÖNTEMİ (Wehtun - Ağrımak/Acımak)",
             explanation: "Almancada \"Ağrıyor\" demenin en yaygın yolu \"wehtun\" fiilidir. Ama bu fiil çok tuhaftır; ortadan ikiye ayrılır! Cümle kurarken \"weh\" kelimesini koparıp cümlenin EN SONUNA fırlatırız!\n\n🎯 **ALTIN KURAL (Tekil mi, Çoğul mu?):**\nHatırlarsan \"Benim\" derken mein veya meine kullanıyorduk.\n• Ağrıyan yerin TEK BİR TANE ise: \"tut ... weh\" kullanırsın.\n• Ağrıyan yerin ÇOĞULSA (İki gözün, iki bacağın ağrıyorsa): \"tun ... weh\" kullanırsın.\n\n**Lego Formülü:** Benim [Vücut Bölümü] + tut / tun + (varsa başka kelimeler) + weh\n\n**Pratik Yapalım (Tekil Ağrılar):**\n• Mein Kopf tut sehr weh. (Benim başım çok ağrıyor.) 🔊 Mayn kopf tut zea vee.\n• Mein Bauch tut weh. (Karnım ağrıyor.) 🔊 Mayn bauh tut vee.\n• Mein Hals tut weh. (Boğazım ağrıyor.) 🔊 Mayn hals tut vee.\n\n**Pratik Yapalım (Çoğul Ağrılar - Dikkat 'e' eklendi!):**\n• Meine Beine tun weh. (Bacaklarım ağrıyor. -> Çoğul olduğu için meinE ve tuN oldu!) 🔊 Maynö baynö tun vee.\n• Meine Augen tun weh. (Gözlerim ağrıyor.) 🔊 Maynö augön tun vee.",
-            examples: []
+            examples: [
+                { de: "Mein Arm tut weh.", tr: "Kolum ağrıyor." },
+                { de: "Meine Augen tun weh.", tr: "Gözlerim ağrıyor." }
+            ]
         },
         {
             id: "de-pain-schmerzen",
             title: "💊 BÖLÜM 3: 2. AĞRI YÖNTEMİ (Schmerzen haben)",
             explanation: "Almanlar sadece \"Başım ağrıyor\" demezler. Bazen İngilizcedeki \"I have a headache\" mantığıyla \"Ben baş-ağrısına sahibim\" derler.\nBu çok daha kolay bir Lego parçasıdır çünkü fiilimiz sadece bizim eski dostumuz \"haben\" (sahip olmak)!\n\n**Lego Formülü:** Ich habe + [Vücut Bölümü]schmerzen\n*(Sadece ağrıyan organın adını alıp sonuna schmerzen kelimesini yapıştırıyoruz. Hepsi bitişik yazılır!)*\n\n**Pratik Yapalım:**\n• Ich habe Kopfschmerzen. (Baş ağrım var / Başım ağrıyor.) 🔊 İh habö kopf-şmertsen.\n• Ich habe Bauchschmerzen. (Karın ağrım var / Karnım ağrıyor.) 🔊 İh habö bauh-şmertsen.\n• Ich habe Rückenschmerzen. (Sırt ağrım var / Sırtım ağrıyor.) 🔊 İh habö rükön-şmertsen.",
-            examples: []
+            examples: [
+                { de: "Haben Sie Halsschmerzen?", tr: "Boğaz ağrınız mı var?" },
+                { de: "Ich habe Zahnschmerzen.", tr: "Diş ağrım var." }
+            ]
         },
         {
             id: "de-pain-table",
@@ -720,13 +828,19 @@ const unit511Grammar: GermanGrammarUnit = {
                     ["Beine (Bacaklar)", "Meine Beine tun weh.", "Ich habe Beinschmerzen.", "Bacaklarım ağrıyor."]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Mein Rücken tut sehr weh.", tr: "Sırtım çok ağrıyor." },
+                { de: "Ich habe Ohrenschmerzen.", tr: "Kulak ağrım var." }
+            ]
         },
         {
             id: "de-pain-dialogue",
             title: "🎬 BÖLÜM 5: KISA BİR DİYALOG (Doktorda - Beim Arzt)",
             explanation: "🏥 **Senaryo:** Kendini kötü hissediyorsun ve doktora (der Arzt) gittin.\n\n**👨‍⚕️ Doktor:** Guten Morgen! Was fehlt Ihnen? 🔊 Gutön morgön! Vas felt inön? (Günaydın! Neyiniz var? / Şikayetiniz nedir?)\n\n**👦 Sen:** Guten Morgen Herr Doktor. Mir geht es nicht gut. Mein Kopf tut sehr weh. 🔊 Gutön morgön hea doktor. Mia geet es niht gut. Mayn kopf tut zea vee. (Günaydın Doktor Bey. İyi değilim. Başım çok ağrıyor.)\n\n**👨‍⚕️ Doktor:** Haben Sie auch Halsschmerzen? 🔊 Habön zi auh hals-şmertsen? (Aynı zamanda boğaz ağrınız da var mı?)\n\n**👦 Sen:** Ja, mein Hals tut auch weh. Und ich bin sehr müde. 🔊 Ya, mayn hals tut auh vee. Unt ih bin zea müde. (Evet, boğazım da ağrıyor. Ve çok yorgunum.)\n\n**👨‍⚕️ Doktor:** Okay, bleiben Sie zu Hause und trinken Sie viel Wasser. 🔊 Okey, blaybön zi tsu hauzö unt trinkön zi fiil vasa. (Tamam, evde kalın ve bol su için.)\n\n🚀 **KOÇUN HASTA GÖREVİ (Şikayetini Söyle)**\nDostum, Allah korusun ama Almanya'da bir yerin ağrırsa artık kendini aslanlar gibi ifade edebilirsin! Şimdi öğrendiğin bu iki muazzam yöntemi test etme vakti.\nBana şu cümleyi, öğrendiğimiz İKİ FARKLI YÖNTEMLE DE kurmanı ve yüksek sesle okumanı istiyorum:\n\n*\"Benim sırtım (der Rücken) ağrıyor.\"*\n\n1. Yöntem (wehtun fiili ile) -> (İpucu: Mein Rücken...)\n2. Yöntem (haben fiili ile) -> (İpucu: Ich habe...)",
-            examples: []
+            examples: [
+                { de: "Was fehlt Ihnen?", tr: "Neyiniz var?" },
+                { de: "Ich bin krank.", tr: "Hastayım." }
+            ]
         }
     ],
     exercises: [
@@ -761,7 +875,10 @@ const unit512Grammar: GermanGrammarUnit = {
                     ["schwer", "Zor / Ağır", "leicht", "Kolay / Hafif"]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Das Auto ist schnell, aber das Fahrrad ist langsam.", tr: "Araba hızlı ama bisiklet yavaş." },
+                { de: "Ist der Koffer schwer? Nein, er ist leicht.", tr: "Bavul ağır mı? Hayır, hafif." }
+            ]
         },
         {
             id: "de-adj-alt",
@@ -776,7 +893,10 @@ const unit512Grammar: GermanGrammarUnit = {
             id: "de-adj-derece",
             title: "🌶️ BÖLÜM 2: DERECELENDİRME (Sehr vs. Zu)",
             explanation: "Bir şeyin miktarını belirtirken bu iki kelimeyi karıştırma koç!\n\n- **sehr (çok):** Olumlu veya nötr bir 'çok'tur. (Das Essen ist sehr gut - Yemek çok iyi)\n- **zu (fazla/aşırı):** Genellikle olumsuzluk bildirir, 'fazla kaçmış' demektir. (Das Essen ist zu salzig - Yemek fazla tuzlu)",
-            examples: []
+            examples: [
+                { de: "Das Wetter ist sehr schön.", tr: "Hava çok güzel." },
+                { de: "Die Suppe ist zu salzig.", tr: "Çorba aşırı tuzlu." }
+            ]
         }
     ],
     dialogue: {
@@ -833,13 +953,19 @@ const unit513Grammar: GermanGrammarUnit = {
             id: "de-modal-tuzağa-dikkat",
             title: "2. Modal Fiil Çekimi Tuzağı",
             explanation: "Almancada modal fiiller biraz asidir. 'Ich' ve 'Er/Sie/Es' çekimleri her zaman birebir aynıdır!\n\n🚫 **BÜYÜK TUZAK:** Sakın 'Er kannst' veya 'Ich müsse' deme. Doğrusu: *Ich kann / Er kann* ve *Ich muss / Er muss*.",
-            examples: []
+            examples: [
+                { de: "Ich kann heute nicht kommen.", tr: "Bugün gelemem." },
+                { de: "Er muss viel Wasser trinken.", tr: "O bol su içmeli." }
+            ]
         },
         {
             id: "de-modal-koc",
             title: "🕵️ KOÇUN GÖREVİ",
             explanation: "Şimdi Shelldon senin yeteneklerini ve sorumluluklarını merak ediyor. Ona neler yapabildiğini (können) ve bugün neler yapman gerektiğini (müssen) anlat. Ana fiili en sona fırlatmayı unutma!",
-            examples: []
+            examples: [
+                { de: "Kannst du mir helfen?", tr: "Bana yardım edebilir misin?" },
+                { de: "Ich muss jetzt gehen.", tr: "Şimdi gitmem lazım." }
+            ]
         }
     ],
     dialogue: {
@@ -871,20 +997,21 @@ const unit513Grammar: GermanGrammarUnit = {
 // ===== UNIT 514: BERUFE (MESLEKLER) =====
 const unit514Grammar: GermanGrammarUnit = {
     unitId: 514,
-    title: "Meslekler ve Çalışma Hayatı",
+    title: "Almanca A1 Meslekler",
     rules: [
         {
-            id: "de-jobs",
-            title: "1. Mesleklerde Kadın-Erkek Ayrımı",
-            explanation: "Almancada meslek isimleri genellikle cinsiyete göre değişir. İngilizcedeki 'Teacher' gibi her iki cins için aynı değildir.\n\n🎯 **ALTIN KURAL (İsimlerde Cinsiyet):** Kadın meslek sahipleri için ismin sonuna neredeyse her zaman **'-in'** takısı eklenir. Artikel de otomatik olarak **'die'** olur.\n\n- der Lehrer (Erkek öğretmen) $\rightarrow$ die Lehrerin (Kadın öğretmen)\n- der Arzt (Erkek doktor) $\rightarrow$ die Ärztin (Kadın doktor - Umlaut'a dikkat! a $\rightarrow$ ä)",
+            id: "de-jobs-gender",
+            title: "Bölüm 1: Mesleklerde Kadın-Erkek Ayrımı (-in Eki)",
+            explanation: "Türkçede \"Öğretmen\" dediğimizde kişinin kadın mı erkek mi olduğu anlaşılmaz. Ama Almancada bir mesleği icra eden kişinin cinsiyetine göre kelimenin sonuna bir ek gelir!\n\nALTIN KURAL: \n- Mesleği yapan ERKEK ise: Kelime genellikle çıplak kalır ve -er ile biter. Artikeli der'dir.\n- Mesleği yapan KADIN ise: Erkek mesleğinin sonuna -in eki yapıştırılır! Artikeli die'dir.\n\n(Not: Kadın doktor ve kadın aşçı derken kelimenin içindeki harf noktalanır. Bu ufak ama seni anında 'yerli' gibi gösteren bir detaydır!)",
             table: {
-                headers: ["Erkek", "Kadın", "Türkçesi"],
+                headers: ["Erkek (der)", "Okunuşu", "Kadın (die) + in", "Okunuşu", "Türkçe Anlamı"],
                 rows: [
-                    ["der Lehrer", "die Lehrerin", "Öğretmen"],
-                    ["der Arzt", "die Ärztin", "Doktor"],
-                    ["der Student", "die Studentin", "Öğrenci"],
-                    ["der Kellner", "die Kellnerin", "Garson"],
-                    ["der Koch", "die Köchin", "Aşçı"]
+                    ["der Lehrer", "dea leera", "die Lehrerin", "di leerarin", "Öğretmen"],
+                    ["der Kellner", "dea kelna", "die Kellnerin", "di kelnarin", "Garson"],
+                    ["der Entwickler", "dea ent-vikla", "die Entwicklerin", "di ent-viklarin", "Yazılımcı / Geliştirici"],
+                    ["der Student", "dea ştudent", "die Studentin", "di ştudentin", "Üniversite Öğrencisi"],
+                    ["der Arzt", "dea artst", "die Ärztin", "di erts-tin", "Doktor (A -> Ä)"],
+                    ["der Koch", "dea koh", "die Köchin", "di köhin", "Aşçı (O -> Ö)"]
                 ]
             },
             examples: [
@@ -893,40 +1020,43 @@ const unit514Grammar: GermanGrammarUnit = {
             ]
         },
         {
-            id: "de-job-prep",
-            title: "2. Meslek Söylerken Artikel Tuzağı",
-            explanation: "Türkçede 'Ben bir doktorum' diyebiliriz ama Almancada durum farklı.\n\n🎯 **ALTIN KURAL (Artikelsiz Alan):** Mesleğini söylerken önüne 'ein/eine' (bir) getirmene gerek yoktur! Doğrudan mesleği söylersin.\n\n🚫 **BÜYÜK TUZAK:** Sakın 'Ich bin ein Arzt' deme, kulağa sanki dünyadaki herhangi bir rastgele doktormuşsun gibi gelir. 'Ich bin Arzt' en doğrusudur.",
+            id: "de-job-prep-clean",
+            title: "Bölüm 2: Büyük Tuzak (Meslek Söylerken Artikel Yutulur!)",
+            explanation: "İngilizcede: I am a teacher. Türkçede: Ben bir doktorum.\n\nALMANCA ALTIN KURAL: Almanlar mesleklerini söylerken ASLA \"ein\" veya \"eine\" (bir) kelimesini KULLANMAZLAR! Meslekler \"sein\" (ist/bin) fiilinden sonra tamamen çırılçıplak gelir.\n\nYanlış: Ich bin ein Lehrer. \nDoğru: Ich bin Lehrer.",
             examples: [
-                { de: "Ich bin Arzt.", tr: "Ben doktorum." },
-                { de: "Ich arbeite als Verkäufer.", tr: "Satıcı olarak çalışıyorum. ('als' = olarak)" }
+                { de: "Ich bin Lehrer.", tr: "Ben öğretmenim." },
+                { de: "Sie ist Ärztin.", tr: "O (kadın) doktordur." },
+                { de: "Er ist Kellner.", tr: "O (erkek) garsondur." }
             ]
         },
         {
-            id: "de-jobs-koc",
-            title: "🕵️ KOÇUN GÖREVİ",
-            explanation: "Şimdi Shelldon bir İnsan Kaynakları görevlisi olsun. Sana mesleğini soracak. Ona mesleğini artikelsiz söyle ve 'als' (olarak) kelimesini kullanarak nerede çalıştığını anlat!",
-            examples: []
+            id: "de-jobs-mission",
+            title: "Bölüm 3: Koçun Görevi (Şirketini Temsil Et)",
+            explanation: "Dostum, Almanların o meşhur 'meslek tuzağını' başarıyla atlattın. Artık birine ne iş yaptığını söylerken o 'bir (ein/eine)' kelimesini yutman gerektiğini ve kadın/erkek ayrımını nasıl yapacağını çok iyi biliyorsun.\n\nŞimdi senden Steadyshell ofisindeki bir durumu raporlamanı istiyorum.\n\nGörev Cümlen: \"O (Kadın), bir öğretmendir.\"\n(İpuçları: O Kadın (Sie) + dır (ist) + [BİR kelimesini sakın kullanma!] + kadın öğretmen (Lehrer...))",
+            examples: [
+                { de: "Sie ist Lehrerin.", tr: "O öğretmendir (kadın)." }
+            ]
         }
     ],
     dialogue: {
-        scenario: "rendezvous",
-        intro: "Merhaba! Ben İnsan Kaynaklarından Shelldon. Bugün seninle kariyerin hakkında konuşacağız. Was bist du von Beruf? (Mesleğin nedir?) 🐢",
+        scenario: "networking",
+        intro: "Almanya'da bir iş yemeğindesin ve yeni insanlarla tanışıyorsun.\n\nSen: Hallo! Ich bin Yiğithan. Was bist du von Beruf?\nAnna: Hallo Yiğithan! Ich bin Entwicklerin. Und du?\nSen: Super! Ich bin auch Entwickler. Wir sind Kollegen!",
         objectives: {
-            de: ["Mesleğini söyle", "Nerede/Nasıl çalıştığını anlat (als)", "Gelecekte ne olmak istediğini söyle (will)"],
-            tr: ["Mesleğini söyle", "Nerede/Nasıl çalıştığını anlat (als)", "Gelecekte ne olmak istediğini söyle (will)"]
+            de: ["Mesleğini söyle", "Tanışma diyaloğunu tamamla"],
+            tr: ["Mesleğini söyle", "Tanışma diyaloğunu tamamla"]
         },
         suggestedPhrases: {
-            de: ["Ich bin Student.", "Ich arbeite als Lehrer.", "Ich will Arzt werden."],
-            tr: ["Ben öğrenciyim.", "Öğretmen olarak çalışıyorum.", "Doktor olmak istiyorum."]
+            de: ["Ich bin Entwicklerin.", "Ich bin auch Entwickler.", "Er ist Arzt."],
+            tr: ["Ben yazılımcıyım.", "Ben de yazılımcıyım.", "O doktordur."]
         }
     },
     exercises: [
         { question: "Ich bin ___ (öğretmen - kadın).", options: ["Lehrer", "Lehrerin", "Arzt", "Ärztin"], correct: 1, explanation: "Kadın öğretmen 'Lehrerin'dir." },
-        { question: "Er arbeitet ___ Verkäufer.", options: ["als", "wie", "für", "bei"], correct: 0, explanation: "Bir mesleği icra ederken 'als' edatı kullanılır." },
-        { question: "Der ___ (doktor - erkek) ist nett.", options: ["Arzt", "Ärztin", "Lehrer", "Lehrerin"], correct: 0, explanation: "Erkek doktor 'Arzt'dır." },
+        { question: "Meslek söylerken hangisi doğrudur?", options: ["Ich bin ein Arzt.", "Ich bin Arzt.", "Ich habe Arzt.", "Ich Arzt."], correct: 1, explanation: "Mesleklerde genellikle artikel (bir) kullanılmaz." },
+        { question: "Er ist ___ (garson - erkek).", options: ["Kellner", "Kellnerin", "Koch", "Lehrer"], correct: 0, explanation: "Erkek garson 'Kellner'dir." },
+        { question: "Sie ist ___ (doktor - kadın).", options: ["Arzt", "Ärztin", "Student", "Studentin"], correct: 1, explanation: "Kadın doktor 'Ärztin'dir." },
         { question: "Was bist du von ___?", options: ["Arbeit", "Job", "Beruf", "Hobby"], correct: 2, explanation: "'Mesleğin ne?' sorusu 'Was bist du von Beruf?' şeklinde sorulur." },
         { question: "Die ___ (garson - kadın) bringt das Essen.", options: ["Kellner", "Kellnerin", "Koch", "Köchin"], correct: 1, explanation: "Kellnerin = Kadın garson." },
-        { question: "Meslek söylerken hangisi doğrudur?", options: ["Ich bin ein Arzt.", "Ich bin Arzt.", "Ich habe Arzt.", "Ich Arzt."], correct: 1, explanation: "Mesleklerde genellikle artikel (bir) kullanılmaz." },
         { question: "Kadın aşçı hangisidir?", options: ["Koch", "Köchin", "Kochen", "Koche"], correct: 1, explanation: "Koch -> Köchin." },
         { question: "Kadın öğrenci hangisidir?", options: ["Student", "Studentin", "Studium", "Studieren"], correct: 1, explanation: "Student -> Studentin." },
         { question: "Er ist ___ (mühendis).", options: ["Lehrer", "Ingenieur", "Arzt", "Kellner"], correct: 1, explanation: "Ingenieur = Mühendis." },
@@ -961,7 +1091,10 @@ const unit515Grammar: GermanGrammarUnit = {
             id: "de-direction-koc",
             title: "🕵️ KOÇUN GÖREVİ",
             explanation: "Shelldon yolda kaybolmuş bir turist olsun. Ona nereye gittiğini anlat. Şehir mi yoksa bir bina/kişi mi olduğunu düşünerek 'nach' veya 'zu' edatlarını doğru seç!",
-            examples: []
+            examples: [
+                { de: "Ich fahre nach Berlin.", tr: "Berlin'e gidiyorum." },
+                { de: "Kommst du zu mir?", tr: "Bana gelir misin?" }
+            ]
         }
     ],
     dialogue: {
@@ -1018,7 +1151,10 @@ const unit516Grammar: GermanGrammarUnit = {
             id: "de-transport-koc",
             title: "🕵️ KOÇUN GÖREVİ",
             explanation: "Shelldon bir bilet gişesi görevlisi olsun. Ona hangi araçla seyahat edeceğini anlat. 'mit dem' veya 'mit der' kalıplarını doğru kullanmayı unutma!",
-            examples: []
+            examples: [
+                { de: "Ich fahre mit dem Bus zur Arbeit.", tr: "İşe otobüsle gidiyorum." },
+                { de: "Gehen wir zu Fuß?", tr: "Yürüyerek mi gidelim?" }
+            ]
         }
     ],
     dialogue: {
@@ -1082,7 +1218,10 @@ const unit517Grammar: GermanGrammarUnit = {
             id: "de-sep-koc",
             title: "🕵️ KOÇUN GÖREVİ",
             explanation: "Shelldon ile sabah rutinin hakkında konuş. Kaçta kalktığını (aufstehen), ne zaman alışveriş yaptığını (einkaufen) veya kimi aradığını (anrufen) anlat. Parçaları sona fırlatmayı unutma!",
-            examples: []
+            examples: [
+                { de: "Ich rufe dich morgen an.", tr: "Seni yarın arayacağım." },
+                { de: "Wann kaufst du ein?", tr: "Ne zaman alışveriş yaparsın?" }
+            ]
         }
     ],
     dialogue: {
@@ -1139,13 +1278,19 @@ const unit518Grammar: GermanGrammarUnit = {
             id: "de-time-prep",
             title: "2. Zaman Edatları (Am vs Um)",
             explanation: "Zamanla ilgili konuşurken edatları karıştırma koç!\n\n🎯 **ALTIN KURAL:**\n- Saatlerde her zaman **'UM'** kullanılır. (Um 8 Uhr)\n- Günlerde ve günün bölümlerinde **'AM'** kullanılır. (Am Montag, am Morgen)\nException: Nacht (gece) için 'In der Nacht' kullanılır.",
-            examples: []
+            examples: [
+                { de: "Der Film fängt um 20 Uhr an.", tr: "Film saat 20'de başlıyor." },
+                { de: "Am Freitag habe ich frei.", tr: "Cuma günü boşum." }
+            ]
         },
         {
             id: "de-time-koc",
             title: "🕵️ KOÇUN GÖREVİ",
             explanation: "Shelldon seninle randevulaşmak istiyor. Sana saat kaçta buluşabileceğimizi soracak. Ona 'halb' tuzağına düşmeden bir saat söyle ve randevuyu onayla!",
-            examples: []
+            examples: [
+                { de: "Wie spät ist es? Es ist halb drei.", tr: "Saat kaç? Saat iki buçuk." },
+                { de: "Um wie viel Uhr treffen wir uns?", tr: "Saat kaçta buluşuyoruz?" }
+            ]
         }
     ],
     dialogue: {
@@ -1200,7 +1345,10 @@ const unit519Grammar: GermanGrammarUnit = {
             id: "de-weather-koc",
             title: "🕵️ KOÇUN GÖREVİ",
             explanation: "Şimdi Shelldon seninle pencereden dışarı bakıyor. Sana havayı soracak. Ona sadece 'iyi/kötü' deme! Bir sıfat kullan veya yağmur/kar durumunu anlat.",
-            examples: []
+            examples: [
+                { de: "Wie ist das Wetter? Es regnet.", tr: "Hava nasıl? Yağmur yağıyor." },
+                { de: "Es ist heute sonnig ve warm.", tr: "Bugün güneşli ve sıcak." }
+            ]
         }
     ],
     dialogue: {
@@ -1258,13 +1406,19 @@ const unit520Grammar: GermanGrammarUnit = {
                     ["fernsehen", "TV izlemek", "Opa sieht gern fern."]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Ich höre gern Musik.", tr: "Müzik dinlemeyi severim." },
+                { de: "Er sieht am Abend fern.", tr: "O akşamleyin televizyon izler." }
+            ]
         },
         {
             id: "de-gern-koc",
             title: "🕵️ KOÇUN GÖREVİ",
             explanation: "Shelldon senin hobilerini merak ediyor. Ona nelerden hoşlandığını anlat. 'Ich ... gern ...' formülünü kullan ve en az iki hobinden bahset!",
-            examples: []
+            examples: [
+                { de: "Was machst du gern? Ich koche gern.", tr: "Ne yapmayı seversin? Yemek yapmayı severim." },
+                { de: "Ich reise nicht gern.", tr: "Seyahat etmeyi sevmem." }
+            ]
         }
     ],
     dialogue: {
@@ -1467,7 +1621,10 @@ const unit525Grammar: GermanGrammarUnit = {
                     ["schmecken", "tadında olmak (lezzet)", "Es schmeckt mir."]
                 ]
             },
-            examples: []
+            examples: [
+                { de: "Das Haus gehört meinem Vater.", tr: "Ev babama ait." },
+                { de: "Ich danke dir für die Hilfe.", tr: "Yardımın için sana teşekkür ederim." }
+            ]
         }
     ],
     exercises: [
