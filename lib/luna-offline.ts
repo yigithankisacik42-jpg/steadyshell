@@ -5,7 +5,7 @@
  * Stratejisi: Konu tespiti (topic detection) + Statik grammar/vocabulary kartları
  */
 
-type SupportedLang = "es" | "en" | "fr" | "de";
+export type SupportedLang = "es" | "en" | "fr" | "de";
 type Topic = "greeting" | "grammar" | "vocabulary" | "correction" | "scenario" | "general";
 
 export interface ChatMessage {
@@ -22,11 +22,11 @@ export interface LunaOfflineReply {
 // ============================================================
 // LANGUAGE CONFIG
 // ============================================================
-const LANG_NAMES: Record<SupportedLang, { tr: string; native: string }> = {
-    es: { tr: "İspanyolca", native: "Español" },
-    en: { tr: "İngilizce", native: "English" },
-    fr: { tr: "Fransızca", native: "Français" },
-    de: { tr: "Almanca", native: "Deutsch" },
+export const LANG_NAMES: Record<SupportedLang, { tr: string; native: string; flag: string }> = {
+    es: { tr: "İspanyolca", native: "Español", flag: "🇪🇸" },
+    en: { tr: "İngilizce", native: "English", flag: "🇬🇧" },
+    fr: { tr: "Fransızca", native: "Français", flag: "🇫🇷" },
+    de: { tr: "Almanca", native: "Deutsch", flag: "🇩🇪" },
 };
 
 const SUPPORTED: SupportedLang[] = ["es", "en", "fr", "de"];
@@ -100,11 +100,13 @@ const GRAMMAR_CARDS: Record<SupportedLang, GrammarCard[]> = {
         { topic: "Être vs Avoir", keywords: ["etre", "avoir", "to be", "to have", "olmak", "sahip"], explanation: "📝 **Être vs Avoir**\n\n**Être** (olmak): je **suis**, tu **es**, il **est**, nous **sommes**, ils **sont**\n**Avoir** (sahip olmak): j'**ai**, tu **as**, il **a**, nous **avons**, ils **ont**\n\n⚠️ Yaş için 'avoir' kullanılır: J'**ai** 20 ans (20 yaşındayım)", examples: ["Je **suis** (ben ~yım) étudiant", "J'**ai** (bende var/~yaşındayım) 25 ans"] },
         { topic: "Passé Composé", keywords: ["passe compose", "passe", "compose", "geçmiş", "hier"], explanation: "📝 **Passé Composé**\n\navoir/être + participe passé\n\n• J'**ai mangé** (yedim) → avoir + mangé\n• Je **suis allé(e)** (gittim) → être + allé\n\n⚠️ 17 fiil être ile çekilir (aller, venir, partir...)\nÊtre ile çekilenler cinsiyete göre uyum alır: allé/allée", examples: ["J'**ai visité** (ziyaret ettim) Paris", "Elle **est partie** (o gitti - kadın) hier"] },
         { topic: "Articles", keywords: ["article", "le", "la", "les", "un", "une", "des", "tanımlık"], explanation: "📝 **Articles (Tanımlıklar)**\n\n**Belirli**: le (eril), la (dişil), les (çoğul)\n**Belirsiz**: un (eril), une (dişil), des (çoğul)\n\n⚠️ Ünlü ile başlayan kelimelerde: l' (le/la yerine)\nl'eau, l'homme, l'école", examples: ["**Le** (o/bu) livre est sur **la** table", "J'ai acheté **une** (bir) pomme"] },
+        { topic: "Futur Proche", keywords: ["futur proche", "aller", "gelecek", "demain", "prochain"], explanation: "📝 **Futur Proche (Yakın Gelecek)**\n\nAller (çekimli) + Fiil (mastar)\n\n• Je **vais** manger (yiyeceğim)\n• Tu **vas** sortir (çıkacaksın)\n\nKullanım: Planlanmış veya hemen gerçekleşecek eylemler.", examples: ["Je **vais voyager** (seyahat edeceğim) demain", "Nous **allons regarder** (izleyeceğiz) un film"] },
     ],
     de: [
         { topic: "Artikel", keywords: ["artikel", "der", "die", "das", "ein", "eine", "tanımlık"], explanation: "📝 **Artikel (Tanımlıklar)**\n\n**Belirli**: der (eril), die (dişil), das (nötr), die (çoğul)\n**Belirsiz**: ein (eril/nötr), eine (dişil)\n\n⚠️ Almancada her ismin bir cinsiyeti var ve ezberlenmelidir.\nder Mann, die Frau, das Kind", examples: ["**Der** (o/bu) Mann ist groß", "**Eine** (bir) Frau liest **ein** Buch"] },
         { topic: "Verb Conjugation", keywords: ["verb", "fiil", "çekim", "konjugation", "spielen", "machen"], explanation: "📝 **Fiil Çekimi (Präsens)**\n\nSPIELEN (oynamak):\n• ich spiel**e**\n• du spiel**st**\n• er/sie/es spiel**t**\n• wir spiel**en**\n• ihr spiel**t**\n• sie/Sie spiel**en**", examples: ["Ich **spiele** (oynuyorum) Fußball", "Du **spielst** (oynuyorsun) gut"] },
         { topic: "Akkusativ", keywords: ["akkusativ", "accusative", "belirtme", "den", "einen"], explanation: "📝 **Akkusativ (Belirtme Hali)**\n\n⚠️ Sadece eril tanımlık değişir:\nder → **den**, ein → **einen**\n\ndie, das, ein (nötr) değişmez.\n\nNe zaman: Doğrudan nesne (kimi, neyi?)", examples: ["Ich sehe **den** (o) Mann", "Ich kaufe **einen** (bir) Apfel"] },
+        { topic: "Modalverben", keywords: ["modal", "koennen", "muessen", "dürfen", "wollen", "sollen"], explanation: "📝 **Modalverben (Yardımcı Fiiller)**\n\n• **können** (ebilmek)\n• **müssen** (zorunda olmak)\n• **wollen** (istemek)\n\nFormül: Modal (çekimli) + Fiil (Sonda, mastar)\n'Ich **kann** Deutsch **sprechen**' (Almanca konuşabiliyorum)", examples: ["Ich **muss** (zorundayım) arbeiten", "Wir **wollen** (istiyoruz) essen"] },
     ],
 };
 
@@ -155,6 +157,10 @@ const VOCAB_POOLS: Record<SupportedLang, VocabEntry[]> = {
         { word: "droite", translation: "sağ", example: "C'est à **droite** (sağ)." },
         { word: "quartier", translation: "mahalle/semt", example: "C'est un beau **quartier** (mahalle)." },
         { word: "embouteillage", translation: "trafik sıkışıklığı", example: "Il y a un **embouteillage** (trafik) terrible." },
+        { word: "travail", translation: "iş/çalışma", example: "Bon **travail** (iyi iş) !" },
+        { word: "voyage", translation: "seyahat", example: "Bon **voyage** (iyi yolculuklar) !" },
+        { word: "santé", translation: "sağlık", example: "À votre **santé** (şerefe/sağlığınıza) !" },
+        { word: "merci", translation: "teşekkürler", example: "**Merci** (teşekkürler) beaucoup." },
     ],
     de: [
         { word: "Frühstück", translation: "kahvaltı", example: "Das **Frühstück** (kahvaltı) ist um acht Uhr." },
@@ -163,6 +169,10 @@ const VOCAB_POOLS: Record<SupportedLang, VocabEntry[]> = {
         { word: "Bahnhof", translation: "tren istasyonu", example: "Wo ist der **Bahnhof** (tren istasyonu)?" },
         { word: "Umgebung", translation: "çevre/etraf", example: "Die **Umgebung** (çevre) ist wunderschön." },
         { word: "Stau", translation: "trafik sıkışıklığı", example: "Es gibt einen **Stau** (trafik) auf der Autobahn." },
+        { word: "Entschuldigung", translation: "özür dilerim/affedersiniz", example: "**Entschuldigung** (affedersiniz), wo ist das?" },
+        { word: "Viel Glück", translation: "bol şans", example: "**Viel Glück** (bol şans) bei der Prüfung!" },
+        { word: "Willkommen", translation: "hoş geldiniz", example: "**Herzlich Willkommen** (hoş geldiniz)!" },
+        { word: "Tschüss", translation: "hoşça kal", example: "**Tschüss** (hoşça kal), bis bald!" },
     ],
 };
 

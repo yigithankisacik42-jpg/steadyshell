@@ -88,6 +88,43 @@ const HINT_MAP: Record<string, number> = {
     "familia": 3,
     "color": 4,
     "querer": 5,
+
+    // French
+    "salut": 301,
+    "alphabet": 302,
+    "nombres": 303,
+    "famille": 305,
+    "jours": 306,
+    "metier": 308,
+    "corps": 311,
+    "vetements": 312,
+    "nourriture": 313,
+    "boisson": 314,
+    "heure": 315,
+    "meteo": 318,
+    "ville": 320,
+    "restaurant": 326,
+    "animaux": 328,
+
+    // German
+    "hallo": 501,
+    "vorstellen": 501,
+    "zahlen": 502,
+    "familie": 503,
+    "essen": 505,
+    "trinken": 506,
+    "tage": 507,
+    "mobel": 510,
+    "korper": 511,
+    "kleidung": 512,
+    "tiere": 513,
+    "berufe": 514,
+    "stadt": 515,
+    "uhrzeit": 518,
+    "wetter": 519,
+    "hobbys": 520,
+    "artikel": 526,
+    "akkusativ": 527,
 };
 
 /**
