@@ -27,7 +27,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getLanguageByCode } from "@/lib/languages";
 import { findUnitByLessonId } from "@/lib/curriculum";
 import { useShelldon } from "@/contexts/shelldon-context";
-import { getKnowledgeHint, type KnowledgeResult } from "@/lib/knowledge-center";
 
 const LANGUAGES = [
     { code: "fr", name: "Fransızca", flag: "🇫🇷" },
@@ -158,7 +157,6 @@ export default function ShelldonPage() {
     
     // UI states
     const [showCommandMenu, setShowCommandMenu] = useState(false);
-    const [knowledgeHint, setKnowledgeHint] = useState<KnowledgeResult | null>(null);
     const messagesContainerRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -303,9 +301,6 @@ export default function ShelldonPage() {
         setShelldonState("thinking");
         setIsLoading(true);
 
-        // Check for knowledge hint
-        const kHint = getKnowledgeHint(messageText);
-        setKnowledgeHint(kHint);
 
         // --- COMMAND INTERCEPTION ---
         if (messageText.startsWith("/clear")) {
@@ -858,36 +853,6 @@ export default function ShelldonPage() {
                             </div>
                         )}
 
-                        {/* Smart Knowledge Hint (Static Guide Integration) */}
-                        {knowledgeHint && (
-                            <div className="flex flex-col items-center gap-2 mt-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                                <div className="bg-white border-2 border-indigo-100 p-4 rounded-3xl shadow-xl shadow-indigo-500/10 max-w-[90%] relative overflow-hidden group">
-                                    <div className="absolute top-0 right-0 w-16 h-16 bg-indigo-500/5 rounded-bl-full group-hover:scale-110 transition-transform" />
-                                    <div className="flex items-start gap-3">
-                                        <div className="bg-indigo-500 p-2 rounded-xl shrink-0 shadow-lg shadow-indigo-200">
-                                            <GraduationCap className="w-4 h-4 text-white" />
-                                        </div>
-                                        <div className="flex-1">
-                                            <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-1">Shelldon Öneriyor</p>
-                                            <h4 className="font-bold text-slate-800 text-sm mb-1">{knowledgeHint.title}</h4>
-                                            <p className="text-xs text-slate-500 line-clamp-1 mb-3">{knowledgeHint.description}</p>
-                                            <Link href={`/learn/unit/${knowledgeHint.unitId}`}>
-                                                <Button size="sm" className="w-full bg-indigo-600 hover:bg-emerald-600 text-white font-bold h-8 rounded-xl text-xs transition-all">
-                                                    Bilgi Bankasında İncele
-                                                    <ArrowLeft className="w-3 h-3 ml-2 rotate-180" />
-                                                </Button>
-                                            </Link>
-                                        </div>
-                                        <button 
-                                            onClick={() => setKnowledgeHint(null)}
-                                            className="text-slate-300 hover:text-slate-500 transition-colors"
-                                        >
-                                            <XCircle className="w-4 h-4" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
                     </div>
                 </div>
 

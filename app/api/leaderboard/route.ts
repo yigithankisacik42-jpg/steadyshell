@@ -34,13 +34,39 @@ export async function GET() {
         // Determine current user's ID
         const currentUserId = session?.user?.id;
 
-        const leaderboardData = users.map((u, index) => ({
+        let leaderboardData = users.map((u, index) => ({
             rank: index + 1,
             name: u.name || "Gezgin",
             avatar: u.avatar || "👤",
             xp: u.totalXp,
             isCurrentUser: u.id === currentUserId
         }));
+
+        // If user is logged in but not in Top 50, fetch their specific rank
+        if (currentUserId && !leaderboardData.some(u => u.isCurrentUser)) {
+            const currentUser = await db.user.findUnique({
+                where: { id: currentUserId },
+                select: { totalXp: true, name: true, avatar: true }
+            });
+
+            if (currentUser && currentUser.totalXp > 0) {
+                const rank = await db.user.count({
+                    where: {
+                        totalXp: {
+                            gt: currentUser.totalXp
+                        }
+                    }
+                });
+
+                leaderboardData.push({
+                    rank: rank + 1,
+                    name: currentUser.name || "Gezgin",
+                    avatar: currentUser.avatar || "👤",
+                    xp: currentUser.totalXp,
+                    isCurrentUser: true
+                });
+            }
+        }
 
         return NextResponse.json(leaderboardData);
 

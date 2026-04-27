@@ -858,57 +858,46 @@ const unit511Grammar: GermanGrammarUnit = {
 // ===== UNIT 512: ADJEKTİVE (SIFATLAR) =====
 const unit512Grammar: GermanGrammarUnit = {
     unitId: 512,
-    title: "Sıfatlar ve Karşıtlıklar",
+    title: "Sıfatlar: Dünyayı Tanımla",
     rules: [
         {
             id: "de-adj-opposites",
-            title: "☯️ BÖLÜM 1: TEMEL SIFAT ÇİFTLERİ (Zıtlıkların Gücü)",
-            explanation: "Bu tabloyu yüksek sesle oku ve zıtlıklarıyla beraber beynine kazı koç! Sıfatlar dünyayı renklendirir.",
+            title: "1. Temel Sıfat Çiftleri (Zıtlıklar)",
+            explanation: "Sıfatlar nesneleri ve insanları tanımlamamızı sağlar. En etkili yolu zıtlarıyla öğrenmektir koç!\n\n🎯 **ALTIN KURAL:**\n- **groß** (büyük) 🆚 **klein** (küçük)\n- **gut** (iyi) 🆚 **schlecht** (kötü)\n- **teuer** (pahalı) 🆚 **billig** (ucuz)\n- **schnell** (hızlı) 🆚 **langsam** (yavaş)",
             table: {
-                headers: ["Sıfat", "Anlamı", "🆚 Zıt Sıfat", "Zıt Anlamı"],
+                headers: ["Sıfat", "Anlamı", "Zıt Sıfat", "Anlamı"],
                 rows: [
-                    ["groß", "Büyük / Uzun", "klein", "Küçük / Kısa"],
+                    ["groß", "Büyük", "klein", "Küçük"],
                     ["gut", "İyi", "schlecht", "Kötü"],
-                    ["heiß", "Sıcak (Kaynar)", "kalt", "Soğuk"],
-                    ["teuer", "Pahalı", "billig", "Ucuz"],
-                    ["schnell", "Hızlı", "langsam", "Yavaş"],
-                    ["schwer", "Zor / Ağır", "leicht", "Kolay / Hafif"]
+                    ["heiß", "Sıcak", "kalt", "Soğuk"],
+                    ["teuer", "Pahalı", "billig", "Ucuz"]
                 ]
             },
             examples: [
-                { de: "Das Auto ist schnell, aber das Fahrrad ist langsam.", tr: "Araba hızlı ama bisiklet yavaş." },
-                { de: "Ist der Koffer schwer? Nein, er ist leicht.", tr: "Bavul ağır mı? Hayır, hafif." }
+                { de: "Das Haus ist groß.", tr: "Ev büyüktür." },
+                { de: "Der Kaffee ist sehr heiß.", tr: "Kahve çok sıcak." }
             ]
         },
         {
             id: "de-adj-alt",
-            title: "🚨 KOÇUN BÜYÜK UYARISI (alt Kelimesine Dikkat!)",
-            explanation: "Almancada **'alt'** kelimesi hem ESKİ hem de YAŞLI anlamına gelir. Zıttını söylerken neyden bahsettiğine çok dikkat etmelisin!\n\n- Araba/Evden bahsediyorsan: **alt** (Eski) 🆚 **neu** (Yeni)\n- İnsandan bahsediyorsan: **alt** (Yaşlı) 🆚 **jung** (Genç)",
+            title: "🚨 KOÇUN BÜYÜK UYARISI: 'alt' Kelimesi",
+            explanation: "Almancada **alt** hem 'eski' hem de 'yaşlı' demektir. Zıttını söylerken dikkat et:\n- Nesne eskiyse: **alt** 🆚 **neu** (yeni)\n- İnsan yaşlıysa: **alt** 🆚 **jung** (genç)",
             examples: [
-                { de: "Mein Auto ist alt, aber sein Auto ist neu.", tr: "Benim arabam eski ama onun arabası yeni." },
-                { de: "Der Mann ist alt, aber das Kind ist jung.", tr: "Adam yaşlı ama çocuk genç." }
-            ]
-        },
-        {
-            id: "de-adj-derece",
-            title: "🌶️ BÖLÜM 2: DERECELENDİRME (Sehr vs. Zu)",
-            explanation: "Bir şeyin miktarını belirtirken bu iki kelimeyi karıştırma koç!\n\n- **sehr (çok):** Olumlu veya nötr bir 'çok'tur. (Das Essen ist sehr gut - Yemek çok iyi)\n- **zu (fazla/aşırı):** Genellikle olumsuzluk bildirir, 'fazla kaçmış' demektir. (Das Essen ist zu salzig - Yemek fazla tuzlu)",
-            examples: [
-                { de: "Das Wetter ist sehr schön.", tr: "Hava çok güzel." },
-                { de: "Die Suppe ist zu salzig.", tr: "Çorba aşırı tuzlu." }
+                { de: "Mein Auto ist alt.", tr: "Arabam eski." },
+                { de: "Mein Opa ist alt.", tr: "Dedem yaşlı." }
             ]
         }
     ],
     dialogue: {
         scenario: "friend",
-        intro: "Selam! Yeni bir telefon almak istiyorum ama bu telefon çok pahalı (zu teuer). Sence ne yapmalıyım? 📱",
+        intro: "Selam! Yeni bir telefon almak istiyorum. Sence bu telefon nasıl? Was denkst du? 📱",
         objectives: {
-            de: ["Telefonun pahalı olduğunu doğrula (zu teuer)", "Daha ucuz bir telefon tavsiye et (billig)", "Kendi telefonundan bahset (alt/neu)"],
-            tr: ["Telefonun pahalı olduğunu doğrula (zu teuer)", "Daha ucuz bir telefon tavsiye et (billig)", "Kendi telefonundan bahset (alt/neu)"]
+            de: ["Telefonun büyük olduğunu söyle (groß)", "Fiyatının aşırı olduğunu belirt (zu...)", "Eski telefonundan bahset (alt)"],
+            tr: ["Telefonun büyük olduğunu söyle (groß)", "Fiyatının aşırı olduğunu belirt (zu...)", "Eski telefonundan bahset (alt)"]
         },
         suggestedPhrases: {
-            de: ["Ja, das ist zu teuer.", "Kauf ein billiges Handy.", "Mein Handy ist schon alt."],
-            tr: ["Evet, bu çok pahalı.", "Ucuz bir telefon al.", "Benim telefonum zaten eski."]
+            de: ["Das Handy ist sehr groß.", "Es ist zu teuer.", "Mein altes Handy ist kaputt."],
+            tr: ["Telefon çok büyük.", "Çok pahalı.", "Eski telefonum bozuldu."]
         }
     },
     exercises: [
@@ -925,6 +914,7 @@ const unit512Grammar: GermanGrammarUnit = {
     ]
 };
 
+// ===== UNIT 513: MODALVERBEN: KÖNNEN & MÜSSEN (YAPABİLMEK & ZORUNLULUK) =====
 const unit513Grammar: GermanGrammarUnit = {
     unitId: 513,
     title: "Tarz Fiiller: Können ve Müssen",
@@ -948,24 +938,6 @@ const unit513Grammar: GermanGrammarUnit = {
                 { de: "Ich kann Deutsch sprechen.", tr: "Almanca konuşabiliyorum." },
                 { de: "Du musst heute arbeiten.", tr: "Bugün çalışmalısın (zorunlusun)." }
             ]
-        },
-        {
-            id: "de-modal-tuzağa-dikkat",
-            title: "2. Modal Fiil Çekimi Tuzağı",
-            explanation: "Almancada modal fiiller biraz asidir. 'Ich' ve 'Er/Sie/Es' çekimleri her zaman birebir aynıdır!\n\n🚫 **BÜYÜK TUZAK:** Sakın 'Er kannst' veya 'Ich müsse' deme. Doğrusu: *Ich kann / Er kann* ve *Ich muss / Er muss*.",
-            examples: [
-                { de: "Ich kann heute nicht kommen.", tr: "Bugün gelemem." },
-                { de: "Er muss viel Wasser trinken.", tr: "O bol su içmeli." }
-            ]
-        },
-        {
-            id: "de-modal-koc",
-            title: "🕵️ KOÇUN GÖREVİ",
-            explanation: "Şimdi Shelldon senin yeteneklerini ve sorumluluklarını merak ediyor. Ona neler yapabildiğini (können) ve bugün neler yapman gerektiğini (müssen) anlat. Ana fiili en sona fırlatmayı unutma!",
-            examples: [
-                { de: "Kannst du mir helfen?", tr: "Bana yardım edebilir misin?" },
-                { de: "Ich muss jetzt gehen.", tr: "Şimdi gitmem lazım." }
-            ]
         }
     ],
     dialogue: {
@@ -984,83 +956,64 @@ const unit513Grammar: GermanGrammarUnit = {
         { question: "Ich ___ (yapabilirim) gut kochen.", options: ["kann", "kannst", "können", "könnt"], correct: 0, explanation: "Ich ile 'kann' kullanılır." },
         { question: "Wir ___ (zorundayız) şimdi gehen.", options: ["muss", "musst", "müssen", "müsst"], correct: 2, explanation: "Wir ile 'müssen' kullanılır." },
         { question: "Er ___ (yapabilir) Gitarre spielen.", options: ["kann", "kannst", "können", "könnt"], correct: 0, explanation: "O (er) ile 'kann' kullanılır." },
-        { question: "___ (zorunda mısın) du lernen?", options: ["Muss", "Musst", "Müssen", "Müsst"], correct: 1, explanation: "Du ile 'musst' kullanılır." },
+        { question: "___ (zorunda mısın) du lernen?", options: ["muss", "musst", "müssen", "müsst"], correct: 1, explanation: "Du ile 'musst' kullanılır." },
         { question: "Ihr ___ (yapabilirsiniz) burada parken.", options: ["kann", "kannst", "könnt", "können"], correct: 2, explanation: "Ihr ile 'könnt' kullanılır." },
-        { question: "Modal fiil olan cümlede ana fiil nerede olur?", options: ["2. sırada", "Özneden önce", "Cümlenin sonunda", "Başta"], correct: 2, explanation: "Ana fiil mastar halde cümlenin en sonundadır." },
-        { question: "Ich kann ___ (yüzmek).", options: ["schwimme", "schwimmst", "schwimmen", "schwimmt"], correct: 2, explanation: "Sonda fiil ek almadan (mastar) kullanılır." },
-        { question: "Du musst ___ (öğrenmek).", options: ["lernen", "lernst", "lerne", "gelernt"], correct: 0, explanation: "Mastarı 'lernen'dir." },
-        { question: "Sie (onlar) ___ (yapabilirler) Deutsch.", options: ["kann", "kannst", "können", "könnt"], correct: 2, explanation: "Onlar (sie) için 'können' kullanılır." },
-        { question: "Können fiilinin 'Er/Sie/Es' çekimi nedir?", options: ["kann", "kannst", "können", "könnt"], correct: 0, explanation: "Almancada modal fiillerin 1. ve 3. tekil şahıs çekimleri aynıdır (Ich/Er kann)." }
+        { question: "Ana fiil modal fiil olan cümlede nerede olur?", options: ["2. sırada", "Başta", "Sonda", "Ortada"], correct: 2, explanation: "Kural: Ana fiil mastar halde en sondadır." },
+        { question: "Ich kann ___ (yüzmek).", options: ["schwimme", "schwimmst", "schwimmen", "schwimmt"], correct: 2, explanation: "Sonda mastar 'schwimmen' kullanılır." },
+        { question: "Du musst ___ (öğrenmek).", options: ["lernen", "lernst", "lerne", "lernt"], correct: 0, explanation: "Sonda mastar 'lernen' kullanılır." },
+        { question: "Sie (onlar) ___ (yapabilirler) Deutsch.", options: ["kann", "kannst", "können", "könnt"], correct: 2, explanation: "Onlar için 'können' kullanılır." },
+        { question: "Können fiilinin 'Er/Sie/Es' çekimi nedir?", options: ["kann", "kannst", "können", "könnt"], correct: 0, explanation: "Ich ve Er çekimleri aynıdır (kann)." }
     ]
 };
 
 // ===== UNIT 514: BERUFE (MESLEKLER) =====
 const unit514Grammar: GermanGrammarUnit = {
     unitId: 514,
-    title: "Almanca A1 Meslekler",
+    title: "Meslekler: Kim, Ne İş Yapıyor?",
     rules: [
         {
             id: "de-jobs-gender",
-            title: "Bölüm 1: Mesleklerde Kadın-Erkek Ayrımı (-in Eki)",
-            explanation: "Türkçede \"Öğretmen\" dediğimizde kişinin kadın mı erkek mi olduğu anlaşılmaz. Ama Almancada bir mesleği icra eden kişinin cinsiyetine göre kelimenin sonuna bir ek gelir!\n\nALTIN KURAL: \n- Mesleği yapan ERKEK ise: Kelime genellikle çıplak kalır ve -er ile biter. Artikeli der'dir.\n- Mesleği yapan KADIN ise: Erkek mesleğinin sonuna -in eki yapıştırılır! Artikeli die'dir.\n\n(Not: Kadın doktor ve kadın aşçı derken kelimenin içindeki harf noktalanır. Bu ufak ama seni anında 'yerli' gibi gösteren bir detaydır!)",
+            title: "1. Mesleklerde Kadın-Erkek Ayrımı (-in Eki)",
+            explanation: "Almancada meslekler kişinin cinsiyetine göre değişir. Genellikle erkek mesleğinin sonuna **-in** ekleyerek kadın versiyonunu elde ederiz.\n\n🎯 **ALTIN KURAL:**\n- Erkek: **der** Lehrer\n- Kadın: **die** Lehrer**in**\n\n🧱 **İstisna (Noktalama):** Bazı mesleklerde içerdeki harf noktalanır (Arzt $\rightarrow$ Ärztin).",
             table: {
-                headers: ["Erkek (der)", "Okunuşu", "Kadın (die) + in", "Okunuşu", "Türkçe Anlamı"],
+                headers: ["Erkek (der)", "Kadın (die)", "Türkçesi"],
                 rows: [
-                    ["der Lehrer", "dea leera", "die Lehrerin", "di leerarin", "Öğretmen"],
-                    ["der Kellner", "dea kelna", "die Kellnerin", "di kelnarin", "Garson"],
-                    ["der Entwickler", "dea ent-vikla", "die Entwicklerin", "di ent-viklarin", "Yazılımcı / Geliştirici"],
-                    ["der Student", "dea ştudent", "die Studentin", "di ştudentin", "Üniversite Öğrencisi"],
-                    ["der Arzt", "dea artst", "die Ärztin", "di erts-tin", "Doktor (A -> Ä)"],
-                    ["der Koch", "dea koh", "die Köchin", "di köhin", "Aşçı (O -> Ö)"]
+                    ["Lehrer", "Lehrerin", "Öğretmen"],
+                    ["Arzt", "Ärztin", "Doktor"],
+                    ["Kellner", "Kellnerin", "Garson"],
+                    ["Student", "Studentin", "Öğrenci"],
+                    ["Verkäufer", "Verkäuferin", "Satıcı"]
                 ]
             },
             examples: [
-                { de: "Mein Vater ist Arzt.", tr: "Babam doktordur." },
-                { de: "Meine Mutter ist Lehrerin.", tr: "Annem öğretmendir." }
-            ]
-        },
-        {
-            id: "de-job-prep-clean",
-            title: "Bölüm 2: Büyük Tuzak (Meslek Söylerken Artikel Yutulur!)",
-            explanation: "İngilizcede: I am a teacher. Türkçede: Ben bir doktorum.\n\nALMANCA ALTIN KURAL: Almanlar mesleklerini söylerken ASLA \"ein\" veya \"eine\" (bir) kelimesini KULLANMAZLAR! Meslekler \"sein\" (ist/bin) fiilinden sonra tamamen çırılçıplak gelir.\n\nYanlış: Ich bin ein Lehrer. \nDoğru: Ich bin Lehrer.",
-            examples: [
-                { de: "Ich bin Lehrer.", tr: "Ben öğretmenim." },
-                { de: "Sie ist Ärztin.", tr: "O (kadın) doktordur." },
-                { de: "Er ist Kellner.", tr: "O (erkek) garsondur." }
-            ]
-        },
-        {
-            id: "de-jobs-mission",
-            title: "Bölüm 3: Koçun Görevi (Şirketini Temsil Et)",
-            explanation: "Dostum, Almanların o meşhur 'meslek tuzağını' başarıyla atlattın. Artık birine ne iş yaptığını söylerken o 'bir (ein/eine)' kelimesini yutman gerektiğini ve kadın/erkek ayrımını nasıl yapacağını çok iyi biliyorsun.\n\nŞimdi senden Steadyshell ofisindeki bir durumu raporlamanı istiyorum.\n\nGörev Cümlen: \"O (Kadın), bir öğretmendir.\"\n(İpuçları: O Kadın (Sie) + dır (ist) + [BİR kelimesini sakın kullanma!] + kadın öğretmen (Lehrer...))",
-            examples: [
-                { de: "Sie ist Lehrerin.", tr: "O öğretmendir (kadın)." }
+                { de: "Er ist Arzt von Beruf.", tr: "O meslek olarak doktordur. (Eril)" },
+                { de: "Sie ist Lehrerin.", tr: "O öğretmendir. (Dişil)" }
             ]
         }
     ],
     dialogue: {
-        scenario: "networking",
-        intro: "Almanya'da bir iş yemeğindesin ve yeni insanlarla tanışıyorsun.\n\nSen: Hallo! Ich bin Yiğithan. Was bist du von Beruf?\nAnna: Hallo Yiğithan! Ich bin Entwicklerin. Und du?\nSen: Super! Ich bin auch Entwickler. Wir sind Kollegen!",
+        scenario: "friend",
+        intro: "Merhaba! Yeni biriyle tanışıyorsun. Ona mesleğini sor ve kendi mesleğini söyle. Was bist du von Beruf? (Mesleğin ne?) 💼",
         objectives: {
-            de: ["Mesleğini söyle", "Tanışma diyaloğunu tamamla"],
-            tr: ["Mesleğini söyle", "Tanışma diyaloğunu tamamla"]
+            de: ["Mesleğini söyle (Ich bin...)", "Shelldon'a mesleğini sor", "Nerede çalıştığını belirt"],
+            tr: ["Mesleğini söyle (Ich bin...)", "Shelldon'a mesleğini sor", "Nerede çalıştığını belirt"]
         },
         suggestedPhrases: {
-            de: ["Ich bin Entwicklerin.", "Ich bin auch Entwickler.", "Er ist Arzt."],
-            tr: ["Ben yazılımcıyım.", "Ben de yazılımcıyım.", "O doktordur."]
+            de: ["Ich bin Student.", "Was bist du von Beruf?", "Ich arbeite in einem Büro."],
+            tr: ["Ben öğrenciyim.", "Sen ne iş yapıyorsun?", "Bir ofiste çalışıyorum."]
         }
     },
     exercises: [
-        { question: "Ich bin ___ (öğretmen - kadın).", options: ["Lehrer", "Lehrerin", "Arzt", "Ärztin"], correct: 1, explanation: "Kadın öğretmen 'Lehrerin'dir." },
-        { question: "Meslek söylerken hangisi doğrudur?", options: ["Ich bin ein Arzt.", "Ich bin Arzt.", "Ich habe Arzt.", "Ich Arzt."], correct: 1, explanation: "Mesleklerde genellikle artikel (bir) kullanılmaz." },
-        { question: "Er ist ___ (garson - erkek).", options: ["Kellner", "Kellnerin", "Koch", "Lehrer"], correct: 0, explanation: "Erkek garson 'Kellner'dir." },
-        { question: "Sie ist ___ (doktor - kadın).", options: ["Arzt", "Ärztin", "Student", "Studentin"], correct: 1, explanation: "Kadın doktor 'Ärztin'dir." },
-        { question: "Was bist du von ___?", options: ["Arbeit", "Job", "Beruf", "Hobby"], correct: 2, explanation: "'Mesleğin ne?' sorusu 'Was bist du von Beruf?' şeklinde sorulur." },
-        { question: "Die ___ (garson - kadın) bringt das Essen.", options: ["Kellner", "Kellnerin", "Koch", "Köchin"], correct: 1, explanation: "Kellnerin = Kadın garson." },
-        { question: "Kadın aşçı hangisidir?", options: ["Koch", "Köchin", "Kochen", "Koche"], correct: 1, explanation: "Koch -> Köchin." },
+        { question: "Der Lehrer -> ___ (Kadın öğretmen).", options: ["Lehrerin", "Lehrer", "Lehrerer", "Lehrin"], correct: 0, explanation: "Mesleklerde kadın hali için -in eklenir." },
+        { question: "Die Ärztin -> ___ (Erkek doktor).", options: ["Arztin", "Arzt", "Arzter", "Arzti"], correct: 1, explanation: "Ärztin kelimesinin erkek hali Arzt'tır." },
         { question: "Kadın öğrenci hangisidir?", options: ["Student", "Studentin", "Studium", "Studieren"], correct: 1, explanation: "Student -> Studentin." },
         { question: "Er ist ___ (mühendis).", options: ["Lehrer", "Ingenieur", "Arzt", "Kellner"], correct: 1, explanation: "Ingenieur = Mühendis." },
-        { question: "Sie ist ___ (hemşire).", options: ["Krankenschwester", "Ärztin", "Lehrerin", "Kellnerin"], correct: 0, explanation: "Krankenschwester = Hemşire." }
+        { question: "Sie ist ___ (hemşire).", options: ["Krankenschwester", "Ärztin", "Lehrerin", "Kellnerin"], correct: 0, explanation: "Krankenschwester = Hemşire." },
+        { question: "Ich bin ___ (öğrenciyim).", options: ["Lehrer", "Student", "Arzt", "Koch"], correct: 1, explanation: "Student = Öğrenci." },
+        { question: "Was ___ du von Beruf?", options: ["bist", "ist", "sind", "bin"], correct: 0, explanation: "Meslek sorma kalıbı: Was bist du von Beruf?" },
+        { question: "Mein Vater ist ___ (doktor).", options: ["Arzt", "Ärztin", "Artzt", "Arzti"], correct: 0, explanation: "Baba erkek olduğu için 'Arzt' kullanılır." },
+        { question: "Meine Mutter ist ___ (öğretmen).", options: ["Lehrer", "Lehrerin", "Lehrin", "Lehrerer"], correct: 1, explanation: "Anne kadın olduğu için 'Lehrerin' kullanılır." },
+        { question: "Meslek sormak için hangi soru kelimesi kullanılır?", options: ["Wie", "Wo", "Was", "Wer"], correct: 2, explanation: "Was bist du von Beruf? (Mesleğin ne?)" }
     ]
 };
 
@@ -1450,52 +1403,93 @@ const unit520Grammar: GermanGrammarUnit = {
 // ===== UNIT 521: MODALVERBEN 2: WOLLEN & MÖCHTEN (İSTEMEK) =====
 const unit521Grammar: GermanGrammarUnit = {
     unitId: 521,
-    title: "Modal Fiiller 2: Wollen ve Möchten",
+    title: "Modal Fiiller 2: İrade ve Kibarlık",
     rules: [
         {
-            id: "de-wollen-moechten",
-            title: "1. Wollen vs. Möchten",
-            explanation: "'Wollen' güçlü bir isteği, niyeti belirtir (İstiyorum!). 'Möchten' ise daha nazik bir isteği, rica bildirir (-mek isterim).",
+            id: "de-wollen-intro",
+            title: "1. Wollen: Güçlü İrade (İstiyorum!)",
+            explanation: "Almancada **'wollen'** kararlı bir istenci belirtir. Biraz serttir, hedefin bellidir ve 'Bunu yapacağım/istiyorum' dersin.\n\n🎯 **ALTIN KURAL (İç ses):** Birine 'Wollen' ile bir şey derseniz bu bir niyet beyanıdır. 'Dondurma istiyorum!' (Ich will bir Eis) gibi.",
             table: {
-                headers: ["Zamir", "Wollen", "Möchten"],
+                headers: ["Zamir", "Wollen Çekimi"],
                 rows: [
-                    ["Ich", "will", "möchte"],
-                    ["Du", "willst", "möchtest"],
-                    ["Er / Sie / Es", "will", "möchte"],
-                    ["Wir", "wollen", "möchten"],
-                    ["Ihr", "wollt", "möchtet"],
-                    ["Sie / sie", "wollen", "möchten"]
+                    ["Ich", "will"],
+                    ["Du", "willst"],
+                    ["Er / Sie / Es", "will"],
+                    ["Wir", "wollen"],
+                    ["Ihr", "wollt"],
+                    ["Sie / sie", "wollen"]
                 ]
             },
             examples: [
-                { de: "Ich will Arzt werden.", tr: "Doktor olmak istiyorum. (Eril)" },
-                { de: "Ich möchte einen Kaffee trinken.", tr: "Bir kahve içmek isterim. (Nazik rica)" }
+                { de: "Ich will nach Deutschland fliegen.", tr: "Almanya'ya uçmak istiyorum. (Kararlıyım)" },
+                { de: "Wir wollen Deutsch lernen.", tr: "Almanca öğrenmek istiyoruz." }
+            ]
+        },
+        {
+            id: "de-moechten-intro",
+            title: "2. Möchten: Nazik İstek (-mek isterim)",
+            explanation: "Restoranda, birinden bir şey rica ederken veya kibar görünmek istediğinizde **'möchten'** kullanmalısınız. Aslında 'ich möchte' (isterim/arzu ederim) demektir.",
+            table: {
+                headers: ["Zamir", "Möchten Çekimi"],
+                rows: [
+                    ["Ich", "möchte"],
+                    ["Du", "möchtest"],
+                    ["Er / Sie / Es", "möchte"],
+                    ["Wir", "möchten"],
+                    ["Ihr", "möchtet"],
+                    ["Sie / sie", "möchten"]
+                ]
+            },
+            examples: [
+                { de: "Ich möchte einen Kaffee trinken.", tr: "Bir kahve içmek isterim." },
+                { de: "Wir möchten zahlen, bitte.", tr: "Ödemek istiyoruz (hesabı istiyoruz), lütfen." }
+            ]
+        },
+        {
+            id: "de-modal-lego",
+            title: "🧱 LEGO FORMÜLÜ: Modal Cümlesi",
+            explanation: "Modal fiiller cümlede tek başlarına kalmayı sevmezler, yanlarına bir 'misafir' (mastar fiil) alırlar.\n\n1. Özne + 2. MODAL FİİL + ... + EN SON. MASTAR FİİL\n\n🎯 **KÜÇÜK TÜYO:** Modal fiil 2. sırada çekimlenirken, asıl işi yapan fiil cümlenin en sonuna mastar (-en) olarak fırlatılır.",
+            examples: [
+                { de: "Ich **will** heute **schlafen**.", tr: "Bugün uyumak istiyorum." },
+                { de: "**Möchtest** du **mitkommen**?", tr: "Birlikte gelmek ister misin?" }
             ]
         }
     ],
+    dialogue: {
+        scenario: "restaurant",
+        intro: "Merhaba! Ben garson Shelldon. Size nasıl yardımcı olabilirim? Was möchten Sie bestellen? ☕",
+        objectives: {
+            de: ["Kibarca kahve iste (möchte)", "Neye ihtiyacın olduğunu söyle (will/brauche)", "Hesabı ödemek istediğini söyle"],
+            tr: ["Kibarca kahve iste (möchte)", "Neye ihtiyacın olduğunu söyle (will/brauche)", "Hesabı ödemek istediğini söyle"]
+        },
+        suggestedPhrases: {
+            de: ["Ich möchte einen Kaffee.", "Ich will kein Zucker.", "Ich möchte zahlen."],
+            tr: ["Bir kahve rica ediyorum.", "Şeker istemiyorum.", "Ödeme yapmak istiyorum."]
+        }
+    },
     exercises: [
-        { question: "Ich ___ (istiyorum) ein Eis essen.", options: ["will", "willst", "wollen", "wollt"], correct: 0, explanation: "Ich ile 'will' kullanılır." },
+        { question: "Ich ___ (istiyorum) Arzt werden.", options: ["will", "willst", "wollen", "wollt"], correct: 0, explanation: "Ich için 'will' kullanılır." },
         { question: "___ (İster misiniz) Sie etwas trinken?", options: ["Wollen", "Möchten", "Will", "Möchte"], correct: 1, explanation: "Nazik sorularda 'möchten' tercih edilir." },
-        { question: "Er ___ (istiyor) nach Berlin fahren.", options: ["will", "willst", "wollen", "möchte"], correct: 0, explanation: "Er ile 'will' kullanılır." },
+        { question: "Er ___ (istiyor) nach Berlin fahren.", options: ["will", "willst", "wollen", "möchte"], correct: 0, explanation: "Er için 'will' kullanılır." },
         { question: "Wir ___ (isteriz) euch helfen.", options: ["wollen", "möchten", "wollt", "möchtet"], correct: 1, explanation: "Biz isteriz: 'möchten'." },
-        { question: "___ (İstiyor musun) du mitkommen?", options: ["Willst", "Will", "Wollst", "Möchtest"], correct: 0, explanation: "Du ile 'willst' kullanılır." },
-        { question: "Ihr ___ (istiyorsunuz) spielen.", options: ["wollt", "will", "wollen", "möchtet"], correct: 0, explanation: "Ihr ile 'wollt' kullanılır." },
-        { question: "Sie (onlar) ___ (istiyorlar) schlafen.", options: ["wollen", "will", "wollt", "möchten"], correct: 0, explanation: "Onlar istiyor: 'wollen'." },
-        { question: "Was ___ (istersin) du essen?", options: ["willst", "möchtest", "möchten", "wollen"], correct: 1, explanation: "Nazikçe 'ne istersin?' -> 'möchtest'." },
-        { question: "Wollen fiilinin 'Er' çekimi nedir?", options: ["will", "willst", "wollen", "wollt"], correct: 0, explanation: "Modal fiillerde 1. ve 3. tekil şahıs aynıdır." },
-        { question: "Möchten fiilinin 'Wir' çekimi nedir?", options: ["möchte", "möchtest", "möchten", "möchtet"], correct: 2, explanation: "Wir möchten." }
+        { question: "___ (İstiyor musun) du mitkommen?", options: ["Willst", "Will", "Wollst", "Möchtest"], correct: 0, explanation: "Du için 'willst' çekimi doğrudur." },
+        { question: "Ihr ___ (istiyorsunuz) spielen.", options: ["wollt", "will", "wollen", "möchtet"], correct: 0, explanation: "Ihr için 'wollt' çekimi doğrudur." },
+        { question: "Sie (onlar) ___ (istiyorlar) schlafen.", options: ["wollen", "will", "wollt", "möchten"], correct: 0, explanation: "Çoğul 'sie' için 'wollen' kullanılır." },
+        { question: "Was ___ (istersin) du makan?", options: ["willst", "möchtest", "möchten", "wollen"], correct: 1, explanation: "Nazikçe 'ne istersin?' -> 'möchtest'." },
+        { question: "Ich möchte coffee ___ (içmek).", options: ["trinke", "trinkst", "trinkt", "trinken"], correct: 3, explanation: "Cümlenin sonunda fiil mastar halde (trinken) olur." },
+        { question: "Wollen fiilinin 'Er' çekimi nedir?", options: ["will", "willst", "wollen", "wollt"], correct: 0, explanation: "Modal fiillerde 1. ve 3. tekil şahıs aynıdır." }
     ]
 };
 
 // ===== UNIT 522: IMPERATIV (EMİR KİPİ) =====
 const unit522Grammar: GermanGrammarUnit = {
     unitId: 522,
-    title: "Emir Kipi (Imperativ)",
+    title: "Emir Kipi: Yap! Yapın! Yapınız!",
     rules: [
         {
-            id: "de-imperative",
-            title: "1. Emir Kipi Yapımı",
-            explanation: "Almancada emir kipi üç şahıs için kullanılır: du (sen), ihr (sizler) ve Sie (siz-resmi). 'du' formunda fiilin kökü kullanılır ve 'st' takısı atılır. 'ihr' formunda fiil çekimi aynen kalır ama özne atılır. 'Sie' formunda ise fiil ve özne yer değiştirir.",
+            id: "de-imperativ-intro",
+            title: "1. Emir Kipi: Kime Emir Veriyoruz?",
+            explanation: "Almancada 3 farklı kişiye emir verebiliriz.\n\n1. **du (sen):** 'st' takısı atılır, özne atılır.\n2. **ihr (siz-çoğul):** Sadece özne (ihr) atılır, fiil çekimli kalır.\n3. **Sie (Siz-resmi):** Fiil ve özne yer değiştirir (Soru cümlesi gibi).",
             table: {
                 headers: ["Şahıs", "Fiil: Machen", "Emir Hali", "Anlamı"],
                 rows: [
@@ -1508,19 +1502,40 @@ const unit522Grammar: GermanGrammarUnit = {
                 { de: "Lies das Buch!", tr: "Kitabı oku! (du)" },
                 { de: "Essen Sie bitte!", tr: "Lütfen yiyiniz! (Sie)" }
             ]
+        },
+        {
+            id: "de-imperativ-sein",
+            title: "🕵️ DİKKAT: 'Sein' Fiili İsyankar!",
+            explanation: "'Ol' demek için sein fiilini kurala uyduramazsın, bu 3 formu ezberlemelisin:\n\n- **Sei!** (Ol!)\n- **Seid!** (Olun!)\n- **Seien Sie!** (Olunuz!)",
+            examples: [
+                { de: "Sei ruhig!", tr: "Sessiz ol!" },
+                { de: "Seien Sie vorsichtig!", tr: "Dikkatli olunuz!" }
+            ]
         }
     ],
+    dialogue: {
+        scenario: "coach",
+        intro: "Selam! Ben senin Almanca Koçun Shelldon. Bugün sıkı çalışmalıyız. Önce defterini aç ve kelimeleri yaz! Schreib die Wörter! ✍️",
+        objectives: {
+            de: ["Arkadaşına (du) bir emir ver", "Gruba (ihr) bir emir ver", "Kibarca (Sie) bir şey iste"],
+            tr: ["Arkadaşına (du) bir emir ver", "Gruba (ihr) bir emir ver", "Kibarca (Sie) bir şey iste"]
+        },
+        suggestedPhrases: {
+            de: ["Komm mit!", "Lernt Deutsch!", "Helfen Sie mir bitte."],
+            tr: ["Benimle gel!", "Almanca öğrenin!", "Bana yardım edin lütfen."]
+        }
+    },
     exercises: [
-        { question: "___ (Gel!) zu mir!", options: ["Komm", "Kommst", "Kommen", "Kommt"], correct: 0, explanation: "Du için emir kipinde kök kullanılır." },
+        { question: "___ (Gel!) zu mir!", options: ["Komm", "Kommst", "Kommen", "Kommt"], correct: 0, explanation: "Du için emir kipinde kök kullanılır (Komm)." },
         { question: "___ (Yapınız!) bitte die Tür auf.", options: ["Mach", "Macht", "Machen Sie", "Machen"], correct: 2, explanation: "Resmi (Sie) emirde 'Machen Sie' kullanılır." },
         { question: "___ (Kalkın!) pünktlich ___!", options: ["Steht / auf", "Stehe / auf", "Aufstehen", "Stehen Sie"], correct: 0, explanation: "Siz (ihr) için 'Steht auf' kullanılır." },
-        { question: "Hör ___ (Dinle)!", options: ["du", "zu", "auf", "-"], correct: 2, explanation: "Zuhören (dinlemek) ayrılan bir fiildir; 'Hör zu!'." },
+        { question: "___ (Söyle!) es mir!", options: ["Sag", "Sagt", "Sagen", "Sagst"], correct: 0, explanation: "Sen söylersen: 'Sag!'." },
         { question: "___ (İç!) das Wasser!", options: ["Trink", "Trinkst", "Trinken", "Trinkt"], correct: 0, explanation: "Du için: 'Trink!'." },
-        { question: "___ (Yazın!) den Satz!", options: ["Schreibt", "Schreib", "Schreiben Sie", "Schreiben"], correct: 0, explanation: "İhr (siz) için: 'Schreibt!'." },
+        { question: "___ (Yazın!) den Satz!", options: ["Schreibt", "Schreib", "Schreiben Sie", "Schreiben"], correct: 0, explanation: "İhr (siz-çoğul) için: 'Schreibt!'." },
         { question: "___ (Ol!) ruhig!", options: ["Sein", "Sei", "Seid", "Sind Sie"], correct: 1, explanation: "Sein fiilinin 'du' emir hali düzensizdir: 'Sei!'." },
         { question: "___ (Olun!) vorsichtig!", options: ["Sein", "Sei", "Seid", "Sind Sie"], correct: 2, explanation: "Sein fiilinin 'ihr' emir hali: 'Seid!'." },
-        { question: "___ (Gidiniz!) nach Hause!", options: ["Geh", "Geht", "Gehen Sie", "Gehen"], correct: 2, explanation: "Sie için: 'Gehen Sie!'." },
-        { question: "Sprich ___! (Yavaş konuş!)", options: ["schnell", "langsam", "laut", "leise"], correct: 1, explanation: "Langsam = Yavaş." }
+        { question: "___ (Gidiniz!) nach Hause!", options: ["Geh", "Geht", "Gehen Sie", "Gehen"], correct: 2, explanation: "Sie resmi formu için: 'Gehen Sie!'." },
+        { question: "Sein fiilinin 'Sie' (resmi) emir hali nedir?", options: ["Seien Sie", "Sind Sie", "Sei Sie", "Seyn"], correct: 0, explanation: "İstisna: Seien Sie." }
     ]
 };
 
@@ -1567,12 +1582,12 @@ const unit523Grammar: GermanGrammarUnit = {
 // ===== UNIT 524: DATIV EINFÜHRUNG (DATİV GİRİŞ) =====
 const unit524Grammar: GermanGrammarUnit = {
     unitId: 524,
-    title: "Dativ Yapısına Giriş (İsmin -e Hali)",
+    title: "İsmin -e Hali: Dativ Dünyası",
     rules: [
         {
-            id: "de-dativ-intro",
-            title: "1. Dativ Nedir?",
-            explanation: "Dativ, Almancada ismin dolaylı tümleç halidir (e-hali). Artikeller Dativ'de değişikliğe uğrar.",
+            id: "de-dativ-logic",
+            title: "1. Dativ Nedir? (Dolaylı Tümleç)",
+            explanation: "Akkusativ bir şeyi 'doğrudan' etkilerken (elmayı yemek), Dativ eylemden 'faydalanan' kişiyi belirtir. Kısaca, ismin **-e hali** diyebiliriz.\n\n🎯 **ALTIN KURAL:** Dativ'de artikeller bir 'dans' eder ve değişirler. En büyük değişiklik Eril (der) ve Nötr (das) artikellerindedir.",
             table: {
                 headers: ["Cinsiyet", "Nominativ (Yalın)", "Dativ (-e hali)"],
                 rows: [
@@ -1583,11 +1598,31 @@ const unit524Grammar: GermanGrammarUnit = {
                 ]
             },
             examples: [
-                { de: "Ich helfe dem Mann.", tr: "Adama yardım ediyorum." },
-                { de: "Ich gebe der Frau das Buch.", tr: "Kadına kitabı veriyorum." }
+                { de: "Ich helfe dem Mann. (Adam-a)", tr: "Adama yardım ediyorum." },
+                { de: "Ich gebe der Frau das Buch. (Kadın-a)", tr: "Kadına kitabı veriyorum." }
+            ]
+        },
+        {
+            id: "de-dativ-plural",
+            title: "2. Çoğul Dativ: 'n' Takısı",
+            explanation: "Çoğul Dativ'de artikel **'den'** olurken, ismin sonuna da bir **-n** takısı eklenir.\n\ndie Kinder $\rightarrow$ **den** Kinder**n**",
+            examples: [
+                { de: "Ich danke den Kindern.", tr: "Çocuklara teşekkür ediyorum." }
             ]
         }
     ],
+    dialogue: {
+        scenario: "friend",
+        intro: "Selam! Arkadaşın Shelldon burada. Sana bir kitap vereceğim. Ich gebe dir ein Buch. (Sana bir kitap veriyorum.) 📖",
+        objectives: {
+            de: ["Shelldon'a teşekkür et (danke dir)", "Yardıma ihtiyacın olduğunu söyle (hilf mir)", "Birine bir şey verdiğini anlat"],
+            tr: ["Shelldon'a teşekkür et (danke dir)", "Yardıma ihtiyacın olduğunu söyle (hilf mir)", "Birine bir şey verdiğini anlat"]
+        },
+        suggestedPhrases: {
+            de: ["Ich danke dir.", "Hilfst du mir bitte?", "Ich gebe dem Lehrer das Buch."],
+            tr: ["Sana teşekkür ederim.", "Bana yardım eder misin lütfen?", "Öğretmene kitabı veriyorum."]
+        }
+    },
     exercises: [
         { question: "Ich helfe ___ (doktora - der Arzt).", options: ["der Arzt", "dem Arzt", "den Arzt", "des Arztes"], correct: 1, explanation: "Helfen Dativ ister; der -> dem olur." },
         { question: "Das Buch gehört ___ (kadına - die Frau).", options: ["die Frau", "der Frau", "den Frau", "dem Frau"], correct: 1, explanation: "Gehören Dativ ister; die -> der olur." },
@@ -1595,30 +1630,30 @@ const unit524Grammar: GermanGrammarUnit = {
         { question: "Wie geht es ___ (sana)?", options: ["du", "dich", "dir", "dein"], correct: 2, explanation: "Dativ şahıs zamiri 'dir' (sana) kullanılır." },
         { question: "Wie geht es ___ (size - resmi)?", options: ["Sie", "Ihr", "Ihnen", "Euch"], correct: 2, explanation: "Resmi 'siz'in Dativ hali 'Ihnen'dir." },
         { question: "Ich antworte ___ (öğretmene - der Lehrer).", options: ["der Lehrer", "dem Lehrer", "den Lehrer", "einem Lehrer"], correct: 1, explanation: "Antworten Dativ ister; der -> dem." },
-        { question: "Dativ'de 'die' artikeli neye dönüşür?", options: ["dem", "den", "der", "des"], correct: 2, explanation: "Die (dişil) -> der." },
+        { question: "Dativ'de 'die' (dişil) artikeli neye dönüşür?", options: ["dem", "den", "der", "des"], correct: 2, explanation: "Die (dişil) -> der." },
         { question: "Dativ'de çoğul artikel 'die' neye dönüşür?", options: ["dem", "den", "der", "des"], correct: 1, explanation: "Die (çoğul) -> den." },
-        { question: "Çoğul Dativ'de ismin sonuna ne eklenir?", options: ["-e", "-r", "-n", "-s"], correct: 2, explanation: "Çoğul Dativ'de hem artikel 'den' olur hem de isme '-n' eklenir." },
-        { question: "Dativ'de 'das' artikeli neye dönüşür?", options: ["dem", "den", "der", "des"], correct: 0, explanation: "Das (nötr) -> dem." }
+        { question: "Çoğul Dativ'de ismin sonuna ne eklenir?", options: ["-e", "-r", "-n", "-s"], correct: 2, explanation: "Çoğul Dativ'de isme '-n' eklenir." },
+        { question: "Dativ'de 'das' (nötr) artikeli neye dönüşür?", options: ["dem", "den", "der", "des"], correct: 0, explanation: "Das (nötr) -> dem." }
     ]
 };
 
 // ===== UNIT 525: DATIV VERBEN (DATİV İSTEYEN FİİLLER) =====
 const unit525Grammar: GermanGrammarUnit = {
     unitId: 525,
-    title: "Dativ İsteyen Sık Kullanılan Fiiller",
+    title: "Dativ Avcıları: Özel Fiiller",
     rules: [
         {
-            id: "de-dativ-verbs",
-            title: "1. En Yaygın Dativ Fiilleri",
-            explanation: "Almancada bazı fiiller nesnelerini her zaman Dativ (e-hali) olarak alır. Bunları ezberlemek önemlidir.",
+            id: "de-dativ-verbs-intro",
+            title: "1. Neden Dativ?",
+            explanation: "Almancada bazı fiiller nesnelerini (kime? neye?) her zaman Dativ halde isterler. Bu fiilleri gördüğünde artikelleri dem/der haline sokmalısın.",
             table: {
                 headers: ["Fiil", "Anlamı", "Örnek"],
                 rows: [
-                    ["helfen", "yardım etmek", "Ich helfe dir."],
-                    ["danken", "teşekkür etmek", "Ich danke dem Lehrer."],
-                    ["gehören", "ait olmak", "Das gehört mir."],
-                    ["gratulieren", "tebrik etmek", "Ich gratuliere dir."],
-                    ["schmecken", "tadında olmak (lezzet)", "Es schmeckt mir."]
+                    ["helfen", "yardım etmek", "Ich helfe **dir**."],
+                    ["danken", "teşekkür etmek", "Ich danke **ihm**."],
+                    ["gehören", "ait olmak", "Das gehört **mir**."],
+                    ["gratulieren", "tebrik etmek", "Ich gratuliere **der** Frau."],
+                    ["schmecken", "tadı gelmek", "Es schmeckt **uns**."]
                 ]
             },
             examples: [
@@ -1627,6 +1662,18 @@ const unit525Grammar: GermanGrammarUnit = {
             ]
         }
     ],
+    dialogue: {
+        scenario: "friend",
+        intro: "Selam! Bugün sana yardım etmek istiyorum. Ich helfe dir! (Sana yardım ediyorum!) 🤝",
+        objectives: {
+            de: ["Sana ait olan bir şeyi söyle (gehören)", "Yemeğin tadını beğen (schmecken)", "Shelldon'a teşekkür et"],
+            tr: ["Sana ait olan bir şeyi söyle (gehören)", "Yemeğin tadını beğen (schmecken)", "Shelldon'a teşekkür et"]
+        },
+        suggestedPhrases: {
+            de: ["Das Auto gehört mir.", "Das Essen schmeckt gut.", "Ich danke dir, Shelldon."],
+            tr: ["Araba bana ait.", "Yemek lezzetli.", "Teşekkür ederim, Shelldon."]
+        }
+    },
     exercises: [
         { question: "Das Essen schmeckt ___ (bana) gut.", options: ["ich", "mich", "mir", "mein"], correct: 2, explanation: "Schmecken Dativ ister; ich -> mir." },
         { question: "Ich gratuliere ___ (sana) zum Geburtstag.", options: ["du", "dich", "dir", "dein"], correct: 2, explanation: "Gratulieren Dativ ister; du -> dir." },
@@ -1634,7 +1681,7 @@ const unit525Grammar: GermanGrammarUnit = {
         { question: "Die Tasche gehört ___ (kıza - das Mädchen).", options: ["das Mädchen", "dem Mädchen", "der Mädchen", "den Mädchen"], correct: 1, explanation: "Gehören + Dativ; das -> dem." },
         { question: "Ich danke ___ (anneme - meine Mutter).", options: ["meine Mutter", "meiner Mutter", "meinen Mutter", "meinem Mutter"], correct: 1, explanation: "Danken + Dativ; meine -> meiner." },
         { question: "Glaubst du ___ (ona - erkek)?", options: ["er", "ihn", "ihm", "ihr"], correct: 2, explanation: "Glauben (inanmak) Dativ ister; er -> ihm." },
-        { question: "Das passt ___ (bana).", options: ["ich", "mich", "mir", "mein"], correct: 2, explanation: "Passen (uymak/yakışmak) Dativ ister." },
+        { question: "Das passt ___ (bana).", options: ["ich", "mich", "mir", "mein"], correct: 2, explanation: "Passen (uymak) Dativ ister." },
         { question: "Antworte ___ (bize) bitte!", options: ["wir", "uns", "euch", "ihnen"], correct: 1, explanation: "Antworten + Dativ; wir -> uns." },
         { question: "Zuhören (dinlemek) fiili ne ister?", options: ["Nominativ", "Akkusativ", "Dativ", "Genitiv"], correct: 2, explanation: "Zuhören nesnesini Dativ alır." },
         { question: "Dativ şahıs zamiri: 'euch' (size) hangi şahsa aittir?", options: ["du", "ihr", "wir", "sie"], correct: 1, explanation: "İhr (sizler) -> euch (size)." }
@@ -1644,36 +1691,58 @@ const unit525Grammar: GermanGrammarUnit = {
 // ===== UNIT 526: PRÄPOSITIONEN + DATIV (DATİV EDATLARI) =====
 const unit526Grammar: GermanGrammarUnit = {
     unitId: 526,
-    title: "Dativ Gerektiren Edatlar",
+    title: "Dativ'in Sadık Dostları: Edatlar",
     rules: [
         {
-            id: "de-dativ-preps",
+            id: "de-dativ-preps-rules",
             title: "1. Her Zaman Dativ İsteyen Edatlar",
-            explanation: "Bu edatlardan sonra gelen isim veya zamir her zaman Dativ halde çekimlenir: aus, bei, mit, nach, seit, von, zu.",
+            explanation: "Bu edatlar Almancanın 'Dativ Tapınağı'nın koruyucularıdır. Onları gördüğün an, arkasından gelen ismin artikelini Dativ kuralına göre bükmelisin.\n\n🎯 **ALTIN KURAL:** Bu listeyi şarkı gibi ezberle: **aus, bei, mit, nach, seit, von, zu.**",
             table: {
                 headers: ["Edat", "Türkçe Anlamı", "Örnek"],
                 rows: [
-                    ["aus", "-den/-dan (içinden)", "aus dem Haus"],
-                    ["bei", "yanında/esnasında", "bei dem (beim) Arzt"],
-                    ["mit", "ile/beraber", "mit meiner Freundin"],
-                    ["seit", "-den beri", "seit einem Monat"],
-                    ["von", "-den/-dan / -in", "von dem (vom) Vater"]
+                    ["aus", "-den/-dan (içinden)", "aus **dem** Haus"],
+                    ["bei", "yanında/esnasında", "bei **der** Arbeit"],
+                    ["mit", "ile/beraber", "mit **dem** Auto"],
+                    ["seit", "-den beri (zaman)", "seit **einem** Monat"],
+                    ["von", "-den/-dan / -in", "von **dir** (senden)"],
+                    ["zu", "-e/-a (yönelme)", "zu **mir** (bana)"]
                 ]
             },
             examples: [
-                { de: "Ich fahre mit meiner Schwester.", tr: "Kız kardeşimle gidiyorum." },
-                { de: "Sie wohnt seit einem Jahr in Berlin.", tr: "O bir yıldır Berlin'de yaşıyor." }
+                { de: "Ich fahre mit dem Zug.", tr: "Trenle gidiyorum." },
+                { de: "Er kommt aus der Türkei.", tr: "O Türkiye'den geliyor." }
+            ]
+        },
+        {
+            id: "de-dativ-preps-short",
+            title: "🧱 KISAYOL FORMÜLLERİ: Birleşmeler",
+            explanation: "Almancada bazı edatlar artikellerle birleşip kısalmayı severler:\n\n- zu + dem = **zum**\n- zu + der = **zur**\n- bei + dem = **beim**\n- von + dem = **vom**",
+            examples: [
+                { de: "Ich gehe zum Arzt. (zu dem)", tr: "Doktora gidiyorum." },
+                { de: "Ich bin beim Essen. (bei dem)", tr: "Yemekteyim." }
             ]
         }
     ],
+    dialogue: {
+        scenario: "friend",
+        intro: "Selam! Bugün dışarı çıkalım. Ich gehe mit dir ins Kino. (Seninle sinemaya gidiyorum.) Gelebilir misin? 🍿",
+        objectives: {
+            de: ["Kimden geldiğini söyle (von)", "Ne zamandan beri buradasın (seit)", "Nereye gidiyorsun (zu)"],
+            tr: ["Kimden geldiğini söyle (von)", "Ne zamandan beri buradasın (seit)", "Nereye gidiyorsun (zu)"]
+        },
+        suggestedPhrases: {
+            de: ["Ben babamdan geliyorum (von meinem Vater).", "Bir saattir buradayım (seit einer Stunde).", "Okula gidiyorum (zur Schule)."],
+            tr: ["Ben babamdan geliyorum (von meinem Vater).", "Bir saattir buradayım (seit einer Stunde).", "Okula gidiyorum (zur Schule)."]
+        }
+    },
     exercises: [
         { question: "Ich komme aus ___ (evden - das Haus).", options: ["das Haus", "dem Haus", "den Haus", "der Haus"], correct: 1, explanation: "Aus + Dativ; das -> dem." },
         { question: "Er arbeitet bei ___ (BMW - die Firma).", options: ["die Firma", "der Firma", "den Firma", "dem Firma"], correct: 1, explanation: "Bei + Dativ; die -> der." },
-        { question: "Seit ___ (bir ay) bin ich hier.", options: ["ein Monat", "einem Monat", "einen Monat", "einer Monat"], correct: 1, explanation: "Seit + Dativ; der Monat -> einem Monat." },
+        { question: "Seit ___ (bir ay) bin ich burada.", options: ["ein Monat", "einem Monat", "einen Monat", "einer Monat"], correct: 1, explanation: "Seit + Dativ; der Monat -> einem Monat." },
         { question: "Das Geschenk ist von ___ (babamdan - mein Vater).", options: ["mein Vater", "meinem Vater", "meinen Vater", "meiner Vater"], correct: 1, explanation: "Von + Dativ; mein -> meinem." },
         { question: "Ich gehe zu ___ (arkadaşıma - mein Freund).", options: ["mein Freund", "meinem Freund", "meinen Freund", "meiner Freund"], correct: 1, explanation: "Zu + Dativ; mein -> meinem." },
         { question: "Kommst du mit ___ (benimle)?", options: ["ich", "mich", "mir", "meiner"], correct: 2, explanation: "Mit + Dativ; ich -> mir." },
-        { question: "Ich wohne bei ___ (ailemin yanında - meine Eltern).", options: ["meine Eltern", "meinen Eltern", "meiner Eltern", "mein Eltern"], correct: 1, explanation: "Bei + Dativ; plural 'die' -> 'den' (meinen)." },
+        { question: "Ich wohn bei ___ (ailemin yanında - meine Eltern).", options: ["meine Eltern", "meinen Eltern", "meiner Eltern", "mein Eltern"], correct: 1, explanation: "Bei + Dativ; çoğul 'die' -> 'den' (meinen)." },
         { question: "Bist du seit ___ (bir yıl) in Deutschland?", options: ["ein Jahr", "einem Jahr", "einen Jahr", "einer Jahr"], correct: 1, explanation: "Seit + Dativ; das Jahr -> einem Jahr." },
         { question: "Er kommt aus ___ (Türkiye'den - die Türkei).", options: ["die Türkei", "der Türkei", "den Türkei", "dem Türkei"], correct: 1, explanation: "Türkei istisnai olarak artikellidir; die -> der olur." },
         { question: "Zu + dem birleşince ne olur?", options: ["zur", "zum", "zen", "zud"], correct: 1, explanation: "Zu + dem = zum." }
@@ -1683,53 +1752,74 @@ const unit526Grammar: GermanGrammarUnit = {
 // ===== UNIT 527: WECHSELPRÄPOSITIONEN (İKİ DEĞERLİ EDATLAR) =====
 const unit527Grammar: GermanGrammarUnit = {
     unitId: 527,
-    title: "İki Değerli Edatlar (Nereye? Nerede?)",
+    title: "Nereye? vs Nerede? (Edat Savaşı)",
     rules: [
         {
-            id: "de-wechsel-preps",
+            id: "de-wechsel-preps-rules",
             title: "1. Akkusativ mi, Dativ mi?",
-            explanation: "Bazı edatlar (in, an, auf, unter, über, vor, hinter, neben, zwischen) hem Akkusativ hem de Dativ ile kullanılabilir.\n\n* **Wohin? (Nereye?):** Hareket varsa Akkusativ.\n* **Wo? (Nerede?):** Konum belirtiliyorsa Dativ.",
+            explanation: "Bazı edatlar (in, an, auf, unter, über...) Almancanın en kurnaz edatlarıdır. Cümlenin durumuna göre hem Akkusativ hem Dativ olabilirler.\n\n🎯 **ALTIN KURAL (Hareket Sorgusu):**\n- **Wohin? (Nereye?):** Eğer bir hareket, yönelme varsa **Akkusativ**.\n- **Wo? (Nerede?):** Eğer sabit bir konum, yer varsa **Dativ**.",
             table: {
                 headers: ["Soru", "Durum", "Örnek"],
                 rows: [
-                    ["Wohin?", "Akkusativ", "Ich gehe in die Schule."],
-                    ["Wo?", "Dativ", "Ich bin in der Schule."]
+                    ["Wohin? (Nereye?)", "Akkusativ", "Ich gehe in **den** Park."],
+                    ["Wo? (Nerede?)", "Dativ", "Ich bin in **dem** (im) Park."]
                 ]
             },
             examples: [
-                { de: "Das Buch liegt auf dem Tisch. (Wo?)", tr: "Kitap masanın üzerinde duruyor. (Dativ)" },
-                { de: "Ich lege das Buch auf den Tisch. (Wohin?)", tr: "Kitabı masanın üzerine koyuyorum. (Akkusativ)" }
+                { de: "Das Buch liegt auf dem Tisch. (Nerede? -> Dativ)", tr: "Kitap masanın üzerinde duruyor." },
+                { de: "Ich lege das Buch auf den Tisch. (Nereye? -> Akkusativ)", tr: "Kitabı masanın üzerine koyuyorum." }
+            ]
+        },
+        {
+            id: "de-wechsel-verbs",
+            title: "🧱 LEGO FORMÜLÜ: Fiiller Belirler",
+            explanation: "Bazı fiiller zaten otomatik olarak Dativ veya Akkusativ isterler:\n- **Yatıyor mu? (liegen):** Dativ\n- **Yatırıyor mu? (legen):** Akkusativ\n- **Duruyor mu? (stehen):** Dativ\n- **Koyuyor mu? (stellen):** Akkusativ",
+            examples: [
+                { de: "Ich stehe im Zimmer.", tr: "Odadayım." },
+                { de: "Stell die Flasche auf den Tisch!", tr: "Şişeyi masaya koy!" }
             ]
         }
     ],
+    dialogue: {
+        scenario: "home",
+        intro: "Selam! Eşyaları yerleştiriyoruz. Anahtarlar nerede? Wo sind die Schlüssel? 🔑",
+        objectives: {
+            de: ["Anahtarın masada olduğunu söyle (Dativ)", "Anahtarı çantaya koyduğunu söyle (Akkusativ)", "Nerede olduğunu sor (Wo...?)"],
+            tr: ["Anahtarın masada olduğunu söyle (Dativ)", "Anahtarı çantaya koyduğunu söyle (Akkusativ)", "Nerede olduğunu sor (Wo...?)"]
+        },
+        suggestedPhrases: {
+            de: ["Die Schlüssel liegen auf dem Tisch.", "Ich stecke sie in die Tasche.", "Wo bist du?"],
+            tr: ["Anahtarlar masanın üzerinde.", "Onları çantaya koyuyorum.", "Neredesin?"]
+        }
+    },
     exercises: [
-        { question: "Das Bild hängt an ___ (duvarda - die Wand). (Wo?)", options: ["die Wand", "der Wand", "den Wand", "dem Wand"], correct: 1, explanation: "Konum bildiriyor (Nerede?); Dativ: die -> der." },
-        { question: "Ich hänge das Bild an ___ (duvara). (Wohin?)", options: ["die Wand", "der Wand", "den Wand", "dem Wand"], correct: 0, explanation: "Hareket bildiriyor (Nereye?); Akkusativ: die -> die." },
-        { question: "Der Hund schläft unter ___ (masanın altında - der Tisch).", options: ["der Tisch", "dem Tisch", "den Tisch", "des Tisches"], correct: 1, explanation: "Konum: Dativ; der -> dem." },
-        { question: "Ich gehe in ___ (parka - der Park).", options: ["der Park", "dem Park", "den Park", "des Parks"], correct: 2, explanation: "Hareket: Akkusativ; der -> den." },
-        { question: "Wir wohnen in ___ (Berlin'de).", options: ["Berlin", "dem Berlin", "der Berlin", "in"], correct: 0, explanation: "Şehir adları artikelsizdir." },
-        { question: "Die Katze ist hinter ___ (koltuğun arkasında - das Sofa).", options: ["das Sofa", "dem Sofa", "den Sofa", "der Sofa"], correct: 1, explanation: "Konum: Dativ; das -> dem." },
+        { question: "Das Bild hängt an ___ (duvarda - die Wand). (Wo?)", options: ["die Wand", "der Wand", "den Wand", "dem Wand"], correct: 1, explanation: "Konum bildiriyor (Nerede?); Dativ: die -> der olur." },
+        { question: "Ich hänge das Bild an ___ (duvara). (Wohin?)", options: ["die Wand", "der Wand", "den Wand", "dem Wand"], correct: 0, explanation: "Hareket bildiriyor (Nereye?); Akkusativ: die -> die kalır." },
+        { question: "Der Hund schläft unter ___ (masanın altında - der Tisch).", options: ["der Tisch", "dem Tisch", "den Tisch", "des Tisches"], correct: 1, explanation: "Konum: Dativ; der -> dem olur." },
+        { question: "Ich gehe in ___ (parka - der Park).", options: ["der Park", "dem Park", "den Park", "des Parks"], correct: 2, explanation: "Hareket: Akkusativ; der -> den olur." },
+        { question: "Wir wohne in ___ (Berlin'de).", options: ["Berlin", "dem Berlin", "der Berlin", "in"], correct: 0, explanation: "Şehir adları artikelsizdir." },
+        { question: "Die Katze ist hinter ___ (koltuğun arkasında - das Sofa).", options: ["das Sofa", "dem Sofa", "den Sofa", "der Sofa"], correct: 1, explanation: "Konum: Dativ; das -> dem olur." },
         { question: "Stell die Flasche auf ___ (masaya).", options: ["der Tisch", "dem Tisch", "den Tisch", "das Tisch"], correct: 2, explanation: "Nereye koyayım? -> Akkusativ (den)." },
         { question: "Das Kind sitzt zwischen ___ (ebeveynlerinin arasında - die Eltern).", options: ["die Eltern", "den Eltern", "der Eltern", "meine Eltern"], correct: 1, explanation: "Nerede? -> Dativ (den)." },
-        { question: "Wo ist der anahtar? ___ der Tasche.", options: ["In", "An", "Auf", "Hinter"], correct: 0, explanation: "Çantanın içinde: In." },
-        { question: "İn + dem birleşince ne olur?", options: ["im", "ins", "ir", "id"], correct: 0, explanation: "In + dem = im." }
+        { question: "Wo ist der Schlüssel? ___ der Tasche.", options: ["In", "An", "Auf", "Hinter"], correct: 0, explanation: "Çantanın içinde: In." },
+        { question: "In + dem birleşince ne olur?", options: ["im", "ins", "ir", "id"], correct: 0, explanation: "In + dem = im." }
     ]
 };
 
 // ===== UNIT 528: PERFEKT EINFÜHRUNG (PERFEKT - GEÇMİŞ ZAMAN GİRİŞ) =====
 const unit528Grammar: GermanGrammarUnit = {
     unitId: 528,
-    title: "Almancada Geçmiş Zaman: Perfekt",
+    title: "Almancanın Geçmişi: Perfekt",
     rules: [
         {
-            id: "de-perfekt-intro",
-            title: "1. Perfekt Yapısı",
-            explanation: "Almancada günlük konuşmada en çok kullanılan geçmiş zaman formudur.\n**Yapı:** Haben/Sein (çekimlenmiş 2. sırada) + Partizip II (fiilin 3. hali, cümlenin sonunda).",
+            id: "de-perfekt-intro-logic",
+            title: "1. Perfekt Yapısı (Haben/Sein)",
+            explanation: "Almancada günlük konuşmada geçmiş zaman **Perfekt** ile yapılır. İki ana parçadan oluşur.\n\n🧱 **LEGO Formülü:**\n1. Özne + 2. YARDIMCI FİİL (Haben/Sein) + ... + EN SON. PARTIZIP II (ge...)\n\n🎯 **ALTIN KURAL:** Hareket varsa (gitmek, gelmek) **SEIN**, geri kalan her şey için **HABEN** kullanılır.",
             table: {
                 headers: ["Yardımcı Fiil", "Kullanım Alanı", "Örnek"],
                 rows: [
-                    ["Haben", "Çoğu fiil için kullanılır", "Ich habe gelernt."],
-                    ["Sein", "Hareket/Durum değişikliği", "Ich bin gegangen."]
+                    ["Haben (Yardımcı)", "İş, oluş bildirir", "Ich **habe** gelernt."],
+                    ["Sein (Yardımcı)", "Hareket / Konum değişimi", "Ich **bin** gegangen."]
                 ]
             },
             examples: [
@@ -1738,16 +1828,28 @@ const unit528Grammar: GermanGrammarUnit = {
             ]
         }
     ],
+    dialogue: {
+        scenario: "friend",
+        intro: "Selam! Bugün neler yaptın? Was hast du heute gemacht? 🕒",
+        objectives: {
+            de: ["Neler yaptığını anlat (haben)", "Nereye gittiğini söyle (sein)", "Bir şey yediğinden bahset"],
+            tr: ["Neler yaptığını anlat (haben)", "Nereye gittiğini söyle (sein)", "Bir şey yediğinden bahset"]
+        },
+        suggestedPhrases: {
+            de: ["Ich habe Deutsch gelernt.", "Ich bin ins Stadtzentrum gefahren.", "Ich habe eine Pizza gegessen."],
+            tr: ["Almanca çalıştım.", "Şehir merkezine gittim.", "Pizza yedim."]
+        }
+    },
     exercises: [
         { question: "Ich ___ Deutsch gelernt.", options: ["bin", "bist", "habe", "hast"], correct: 2, explanation: "Öğrenmek (lernen) 'haben' ile kullanılır." },
-        { question: "Er ___ nach Berlin gefahren.", options: ["ist", "hat", "war", "bin"], correct: 0, explanation: "Gitmek/Sürmek (fahren) hareket bildirir, 'sein' (ist) ile kullanılır." },
-        { question: "Partizip II (fiilin geçmiş hali) cümlede nerede olur?", options: ["2. sırada", "Başta", "Özneden sonra", "Cümlenin sonunda"], correct: 3, explanation: "Ana fiil (ge...) cümlenin en sonundadır." },
-        { question: "Wir ___ Pizza gegessen.", options: ["sind", "haben", "waren", "habt"], correct: 1, explanation: "Yemek yemek (essen) 'haben' ile kullanılır." },
-        { question: "Bist du schon ___ (geldin mi)?", options: ["gekommen", "kommen", "gekommst", "gekame"], correct: 0, explanation: "Kommen fiilinin Partizip II hali 'gekommen'dir." },
-        { question: "Hast du das ___ (yaptın mı)?", options: ["machen", "gemacht", "gemachst", "gemachen"], correct: 1, explanation: "Machen -> gemacht." },
-        { question: "Ich ___ (uyudum).", options: ["habe geschlafen", "bin geschlafen", "habe schlafen", "bin schlafen"], correct: 0, explanation: "Uyumak (schlafen) hareket bildirmez, 'haben' ile kullanılır." },
+        { question: "Er ___ nach Berlin gefahren.", options: ["ist", "hat", "war", "bin"], correct: 0, explanation: "Gitmek (fahren) hareket bildirir, 'sein' (ist) ile kullanılır." },
+        { question: "Partizip II (fiilin geçmiş hali) cümlede nerede olur?", options: ["2. sırada", "Başta", "Özneden sonra", "Cümlenin sonunda"], correct: 3, explanation: "Kural: Ana fiil her zaman cümlenin en sonundadır." },
+        { question: "Wir ___ Pizza gegessen.", options: ["sind", "haben", "waren", "habt"], correct: 1, explanation: "Yemek (essen) 'haben' ile kullanılır." },
+        { question: "Bist du schon ___ (geldin mi)?", options: ["gekommen", "kommen", "gekommst", "gekame"], correct: 0, explanation: "Kommen fiilinin geçmiş hali 'gekommen'dir." },
+        { question: "Hast du das ___ (yaptın mı)?", options: ["machen", "gemacht", "gemachst", "gemachen"], correct: 1, explanation: "Machen -> gemacht olur." },
+        { question: "Ich ___ (uyudum).", options: ["habe geschlafen", "bin geschlafen", "habe schlafen", "bin schlafen"], correct: 0, explanation: "Uyumak hareket bildirmez; 'haben' ile kullanılır." },
         { question: "Sie (onlar) ___ (yüzdüler).", options: ["haben geschwommen", "sind geschwommen", "sind schwimmen", "habe geschwommen"], correct: 1, explanation: "Yüzmek (hareket) 'sein' ile kullanılır." },
-        { question: "Hangi yardımcı fiil 'gitmek' (gehen) ile kullanılır?", options: ["haben", "sein", "werden", "machen"], correct: 1, explanation: "Hareket bildiren fiiller 'sein' ile kullanılır." },
+        { question: "Hangi yardımcı fiil 'gitmek' (gehen) ile kullanılır?", options: ["haben", "sein", "werden", "machen"], correct: 1, explanation: "Gitmek bir hareket bildirir, bu yüzden 'sein' kullanılır." },
         { question: "Was hast du gestern ___ (yaptın)?", options: ["machen", "gemacht", "gemachst", "tun"], correct: 1, explanation: "Machen -> gemacht." }
     ]
 };
@@ -1794,20 +1896,21 @@ const unit529Grammar: GermanGrammarUnit = {
 // ===== UNIT 530: UNREGELMÄSSIGES PERFEKT (DÜZENSİZ GEÇMİŞ ZAMAN) =====
 const unit530Grammar: GermanGrammarUnit = {
     unitId: 530,
-    title: "Düzensiz Fiillerle Geçmiş Zaman",
+    title: "Düzensiz Krallar: Geçmiş Zaman",
     rules: [
         {
-            id: "de-irregular-perfekt",
+            id: "de-irreg-perfekt-intro",
             title: "1. Düzensiz Fiil Yapımı (ge...en)",
-            explanation: "Düzensiz (güçlü) fiillerin çoğu 'ge...en' ile biter ve fiil kökünde ses değişimi olabilir. Bunlar listeler halinde ezberlenmelidir.",
+            explanation: "Bazı fiiller kurallara uymayı sevmezler. Bunlar genellikle **'ge...en'** ile biter ve fiil kökündeki sesli harf değişebilir. Bunları liste halinde ezberlemek en iyisidir.",
             table: {
-                headers: ["Mastar", "Anlamı", "Partizip II"],
+                headers: ["Mastar", "Anlamı", "Partizip II (Geçmiş)"],
                 rows: [
-                    ["gehen", "gitmek", "gegangen (H.F: sein)"],
-                    ["kommen", "gelmek", "gekommen (H.F: sein)"],
-                    ["essen", "yemek", "gegessen (H.F: haben)"],
-                    ["trinken", "içmek", "getrunken (H.F: haben)"],
-                    ["sehen", "görmek", "gesehen (H.F: haben)"]
+                    ["gehen", "gitmek", "**gegangen** (sein)"],
+                    ["kommen", "gelmek", "**gekommen** (sein)"],
+                    ["essen", "yemek", "**gegessen** (haben)"],
+                    ["trinken", "içmek", "**getrunken** (haben)"],
+                    ["sehen", "görmek", "**gesehen** (haben)"],
+                    ["schreiben", "yazmak", "**geschrieben** (haben)"]
                 ]
             },
             examples: [
@@ -1818,15 +1921,15 @@ const unit530Grammar: GermanGrammarUnit = {
     ],
     exercises: [
         { question: "Gehen -> ___", options: ["gegehen", "gegangen", "gegeht", "gang"], correct: 1, explanation: "Gehen düzensizdir; 'gegangen' olur." },
-        { question: "Essen -> ___", options: ["geesst", "gegegessen", "gegessen", "geessen"], correct: 2, explanation: "Essen -> gegessen." },
-        { question: "Trinken -> ___", options: ["getrinkt", "getrunken", "getrinken", "trunken"], correct: 1, explanation: "Trinken -> getrunken." },
-        { question: "Kommen -> ___", options: ["gekommen", "gekommt", "gekommst", "kome"], correct: 0, explanation: "Kommen -> gekommen." },
-        { question: "Sehen -> ___", options: ["gesehen", "gesieht", "geseht", "sehn"], correct: 0, explanation: "Sehen -> gesehen." },
-        { question: "Schreiben (yazmak) -> ___", options: ["geschreibt", "geschrieben", "geschrabt", "schreiben"], correct: 1, explanation: "Schreiben -> geschrieben." },
-        { question: "Lesen (okumak) -> ___", options: ["gelesen", "gelest", "gelesst", "lesen"], correct: 0, explanation: "Lesen -> gelesen." },
-        { question: "Finden (bulmak) -> ___", options: ["gefundet", "gefunden", "gefindet", "fund"], correct: 1, explanation: "Finden -> gefunden." },
-        { question: "Fliegen (uçmak) -> ___", options: ["gefliegen", "geflogen", "gefliegt", "flug"], correct: 1, explanation: "Fliegen -> geflogen." },
-        { question: "Sprechen -> ___", options: ["gesprochen", "gesprecht", "gespricht", "sprochen"], correct: 0, explanation: "Sprechen -> gesprochen." }
+        { question: "Essen -> ___", options: ["geesst", "gegegessen", "gegessen", "geessen"], correct: 2, explanation: "Essen -> gegessen olur (İstisna)." },
+        { question: "Trinken -> ___", options: ["getrinkt", "getrunken", "getrinken", "trunken"], correct: 1, explanation: "Trinken -> getrunken olur." },
+        { question: "Kommen -> ___", options: ["gekommen", "gekommt", "gekommst", "kome"], correct: 0, explanation: "Kommen -> gekommen olur." },
+        { question: "Sehen -> ___", options: ["gesehen", "gesieht", "geseht", "sehn"], correct: 0, explanation: "Sehen -> gesehen olur." },
+        { question: "Schreiben (yazmak) -> ___", options: ["geschreibt", "geschrieben", "geschrabt", "schreiben"], correct: 1, explanation: "Schreiben -> geschrieben olur." },
+        { question: "Lesen (okumak) -> ___", options: ["gelesen", "gelest", "gelesst", "lesen"], correct: 0, explanation: "Lesen -> gesehen değil, 'gelesen' olur." },
+        { question: "Finden (bulmak) -> ___", options: ["gefundet", "gefunden", "gefindet", "fund"], correct: 1, explanation: "Finden -> gefunden olur." },
+        { question: "Fliegen (uçmak) -> ___", options: ["gefliegen", "geflogen", "gefliegt", "flug"], correct: 1, explanation: "Fliegen -> geflogen olur." },
+        { question: "Sprechen -> ___", options: ["gesprochen", "gesprecht", "gespricht", "sprochen"], correct: 0, explanation: "Sprechen -> gesprochen olur." }
     ]
 };
 

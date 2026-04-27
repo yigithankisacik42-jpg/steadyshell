@@ -49,7 +49,7 @@ const features = [
     },
     {
         icon: Bot,
-        title: "AI Tutor (Luna)",
+        title: "AI Tutor (Shelldon)",
         description: "Yapay zeka destekli özel öğretmenin ile istediğin konuda sohbet et.",
         gradient: "from-fuchsia-500 to-purple-500",
     },
