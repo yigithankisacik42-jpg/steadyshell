@@ -15,7 +15,8 @@ import { useHearts } from "@/lib/hearts-context";
 import { List as ListIcon } from "lucide-react";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { getStoryMetaForUnit } from "@/lib/stories";
-
+import { InteractiveMap } from "@/components/interactive-map";
+import { Map } from "lucide-react";
 
 export default function LearnPage() {
     const { currentLanguage, currentLevel, setCurrentLevel, progress } = useLanguage();
@@ -26,6 +27,9 @@ export default function LearnPage() {
 
     // Test modu: Tüm dersler açık
     const allLessonsUnlocked = true;
+
+    // Görünüm Modu State (List vs Map)
+    const [viewMode, setViewMode] = useState<'list' | 'map'>('map');
 
     // Hydration mismatch önleme
     const [isMounted, setIsMounted] = useState(false);
@@ -204,8 +208,40 @@ export default function LearnPage() {
 
             {/* CURRICULUM CONTENT */}
             <div className="max-w-3xl mx-auto px-4 w-full z-20 relative">
+                
+                {/* View Toggle */}
+                <div className="flex justify-center mb-8">
+                    <div className="bg-white p-1.5 rounded-2xl shadow-sm border border-slate-200 inline-flex">
+                        <button
+                            onClick={() => setViewMode('map')}
+                            className={cn(
+                                "flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-sm transition-all",
+                                viewMode === 'map' 
+                                    ? "bg-indigo-50 text-indigo-600 shadow-sm" 
+                                    : "text-slate-500 hover:text-slate-700 hover:bg-slate-50"
+                            )}
+                        >
+                            <Map className="w-4 h-4" /> Harita
+                        </button>
+                        <button
+                            onClick={() => setViewMode('list')}
+                            className={cn(
+                                "flex items-center gap-2 px-6 py-2.5 rounded-xl font-bold text-sm transition-all",
+                                viewMode === 'list' 
+                                    ? "bg-indigo-50 text-indigo-600 shadow-sm" 
+                                    : "text-slate-500 hover:text-slate-700 hover:bg-slate-50"
+                            )}
+                        >
+                            <ListIcon className="w-4 h-4" /> Liste
+                        </button>
+                    </div>
+                </div>
+
                 {units.length > 0 ? (
-                    <div className="flex flex-col gap-12">
+                    viewMode === 'map' ? (
+                        <InteractiveMap units={units} completedLessons={currentProgress?.completedLessons || []} />
+                    ) : (
+                        <div className="flex flex-col gap-12">
                         {units.map((unit, unitIndex) => {
                             const completedLessonCount = unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length;
                             const unitProgressPercent = unit.lessons.length > 0
@@ -338,6 +374,7 @@ export default function LearnPage() {
                         );
                         })}
                     </div>
+                    )
                 ) : (
                     <div className="max-w-3xl mx-auto px-4 flex flex-col items-center justify-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100 text-center">
                         <div className="w-24 h-24 bg-indigo-50 rounded-full flex items-center justify-center mb-6">
