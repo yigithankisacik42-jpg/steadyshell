@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils";
 import { getPhrasesForUnit, UnitPhrases } from "@/lib/phrases";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { useLessonProgress } from "@/hooks/use-lesson-progress";
+import { Bot } from "lucide-react";
+import { AiTutorChat } from "@/components/ai-tutor-chat";
 
 export default function PhrasesPage() {
     return (
@@ -38,6 +40,7 @@ function PhrasesContent() {
     const { markLessonCompleted } = useLessonProgress(unitId);
 
     const [isFinished, setIsFinished] = useState(false);
+    const [isAiMode, setIsAiMode] = useState(false);
 
     useEffect(() => {
         if (isFinished) {
@@ -52,6 +55,7 @@ function PhrasesContent() {
         setShowMeaning(false);
         setLearnedWords([]);
         setIsFinished(false);
+        setIsAiMode(false);
     }, [unitId]);
 
     if (!content) return <div className="flex items-center justify-center h-screen">Yükleniyor...</div>;
@@ -138,6 +142,38 @@ function PhrasesContent() {
         if (!showMeaning) playAudio(phrase.target);
     };
 
+    const getAiLanguage = (uId: number) => {
+        if (uId >= 301 && uId <= 390) return "Fransızca";
+        if (uId >= 101 && uId <= 220) return "İngilizce";
+        if (uId >= 501 && uId <= 620) return "Almanca";
+        return "İspanyolca";
+    };
+
+    const buildPhrasesSummary = () => {
+        if (!content) return '';
+        const parts = [];
+        parts.push(`Kalıplar: ${content.title} (${getAiLanguage(content.unitId)})`);
+        const phraseList = content.phrases.map(p => `${p.target} = ${p.native}`).join(' | ');
+        parts.push(`Liste: ${phraseList}`);
+        return parts.join('\n');
+    };
+
+    // ======== AI HOCA MODU ========
+    if (isAiMode) {
+        return (
+            <AiTutorChat 
+                isOpen={isAiMode} 
+                onClose={() => setIsAiMode(false)} 
+                unitTitle={content.title}
+                level={content.level || 'A1'}
+                language={getAiLanguage(content.unitId)}
+                contextSummary={buildPhrasesSummary()}
+                initialMessage="Bu kalıpları anlamama ve telaffuz etmeme yardım et."
+                moduleName="Kalıplar"
+            />
+        );
+    }
+
     return (
         <div className="fixed inset-0 z-[99999] bg-gradient-to-b from-indigo-50 via-white to-slate-50 flex flex-col h-full w-full text-foreground">
             {/* Bitiş Ekranı */}
@@ -173,6 +209,14 @@ function PhrasesContent() {
                         </Button>
                         <Progress value={progress} className="h-3 flex-1 rounded-full bg-slate-100" />
                         <span className="text-sm font-bold text-slate-500">{currentIndex + 1}/{content.phrases.length}</span>
+                        {unitId === 1 && (
+                            <button
+                                onClick={() => setIsAiMode(true)}
+                                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 transition-colors shadow-sm border border-emerald-200"
+                            >
+                                <Bot className="w-4 h-4" /> AI Hoca
+                            </button>
+                        )}
                     </div>
 
                     {/* Ana İçerik */}

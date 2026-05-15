@@ -10,6 +10,8 @@ import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { useLessonProgress } from "@/hooks/use-lesson-progress";
+import { Bot } from "lucide-react";
+import { AiTutorChat } from "@/components/ai-tutor-chat";
 
 export default function ReadingPage() {
     return (
@@ -43,6 +45,8 @@ function ReadingContent() {
     const { showShelldon } = useShelldon();
     const { markLessonCompleted } = useLessonProgress(unitId);
 
+    const [isAiMode, setIsAiMode] = useState(false);
+
     // Ders bittiğinde XP ve Seri güncelle
     useEffect(() => {
         if (step === "finished") {
@@ -64,6 +68,7 @@ function ReadingContent() {
         setSelectedAnswer(null);
         setAnswerStatus("none");
         setShowTranslation(false);
+        setIsAiMode(false);
     }, [unitId]);
 
     if (!readingContent) {
@@ -80,6 +85,30 @@ function ReadingContent() {
         : step === "questions"
             ? 33 + ((questionIndex + 1) / readingContent.questions.length) * 34
             : 100;
+
+    const buildReadingSummary = () => {
+        if (!readingContent) return '';
+        const parts = [];
+        parts.push(`Okuma Parçası: ${readingContent.title} (${readingContent.language || 'İspanyolca'})`);
+        parts.push(`Metin: ${readingContent.story.text}`);
+        return parts.join('\n');
+    };
+
+    // ======== AI HOCA MODU ========
+    if (isAiMode) {
+        return (
+            <AiTutorChat 
+                isOpen={isAiMode} 
+                onClose={() => setIsAiMode(false)} 
+                unitTitle={readingContent.title}
+                level={readingContent.level}
+                language={readingContent.language || 'İspanyolca'}
+                contextSummary={buildReadingSummary()}
+                initialMessage="Bu okuma parçasını anlamama yardım et."
+                moduleName="Okuma"
+            />
+        );
+    }
 
     const handleCheck = () => {
         if (!selectedAnswer) return;
@@ -129,7 +158,16 @@ function ReadingContent() {
                     <Progress value={progress} className="h-3 w-full max-w-md mx-auto" />
                     <p className="text-xs text-slate-400 mt-1">{readingContent.title}</p>
                 </div>
-                <BookOpen className="text-indigo-500 w-6 h-6" />
+                <div className="flex items-center gap-3">
+                    {unitId === 1 && (
+                        <button
+                            onClick={() => setIsAiMode(true)}
+                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 transition-colors shadow-sm border border-emerald-200"
+                        >
+                            <Bot className="w-4 h-4" /> AI Hoca
+                        </button>
+                    )}
+                </div>
             </div>
 
             {/* İçerik */}
