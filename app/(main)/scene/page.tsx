@@ -135,10 +135,9 @@ function SceneContent() {
             setMessages([{ role: 'assistant', content: data.message }]);
         } catch (error: unknown) {
             const errMsg = error instanceof Error ? error.message : 'Unknown error';
-            console.error('[Scene] AI Intro FAILED, falling back to offline:', errMsg);
+            console.error('[Scene] AI Intro FAILED:', errMsg);
             setIsAiMode(false);
-            const intro = createOfflineSceneIntro(scene, activeLang, activeLevel);
-            setMessages([{ role: 'assistant', content: intro.message }]);
+            setMessages([{ role: 'assistant', content: '⚠️ Yapay zeka bağlantısı kurulamadı. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.\n\nHata: ' + errMsg }]);
         } finally {
             setIsLoading(false);
             setTimeout(() => inputRef.current?.focus(), 100);
@@ -183,22 +182,9 @@ function SceneContent() {
             setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
         } catch (error: unknown) {
             const errMsg = error instanceof Error ? error.message : 'Unknown error';
-            console.error('[Scene] AI Reply FAILED, falling back to offline:', errMsg);
+            console.error('[Scene] AI Reply FAILED:', errMsg);
             setIsAiMode(false);
-            const reply = createOfflineSceneReply({
-                scene: selectedScene,
-                language: selectedLang || 'es',
-                level: selectedLevel || 'A1',
-                userMessage,
-                matchedPhrases,
-                turnIndex: messages.length + 1
-            });
-
-            if (reply.newlyMatchedPhrases.length > 0) {
-                setMatchedPhrases(prev => Array.from(new Set([...prev, ...reply.newlyMatchedPhrases])));
-            }
-
-            setMessages(prev => [...prev, { role: 'assistant', content: reply.message }]);
+            setMessages(prev => [...prev, { role: 'assistant', content: '⚠️ Yapay zeka yanıt veremedi. Lütfen tekrar deneyin.\n\nHata: ' + errMsg }]);
         } finally {
             setIsLoading(false);
         }
