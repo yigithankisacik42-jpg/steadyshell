@@ -70,7 +70,7 @@ function VocabularyContent() {
     // AI context summary builder
     const buildVocabSummary = () => {
         const parts = [];
-        parts.push(`Kelimeler: ${vocabContent.title} (${vocabContent.language})`);
+        parts.push(`Kelimeler: ${vocabContent.title} (${vocabContent.language || 'İspanyolca'})`);
         const wordList = vocabContent.words.map(w => `${w.word} = ${w.meaning} (Örnek: ${w.example})`).join(' | ');
         parts.push(`Liste: ${wordList}`);
         return parts.join('\n');
@@ -161,7 +161,7 @@ function VocabularyContent() {
                 onClose={() => setIsAiMode(false)} 
                 unitTitle={vocabContent.title}
                 level="A1"
-                language={vocabContent.language}
+                language={vocabContent.language || 'İspanyolca'}
                 contextSummary={buildVocabSummary()}
                 initialMessage="Bu kelimeleri çalışmam için bana yardım et."
                 moduleName="Kelimeler"

@@ -74,7 +74,7 @@ function GrammarContent() {
     // AI context summary builder
     const buildGrammarSummary = () => {
         const parts = [];
-        parts.push(`Konu: ${content.title} (${content.language})`);
+        parts.push(`Konu: ${content.title} (${content.language || 'İspanyolca'})`);
         
         const rulesText = content.rules.map(r => {
             return `Kural: ${r.title} - ${r.explanation} (Örnek: ${r.examples.length > 0 ? Object.values(r.examples[0]).join(' = ') : ''})`;
@@ -99,7 +99,7 @@ function GrammarContent() {
                 onClose={() => setIsAiMode(false)} 
                 unitTitle={content.title}
                 level="A1"
-                language={content.language}
+                language={content.language || 'İspanyolca'}
                 contextSummary={buildGrammarSummary()}
                 initialMessage="Bu gramer kurallarını anlamama yardım et."
                 moduleName="Gramer"

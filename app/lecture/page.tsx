@@ -8,8 +8,6 @@ import { Progress } from "@/components/ui/progress";
 import { getLectureForUnit, UnitLecture, LectureSlide } from "@/lib/lectures";
 import { useLessonProgress } from "@/hooks/use-lesson-progress";
 import { cn } from "@/lib/utils";
-
-import { Bot } from "lucide-react";
 import { AiTutorChat } from "@/components/ai-tutor-chat";
 
 export default function LecturePage() {

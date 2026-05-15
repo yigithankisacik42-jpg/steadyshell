@@ -50,6 +50,7 @@ export interface UnitGrammar {
     unitId: number;
     title: string;
     rules: GrammarRule[];
+    language?: string;
 }
 
 // ===== ÜNİTE 1: TANIŞMA VE SER FİİLİ =====

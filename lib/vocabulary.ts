@@ -20,6 +20,7 @@ export interface UnitVocabulary {
     unitId: number;
     title: string;
     words: Vocabulary[];
+    language?: string;
 }
 
 // ===== ÜNİTE 1: SELAMLAŞMA =====
