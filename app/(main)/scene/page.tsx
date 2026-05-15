@@ -133,6 +133,9 @@ function SceneContent() {
 
             setIsAiMode(true);
             setMessages([{ role: 'assistant', content: data.message }]);
+            
+            // Otomatik seslendir
+            speak(data.message);
         } catch (error: unknown) {
             const errMsg = error instanceof Error ? error.message : 'Unknown error';
             console.error('[Scene] AI Intro FAILED:', errMsg);
@@ -180,6 +183,9 @@ function SceneContent() {
 
             setIsAiMode(true);
             setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
+            
+            // Otomatik seslendir
+            speak(data.message);
         } catch (error: unknown) {
             const errMsg = error instanceof Error ? error.message : 'Unknown error';
             console.error('[Scene] AI Reply FAILED:', errMsg);
