@@ -25,6 +25,11 @@ export default function VocabularyPage() {
     );
 }
 
+import { Bot } from "lucide-react";
+import { AiTutorChat } from "@/components/ai-tutor-chat";
+
+// ... existing code in VocabularyPage wrapper ...
+
 function VocabularyContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -38,6 +43,7 @@ function VocabularyContent() {
     const { markLessonCompleted } = useLessonProgress(unitId);
 
     const [isFinished, setIsFinished] = useState(false);
+    const [isAiMode, setIsAiMode] = useState(false);
 
     useEffect(() => {
         if (isFinished) {
@@ -52,6 +58,7 @@ function VocabularyContent() {
         setShowMeaning(false);
         setLearnedWords([]);
         setIsFinished(false);
+        setIsAiMode(false);
     }, [unitId]);
 
     if (!vocabContent) return <div className="flex items-center justify-center h-screen">Yükleniyor...</div>;
@@ -59,6 +66,15 @@ function VocabularyContent() {
     const word = vocabContent.words[currentIndex];
     const progress = ((currentIndex + 1) / vocabContent.words.length) * 100;
     const isLastWord = currentIndex === vocabContent.words.length - 1;
+
+    // AI context summary builder
+    const buildVocabSummary = () => {
+        const parts = [];
+        parts.push(`Kelimeler: ${vocabContent.title} (${vocabContent.language})`);
+        const wordList = vocabContent.words.map(w => `${w.word} = ${w.meaning} (Örnek: ${w.example})`).join(' | ');
+        parts.push(`Liste: ${wordList}`);
+        return parts.join('\n');
+    };
 
     const playAudio = (text: string) => {
         const utterance = new SpeechSynthesisUtterance(text);
@@ -140,6 +156,17 @@ function VocabularyContent() {
 
     return (
         <div className="fixed inset-0 z-[99999] bg-gradient-to-b from-emerald-50 to-white flex flex-col h-full w-full">
+            <AiTutorChat 
+                isOpen={isAiMode} 
+                onClose={() => setIsAiMode(false)} 
+                unitTitle={vocabContent.title}
+                level="A1"
+                language={vocabContent.language}
+                contextSummary={buildVocabSummary()}
+                initialMessage="Bu kelimeleri çalışmam için bana yardım et."
+                moduleName="Kelimeler"
+            />
+
             {/* Bitiş Ekranı */}
             {isFinished ? (
                 <div className="flex-1 flex flex-col items-center justify-center p-6">
@@ -172,7 +199,17 @@ function VocabularyContent() {
                             <ArrowLeft className="w-6 h-6" />
                         </Button>
                         <Progress value={progress} className="h-3 flex-1 rounded-full bg-slate-100" />
-                        <span className="text-sm font-bold text-slate-500">{currentIndex + 1}/{vocabContent.words.length}</span>
+                        <div className="flex items-center gap-3">
+                            <span className="text-sm font-bold text-slate-500">{currentIndex + 1}/{vocabContent.words.length}</span>
+                            {unitId === 1 && (
+                                <button
+                                    onClick={() => setIsAiMode(true)}
+                                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 transition-colors shadow-sm border border-emerald-200"
+                                >
+                                    <Bot className="w-4 h-4" /> AI Hoca
+                                </button>
+                            )}
+                        </div>
                     </div>
 
                     {/* Ana İçerik */}
@@ -245,3 +282,4 @@ function VocabularyContent() {
         </div>
     );
 }
+

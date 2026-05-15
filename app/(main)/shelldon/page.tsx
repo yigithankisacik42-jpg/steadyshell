@@ -263,7 +263,7 @@ export default function ShelldonPage() {
         }
     }, [messages]);
 
-    // === SAHNE BAŞLAT (OFFLINE) ===
+    // === SAHNE BAŞLAT (OFFLINE + API) ===
     const startScenario = async (scenario: ShelldonScenario) => {
         setSelectedScenario(scenario);
         setIsInChat(true);
@@ -280,14 +280,40 @@ export default function ShelldonPage() {
         setMemory(createEmptyMemory());
 
         const langCode = selectedLang || currentLanguage?.code || "de";
+        const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
 
-        // Offline intro — no API call
-        const intro = createShelldonIntro(scenario, langCode, progress[langCode]?.currentLevel || currentLevel?.code || "A1", practiceMode);
-        
-        setMessages([{ role: "assistant", content: intro.message }]);
-        setShelldonState(intro.mood as ShelldonState);
-        speak(intro.message);
-        setIsLoading(false);
+        try {
+            const response = await fetch('/api/shelldon/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'intro',
+                    scenario,
+                    language: langCode,
+                    level: levelCode,
+                    practiceMode,
+                    memory: createEmptyMemory()
+                })
+            });
+            const data = await response.json();
+            
+            if (data.message) {
+                setMessages([{ role: "assistant", content: data.message }]);
+                setShelldonState(data.mood as ShelldonState || "happy");
+                speak(data.message);
+            } else {
+                throw new Error("No message received");
+            }
+        } catch (error) {
+            console.error("AI Intro Error:", error);
+            // Offline fallback
+            const intro = createShelldonIntro(scenario, langCode, levelCode, practiceMode);
+            setMessages([{ role: "assistant", content: intro.message }]);
+            setShelldonState(intro.mood as ShelldonState);
+            speak(intro.message);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     // === MESAJ GÖNDER (OFFLINE) ===
@@ -344,63 +370,125 @@ export default function ShelldonPage() {
         setMessages(updatedMessages);
         setTurnCount((t) => t + 1);
 
-        // Offline reply — no API call
+        // API Call
         const langCode = selectedLang || currentLanguage?.code || "de";
         const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
 
-        const reply = createShelldonReply({
-            scenario: selectedScenario,
-            language: langCode,
-            level: levelCode,
-            userMessage: messageText,
-            messages: updatedMessages.map(m => ({ role: m.role, content: m.content })),
-            turnIndex: turnCount,
-            completedObjectives,
-            practiceMode,
-            memory,
-        });
-
-        // Update memory
-        setMemory(reply.updatedMemory);
-
-        // Handle corrections
-        const corrections: Correction[] = reply.correction ? [reply.correction] : [];
-        if (corrections.length > 0) {
-            setRepeatQueue((prev) => {
-                const next = [...prev];
-                corrections.forEach((corr) => {
-                    const phrase = corr.right.trim();
-                    if (!phrase) return;
-                    if (!next.includes(phrase)) next.push(phrase);
-                });
-                return next.slice(-5);
+        try {
+            const response = await fetch('/api/shelldon/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'reply',
+                    scenario: selectedScenario,
+                    language: langCode,
+                    level: levelCode,
+                    practiceMode,
+                    messages: updatedMessages.map(m => ({ role: m.role, content: m.content })),
+                    turnIndex: turnCount,
+                    completedObjectives,
+                    memory
+                })
             });
+            const data = await response.json();
+            
+            if (data.message) {
+                // Update memory
+                if (data.updatedMemory) setMemory(prev => ({ ...prev, ...data.updatedMemory }));
 
-            setMessages(prev => {
-                const newMsgs = [...prev];
-                const lastUserIndex = newMsgs.findLastIndex(m => m.role === "user");
-                if (lastUserIndex !== -1) {
-                    newMsgs[lastUserIndex] = { ...newMsgs[lastUserIndex], corrections };
+                // Handle corrections
+                const corrections: Correction[] = data.correction && data.correction.wrong ? [data.correction] : [];
+                if (corrections.length > 0) {
+                    setRepeatQueue((prev) => {
+                        const next = [...prev];
+                        corrections.forEach((corr) => {
+                            const phrase = corr.right.trim();
+                            if (!phrase) return;
+                            if (!next.includes(phrase)) next.push(phrase);
+                        });
+                        return next.slice(-5);
+                    });
+
+                    setMessages(prev => {
+                        const newMsgs = [...prev];
+                        const lastUserIndex = newMsgs.findLastIndex(m => m.role === "user");
+                        if (lastUserIndex !== -1) {
+                            newMsgs[lastUserIndex] = { ...newMsgs[lastUserIndex], corrections };
+                        }
+                        return newMsgs;
+                    });
                 }
-                return newMsgs;
+
+                if (data.completedObjectives) setCompletedObjectives(data.completedObjectives);
+
+                const aiMsg: Message = { role: "assistant", content: data.message };
+                setMessages((prev) => [...prev, aiMsg]);
+                setShelldonState(data.mood as ShelldonState || "happy");
+                speak(data.message);
+
+                if (turnCount + 1 >= MAX_TURNS) {
+                    setTimeout(() => finishConversation([...updatedMessages, aiMsg]), 3000);
+                }
+            } else {
+                throw new Error("Invalid API reply format");
+            }
+        } catch (error) {
+            console.error("AI Reply Error:", error);
+            // Offline fallback
+            const reply = createShelldonReply({
+                scenario: selectedScenario,
+                language: langCode,
+                level: levelCode,
+                userMessage: messageText,
+                messages: updatedMessages.map(m => ({ role: m.role, content: m.content })),
+                turnIndex: turnCount,
+                completedObjectives,
+                practiceMode,
+                memory,
             });
+
+            // Update memory
+            setMemory(reply.updatedMemory);
+
+            // Handle corrections
+            const corrections: Correction[] = reply.correction ? [reply.correction] : [];
+            if (corrections.length > 0) {
+                setRepeatQueue((prev) => {
+                    const next = [...prev];
+                    corrections.forEach((corr) => {
+                        const phrase = corr.right.trim();
+                        if (!phrase) return;
+                        if (!next.includes(phrase)) next.push(phrase);
+                    });
+                    return next.slice(-5);
+                });
+
+                setMessages(prev => {
+                    const newMsgs = [...prev];
+                    const lastUserIndex = newMsgs.findLastIndex(m => m.role === "user");
+                    if (lastUserIndex !== -1) {
+                        newMsgs[lastUserIndex] = { ...newMsgs[lastUserIndex], corrections };
+                    }
+                    return newMsgs;
+                });
+            }
+
+            setCompletedObjectives(reply.completedObjectives);
+
+            const aiMsg: Message = { role: "assistant", content: reply.message };
+            setMessages((prev) => [...prev, aiMsg]);
+            setShelldonState(reply.mood as ShelldonState);
+            speak(reply.message);
+
+            if (turnCount + 1 >= MAX_TURNS) {
+                setTimeout(() => finishConversation([...updatedMessages, aiMsg]), 3000);
+            }
+        } finally {
+            setIsLoading(false);
         }
-
-        setCompletedObjectives(reply.completedObjectives);
-
-        const aiMsg: Message = { role: "assistant", content: reply.message };
-        setMessages((prev) => [...prev, aiMsg]);
-        setShelldonState(reply.mood as ShelldonState);
-        speak(reply.message);
-
-        if (turnCount + 1 >= MAX_TURNS) {
-            setTimeout(() => finishConversation([...updatedMessages, aiMsg]), 3000);
-        }
-
-        setIsLoading(false);
     };
 
-    // === KONUŞMAYI BİTİR (OFFLINE) ===
+    // === KONUŞMAYI BİTİR ===
     const finishConversation = async (allMessages: Message[]) => {
         setIsFinished(true);
         setShelldonState("happy");
@@ -411,27 +499,87 @@ export default function ShelldonPage() {
         addXp(15);
         completeLesson();
 
-        // Offline feedback — no API call
         const langCode = selectedLang || currentLanguage?.code || "en";
+        const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
         const objectives = selectedScenario?.objectives[langCode] || [];
-        const fb = createShelldonFeedback(
-            allMessages.map(m => ({ role: m.role, content: m.content })),
-            langCode,
-            completedObjectives,
-            objectives.length
-        );
-        setFeedback(fb);
+
+        try {
+            const response = await fetch('/api/shelldon/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'feedback',
+                    scenario: selectedScenario,
+                    language: langCode,
+                    level: levelCode,
+                    practiceMode,
+                    messages: allMessages.map(m => ({ role: m.role, content: m.content })),
+                    completedObjectives,
+                    memory
+                })
+            });
+            const data = await response.json();
+            if (data.score !== undefined) {
+                setFeedback({
+                    score: data.score,
+                    grammar: data.grammar || "Harika!",
+                    vocabulary: data.vocabulary || "İyi iş çıkardın.",
+                    tip: data.tip || "Böyle devam et!"
+                });
+            } else {
+                throw new Error("Invalid feedback format");
+            }
+        } catch (error) {
+            console.error("AI Feedback Error:", error);
+            // Offline fallback
+            const fb = createShelldonFeedback(
+                allMessages.map(m => ({ role: m.role, content: m.content })),
+                langCode,
+                completedObjectives,
+                objectives.length
+            );
+            setFeedback(fb);
+        }
     };
 
-    // === İPUCU AL (OFFLINE) ===
+    // === İPUCU AL ===
     const handleGetHint = async () => {
         if (!selectedScenario || isLoading || isLoadingHint) return;
 
         setIsLoadingHint(true);
         const langCode = selectedLang || currentLanguage?.code || "en";
-        const hint = createShelldonHint(selectedScenario, langCode, completedObjectives, turnCount);
-        setCurrentHint(hint);
-        setIsLoadingHint(false);
+        const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
+
+        try {
+            const response = await fetch('/api/shelldon/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'hint',
+                    scenario: selectedScenario,
+                    language: langCode,
+                    level: levelCode,
+                    practiceMode,
+                    messages: messages.map(m => ({ role: m.role, content: m.content })),
+                    turnIndex: turnCount,
+                    completedObjectives,
+                    memory
+                })
+            });
+            const data = await response.json();
+            if (data.hint) {
+                setCurrentHint(data.hint);
+            } else {
+                throw new Error("Invalid hint format");
+            }
+        } catch (error) {
+            console.error("AI Hint Error:", error);
+            // Offline fallback
+            const hint = createShelldonHint(selectedScenario, langCode, completedObjectives, turnCount);
+            setCurrentHint(hint);
+        } finally {
+            setIsLoadingHint(false);
+        }
     };
 
     // === MİKROFON TOGGLE ===

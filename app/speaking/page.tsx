@@ -27,6 +27,11 @@ export default function SpeakingPage() {
     );
 }
 
+import { Bot } from "lucide-react";
+import { AiTutorChat } from "@/components/ai-tutor-chat";
+
+// ... existing code in SpeakingPage wrapper ...
+
 function SpeakingContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -40,6 +45,7 @@ function SpeakingContent() {
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     const [isFinished, setIsFinished] = useState(false);
+    const [isAiMode, setIsAiMode] = useState(false);
 
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
@@ -66,6 +72,7 @@ function SpeakingContent() {
         setStatus("idle");
         setRecordedText(null);
         setIsFinished(false);
+        setIsAiMode(false);
     }, [unitId]);
 
     if (!speakingContent) {
@@ -79,6 +86,19 @@ function SpeakingContent() {
     const exercise = speakingContent.exercises[currentIndex];
     const progress = ((currentIndex + 1) / speakingContent.exercises.length) * 100;
     const isLastExercise = currentIndex === speakingContent.exercises.length - 1;
+
+    // AI context summary builder
+    const buildSpeakingSummary = () => {
+        const parts = [];
+        parts.push(`Konuşma Pratiği: ${speakingContent.title}`);
+        
+        const exerciseList = speakingContent.exercises.map(e => {
+            return `Soru: ${e.prompt} - Hedef Cümle: ${e.text} (${e.translation})`;
+        }).join('\n');
+        
+        parts.push(`Egzersizler:\n${exerciseList}`);
+        return parts.join('\n');
+    };
 
     // Ünite ID'sine göre dil kodunu belirle
     const getLanguageCode = (unitId: number): string => {
@@ -312,7 +332,16 @@ function SpeakingContent() {
     return (
         <div className="fixed inset-0 z-[99999] bg-gradient-to-b from-violet-50 to-white flex flex-col h-full w-full">
 
-
+            <AiTutorChat 
+                isOpen={isAiMode} 
+                onClose={() => setIsAiMode(false)} 
+                unitTitle={speakingContent.title}
+                level="A1"
+                language={languageCode}
+                contextSummary={buildSpeakingSummary()}
+                initialMessage="Bu konuşma ve telaffuz egzersizlerinde bana yardımcı ol."
+                moduleName="Konuşma"
+            />
 
             {/* Bitiş Ekranı */}
             {isFinished ? (
@@ -347,7 +376,17 @@ function SpeakingContent() {
                             <Progress value={progress} className="h-3 w-full max-w-md mx-auto" />
                             <p className="text-xs text-slate-400 mt-1">{speakingContent.title}</p>
                         </div>
-                        <Mic className="text-violet-500 w-6 h-6" />
+                        <div className="flex items-center gap-3">
+                            {unitId === 1 && (
+                                <button
+                                    onClick={() => setIsAiMode(true)}
+                                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-violet-100 text-violet-700 hover:bg-violet-200 transition-colors shadow-sm border border-violet-200"
+                                >
+                                    <Bot className="w-4 h-4" /> AI Hoca
+                                </button>
+                            )}
+                            <Mic className="text-violet-500 w-6 h-6" />
+                        </div>
                     </div>
 
                     {/* İçerik */}

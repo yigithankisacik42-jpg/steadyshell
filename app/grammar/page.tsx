@@ -26,6 +26,11 @@ export default function GrammarPage() {
     );
 }
 
+import { Bot } from "lucide-react";
+import { AiTutorChat } from "@/components/ai-tutor-chat";
+
+// ... existing code in GrammarPage wrapper ...
+
 function GrammarContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -35,6 +40,7 @@ function GrammarContent() {
     const [currentRuleIndex, setCurrentRuleIndex] = useState(0);
 
     const [isFinished, setIsFinished] = useState(false);
+    const [isAiMode, setIsAiMode] = useState(false);
 
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
@@ -56,6 +62,7 @@ function GrammarContent() {
         setContent(data);
         setCurrentRuleIndex(0);
         setIsFinished(false);
+        setIsAiMode(false);
     }, [unitId]);
 
     if (!content) return <div className="flex items-center justify-center h-screen">Yükleniyor...</div>;
@@ -63,6 +70,19 @@ function GrammarContent() {
     const currentRule = content.rules[currentRuleIndex];
     const progress = ((currentRuleIndex + 1) / content.rules.length) * 100;
     const isLastRule = currentRuleIndex === content.rules.length - 1;
+
+    // AI context summary builder
+    const buildGrammarSummary = () => {
+        const parts = [];
+        parts.push(`Konu: ${content.title} (${content.language})`);
+        
+        const rulesText = content.rules.map(r => {
+            return `Kural: ${r.title} - ${r.explanation} (Örnek: ${r.examples.length > 0 ? Object.values(r.examples[0]).join(' = ') : ''})`;
+        }).join('\n');
+        
+        parts.push(`Kurallar:\n${rulesText}`);
+        return parts.join('\n');
+    };
 
     const handleNext = () => {
         if (isLastRule) {
@@ -74,8 +94,16 @@ function GrammarContent() {
 
     return (
         <div className="fixed inset-0 z-[99999] bg-gradient-to-b from-cyan-50 via-white to-slate-50 flex flex-col h-full w-full overflow-y-auto text-foreground">
-
-
+            <AiTutorChat 
+                isOpen={isAiMode} 
+                onClose={() => setIsAiMode(false)} 
+                unitTitle={content.title}
+                level="A1"
+                language={content.language}
+                contextSummary={buildGrammarSummary()}
+                initialMessage="Bu gramer kurallarını anlamama yardım et."
+                moduleName="Gramer"
+            />
 
             {/* Bitiş Ekranı */}
             {isFinished ? (
@@ -108,7 +136,17 @@ function GrammarContent() {
                             <ArrowLeft className="w-6 h-6" />
                         </Button>
                         <Progress value={progress} className="h-3 flex-1 rounded-full bg-slate-100" />
-                        <span className="text-sm font-bold text-slate-500">{currentRuleIndex + 1}/{content.rules.length}</span>
+                        <div className="flex items-center gap-3">
+                            <span className="text-sm font-bold text-slate-500">{currentRuleIndex + 1}/{content.rules.length}</span>
+                            {unitId === 1 && (
+                                <button
+                                    onClick={() => setIsAiMode(true)}
+                                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-cyan-100 text-cyan-700 hover:bg-cyan-200 transition-colors shadow-sm border border-cyan-200"
+                                >
+                                    <Bot className="w-4 h-4" /> AI Hoca
+                                </button>
+                            )}
+                        </div>
                     </div>
 
                     {/* Ana İçerik */}

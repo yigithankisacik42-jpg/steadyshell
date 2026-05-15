@@ -32,6 +32,11 @@ export default function LessonPage() {
   );
 }
 
+import { Bot } from "lucide-react";
+import { AiTutorChat } from "@/components/ai-tutor-chat";
+
+// ... existing code in LessonPage wrapper ...
+
 function LessonContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -61,6 +66,7 @@ function LessonContent() {
   const [audioPlaying, setAudioPlaying] = useState(false);
   const [timeUntilHeart, setTimeUntilHeart] = useState<number | null>(null);
   const [wrongCount, setWrongCount] = useState(0); // Bu quiz'deki yanlış sayısı
+  const [isAiMode, setIsAiMode] = useState(false);
 
   // Timer güncelleme
   useEffect(() => {
@@ -105,6 +111,7 @@ function LessonContent() {
     setTextInput("");
     setStatus("none");
     setIsFinished(false);
+    setIsAiMode(false);
 
     const unitInfo = findUnitById(unitId);
     if (unitInfo) {
@@ -114,6 +121,29 @@ function LessonContent() {
 
   const challenge = questions[index];
   const progress = questions.length > 0 ? ((index + 1) / questions.length) * 100 : 0;
+
+  // AI context summary builder
+  const buildQuizSummary = () => {
+    if (!challenge) return "";
+    const parts = [];
+    parts.push(`Mevcut Soru Tipi: ${challenge.type}`);
+    parts.push(`Soru: ${challenge.question}`);
+    
+    if (challenge.type === "TRANSLATE") {
+      parts.push(`İpucu: ${challenge.hint}`);
+      parts.push(`Doğru Cevap: ${challenge.correctAnswer}`);
+    } else if (challenge.sentence) {
+      parts.push(`Cümle: ${challenge.sentence}`);
+    }
+    
+    if (challenge.options) {
+      const optionsText = challenge.options.map(o => `- ${o.text} ${o.correct ? '(Doğru Cevap)' : ''}`).join('\n');
+      parts.push(`Seçenekler:\n${optionsText}`);
+    }
+    
+    parts.push(`\nÖNEMLİ TALİMAT: Öğrenci bir quiz sorusunda takıldı ve senden yardım istiyor. LÜTFEN DOĞRUDAN CEVABI VERME. Bunun yerine öğrencinin doğru cevabı bulmasını sağlayacak ufak ipuçları ver veya kuralı hatırlat.`);
+    return parts.join('\n');
+  };
 
   const playAudio = () => {
     if (challenge?.audioText) {
@@ -289,8 +319,26 @@ function LessonContent() {
     );
   }
 
+  const unitData = findUnitById(unitId);
+
   return (
     <div className="fixed inset-0 z-[99999] bg-gradient-to-b from-white to-indigo-50 flex flex-col h-full w-full">
+
+      <AiTutorChat 
+        isOpen={isAiMode} 
+        onClose={() => setIsAiMode(false)} 
+        unitTitle={unitTitle}
+        level="A1"
+        language={unitData?.langCode || "es"}
+        contextSummary={buildQuizSummary()}
+        initialMessage="Bu soruda takıldım. Doğrudan cevabı vermeden bana bir ipucu verebilir misin?"
+        moduleName="Sınav"
+        defaultQuickReplies={[
+            { label: "💡 Bir ipucu ver", msg: "Bana cevabı vermeden küçük bir ipucu verebilir misin?" },
+            { label: "📖 Kuralı hatırlat", msg: "Bu soruyu çözerken bilmem gereken dilbilgisi kuralı nedir?" },
+            { label: "❌ Neden yanlış?", msg: "Seçtiğim cevap neden yanlış olabilir açıklar mısın?" }
+        ]}
+      />
 
       {/* ÇIKIŞ MODALI */}
       {showExit && (
@@ -417,10 +465,20 @@ function LessonContent() {
               <Progress value={progress} className="h-3 w-full" />
               <p className="text-xs text-slate-400 text-center mt-1">{unitTitle}</p>
             </div>
-            <div className="flex items-center gap-1">
-              {[...Array(hearts)].map((_, i) => (
-                <Heart key={i} className="text-rose-500 w-5 h-5 fill-rose-500" />
-              ))}
+            <div className="flex items-center gap-3">
+                {unitId === 1 && (
+                    <button
+                        onClick={() => setIsAiMode(true)}
+                        className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors shadow-sm border border-indigo-200"
+                    >
+                        <Bot className="w-4 h-4" /> AI Hoca
+                    </button>
+                )}
+                <div className="flex items-center gap-1">
+                {[...Array(hearts)].map((_, i) => (
+                    <Heart key={i} className="text-rose-500 w-5 h-5 fill-rose-500" />
+                ))}
+                </div>
             </div>
           </div>
 
