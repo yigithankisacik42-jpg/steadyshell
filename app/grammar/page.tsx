@@ -160,7 +160,7 @@ function GrammarContent() {
                                 <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider">Örnekler</h3>
                                 {currentRule.examples.map((ex, i) => (
                                     <div key={i} className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
-                                        <p className="font-bold text-cyan-700 text-lg flex-1">{ex.es || ex.fr}</p>
+                                        <p className="font-bold text-cyan-700 text-lg flex-1">{ex.de || ex.en || ex.es || ex.fr}</p>
                                         <ChevronRight className="w-4 h-4 text-slate-300 hidden md:block" />
                                         <p className="text-slate-500 italic flex-1">{ex.tr}</p>
                                     </div>

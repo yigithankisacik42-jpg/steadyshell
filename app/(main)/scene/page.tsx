@@ -106,11 +106,26 @@ function SceneContent() {
         setMatchedPhrases([]);
 
         try {
+            const response = await fetch('/api/scene/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    messages: [{ role: 'user', content: 'Merhaba, sahneyi başlatabilir misin?' }],
+                    scene,
+                    language: activeLang,
+                    level: activeLevel
+                })
+            });
+
+            const data = await response.json();
+            if (data.error) throw new Error(data.error);
+
+            setMessages([{ role: 'assistant', content: data.message }]);
+        } catch (error) {
+            console.error("AI Intro Error:", error);
+            // Fallback to offline intro if AI fails
             const intro = createOfflineSceneIntro(scene, activeLang, activeLevel);
-            await new Promise(resolve => setTimeout(resolve, 280));
             setMessages([{ role: 'assistant', content: intro.message }]);
-        } catch {
-            setMessages([{ role: 'assistant', content: 'Sahne baslatilamadi. Lutfen tekrar deneyin.' }]);
         } finally {
             setIsLoading(false);
             setTimeout(() => inputRef.current?.focus(), 100);
@@ -121,20 +136,38 @@ function SceneContent() {
         if (!inputValue.trim() || isLoading || !selectedScene) return;
 
         const userMessage = inputValue.trim();
-        const nextTurnIndex = messages.length + 1;
+        const currentMessages = [...messages, { role: 'user', content: userMessage }];
+        
         setInputValue('');
-        setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
+        setMessages(currentMessages as Message[]);
         setIsLoading(true);
 
         try {
-            await new Promise(resolve => setTimeout(resolve, 240));
+            const response = await fetch('/api/scene/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    messages: currentMessages,
+                    scene: selectedScene,
+                    language: selectedLang || 'es',
+                    level: selectedLevel || 'A1'
+                })
+            });
+
+            const data = await response.json();
+            if (data.error) throw new Error(data.error);
+
+            setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
+        } catch (error) {
+            console.error("AI Reply Error:", error);
+            // Fallback to offline reply
             const reply = createOfflineSceneReply({
                 scene: selectedScene,
                 language: selectedLang || 'es',
                 level: selectedLevel || 'A1',
                 userMessage,
                 matchedPhrases,
-                turnIndex: nextTurnIndex
+                turnIndex: messages.length + 1
             });
 
             if (reply.newlyMatchedPhrases.length > 0) {
@@ -142,8 +175,6 @@ function SceneContent() {
             }
 
             setMessages(prev => [...prev, { role: 'assistant', content: reply.message }]);
-        } catch {
-            setMessages(prev => [...prev, { role: 'assistant', content: 'Sahne yaniti olusturulamadi. Lutfen tekrar deneyin.' }]);
         } finally {
             setIsLoading(false);
         }

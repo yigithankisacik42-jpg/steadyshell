@@ -71,41 +71,7 @@ export const ShelldonProvider: React.FC<{ children: ReactNode }> = ({ children }
     prevStreak.current = stats.currentStreak;
   }, []);
 
-  // OTOMATİK TETİKLEYİCİLER (Milestones)
-  useEffect(() => {
-    if (!userStats) return;
 
-    // 1. Streak Kutlaması
-    if (userStats.currentStreak > prevStreak.current) {
-        showShelldon(
-            `Vay canına! ${userStats.currentStreak} günlük seri! 🐢🔥 Harika gidiyorsun, sakın durma!`,
-            "celebrate",
-            6000
-        );
-        prevStreak.current = userStats.currentStreak;
-    }
-
-    // 2. Düşük Başarı Oranı Uyarısı
-    if (userStats.totalLessons > 5 && userStats.accuracyRate < 50 && !state.isVisible) {
-        showShelldon(
-            "Görünüşe göre bazı konularda kafan karışmış. 🐢 Merak etme, kaplumbağa hızıyla da olsa öğreneceğiz! İstersen son üniteyi bir tekrar edelim?",
-            "sad",
-            7000
-        );
-    }
-  }, [userStats, showShelldon, state.isVisible]);
-
-  // 3. Görev Tamamlama Kutlaması
-  useEffect(() => {
-    if (completedCount > prevCompletedQuests.current && completedCount > 0) {
-        showShelldon(
-            "Bir görevi daha paketledik! 🐢💎 Elmaslarını almayı unutma!",
-            "celebrate",
-            5000
-        );
-    }
-    prevCompletedQuests.current = completedCount;
-  }, [completedCount, showShelldon]);
 
   return (
     <ShelldonContext.Provider value={{ ...state, showShelldon, hideShelldon, userStats, dailyStats }}>

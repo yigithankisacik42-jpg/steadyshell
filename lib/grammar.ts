@@ -22,6 +22,7 @@ export interface GrammarExample {
     es?: string;
     fr?: string;
     de?: string;
+    en?: string;
     tr: string;
 }
 
@@ -3212,7 +3213,7 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
                 id: `en-a1-${unitId}-${i}`,
                 title: r.title,
                 explanation: r.explanation,
-                examples: r.examples.map(ex => ({ es: ex.english, tr: ex.turkish }))
+                examples: r.examples.map(ex => ({ en: ex.english, tr: ex.turkish }))
             }))
         };
     }
@@ -3227,7 +3228,7 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
                 id: `en-b1-${unitId}-${i}`,
                 title: r.title,
                 explanation: r.explanation,
-                examples: r.examples.map(ex => ({ es: ex.english, tr: ex.turkish }))
+                examples: r.examples.map(ex => ({ en: ex.english, tr: ex.turkish }))
             }))
         };
     }
@@ -3242,7 +3243,7 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
                 id: `en-b2-${unitId}-${i}`,
                 title: r.title,
                 explanation: r.explanation,
-                examples: r.examples.map(ex => ({ es: ex.english, tr: ex.turkish }))
+                examples: r.examples.map(ex => ({ en: ex.english, tr: ex.turkish }))
             }))
         };
     }
@@ -3257,7 +3258,7 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
                 id: `en-a2-${unitId}-${i}`,
                 title: r.title,
                 explanation: r.explanation,
-                examples: r.examples.map(ex => ({ es: ex.english, tr: ex.turkish }))
+                examples: r.examples.map(ex => ({ en: ex.english, tr: ex.turkish }))
             }))
         };
     }

@@ -12,7 +12,6 @@ import { APP_CONFIG } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { getVideoForUnit } from "@/lib/videos";
 import { useHearts } from "@/lib/hearts-context";
-import { ShelldonMentor } from "@/components/learn/shelldon-mentor";
 import { List as ListIcon } from "lucide-react";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { getStoryMetaForUnit } from "@/lib/stories";
@@ -353,8 +352,7 @@ export default function LearnPage() {
             {/* GRADIENT BOTTOM OVERLAY */}
             <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none z-30" />
 
-            {/* AI MENTOR */}
-            {isMounted && <ShelldonMentor />}
+
         </div>
     );
 }

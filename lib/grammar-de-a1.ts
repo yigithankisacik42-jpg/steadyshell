@@ -1025,7 +1025,7 @@ const unit515Grammar: GermanGrammarUnit = {
         {
             id: "de-prep-direction",
             title: "1. Şehir mi, Bina mı, Kişi mi?",
-            explanation: "Almancada 'e doğru' demek için iki ana yol vardır: **Nach** ve **Zu**.\n\n🎯 **ALTIN KURAL (Nach):** Şehirler, ülkeler (artikelsiz olanlar) ve 'ev' (nach Hause) için **nach** kullanılır.\n- nach Berlin, nach Deutschland, nach Hause.\n\n🎯 **ALTIN KURAL (Zu):** Kişilere, belirli binalara veya kurumlara giderken **zu** kullanılır. Zu her zaman Dativ ister ve artikelle birleşir!\n- zu Max, zum Arzt (zu+dem), zur Schule (zu+der).\n\n🚫 **BÜYÜK TUZAK:** Sakın 'Ich gehe nach Arzt' deme! Doktora (kişiye) gidiyorsan 'zum Arzt' demelisin.",
+            explanation: "Almancada 'e doğru' demek için iki ana yol vardır: Nach ve Zu.\n\nALTIN KURAL (Nach): Şehirler, ülkeler (artikelsiz olanlar) ve 'ev' (nach Hause) için nach kullanılır.\n- nach Berlin, nach Deutschland, nach Hause.\n\nALTIN KURAL (Zu): Kişilere, belirli binalara veya kurumlara giderken zu kullanılır. Zu her zaman Dativ ister ve artikelle birleşir!\n- zu Max, zum Arzt (zu+dem), zur Schule (zu+der).\n\nBUYUK TUZAK: Sakın 'Ich gehe nach Arzt' deme! Doktora (kişiye) gidiyorsan 'zum Arzt' demelisin.",
             table: {
                 headers: ["Edat", "Kullanım Yeri", "Örnek"],
                 rows: [
@@ -1039,29 +1039,8 @@ const unit515Grammar: GermanGrammarUnit = {
                 { de: "Nach dem Essen gehe ich nach Hause.", tr: "Yemekten sonra eve gidiyorum." },
                 { de: "Ich fahre morgen nach Deutschland.", tr: "Yarın Almanya'ya gidiyorum." }
             ]
-        },
-        {
-            id: "de-direction-koc",
-            title: "🕵️ KOÇUN GÖREVİ",
-            explanation: "Shelldon yolda kaybolmuş bir turist olsun. Ona nereye gittiğini anlat. Şehir mi yoksa bir bina/kişi mi olduğunu düşünerek 'nach' veya 'zu' edatlarını doğru seç!",
-            examples: [
-                { de: "Ich fahre nach Berlin.", tr: "Berlin'e gidiyorum." },
-                { de: "Kommst du zu mir?", tr: "Bana gelir misin?" }
-            ]
         }
     ],
-    dialogue: {
-        scenario: "direction",
-        intro: "Affedersiniz! Ben Shelldon. Yolumu bulmaya çalışıyorum. Wohin gehen Sie? (Nereye gidiyorsunuz?) 🗺️",
-        objectives: {
-            de: ["Eve gittiğini söyle (nach Hause)", "Bir şehre gittiğini söyle (nach...)", "Bir binaya/kişiye gittiğini söyle (zu/zum/zur)"],
-            tr: ["Eve gittiğini söyle (nach Hause)", "Bir şehre gittiğini söyle (nach...)", "Bir binaya/kişiye gittiğini söyle (zu/zum/zur)"]
-        },
-        suggestedPhrases: {
-            de: ["Ich gehe nach Hause.", "Ich fahre nach Hamburg.", "Ich gehe zum Supermarkt."],
-            tr: ["Eve gidiyorum.", "Hamburg'a gidiyorum.", "Süpermarkete gidiyorum."]
-        }
-    },
     exercises: [
         { question: "Ich gehe ___ Hause (Eve gidiyorum).", options: ["nach", "zu", "in", "an"], correct: 0, explanation: "Eve gitmek 'nach Hause'dır." },
         { question: "Ich bin ___ Hause (Evdeyim).", options: ["nach", "zu", "in", "an"], correct: 1, explanation: "Evde olmak 'zu Hause'dır." },
@@ -1076,63 +1055,100 @@ const unit515Grammar: GermanGrammarUnit = {
     ]
 };
 
-// ===== UNIT 516: VERKEHRSMITTEL & MIT (ULAŞIM VE MİT EDATI) =====
+// ===== UNIT 516: VERKEHRSMITTEL & MIT (ULASIM ARACLARI) =====
 const unit516Grammar: GermanGrammarUnit = {
     unitId: 516,
-    title: "Ulaşım Araçları ve 'mit' Edatı",
+    title: "Ulasim Araclari ve 'mit' Edati (Verkehrsmittel)",
     rules: [
         {
-            id: "de-transport-mit",
-            title: "1. Araçlarla 'mit' ve Dativ Dansı",
-            explanation: "Bir araçla bir yere gittiğini söylerken Almancada 'mit' (ile) edatını kullanırız.\n\n🎯 **ALTIN KURAL (Dativ Sıklığı):** 'mit' edatı her zaman **Dativ** ister. Yani artikeller değişir!\n- der Bus $\rightarrow$ mit **dem** Bus\n- die U-Bahn $\rightarrow$ mit **der** U-Bahn\n- das Auto $\rightarrow$ mit **dem** Auto\n\n🚫 **BÜYÜK TUZAK (Yürümek):** Sakın 'mit Füßen' deme! Yürüyerek gitmek istisnai olarak **'zu Fuß'** şeklinde söylenir.",
+            id: "de-verkehrsmittel-vocab",
+            title: "BOLUM 1: ULASIM ARACLARI SOZLUGU (Verkehrsmittel)",
+            explanation: "Bu kelimeleri ezberlerken her zaman artikelleriyle birlikte yuksek sesle oku.",
             table: {
-                headers: ["Araç", "Mit + Artikel (Dativ)", "Türkçesi"],
+                headers: ["Artikel + Arac", "Okunusu", "Turkce Anlami"],
                 rows: [
-                    ["der Bus", "mit dem Bus", "Otobüsle"],
-                    ["der Zug", "mit dem Zug", "Trenle"],
-                    ["das Auto", "mit dem Auto", "Arabayla"],
-                    ["die U-Bahn", "mit der U-Bahn", "Metroyla"],
-                    ["das Fahrrad", "mit dem Fahrrad", "Bisikletle"]
+                    ["das Auto", "das auto", "Araba"],
+                    ["das Fahrrad", "das faa-rat", "Bisiklet"],
+                    ["das Flugzeug", "das fluuk-tsoyk", "Ucak"],
+                    ["der Bus", "dea bus", "Otobus"],
+                    ["der Zug", "dea tsuuk", "Tren"],
+                    ["die U-Bahn", "di u-baan", "Metro (Yeralti treni)"],
+                    ["die Strassenbahn", "di straason-baan", "Tramvay"]
                 ]
             },
             examples: [
-                { de: "Ich fahre mit dem Zug.", tr: "Trenle gidiyorum." },
-                { de: "Kommst du mit dem Auto?", tr: "Arabayla mı geliyorsun?" }
+                { de: "Ich habe ein Auto.", tr: "Benim bir arabam var." },
+                { de: "Der Zug kommt um 8 Uhr.", tr: "Tren saat 8'de geliyor." }
             ]
         },
         {
-            id: "de-transport-koc",
-            title: "🕵️ KOÇUN GÖREVİ",
-            explanation: "Shelldon bir bilet gişesi görevlisi olsun. Ona hangi araçla seyahat edeceğini anlat. 'mit dem' veya 'mit der' kalıplarını doğru kullanmayı unutma!",
+            id: "de-mit-dativ-rule",
+            title: "BOLUM 2: 'MIT' EDATI VE DATIV KURALI (Sihirli Donusum)",
+            explanation: "Almancada \"mit\" (ile) kelimesi Dativ (Ismin -e hali) diktatorudur. \"Mit\" kelimesini kullandigin an, ondan sonra gelen kelimenin artikeli mecburiyetten sekil degistirir.\n\nALTIN KURAL:\nEger aracin artikeli der veya das ise --> dem olur.\nEger aracin artikeli die ise --> der olur! (Evet, disi artikel erkek artikele donusuyor gibi gorunur, bu Almancanin en buyuk sasirtmacasidir, kanma!)",
+            table: {
+                headers: ["Orijinal Artikel", "Dativ Hali", "Aciklama"],
+                rows: [
+                    ["der (Erkek)", "dem", "der Bus --> mit dem Bus"],
+                    ["das (Notr)", "dem", "das Auto --> mit dem Auto"],
+                    ["die (Disi)", "der", "die U-Bahn --> mit der U-Bahn"]
+                ]
+            },
             examples: [
-                { de: "Ich fahre mit dem Bus zur Arbeit.", tr: "İşe otobüsle gidiyorum." },
-                { de: "Gehen wir zu Fuß?", tr: "Yürüyerek mi gidelim?" }
+                { de: "der Bus --> mit dem Bus", tr: "Otobus --> Otobusle" },
+                { de: "die U-Bahn --> mit der U-Bahn", tr: "Metro --> Metroyla" }
+            ]
+        },
+        {
+            id: "de-dativ-dance",
+            title: "BOLUM 3: DATIV DANSI (Birlestirme Zamani)",
+            explanation: "Simdi \"mit\" edatiyla araclari birlestirip \"Arabayla, Otobusle\" diyelim. Formulumuz cok basit:\n\nLego Formulu: mit + Donusmus Artikel (dem/der) + Arac\n\n1. 'Das' ve 'Der' Artikelli Araclar (dem olurlar):\ndas Auto (Araba) --> mit dem Auto (Arabayla)\ndas Fahrrad (Bisiklet) --> mit dem Fahrrad (Bisikletle)\nder Bus (Otobus) --> mit dem Bus (Otobusle)\nder Zug (Tren) --> mit dem Zug (Trenle)\n\n2. 'Die' Artikelli Araclar (der olurlar):\ndie U-Bahn (Metro) --> mit der U-Bahn (Metroyla)\ndie Strassenbahn (Tramvay) --> mit der Strassenbahn (Tramvayla)",
+            examples: [
+                { de: "Ich fahre mit dem Auto.", tr: "Arabayla gidiyorum." },
+                { de: "Wir fahren mit dem Zug.", tr: "Trenle gidiyoruz." },
+                { de: "Sie fahrt mit der U-Bahn.", tr: "O metroyla gidiyor." },
+                { de: "Fahrt ihr mit dem Bus?", tr: "Siz otobusle mi gidiyorsunuz?" }
+            ]
+        },
+        {
+            id: "de-fahren-vs-gehen",
+            title: "KOCUN ONEMLI UYARISI (Fahren vs. Gehen)",
+            explanation: "Bir yere bir aracla gidiyorsan, Almancada yurumek anlamina gelen \"gehen\" fiilini KULLANAMAZSIN! Aracla gitmek (surmek veya yolcu olmak fark etmez) icin her zaman \"fahren\" fiili kullanilir.\n\nYANLIS: Ich gehe mit dem Auto. (Araba yurutuyorum gibi garip bir anlam cikar.)\nDOGRU: Ich fahre mit dem Auto. (Arabayla gidiyorum.)",
+            examples: [
+                { de: "Ich fahre mit dem Auto.", tr: "Arabayla gidiyorum. (DOGRU)" },
+                { de: "Ich gehe mit dem Auto.", tr: "YANLIS! Araba yurutuyorum gibi anlasilir." }
+            ]
+        },
+        {
+            id: "de-zu-fuss",
+            title: "BOLUM 4: BUYUK ISTISNA (Yuruyerek Gitmek)",
+            explanation: "Her yere aracla gitmeyiz. Peki \"Yuruyerek gidiyorum\" (veya yaya olarak) nasil diyecegiz?\n\nAlmanlar yurumek icin \"mit\" kelimesini KULLANMAZLAR. Bunun yerine \"zu\" edatini kullanirlar. Bu kaliplasmus bir ifadedir ve asla degismez.\n\nYuruyerek / Yaya olarak: zu Fuss (tsu fuus)\n\nOrnek: Ich gehe zu Fuss. (Ben yuruyerek gidiyorum.)",
+            examples: [
+                { de: "Ich gehe zu Fuss.", tr: "Ben yuruyerek gidiyorum." },
+                { de: "Gehst du zu Fuss zur Schule?", tr: "Okula yuruyerek mi gidiyorsun?" }
+            ]
+        },
+        {
+            id: "de-transport-dialog",
+            title: "BOLUM 5: KISA BIR DIYALOG (Ise Nasil Gidiyorsun?)",
+            explanation: "Onceki derslerimizde W-Sorularindan \"Nasil? (Wie?)\" sorusunu ogrenmistik. Simdi bunu pratikte gorelim.\n\nSenaryo: Arkadasin Lukas ile ise/okula nasil gittiginizi konusuyorsunuz.\n\nLukas: Hallo Yigithan! Wie fahrst du zur Arbeit?\n(Selam Yigithan! Ise nasil gidiyorsun?)\n\nSen: Ich fahre mit dem Auto. Und du?\n(Ben arabayla gidiyorum. Ya sen?)\n\nLukas: Mein Auto ist kaputt. Ich fahre heute mit dem Bus.\n(Arabam bozuk. Ben bugun otobusle gidiyorum.)\n\nSen: Und Anna? Fahrt sie auch mit dem Bus?\n(Peki Anna? O da mi otobusle gidiyor?)\n\nLukas: Nein, sie wohnt hier. Sie geht zu Fuss.\n(Hayir, o burada yasiyor. O yuruyerek gidiyor.)",
+            examples: [
+                { de: "Wie fahrst du zur Arbeit?", tr: "Ise nasil gidiyorsun?" },
+                { de: "Ich fahre mit dem Auto.", tr: "Arabayla gidiyorum." },
+                { de: "Sie geht zu Fuss.", tr: "O yuruyerek gidiyor." }
             ]
         }
     ],
-    dialogue: {
-        scenario: "airport",
-        intro: "Hoş geldiniz! Ben Shelldon. Seyahatiniz için hangi aracı tercih edersiniz? Wie fahren Sie nach Berlin? ✈️",
-        objectives: {
-            de: ["Bir araçla gideceğini söyle (mit + dem/der)", "Yürüyerek gideceğini söyle (zu Fuß)", "Bilet fiyatını sor"],
-            tr: ["Bir araçla gideceğini söyle (mit + dem/der)", "Yürüyerek gideceğini söyle (zu Fuß)", "Bilet fiyatını sor"]
-        },
-        suggestedPhrases: {
-            de: ["Ich fahre mit dem Zug.", "Ich gehe zu Fuß.", "Was kostet das Ticket?"],
-            tr: ["Trenle gidiyorum.", "Yürüyerek gidiyorum.", "Bilet ne kadar?"]
-        }
-    },
     exercises: [
-        { question: "Ich fahre ___ dem Bus.", options: ["mit", "bei", "zu", "nach"], correct: 0, explanation: "Araçla gitmek 'mit' ile söylenir." },
-        { question: "Wir fliegen ___ (uçakla).", options: ["mit das Flugzeug", "mit dem Flugzeug", "mit Flugzeug", "mit den Flugzeug"], correct: 1, explanation: "'mit' Dativ ister; das -> dem olur." },
-        { question: "Kommst du ___ (arabayla)?", options: ["mit dem Auto", "mit das Auto", "mit Auto", "mit der Auto"], correct: 0, explanation: "'Auto' das olduğu için 'dem' olur." },
-        { question: "Sie fährt ___ (metroyla).", options: ["mit der U-Bahn", "mit die U-Bahn", "mit dem U-Bahn", "mit U-Bahn"], correct: 0, explanation: "'U-Bahn' die olduğu için Dativ halde 'der' olur." },
-        { question: "Ich gehe ___ (yürüyerek / yaya).", options: ["mit den Füßen", "mit dem Fuß", "zu Fuß", "nach Fuß"], correct: 2, explanation: "Yürüyerek gitmek istisnai olarak 'zu Fuß' şeklinde söylenir." },
-        { question: "Fährst du mit ___ (bisiklet)?", options: ["das Fahrrad", "dem Fahrrad", "der Fahrrad", "den Fahrrad"], correct: 1, explanation: "Das Fahrrad -> dem Fahrrad." },
-        { question: "Wir reisen mit ___ (tren).", options: ["der Zug", "dem Zug", "das Zug", "den Zug"], correct: 1, explanation: "Der Zug -> dem Zug." },
-        { question: "Reist ihr mit ___ (gemi)?", options: ["dem Schiff", "das Schiff", "der Schiff", "den Schiff"], correct: 0, explanation: "Das Schiff -> dem Schiff." },
-        { question: "Ich fahre ile ___ (motosiklet).", options: ["dem Motorrad", "das Motorrad", "der Motorrad", "den Motorrad"], correct: 0, explanation: "Das Motorrad -> dem Motorrad." },
-        { question: "'Otobüsle' ifadesindeki 'mit'den sonra artikel ne olur? (der Bus)", options: ["der", "die", "das", "dem"], correct: 3, explanation: "Der artikel Dativ'de dem olur." }
+        { question: "Ich fahre ___ dem Bus.", options: ["mit", "bei", "zu", "nach"], correct: 0, explanation: "Aracla gitmek 'mit' ile soylenir." },
+        { question: "Wir fliegen ___ (ucakla).", options: ["mit das Flugzeug", "mit dem Flugzeug", "mit Flugzeug", "mit den Flugzeug"], correct: 1, explanation: "'mit' Dativ ister; das --> dem olur." },
+        { question: "Kommst du ___ (arabayla)?", options: ["mit dem Auto", "mit das Auto", "mit Auto", "mit der Auto"], correct: 0, explanation: "'Auto' das oldugu icin 'dem' olur." },
+        { question: "Sie fahrt ___ (metroyla).", options: ["mit der U-Bahn", "mit die U-Bahn", "mit dem U-Bahn", "mit U-Bahn"], correct: 0, explanation: "'U-Bahn' die oldugu icin Dativ halde 'der' olur." },
+        { question: "Ich gehe ___ (yuruyerek / yaya).", options: ["mit den Fussen", "mit dem Fuss", "zu Fuss", "nach Fuss"], correct: 2, explanation: "Yuruyerek gitmek istisnai olarak 'zu Fuss' seklinde soylenir." },
+        { question: "Fahrst du mit ___ (bisiklet)?", options: ["das Fahrrad", "dem Fahrrad", "der Fahrrad", "den Fahrrad"], correct: 1, explanation: "Das Fahrrad --> dem Fahrrad." },
+        { question: "Wir reisen mit ___ (tren).", options: ["der Zug", "dem Zug", "das Zug", "den Zug"], correct: 1, explanation: "Der Zug --> dem Zug." },
+        { question: "Reist ihr mit ___ (gemi)?", options: ["dem Schiff", "das Schiff", "der Schiff", "den Schiff"], correct: 0, explanation: "Das Schiff --> dem Schiff." },
+        { question: "'Otobusle' ifadesindeki 'mit'den sonra artikel ne olur? (der Bus)", options: ["der", "die", "das", "dem"], correct: 3, explanation: "Der artikel Dativ'de dem olur." },
+        { question: "Aracla gitmek icin hangi fiil kullanilir?", options: ["gehen", "fahren", "laufen", "kommen"], correct: 1, explanation: "Aracla gitmek icin her zaman 'fahren' kullanilir, 'gehen' degil." }
     ]
 };
 
