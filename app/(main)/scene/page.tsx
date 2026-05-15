@@ -67,6 +67,7 @@ function SceneContent() {
     const [isLoading, setIsLoading] = useState(false);
     const [hasAutoStarted, setHasAutoStarted] = useState(false);
     const [matchedPhrases, setMatchedPhrases] = useState<string[]>([]);
+    const [isAiMode, setIsAiMode] = useState<boolean | null>(null); // null = henüz belli değil, true = AI, false = Offline
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -104,13 +105,15 @@ function SceneContent() {
         setIsLoading(true);
         setMessages([]);
         setMatchedPhrases([]);
+        setIsAiMode(null);
 
         try {
+            console.log('[Scene] Calling AI API...');
             const response = await fetch('/api/scene/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    messages: [{ role: 'user', content: 'Merhaba, sahneyi başlatabilir misin?' }],
+                    messages: [{ role: 'user', content: 'Start the scene. Greet me and set the context.' }],
                     scene,
                     language: activeLang,
                     level: activeLevel
@@ -118,12 +121,22 @@ function SceneContent() {
             });
 
             const data = await response.json();
-            if (data.error) throw new Error(data.error);
+            console.log('[Scene] API Response:', data);
 
+            if (!response.ok || data.error) {
+                throw new Error(data.error || `API returned ${response.status}`);
+            }
+
+            if (!data.message) {
+                throw new Error('No message in API response');
+            }
+
+            setIsAiMode(true);
             setMessages([{ role: 'assistant', content: data.message }]);
-        } catch (error) {
-            console.error("AI Intro Error:", error);
-            // Fallback to offline intro if AI fails
+        } catch (error: unknown) {
+            const errMsg = error instanceof Error ? error.message : 'Unknown error';
+            console.error('[Scene] AI Intro FAILED, falling back to offline:', errMsg);
+            setIsAiMode(false);
             const intro = createOfflineSceneIntro(scene, activeLang, activeLevel);
             setMessages([{ role: 'assistant', content: intro.message }]);
         } finally {
@@ -143,6 +156,7 @@ function SceneContent() {
         setIsLoading(true);
 
         try {
+            console.log('[Scene] Sending message to AI...');
             const response = await fetch('/api/scene/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -155,12 +169,22 @@ function SceneContent() {
             });
 
             const data = await response.json();
-            if (data.error) throw new Error(data.error);
+            console.log('[Scene] AI Reply:', data);
 
+            if (!response.ok || data.error) {
+                throw new Error(data.error || `API returned ${response.status}`);
+            }
+
+            if (!data.message) {
+                throw new Error('No message in API response');
+            }
+
+            setIsAiMode(true);
             setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
-        } catch (error) {
-            console.error("AI Reply Error:", error);
-            // Fallback to offline reply
+        } catch (error: unknown) {
+            const errMsg = error instanceof Error ? error.message : 'Unknown error';
+            console.error('[Scene] AI Reply FAILED, falling back to offline:', errMsg);
+            setIsAiMode(false);
             const reply = createOfflineSceneReply({
                 scene: selectedScene,
                 language: selectedLang || 'es',
@@ -357,6 +381,16 @@ function SceneContent() {
                                 <p className="text-white/50 text-xs flex items-center gap-2">
                                     <span>{LANGUAGES.find(l => l.code === selectedLang)?.flag}</span>
                                     <span>{selectedLevel}</span>
+                                    {isAiMode !== null && (
+                                        <span className={cn(
+                                            "px-1.5 py-0.5 rounded text-[10px] font-black uppercase",
+                                            isAiMode
+                                                ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                                                : "bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                                        )}>
+                                            {isAiMode ? "🤖 AI" : "📴 Offline"}
+                                        </span>
+                                    )}
                                 </p>
                             </div>
                         </div>
