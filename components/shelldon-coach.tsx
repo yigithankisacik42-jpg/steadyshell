@@ -189,7 +189,7 @@ export function ShelldonCoach() {
                         exit={{ scale: 0, rotate: 180 }}
                         transition={{ type: "spring", stiffness: 260, damping: 20 }}
                         onClick={() => { setIsOpen(true); hideShelldon(); }}
-                        className="fixed bottom-6 right-6 z-[9998] group"
+                        className="fixed bottom-24 right-6 md:bottom-6 z-[9998] group"
                         aria-label="Shelldon Koçu Aç"
                     >
                         {/* Pulse ring */}
@@ -222,7 +222,7 @@ export function ShelldonCoach() {
                         exit={{ opacity: 0, y: 10, scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 300, damping: 25 }}
                         onClick={() => { setIsOpen(true); hideShelldon(); }}
-                        className="fixed bottom-24 right-6 z-[9997] max-w-[280px] cursor-pointer"
+                        className="fixed bottom-44 right-6 md:bottom-24 z-[9997] max-w-[280px] cursor-pointer"
                     >
                         <div className={cn(
                             "p-3 rounded-2xl rounded-br-sm bg-white border-2 shadow-xl text-sm font-medium text-slate-700",
