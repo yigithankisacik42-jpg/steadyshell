@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { ArrowLeft, Bot, User, BookOpenCheck, Volume2, Trophy, Sparkles, Send } from "lucide-react";
+import { ArrowLeft, Bot, User, BookOpenCheck, Volume2, Trophy, Sparkles, Send, Mic, MicOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -15,6 +15,7 @@ interface AiTutorChatProps {
     initialMessage: string;
     moduleName: string;
     defaultQuickReplies?: { label: string; msg: string }[];
+    onComplete?: () => void;
 }
 
 const DEFAULT_QUICK_REPLIES = [
@@ -33,7 +34,8 @@ export function AiTutorChat({
     contextSummary,
     initialMessage,
     moduleName,
-    defaultQuickReplies = DEFAULT_QUICK_REPLIES
+    defaultQuickReplies = DEFAULT_QUICK_REPLIES,
+    onComplete
 }: AiTutorChatProps) {
     const [aiMessages, setAiMessages] = useState<{ role: 'user' | 'assistant', content: string }[]>([]);
     const [aiInput, setAiInput] = useState("");
@@ -41,6 +43,11 @@ export function AiTutorChat({
     const [isTyping, setIsTyping] = useState(false);
     const [displayedText, setDisplayedText] = useState("");
     const [showSummary, setShowSummary] = useState(false);
+    
+    // Voice speech recognition states
+    const [isListening, setIsListening] = useState(false);
+    const [listeningError, setListeningError] = useState<string | null>(null);
+    const recognitionRef = useRef<any>(null);
     
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -59,18 +66,25 @@ export function AiTutorChat({
         }
     }, [aiMessages, aiLoading, displayedText, isOpen]);
 
-    // Cleanup typewriter on unmount to prevent memory leaks
+    // Cleanup typewriter and speech on unmount to prevent memory leaks
     useEffect(() => {
         return () => {
             if (typingIntervalRef.current) {
                 clearInterval(typingIntervalRef.current);
                 typingIntervalRef.current = null;
             }
+            if (recognitionRef.current) {
+                try {
+                    recognitionRef.current.stop();
+                } catch (e) {
+                    // ignore
+                }
+            }
         };
     }, []);
 
     // Typewriter effect (race-condition-safe)
-    const typeMessage = (fullText: string, onComplete: () => void) => {
+    const typeMessage = (fullText: string, onCompleteCB: () => void) => {
         // Always clear previous interval first
         if (typingIntervalRef.current) {
             clearInterval(typingIntervalRef.current);
@@ -91,13 +105,22 @@ export function AiTutorChat({
                     typingIntervalRef.current = null;
                 }
                 setIsTyping(false);
-                onComplete();
+                onCompleteCB();
             }
         }, 15);
     };
 
     // TTS
     const speakText = (text: string, langCode: string) => {
+        if (typeof window === 'undefined' || !window.speechSynthesis) return;
+        
+        // Cancel ongoing speak to avoid overlapping
+        try {
+            window.speechSynthesis.cancel();
+        } catch (e) {
+            // ignore
+        }
+
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = langCode;
         
@@ -143,6 +166,69 @@ export function AiTutorChat({
         return LANG_NAME_TO_ISO[language] || (language.length === 2 ? language : 'es');
     };
 
+    // Microphone Speech Recognition Toggle
+    const toggleListening = () => {
+        if (isListening) {
+            if (recognitionRef.current) {
+                try {
+                    recognitionRef.current.stop();
+                } catch (e) {
+                    console.error("Error stopping recognition:", e);
+                }
+            }
+            setIsListening(false);
+            return;
+        }
+
+        const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+        if (!SpeechRecognition) {
+            setListeningError("Tarayıcınız ses tanımayı desteklemiyor. Lütfen Chrome veya Edge kullanın.");
+            setTimeout(() => setListeningError(null), 4000);
+            return;
+        }
+
+        setIsListening(true);
+        setListeningError(null);
+
+        const rec = new SpeechRecognition();
+        rec.lang = getLangCode();
+        rec.continuous = false;
+        rec.interimResults = false;
+
+        rec.onresult = (event: any) => {
+            const transcript = event.results[0]?.[0]?.transcript;
+            if (transcript) {
+                setAiInput("");
+                sendAiMessage(transcript);
+            }
+        };
+
+        rec.onerror = (event: any) => {
+            console.error("Speech recognition error:", event.error);
+            if (event.error === 'not-allowed') {
+                setListeningError("Mikrofon izni engellendi. Lütfen tarayıcı ayarlarından izin verin.");
+            } else if (event.error === 'no-speech') {
+                setListeningError("Ses algılanamadı. Mikrofona daha yakın konuşmayı deneyin.");
+            } else {
+                setListeningError("Ses algılama hatası: " + event.error);
+            }
+            setIsListening(false);
+            setTimeout(() => setListeningError(null), 4000);
+        };
+
+        rec.onend = () => {
+            setIsListening(false);
+        };
+
+        recognitionRef.current = rec;
+        try {
+            rec.start();
+        } catch (e) {
+            console.error("Error starting recognition:", e);
+            setIsListening(false);
+        }
+    };
+
     const startChat = async () => {
         setAiMessages([]);
         setAiLoading(true);
@@ -166,6 +252,7 @@ export function AiTutorChat({
                 typeMessage(data.message, () => {
                     setAiMessages([{ role: 'assistant', content: data.message }]);
                     setDisplayedText('');
+                    speakText(data.message, getLangCode()); // Auto play TTS
                 });
             } else {
                 setAiMessages([{ role: 'assistant', content: '⚠️ AI bağlantı hatası: ' + (data.error || 'Bilinmeyen hata') }]);
@@ -205,6 +292,7 @@ export function AiTutorChat({
                 typeMessage(data.message, () => {
                     setAiMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
                     setDisplayedText('');
+                    speakText(data.message, getLangCode()); // Auto play TTS
                 });
             }
         } catch {
@@ -260,13 +348,13 @@ export function AiTutorChat({
                     </div>
                     <div className="flex gap-3">
                         <button 
-                            onClick={() => { setShowSummary(false); onClose(); }}
+                            onClick={() => { setShowSummary(false); onClose(); onComplete?.(); }}
                             className="flex-1 py-3 px-4 rounded-xl font-bold text-sm bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-colors"
                         >
                             📖 {moduleName}'e Dön
                         </button>
                         <button 
-                            onClick={() => { setShowSummary(false); }}
+                            onClick={() => { setShowSummary(false); onComplete?.(); }}
                             className="flex-1 py-3 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all"
                         >
                             🐢 Devam Et
@@ -382,14 +470,37 @@ export function AiTutorChat({
             {/* Input */}
             <div className="p-4 border-t border-white/10 bg-slate-950/80 backdrop-blur-md">
                 <div className="max-w-2xl mx-auto">
+                    {isListening && (
+                        <p className="text-rose-400 text-xs font-bold text-center mb-2 animate-pulse">
+                            🎤 Dinliyorum... Konuşmaya başlayın
+                        </p>
+                    )}
+                    {listeningError && (
+                        <p className="text-amber-400 text-xs font-bold text-center mb-2 animate-pulse">
+                            ⚠️ {listeningError}
+                        </p>
+                    )}
                     <div className="bg-white/5 p-2 rounded-2xl border border-white/10 flex items-center gap-2">
+                        <button
+                            type="button"
+                            onClick={toggleListening}
+                            disabled={aiLoading || isTyping}
+                            className={cn(
+                                "h-10 w-10 flex items-center justify-center rounded-xl transition-all shadow-sm shrink-0 border border-white/10",
+                                isListening 
+                                    ? "bg-rose-500 hover:bg-rose-600 animate-pulse text-white" 
+                                    : "bg-white/5 hover:bg-white/10 text-white/60 hover:text-white"
+                            )}
+                        >
+                            {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+                        </button>
                         <input
                             ref={inputRef}
                             type="text"
                             value={aiInput}
                             onChange={(e) => setAiInput(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && (e.preventDefault(), sendAiMessage())}
-                            placeholder="Hocaya sor veya cevap yaz..."
+                            placeholder="Hocaya sor veya sesli konuşmak için mikrofonu kullan..."
                             disabled={aiLoading || isTyping}
                             className="flex-1 bg-transparent h-12 pl-4 pr-4 font-medium text-white placeholder:text-white/30 border-none outline-none"
                         />
