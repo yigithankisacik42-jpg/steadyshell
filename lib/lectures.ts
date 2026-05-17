@@ -27,6 +27,7 @@ export interface UnitLecture {
     level: string;
     videoUrl?: string;
     slides: LectureSlide[];
+    isDynamicAi?: boolean;
 }
 
 // ===== ÜNİTE 1: SELAMLAŞMA =====
@@ -716,9 +717,9 @@ import { getFrenchA2LectureForUnit } from './lectures-fr-a2';
 import { getGermanA1LectureForUnit } from './lectures-de-a1';
 import { getGermanA2LectureForUnit } from './lectures-de-a2';
 import { getGermanB1LecturesForUnit } from './lectures-de-b1';
+import { findUnitById } from './curriculum';
 
-
-export function getLectureForUnit(unitId: number): UnitLecture {
+function _getLectureForUnit(unitId: number): UnitLecture {
     // === İNGİLİZCE ÜNİTELER (ID 101-220) ===
     // İngilizce A1 (101-130)
     if (unitId >= 101 && unitId <= 130) {
@@ -840,7 +841,35 @@ export function getLectureForUnit(unitId: number): UnitLecture {
         21: unit21Lecture, 22: unit22Lecture, 23: unit23Lecture, 24: unit24Lecture, 25: unit25Lecture,
         26: unit26Lecture, 27: unit27Lecture, 28: unit28Lecture, 29: unit29Lecture, 30: unit30Lecture
     };
-    return lectures[unitId] || unit1Lecture;
+    
+    if (lectures[unitId]) {
+        return lectures[unitId];
+    }
+
+    return unit1Lecture;
 }
 
+export function getLectureForUnit(unitId: number): UnitLecture {
+    const lecture = _getLectureForUnit(unitId);
+    
+    // Eğer dönen lecture'ın ID'si istenen ID ile aynıysa (yani tam olarak o üniteye aitse), onu döndür
+    if (lecture && lecture.unitId === unitId) {
+        return lecture;
+    }
 
+    // Aksi takdirde, sub-function'lardan biri fallback yapmış demektir. 
+    // Bu durumda DINAMIK AI DERS FALLBACK devreye girer.
+    const curriculumInfo = findUnitById(unitId);
+    if (curriculumInfo) {
+        return {
+            unitId: unitId,
+            title: curriculumInfo.unit.title,
+            language: curriculumInfo.langCode,
+            level: curriculumInfo.levelCode,
+            slides: [], // Boş slayt listesi, AI mode için tetikleyici olacak
+            isDynamicAi: true
+        };
+    }
+
+    return lecture; // curriculum'da da yoksa son çare orijinal fallback'i döndür
+}

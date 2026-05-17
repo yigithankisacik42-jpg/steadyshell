@@ -108,7 +108,6 @@ function SceneContent() {
         setIsAiMode(null);
 
         try {
-            console.log('[Scene] Calling AI API...');
             const response = await fetch('/api/scene/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -121,26 +120,21 @@ function SceneContent() {
             });
 
             const data = await response.json();
-            console.log('[Scene] API Response:', data);
 
-            if (!response.ok || data.error) {
-                throw new Error(data.error || `API returned ${response.status}`);
-            }
-
-            if (!data.message) {
-                throw new Error('No message in API response');
+            if (!response.ok || data.error || !data.message) {
+                throw new Error(data.error || 'No message');
             }
 
             setIsAiMode(true);
             setMessages([{ role: 'assistant', content: data.message }]);
-            
-            // Otomatik seslendir
             speak(data.message);
         } catch (error: unknown) {
-            const errMsg = error instanceof Error ? error.message : 'Unknown error';
-            console.error('[Scene] AI Intro FAILED:', errMsg);
+            console.error('[Scene] AI Intro FAILED, switching to offline:', error instanceof Error ? error.message : error);
+            // Graceful offline fallback
             setIsAiMode(false);
-            setMessages([{ role: 'assistant', content: '⚠️ Yapay zeka bağlantısı kurulamadı. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.\n\nHata: ' + errMsg }]);
+            const offlineIntro = createOfflineSceneIntro(scene, activeLang, activeLevel);
+            setMessages([{ role: 'assistant', content: offlineIntro.message }]);
+            speak(offlineIntro.message);
         } finally {
             setIsLoading(false);
             setTimeout(() => inputRef.current?.focus(), 100);
@@ -158,7 +152,6 @@ function SceneContent() {
         setIsLoading(true);
 
         try {
-            console.log('[Scene] Sending message to AI...');
             const response = await fetch('/api/scene/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -171,26 +164,31 @@ function SceneContent() {
             });
 
             const data = await response.json();
-            console.log('[Scene] AI Reply:', data);
 
-            if (!response.ok || data.error) {
-                throw new Error(data.error || `API returned ${response.status}`);
-            }
-
-            if (!data.message) {
-                throw new Error('No message in API response');
+            if (!response.ok || data.error || !data.message) {
+                throw new Error(data.error || 'No message');
             }
 
             setIsAiMode(true);
             setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
-            
-            // Otomatik seslendir
             speak(data.message);
         } catch (error: unknown) {
-            const errMsg = error instanceof Error ? error.message : 'Unknown error';
-            console.error('[Scene] AI Reply FAILED:', errMsg);
+            console.error('[Scene] AI Reply FAILED, switching to offline:', error instanceof Error ? error.message : error);
+            // Graceful offline fallback
             setIsAiMode(false);
-            setMessages(prev => [...prev, { role: 'assistant', content: '⚠️ Yapay zeka yanıt veremedi. Lütfen tekrar deneyin.\n\nHata: ' + errMsg }]);
+            const offlineReply = createOfflineSceneReply({
+                scene: selectedScene,
+                language: selectedLang || 'es',
+                level: selectedLevel || 'A1',
+                userMessage,
+                matchedPhrases,
+                turnIndex: messages.length
+            });
+            setMessages(prev => [...prev, { role: 'assistant', content: offlineReply.message }]);
+            if (offlineReply.newlyMatchedPhrases.length > 0) {
+                setMatchedPhrases(prev => [...prev, ...offlineReply.newlyMatchedPhrases]);
+            }
+            speak(offlineReply.message);
         } finally {
             setIsLoading(false);
         }

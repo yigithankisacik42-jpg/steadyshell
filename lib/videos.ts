@@ -134,6 +134,7 @@ export const frA2Videos: UnitVideo[] = [
     { unitId: 343, youtubeId: "wZJswfIE5S0", title: "Ev İşleri", level: "A2" },
     { unitId: 344, youtubeId: "JuBGR7V-QFg", title: "Günlük Haberler", level: "A2" },
     { unitId: 345, youtubeId: "NICnTO2f-yg", title: "Televizyon Programları", level: "A2" },
+    { unitId: 347, youtubeId: "1q8x47ux8I4", title: "Müzik Zevkleri", level: "A2" },
     { unitId: 348, youtubeId: "1I_ZGbdaZ8k", title: "Spor Aktiviteleri", level: "A2" },
     { unitId: 349, youtubeId: "OPvvFqTs5zk", title: "Doğa Gezisi", level: "A2" },
     { unitId: 350, youtubeId: "B3WcpGKm4bc", title: "Arkadaş Buluşması", level: "A2" },

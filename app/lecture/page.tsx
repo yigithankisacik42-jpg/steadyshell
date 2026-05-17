@@ -103,17 +103,26 @@ function LectureContent() {
     };
 
     // ======== AI HOCA MODU ========
-    if (isAiMode) {
+    if (isAiMode || lectureContent.isDynamicAi) {
+        const isDynamic = lectureContent.isDynamicAi;
+        const dynamicSummary = `[SYSTEM MESSAGE]: Bu ünite için statik bir ders içeriği bulunmamaktadır. Senin görevin, "${lectureContent.title}" konusunu ${lectureContent.language} dilinde, ${lectureContent.level} seviyesine uygun olarak, deneyimli ve bilge bir profesör edasıyla öğrenciye aktarmaktır. Öğrenci bu konuyu hiç bilmiyor. Açıklamalarında mantıksal bir sıra izle, noktalama ve yazım kurallarına kusursuz bir şekilde dikkat et. Konuyu kısaca tanıt, ilk kuralı veya kelime grubunu verip pratik yaptır, sonrasında öğrencinin cevabına göre ilerle.`;
+        
         return (
             <AiTutorChat 
-                isOpen={isAiMode} 
-                onClose={() => setIsAiMode(false)} 
+                isOpen={true} 
+                onClose={() => {
+                    if (isDynamic) {
+                        router.back();
+                    } else {
+                        setIsAiMode(false);
+                    }
+                }} 
                 unitTitle={lectureContent.title}
                 level={lectureContent.level}
                 language={lectureContent.language}
-                contextSummary={buildLessonSummary()}
-                initialMessage="Dersi başlat."
-                moduleName="Slaytlar"
+                contextSummary={isDynamic ? dynamicSummary : buildLessonSummary()}
+                initialMessage={isDynamic ? "Merhaba! Bu konuyu bana sıfırdan öğretir misin?" : "Dersi başlat."}
+                moduleName={isDynamic ? "Dinamik Ders" : "Slaytlar"}
             />
         );
     }
@@ -135,16 +144,14 @@ function LectureContent() {
                     <Progress value={progress} className="h-3 w-full max-w-md mx-auto" />
                     <p className="text-xs text-slate-400 mt-1">{lectureContent.title}</p>
                 </div>
-                {/* AI Hoca Butonu */}
-                {unitId === 1 && (
-                    <button
-                        onClick={() => setIsAiMode(true)}
-                        className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all hover:scale-105 active:scale-95"
-                    >
-                        <Bot className="w-4 h-4" />
-                        AI Hoca
-                    </button>
-                )}
+                {/* AI Hoca Butonu — Tüm üniteler için aktif */}
+                <button
+                    onClick={() => setIsAiMode(true)}
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all hover:scale-105 active:scale-95"
+                >
+                    <Bot className="w-4 h-4" />
+                    AI Hoca
+                </button>
             </div>
 
             {/* İçerik */}

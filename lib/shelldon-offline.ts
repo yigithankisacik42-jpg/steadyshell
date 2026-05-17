@@ -203,7 +203,8 @@ export const SHELLDON_SCENARIOS: ShelldonScenario[] = [
 type SupportedLang = "es" | "en" | "fr" | "de";
 type Intent = "greeting" | "farewell" | "order" | "question" | "thanks" | "agree" | "describe" | "statement"
     | "price" | "help" | "complain" | "preference" | "negotiate" | "emotion"
-    | "location" | "time_ask" | "food" | "weather" | "hobby" | "opinion";
+    | "location" | "time_ask" | "food" | "weather" | "hobby" | "opinion"
+    | "clarification" | "humor" | "comparison";
 
 // ============================================================
 // PERSONA & CONVERSATION MEMORY
@@ -311,6 +312,9 @@ const KEYWORD_MAP: Record<SupportedLang, Record<Intent, string[]>> = {
         weather: ["clima", "lluvia", "sol", "frio", "calor", "nublado", "viento", "nieve"],
         hobby: ["deporte", "musica", "leer", "pelicula", "jugar", "bailar", "cocinar", "viajar", "futbol"],
         opinion: ["creo que", "pienso que", "en mi opinion", "me parece", "segun yo"],
+        clarification: ["no entiendo", "que significa", "puedes repetir", "otra vez", "mas despacio", "que quieres decir", "como"],
+        humor: ["jaja", "haha", "gracioso", "divertido", "broma", "chiste", "jeje"],
+        comparison: ["mejor que", "peor que", "mas que", "menos que", "como", "igual que", "diferente", "prefiero"],
         statement: [],
     },
     en: {
@@ -333,6 +337,9 @@ const KEYWORD_MAP: Record<SupportedLang, Record<Intent, string[]>> = {
         weather: ["weather", "rain", "sun", "cold", "hot", "cloudy", "wind", "snow", "sunny"],
         hobby: ["sport", "music", "read", "movie", "play", "dance", "cook", "travel", "football", "soccer", "game"],
         opinion: ["i think", "i believe", "in my opinion", "it seems", "i feel that"],
+        clarification: ["i don't understand", "what does that mean", "can you repeat", "again please", "slower please", "what do you mean", "pardon"],
+        humor: ["haha", "lol", "funny", "hilarious", "joke", "kidding", "lmao"],
+        comparison: ["better than", "worse than", "more than", "less than", "like", "same as", "different", "prefer"],
         statement: [],
     },
     fr: {
@@ -355,6 +362,9 @@ const KEYWORD_MAP: Record<SupportedLang, Record<Intent, string[]>> = {
         weather: ["meteo", "pluie", "soleil", "froid", "chaud", "nuageux", "vent", "neige"],
         hobby: ["sport", "musique", "lire", "film", "jouer", "danser", "cuisiner", "voyager", "football"],
         opinion: ["je crois que", "je pense que", "a mon avis", "il me semble", "selon moi"],
+        clarification: ["je ne comprends pas", "que veut dire", "pouvez-vous repeter", "encore une fois", "plus lentement", "comment", "pardon"],
+        humor: ["haha", "drole", "amusant", "blague", "rigolo", "mdr"],
+        comparison: ["mieux que", "pire que", "plus que", "moins que", "comme", "pareil que", "different", "je prefere"],
         statement: [],
     },
     de: {
@@ -377,6 +387,9 @@ const KEYWORD_MAP: Record<SupportedLang, Record<Intent, string[]>> = {
         weather: ["wetter", "regen", "sonne", "kalt", "heiss", "wolkig", "wind", "schnee"],
         hobby: ["sport", "musik", "lesen", "film", "spielen", "tanzen", "kochen", "reisen", "fussball"],
         opinion: ["ich glaube", "ich denke", "meiner meinung nach", "es scheint mir", "ich finde"],
+        clarification: ["ich verstehe nicht", "was bedeutet", "konnen sie wiederholen", "nochmal bitte", "langsamer bitte", "wie bitte", "was meinen sie"],
+        humor: ["haha", "lustig", "witzig", "scherz", "witz", "spass"],
+        comparison: ["besser als", "schlechter als", "mehr als", "weniger als", "wie", "gleich wie", "anders", "ich bevorzuge"],
         statement: [],
     },
 };
@@ -397,6 +410,9 @@ function detectIntent(message: string, language: SupportedLang): Intent {
     if (check("preference")) return "preference";
     if (check("emotion")) return "emotion";
     if (check("opinion")) return "opinion";
+    if (check("clarification")) return "clarification";
+    if (check("humor")) return "humor";
+    if (check("comparison")) return "comparison";
     if (check("order")) return "order";
     if (check("food")) return "food";
     if (check("hobby")) return "hobby";
@@ -3364,6 +3380,9 @@ const GENERIC_RESPONSES: Record<SupportedLang, Record<Intent, string[]>> = {
         weather: ["¡Hoy hace un día estupendo! ☀️", "El clima está agradable hoy. Perfecto para practicar."],
         hobby: ["¡Qué interesante! Cuéntame más sobre eso. 🎯", "¡Genial! Es un hobby muy divertido."],
         opinion: ["¡Interesante punto de vista! ¿Por qué piensas eso? 🤔", "Respeto tu opinión. Cuéntame más."],
+        clarification: ["¡Claro! Te lo explico de otra forma más sencilla. 🐢", "No te preocupes, es normal. Vamos a verlo paso a paso."],
+        humor: ["¡Jaja! Me haces reír. Eres muy gracioso. 😂", "¡Qué bueno! Me encanta el humor. 🐢"],
+        comparison: ["¡Buena comparación! Tienes razón en eso. 🤔", "Interesante diferencia. Ambas opciones tienen sus ventajas."],
         statement: ["Interesante. ¿Quieres continuar practicando?", "Muy bien dicho. ¡Sigue así! 🐢"],
     },
     en: {
@@ -3386,6 +3405,9 @@ const GENERIC_RESPONSES: Record<SupportedLang, Record<Intent, string[]>> = {
         weather: ["It's a wonderful day today! ☀️", "The weather is lovely today. Perfect for practicing!"],
         hobby: ["How interesting! Tell me more about that. 🎯", "That's awesome! What a fun hobby."],
         opinion: ["Interesting point of view! Why do you think that? 🤔", "I respect your opinion. Tell me more."],
+        clarification: ["Of course! Let me explain it in a simpler way. 🐢", "No worries, that's totally normal. Let's go through it step by step."],
+        humor: ["Haha! You're funny. I like your sense of humor! 😂", "That's a good one! I love a good laugh. 🐢"],
+        comparison: ["Good comparison! You make a valid point. 🤔", "Interesting difference. Both options have their advantages."],
         statement: ["Interesting. Would you like to keep practicing?", "Well said. Keep it up! 🐢"],
     },
     fr: {
@@ -3408,6 +3430,9 @@ const GENERIC_RESPONSES: Record<SupportedLang, Record<Intent, string[]>> = {
         weather: ["Il fait un temps magnifique aujourd'hui ! ☀️", "Le temps est agréable. Parfait pour pratiquer !"],
         hobby: ["Comme c'est intéressant ! Dites-m'en plus. 🎯", "Super ! C'est un hobby très amusant."],
         opinion: ["Point de vue intéressant ! Pourquoi pensez-vous ça ? 🤔", "Je respecte votre opinion. Dites-m'en plus."],
+        clarification: ["Bien sûr ! Je vous l'explique autrement. 🐢", "Pas de souci, c'est normal. Voyons ça étape par étape."],
+        humor: ["Haha ! Vous êtes drôle. J'aime votre humour ! 😂", "C'est amusant ! J'adore rire. 🐢"],
+        comparison: ["Bonne comparaison ! Vous avez raison. 🤔", "Différence intéressante. Les deux options ont leurs avantages."],
         statement: ["Intéressant. Voulez-vous continuer à pratiquer ?", "Bien dit. Continuez comme ça ! 🐢"],
     },
     de: {
@@ -3430,6 +3455,9 @@ const GENERIC_RESPONSES: Record<SupportedLang, Record<Intent, string[]>> = {
         weather: ["Heute ist ein wunderschöner Tag! ☀️", "Das Wetter ist angenehm. Perfekt zum Üben!"],
         hobby: ["Wie interessant! Erzählen Sie mir mehr darüber. 🎯", "Super! Das ist ein tolles Hobby."],
         opinion: ["Interessanter Standpunkt! Warum denken Sie das? 🤔", "Ich respektiere Ihre Meinung. Erzählen Sie mehr."],
+        clarification: ["Natürlich! Ich erkläre es Ihnen anders. 🐢", "Keine Sorge, das ist ganz normal. Gehen wir es Schritt für Schritt durch."],
+        humor: ["Haha! Das war lustig. Sie haben Humor! 😂", "Das ist witzig! Ich lache gerne. 🐢"],
+        comparison: ["Guter Vergleich! Da haben Sie recht. 🤔", "Interessanter Unterschied. Beide Optionen haben ihre Vorteile."],
         statement: ["Interessant. Möchten Sie weiter üben?", "Gut gesagt. Weiter so! 🐢"],
     },
 };
@@ -3866,14 +3894,41 @@ export function createShelldonReply(options: ReplyOptions): ShelldonOfflineReply
         // Şablon doldurma (e.g. {item} -> "pizza")
         message = fillTemplate(rawMessage, updatedMemory, l);
 
-        // Persona ve Hafıza bazlı dokunuşlar
-        if (updatedMemory.persona === "friendly" && updatedMemory.userName) {
-            message = `¡${updatedMemory.userName}! ` + message;
-        }
-
-        // Takip sorusu ekleme (Diyaloğu canlı tutmak için)
-        if (practiceMode !== "grammar" && !userMessage.includes("?")) {
-            message += getFollowUp(intent, l, updatedMemory);
+        // Persona ve Hafıza bazlı dokunuşlar (fully persona-aware)
+        const persona = updatedMemory.persona;
+        const userName = updatedMemory.userName;
+        
+        if (persona === "strict") {
+            // Strict persona: no nicknames, direct tone
+            if (intent === "greeting" && userName) {
+                message = message; // Keep formal, no name prefix
+            }
+            // Add strict follow-up style
+            if (!userMessage.includes("?") && practiceMode !== "grammar") {
+                message += getFollowUp(intent, l, updatedMemory);
+            }
+        } else if (persona === "formal") {
+            // Formal persona: polite distance
+            if (userName && turnIndex < 3) {
+                const formalPrefix: Record<SupportedLang, string> = {
+                    es: `Estimado/a ${userName}, `,
+                    en: `Dear ${userName}, `,
+                    fr: `Cher/Chère ${userName}, `,
+                    de: `Sehr geehrte/r ${userName}, `,
+                };
+                message = formalPrefix[l] + message.charAt(0).toLowerCase() + message.slice(1);
+            }
+            if (!userMessage.includes("?") && practiceMode !== "grammar") {
+                message += getFollowUp(intent, l, updatedMemory);
+            }
+        } else {
+            // Friendly persona (default): warm, use first name
+            if (userName && turnIndex % 3 === 0) {
+                message = `¡${userName}! ` + message;
+            }
+            if (practiceMode !== "grammar" && !userMessage.includes("?")) {
+                message += getFollowUp(intent, l, updatedMemory);
+            }
         }
     }
 

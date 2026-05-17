@@ -59,20 +59,37 @@ export function AiTutorChat({
         }
     }, [aiMessages, aiLoading, displayedText, isOpen]);
 
-    // Typewriter effect
+    // Cleanup typewriter on unmount to prevent memory leaks
+    useEffect(() => {
+        return () => {
+            if (typingIntervalRef.current) {
+                clearInterval(typingIntervalRef.current);
+                typingIntervalRef.current = null;
+            }
+        };
+    }, []);
+
+    // Typewriter effect (race-condition-safe)
     const typeMessage = (fullText: string, onComplete: () => void) => {
+        // Always clear previous interval first
+        if (typingIntervalRef.current) {
+            clearInterval(typingIntervalRef.current);
+            typingIntervalRef.current = null;
+        }
+        
         setIsTyping(true);
         setDisplayedText("");
         let i = 0;
-        
-        if (typingIntervalRef.current) clearInterval(typingIntervalRef.current);
         
         typingIntervalRef.current = setInterval(() => {
             if (i < fullText.length - 1) {
                 setDisplayedText(prev => prev + fullText.charAt(i));
                 i++;
             } else {
-                if (typingIntervalRef.current) clearInterval(typingIntervalRef.current);
+                if (typingIntervalRef.current) {
+                    clearInterval(typingIntervalRef.current);
+                    typingIntervalRef.current = null;
+                }
                 setIsTyping(false);
                 onComplete();
             }
@@ -105,13 +122,25 @@ export function AiTutorChat({
         speechSynthesis.speak(utterance);
     };
 
-    const getLangCode = () => {
-        if (language === 'İspanyolca') return 'es-ES';
-        if (language === 'Fransızca') return 'fr-FR';
-        if (language === 'İngilizce') return 'en-US';
-        if (language === 'Almanca') return 'de-DE';
-        if (language.length === 2) return language; // If it's already a code like 'es'
-        return 'es-ES';
+    // Map Turkish language names → TTS locale codes
+    const LANG_NAME_TO_TTS: Record<string, string> = {
+        'İspanyolca': 'es-ES', 'Fransızca': 'fr-FR', 'İngilizce': 'en-US',
+        'Almanca': 'de-DE', 'İtalyanca': 'it-IT', 'Portekizce': 'pt-PT',
+        'es': 'es-ES', 'fr': 'fr-FR', 'en': 'en-US', 'de': 'de-DE', 'it': 'it-IT',
+    };
+
+    // Map Turkish language names → ISO 2-letter codes for API
+    const LANG_NAME_TO_ISO: Record<string, string> = {
+        'İspanyolca': 'es', 'Fransızca': 'fr', 'İngilizce': 'en',
+        'Almanca': 'de', 'İtalyanca': 'it', 'Portekizce': 'pt',
+    };
+
+    const getLangCode = (): string => {
+        return LANG_NAME_TO_TTS[language] || (language.length <= 3 ? language : 'es-ES');
+    };
+
+    const normalizeLangForApi = (): string => {
+        return LANG_NAME_TO_ISO[language] || (language.length === 2 ? language : 'es');
     };
 
     const startChat = async () => {
@@ -127,7 +156,7 @@ export function AiTutorChat({
                     messages: [{ role: 'user', content: initialMessage }],
                     unitTitle: unitTitle,
                     lessonSummary: contextSummary,
-                    language: language === 'İspanyolca' ? 'es' : language,
+                    language: normalizeLangForApi(),
                     level: level
                 })
             });
@@ -166,7 +195,7 @@ export function AiTutorChat({
                     messages: newMessages,
                     unitTitle: unitTitle,
                     lessonSummary: contextSummary,
-                    language: language === 'İspanyolca' ? 'es' : language,
+                    language: normalizeLangForApi(),
                     level: level
                 })
             });

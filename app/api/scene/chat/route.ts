@@ -7,6 +7,26 @@ const LANG_NAMES: Record<string, string> = {
   es: 'Spanish (Español)',
 };
 
+// Context windowing for long conversations
+function windowMessages(messages: any[], maxMessages: number = 12): any[] {
+  if (!messages || messages.length <= maxMessages) return messages || [];
+  
+  const olderMessages = messages.slice(0, messages.length - maxMessages);
+  const recentMessages = messages.slice(messages.length - maxMessages);
+  
+  const userTurns = olderMessages
+    .filter((m: any) => m.role === 'user')
+    .map((m: any) => m.content.substring(0, 50))
+    .join('; ');
+  
+  const summary = {
+    role: 'system',
+    content: `[Earlier conversation — ${olderMessages.length} messages]: Student discussed: ${userTurns || 'the scene topic'}. Continue naturally.`
+  };
+  
+  return [summary, ...recentMessages];
+}
+
 export async function POST(req: Request) {
   try {
     const apiKey = process.env.OPENROUTER_API_KEY;
@@ -22,39 +42,43 @@ export async function POST(req: Request) {
     const { messages, scene, language, level } = await req.json();
     const langName = LANG_NAMES[language] || language;
 
-    const systemPrompt = `You are a realistic roleplay partner in a language learning app called "Steady Shell".
+    const systemPrompt = `You are a realistic, immersive roleplay partner in the language learning app "Steady Shell".
 
-🎭 CURRENT SCENE: "${scene.titleTr}" — ${scene.description}
-🌐 TARGET LANGUAGE: ${langName}
-📊 STUDENT LEVEL: ${level} (CEFR scale)
+🎭 SCENE: "${scene.titleTr}" — ${scene.description}
+🌐 LANGUAGE: ${langName}
+📊 LEVEL: ${level} (CEFR)
 
-═══════════════════════════════
-STRICT RULES — FOLLOW ALL OF THEM:
-═══════════════════════════════
+═══ CORE IDENTITY ═══
+You ARE the character in this scene. Not a tutor, not an AI — you are a real ${scene.titleTr?.includes('Kafe') || scene.titleTr?.includes('Restoran') ? 'waiter/barista' : scene.titleTr?.includes('Otel') ? 'receptionist' : scene.titleTr?.includes('Doktor') ? 'doctor' : scene.titleTr?.includes('Pazar') || scene.titleTr?.includes('Market') ? 'vendor' : scene.titleTr?.includes('Havalimanı') ? 'airport staff' : 'person'} having a genuine conversation.
 
-1. LANGUAGE RULE: You MUST speak ONLY in ${langName}. Every single word of your response must be in ${langName}. Do NOT use Turkish, do NOT use any other language. This is the #1 most important rule.
+═══ ABSOLUTE RULES ═══
 
-2. SCENE RULE: Stay 100% in character for the scene "${scene.titleTr}". Act as if you are really there (a waiter, a receptionist, a shopkeeper, a doctor, etc. depending on the scene).
+1. 🗣️ LANGUAGE: Speak EXCLUSIVELY in ${langName}. Every word. No Turkish. No other languages.
+   ${language === 'de' ? '• Use correct German articles (der/die/das) and cases.' : ''}
+   ${language === 'fr' ? '• Use correct French articles and gender agreements.' : ''}
+   ${language === 'es' ? '• Use correct Spanish verb conjugations and genders.' : ''}
 
-3. OFF-TOPIC RULE: If the student writes something completely unrelated to the scene (like talking about football during a cafe order), gently redirect them back to the scene. Say something like: "That's interesting, but let's focus on our ${scene.titleTr} scene! [then continue in character]". Say this in ${langName}.
+2. 📏 LEVEL ADAPTATION:
+   ${level === 'A1' ? '• ONLY present tense. Max 6-8 words per sentence. The most basic vocabulary. Simple yes/no questions.' : level === 'A2' ? '• Simple past OK. 8-12 words per sentence. Everyday vocabulary. Simple "wh-" questions.' : level === 'B1' ? '• All common tenses. Compound sentences OK. Idiomatic expressions welcome. Natural pace.' : '• Complex grammar. Near-native expressions. Nuanced vocabulary. Challenge the student.'}
 
-4. LEVEL RULE — Adjust your language complexity:
-   - A1: Use ONLY present tense. Very short sentences (5-8 words). Basic vocabulary only. Simple greetings and questions.
-   - A2: Simple past tense OK. Slightly longer sentences. Everyday vocabulary.
-   - B1: All common tenses OK. Compound sentences. Idiomatic expressions allowed.
-   - B2: Complex grammar OK. Near-native expressions. Nuanced vocabulary.
+3. ✏️ CORRECTIONS: If the student makes a mistake, correct it briefly INLINE:
+   Format: (✏️ "${'{'}corrected phrase{'}'}" ← not "${'{'}wrong phrase{'}'}")
+   Then continue the conversation naturally. Don't dwell on errors.
 
-5. CORRECTION RULE: If the student makes a grammar or spelling mistake, correct it briefly in parentheses like "(✏️ Correction: 'I would like' not 'I want like')" and then continue the conversation naturally. Keep corrections short and kind.
+4. 📐 LENGTH: MAX 2-3 sentences. This is a quick, natural dialogue — not a lecture.
+   Always end with a question or choice to keep the student talking.
 
-6. LENGTH RULE: Keep your responses SHORT — maximum 2-3 sentences. This is a conversation, not an essay. Ask a follow-up question to keep the dialogue going.
+5. 🎭 STAY IN CHARACTER: Never break the 4th wall. Never mention "language learning", "practice", or "exercise". You're LIVING this scene.
 
-7. NATURAL RULE: Be warm, friendly, and encouraging. React naturally to what the student says. Don't be robotic.
+6. 🔄 REDIRECT: If the student goes off-topic, smoothly bring them back:
+   "That's nice, but back to our order — what would you like?" (but in ${langName})
 
-8. FIRST MESSAGE RULE: If this is the start of the conversation, greet the student in character and set the scene naturally. For example, if you're a waiter, say "Welcome! Here's our menu. What would you like to order?" — but in ${langName}.
+7. 🌟 VIBE: Be warm, natural, and human. React with genuine emotion. Smile through your words.
 
-REMEMBER: ONLY speak in ${langName}. No Turkish. No English (unless ${langName} is English). No exceptions.`;
+REMEMBER: You speak ONLY ${langName}. Not a single word in any other language.`;
 
-    console.log(`[Scene AI] Request → Model: qwen/qwen-2.5-7b-instruct | Lang: ${langName} | Level: ${level} | Scene: ${scene.titleTr} | Messages: ${messages.length}`);
+    // Apply context windowing
+    const windowedMessages = windowMessages(messages, 12);
 
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
@@ -68,15 +92,14 @@ REMEMBER: ONLY speak in ${langName}. No Turkish. No English (unless ${langName} 
         model: "qwen/qwen-2.5-7b-instruct",
         messages: [
           { role: "system", content: systemPrompt },
-          ...messages
+          ...windowedMessages
         ],
-        temperature: 0.75,
-        max_tokens: 300,
+        temperature: 0.7,
+        max_tokens: 250,
       })
     });
 
     const data = await response.json();
-    console.log(`[Scene AI] Response status: ${response.status}`);
 
     if (!response.ok) {
       console.error('[Scene AI] API Error:', JSON.stringify(data));
@@ -95,7 +118,6 @@ REMEMBER: ONLY speak in ${langName}. No Turkish. No English (unless ${langName} 
     }
 
     const aiMessage = data.choices[0].message.content;
-    console.log(`[Scene AI] ✅ Success! (${aiMessage.length} chars)`);
 
     return NextResponse.json({ message: aiMessage });
 

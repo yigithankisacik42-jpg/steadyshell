@@ -9,7 +9,7 @@ import { ServiceWorkerRegistration } from "@/components/service-worker-registrat
 import { OfflineIndicator } from "@/components/offline-indicator";
 import { AuthProvider } from "@/components/auth-provider";
 import { ShelldonProvider } from "@/contexts/shelldon-context";
-import { ShelldonBubble } from "@/components/shelldon-bubble";
+import { ShelldonCoach } from "@/components/shelldon-coach";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -70,7 +70,7 @@ export default function RootLayout({
                     <ServiceWorkerRegistration />
                     <OfflineIndicator />
                     {children}
-                    <ShelldonBubble />
+                    <ShelldonCoach />
                   </ShelldonProvider>
                 </QuestsProvider>
               </UserProgressProvider>
