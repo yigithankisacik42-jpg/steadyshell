@@ -89,7 +89,7 @@ REMEMBER: You speak ONLY ${langName}. Not a single word in any other language.`;
         "X-Title": "Steady Shell",
       },
       body: JSON.stringify({
-        model: "qwen/qwen-2.5-7b-instruct",
+        model: "deepseek/deepseek-chat",
         messages: [
           { role: "system", content: systemPrompt },
           ...windowedMessages

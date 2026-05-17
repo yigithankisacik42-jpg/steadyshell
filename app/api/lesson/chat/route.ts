@@ -108,7 +108,7 @@ REMEMBER: Turkish teacher, ${langName} examples. Perfect Turkish spelling and pu
         "X-Title": "Steady Shell",
       },
       body: JSON.stringify({
-        model: "qwen/qwen-2.5-7b-instruct",
+        model: "deepseek/deepseek-chat",
         messages: [
           { role: "system", content: systemPrompt },
           ...windowedMessages

@@ -152,7 +152,7 @@ OUTPUT FORMAT — VALID JSON ONLY:
     );
 
     const requestBody = {
-      model: "qwen/qwen-2.5-7b-instruct",
+      model: "deepseek/deepseek-chat",
       messages: [
         { role: "system", content: systemPrompt },
         ...windowedMessages

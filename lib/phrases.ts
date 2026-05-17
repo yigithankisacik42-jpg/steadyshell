@@ -62,7 +62,7 @@ export function getPhrasesForUnit(unitId: number): UnitPhrases {
             phrases: enPhrases.phrases.map((p: any) => ({
                 target: p.phrase,
                 native: p.meaning,
-                pronunciation: ""
+                pronunciation: p.pronunciation || ""
             }))
         };
     }
