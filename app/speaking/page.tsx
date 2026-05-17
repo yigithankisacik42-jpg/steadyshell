@@ -336,8 +336,8 @@ function SpeakingContent() {
                 isOpen={isAiMode} 
                 onClose={() => setIsAiMode(false)} 
                 unitTitle={speakingContent.title}
-                level="A1"
-                language={languageCode}
+                level={speakingContent.level || "A1"}
+                language={speakingContent.language || "İspanyolca"}
                 contextSummary={buildSpeakingSummary()}
                 initialMessage="Bu konuşma ve telaffuz egzersizlerinde bana yardımcı ol."
                 moduleName="Konuşma"
@@ -377,7 +377,7 @@ function SpeakingContent() {
                             <p className="text-xs text-slate-400 mt-1">{speakingContent.title}</p>
                         </div>
                         <div className="flex items-center gap-3">
-                            {unitId === 1 && (
+                            {(unitId === 1 || (unitId >= 501 && unitId <= 530)) && (
                                 <button
                                     onClick={() => setIsAiMode(true)}
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-violet-100 text-violet-700 hover:bg-violet-200 transition-colors shadow-sm border border-violet-200"

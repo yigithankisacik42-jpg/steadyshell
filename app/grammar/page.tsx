@@ -138,7 +138,7 @@ function GrammarContent() {
                         <Progress value={progress} className="h-3 flex-1 rounded-full bg-slate-100" />
                         <div className="flex items-center gap-3">
                             <span className="text-sm font-bold text-slate-500">{currentRuleIndex + 1}/{content.rules.length}</span>
-                            {unitId === 1 && (
+                            {(unitId === 1 || (unitId >= 501 && unitId <= 530)) && (
                                 <button
                                     onClick={() => setIsAiMode(true)}
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-cyan-100 text-cyan-700 hover:bg-cyan-200 transition-colors shadow-sm border border-cyan-200"

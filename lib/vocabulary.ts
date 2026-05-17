@@ -1097,6 +1097,7 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         return {
             unitId: enVocab.unitId,
             title: enVocab.title,
+            language: "İngilizce",
             words: enVocab.words.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
@@ -1113,6 +1114,7 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         return {
             unitId: enVocab.unitId,
             title: enVocab.title,
+            language: "İngilizce",
             words: enVocab.words.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
@@ -1129,6 +1131,7 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         return {
             unitId: enVocab.unitId,
             title: enVocab.title,
+            language: "İngilizce",
             words: enVocab.words.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
@@ -1145,6 +1148,7 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         return {
             unitId: enVocab.unitId,
             title: enVocab.title,
+            language: "İngilizce",
             words: enVocab.words.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
@@ -1158,14 +1162,28 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
     // Fransızca A1 (301-330)
     if (unitId >= 301 && unitId <= 330) {
         const frVocab = getFrenchA1VocabularyForUnit(unitId);
-        if (frVocab) return frVocab;
+        if (frVocab) {
+            return {
+                unitId: frVocab.unitId,
+                title: frVocab.title,
+                language: "Fransızca",
+                words: frVocab.words
+            };
+        }
         // Fallback or empty if null
     }
 
     // Fransızca A2 (331-360)
     if (unitId >= 331 && unitId <= 360) {
         const frA2Vocab = getFrenchA2VocabularyForUnit(unitId);
-        if (frA2Vocab) return frA2Vocab;
+        if (frA2Vocab) {
+            return {
+                unitId: frA2Vocab.unitId,
+                title: frA2Vocab.title,
+                language: "Fransızca",
+                words: frA2Vocab.words
+            };
+        }
     }
 
     // Fransızca B1 (361-390)
@@ -1174,6 +1192,7 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         return {
             unitId: unitId,
             title: `Ünite ${unitId}`,
+            language: "Fransızca",
             words: frB1Vocab.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
@@ -1191,6 +1210,7 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         return {
             unitId: deVocab.unitId,
             title: deVocab.title,
+            language: "Almanca",
             words: deVocab.words.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
@@ -1207,6 +1227,7 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         return {
             unitId: deVocab.unitId,
             title: deVocab.title,
+            language: "Almanca",
             words: deVocab.words.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
@@ -1223,6 +1244,7 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
         return {
             unitId: deVocab.unitId,
             title: deVocab.title,
+            language: "Almanca",
             words: deVocab.words.map(v => ({
                 word: v.word,
                 meaning: v.meaning,

@@ -159,7 +159,7 @@ function ReadingContent() {
                     <p className="text-xs text-slate-400 mt-1">{readingContent.title}</p>
                 </div>
                 <div className="flex items-center gap-3">
-                    {unitId === 1 && (
+                    {(unitId === 1 || (unitId >= 501 && unitId <= 530)) && (
                         <button
                             onClick={() => setIsAiMode(true)}
                             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 transition-colors shadow-sm border border-emerald-200"
@@ -174,7 +174,12 @@ function ReadingContent() {
             {step === "reading" && (
                 <div className="flex-1 flex flex-col p-6 max-w-2xl mx-auto w-full overflow-y-auto">
                     <div className="mb-4 flex items-center gap-2">
-                        <span className="text-2xl">🇪🇸</span>
+                        <span className="text-2xl">
+                            {readingContent.language === "Almanca" ? "🇩🇪" :
+                             readingContent.language === "Fransızca" ? "🇫🇷" :
+                             readingContent.language === "İngilizce" ? "🇬🇧" :
+                             "🇪🇸"}
+                        </span>
                         <span className="font-bold text-slate-600">{readingContent.level}</span>
                     </div>
 

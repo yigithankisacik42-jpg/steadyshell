@@ -711,6 +711,7 @@ import { getB1LectureForUnit } from './lectures-b1';
 import { getB2LectureForUnit } from './lectures-b2';
 import { getEnglishA1LectureForUnit } from './lectures-en-a1';
 import { getEnglishA2LectureForUnit } from './lectures-en-a2';
+import { getEnglishB1LectureForUnit } from './lectures-en-b1';
 import { getEnglishB2LectureForUnit } from './lectures-en-b2';
 import { getFrenchA1LectureForUnit } from './lectures-fr-a1';
 import { getFrenchA2LectureForUnit } from './lectures-fr-a2';
@@ -729,13 +730,26 @@ function _getLectureForUnit(unitId: number): UnitLecture {
             title: enLecture.title,
             language: "en",
             level: "A1",
-            slides: enLecture.sections.map((s: { title: string; content: string; tips?: string[] }, i: number) => ({
-                id: i + 1,
-                type: "vocabulary" as const,
-                title: s.title,
-                content: s.content,
-                points: s.tips || undefined
-            }))
+            slides: enLecture.sections.map((s, i) => {
+                const points: string[] = [];
+                if (s.examples && s.examples.length > 0) {
+                    s.examples.forEach(ex => {
+                        points.push(`Örnek: ${ex.english} ➔ ${ex.turkish}`);
+                    });
+                }
+                if (s.tips && s.tips.length > 0) {
+                    s.tips.forEach(tip => {
+                        points.push(`İpucu: ${tip}`);
+                    });
+                }
+                return {
+                    id: i + 1,
+                    type: "practice" as const,
+                    title: s.title,
+                    content: s.content,
+                    points: points.length > 0 ? points : undefined
+                };
+            })
         };
     }
 
@@ -747,13 +761,57 @@ function _getLectureForUnit(unitId: number): UnitLecture {
             title: enLecture.title,
             language: "en",
             level: "A2",
-            slides: enLecture.sections.map((s: { title: string; content: string; tips?: string[] }, i: number) => ({
-                id: i + 1,
-                type: "vocabulary" as const,
-                title: s.title,
-                content: s.content,
-                points: s.tips || undefined
-            }))
+            slides: enLecture.sections.map((s, i) => {
+                const points: string[] = [];
+                if (s.examples && s.examples.length > 0) {
+                    s.examples.forEach(ex => {
+                        points.push(`Örnek: ${ex.english} ➔ ${ex.turkish}`);
+                    });
+                }
+                if (s.tips && s.tips.length > 0) {
+                    s.tips.forEach(tip => {
+                        points.push(`İpucu: ${tip}`);
+                    });
+                }
+                return {
+                    id: i + 1,
+                    type: "practice" as const,
+                    title: s.title,
+                    content: s.content,
+                    points: points.length > 0 ? points : undefined
+                };
+            })
+        };
+    }
+
+    // İngilizce B1 (161-190)
+    if (unitId >= 161 && unitId <= 190) {
+        const enLecture = getEnglishB1LectureForUnit(unitId);
+        return {
+            unitId: enLecture.unitId,
+            title: enLecture.title,
+            language: "en",
+            level: "B1",
+            slides: enLecture.sections.map((s, i) => {
+                const points: string[] = [];
+                if (s.examples && s.examples.length > 0) {
+                    s.examples.forEach(ex => {
+                        points.push(`Örnek: ${ex.english} ➔ ${ex.turkish}`);
+                    });
+                }
+                if (s.tips && s.tips.length > 0) {
+                    s.tips.forEach(tip => {
+                        points.push(`İpucu: ${tip}`);
+                    });
+                }
+                return {
+                    id: i + 1,
+                    type: "practice" as const,
+                    title: s.title,
+                    content: s.content,
+                    points: points.length > 0 ? points : undefined
+                };
+            })
         };
     }
 
@@ -765,13 +823,26 @@ function _getLectureForUnit(unitId: number): UnitLecture {
             title: enLecture.title,
             language: "en",
             level: "B2",
-            slides: enLecture.sections.map((s, i) => ({
-                id: i + 1,
-                type: "vocabulary" as const,
-                title: s.title,
-                content: s.content,
-                points: s.tips || undefined
-            }))
+            slides: enLecture.sections.map((s, i) => {
+                const points: string[] = [];
+                if (s.examples && s.examples.length > 0) {
+                    s.examples.forEach(ex => {
+                        points.push(`Örnek: ${ex.english} ➔ ${ex.turkish}`);
+                    });
+                }
+                if (s.tips && s.tips.length > 0) {
+                    s.tips.forEach(tip => {
+                        points.push(`İpucu: ${tip}`);
+                    });
+                }
+                return {
+                    id: i + 1,
+                    type: "practice" as const,
+                    title: s.title,
+                    content: s.content,
+                    points: points.length > 0 ? points : undefined
+                };
+            })
         };
     }
 

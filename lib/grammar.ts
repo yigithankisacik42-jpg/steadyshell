@@ -3304,7 +3304,10 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
     if (unitId >= 301 && unitId <= 330) {
         const frGrammar = getFrenchA1GrammarForUnit(unitId);
         if (frGrammar) {
-            return frGrammar;
+            return {
+                ...frGrammar,
+                language: "Fransızca"
+            };
         }
     }
 
@@ -3312,7 +3315,10 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
     if (unitId >= 331 && unitId <= 360) {
         const frA2Grammar = getFrenchA2GrammarForUnit(unitId);
         if (frA2Grammar) {
-            return frA2Grammar;
+            return {
+                ...frA2Grammar,
+                language: "Fransızca"
+            };
         }
     }
 
@@ -3320,23 +3326,35 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
     if (unitId >= 361 && unitId <= 390) {
         const frB1Grammar = getFrB1GrammarForUnit(unitId);
         if (frB1Grammar) {
-            return frB1Grammar;
+            return {
+                ...frB1Grammar,
+                language: "Fransızca"
+            };
         }
     }
 
     // Almanca A1 (501-530)
     if (unitId >= 501 && unitId <= 530) {
-        return getGermanA1GrammarForUnit(unitId);
+        return {
+            ...getGermanA1GrammarForUnit(unitId),
+            language: "Almanca"
+        };
     }
     
     // Almanca A2 (531-560)
     if (unitId >= 531 && unitId <= 560) {
-        return getGermanA2GrammarForUnit(unitId);
+        return {
+            ...getGermanA2GrammarForUnit(unitId),
+            language: "Almanca"
+        };
     }
 
     // Almanca B1 (561-590)
     if (unitId >= 561 && unitId <= 590) {
-        return getGermanB1GrammarForUnit(unitId);
+        return {
+            ...getGermanB1GrammarForUnit(unitId),
+            language: "Almanca"
+        };
     }
 
 
