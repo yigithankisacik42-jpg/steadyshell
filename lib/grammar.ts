@@ -17,6 +17,7 @@ import { getEnglishB2GrammarForUnit } from './grammar-en-b2';
 import { getGermanA1GrammarForUnit } from './grammar-de-a1';
 import { getGermanA2GrammarForUnit } from './grammar-de-a2';
 import { getGermanB1GrammarForUnit } from './grammar-de-b1';
+import { getGermanB2GrammarForUnit } from './grammar-de-b2';
 
 export interface GrammarExample {
     es?: string;
@@ -3353,6 +3354,14 @@ export function getGrammarForUnit(unitId: number): UnitGrammar {
     if (unitId >= 561 && unitId <= 590) {
         return {
             ...getGermanB1GrammarForUnit(unitId),
+            language: "Almanca"
+        };
+    }
+
+    // Almanca B2 (591-620)
+    if (unitId >= 591 && unitId <= 620) {
+        return {
+            ...getGermanB2GrammarForUnit(unitId),
             language: "Almanca"
         };
     }

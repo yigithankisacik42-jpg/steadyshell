@@ -11,6 +11,7 @@ import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { useLessonProgress } from "@/hooks/use-lesson-progress";
+import { recordLessonCompletion } from "@/lib/user-stats";
 
 export default function SpeakingPage() {
     return (
@@ -60,6 +61,20 @@ function SpeakingContent() {
             addQuestLesson();
             completeLesson();
             markLessonCompleted("SPEAKING");
+
+            // Record stats locally
+            if (speakingContent) {
+                const total = speakingContent.exercises.length;
+                recordLessonCompletion(
+                    unitId,
+                    "speaking",
+                    total, // assume all completed successfully
+                    0,
+                    300, // average 5 mins
+                    15
+                );
+            }
+
             showShelldon("Telaffuzun harikaydı, aksanın şahane! 🎙️", "celebrate", 4000);
         }
     }, [isFinished]);

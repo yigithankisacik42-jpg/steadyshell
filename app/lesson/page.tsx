@@ -15,6 +15,7 @@ import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { useLessonProgress } from "@/hooks/use-lesson-progress";
+import { recordLessonCompletion } from "@/lib/user-stats";
 
 // Wrapper component to handle Suspense
 export default function LessonPage() {
@@ -91,6 +92,16 @@ function LessonContent() {
         completeLesson();
         markLessonCompleted("LESSON", { quizIndex });
         
+        // Record stats locally
+        recordLessonCompletion(
+          unitId,
+          "quiz",
+          correct,
+          wrongCount,
+          450, // assume average of 7.5 mins spent (450 seconds)
+          xp
+        );
+
         showShelldon(`Dersi başarıyla bitirdin! +${xp} XP kazandın, tebrikler! 🎉`, "celebrate", 4000);
       } else {
         showShelldon("Canın bitti ama pes etmek yok. Dinlen ve tekrar başla!", "sad", 4000);

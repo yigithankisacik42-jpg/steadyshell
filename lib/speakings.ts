@@ -13,6 +13,8 @@ import { getFrB1SpeakingForUnit } from './speakings-fr-b1';
 import { getSpanishA1SpeakingForUnit } from './speakings-es-a1';
 import { getGermanA1SpeakingForUnit } from './speakings-de-a1';
 import { getGermanA2SpeakingForUnit } from './speakings-de-a2';
+import { getGermanB1SpeakingForUnit } from './speakings-de-b1';
+import { getGermanB2SpeakingForUnit } from './speakings-de-b2';
 
 
 export interface SpeakingExercise {
@@ -528,6 +530,16 @@ export function getSpeakingForUnit(unitId: number): UnitSpeaking {
     // German A2 (531-560)
     if (unitId >= 531 && unitId <= 560) {
         return getGermanA2SpeakingForUnit(unitId);
+    }
+
+    // German B1 (561-590)
+    if (unitId >= 561 && unitId <= 590) {
+        return getGermanB1SpeakingForUnit(unitId);
+    }
+
+    // German B2 (591-620)
+    if (unitId >= 591 && unitId <= 620) {
+        return getGermanB2SpeakingForUnit(unitId);
     }
 
     return unit1Speaking;

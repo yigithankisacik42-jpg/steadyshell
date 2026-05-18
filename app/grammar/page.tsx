@@ -10,6 +10,7 @@ import { getGrammarForUnit, UnitGrammar } from "@/lib/grammar";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
 import { useLessonProgress } from "@/hooks/use-lesson-progress";
+import { recordLessonCompletion } from "@/lib/user-stats";
 
 export default function GrammarPage() {
     return (
@@ -54,6 +55,16 @@ function GrammarContent() {
             addQuestLesson();
             completeLesson();
             markLessonCompleted("GRAMMAR");
+
+            // Record stats locally
+            recordLessonCompletion(
+                unitId,
+                "grammar",
+                0, // lecture based, no correct/wrong count
+                0,
+                300, // average 5 mins
+                20
+            );
         }
     }, [isFinished]);
 

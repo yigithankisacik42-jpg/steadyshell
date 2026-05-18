@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { UserAvatar } from "@/components/user-avatar";
+import { useUserProgress } from "@/contexts/user-progress-context";
 
 
 const settingsItems = [
@@ -39,6 +40,7 @@ export default function SettingsPage() {
     const [currentPassword, setCurrentPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
     const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
+    const { user: liveUser } = useUserProgress();
     const [user, setUser] = useState(defaultUser);
     const [stats, setStats] = useState<ReturnType<typeof getStatsSummary> | null>(null);
     const [weeklyStats, setWeeklyStats] = useState<DailyStats[]>([]);
@@ -54,15 +56,23 @@ export default function SettingsPage() {
                 name: u.name || prev.name,
                 email: u.email || prev.email,
                 avatar: u.image || prev.avatar,
+                totalXp: liveUser.totalXp,
+                streak: liveUser.streak,
             }));
             setName(u.name || "");
             setEmail(u.email || "");
+        } else {
+            setUser(prev => ({
+                ...prev,
+                totalXp: liveUser.totalXp,
+                streak: liveUser.streak,
+            }));
         }
 
         setStats(getStatsSummary());
         setWeeklyStats(getWeeklyStats());
         setIsMounted(true);
-    }, [session]);
+    }, [session, liveUser]);
 
     const { update } = useSession();
     const router = useRouter();

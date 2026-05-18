@@ -10,6 +10,7 @@ import { useUserProgress } from "@/contexts/user-progress-context";
 import { useQuests } from "@/lib/quests-context";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { useLessonProgress } from "@/hooks/use-lesson-progress";
+import { recordLessonCompletion } from "@/lib/user-stats";
 import { Bot } from "lucide-react";
 import { AiTutorChat } from "@/components/ai-tutor-chat";
 
@@ -39,6 +40,7 @@ function ReadingContent() {
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [answerStatus, setAnswerStatus] = useState<"none" | "correct" | "wrong">("none");
     const [showTranslation, setShowTranslation] = useState(false);
+    const [wrongCount, setWrongCount] = useState(0);
 
     const { addXp, completeLesson } = useUserProgress();
     const { addXP: addQuestXP, addLesson: addQuestLesson } = useQuests();
@@ -55,6 +57,21 @@ function ReadingContent() {
             addQuestLesson();
             completeLesson();
             markLessonCompleted("READING");
+
+            // Record stats locally
+            if (readingContent) {
+                const totalQ = readingContent.questions.length;
+                const correct = Math.max(0, totalQ - wrongCount);
+                recordLessonCompletion(
+                    unitId,
+                    "reading",
+                    correct,
+                    wrongCount,
+                    450, // assume average of 7.5 mins spent (450 seconds)
+                    10
+                );
+            }
+
             showShelldon("Müthiş bir okuyucusun! +10 XP kazandın 📖", "celebrate", 4000);
         }
     }, [step]);
@@ -69,6 +86,7 @@ function ReadingContent() {
         setAnswerStatus("none");
         setShowTranslation(false);
         setIsAiMode(false);
+        setWrongCount(0);
     }, [unitId]);
 
     if (!readingContent) {
@@ -118,6 +136,7 @@ function ReadingContent() {
         if (isCorrect) {
              if (Math.random() > 0.4) showShelldon("Okuduğunu çok iyi anlıyorsun!", "happy", 2000);
         } else {
+             setWrongCount(w => w + 1);
              showShelldon("Parçaya tekrar göz atmaya ne dersin?", "thinking", 2500);
         }
     };

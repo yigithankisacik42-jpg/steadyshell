@@ -2,6 +2,7 @@ import { getEnglishB2VocabularyForUnit } from './vocabulary-en-b2';
 import { getGermanA1VocabularyForUnit } from './vocabulary-de-a1';
 import { getGermanA2VocabularyForUnit } from './vocabulary-de-a2';
 import { getGermanB1VocabularyForUnit } from './vocabulary-de-b1';
+import { getGermanB2VocabularyForUnit } from './vocabulary-de-b2';
 
 /**
  * SteadyShell Kelime Veritabanı - İspanyolca A1
@@ -1241,6 +1242,23 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
     // Almanca B1 (561-590)
     if (unitId >= 561 && unitId <= 590) {
         const deVocab = getGermanB1VocabularyForUnit(unitId);
+        return {
+            unitId: deVocab.unitId,
+            title: deVocab.title,
+            language: "Almanca",
+            words: deVocab.words.map(v => ({
+                word: v.word,
+                meaning: v.meaning,
+                pronunciation: v.pronunciation,
+                example: v.example,
+                exampleTranslation: v.exampleTranslation
+            }))
+        };
+    }
+
+    // Almanca B2 (591-620)
+    if (unitId >= 591 && unitId <= 620) {
+        const deVocab = getGermanB2VocabularyForUnit(unitId);
         return {
             unitId: deVocab.unitId,
             title: deVocab.title,

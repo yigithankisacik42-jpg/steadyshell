@@ -31,6 +31,7 @@ import { getFrB1PhrasesForUnit } from './phrases-fr-b1';
 import { getGermanA1PhrasesForUnit } from './phrases-de-a1';
 import { getGermanA2PhrasesForUnit } from './phrases-de-a2';
 import { getGermanB1PhrasesForUnit } from './phrases-de-b1';
+import { getGermanB2PhrasesForUnit } from './phrases-de-b2';
 import { getUnit } from './curriculum';
 
 export function getPhrasesForUnit(unitId: number): UnitPhrases {
@@ -190,6 +191,22 @@ export function getPhrasesForUnit(unitId: number): UnitPhrases {
             unitId: dePhrases.unitId,
             title: unitInfo?.title || dePhrases.title,
             level: "B1",
+            phrases: dePhrases.phrases.map((p: any) => ({
+                target: p.phrase,
+                native: p.meaning,
+                pronunciation: p.pronunciation || ""
+            }))
+        };
+    }
+
+    // Almanca B2 (591-620)
+    if (unitId >= 591 && unitId <= 620) {
+        const dePhrases = getGermanB2PhrasesForUnit(unitId);
+        const unitInfo = getUnit("de", "B2", unitId);
+        return {
+            unitId: dePhrases.unitId,
+            title: unitInfo?.title || dePhrases.title,
+            level: "B2",
             phrases: dePhrases.phrases.map((p: any) => ({
                 target: p.phrase,
                 native: p.meaning,
