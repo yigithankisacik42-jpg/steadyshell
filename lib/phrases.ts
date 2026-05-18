@@ -28,6 +28,7 @@ import { getEnglishB2PhrasesForUnit } from './phrases-en-b2';
 import { getFrenchA1PhrasesForUnit } from './phrases-fr-a1';
 import { getFrenchA2PhrasesForUnit } from './phrases-fr-a2';
 import { getFrB1PhrasesForUnit } from './phrases-fr-b1';
+import { getFrB2PhrasesForUnit } from './phrases-fr-b2';
 import { getGermanA1PhrasesForUnit } from './phrases-de-a1';
 import { getGermanA2PhrasesForUnit } from './phrases-de-a2';
 import { getGermanB1PhrasesForUnit } from './phrases-de-b1';
@@ -143,6 +144,22 @@ export function getPhrasesForUnit(unitId: number): UnitPhrases {
             title: unitInfo?.title || `Ünite ${unitId}`,
             level: "B1",
             phrases: frB1Phrases.map(p => ({
+                target: p.text,
+                native: p.meaning,
+                pronunciation: p.pronunciation
+            }))
+        };
+    }
+
+    // Fransızca B2 (391-420)
+    if (unitId >= 391 && unitId <= 420) {
+        const frB2Phrases = getFrB2PhrasesForUnit(unitId);
+        const unitInfo = getUnit("fr", "B2", unitId);
+        return {
+            unitId,
+            title: unitInfo?.title || `Ünite ${unitId}`,
+            level: "B2",
+            phrases: frB2Phrases.map(p => ({
                 target: p.text,
                 native: p.meaning,
                 pronunciation: p.pronunciation

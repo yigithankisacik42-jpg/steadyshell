@@ -1089,6 +1089,7 @@ import { getEnglishB1VocabularyForUnit } from './vocabulary-en-b1';
 import { getFrenchA1VocabularyForUnit } from './vocabulary-fr-a1';
 import { getFrenchA2VocabularyForUnit } from './vocabulary-fr-a2';
 import { getFrB1VocabularyForUnit } from './vocabulary-fr-b1';
+import { getFrB2VocabularyForUnit } from './vocabulary-fr-b2';
 
 export function getVocabularyForUnit(unitId: number): UnitVocabulary {
     // === İNGİLİZCE ÜNİTELER (ID 101-220) ===
@@ -1195,6 +1196,23 @@ export function getVocabularyForUnit(unitId: number): UnitVocabulary {
             title: `Ünite ${unitId}`,
             language: "Fransızca",
             words: frB1Vocab.map(v => ({
+                word: v.word,
+                meaning: v.meaning,
+                pronunciation: v.pronunciation,
+                example: v.example,
+                exampleTranslation: v.exampleTranslation
+            }))
+        };
+    }
+
+    // Fransızca B2 (391-420)
+    if (unitId >= 391 && unitId <= 420) {
+        const frB2Vocab = getFrB2VocabularyForUnit(unitId);
+        return {
+            unitId: unitId,
+            title: `Ünite ${unitId}`,
+            language: "Fransızca",
+            words: frB2Vocab.map(v => ({
                 word: v.word,
                 meaning: v.meaning,
                 pronunciation: v.pronunciation,

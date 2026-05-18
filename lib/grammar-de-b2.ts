@@ -49,7 +49,7 @@ const unit592Grammar: GermanUnitGrammar = {
     exercises: [
         { question: "Je mehr du lernst, ___ besser wirst du.", options: ["desto", "weil", "da", "denn"], correct: 0, explanation: "Je'nin karşılığı 'desto' veya 'umso'dur." },
         { question: "Je älter man wird, desto ___ ist die Erfahrung.", options: ["größer", "groß", "am größten", "große"], correct: 0, explanation: "Desto'dan sonra Komparativ sıfat gelir." },
-        { question: "Je daha çok spor yaparsan, ...", options: ["desto gesünder lebst du", "desto du gesünder lebst", "desto lebst du gesünder", "desto gesünder du lebst"], correct: 0, explanation: "Desto + Komparativ sıfat + Fiil + Özne yapısı doğrudur." },
+        { question: "Je mehr Sport du treibst, ...", options: ["desto gesünder lebst du", "desto du gesünder lebst", "desto lebst du gesünder", "desto gesünder du lebst"], correct: 0, explanation: "Desto + Komparativ sıfat + Fiil + Özne yapısı doğrudur." },
         { question: "Je kälter es ist, ___ mehr heizen wir.", options: ["desto", "je", "da", "dass"], correct: 0, explanation: "Formül: Je ... desto." },
         { question: "Je schneller du fährst, desto ___ (tehlikeli) ist es.", options: ["gefährlicher", "gefährlich", "am gefährlichsten", "gefährlichere"], correct: 0, explanation: "Gefährlich -> gefährlicher." }
     ]
@@ -289,9 +289,9 @@ const unit602Grammar: GermanUnitGrammar = {
     exercises: [
         { question: "___ es teuer ist, kaufe ich es. (-e rağmen)", options: ["Obwohl", "Trotzdem", "Weil", "Dass"], correct: 0, explanation: "Cümle başında yan cümle kuran bağlaç 'Obwohl'dur." },
         { question: "Es ist teuer. ___ kaufe ich es. (buna rağmen)", options: ["Trotzdem", "Obwohl", "Weil", "Dass"], correct: 0, explanation: "Ana cümle başında zarf olarak 'Trotzdem' kullanılır, ardından fiil gelir." },
-        { question: "Ich bin müde, ___ ich lerne weiter. (obwohl)", options: ["obwohl", "trotzdem", "weil", "denn"], correct: 0, explanation: "Fiil (lerne) sonda değil, fakat anlamca 'rağmen' bağlacı yan cümle kurar." },
+        { question: "Ich bin müde, ___ ich weiterlerne.", options: ["obwohl", "trotzdem", "weil", "denn"], correct: 0, explanation: "'obwohl' (-e rağmen) yan cümle kurar ve çekimli fiili en sona atar." },
         { question: "Er hat kein Geld. Trotzdem ___ er ein Auto. (satın alıyor)", options: ["kauft", "kaufen", "kaufte", "kaufen wird"], correct: 0, explanation: "Trotzdem'den sonra fiil (kauft) gelir." },
-        { question: "Obwohl o krank ___ (olmasına rağmen), arbeitet er.", options: ["ist", "war", "wäre", "bin"], correct: 0, explanation: "Obwohl yan cümlesinde fiil en sondadır." }
+        { question: "Obwohl er krank ___ (olmasına rağmen), arbeitet er.", options: ["ist", "war", "wäre", "bin"], correct: 0, explanation: "Obwohl yan cümlesinde fiil en sondadır." }
     ]
 };
 
@@ -505,7 +505,7 @@ const unit611Grammar: GermanUnitGrammar = {
     ]
 };
 
-// ===== UNIT 612: PARTİZİPİALKONSÜTRÜKSİYONLAR =====
+// ===== UNIT 612: PARTİZİPİAL KONSTRÜKSİYONLAR =====
 const unit612Grammar: GermanUnitGrammar = {
     unitId: 612,
     title: "Partizipialkonstruktionen (Sıfat-Fiiller)",

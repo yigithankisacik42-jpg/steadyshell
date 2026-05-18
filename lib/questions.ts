@@ -589,6 +589,12 @@ export async function getQuestionsForUnit(unitId: number, quizIndex: number = 1)
         return getFrenchB1Quiz(unitId, quizIndex);
     }
 
+    // Fransızca B2 (391-420)
+    if (unitId >= 391 && unitId <= 420) {
+        const { getFrenchB2Quiz } = await import('./questions-fr-b2');
+        return getFrenchB2Quiz(unitId, quizIndex);
+    }
+
     // === İNGİLİZCE B1 (ID 161-190) ===
     if (unitId >= 161 && unitId <= 190) {
         const { getEnglishB1GrammarForUnit } = await import('./grammar-en-b1');

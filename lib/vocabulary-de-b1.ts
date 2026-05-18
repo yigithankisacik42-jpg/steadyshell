@@ -342,18 +342,9 @@ const unit573Vocab: GermanUnitVocabulary = {
         { word: "widerlegen", meaning: "Çürütmek (iddia)", pronunciation: "vi-der-le-gın", example: "Die These wurde widerlegt.", exampleTranslation: "Tez çürütüldü." },
         { word: "zustimmen", meaning: "Katılmak / Onaylamak", pronunciation: "tsu-ştim-ın", example: "Ich stimme dir zu.", exampleTranslation: "Sana katılıyorum." },
         { word: "ablehnen", meaning: "Reddetmek", pronunciation: "ap-le-nın", example: "Das Angebot ablehnen.", exampleTranslation: "Teklifi reddetmek." },
-        { word: "die Lösung", pronunciation: "di lö-zung", meaning: "Çözüm", example: "Eine Lösung finden.", exampleTranslation: "Bir çözüm bulmak." },
-        { word: "der Kompromiss", pronunciation: "der kom-pro-mis", meaning: "Uzlaşma", example: "Einen Kompromiss schließen.", exampleTranslation: "Uzlaşmaya varmak." },
-        { word: "widersprechen", pronunciation: "vi-dır-şpre-hın", meaning: "İtiraz etmek", example: "Darf ich dir widersprechen?", exampleTranslation: "Sana itiraz edebilir miyim?" },
-        { word: "die Behauptung", pronunciation: "di be-haup-tung", meaning: "İddia", example: "Das ist eine falsche Behauptung.", exampleTranslation: "Bu yanlış bir iddia." },
-        { word: "begründen", pronunciation: "be-grün-dın", meaning: "Gerekçelendirmek", example: "Seine Meinung begründen.", exampleTranslation: "Fikrini gerekçelendirmek." },
-        { word: "der Einwand", pronunciation: "der ayn-vant", meaning: "İtiraz / Sakınca", example: "Haben Sie einen Einwand?", exampleTranslation: "Bir itirazınız var mı?" },
-        { word: "verhandeln", pronunciation: "fer-han-dıln", meaning: "Pazarlık etmek", example: "Über den Preis verhandeln.", exampleTranslation: "Fiyat üzerine pazarlık etmek." },
-        { word: "sachlich", pronunciation: "zah-lıh", meaning: "Nesnel / Objektif", example: "Bitte bleiben wir sachlich.", exampleTranslation: "Lütfen nesnel kalalım." },
-        { word: "die Diskussion", pronunciation: "di dis-ku-tsion", meaning: "Tartışma", example: "Eine lebhafte Diskussion.", exampleTranslation: "Canlı bir tartışma." },
-        { word: "überreden", pronunciation: "ü-ber-re-dın", meaning: "Kandırmak / Razı etmek", example: "Er hat mich überredet.", exampleTranslation: "Beni razı etti." },
-        { word: "das Fazit", pronunciation: "das fa-tsit", meaning: "Sonuç / Özet", example: "Ein kurzes Fazit ziehen.", exampleTranslation: "Kısa bir sonuç çıkarmak." },
-        { word: "die Debatte", pronunciation: "di de-ba-tı", meaning: "Münazara", example: "Eine politische Debatte.", exampleTranslation: "Siyasi bir münazara." }
+        { word: "der Konsens", meaning: "Mutabakat", pronunciation: "der kon-zens", example: "Einen Konsens finden.", exampleTranslation: "Bir mutabakat bulmak." },
+        { word: "die Logik", meaning: "Mantık", pronunciation: "di lo-gik", example: "Das ist keine Logik.", exampleTranslation: "Bu mantık değil." },
+        { word: "behaupten", meaning: "iddia etmek", pronunciation: "be-haup-tın", example: "Er behauptet das Gegenteil.", exampleTranslation: "Tersini iddia ediyor." }
     ]
 };
 
@@ -362,15 +353,25 @@ const unit574Vocab: GermanUnitVocabulary = {
     unitId: 574, title: "Sunum Yapma",
     words: [
         { word: "die Präsentation", meaning: "Sunum", pronunciation: "di pre-zen-ta-tsion", example: "Eine Präsentation halten.", exampleTranslation: "Bir sunum yapmak." },
-        { word: "das Thema", meaning: "Konu", pronunciation: "das te-ma", example: "Das Thema eingrenzen.", exampleTranslation: "Konuyu sınırlandırmak." },
+        { word: "der Vortrag", meaning: "Konuşma/Ders", pronunciation: "der for-trak", example: "Ein interessanter Vortrag.", exampleTranslation: "İlginç bir konuşma/ders." },
         { word: "die Struktur", meaning: "Yapı", pronunciation: "di ştruk-tur", example: "Eine klare Struktur.", exampleTranslation: "Açık bir yapı." },
         { word: "die Einleitung", meaning: "Giriş", pronunciation: "di ayn-lay-tung", example: "In der Einleitung erwähnen.", exampleTranslation: "Giriş kısmında bahsetmek." },
         { word: "der Hauptteil", meaning: "Ana bölüm", pronunciation: "der haupt-tayl", example: "Wichtige Punkte im Hauptteil.", exampleTranslation: "Ana bölümdeki önemli noktalar." },
         { word: "der Schluss", meaning: "Sonuç / Bitiş", pronunciation: "der şlus", example: "Zum Schluss möchte ich sagen...", exampleTranslation: "Sonuç olarak söylemek isterim ki..." },
-        { word: "die Folie", meaning: "Slayt", pronunciation: "di fo-li-ı", example: "Die nächste Folie zeigen.", exampleTranslation: "Sıradaki slaytı göstermek." },
         { word: "das Publikum", meaning: "Dinleyici kitlesi / Seyirci", pronunciation: "das pub-li-kum", example: "Fragen aus dem Publikum.", exampleTranslation: "Seyirciden gelen sorular." },
-        { word: "die Körpersprache", pronunciation: "di kör-pır-şpra-hı", meaning: "Beden dili", example: "Achten Sie auf die Körpersprache.", exampleTranslation: "Beden diline dikkat edin." },
-        { word: "zusammenfassen", pronunciation: "tsu-za-mın-fa-sın", meaning: "Özetlemek", example: "Kannst du das kurz zusammenfassen?", exampleTranslation: "Bunu kısaca özetleyebilir misin?" }
+        { word: "das Medium", meaning: "Medya/Araç", pronunciation: "das me-di-um", example: "Digitale Medien nutzen.", exampleTranslation: "Dijital medyayı/araçları kullanmak." },
+        { word: "die Visualisierung", meaning: "Görselleştirme", pronunciation: "di vi-zua-li-zi-rung", example: "Visualisierung hilft beim Lernen.", exampleTranslation: "Görselleştirme öğrenmeye yardımcı olur." },
+        { word: "die Folie", meaning: "Slayt", pronunciation: "di fo-li-ı", example: "Die nächste Folie zeigen.", exampleTranslation: "Sıradaki slaytı göstermek." },
+        { word: "der Beamer", meaning: "Projeksiyon", pronunciation: "der bi-mır", example: "Der Beamer funktioniert nicht.", exampleTranslation: "Projeksiyon çalışmuyor." },
+        { word: "das Handout", meaning: "Ders notu", pronunciation: "das hend-aut", example: "Ein Handout verteilen.", exampleTranslation: "Ders notu dağıtmak." },
+        { word: "die Gliederung", meaning: "Plan / Taslak", pronunciation: "di gli-de-rung", example: "Eine logische Gliederung.", exampleTranslation: "Mantıklı bir plan/anahat." },
+        { word: "das Thema", meaning: "Konu", pronunciation: "das te-ma", example: "Das Thema eingrenzen.", exampleTranslation: "Konuyu sınırlandırmak." },
+        { word: "die Zielgruppe", meaning: "Hedef kitle", pronunciation: "di tsil-grup-pı", example: "Die Zielgruppe analysieren.", exampleTranslation: "Hedef kitleyi analiz etmek." },
+        { word: "die Rhetorik", meaning: "Hitabet", pronunciation: "di re-to-rik", example: "Er studiert Rhetorik.", exampleTranslation: "Hitabet okuyor." },
+        { word: "interaktiv", meaning: "etkileşimli", pronunciation: "in-ter-ak-tif", example: "Der Unterricht ist interaktiv.", exampleTranslation: "Ders etkileşimli." },
+        { word: "anschaulich", meaning: "açık/anlaşılır", pronunciation: "an-şau-lıh", example: "Ein anschauliches Beispiel.", exampleTranslation: "Açık/anlaşılır bir örnek." },
+        { word: "überzeugend", meaning: "ikna edici", pronunciation: "ü-ber-tsoyg-ınt", example: "Ein überzeugendes Argument.", exampleTranslation: "İkna edici bir argüman." },
+        { word: "souverän", meaning: "hakim/kendine güvenen", pronunciation: "zu-ve-ren", example: "Souverän präsentieren.", exampleTranslation: "Hakim/kendine güvenen bir şekilde sunmak." }
     ]
 };
 
@@ -379,15 +380,25 @@ const unit575Vocab: GermanUnitVocabulary = {
     unitId: 575, title: "Edebiyat 1",
     words: [
         { word: "die Literatur", meaning: "Edebiyat", pronunciation: "di li-te-ra-tur", example: "Deutsche Literaturgeschichte.", exampleTranslation: "Alman edebiyat tarihi." },
+        { word: "der Autor", meaning: "Yazar", pronunciation: "der au-tor", example: "Ein bekannter Autor.", exampleTranslation: "Tanınmış bir yazar." },
         { word: "der Roman", meaning: "Roman", pronunciation: "der ro-man", example: "Einen Roman schreiben.", exampleTranslation: "Bir roman yazmak." },
         { word: "das Gedicht", meaning: "Şiir", pronunciation: "das gı-diht", example: "Ein Gedicht auswendig lernen.", exampleTranslation: "Bir şiiri ezberlemek." },
-        { word: "der Autor", meaning: "Yazar", pronunciation: "der au-tor", example: "Ein bekannter Autor.", exampleTranslation: "Tanınmış bir yazar." },
+        { word: "die Erzählung", meaning: "Anlatı", pronunciation: "di er-tse-lung", example: "Eine spannende Erzählung.", exampleTranslation: "Heyecan verici bir anlatı." },
+        { word: "der Klassiker", meaning: "Klasik", pronunciation: "der kla-si-kır", example: "Ein literarischer Klassiker.", exampleTranslation: "Edebi bir klasik." },
+        { word: "die Interpretation", meaning: "Yorum", pronunciation: "di in-ter-pre-ta-tsion", example: "Die Interpretation des Gedichts.", exampleTranslation: "Şiirin yorumu." },
+        { word: "der Stil", meaning: "Tarz", pronunciation: "der ştil", example: "Ein einzigartiger Stil.", exampleTranslation: "Benzersiz bir tarz." },
+        { word: "das Drama", meaning: "Dram", pronunciation: "das dra-ma", example: "Ein klassisches Drama.", exampleTranslation: "Klasik bir dram." },
+        { word: "die Lyrik", meaning: "Lirik şiir", pronunciation: "di lü-rik", example: "Moderne Lyrik lesen.", exampleTranslation: "Modern lirik şiir okumak." },
+        { word: "die Metapher", meaning: "Metafor / İstiare", pronunciation: "di me-ta-fer", example: "Eine passende Metapher.", exampleTranslation: "Uygun bir metafor." },
+        { word: "das Symbol", meaning: "Sembol", pronunciation: "das züm-bol", example: "Ein Symbol für Frieden.", exampleTranslation: "Barış için bir sembol." },
         { word: "die Handlung", meaning: "Olay örgüsü / Aksiyon", pronunciation: "di hand-lung", example: "Eine spannende Handlung.", exampleTranslation: "Heyecan verici bir olay örgüsü." },
         { word: "die Figur", meaning: "Karakter (kitapta)", pronunciation: "di fi-gur", example: "Die Hauptfigur des Buches.", exampleTranslation: "Kitabın baş karakteri." },
-        { word: "das Kapitel", meaning: "Bölüm (kitap)", pronunciation: "das ka-pi-tıl", example: "Das erste Kapitel lesen.", exampleTranslation: "İlk bölümü okumak." },
-        { word: "die Metapher", meaning: "Metafor / İstiare", pronunciation: "di me-ta-fer", example: "Eine passende Metapher.", exampleTranslation: "Uygun bir metafor." },
-        { word: "die Epoche", pronunciation: "di e-po-hı", meaning: "Dönem / Çağ", example: "Literaturepoche der Romantik.", exampleTranslation: "Romantizm edebiyat dönemi." },
-        { word: "analysieren", pronunciation: "a-na-lü-zi-rın", meaning: "Analiz etmek", example: "Einen Text analysieren.", exampleTranslation: "Bir metni analiz etmek." }
+        { word: "der Protagonist", meaning: "Baş kahraman", pronunciation: "der pro-ta-go-nist", example: "Der Protagonist ist mutig.", exampleTranslation: "Baş kahraman cesur." },
+        { word: "der Schriftsteller", meaning: "Yazar/Edebiyatçı", pronunciation: "der şrift-ştel-ler", example: "Er ist Schriftsteller.", exampleTranslation: "O bir yazar/edebiyatçı." },
+        { word: "fiktiv", meaning: "kurgusal", pronunciation: "fik-tif", example: "Die Geschichte ist fiktiv.", exampleTranslation: "Hikaye kurgusal." },
+        { word: "spannend", meaning: "heyecan verici", pronunciation: "şpa-nınt", example: "Ein spannendes Buch.", exampleTranslation: "Heyecan verici bir kitap." },
+        { word: "anspruchsvoll", meaning: "iddialı/zorlayıcı", pronunciation: "an-şpruhs-fol", example: "Eine anspruchsvolle Lektüre.", exampleTranslation: "İddialı/zorlayıcı bir okuma." },
+        { word: "berühmt", meaning: "ünlü", pronunciation: "be-rümt", example: "Ein berühmter Dichter.", exampleTranslation: "Ünlü bir şair." }
     ]
 };
 
@@ -395,16 +406,26 @@ const unit575Vocab: GermanUnitVocabulary = {
 const unit576Vocab: GermanUnitVocabulary = {
     unitId: 576, title: "Akademik Yazma",
     words: [
-        { word: "die Hausarbeit", meaning: "Dönem ödevi / Makale", pronunciation: "di haus-ar-bayt", example: "Eine Hausarbeit schreiben.", exampleTranslation: "Bir dönem ödevi yazmak." },
-        { word: "das Quellenverzeichnis", meaning: "Kaynakça", pronunciation: "das kvel-ın-fer-tsayh-nis", example: "Das Quellenverzeichnis am Ende.", exampleTranslation: "Sondaki kaynakça." },
-        { word: "zitieren", meaning: "Alıntı yapmak", pronunciation: "tsi-ti-rın", example: "Richtig zitieren ist wichtig.", exampleTranslation: "Doğru alıntı yapmak önemlidir." },
-        { word: "die Gliederung", meaning: "Plan / Taslak", pronunciation: "di gli-de-rung", example: "Eine logische Gliederung.", exampleTranslation: "Mantıklı bir taslak." },
-        { word: "die Hypothese", meaning: "Hipotez", pronunciation: "di hü-po-te-zı", example: "Die Hypothese beweisen.", exampleTranslation: "Hipotezi kanıtlamak." },
-        { word: "die Recherche", meaning: "Araştırma", pronunciation: "di re-şer-şı", example: "Eine gründliche Recherche.", exampleTranslation: "Detaylı bir araştırma." },
-        { word: "überarbeiten", meaning: "Gözden geçirmek / Düzenlemek", pronunciation: "ü-ber-ar-bay-tın", example: "Den Text noch mal überarbeiten.", exampleTranslation: "Metni bir daha gözden geçirmek." },
-        { word: "die Einleitung", meaning: "Giriş", pronunciation: "di ayn-lay-tung", example: "Die Einleitung schreiben.", exampleTranslation: "Giriş kısmını yazmak." },
-        { word: "der Abstract", pronunciation: "der eb-ştrakt", meaning: "Özet (akademik)", example: "Einen Abstract verfassen.", exampleTranslation: "Bir özet yazmak." },
-        { word: "die Argumentation", pronunciation: "di ar-gu-men-ta-tsion", meaning: "Argümantasyon", example: "Eine überzeugende Argumentation.", exampleTranslation: "İkna edici bir argümantasyon." }
+        { word: "die Wissenschaft", meaning: "Bilim", pronunciation: "di vis-ın-şaft", example: "Wissenschaft und Forschung.", exampleTranslation: "Bilim ve araştırma." },
+        { word: "die Forschung", meaning: "Araştırma", pronunciation: "di for-şung", example: "Medizinische Forschung.", exampleTranslation: "Tıbbi araştırma." },
+        { word: "die Analyse", meaning: "Analiz", pronunciation: "di a-na-lü-zı", example: "Eine genaue Analyse.", exampleTranslation: "Kesin/detaylı bir analiz." },
+        { word: "die Methodik", meaning: "Metodoloji", pronunciation: "di me-to-dik", example: "Die Methodik der Studie.", exampleTranslation: "Çalışmanın metodolojisi." },
+        { word: "die Theorie", meaning: "Teori", pronunciation: "di te-o-ri", example: "Eine wissenschaftliche Theorie.", exampleTranslation: "Bilimsel bir teori." },
+        { word: "der Beweis", meaning: "Kanıt", pronunciation: "der be-vays", example: "Ein klarer Beweis.", exampleTranslation: "Net bir kanıt." },
+        { word: "akademisch", meaning: "akademik", pronunciation: "a-ka-de-miş", example: "Ein akademischer Grad.", exampleTranslation: "Akademik bir derece." },
+        { word: "der Artikel", meaning: "Makale", pronunciation: "der ar-ti-kıl", example: "Ein wissenschaftlicher Artikel.", exampleTranslation: "Bilimsel bir makale." },
+        { word: "das Labor", meaning: "Laboratuvar", pronunciation: "das la-bor", example: "Im Labor arbeiten.", exampleTranslation: "Laboratuvarda çalışmak." },
+        { word: "das Experiment", meaning: "Deney", pronunciation: "das eks-pe-ri-ment", example: "Ein Experiment durchführen.", exampleTranslation: "Bir deney yürütmek." },
+        { word: "die Daten", meaning: "Veriler", pronunciation: "di da-tın", example: "Daten sammeln.", exampleTranslation: "Veri toplamak." },
+        { word: "das Ergebnis", meaning: "Sonuç", pronunciation: "das er-gep-nis", example: "Das Ergebnis der Prüfung.", exampleTranslation: "Sınavın sonucu." },
+        { word: "die Hypothese", meaning: "Hipotez", pronunciation: "di hü-po-te-zı", example: "Eine Hypothese aufstellen.", exampleTranslation: "Bir hipotez kurmak." },
+        { word: "die Studie", meaning: "Çalışma", pronunciation: "di ştu-di-ı", example: "Eine neue Studie veröffentlichen.", exampleTranslation: "Yeni bir çalışma yayımlamak." },
+        { word: "die Veröffentlichung", meaning: "Yayın", pronunciation: "di fer-öf-fent-li-hung", example: "Die wissenschaftliche Veröffentlichung.", exampleTranslation: "Bilimsel yayın." },
+        { word: "der Wissenschaftler", meaning: "Bilim insanı", pronunciation: "der vis-ın-şaft-lər", example: "Ein berühmter Wissenschaftler.", exampleTranslation: "Ünlü bir bilim insanı." },
+        { word: "empirisch", meaning: "deneysel", pronunciation: "em-pi-riş", example: "Empirische Forschung.", exampleTranslation: "Deneysel/gözlemsel araştırma." },
+        { word: "komplex", meaning: "karmaşık", pronunciation: "kom-pleks", example: "Ein komplexes System.", exampleTranslation: "Karmaşık bir sistem." },
+        { word: "objektiv", meaning: "nesnel", pronunciation: "op-yek-tif", example: "Eine objektive Meinung.", exampleTranslation: "Nesnel bir görüş." },
+        { word: "präzise", meaning: "kesin/hassas", pronunciation: "pre-tsi-zı", example: "Präzise Messungen machen.", exampleTranslation: "Hassas/kesin ölçümler yapmak." }
     ]
 };
 
@@ -412,16 +433,26 @@ const unit576Vocab: GermanUnitVocabulary = {
 const unit577Vocab: GermanUnitVocabulary = {
     unitId: 577, title: "Bilim ve Teknoloji",
     words: [
-        { word: "die Forschung", meaning: "Araştırma (bilimsel)", pronunciation: "di for-şung", example: "Medizinische Forschung.", exampleTranslation: "Tıbbi araştırma." },
-        { word: "die Entwicklung", meaning: "Gelişme / Gelişim", pronunciation: "di ent-vik-lung", example: "Die technische Entwicklung.", exampleTranslation: "Teknik gelişim." },
-        { word: "die Innovation", meaning: "İnovasyon / Yenilik", pronunciation: "di in-no-va-tsion", example: "Innovationen in der Technik.", exampleTranslation: "Teknolojideki yenilikler." },
-        { word: "das Labor", meaning: "Laboratuvar", pronunciation: "das la-bor", example: "Im Labor arbeiten.", exampleTranslation: "Laboratuvarda çalışmak." },
-        { word: "die Wissenschaft", meaning: "Bilim", pronunciation: "di vis-ın-şaft", example: "Wissenschaft und Praxis.", exampleTranslation: "Bilim ve uygulama." },
+        { word: "die Technologie", meaning: "Teknoloji", pronunciation: "di teh-no-lo-gi", example: "Neue Technologien entwickeln.", exampleTranslation: "Yeni teknolojiler geliştirmek." },
+        { word: "die Innovation", meaning: "İnovasyon", pronunciation: "di in-no-va-tsion", example: "Technische Innovationen.", exampleTranslation: "Teknik yenilikler/inovasyonlar." },
+        { word: "der Fortschritt", meaning: "İlerleme", pronunciation: "der fort-şrit", example: "Wissenschaftlicher Fortschritt.", exampleTranslation: "Bilimsel ilerleme." },
         { word: "die Digitalisierung", meaning: "Dijitalleşme", pronunciation: "di di-gi-ta-li-zi-rung", example: "Die fortschreitende Digitalisierung.", exampleTranslation: "İlerleyen dijitalleşme." },
-        { word: "die künstliche Intelligenz", meaning: "Yapay zeka", pronunciation: "di künst-li-hı in-te-li-gents", example: "Chancen der künstlichen Intelligenz.", exampleTranslation: "Yapay zekanın fırsatları." },
-        { word: "die Daten", meaning: "Veriler", pronunciation: "di da-tın", example: "Daten sicher speichern.", exampleTranslation: "Verileri güvenli kaydetmek." },
-        { word: "das Experiment", pronunciation: "das eks-pe-ri-ment", meaning: "Deney", example: "Ein Experiment durchführen.", exampleTranslation: "Bir deney yürütmek." },
-        { word: "der Fortschritt", pronunciation: "der fort-şrit", meaning: "İlerleme", example: "Technischer Fortschritt.", exampleTranslation: "Teknik ilerleme." }
+        { word: "die Software", meaning: "Yazılım", pronunciation: "di soft-ver", example: "Software installieren.", exampleTranslation: "Yazılım yüklemek." },
+        { word: "die Hardware", meaning: "Donanım", pronunciation: "di hard-ver", example: "Hardware austauschen.", exampleTranslation: "Donanım değiştirmek." },
+        { word: "das Netzwerk", meaning: "Ağ", pronunciation: "das nets-verk", example: "Ein sicheres Netzwerk.", exampleTranslation: "Güvenli bir ağ." },
+        { word: "die Daten", meaning: "Veriler", pronunciation: "di da-tın", example: "Persönliche Daten schützen.", exampleTranslation: "Kişisel verileri korumak." },
+        { word: "die künstliche Intelligenz", meaning: "Yapay Zeka", pronunciation: "di künst-li-hı in-te-li-gents", example: "Die Rolle der Künstlichen Intelligenz.", exampleTranslation: "Yapay Zekanın rolü." },
+        { word: "der Algorithmus", meaning: "Algoritma", pronunciation: "der al-go-rit-mus", example: "Ein mathematischer Algorithmus.", exampleTranslation: "Matematiksel bir algoritma." },
+        { word: "die Cloud", meaning: "Bulut", pronunciation: "di klaud", example: "Daten in der Cloud speichern.", exampleTranslation: "Verileri bulutta saklamak." },
+        { word: "die Sicherheit", meaning: "Güvenlik", pronunciation: "di zi-her-hayt", example: "Die Sicherheit im Internet.", exampleTranslation: "İnternetteki güvenlik." },
+        { word: "die Entwicklung", meaning: "Geliştirme", pronunciation: "di ent-vik-lung", example: "Die development von Apps.", exampleTranslation: "Uygulamaların geliştirilmesi." },
+        { word: "der Benutzer", meaning: "Kullanıcı", pronunciation: "der be-nuts-ır", example: "Ein registrierter Benutzer.", exampleTranslation: "Kayıtlı bir kullanıcı." },
+        { word: "die Schnittstelle", meaning: "Arayüz", pronunciation: "di şnit-ştel-lı", example: "Die Schnittstelle programmieren.", exampleTranslation: "Arayüzü programlamak." },
+        { word: "das Update", meaning: "Güncelleme", pronunciation: "das ap-deyt", example: "Ein wichtiges Update machen.", exampleTranslation: "Önemli bir güncelleme yapmak." },
+        { word: "virtuell", meaning: "sanal", pronunciation: "vir-tu-el", example: "Ein virtuelles Treffen.", exampleTranslation: "Sanal bir buluşma." },
+        { word: "automatisch", meaning: "otomatik", pronunciation: "au-to-ma-tiş", example: "Automatische Antworten.", exampleTranslation: "Otomatik cevaplar." },
+        { word: "kabellos", meaning: "kablosuz", pronunciation: "ka-bel-los", example: "Kabellose Kopfhörer.", exampleTranslation: "Kabelsuz kulaklık." },
+        { word: "effektiv", meaning: "etkili", pronunciation: "ef-fek-tif", example: "Effektive Lösungen finden.", exampleTranslation: "Etkili çözümler bulmak." }
     ]
 };
 
@@ -429,16 +460,26 @@ const unit577Vocab: GermanUnitVocabulary = {
 const unit578Vocab: GermanUnitVocabulary = {
     unitId: 578, title: "Sağlık ve Beslenme",
     words: [
-        { word: "die Gesundheit", meaning: "Sağlık", pronunciation: "di gı-zunt-hayt", example: "Gesundheit ist das Wichtigste.", exampleTranslation: "Sağlık en önemli şeydir." },
+        { word: "die Gesundheit", meaning: "Sağlık", pronunciation: "di gı-zunt-hayt", example: "Gesundheit ist Reichtum.", exampleTranslation: "Sağlık zenginliktir." },
         { word: "die Ernährung", meaning: "Beslenme", pronunciation: "di er-ne-rung", example: "Eine gesunde Ernährung.", exampleTranslation: "Sağlıklı bir beslenme." },
-        { word: "das Vitamin", meaning: "Vitamin", pronunciation: "das vi-ta-min", example: "Obst enthält viele Vitamine.", exampleTranslation: "Meyve çokça vitamin içerir." },
-        { word: "die Bewegung", meaning: "Hareket / Egzersiz", pronunciation: "di be-ve-gung", example: "Bewegung an der frischen Luft.", exampleTranslation: "Temiz havada egzersiz." },
-        { word: "die Entspannung", meaning: "Gevşeme / Rahatlama", pronunciation: "di ent-şpa-nung", example: "Entspannung nach der Arbeit.", exampleTranslation: "İşten sonra rahatlama." },
-        { word: "die Prävention", meaning: "Önleme / Korunma", pronunciation: "di pre-ven-tsion", example: "Prävention von Krankheiten.", exampleTranslation: "Hastalıkların önlenmesi." },
-        { word: "das Übergewicht", meaning: "Aşırı kilo", pronunciation: "das ü-ber-gı-viht", example: "Probleme durch Übergewicht.", exampleTranslation: "Aşırı kilodan kaynaklanan sorunlar." },
-        { word: "vegetarisch", meaning: "vejetaryen", pronunciation: "ve-ge-ta-riş", example: "Ich esse vegetarisch.", exampleTranslation: "Vejetaryen besleniyorum." },
-        { word: "die Zutat", pronunciation: "di tsu-tat", meaning: "Malzeme (yemek)", example: "Frische Zutaten verwenden.", exampleTranslation: "Taze malzemeler kullanmak." },
-        { word: "der Stress", pronunciation: "der ştres", meaning: "Stres", example: "Stress vermeiden.", exampleTranslation: "Stresten kaçınmak." }
+        { word: "das Vitamin", meaning: "Vitamin", pronunciation: "das vi-ta-min", example: "Vitamine einnehmen.", exampleTranslation: "Vitaminler almak." },
+        { word: "das Protein", meaning: "Protein", pronunciation: "das pro-te-in", example: "Proteine für Muskelaufbau.", exampleTranslation: "Kas gelişimi için proteinler." },
+        { word: "die Kalorien", meaning: "Kalori", pronunciation: "di ka-lo-ri-ın", example: "Kalorien zählen.", exampleTranslation: "Kalori saymak." },
+        { word: "der Sport", meaning: "Spor", pronunciation: "der şport", example: "Regelmäßig Sport treiben.", exampleTranslation: "Düzenli olarak spor yapmak." },
+        { word: "der Lebensstil", meaning: "Yaşam tarzı", pronunciation: "der le-bıns-ştil", example: "Ein gesunder Lebensstil.", exampleTranslation: "Sağlıklı bir yaşam tarzı." },
+        { word: "die Prävention", meaning: "Önleme", pronunciation: "di pre-ven-tsion", example: "Prävention von Krankheiten.", exampleTranslation: "Hastalıkların önlenmesi." },
+        { word: "die Medizin", meaning: "Tıp", pronunciation: "di me-di-tsin", example: "Moderne Medizin.", exampleTranslation: "Modern tıp." },
+        { word: "die Krankheit", meaning: "Hastalık", pronunciation: "di krank-hayt", example: "Eine seltene Krankheit.", exampleTranslation: "Nadir bir hastalık." },
+        { word: "die Therapie", meaning: "Terapi", pronunciation: "di te-ra-pi", example: "Eine Therapie beginnen.", exampleTranslation: "Bir terapiye başlamak." },
+        { word: "das Symptom", meaning: "Belirti", pronunciation: "das zümp-tom", example: "Symptome einer Grippe.", exampleTranslation: "Gribin belirtileri." },
+        { word: "das Immunsystem", meaning: "Bağışıklık sistemi", pronunciation: "das im-mun-züsteem", example: "Das Immunsystem stärken.", exampleTranslation: "Bağışıklık sistemini güçlendirmek." },
+        { word: "die Entspannung", meaning: "Gevşeme", pronunciation: "di ent-şpa-nung", example: "Entspannung tut gut.", exampleTranslation: "Gevşeme iyi gelir." },
+        { word: "der Schlaf", meaning: "Uyku", pronunciation: "der şlaf", example: "Genug Schlaf bekommen.", exampleTranslation: "Yeterli uyku almak." },
+        { word: "die Bewegung", meaning: "Hareket", pronunciation: "di be-ve-gung", example: "Tägliche Bewegung.", exampleTranslation: "Günlük hareket." },
+        { word: "ausgewogen", meaning: "dengeli", pronunciation: "aus-ge-vo-gən", example: "Eine ausgewogene Diät.", exampleTranslation: "Dengeli bir diyet." },
+        { word: "fettarm", meaning: "az yağlı", pronunciation: "fet-arm", example: "Fettarme Milch kaufen.", exampleTranslation: "Az yağlı süt satın almak." },
+        { word: "vegetarisch", meaning: "vejetaryen", pronunciation: "ve-ge-ta-riş", example: "Vegetarische Gerichte essen.", exampleTranslation: "Vejetaryen yemekler yemek." },
+        { word: "vital", meaning: "zinde", pronunciation: "vi-tal", example: "Sich vital fühlen.", exampleTranslation: "Zinde hissetmek." }
     ]
 };
 
@@ -446,16 +487,26 @@ const unit578Vocab: GermanUnitVocabulary = {
 const unit579Vocab: GermanUnitVocabulary = {
     unitId: 579, title: "Psikoloji Temelleri",
     words: [
-        { word: "die Psyche", meaning: "Ruh / Psikoloji", pronunciation: "di psü-hı", example: "Die menschliche Psyche.", exampleTranslation: "İnsan psikolojisi." },
-        { word: "das Verhalten", meaning: "Davranış", pronunciation: "das fer-hal-tın", example: "Ein merkwürdiges Verhalten.", exampleTranslation: "Garip bir davranış." },
-        { word: "die Emotion", meaning: "Duygu / Heyecan", pronunciation: "di e-mo-tsion", example: "Emotionen zeigen.", exampleTranslation: "Duyguları göstermek." },
-        { word: "das Bewusstsein", meaning: "Bilinç", pronunciation: "das be-vust-zayn", example: "Ein starkes Bewusstsein.", exampleTranslation: "Güçlü bir bilinç." },
-        { word: "die Motivation", meaning: "Motivasyon", pronunciation: "di mo-ti-va-tsion", example: "Fehlende Motivation.", exampleTranslation: "Eksik motivasyon." },
-        { word: "die Depression", meaning: "Depresyon", pronunciation: "di de-pre-sion", example: "Hilfe bei Depressionen.", exampleTranslation: "Depresyonda yardım." },
-        { word: "die Therapie", meaning: "Terapi", pronunciation: "di te-ra-pi", example: "Eine Therapie beginnen.", exampleTranslation: "Bir terapiye başlamak." },
-        { word: "die Selbsthilfe", meaning: "Kendi kendine yardım", pronunciation: "di zelbst-hil-fı", example: "Bücher zur Selbsthilfe.", exampleTranslation: "Kendi kendine yardım kitapları." },
-        { word: "der Charakter", pronunciation: "der ka-rak-ter", meaning: "Karakter", example: "Ein starker Charakter.", exampleTranslation: "Güçlü bir karakter." },
-        { word: "die Persönlichkeit", pronunciation: "di per-zön-lih-kayt", meaning: "Kişilik", example: "Die Entwicklung der Persönlichkeit.", exampleTranslation: "Kişiliğin gelişimi." }
+        { word: "die Psychologie", meaning: "Psikoloji", pronunciation: "di psü-ho-lo-gi", example: "Ein book über Psychologie.", exampleTranslation: "Psikoloji üzerine bir kitap." },
+        { word: "das Verhalten", meaning: "Davranış", pronunciation: "das fer-hal-tın", example: "Menschliches Verhalten studieren.", exampleTranslation: "İnsan davranışını incelemek." },
+        { word: "die Gedanken", meaning: "Düşünceler", pronunciation: "di gı-dan-kın", example: "Positive Gedanken haben.", exampleTranslation: "Olumlu düşüncelere sahip olmak." },
+        { word: "die Gefühle", meaning: "Duygular", pronunciation: "di gı-fü-lı", example: "Gefühle ausdrücken.", exampleTranslation: "Duyguları ifade etmek." },
+        { word: "der Stress", meaning: "Stres", pronunciation: "der ştres", example: "Stress abbauen.", exampleTranslation: "Stresi azaltmak." },
+        { word: "die Therapie", meaning: "Terapi", pronunciation: "di te-ra-pi", example: "In einer Therapie sein.", exampleTranslation: "Terapide olmak." },
+        { word: "die Persönlichkeit", meaning: "Kişilik", pronunciation: "di per-zön-lih-kayt", example: "Eine starke Persönlichkeit.", exampleTranslation: "Güçlü bir kişilik." },
+        { word: "das Bewusstsein", meaning: "Bilinç", pronunciation: "das be-vust-zayn", example: "Das Bewusstsein erweitern.", exampleTranslation: "Bilinci genişletmek." },
+        { word: "das Unterbewusstsein", meaning: "Bilinçaltı", pronunciation: "das un-tər-be-vust-zayn", example: "Das Unterbewusstsein beeinflussen.", exampleTranslation: "Bilinçaltını etkilemek." },
+        { word: "die Motivation", meaning: "Motivasyon", pronunciation: "di mo-ti-va-tsion", example: "Hohe Motivation haben.", exampleTranslation: "Yüksek motivasyona sahip olmak." },
+        { word: "die Angst", meaning: "Korku", pronunciation: "di angst", example: "Angst überwinden.", exampleTranslation: "Korkuyu aşmak." },
+        { word: "die Freude", meaning: "Sevinç", pronunciation: "di froy-dı", example: "Freude teilen.", exampleTranslation: "Sevinci paylaşmak." },
+        { word: "das Trauma", meaning: "Travma", pronunciation: "das trau-ma", example: "Ein Trauma verarbeiten.", exampleTranslation: "Bir travmayı atlatmak." },
+        { word: "die Empathie", meaning: "Empati", pronunciation: "di em-pa-ti", example: "Empathie für andere zeigen.", exampleTranslation: "Başkalarına karşı empati göstermek." },
+        { word: "die Intelligenz", meaning: "Zeka", pronunciation: "di in-te-li-gents", example: "Künstliche Intelligenz.", exampleTranslation: "Yapay Zeka." },
+        { word: "das Gedächtnis", meaning: "Hafıza", pronunciation: "das gı-dehht-nis", example: "Ein gutes Gedächtnis haben.", exampleTranslation: "İyi bir hafızaya sahip olmak." },
+        { word: "mental", meaning: "zihinsel", pronunciation: "men-tal", example: "Mentale Gesundheit.", exampleTranslation: "Zihinsel sağlık." },
+        { word: "emotional", meaning: "duygusal", pronunciation: "e-mo-tsio-nal", example: "Emotional reagieren.", exampleTranslation: "Duygusal tepki vermek." },
+        { word: "sozial", meaning: "sosyal", pronunciation: "zo-tsial", example: "Soziale Medien.", exampleTranslation: "Sosyal medya." },
+        { word: "kognitiv", meaning: "bilişsel", pronunciation: "kog-ni-tif", example: "Kognitive Fähigkeiten.", exampleTranslation: "Bilişsel yetenekler." }
     ]
 };
 
@@ -463,16 +514,26 @@ const unit579Vocab: GermanUnitVocabulary = {
 const unit580Vocab: GermanUnitVocabulary = {
     unitId: 580, title: "İş Almancası 1",
     words: [
-        { word: "das Meeting", meaning: "Toplantı", pronunciation: "das mi-ting", example: "Wir haben ein Meeting.", exampleTranslation: "Bir toplantımız var." },
-        { word: "die Verhandlung", meaning: "Müzakere / Pazarlık", pronunciation: "di fer-hand-lung", example: "Schwierige Verhandlungen.", exampleTranslation: "Zor müzakereler." },
-        { word: "die Geschäftsreise", meaning: "İş gezisi", pronunciation: "di gı-şefts-ray-zı", example: "Auf Geschäftsreise sein.", exampleTranslation: "İş gezisinde olmak." },
-        { word: "der Kunde", meaning: "Müşteri", pronunciation: "der kun-dı", example: "Ein zufriedener Kunde.", exampleTranslation: "Memnun bir müşteri." },
-        { word: "das Projekt", meaning: "Proje", pronunciation: "das pro-yekt", example: "Ein neues Projekt leiten.", exampleTranslation: "Yeni bir projeyi yönetmek." },
-        { word: "die Frist", meaning: "Süre / Mühlet / Teslim tarihi", pronunciation: "di frist", example: "Die Frist einhalten.", exampleTranslation: "Süreye uymak." },
-        { word: "das Budget", meaning: "Bütçe", pronunciation: "das bü-dşe", example: "Das Budget planen.", exampleTranslation: "Bütçeyi planlamak." },
-        { word: "die Zusammenarbeit", meaning: "İşbirliği", pronunciation: "di tsu-za-mın-ar-bayt", example: "Eine gute Zusammenarbeit.", exampleTranslation: "İyi bir işbirliği." },
-        { word: "die E-Mail", pronunciation: "di i-meyl", meaning: "E-posta", example: "Schreib mir eine E-Mail.", exampleTranslation: "Bana bir e-posta yaz." },
-        { word: "der Termin", pronunciation: "der ter-min", meaning: "Randevu", example: "Ich habe einen Termin.", exampleTranslation: "Bir randevum var." }
+        { word: "das Geschäftsdeutsch", meaning: "İş Almancası", pronunciation: "das gı-şefts-doytş", example: "Geschäftsdeutsch lernen.", exampleTranslation: "İş Almancası öğrenmek." },
+        { word: "die Verhandlung", meaning: "Müzakere", pronunciation: "di fer-hand-lung", example: "Eine geschäftliche Verhandlung.", exampleTranslation: "Ticari bir müzakere." },
+        { word: "der Auftrag", meaning: "Sipariş/Görev", pronunciation: "der auf-trak", example: "Einen Auftrag erhalten.", exampleTranslation: "Bir sipariş/görev almak." },
+        { word: "das Angebot", meaning: "Teklif", pronunciation: "das an-ge-bot", example: "Ein Angebot machen.", exampleTranslation: "Bir teklif sunmak." },
+        { word: "die Korrespondenz", meaning: "Yazışma", pronunciation: "di kor-res-pon-dents", example: "Geschäftliche Korrespondenz.", exampleTranslation: "Ticari yazışma." },
+        { word: "das Meeting", meaning: "Toplantı", pronunciation: "das mi-ting", example: "Am Meeting teilnehmen.", exampleTranslation: "Toplantıya katılmak." },
+        { word: "das Protokoll", meaning: "Tutanak", pronunciation: "das pro-to-kol", example: "Das Protokoll schreiben.", exampleTranslation: "Tutanak yazmak." },
+        { word: "die Zusammenarbeit", meaning: "İşbirliği", pronunciation: "di tsu-za-mın-ar-bayt", example: "Internationale Zusammenarbeit.", exampleTranslation: "Uluslararası işbirliği." },
+        { word: "der Kunde", meaning: "Müşteri", pronunciation: "der kun-dı", example: "Der Kunde ist König.", exampleTranslation: "Müşteri velinimettir (kraldır)." },
+        { word: "der Lieferant", meaning: "Tedarikçi", pronunciation: "der li-fı-rant", example: "Einen Lieferanten kontaktieren.", exampleTranslation: "Bir tedarikçiyle iletişime geçmek." },
+        { word: "der Vertrag", meaning: "Sözleşme", pronunciation: "der fer-trak", example: "Einen Vertrag unterschreiben.", exampleTranslation: "Bir sözleşme imzalamak." },
+        { word: "das Budget", meaning: "Bütçe", pronunciation: "das bü-dşe", example: "Das Budget überschreiten.", exampleTranslation: "Bütçeyi aşmak." },
+        { word: "der Termin", meaning: "Randevu", pronunciation: "der ter-min", example: "Einen Termin vereinbaren.", exampleTranslation: "Bir randevu kararlaştırmak." },
+        { word: "die Abteilung", meaning: "Departman", pronunciation: "di ap-tay-lung", example: "Leiter der Abteilung.", exampleTranslation: "Departmanın yöneticisi." },
+        { word: "die Projektleitung", meaning: "Proje yönetimi", pronunciation: "di pro-yekt-lay-tung", example: "Die Projektleitung übernehmen.", exampleTranslation: "Proje yönetimini üstlenmek." },
+        { word: "die Präsentation", meaning: "Sunum", pronunciation: "di pre-zen-ta-tsion", example: "Die Präsentation vorbereiten.", exampleTranslation: "Sunumu hazırlamak." },
+        { word: "professionell", meaning: "profesyonel", pronunciation: "pro-fes-sio-nel", example: "Ein professionelles Verhalten.", exampleTranslation: "Profesyonel bir davranış." },
+        { word: "zuverlässig", meaning: "güvenilir", pronunciation: "tsu-fer-les-sih", example: "Ein zuverlässiger Partner.", exampleTranslation: "Güvenilir bir ortak." },
+        { word: "fristgerecht", meaning: "zamanında", pronunciation: "frist-ge-rehht", example: "Eine fristgerechte Lieferung.", exampleTranslation: "Zamanında bir teslimat." },
+        { word: "effektiv", meaning: "etkili", pronunciation: "ef-fek-tif", example: "Effektiv arbeiten.", exampleTranslation: "Etkili çalışmak." }
     ]
 };
 
@@ -480,11 +541,26 @@ const unit580Vocab: GermanUnitVocabulary = {
 const unit581Vocab: GermanUnitVocabulary = {
     unitId: 581, title: "Plusquamperfekt",
     words: [
-        { word: "vorher", meaning: "daha önce", pronunciation: "for-her", example: "Ich hatte es vorher gewusst.", exampleTranslation: "Bunu daha önce biliyordum." },
-        { word: "nachdem", meaning: "-den sonra", pronunciation: "nah-dem", example: "Nachdem er gegessen hatte, ging er.", exampleTranslation: "Yemek yedikten sonra gitti." },
-        { word: "bereits", meaning: "zaten / çoktan", pronunciation: "be-rayts", example: "Ich hatte bereits angerufen.", exampleTranslation: "Çoktan aramıştım." },
-        { word: "vergangen", meaning: "geçmiş", pronunciation: "fer-gan-gın", example: "In der vergangenen Woche.", exampleTranslation: "Geçen haftada." },
-        { word: "abschließen", meaning: "tamamlamak / bitirmek", pronunciation: "ap-şli-sın", example: "Ich hatte die Arbeit abgeschlossen.", exampleTranslation: "İşi tamamlamıştım." }
+        { word: "hatte gjort", meaning: "yapmıştı", pronunciation: "ha-te gı-maht", example: "Ich hatte meine Hausaufgaben gemacht.", exampleTranslation: "Ödevimi yapmıştım." },
+        { word: "war gegangen", meaning: "gitmişti", pronunciation: "var gı-gan-gən", example: "Er war schon nach Hause gegangen.", exampleTranslation: "O çoktan eve gitmişti." },
+        { word: "die Vergangenheit", meaning: "Geçmiş", pronunciation: "di fer-gan-gən-hayt", example: "Erinnerungen an die Vergangenheit.", exampleTranslation: "Geçmişe dair anılar." },
+        { word: "die Aktion", meaning: "Eylem", pronunciation: "di ak-tsion", example: "Eine geplante Aktion.", exampleTranslation: "Planlanmış bir eylem." },
+        { word: "die Reihenfolge", meaning: "Sıralama", pronunciation: "di ray-ın-fol-gə", example: "Die richtige Reihenfolge.", exampleTranslation: "Doğru sıralama." },
+        { word: "zuvor", meaning: "daha önce", pronunciation: "tsu-for", example: "Ich hatte ihn zuvor nie gesehen.", exampleTranslation: "Onu daha önce hiç görmemiştim." },
+        { word: "damals", meaning: "o zamanlar", pronunciation: "da-mals", example: "Damals war alles anders.", exampleTranslation: "O zamanlar her şey farklıydı." },
+        { word: "bevor", meaning: "önce", pronunciation: "be-for", example: "Bevor er ging, rief er an.", exampleTranslation: "Gitmeden önce aradı." },
+        { word: "nachdem", meaning: "sonra", pronunciation: "nah-dem", example: "Nachdem er gegessen hatte, ging er.", exampleTranslation: "Yemek yedikten sonra gitti." },
+        { word: "sobald", meaning: "yapar yapmaz", pronunciation: "zo-balt", example: "Sobald ich angekommen war, rief ich an.", exampleTranslation: "Varır varmaz aradım." },
+        { word: "kaum", meaning: "neredeyse hiç/henüz", pronunciation: "kaum", example: "Ich hatte kaum geschlafen.", exampleTranslation: "Neredeyse hiç uyumamıştım." },
+        { word: "gerade", meaning: "tam o sırada", pronunciation: "gı-ra-də", example: "Er war gerade gegangen.", exampleTranslation: "Tam o sırada gitmişti." },
+        { word: "das Ende", meaning: "Son", pronunciation: "das en-də", example: "Das Ende des Buches.", exampleTranslation: "Kitabın sonu." },
+        { word: "der Anfang", meaning: "Başlangıç", pronunciation: "der an-fang", example: "Der Anfang war schwer.", exampleTranslation: "Başlangıç zordu." },
+        { word: "die Erinnerung", meaning: "Anı", pronunciation: "di er-in-nə-rung", example: "Eine schöne Erinnerung.", exampleTranslation: "Güzel bir anı." },
+        { word: "die Erfahrung", meaning: "Deneyim", pronunciation: "di er-fa-rung", example: "Erfahrungen sammeln.", exampleTranslation: "Deneyim kazanmak." },
+        { word: "passiert", meaning: "olan/geçen", pronunciation: "pas-sirt", example: "Was ist passiert?", exampleTranslation: "Ne oldu/ne geçti?" },
+        { word: "erledigt", meaning: "halledilmiş", pronunciation: "er-le-diht", example: "Die Arbeit ist erledigt.", exampleTranslation: "İş halledildi/bitti." },
+        { word: "vergessen", meaning: "unutulmuş", pronunciation: "fer-ges-sın", example: "Ich hatte es vergessen.", exampleTranslation: "Onu unutmuştum." },
+        { word: "geplant", meaning: "planlanmış", pronunciation: "gı-plant", example: "Ein geplantes Treffen.", exampleTranslation: "Planlanmış bir buluşma." }
     ]
 };
 
@@ -492,11 +568,26 @@ const unit581Vocab: GermanUnitVocabulary = {
 const unit582Vocab: GermanUnitVocabulary = {
     unitId: 582, title: "Futur II",
     words: [
-        { word: "vermutlich", meaning: "tahminen", pronunciation: "fer-mut-lih", example: "Er wird vermutlich schon da sein.", exampleTranslation: "Tahminen çoktan oradadır." },
-        { word: "wahrscheinlich", meaning: "muhtemelen", pronunciation: "var-şayn-lıh", example: "Das wird wohl geschehen sein.", exampleTranslation: "Bu herhalde gerçekleşmiştir." },
-        { word: "vollenden", meaning: "tamamlamak", pronunciation: "fol-en-dın", example: "Bis morgen werde ich es vollendet haben.", exampleTranslation: "Yarına kadar onu tamamlamış olacağım." },
-        { word: "bis dahin", meaning: "o zamana kadar", pronunciation: "bis da-hin", example: "Bis dahin wird er gegangen sein.", exampleTranslation: "O zamana kadar gitmiş olacak." },
-        { word: "die Vermutung", meaning: "Tahmin", pronunciation: "di fer-mu-tung", example: "Eine bloße Vermutung.", exampleTranslation: "Sadece bir tahmin." }
+        { word: "wird gemacht haben", meaning: "yapmış olacak", pronunciation: "virt gı-maht ha-bən", example: "Er wird es bis morgen gemacht haben.", exampleTranslation: "Yarına kadar yapmış olacak." },
+        { word: "die Zukunft", meaning: "Gelecek", pronunciation: "di tsu-kunft", example: "Pläne für die Zukunft.", exampleTranslation: "Geleceğe dair planlar." },
+        { word: "der Abschluss", meaning: "Tamamlama", pronunciation: "der ap-şlus", example: "Der erfolgreiche Abschluss.", exampleTranslation: "Başarılı tamamlama." },
+        { word: "der Zeitpunkt", meaning: "Zaman noktası", pronunciation: "der tsayt-punkt", example: "Ein günstiger Zeitpunkt.", exampleTranslation: "Uygun bir zaman noktası." },
+        { word: "die Vermutung", meaning: "Tahmin", pronunciation: "di fer-mu-tung", example: "Eine Vermutung äußern.", exampleTranslation: "Bir tahminde bulunmak." },
+        { word: "sicher", meaning: "emin", pronunciation: "zi-hər", example: "Bist du sicher?", exampleTranslation: "Emin misin?" },
+        { word: "bestimmt", meaning: "kesin", pronunciation: "be-ştimt", example: "Er wird bestimmt kommen.", exampleTranslation: "O kesinlikle gelecek." },
+        { word: "bis dann", meaning: "o vakte kadar", pronunciation: "bis dan", example: "Bis dann wird alles fertig sein.", exampleTranslation: "O vakte kadar her şey bitmiş olacak." },
+        { word: "wahrscheinlich", meaning: "muhtemelen", pronunciation: "var-şayn-lıh", example: "Wahrscheinlich regnet es morgen.", exampleTranslation: "Muhtemelen yarın yağmur yağacak." },
+        { word: "vielleicht", meaning: "belki", pronunciation: "fi-layht", example: "Vielleicht kommt er später.", exampleTranslation: "Belki sonra gelir." },
+        { word: "hoffentlich", meaning: "umarım", pronunciation: "hof-ent-lıh", example: "Hoffentlich klappt es.", exampleTranslation: "Umarım hallolur." },
+        { word: "erwartet", meaning: "beklenen", pronunciation: "er-var-tet", example: "Ein erwartetes Ereignis.", exampleTranslation: "Beklenen bir olay." },
+        { word: "das Ziel", meaning: "Hedef", pronunciation: "das tsil", example: "Das Ziel erreichen.", exampleTranslation: "Hedefe ulaşmak." },
+        { word: "der Erfolg", meaning: "Başarı", pronunciation: "der er-folg", example: "Viel Erfolg!", exampleTranslation: "Bol başarılar!" },
+        { word: "der Wandel", meaning: "Değişim", pronunciation: "der van-dəl", example: "Sozialer Wandel.", exampleTranslation: "Sosyal değişim." },
+        { word: "das Resultat", meaning: "Sonuç", pronunciation: "das re-zul-tat", example: "Ein gutes Resultat.", exampleTranslation: "İyi bir sonuç." },
+        { word: "geklärt", meaning: "açıklığa kavuşmuş", pronunciation: "gı-klert", example: "Das problem ist geklärt.", exampleTranslation: "Sorun açıklığa kavuştu." },
+        { word: "erreicht", meaning: "ulaşılmış", pronunciation: "er-rayht", example: "Das Ziel ist erreicht.", exampleTranslation: "Hedefe ulaşıldı." },
+        { word: "erledigt", meaning: "halledilmiş", pronunciation: "er-le-diht", example: "Erledigte Aufgaben.", exampleTranslation: "Halledilmiş görevler." },
+        { word: "vorbei", meaning: "geçmiş/bitmiş", pronunciation: "for-bay", example: "Der Schmerz ist vorbei.", exampleTranslation: "Ağrı geçti/bitti." }
     ]
 };
 
@@ -504,11 +595,26 @@ const unit582Vocab: GermanUnitVocabulary = {
 const unit583Vocab: GermanUnitVocabulary = {
     unitId: 583, title: "Relativsätze",
     words: [
-        { word: "derjenige", meaning: "o kimse / şu ki", pronunciation: "der-ye-ni-gı", example: "Derjenige, der...", exampleTranslation: "O kimse ki..." },
-        { word: "beziehen", meaning: "atfetmek / değinmek / ilişkilendirmek", pronunciation: "be-tsi-ın", example: "Sich auf etwas beziehen.", exampleTranslation: "Bir şeye değinmek." },
-        { word: "welcher", meaning: "hangi / ki o", pronunciation: "vel-hır", example: "Das Haus, welches dort steht.", exampleTranslation: "Orada duran ev." },
-        { word: "dessen", meaning: "onun (genitiv ilgi zamiri)", pronunciation: "de-sın", example: "Der Mann, dessen Auto...", exampleTranslation: "Arabası ... olan adam." },
-        { word: "deren", meaning: "onun/onların (genitiv ilgi zamiri)", pronunciation: "de-ren", example: "Die Frau, deren Kind...", exampleTranslation: "Çocuğu ... olan kadın." }
+        { word: "der", meaning: "ki (eril)", pronunciation: "der", example: "Der Mann, der dort steht.", exampleTranslation: "Orada duran adam (ki eril)." },
+        { word: "die", meaning: "ki (dişil)", pronunciation: "di", example: "Die Frau, die ich kenne.", exampleTranslation: "Tanıdığım kadın (ki dişil)." },
+        { word: "das", meaning: "ki (nötr)", pronunciation: "das", example: "Das Buch, das hier liegt.", exampleTranslation: "Burada duran kitap (ki nötr)." },
+        { word: "den", meaning: "ki (eril -i hali)", pronunciation: "den", example: "Der Hund, den ich sah.", exampleTranslation: "Gördüğüm köpek (ki eril -i hali)." },
+        { word: "dem", meaning: "ki (eril/nötr -e hali)", pronunciation: "dem", example: "Der Freund, dem ich half.", exampleTranslation: "Yardım ettiğim arkadaş (ki eril/nötr -e hali)." },
+        { word: "dessen", meaning: "ki onun", pronunciation: "de-sın", example: "Der Junge, dessen Vater...", exampleTranslation: "Babası ... olan çocuk (ki onun)." },
+        { word: "deren", meaning: "ki onun (dişil)", pronunciation: "de-ren", example: "Die Schule, deren Name...", exampleTranslation: "Adı ... olan okul (ki onun dişil/çoğul)." },
+        { word: "welcher", meaning: "hangisi", pronunciation: "vel-hır", example: "Welcher Weg ist richtig?", exampleTranslation: "Hangi yol doğru? (ki o)." },
+        { word: "wo", meaning: "ki orada", pronunciation: "vo", example: "Das Land, wo ich lebe.", exampleTranslation: "Yaşadığım ülke (ki orada)." },
+        { word: "wohin", meaning: "ki oraya", pronunciation: "vo-hin", example: "Die Stadt, wohin wir reisen.", exampleTranslation: "Seyahat ettiğimiz şehir (ki oraya)." },
+        { word: "woher", meaning: "ki oradan", pronunciation: "vo-her", example: "Das Dorf, woher er kommt.", exampleTranslation: "Onun geldiği köy (ki oradan)." },
+        { word: "was", meaning: "ki o", pronunciation: "vas", example: "Alles, was ich habe.", exampleTranslation: "Sahip olduğum her şey (ki o)." },
+        { word: "die Person", meaning: "Kişi", pronunciation: "di per-zon", example: "Eine nette Person.", exampleTranslation: "Nazik bir kişi." },
+        { word: "die Sache", meaning: "Şey/Nesne", pronunciation: "di za-hə", example: "Eine wichtige Sache.", exampleTranslation: "Önemli bir şey/nesne." },
+        { word: "der Ort", meaning: "Yer", pronunciation: "der ort", example: "Ein ruhiger Ort.", exampleTranslation: "Sakin bir yer." },
+        { word: "der Grund", meaning: "Sebep", pronunciation: "der grunt", example: "Der Grund für die Verspätung.", exampleTranslation: "Gecikmenin sebebi." },
+        { word: "bekannt", meaning: "tanınan", pronunciation: "be-kant", example: "Ein bekannter Künstler.", exampleTranslation: "Tanınan bir sanatçı." },
+        { word: "interessant", meaning: "ilginç", pronunciation: "in-te-re-sant", example: "Ein interessantes Gespräch.", exampleTranslation: "İlginç bir görüşme." },
+        { word: "wichtig", meaning: "önemli", pronunciation: "vih-tih", example: "Eine wichtige Rolle.", exampleTranslation: "Önemli bir rol." },
+        { word: "schön", meaning: "güzel", pronunciation: "şön", example: "Ein schöner Tag.", exampleTranslation: "Güzel bir gün." }
     ]
 };
 
@@ -516,11 +622,26 @@ const unit583Vocab: GermanUnitVocabulary = {
 const unit584Vocab: GermanUnitVocabulary = {
     unitId: 584, title: "Kausalsätze",
     words: [
-        { word: "da", meaning: "mademki / -düğü için", pronunciation: "da", example: "Da es regnet, bleiben wir hier.", exampleTranslation: "Yağmur yağdığı için burada kalıyoruz." },
-        { word: "wegen", meaning: "yüzünden / nedeniyle", pronunciation: "ve-gın", example: "Wegen des Wetters.", exampleTranslation: "Hava nedeniyle." },
-        { word: "aufgrund", meaning: "nedeniyle / dayanarak", pronunciation: "auf-grunt", example: "Aufgrund der Probleme.", exampleTranslation: "Sorunlar nedeniyle." },
-        { word: "weshalb", meaning: "bu yüzden / neden", pronunciation: "ves-halp", example: "Weshalb fragst du?", exampleTranslation: "Neden soruyorsun?" },
-        { word: "deshalb", meaning: "bu yüzden", pronunciation: "des-halp", example: "Deshalb bin ich hier.", exampleTranslation: "Bu yüzden buradayım." }
+        { word: "weil", meaning: "çünkü", pronunciation: "vayl", example: "Weil ich krank bin.", exampleTranslation: "Çünkü hastayım." },
+        { word: "da", meaning: "mademki/çünkü", pronunciation: "da", example: "Da es regnet, bleiben wir.", exampleTranslation: "Yağmur yağdığı için kalıyoruz (mademki)." },
+        { word: "denn", meaning: "çünkü (bağlaç)", pronunciation: "den", example: "Denn er hat keine Zeit.", exampleTranslation: "Çünkü vakti yok (bağlaç)." },
+        { word: "wegen", meaning: "yüzünden", pronunciation: "ve-gən", example: "Wegen des Regens.", exampleTranslation: "Yağmur yüzünden." },
+        { word: "aufgrund", meaning: "sebebiyle", pronunciation: "auf-grunt", example: "Aufgrund der Hitze.", exampleTranslation: "Sıcaklık sebebiyle." },
+        { word: "deshalb", meaning: "bu yüzden", pronunciation: "des-halp", example: "Deshalb bin ich müde.", exampleTranslation: "Bu yüzden yorgunum." },
+        { word: "darum", meaning: "bu sebeple", pronunciation: "da-rum", example: "Darum frage ich.", exampleTranslation: "Bu sebeple soruyorum." },
+        { word: "folglich", meaning: "sonuç olarak", pronunciation: "fol-glih", example: "Folglich müssen wir warten.", exampleTranslation: "Sonuç olarak beklemeliyiz." },
+        { word: "nämlich", meaning: "yani/çünkü", pronunciation: "nem-lih", example: "Er kommt nicht, er ist nämlich krank.", exampleTranslation: "Gelmiyor, çünkü hasta (yani/çünkü)." },
+        { word: "infolge", meaning: "sonucunda", pronunciation: "in-fol-gə", example: "Infolge des Unfalls.", exampleTranslation: "Kaza sonucunda." },
+        { word: "aus diesem Grund", meaning: "bu nedenle", pronunciation: "aus di-zəm grunt", example: "Aus diesem Grund ging ich.", exampleTranslation: "Bu nedenle gittim." },
+        { word: "weswegen", meaning: "bu yüzden", pronunciation: "ves-ve-gən", example: "Weswegen weinst du?", exampleTranslation: "Bu yüzden mi ağlıyorsun? (neden/bu yüzden)." },
+        { word: "die Ursache", meaning: "Neden", pronunciation: "di ur-za-hə", example: "Die Ursache des Problems.", exampleTranslation: "Sorunun nedeni." },
+        { word: "der Grund", meaning: "Sebep", pronunciation: "der grunt", example: "Ohne Grund lachen.", exampleTranslation: "Nedensizce gülmek." },
+        { word: "die Wirkung", meaning: "Etki", pronunciation: "di vir-kung", example: "Die Wirkung der Medizin.", exampleTranslation: "İlacın etkisi." },
+        { word: "die Folge", meaning: "Sonuç", pronunciation: "di fol-gə", example: "Die Folge des Fehlers.", exampleTranslation: "Hatanın sonucu." },
+        { word: "verantwortlich", meaning: "sorumlu", pronunciation: "fer-ant-vort-lih", example: "Verantwortlich sein für etwas.", exampleTranslation: "Bir şeyden sorumlu olmak." },
+        { word: "schuld", meaning: "suçlu/neden olan", pronunciation: "şult", example: "Er ist schuld daran.", exampleTranslation: "Bundan o suçlu/neden olan." },
+        { word: "dank", meaning: "sayesinde", pronunciation: "dank", example: "Dank deiner Hilfe.", exampleTranslation: "Yardımın sayesinde." },
+        { word: "trotz", meaning: "rağmen", pronunciation: "trots", example: "Trotz der Probleme.", exampleTranslation: "Sorunlara rağmen." }
     ]
 };
 
@@ -528,11 +649,26 @@ const unit584Vocab: GermanUnitVocabulary = {
 const unit585Vocab: GermanUnitVocabulary = {
     unitId: 585, title: "Wunschsätze",
     words: [
-        { word: "hoffentlich", meaning: "umarım / inşallah", pronunciation: "hof-ent-lıh", example: "Hoffentlich klappt es.", exampleTranslation: "Umarım hallolur." },
-        { word: "der Wunsch", meaning: "Dilek", pronunciation: "der vunş", example: "Ein großer Wunsch.", exampleTranslation: "Büyük bir dilek." },
-        { word: "wünschen", meaning: "dilemek", pronunciation: "vün-şın", example: "Ich wünsche dir alles Gute.", exampleTranslation: "Sana en iyisini diliyorum." },
-        { word: "bloß", meaning: "sadece / keşke (parçacık)", pronunciation: "blos", example: "Wenn ich bloß wüsste...", exampleTranslation: "Ah bir bilseydim..." },
-        { word: "doch", meaning: "gerçi / keşke (parçacık)", pronunciation: "doh", example: "Hätte ich doch Zeit!", exampleTranslation: "Keşke vaktim olsaydı!" }
+        { word: "der Wunsch", meaning: "İstek", pronunciation: "der vunş", example: "Wünsche erfüllen.", exampleTranslation: "Dilekleri gerçekleştirmek." },
+        { word: "die Hoffnung", meaning: "Umut", pronunciation: "di hof-nung", example: "Hoffnung auf Frieden.", exampleTranslation: "Barış umudu." },
+        { word: "der Traum", meaning: "Hayal", pronunciation: "der traum", example: "Ein schöner Traum.", exampleTranslation: "Güzel bir hayal." },
+        { word: "wenn", meaning: "eğer", pronunciation: "ven", example: "Wenn ich reich wäre...", exampleTranslation: "Eğer zengin olsaydım..." },
+        { word: "der Konjunktiv", meaning: "Dilek kipi", pronunciation: "der kon-yunk-tif", example: "Den Konjunktiv II lernen.", exampleTranslation: "Dilek kipini öğrenmek." },
+        { word: "die Realität", meaning: "Gerçeklik", pronunciation: "di re-a-li-teet", example: "Der Realität ins Auge sehen.", exampleTranslation: "Gerçeklikle yüzleşmek." },
+        { word: "erfüllen", meaning: "gerçekleştirmek", pronunciation: "er-fül-lın", example: "Einen Wunsch erfüllen.", exampleTranslation: "Bir isteği/dileği gerçekleştirmek." },
+        { word: "die Sehnsucht", meaning: "Özlem", pronunciation: "di zayn-zuht", example: "Sehnsucht nach der Heimat.", exampleTranslation: "Vatan özlemi." },
+        { word: "vorstellen", meaning: "Hayal etmek", pronunciation: "for-ştel-lın", example: "Sich etwas vorstellen.", exampleTranslation: "Bir şeyi hayal etmek." },
+        { word: "hoffen", meaning: "umut etmek", pronunciation: "hof-fın", example: "Auf ein Wunder hoffen.", exampleTranslation: "Bir mucize umut etmek." },
+        { word: "wünschen", meaning: "dilemek", pronunciation: "vün-şın", example: "Sich ein Auto wünschen.", exampleTranslation: "Kendine bir araba dilemek." },
+        { word: "glauben", meaning: "inanmak", pronunciation: "glau-bın", example: "An Träume glauben.", exampleTranslation: "Hayallere inanmak." },
+        { word: "das Wunder", meaning: "Mucize", pronunciation: "das vun-dər", example: "Ein Wunder geschieht.", exampleTranslation: "Bir mucize gerçekleşiyor." },
+        { word: "das Ziel", meaning: "Hedef", pronunciation: "das tsil", example: "Ein hohes Ziel.", exampleTranslation: "Yüksek bir hedef." },
+        { word: "der Erfolg", meaning: "Başarı", pronunciation: "der er-folg", example: "Viel Erfolg!", exampleTranslation: "Bol başarılar!" },
+        { word: "das Glück", meaning: "Mutluluk", pronunciation: "das glük", example: "Glück im Leben haben.", exampleTranslation: "Hayatta mutlu/şanslı olmak." },
+        { word: "möglich", meaning: "mümkün", pronunciation: "mög-lih", example: "Alles ist möglich.", exampleTranslation: "Her şey mümkün." },
+        { word: "unmöglich", meaning: "imkansız", pronunciation: "un-mög-lih", example: "Es ist unmöglich.", exampleTranslation: "İmkansız." },
+        { word: "nah", meaning: "yakın", pronunciation: "na", example: "Sehr nah sein.", exampleTranslation: "Çok yakın olmak." },
+        { word: "fern", meaning: "uzak", pronunciation: "fern", example: "In weiter Ferne.", exampleTranslation: "Çok uzakta." }
     ]
 };
 
@@ -540,11 +676,26 @@ const unit585Vocab: GermanUnitVocabulary = {
 const unit586Vocab: GermanUnitVocabulary = {
     unitId: 586, title: "Modalverben Geg.",
     words: [
-        { word: "könnte", meaning: "olabilir (ihtimal)", pronunciation: "kön-tı", example: "Es könnte regnen.", exampleTranslation: "Yağmur yağabilir." },
-        { word: "müsste", meaning: "olmalı (tahmin)", pronunciation: "müs-tı", example: "Das müsste reichen.", exampleTranslation: "Bu yetmeli." },
-        { word: "dürfte", meaning: "olmalı (yüksek ihtimal)", pronunciation: "dürf-tı", example: "Er dürfte jetzt kommen.", exampleTranslation: "Şimdi gelmesi lazım." },
-        { word: "sollte", pronunciation: "şol-te", meaning: "Meli / Malı (tavsiye)", example: "Du solltest gehen.", exampleTranslation: "Gitmelisin." },
-        { word: "würde", pronunciation: "vür-de", meaning: "Ecekti / Erdi (hayal)", example: "Ich würde es machen.", exampleTranslation: "Onu yapardım." }
+        { word: "eine Entscheidung treffen", meaning: "karar vermek", pronunciation: "ay-nı ent-şay-dung tre-fın", example: "Er muss eine Entscheidung treffen.", exampleTranslation: "Bir karar vermesi gerekiyor." },
+        { word: "die Verantwortung tragen", meaning: "sorumluluk taşımak", pronunciation: "di fer-ant-vort-ung tra-gən", example: "Verantwortung tragen für das Team.", exampleTranslation: "Ekip için sorumluluk taşımak." },
+        { word: "eine Frage stellen", meaning: "soru sormak", pronunciation: "ay-nı fra-gə ştel-lın", example: "Darf ich eine Frage stellen?", exampleTranslation: "Bir soru sorabilir miyim?" },
+        { word: "Hilfe leisten", meaning: "yardım etmek", pronunciation: "hil-fə lays-tın", example: "Erste Hilfe leisten.", exampleTranslation: "İlk yardım etmek." },
+        { word: "Bescheid sagen", meaning: "haber vermek", pronunciation: "be-şayt za-gən", example: "Sag mir bitte Bescheid.", exampleTranslation: "Lütfen bana haber ver." },
+        { word: "Angst haben", meaning: "korkmak", pronunciation: "angst ha-bən", example: "Keine Angst haben.", exampleTranslation: "Korkmamak (korkuya sahip olmamak)." },
+        { word: "Glück haben", meaning: "şanslı olmak", pronunciation: "glük ha-bən", example: "Wir haben Glück gehabt.", exampleTranslation: "Şanslıydık (şansımız vardı)." },
+        { word: "Zeit verbringen", meaning: "vakit geçirmek", pronunciation: "tsayt fer-brin-gən", example: "Zeit mit Freunden verbringen.", exampleTranslation: "Arkadaşlarla vakit geçirmek." },
+        { word: "Interesse haben", meaning: "ilgi duymak", pronunciation: "in-te-res-sə ha-bən", example: "Interesse an Kunst haben.", exampleTranslation: "Sanata ilgi duymak." },
+        { word: "Vertrauen haben", meaning: "güven duymak", pronunciation: "fer-trau-ın ha-bən", example: "Vertrauen in dich haben.", exampleTranslation: "Sana güven duymak." },
+        { word: "Hoffnung machen", meaning: "umutlandırmak", pronunciation: "hof-nung ma-hın", example: "Sich falsche Hoffnungen machen.", exampleTranslation: "Boşuna umutlanmak." },
+        { word: "Eindruck machen", meaning: "izlenim bırakmak", pronunciation: "ayn-druk ma-hın", example: "Einen guten Eindruck machen.", exampleTranslation: "İyi bir izlenim bırakmak." },
+        { word: "Kritik üben", meaning: "eleştirmek", pronunciation: "kri-tik ü-bın", example: "Kritik an dem Plan üben.", exampleTranslation: "Planı eleştirmek." },
+        { word: "Abschied nehmen", meaning: "veda etmek", pronunciation: "ap-şit ne-mın", example: "Abschied von Freunden nehmen.", exampleTranslation: "Arkadaşlara veda etmek." },
+        { word: "Bezug nehmen", meaning: "atıfta bulunmak", pronunciation: "be-tsuk ne-mın", example: "Bezug nehmen auf die E-Mail.", exampleTranslation: "E-postaya atıfta bulunmak." },
+        { word: "einen Vorschlag machen", meaning: "öneride bulunmak", pronunciation: "ay-nı for-şlak ma-hın", example: "Einen Vorschlag machen.", exampleTranslation: "Öneride bulunmak." },
+        { word: "Anspruch haben", meaning: "hak iddia etmek", pronunciation: "an-şpruh ha-bən", example: "Anspruch auf Urlaub haben.", exampleTranslation: "Tatil hakkı iddia etmek." },
+        { word: "Rücksicht nehmen", meaning: "düşünceli davranmak", pronunciation: "rük-ziht ne-mın", example: "Rücksicht auf Nachbarn nehmen.", exampleTranslation: "Komşulara karşı düşünceli davranmak." },
+        { word: "Vorbereitungen treffen", meaning: "hazırlık yapmak", pronunciation: "for-be-ray-tung-ən tre-fın", example: "Vorbereitungen für das Fest treffen.", exampleTranslation: "Şenlik için hazırlık yapmak." },
+        { word: "Ruhe bewahren", meaning: "sakin kalmak", pronunciation: "ru-ə be-va-rın", example: "In der Krise Ruhe bewahren.", exampleTranslation: "Kriz anında sakin kalmak." }
     ]
 };
 
@@ -552,11 +703,26 @@ const unit586Vocab: GermanUnitVocabulary = {
 const unit587Vocab: GermanUnitVocabulary = {
     unitId: 587, title: "Nominalisierung",
     words: [
-        { word: "das Gehen", meaning: "Yürüyüş / Gitme", pronunciation: "das ge-ın", example: "Das schnelle Gehen.", exampleTranslation: "Hızlı yürüyüş." },
-        { word: "das Sprechen", meaning: "Konuşma", pronunciation: "das şpre-hın", example: "Beim Sprechen lernen.", exampleTranslation: "Konuşurken öğrenmek." },
-        { word: "die Kenntnisse", meaning: "Bilgiler / Beceriler", pronunciation: "di kent-ni-sı", example: "Deutschkenntnisse verbessern.", exampleTranslation: "Almanca bilgilerini geliştirmek." },
-        { word: "während", meaning: "esnasında", pronunciation: "ve-rınt", example: "Während des Essens.", exampleTranslation: "Yemek esnasında." },
-        { word: "seit", meaning: "-den beri", pronunciation: "zayt", example: "Seit meiner Ankunft.", exampleTranslation: "Varışımdan beri." }
+        { word: "jedoch", meaning: "ancak", pronunciation: "ye-doh", example: "Er kam, jedoch zu spät.", exampleTranslation: "Geldi, ancak çok geç." },
+        { word: "trotzdem", meaning: "yine de", pronunciation: "trots-deem", example: "Es regnet, trotzdem geht er.", exampleTranslation: "Yağmur yağıyor, yine de gidiyor." },
+        { word: "außerdem", meaning: "ayrıca", pronunciation: "aus-ər-deem", example: "Außerdem möchte ich sagen...", exampleTranslation: "Ayrıca söylemek isterim ki..." },
+        { word: "entweder ... oder", meaning: "ya ... ya da", pronunciation: "ent-ve-dər o-dər", example: "Entweder du oder ich.", exampleTranslation: "Ya sen ya da ben." },
+        { word: "sowohl ... als auch", meaning: "hem ... hem de", pronunciation: "zo-vol als auh", example: "Sowohl heute als auch morgen.", exampleTranslation: "Hem bugün hem de yarın." },
+        { word: "weder ... noch", meaning: "ne ... ne de", pronunciation: "ve-dər noh", example: "Weder Tee noch Kaffee.", exampleTranslation: "Ne çay ne kahve." },
+        { word: "nicht nur ... sondern auch", meaning: "sadece ... değil aynı zamanda", pronunciation: "niht nur zon-dərn auh", example: "Nicht nur schön, sondern auch klug.", exampleTranslation: "Sadece güzel değil, aynı zamanda akıllı." },
+        { word: "zwar ... aber", meaning: "gerçi ... ama", pronunciation: "tsvar a-bər", example: "Zwar klein, aber fein.", exampleTranslation: "Gerçi küçük ama güzel." },
+        { word: "einerseits ... andererseits", meaning: "bir yandan ... diğer yandan", pronunciation: "ay-nər-zayts an-dər-zayts", example: "Einerseits gut, andererseits teuer.", exampleTranslation: "Bir yandan iyi, diğer yandan pahalı." },
+        { word: "daher", meaning: "bu yüzden", pronunciation: "da-her", example: "Es ist kalt, daher heizen wir.", exampleTranslation: "Hava soğuk, bu yüzden ısıtıyoruz." },
+        { word: "deswegen", meaning: "bu sebeple", pronunciation: "des-ve-gən", example: "Deswegen bin ich hier.", exampleTranslation: "Bu sebeple buradayım." },
+        { word: "dennoch", meaning: "buna rağmen", pronunciation: "den-noh", example: "Es war schwer, dennoch schaffte er es.", exampleTranslation: "Zordu, buna rağmen başardı." },
+        { word: "anstatt", meaning: "yerine", pronunciation: "an-ştat", example: "Anstatt zu arbeiten, schläft er.", exampleTranslation: "Çalışmak yerine uyuyor." },
+        { word: "falls", meaning: "eğer", pronunciation: "fals", example: "Falls es regnet, bleibe ich.", exampleTranslation: "Eğer yağmur yağarsa kalıyorum." },
+        { word: "sofern", meaning: "şayet", pronunciation: "zo-fern", example: "Sofern das möglich ist.", exampleTranslation: "Şayet bu mümkünse." },
+        { word: "sobald", meaning: "yapar yapmaz", pronunciation: "zo-balt", example: "Sobald er kommt, fangen wir an.", exampleTranslation: "O gelir gelmez başlıyoruz." },
+        { word: "solange", meaning: "sürece", pronunciation: "zo-lan-gə", example: "Solange du hier bist.", exampleTranslation: "Sen burada olduğun sürece." },
+        { word: "bis", meaning: "kadar", pronunciation: "bis", example: "Warten bis morgen.", exampleTranslation: "Yarına kadar beklemek." },
+        { word: "damit", meaning: "diye/mek için", pronunciation: "da-mit", example: "Lerne, damit du die Prüfung bestehst.", exampleTranslation: "Sınavı geçesin diye çalış." },
+        { word: "um ... zu", meaning: "mek için", pronunciation: "um tsu", example: "Lernen, um zu bestehen.", exampleTranslation: "Geçmek için çalışmak." }
     ]
 };
 
@@ -564,11 +730,26 @@ const unit587Vocab: GermanUnitVocabulary = {
 const unit588Vocab: GermanUnitVocabulary = {
     unitId: 588, title: "Partizipialatt.",
     words: [
-        { word: "lachend", meaning: "gülen / gülerek", pronunciation: "la-hent", example: "Das lachende Kind.", exampleTranslation: "Gülen çocuk." },
-        { word: "gelesen", meaning: "okunmuş", pronunciation: "gı-le-zın", example: "Das gelesene Buch.", exampleTranslation: "Okunmuş kitap." },
-        { word: "spannend", meaning: "heyecan verici", pronunciation: "şpa-nent", example: "Ein spannender Film.", exampleTranslation: "Heyecan verici bir film." },
-        { word: "kochend", meaning: "kaynayan", pronunciation: "ko-hent", example: "Kochendes Wasser.", exampleTranslation: "Kaynayan su." },
-        { word: "beendet", meaning: "bitmiş / tamamlanmış", pronunciation: "be-en-det", example: "Die beendete Prüfung.", exampleTranslation: "Biten sınav." }
+        { word: "Sie", meaning: "Siz", pronunciation: "zi", example: "Können Sie mir helfen?", exampleTranslation: "Bana yardım edebilir misiniz? (Siz)." },
+        { word: "du", meaning: "Sen", pronunciation: "du", example: "Kannst du mir helfen?", exampleTranslation: "Bana yardım edebilir misin? (Sen)." },
+        { word: "die Anrede", meaning: "Hitap", pronunciation: "di an-re-də", example: "Eine förmliche Anrede.", exampleTranslation: "Resmi bir hitap." },
+        { word: "die Umgangssprache", meaning: "Sokak dili", pronunciation: "di um-gangs-şpra-hə", example: "Wörter aus der Umgangssprache.", exampleTranslation: "Sokak dilinden kelimeler." },
+        { word: "die Höflichkeit", meaning: "Nezaket", pronunciation: "di höf-lih-kayt", example: "Höflichkeit ist wichtig.", exampleTranslation: "Nezaket önemlidir." },
+        { word: "die Distanz", meaning: "Mesafe", pronunciation: "di dis-tants", example: "Distanz wahren.", exampleTranslation: "Mesafeyi korumak." },
+        { word: "die Kollegialität", meaning: "Meslektaşlık", pronunciation: "di kol-le-gia-li-teet", example: "Gute Kollegialität im Büro.", exampleTranslation: "Ofiste iyi meslektaşlık/dayanışma." },
+        { word: "der Respekt", meaning: "Saygı", pronunciation: "der re-şpekt", example: "Respekt zeigen.", exampleTranslation: "Saygı göstermek." },
+        { word: "der Anstand", meaning: "Edep/Terbiye", pronunciation: "der an-ştant", example: "Regeln des Anstands.", exampleTranslation: "Edep/terbiye kuralları." },
+        { word: "die Etikette", meaning: "Etiket/Görgü", pronunciation: "di e-ti-ket-tə", example: "Auf die Etikette achten.", exampleTranslation: "Görgü kurallarına (etikete) dikkat etmek." },
+        { word: "die Begrüßung", meaning: "Selamlaşma", pronunciation: "di be-grü-sung", example: "Eine herzliche Begrüßung.", exampleTranslation: "İçten bir selamlaşma." },
+        { word: "die Verabschiedung", meaning: "Vedalaşma", pronunciation: "di fer-ap-şi-dung", example: "Die traurige Verabschiedung.", exampleTranslation: "Hüzünlü vedalaşma." },
+        { word: "förmlich", meaning: "resmi", pronunciation: "förm-lih", example: "Ein förmliches Schreiben.", exampleTranslation: "Resmi/şekli bir yazı." },
+        { word: "locker", meaning: "rahat", pronunciation: "lok-kər", example: "Eine lockere Atmosphäre.", exampleTranslation: "Rahat bir atmosfer." },
+        { word: "angemessen", meaning: "uygun", pronunciation: "an-ge-mes-sın", example: "Kleidung angemessen tragen.", exampleTranslation: "Kıyafetleri uygun bir şekilde giymek." },
+        { word: "unhöflich", meaning: "kaba", pronunciation: "un-höf-lih", example: "Es ist unhöflich zu stören.", exampleTranslation: "Rahatsız etmek kabalıktır." },
+        { word: "vertraut", meaning: "tanıdık/samimi", pronunciation: "fer-traut", example: "Ein vertrautes Gesicht.", exampleTranslation: "Tanıdık/samimi bir yüz." },
+        { word: "fremd", meaning: "yabancı", pronunciation: "fremt", example: "Ein fremder Ort.", exampleTranslation: "Yabancı bir yer." },
+        { word: "offiziell", meaning: "resmi", pronunciation: "of-fi-tsiel", example: "Eine offizielle Ankündigung.", exampleTranslation: "Resmi bir duyuru." },
+        { word: "privat", meaning: "özel", pronunciation: "pri-vat", example: "Ein privates Gespräch.", exampleTranslation: "Özel bir görüşme." }
     ]
 };
 
@@ -576,11 +757,26 @@ const unit588Vocab: GermanUnitVocabulary = {
 const unit589Vocab: GermanUnitVocabulary = {
     unitId: 589, title: "Konjunktionen",
     words: [
-        { word: "entweder", meaning: "ya ...", pronunciation: "ent-ve-der", example: "Entweder heute oder morgen.", exampleTranslation: "Ya bugün ya yarın." },
-        { word: "oder", meaning: "veya / ya da", pronunciation: "o-der", example: "Er oder ich.", exampleTranslation: "O veya ben." },
-        { word: "sowohl", meaning: "hem ...", pronunciation: "zo-vol", example: "Sowohl ich als auch du.", exampleTranslation: "Hem ben hem de sen." },
-        { word: "weder", meaning: "ne ...", pronunciation: "ve-der", example: "Weder Fisch noch Fleisch.", exampleTranslation: "Ne balık ne et." },
-        { word: "nachdem", pronunciation: "nah-dem", meaning: "Sonra", example: "Nachdem ich gelernt habe.", exampleTranslation: "Çalıştıktan sonra." }
+        { word: "die Debatte", meaning: "Tartışma", pronunciation: "di de-bat-tə", example: "Eine hitzige Debatte.", exampleTranslation: "Hararetli bir tartışma." },
+        { word: "die Argumentation", meaning: "Argüman sunma", pronunciation: "di ar-gu-men-ta-tsion", example: "Eine schlüssige Argumentation.", exampleTranslation: "İnandırıcı bir argüman sunma." },
+        { word: "das Pro", meaning: "Lehte", pronunciation: "das pro", example: "Argumente pro und contra.", exampleTranslation: "Lehte ve aleyhte argümanlar." },
+        { word: "das Contra", meaning: "Aleyhte", pronunciation: "das kon-tra", example: "Argumente contra den Plan.", exampleTranslation: "Plana aleyhte argümanlar." },
+        { word: "die Struktur", meaning: "Yapı", pronunciation: "di ştruk-tur", example: "Eine klare Struktur haben.", exampleTranslation: "Açık bir yapıya sahip olmak." },
+        { word: "die Logik", meaning: "Mantık", pronunciation: "di lo-gik", example: "Keine Logik darin finden.", exampleTranslation: "İçinde bir mantık bulamamak." },
+        { word: "die Überzeugungskraft", meaning: "İkna gücü", pronunciation: "di ü-bər-tsoyg-ungs-kraft", example: "Redner mit großer Überzeugungskraft.", exampleTranslation: "Büyük ikna gücüne sahip konuşmacı." },
+        { word: "das Fazit", meaning: "Sonuç/Özet", pronunciation: "das fa-tsit", example: "Ein Fazit ziehen.", exampleTranslation: "Sonuç/özet çıkarmak." },
+        { word: "die Einleitung", meaning: "Giriş", pronunciation: "di ayn-lay-tung", example: "Die Einleitung formulieren.", exampleTranslation: "Giriş kısmını ifade etmek." },
+        { word: "die Thesen", meaning: "Tezler", pronunciation: "die te-zən", example: "Thesen aufstellen.", exampleTranslation: "Tezler kurmak/ortaya atmak." },
+        { word: "der Widerspruch", meaning: "Çelişki/İtiraz", pronunciation: "der vi-dər-şpruh", example: "Ein klarer Widerspruch.", exampleTranslation: "Net bir çelişki/itiraz." },
+        { word: "der Beweis", meaning: "Kanıt", pronunciation: "der be-vays", example: "Einen Beweis erbringen.", exampleTranslation: "Bir kanıt sunmak." },
+        { word: "das Beispiel", meaning: "Örnek", pronunciation: "der bay-şpil", example: "Ein Beispiel nennen.", exampleTranslation: "Bir örnek vermek." },
+        { word: "der Zusammenhang", meaning: "Bağlam", pronunciation: "der tsu-za-mın-hang", example: "Im Zusammenhang verstehen.", exampleTranslation: "Bağlam içinde anlamak." },
+        { word: "der Aspekt", meaning: "Açı/Yön", pronunciation: "der as-pekt", example: "Ein wichtiger Aspekt.", exampleTranslation: "Önemli bir açı/yön." },
+        { word: "die Perspektive", meaning: "Bakış açısı", pronunciation: "di per-şpek-ti-və", example: "Eine neue Perspektive.", exampleTranslation: "Yeni bir bakış açısı." },
+        { word: "analytisch", meaning: "analitik", pronunciation: "a-na-lü-tiş", example: "Analytisch denken.", exampleTranslation: "Analitik düşünmek." },
+        { word: "kritisch", meaning: "eleştirel", pronunciation: "kri-tiş", example: "Kritische Fragen stellen.", exampleTranslation: "Eleştirel sorular sormak." },
+        { word: "sachlich", meaning: "nesnel", pronunciation: "zah-lih", example: "Sachlich diskutieren.", exampleTranslation: "Nesnel/sakin bir şekilde tartışmak." },
+        { word: "redundant", meaning: "gereksiz tekrar", pronunciation: "re-dun-dant", example: "Redundante Informationen vermeiden.", exampleTranslation: "Gereksiz tekrarlanan bilgilerden kaçınmak." }
     ]
 };
 
@@ -588,11 +784,26 @@ const unit589Vocab: GermanUnitVocabulary = {
 const unit590Vocab: GermanUnitVocabulary = {
     unitId: 590, title: "B1 Tekrar",
     words: [
-        { word: "fertig", meaning: "hazır / bitmiş", pronunciation: "fer-tih", example: "Ich bin fast fertig.", exampleTranslation: "Neredeyse bittim / hazırım." },
-        { word: "die Prüfung", meaning: "Sınav", pronunciation: "di prü-fung", example: "Die B1-Prüfung bestehen.", exampleTranslation: "B1 sınavını geçmek." },
-        { word: "das Zertifikat", meaning: "Sertifika", pronunciation: "das tser-ti-fi-kat", example: "Ein wertvolles Zertifikat.", exampleTranslation: "Değerli bir sertifika." },
-        { word: "fließend", meaning: "akıcı", pronunciation: "fli-sınt", example: "Fließend Deutsch sprechen.", exampleTranslation: "Akıcı Almanca konuşmak." },
-        { word: "erreichen", meaning: "ulaşmak", pronunciation: "er-ray-hın", example: "Das Ziel erreichen.", exampleTranslation: "Hedefe ulaşmak." }
+        { word: "die Wiederholung", meaning: "Tekrar", pronunciation: "di vi-dər-ho-lung", example: "Wiederholung ist der Schlüssel.", exampleTranslation: "Tekrar anahtardır." },
+        { word: "die Zusammenfassung", meaning: "Özet", pronunciation: "di tsu-za-mın-fa-sung", example: "Eine kurze Zusammenfassung.", exampleTranslation: "Kısa bir özet." },
+        { word: "der Erfolg", meaning: "Başarı", pronunciation: "der er-folg", example: "Ich wünsche dir Erfolg.", exampleTranslation: "Sana başarılar diliyorum." },
+        { word: "der Fortschritt", meaning: "İlerleme", pronunciation: "der fort-şrit", example: "Fortschritte machen.", exampleTranslation: "İlerlemeler kaydetmek." },
+        { word: "die Prüfungsvorbereitung", meaning: "Sınav hazırlığı", pronunciation: "di prü-fungs-for-be-ray-tung", example: "Intensive Prüfungsvorbereitung.", exampleTranslation: "Yoğun sınav hazırlığı." },
+        { word: "das Wissen", meaning: "Bilgi", pronunciation: "das vis-sın", example: "Sein Wissen erweitern.", exampleTranslation: "Bilgisini genişletmek." },
+        { word: "die Anwendung", meaning: "Uygulama", pronunciation: "di an-ven-dung", example: "Praktische Anwendung.", exampleTranslation: "Pratik uygulama." },
+        { word: "die Meisterschaft", meaning: "Ustalık", pronunciation: "die may-ştər-şaft", example: "Auf dem Weg zur Meisterschaft.", exampleTranslation: "Ustalık yolunda." },
+        { word: "das Zertifikat", meaning: "Sertifika", pronunciation: "das tser-ti-fi-kat", example: "Ein offizielles Zertifikat.", exampleTranslation: "Resmi bir sertifika." },
+        { word: "das Niveau", meaning: "Seviye", pronunciation: "das ni-vo", example: "Das B1-Niveau erreichen.", exampleTranslation: "B1 seviyesine ulaşmak." },
+        { word: "die Kompetenz", meaning: "Yetkinlik", pronunciation: "di kom-pe-tents", example: "Fachliche Kompetenz zeigen.", exampleTranslation: "Mesleki yetkinlik göstermek." },
+        { word: "die Herausforderung", meaning: "Zorluk/Mücadele", pronunciation: "di her-aus-for-de-rung", example: "Eine neue Herausforderung annehmen.", exampleTranslation: "Yeni bir zorluğu/mücadeleyi kabul etmek." },
+        { word: "erreichen", meaning: "ulaşmak", pronunciation: "er-ray-hın", example: "Ziele erreichen.", exampleTranslation: "Hedeflere ulaşmak." },
+        { word: "bestehen", meaning: "başarmak/geçmek", pronunciation: "be-şte-ın", example: "Die Prüfung bestehen.", exampleTranslation: "Sınavı geçmek." },
+        { word: "festigen", meaning: "pekiştirmek", pronunciation: "fes-ti-gən", example: "Kenntnisse festigen.", exampleTranslation: "Bilgileri pekiştirmek." },
+        { word: "verinnerlichen", meaning: "içselleştirmek", pronunciation: "fer-in-nər-li-hın", example: "Regeln verinnerlichen.", exampleTranslation: "Kuralları içselleştirmek." },
+        { word: "intensiv", meaning: "yoğun", pronunciation: "in-ten-sif", example: "Intensiv lernen.", exampleTranslation: "Yoğun bir şekilde çalışmak." },
+        { word: "effektiv", meaning: "etkili", pronunciation: "ef-fek-tif", example: "Effektiv lernen.", exampleTranslation: "Etkili çalışmak." },
+        { word: "nachhaltig", meaning: "sürdürülebilir", pronunciation: "nah-hal-tih", example: "Nachhaltiger Erfolg.", exampleTranslation: "Sürdürülebilir başarı." },
+        { word: "stolz", meaning: "gururlu", pronunciation: "ştolts", example: "Stolz auf dich sein.", exampleTranslation: "Seninle gurur duymak." }
     ]
 };
 

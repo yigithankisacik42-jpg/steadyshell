@@ -25,6 +25,16 @@ export default function LecturePage() {
     );
 }
 
+const getLanguageFlag = (lang?: string): string => {
+    if (!lang) return "🌐";
+    const l = lang.toLowerCase();
+    if (l === "es" || l.includes("ispanyol") || l.includes("span")) return "🇪🇸";
+    if (l === "de" || l.includes("almanc") || l.includes("germ")) return "🇩🇪";
+    if (l === "fr" || l.includes("fransız") || l.includes("frenc")) return "🇫🇷";
+    if (l === "en" || l.includes("ingiliz") || l.includes("engl")) return "🇬🇧";
+    return "🌐";
+};
+
 function LectureContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -231,7 +241,7 @@ function LectureContent() {
                         <div className="space-y-6">
                             <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-6">
                                 <div className="flex items-start gap-4">
-                                    <span className="text-4xl">🇪🇸</span>
+                                    <span className="text-4xl">{getLanguageFlag(lectureContent.language)}</span>
                                     <div>
                                         <p className="text-lg text-amber-800 leading-relaxed">{slide.content}</p>
                                     </div>

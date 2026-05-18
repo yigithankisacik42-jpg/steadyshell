@@ -45,7 +45,7 @@ const topics: { [key: number]: GermanTopic } = {
         ],
         sentences: [
             "Eine geläufige ___.", "Das ist ___ gemeint.", "Kennst du das ___ (atasözü)?", 
-            "Was ist die ___?", "Die ___ ist wichtig.", "Benutze bir ___ (deyim).",
+            "Was ist die ___?", "Die ___ ist wichtig.", "Benutze eine ___ (deyim).",
             "Was ist die ___ (köken)?", "Ein ___ (yaygın) Ausdruck.", "Das ist ___ (mecazi).", "Wie ___st du das?"
         ]
     },
@@ -73,7 +73,7 @@ const topics: { [key: number]: GermanTopic } = {
         ],
         sentences: [
             "Eine offizielle ___.", "Die richtige ___.", "Mein ___ ist folgendes.", 
-            "Sehr ___.", "Schreib bor ___ (şikayet).", "Wo ist der ___ (ek)?",
+            "Sehr ___.", "Schreib eine ___ (şikayet).", "Wo ist der ___ (ek)?",
             "Vergiss die ___ (imza) nicht.", "Wer ist der ___ (alıcı)?", "Bitte ___ (ilet) die Mail.", "Wie ___st sen?"
         ]
     },
@@ -100,9 +100,9 @@ const topics: { [key: number]: GermanTopic } = {
             ["hartnäckig", "inatçı"], ["nachgiebig", "esnek/boyun eğen"], ["sachlich", "nesnel"], ["konstruktiv", "yapıcı"]
         ],
         sentences: [
-            "Führe die ___.", "Finden wir bor ___.", "Was ist senin ___?", 
-            "Ein starkes ___.", "Erzielen wir bor ___ (anlaşma).", "Was ist senin ___ (talep)?",
-            "Mach bir ___ (ödün).", "Sei ___ (yapıcı).", "Kein ___ (karşı teklif).", "Schreib das ___ (tutanak)."
+            "Führe die ___.", "Finden wir einen ___.", "Was ist senin ___?", 
+            "Ein starkes ___.", "Erzielen wir eine ___ (anlaşma).", "Was ist senin ___ (talep)?",
+            "Mach ein ___ (ödün).", "Sei ___ (yapıcı).", "Kein ___ (karşı teklif).", "Schreib das ___ (tutanak)."
         ]
     },
     598: { 
@@ -114,14 +114,14 @@ const topics: { [key: number]: GermanTopic } = {
             ["legal", "yasal"], ["illegal", "yasadışı"], ["gerecht", "adil"], ["strafbar", "cezai"]
         ],
         sentences: [
-            "Das steht im ___.", "Ich habe bor ___ (hak).", "Gehen wir vor ___.", 
+            "Das steht im ___.", "Ich habe ein ___ (hak).", "Gehen wir vor ___.", 
             "Unterschreib den ___.", "Ein gerechtes ___.", "Wo ist der ___ (tanık)?",
             "Hast du einen ___ (kanıt)?", "Das ist ___ (yasadışı).", "Meine ___ (yükümlülük) ist...", "Wer ist der ___ (avukat)?"
         ]
     },
     599: { 
         words: [
-            ["Diagnosis", "Teşhis"], ["Therapie", "Terapi"], ["Symptom", "Semptom"], ["Anatomie", "Anatomi"], 
+            ["Diagnose", "Teşhis"], ["Therapie", "Terapi"], ["Symptom", "Semptom"], ["Anatomie", "Anatomi"], 
             ["Chirurgie", "Cerrahi"], ["Prävention", "Önleme"], ["Patient", "Hasta"], ["Medizin", "Tıp"],
             ["Heilung", "İyileşme"], ["Vorsorge", "Önlem/Kontrol"], ["Impfung", "Aşı"], ["Infektion", "Enfeksiyon"],
             ["Krankenhaus", "Hastane"], ["Pflege", "Bakım"], ["Rehabilitation", "Rehabilitasyon"], ["Nebenwirkung", "Yan etki"],
@@ -156,7 +156,7 @@ const topics: { [key: number]: GermanTopic } = {
             ["klassisch", "klasik"], ["modern", "modern"], ["ironisch", "ironik"], ["tiefgründig", "derinlemesine"]
         ],
         sentences: [
-            "Eine Analyse der ___.", "Welche ___ ist das?", "Schreib bir ___ (karakterizasyon).", 
+            "Eine Analyse der ___.", "Welche ___ ist das?", "Schreib eine ___ (karakterizasyon).", 
             "Was ist das ___ (motif)?", "Eine tiefgründige ___ (yorum).", "Wer ist der ___ (kahraman)?",
             "Eine schöne ___ (metafor).", "Der ___ (anlatıcı) ist...", "Das ___ (ölçü) stimmt.", "Ein ___er (modern) Roman."
         ]
@@ -185,7 +185,7 @@ const topics: { [key: number]: GermanTopic } = {
         ],
         sentences: [
             "Verbessere dein ___.", "Nenne die ___.", "Richtig ___ (alıntıla).", 
-            "Stelle bir ___ (hipotez).", "Wissenschaftliche ___.", "Eine gute ___ (araştırma).",
+            "Stelle eine ___ (hipotez).", "Wissenschaftliche ___.", "Eine gute ___ (araştırma).",
             "Wo ist der ___ (kanıt)?", "Das ist ___ (makul).", "Ein ___ (temelli) Wissen.", "Achte auf ___ (nesnellik)."
         ]
     },
@@ -200,7 +200,7 @@ const topics: { [key: number]: GermanTopic } = {
         sentences: [
             "Fördere senin ___.", "Benutze die ___.", "Behalte senin ___ (kuşku).", 
             "Ein kritischer ___.", "Brauchen wir ___ (nesnellik)?", "Hinterfrage alles.",
-            "Eine yeni ___ (farkındalık).", "Sei ___ (eleştirel).", "Was ist senin ___ (yargı)?", "Ohne ___ (önyargı)."
+            "Eine neue ___ (farkındalık).", "Sei ___ (eleştirel).", "Was ist senin ___ (yargı)?", "Ohne ___ (önyargı)."
         ]
     },
     605: { 
@@ -212,7 +212,7 @@ const topics: { [key: number]: GermanTopic } = {
             ["diplomatisch", "diplomatik"], ["neutral", "tarafsız"], ["stabil", "istikrarlı"], ["gerecht", "adil"]
         ],
         sentences: [
-            "Internationale ___.", "Löse den ___ (çatışma).", "Schließe bir ___ (ittifak).", 
+            "Internationale ___.", "Löse den ___ (çatışma).", "Schließe ein ___ (ittifak).", 
             "Strebe nach ___ (barış).", "Bewahre die ___ (egemenlik).", "Ein neues ___ (anlaşma).",
             "Was sind ___ (insan hakları)?", "Sei ___ (tarafsız).", "Ein ___er (adil) Prozess.", "Das ___ (pakt) hält."
         ]
@@ -241,7 +241,7 @@ const topics: { [key: number]: GermanTopic } = {
         ],
         sentences: [
             "Modernes ___.", "Fördere die ___ (liderlik).", "Gelebte ___.", 
-            "Steigere die ___ (verimlilik).", "Ein großer ___.", "Haben Sie bir ___ (vizyon)?",
+            "Steigere die ___ (verimlilik).", "Ein großer ___.", "Haben Sie eine ___ (vizyon)?",
             "Gutes ___ (geribildirim).", "Sei ___ (esnek).", "Arbeite ___ (üretken).", "Keine ___ (hiyerarşi)."
         ]
     },
@@ -263,7 +263,7 @@ const topics: { [key: number]: GermanTopic } = {
         words: [
             ["Kultur", "Kültür"], ["Austausch", "Alışveriş/Değişim"], ["Sensibilität", "Duyarlılık"], ["Stereotyp", "Stereotip"], 
             ["Vorurteil", "Önyargı"], ["Verständnis", "Anlayış"], ["Toleranz", "Hoşgörü"], ["Integration", "Entegrasyon"],
-            ["Identität", "Kimlik"], ["Vielfalt", "Çeşitlilik"], ["Gleichberechtigung", "Eşitlik"], ["Empatie", "Empati"],
+            ["Identität", "Kimlik"], ["Vielfalt", "Çeşitlilik"], ["Gleichberechtigung", "Eşitlik"], ["Empathie", "Empati"],
             ["Zugehörigkeit", "Ait olma"], ["Fremdheit", "Yabancılık"], ["Bereicherung", "Zenginleşme"], ["Dialog", "Diyalog"],
             ["interkulturell", "kültürlerarası"], ["offen", "açık"], ["respektvoll", "saygılı"], ["vorurteilsfrei", "önyargısız"]
         ],
@@ -310,7 +310,7 @@ const topics: { [key: number]: GermanTopic } = {
             ["fließend", "akıcı"], ["geklärt", "açıklanmış"], ["versteckt", "gizli"], ["bekannt", "tanınan"]
         ],
         sentences: [
-            "Die ___ne (gülen) Sonne.", "Der ___ne (okunmuş) Brief.", "Das ___de (koşan) Kind.", 
+            "Die ___nde (gülen) Sonne.", "Der ___ne (okunmuş) Brief.", "Das ___nde (koşan) Kind.", 
             "Ein ___er (şık) Stil.", "Ganz ___ (kompakt).", "Eine ___ (gizli) Nachricht.",
             "Sprichst du ___ (akıcı)?", "Ein ___er (tanınan) Mann.", "Das ist ___ (açıklanmış).", "Achte auf die ___ (ek)."
         ]
@@ -340,7 +340,7 @@ const topics: { [key: number]: GermanTopic } = {
         sentences: [
             "Das Fenster ist ___ (kapatılmış).", "Es wird ___ (inşa ediliyor).", "Das lässt sich ___ (yapılır).", 
             "Man kann es ___.", "Die Form ist ___.", "Es ___ (alır) viel Aufmerksamkeit.",
-            "Ist das ___ (mümkün)?", "Sehr ___ (tavsiye edilen).", "Es ___ (halledildi).", "Wer ___ (alır) den Preis?"
+            "Ist das ___ (mümkün)?", "Sehr ___ (tavsiye edilen).", "Es ist ___ (halledildi).", "Wer ___ (alır) den Preis?"
         ]
     },
     615: { 
@@ -366,8 +366,8 @@ const topics: { [key: number]: GermanTopic } = {
             ["dialektisch", "diyalektik"], ["logisch", "mantıklı"], ["stichhaltig", "sağlam/geçerli"], ["überzeugend", "ikna edici"]
         ],
         sentences: [
-            "Schreib bor ___.", "Was ist senin ___ (pozisyon)?", "Gib bor ___ (gerekçe).", 
-            "Nenne ein ___ (kanıt).", "Zieh bir ___ (sonuç).", "Was ist senin ___ (tez)?",
+            "Schreib eine ___ (tartışma yazısı).", "Was ist senin ___ (pozisyon)?", "Gib eine ___ (gerekçe).", 
+            "Nenne ein ___ (kanıt).", "Zieh ein ___ (sonuç).", "Was ist senin ___ (tez)?",
             "Ein ___ (sağlam) Argument.", "Sei ___ (ikna edici).", "Kein ___ (çelişki).", "Ein guter ___ (bakış açısı)."
         ]
     },
@@ -423,8 +423,8 @@ const topics: { [key: number]: GermanTopic } = {
         ],
         sentences: [
             "Herzlichen Glückwunsch zum ___!", "Du hast das ___ (seviye) erreicht.", "Viel ___ (başarı) in der ___!", 
-            "Zeig dein ___ (bilgi).", "Die ___ (gelecek) beginnt şimdi.", "Erreiche dein ___ (hedef).",
-            "Du ___ (hakimsin) die Sprache.", "Eine ___ (mükemmel) Arbeit.", "Sei ___ (hakim).", "Was ist die ___ (zorluk)?"
+            "Zeig dein ___ (bilgi).", "Die ___ (gelecek) beginnt jetzt.", "Erreiche dein ___ (hedef).",
+            "Du ___st (hakimsin) die Sprache.", "Eine ___ (mükemmel) Arbeit.", "Sei ___ (hakim).", "Was ist die ___ (zorluk)?"
         ]
     }
 };

@@ -11,6 +11,7 @@ import { getEnA1ReadingForUnit } from './readings-en-a1';
 import { getReadingForUnit as getFrenchA1ReadingForUnit } from './readings-fr-a1';
 import { getFrenchA2ReadingForUnit } from './readings-fr-a2';
 import { getFrB1ReadingForUnit } from './readings-fr-b1';
+import { getFrB2ReadingForUnit } from './readings-fr-b2';
 import { getEnglishB2ReadingForUnit } from './readings-en-b2';
 import { getEnglishB1ReadingForUnit } from './readings-en-b1';
 import { getGermanA1ReadingForUnit } from './readings-de-a1';
@@ -535,6 +536,12 @@ export function getReadingForUnit(unitId: number): UnitReading {
     if (unitId >= 361 && unitId <= 390) {
         const frB1Reading = getFrB1ReadingForUnit(unitId);
         return frB1Reading || unit1Reading;
+    }
+
+    // French B2 seviyesi (391-420)
+    if (unitId >= 391 && unitId <= 420) {
+        const frB2Reading = getFrB2ReadingForUnit(unitId);
+        return frB2Reading || unit1Reading;
     }
 
     // English B2 seviyesi (191-220)
