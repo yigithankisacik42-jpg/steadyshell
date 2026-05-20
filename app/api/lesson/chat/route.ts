@@ -34,8 +34,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'API key not configured' }, { status: 500 });
     }
 
-    const { messages, unitTitle, lessonSummary, language, level } = await req.json();
+    const { messages, unitTitle, lessonSummary, language, level, moduleName } = await req.json();
     const langName = LANG_NAMES[language] || language || 'Spanish';
+
+    const isOkuma = moduleName === 'Okuma' || moduleName === 'Reading';
 
     const systemPrompt = `You are "Profesor Shell" 🐢, a master language teacher in the app "Steady Shell".
 You don't just teach — you INSPIRE. You make complex things simple, and simple things fascinating.
@@ -44,9 +46,18 @@ You don't just teach — you INSPIRE. You make complex things simple, and simple
 📚 Topic: "${unitTitle}"
 🌐 Language: ${langName}
 📊 Level: ${level || 'A1'} (CEFR)
+${isOkuma ? '📖 Module: OKUMA (Reading/Text Analysis Mode)' : ''}
 
 ═══ YOUR TEXTBOOK (Lesson Content) ═══
 ${lessonSummary}
+
+${isOkuma ? `═══ OKUMA MODÜLÜ ÖZEL TALİMATLARI (CRITICAL) ═══
+- Bu bir OKUMA (Reading) dersidir. Yukarıda verilen metni (metin "YOUR TEXTBOOK" kısmındadır) kelime kelime, gramer gramer ve ayrıntılı bir biçimde inceliyorsunuz.
+- Göreviniz öğrenciye metindeki kritik cümle yapılarını, zaman çekimlerini, edatları ve bağlaçları derinlemesine açıklamak; metinde geçen önemli kelimeleri (Vocabulary) ve anlamlarını öğretmektir.
+- Gramer kurallarını açıklarken MUTLAKA en az 2-3 adet açıklayıcı ÖRNEK cümle verin ve bu örnekleri Türkçe anlamlarıyla birlikte sunun.
+- Metindeki önemli kelimelerin ve ifadelerin kullanımlarını, alternatiflerini ve telaffuz ipuçlarını Türkçe olarak örnekleyerek öğretin.
+- Öğrencinin okuduğunu anlama becerisini artırmak için sorular sorun ve metin üzerinden etkileşim kurun.
+- Açıklamalarınızı son derece zengin, eğitici ve örneklerle dolu tutun.` : ''}
 
 ═══ PEDAGOGICAL PRINCIPLES ═══
 
@@ -64,7 +75,7 @@ ${lessonSummary}
    Message 2: Give 2 more examples + ask the student to try
    Message 3: Correct/praise → move to next concept
 
-4. 📏 LENGTH: 3-5 sentences max. Concise. Clear. No walls of text.
+4. 📏 LENGTH: ${isOkuma ? '6-10 sentences max. Provide detailed grammar and vocabulary analysis with examples.' : '3-5 sentences max. Concise. Clear. No walls of text.'}
 
 5. 💡 TRANSLATIONS (CRITICAL):
    - ALWAYS translate to NATURAL Turkish, not word-by-word:
@@ -114,7 +125,7 @@ REMEMBER: Turkish teacher, ${langName} examples. Perfect Turkish spelling and pu
           ...windowedMessages
         ],
         temperature: 0.65,
-        max_tokens: 350,
+        max_tokens: isOkuma ? 650 : 350,
       })
     });
 

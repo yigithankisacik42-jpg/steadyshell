@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { ArrowLeft, Bot, User, BookOpenCheck, Volume2, Trophy, Sparkles, Send, Mic, MicOff } from "lucide-react";
+import { ArrowLeft, Bot, User, BookOpenCheck, Trophy, Sparkles, Send, Mic, MicOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -243,7 +243,8 @@ export function AiTutorChat({
                     unitTitle: unitTitle,
                     lessonSummary: contextSummary,
                     language: normalizeLangForApi(),
-                    level: level
+                    level: level,
+                    moduleName: moduleName
                 })
             });
             const data = await response.json();
@@ -252,7 +253,7 @@ export function AiTutorChat({
                 typeMessage(data.message, () => {
                     setAiMessages([{ role: 'assistant', content: data.message }]);
                     setDisplayedText('');
-                    speakText(data.message, getLangCode()); // Auto play TTS
+                    // Auto play TTS disabled by user request
                 });
             } else {
                 setAiMessages([{ role: 'assistant', content: '⚠️ AI bağlantı hatası: ' + (data.error || 'Bilinmeyen hata') }]);
@@ -283,7 +284,8 @@ export function AiTutorChat({
                     unitTitle: unitTitle,
                     lessonSummary: contextSummary,
                     language: normalizeLangForApi(),
-                    level: level
+                    level: level,
+                    moduleName: moduleName
                 })
             });
             const data = await response.json();
@@ -292,7 +294,7 @@ export function AiTutorChat({
                 typeMessage(data.message, () => {
                     setAiMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
                     setDisplayedText('');
-                    speakText(data.message, getLangCode()); // Auto play TTS
+                    // Auto play TTS disabled by user request
                 });
             }
         } catch {
@@ -414,14 +416,6 @@ export function AiTutorChat({
                                 )}>
                                     <p className="whitespace-pre-wrap leading-relaxed font-medium text-[15px]">{msg.content}</p>
                                 </div>
-                                {msg.role === 'assistant' && (
-                                    <button 
-                                        onClick={() => speakText(msg.content, getLangCode())}
-                                        className="self-start flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-bold text-white/30 hover:text-emerald-400 hover:bg-white/5 transition-all"
-                                    >
-                                        <Volume2 className="w-3 h-3" /> Sesli Dinle
-                                    </button>
-                                )}
                             </div>
                         </div>
                     ))}
