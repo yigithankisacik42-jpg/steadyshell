@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { APP_CONFIG, APP_INFO } from "@/lib/config";
 import { ParticlesBackground } from "@/components/particles-background";
 import { LandingHeroEffects } from "@/components/landing-hero-effects";
+import { HeroMascot3D } from "@/components/hero-mascot-3d";
 
 export default function Home() {
     const isEarlyAccess = APP_CONFIG.isEarlyAccess;
@@ -155,26 +156,8 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Hero Graphic */}
-                    <div
-                        className="flex-1 relative w-full flex items-center justify-center tilt-element"
-                        data-tilt-type="hero-image"
-                        style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-tr from-violet-100/50 to-transparent rounded-full blur-3xl -z-10 animate-pulse" />
-                        <Image
-                            src="/hero_sphere.png"
-                            alt="SteadyShell - 3D Dil Öğrenme Deneyimi"
-                            width={500}
-                            height={500}
-                            className="w-[70%] sm:w-[60%] md:w-full max-w-[500px] object-contain drop-shadow-[0_40px_80px_rgba(124,58,237,0.25)]"
-                            style={{
-                                animation: "float-rotate 8s ease-in-out infinite",
-                                mixBlendMode: "multiply",
-                            }}
-                            priority
-                        />
-                    </div>
+                    {/* Hero Graphic - Interactive 3D Shelldon Mascot */}
+                    <HeroMascot3D />
                 </section>
 
                 {/* === FEATURES / BENTO GRID === */}
