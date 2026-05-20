@@ -28,6 +28,7 @@ export default function StoryPage() {
 function StoryContent() {
     const searchParams = useSearchParams();
     const unitId = parseInt(searchParams.get("unitId") || "0");
+    const [answers, setAnswers] = useState<Record<number, { selectedId: string; status: "correct" | "wrong" }>>({});
 
     const { progress, currentLanguage } = useLanguage();
     const storyMeta = getStoryMetaForUnit(unitId);
@@ -73,7 +74,6 @@ function StoryContent() {
     }
 
     const { segment, index, total } = storyMeta;
-    const [answers, setAnswers] = useState<Record<number, { selectedId: string; status: "correct" | "wrong" }>>({});
 
     const handleAnswer = (interactionIndex: number, optionId: string, isCorrect: boolean) => {
         setAnswers(prev => ({

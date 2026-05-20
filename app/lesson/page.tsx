@@ -478,7 +478,7 @@ function LessonContent() {
               <p className="text-xs text-slate-400 text-center mt-1">{unitTitle}</p>
             </div>
             <div className="flex items-center gap-3">
-                {(unitId === 1 || (unitId >= 501 && unitId <= 530)) && (
+                {(unitId > 0) && (
                     <button
                         onClick={() => setIsAiMode(true)}
                         className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors shadow-sm border border-indigo-200"

@@ -116,6 +116,7 @@ export const frA1Videos: UnitVideo[] = [
     { unitId: 327, youtubeId: "qCGBxEfd_p0", title: "Karşılaştırma", level: "A1" },
     { unitId: 328, youtubeId: "ludiYRNkOp4", title: "Hayvanlar", level: "A1" },
     { unitId: 329, youtubeId: "ludiYRNkOp4", title: "Teknoloji", level: "A1" },
+    { unitId: 330, youtubeId: "", title: "A1 Genel Tekrar", level: "A1" },
 ];
 
 // Fransızca A2 Videoları (Ünite 331-360)

@@ -201,7 +201,7 @@ function VocabularyContent() {
                         <Progress value={progress} className="h-3 flex-1 rounded-full bg-slate-100" />
                         <div className="flex items-center gap-3">
                             <span className="text-sm font-bold text-slate-500">{currentIndex + 1}/{vocabContent.words.length}</span>
-                            {(unitId === 1 || (unitId >= 501 && unitId <= 530)) && (
+                            {(unitId > 0) && (
                                 <button
                                     onClick={() => setIsAiMode(true)}
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 transition-colors shadow-sm border border-emerald-200"

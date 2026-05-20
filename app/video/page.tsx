@@ -19,7 +19,7 @@ function VideoContent() {
         if (video) {
             markLessonCompleted("VIDEO");
         }
-    }, [video]);
+    }, [video, markLessonCompleted]);
 
     if (!video) {
         return (

@@ -34,7 +34,7 @@ export async function GET() {
         // Determine current user's ID
         const currentUserId = session?.user?.id;
 
-        let leaderboardData = users.map((u, index) => ({
+        const leaderboardData = users.map((u, index) => ({
             rank: index + 1,
             name: u.name || "Gezgin",
             avatar: u.avatar || "👤",

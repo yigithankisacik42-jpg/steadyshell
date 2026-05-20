@@ -178,7 +178,7 @@ function ReadingContent() {
                     <p className="text-xs text-slate-400 mt-1">{readingContent.title}</p>
                 </div>
                 <div className="flex items-center gap-3">
-                    {(unitId === 1 || (unitId >= 501 && unitId <= 530)) && (
+                    {(unitId > 0) && (
                         <button
                             onClick={() => setIsAiMode(true)}
                             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700 hover:bg-emerald-200 transition-colors shadow-sm border border-emerald-200"
