@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -52,6 +53,7 @@ async function getCoachResponse(
 }
 
 export function ShelldonCoach() {
+    const pathname = usePathname();
     const { user } = useUserProgress();
     const { currentLanguage, currentLevel } = useLanguage();
     const { isVisible: bubbleVisible, message: bubbleMessage, mood: bubbleMood, hideShelldon } = useShelldon();
@@ -62,6 +64,10 @@ export function ShelldonCoach() {
     const [isLoading, setIsLoading] = useState(false);
     const [hasUnread, setHasUnread] = useState(false);
     const [showPulse, setShowPulse] = useState(true);
+
+    // Hide coach on public pages (landing, login, register)
+    const hiddenPages = ['/', '/login', '/register'];
+    const isHidden = hiddenPages.includes(pathname);
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -177,6 +183,9 @@ export function ShelldonCoach() {
     ];
 
     const stats = loadUserStats();
+
+    // Don't render on public pages
+    if (isHidden) return null;
 
     return (
         <>
