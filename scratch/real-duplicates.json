@@ -1,0 +1,2701 @@
+[
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a1-part2.ts",
+    "quizName": "unit307Quiz1, unit307Quiz3",
+    "questionText": "TRANSLATE hint: \"Avrupa\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      306,
+      345
+    ],
+    "details": [
+      {
+        "quizName": "unit307Quiz1",
+        "id": 20,
+        "correctAnswer": "Il y a beaucoup de pays en Europe",
+        "line": 306
+      },
+      {
+        "quizName": "unit307Quiz3",
+        "id": 13,
+        "correctAnswer": "Je veux voyager en Europe",
+        "line": 345
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a1-part2.ts",
+    "quizName": "unit307Quiz2, unit307Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Elle est ___.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      319,
+      369
+    ],
+    "details": [
+      {
+        "quizName": "unit307Quiz2",
+        "id": 10,
+        "correctOptionText": "française",
+        "line": 319
+      },
+      {
+        "quizName": "unit307Quiz4",
+        "id": 14,
+        "correctOptionText": "grecque",
+        "line": 369
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a1-part3.ts",
+    "quizName": "unit308Quiz2, unit308Quiz3",
+    "questionText": "FILL_BLANK sentence: \"Elle travaille comme ___.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      38,
+      65
+    ],
+    "details": [
+      {
+        "quizName": "unit308Quiz2",
+        "id": 10,
+        "correctOptionText": "serveuse",
+        "line": 38
+      },
+      {
+        "quizName": "unit308Quiz3",
+        "id": 14,
+        "correctOptionText": "journaliste",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a1.ts",
+    "quizName": "unit301Quiz1, unit301Quiz4",
+    "questionText": "Doldur:\", sentence: \"Comment ___ tu?\", options: [{ id: \"a\", text: \"vas\", correct: true }, { id: \"b\", text: \"allez",
+    "answer": "vas",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      41,
+      110
+    ],
+    "details": [
+      {
+        "quizName": "unit301Quiz1",
+        "id": 16,
+        "type": "FILL_BLANK",
+        "line": 41
+      },
+      {
+        "quizName": "unit301Quiz4",
+        "id": 16,
+        "type": "FILL_BLANK",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a1.ts",
+    "quizName": "unit301Quiz1, unit301Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Comment ___ tu?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      41,
+      110
+    ],
+    "details": [
+      {
+        "quizName": "unit301Quiz1",
+        "id": 16,
+        "correctOptionText": "vas",
+        "line": 41
+      },
+      {
+        "quizName": "unit301Quiz4",
+        "id": 16,
+        "correctOptionText": "vas",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a1.ts",
+    "quizName": "unit301Quiz3, unit302Quiz2",
+    "questionText": "LISTENING audioText: \"Je ne comprends pas\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      82,
+      145
+    ],
+    "details": [
+      {
+        "quizName": "unit301Quiz3",
+        "id": 11,
+        "correctOptionText": "Anlamıyorum",
+        "line": 82
+      },
+      {
+        "quizName": "unit302Quiz2",
+        "id": 5,
+        "correctOptionText": "Anlamıyorum",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_IN_QUIZ",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit354Quiz1",
+    "questionText": "FILL_BLANK sentence: \"Au ___ de la rue.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2480,
+      2481
+    ],
+    "details": [
+      {
+        "id": 12,
+        "correctOptionText": "coin",
+        "line": 2480
+      },
+      {
+        "id": 13,
+        "correctOptionText": "bout",
+        "line": 2481
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit331Quiz1, unit331Quiz4",
+    "questionText": "Çevir:\", hint: \"Çok eğlendik\", correctAnswer: \"Nous nous sommes bien amusés",
+    "answer": "Nous nous sommes bien amusés",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      22,
+      104
+    ],
+    "details": [
+      {
+        "quizName": "unit331Quiz1",
+        "id": 11,
+        "type": "TRANSLATE",
+        "line": 22
+      },
+      {
+        "quizName": "unit331Quiz4",
+        "id": 9,
+        "type": "TRANSLATE",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit336Quiz1, unit339Quiz4",
+    "questionText": "'Le petit-déjeuner' ne demek?\", options: [{ id: \"a\", text: \"Kahvaltı\", correct: true }, { id: \"b\", text: \"Öğle yemeği\", correct: false }, { id: \"c\", text: \"Akşam yemeği\", correct: false }, { id: \"d\", text: \"Ara öğün",
+    "answer": "Kahvaltı",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      576,
+      991
+    ],
+    "details": [
+      {
+        "quizName": "unit336Quiz1",
+        "id": 7,
+        "type": "SELECT",
+        "line": 576
+      },
+      {
+        "quizName": "unit339Quiz4",
+        "id": 1,
+        "type": "SELECT",
+        "line": 991
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit336Quiz4, unit360Quiz2",
+    "questionText": "Doldur:\", sentence: \"C'est trop ___.\", options: [{ id: \"a\", text: \"cher\", correct: true }, { id: \"b\", text: \"chère",
+    "answer": "cher",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      658,
+      3157
+    ],
+    "details": [
+      {
+        "quizName": "unit336Quiz4",
+        "id": 4,
+        "type": "FILL_BLANK",
+        "line": 658
+      },
+      {
+        "quizName": "unit360Quiz2",
+        "id": 12,
+        "type": "FILL_BLANK",
+        "line": 3157
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit339Quiz1, unit360Quiz2",
+    "questionText": "Çevir:\", hint: \"Günün yemeği nedir?\", correctAnswer: \"Quel est le plat du jour?",
+    "answer": "Quel est le plat du jour?",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      918,
+      3155
+    ],
+    "details": [
+      {
+        "quizName": "unit339Quiz1",
+        "id": 10,
+        "type": "TRANSLATE",
+        "line": 918
+      },
+      {
+        "quizName": "unit360Quiz2",
+        "id": 10,
+        "type": "TRANSLATE",
+        "line": 3155
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit340Quiz1, unit340Quiz4",
+    "questionText": "Doldur:\", sentence: \"Ne ___ pas le four !\", options: [{ id: \"a\", text: \"touche\", correct: true }, { id: \"b\", text: \"touchez",
+    "answer": "touche",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1039,
+      1115
+    ],
+    "details": [
+      {
+        "quizName": "unit340Quiz1",
+        "id": 17,
+        "type": "FILL_BLANK",
+        "line": 1039
+      },
+      {
+        "quizName": "unit340Quiz4",
+        "id": 11,
+        "type": "FILL_BLANK",
+        "line": 1115
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit341Quiz4, unit360Quiz2",
+    "questionText": "Çevir:\", hint: \"İndirim var mı?\", correctAnswer: \"Est-ce qu'il y a une réduction?",
+    "answer": "Est-ce qu",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1223,
+      3160
+    ],
+    "details": [
+      {
+        "quizName": "unit341Quiz4",
+        "id": 17,
+        "type": "TRANSLATE",
+        "line": 1223
+      },
+      {
+        "quizName": "unit360Quiz2",
+        "id": 15,
+        "type": "TRANSLATE",
+        "line": 3160
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit349Quiz2, unit360Quiz4",
+    "questionText": "Çevir:\", hint: \"Oraya gitmek istiyorum.\", correctAnswer: \"Je veux y aller.",
+    "answer": "Je veux y aller.",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1960,
+      3219
+    ],
+    "details": [
+      {
+        "quizName": "unit349Quiz2",
+        "id": 16,
+        "type": "TRANSLATE",
+        "line": 1960
+      },
+      {
+        "quizName": "unit360Quiz4",
+        "id": 16,
+        "type": "TRANSLATE",
+        "line": 3219
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit349Quiz3, unit360Quiz4",
+    "questionText": "Çevir:\", hint: \"Ondan biraz almak istiyorum.\", correctAnswer: \"Je veux en prendre un peu.",
+    "answer": "Je veux en prendre un peu.",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1990,
+      3220
+    ],
+    "details": [
+      {
+        "quizName": "unit349Quiz3",
+        "id": 17,
+        "type": "TRANSLATE",
+        "line": 1990
+      },
+      {
+        "quizName": "unit360Quiz4",
+        "id": 17,
+        "type": "TRANSLATE",
+        "line": 3220
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit350Quiz1, unit350Quiz4",
+    "questionText": "Çevir:\", hint: \"Metronun önünde buluşuyoruz.\", correctAnswer: \"On se retrouve devant le métro.",
+    "answer": "On se retrouve devant le métro.",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2047,
+      2125
+    ],
+    "details": [
+      {
+        "quizName": "unit350Quiz1",
+        "id": 16,
+        "type": "TRANSLATE",
+        "line": 2047
+      },
+      {
+        "quizName": "unit350Quiz4",
+        "id": 9,
+        "type": "TRANSLATE",
+        "line": 2125
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit352Quiz2, unit352Quiz4",
+    "questionText": "Çevir:\", hint: \"Nerede buluşuyoruz?\", correctAnswer: \"On se retrouve où",
+    "answer": "On se retrouve où",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2300,
+      2352
+    ],
+    "details": [
+      {
+        "quizName": "unit352Quiz2",
+        "id": 20,
+        "type": "TRANSLATE",
+        "line": 2300
+      },
+      {
+        "quizName": "unit352Quiz4",
+        "id": 18,
+        "type": "TRANSLATE",
+        "line": 2352
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit353Quiz4, unit357Quiz4",
+    "questionText": "'D'accord' ne demek?\", options: [{ id: \"a\", text: \"Hayır\", correct: false }, { id: \"b\", text: \"Tamam\", correct: true }, { id: \"c\", text: \"Belki\", correct: false }, { id: \"d\", text: \"Bilmiyorum",
+    "answer": "Tamam",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2444,
+      2880
+    ],
+    "details": [
+      {
+        "quizName": "unit353Quiz4",
+        "id": 4,
+        "type": "SELECT",
+        "line": 2444
+      },
+      {
+        "quizName": "unit357Quiz4",
+        "id": 8,
+        "type": "SELECT",
+        "line": 2880
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit353Quiz4, unit354Quiz4",
+    "questionText": "Doldur:\", sentence: \"Je vous en ___.\", options: [{ id: \"a\", text: \"prie\", correct: true }, { id: \"b\", text: \"merci",
+    "answer": "prie",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2455,
+      2563
+    ],
+    "details": [
+      {
+        "quizName": "unit353Quiz4",
+        "id": 14,
+        "type": "FILL_BLANK",
+        "line": 2455
+      },
+      {
+        "quizName": "unit354Quiz4",
+        "id": 14,
+        "type": "FILL_BLANK",
+        "line": 2563
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit353Quiz4, unit354Quiz4",
+    "questionText": "Çevir:\", hint: \"Rica ederim\", correctAnswer: \"Je vous en prie",
+    "answer": "Je vous en prie",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2462,
+      2570
+    ],
+    "details": [
+      {
+        "quizName": "unit353Quiz4",
+        "id": 20,
+        "type": "TRANSLATE",
+        "line": 2462
+      },
+      {
+        "quizName": "unit354Quiz4",
+        "id": 20,
+        "type": "TRANSLATE",
+        "line": 2570
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit354Quiz3, unit355Quiz3",
+    "questionText": "Çevir:\", hint: \"Buradan uzak mı?\", correctAnswer: \"C'est loin d'ici?",
+    "answer": "C",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2540,
+      2649
+    ],
+    "details": [
+      {
+        "quizName": "unit354Quiz3",
+        "id": 17,
+        "type": "TRANSLATE",
+        "line": 2540
+      },
+      {
+        "quizName": "unit355Quiz3",
+        "id": 18,
+        "type": "TRANSLATE",
+        "line": 2649
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit354Quiz3, unit355Quiz4",
+    "questionText": "Çevir:\", hint: \"Yürüyerek 10 dakika\", correctAnswer: \"À 10 minutes à pied",
+    "answer": "À 10 minutes à pied",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2541,
+      2674
+    ],
+    "details": [
+      {
+        "quizName": "unit354Quiz3",
+        "id": 18,
+        "type": "TRANSLATE",
+        "line": 2541
+      },
+      {
+        "quizName": "unit355Quiz4",
+        "id": 16,
+        "type": "TRANSLATE",
+        "line": 2674
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit354Quiz3, unit355Quiz3",
+    "questionText": "Çevir:\", hint: \"Müzenin yanında\", correctAnswer: \"À côté du musée",
+    "answer": "À côté du musée",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2543,
+      2647
+    ],
+    "details": [
+      {
+        "quizName": "unit354Quiz3",
+        "id": 20,
+        "type": "TRANSLATE",
+        "line": 2543
+      },
+      {
+        "quizName": "unit355Quiz3",
+        "id": 16,
+        "type": "TRANSLATE",
+        "line": 2647
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit356Quiz1, unit356Quiz3",
+    "questionText": "Çevir:\", hint: \"Nezaket çok önemli\", correctAnswer: \"La politesse est très importante",
+    "answer": "La politesse est très importante",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2702,
+      2756
+    ],
+    "details": [
+      {
+        "quizName": "unit356Quiz1",
+        "id": 17,
+        "type": "TRANSLATE",
+        "line": 2702
+      },
+      {
+        "quizName": "unit356Quiz3",
+        "id": 17,
+        "type": "TRANSLATE",
+        "line": 2756
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit356Quiz2, unit356Quiz4",
+    "questionText": "Çevir:\", hint: \"Daha hafif\", correctAnswer: \"C'est plus léger",
+    "answer": "C",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2731,
+      2785
+    ],
+    "details": [
+      {
+        "quizName": "unit356Quiz2",
+        "id": 19,
+        "type": "TRANSLATE",
+        "line": 2731
+      },
+      {
+        "quizName": "unit356Quiz4",
+        "id": 19,
+        "type": "TRANSLATE",
+        "line": 2785
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit357Quiz1, unit357Quiz2",
+    "questionText": "Çevir:\", hint: \"Hoca dersi açıklıyor\", correctAnswer: \"Le prof explique la leçon",
+    "answer": "Le prof explique la leçon",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2813,
+      2838
+    ],
+    "details": [
+      {
+        "quizName": "unit357Quiz1",
+        "id": 20,
+        "type": "TRANSLATE",
+        "line": 2813
+      },
+      {
+        "quizName": "unit357Quiz2",
+        "id": 18,
+        "type": "TRANSLATE",
+        "line": 2838
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit359Quiz1, unit359Quiz2",
+    "questionText": "Doldur:\", sentence: \"Je suis ___ ligne.\", options: [{ id: \"a\", text: \"en\", correct: true }, { id: \"b\", text: \"sur",
+    "answer": "en",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      3014,
+      3041
+    ],
+    "details": [
+      {
+        "quizName": "unit359Quiz1",
+        "id": 8,
+        "type": "FILL_BLANK",
+        "line": 3014
+      },
+      {
+        "quizName": "unit359Quiz2",
+        "id": 6,
+        "type": "FILL_BLANK",
+        "line": 3041
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit331Quiz1, unit331Quiz4",
+    "questionText": "TRANSLATE hint: \"Çok eğlendik\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      22,
+      104
+    ],
+    "details": [
+      {
+        "quizName": "unit331Quiz1",
+        "id": 11,
+        "correctAnswer": "Nous nous sommes bien amusés",
+        "line": 22
+      },
+      {
+        "quizName": "unit331Quiz4",
+        "id": 9,
+        "correctAnswer": "Nous nous sommes bien amusés",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit337Quiz2, unit360Quiz1",
+    "questionText": "TRANSLATE hint: \"Tren saat kaçta?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      721,
+      3129
+    ],
+    "details": [
+      {
+        "quizName": "unit337Quiz2",
+        "id": 9,
+        "correctAnswer": "À quelle heure est le train?",
+        "line": 721
+      },
+      {
+        "quizName": "unit360Quiz1",
+        "id": 12,
+        "correctAnswer": "Le train est à quelle heure?",
+        "line": 3129
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit339Quiz1, unit360Quiz2",
+    "questionText": "TRANSLATE hint: \"Günün yemeği nedir?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      918,
+      3155
+    ],
+    "details": [
+      {
+        "quizName": "unit339Quiz1",
+        "id": 10,
+        "correctAnswer": "Quel est le plat du jour?",
+        "line": 918
+      },
+      {
+        "quizName": "unit360Quiz2",
+        "id": 10,
+        "correctAnswer": "Quel est le plat du jour?",
+        "line": 3155
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit341Quiz4, unit360Quiz2",
+    "questionText": "TRANSLATE hint: \"İndirim var mı?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1223,
+      3160
+    ],
+    "details": [
+      {
+        "quizName": "unit341Quiz4",
+        "id": 17,
+        "correctAnswer": "Est-ce qu",
+        "line": 1223
+      },
+      {
+        "quizName": "unit360Quiz2",
+        "id": 15,
+        "correctAnswer": "Est-ce qu",
+        "line": 3160
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit349Quiz2, unit360Quiz4",
+    "questionText": "TRANSLATE hint: \"Oraya gitmek istiyorum.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1960,
+      3219
+    ],
+    "details": [
+      {
+        "quizName": "unit349Quiz2",
+        "id": 16,
+        "correctAnswer": "Je veux y aller.",
+        "line": 1960
+      },
+      {
+        "quizName": "unit360Quiz4",
+        "id": 16,
+        "correctAnswer": "Je veux y aller.",
+        "line": 3219
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit349Quiz3, unit360Quiz4",
+    "questionText": "TRANSLATE hint: \"Ondan biraz almak istiyorum.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1990,
+      3220
+    ],
+    "details": [
+      {
+        "quizName": "unit349Quiz3",
+        "id": 17,
+        "correctAnswer": "Je veux en prendre un peu.",
+        "line": 1990
+      },
+      {
+        "quizName": "unit360Quiz4",
+        "id": 17,
+        "correctAnswer": "Je veux en prendre un peu.",
+        "line": 3220
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit350Quiz1, unit350Quiz4",
+    "questionText": "TRANSLATE hint: \"Metronun önünde buluşuyoruz.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2047,
+      2125
+    ],
+    "details": [
+      {
+        "quizName": "unit350Quiz1",
+        "id": 16,
+        "correctAnswer": "On se retrouve devant le métro.",
+        "line": 2047
+      },
+      {
+        "quizName": "unit350Quiz4",
+        "id": 9,
+        "correctAnswer": "On se retrouve devant le métro.",
+        "line": 2125
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit350Quiz2, unit352Quiz2",
+    "questionText": "TRANSLATE hint: \"Neden olmasın?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2067,
+      2299
+    ],
+    "details": [
+      {
+        "quizName": "unit350Quiz2",
+        "id": 9,
+        "correctAnswer": "Pourquoi pas?",
+        "line": 2067
+      },
+      {
+        "quizName": "unit352Quiz2",
+        "id": 19,
+        "correctAnswer": "Pourquoi pas",
+        "line": 2299
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit350Quiz2, unit352Quiz1",
+    "questionText": "TRANSLATE hint: \"Sinemaya gitmek ister misin?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2076,
+      2269
+    ],
+    "details": [
+      {
+        "quizName": "unit350Quiz2",
+        "id": 16,
+        "correctAnswer": "Tu as envie d",
+        "line": 2076
+      },
+      {
+        "quizName": "unit352Quiz1",
+        "id": 16,
+        "correctAnswer": "Tu veux aller au cinéma",
+        "line": 2269
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit350Quiz3, unit352Quiz2, unit352Quiz4",
+    "questionText": "TRANSLATE hint: \"Nerede buluşuyoruz?\"",
+    "duplicateCount": 3,
+    "lineNumbers": [
+      2096,
+      2300,
+      2352
+    ],
+    "details": [
+      {
+        "quizName": "unit350Quiz3",
+        "id": 9,
+        "correctAnswer": "On se retrouve où?",
+        "line": 2096
+      },
+      {
+        "quizName": "unit352Quiz2",
+        "id": 20,
+        "correctAnswer": "On se retrouve où",
+        "line": 2300
+      },
+      {
+        "quizName": "unit352Quiz4",
+        "id": 18,
+        "correctAnswer": "On se retrouve où",
+        "line": 2352
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit353Quiz4, unit354Quiz4",
+    "questionText": "TRANSLATE hint: \"Rica ederim\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2462,
+      2570
+    ],
+    "details": [
+      {
+        "quizName": "unit353Quiz4",
+        "id": 20,
+        "correctAnswer": "Je vous en prie",
+        "line": 2462
+      },
+      {
+        "quizName": "unit354Quiz4",
+        "id": 20,
+        "correctAnswer": "Je vous en prie",
+        "line": 2570
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit354Quiz3, unit355Quiz3",
+    "questionText": "TRANSLATE hint: \"Buradan uzak mı?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2540,
+      2649
+    ],
+    "details": [
+      {
+        "quizName": "unit354Quiz3",
+        "id": 17,
+        "correctAnswer": "C",
+        "line": 2540
+      },
+      {
+        "quizName": "unit355Quiz3",
+        "id": 18,
+        "correctAnswer": "C",
+        "line": 2649
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit354Quiz3, unit355Quiz4",
+    "questionText": "TRANSLATE hint: \"Yürüyerek 10 dakika\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2541,
+      2674
+    ],
+    "details": [
+      {
+        "quizName": "unit354Quiz3",
+        "id": 18,
+        "correctAnswer": "À 10 minutes à pied",
+        "line": 2541
+      },
+      {
+        "quizName": "unit355Quiz4",
+        "id": 16,
+        "correctAnswer": "À 10 minutes à pied",
+        "line": 2674
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit354Quiz3, unit355Quiz3",
+    "questionText": "TRANSLATE hint: \"Müzenin yanında\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2543,
+      2647
+    ],
+    "details": [
+      {
+        "quizName": "unit354Quiz3",
+        "id": 20,
+        "correctAnswer": "À côté du musée",
+        "line": 2543
+      },
+      {
+        "quizName": "unit355Quiz3",
+        "id": 16,
+        "correctAnswer": "À côté du musée",
+        "line": 2647
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit356Quiz1, unit356Quiz3",
+    "questionText": "TRANSLATE hint: \"Nezaket çok önemli\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2702,
+      2756
+    ],
+    "details": [
+      {
+        "quizName": "unit356Quiz1",
+        "id": 17,
+        "correctAnswer": "La politesse est très importante",
+        "line": 2702
+      },
+      {
+        "quizName": "unit356Quiz3",
+        "id": 17,
+        "correctAnswer": "La politesse est très importante",
+        "line": 2756
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit356Quiz2, unit356Quiz4",
+    "questionText": "TRANSLATE hint: \"Daha hafif\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2731,
+      2785
+    ],
+    "details": [
+      {
+        "quizName": "unit356Quiz2",
+        "id": 19,
+        "correctAnswer": "C",
+        "line": 2731
+      },
+      {
+        "quizName": "unit356Quiz4",
+        "id": 19,
+        "correctAnswer": "C",
+        "line": 2785
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit357Quiz1, unit357Quiz2",
+    "questionText": "TRANSLATE hint: \"Hoca dersi açıklıyor\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2813,
+      2838
+    ],
+    "details": [
+      {
+        "quizName": "unit357Quiz1",
+        "id": 20,
+        "correctAnswer": "Le prof explique la leçon",
+        "line": 2813
+      },
+      {
+        "quizName": "unit357Quiz2",
+        "id": 18,
+        "correctAnswer": "Le prof explique la leçon",
+        "line": 2838
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit334Quiz4, unit335Quiz1, unit335Quiz4, unit351Quiz4, unit359Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Je n\"",
+    "duplicateCount": 5,
+    "lineNumbers": [
+      445,
+      479,
+      545,
+      2238,
+      3097
+    ],
+    "details": [
+      {
+        "quizName": "unit334Quiz4",
+        "id": 14,
+        "correctOptionText": "liquide",
+        "line": 445
+      },
+      {
+        "quizName": "unit335Quiz1",
+        "id": 18,
+        "correctOptionText": "assez",
+        "line": 479
+      },
+      {
+        "quizName": "unit335Quiz4",
+        "id": 4,
+        "correctOptionText": "de",
+        "line": 545
+      },
+      {
+        "quizName": "unit351Quiz4",
+        "id": 13,
+        "correctOptionText": "batterie",
+        "line": 2238
+      },
+      {
+        "quizName": "unit359Quiz4",
+        "id": 8,
+        "correctOptionText": "connexion",
+        "line": 3097
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit335Quiz3, unit336Quiz2",
+    "questionText": "FILL_BLANK sentence: \"Où est la ___?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      517,
+      602
+    ],
+    "details": [
+      {
+        "quizName": "unit335Quiz3",
+        "id": 4,
+        "correctOptionText": "poste",
+        "line": 517
+      },
+      {
+        "quizName": "unit336Quiz2",
+        "id": 4,
+        "correctOptionText": "clé",
+        "line": 602
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit338Quiz1, unit338Quiz4",
+    "questionText": "FILL_BLANK sentence: \"La valise est ___ (perdre).\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      808,
+      881
+    ],
+    "details": [
+      {
+        "quizName": "unit338Quiz1",
+        "id": 12,
+        "correctOptionText": "perdue",
+        "line": 808
+      },
+      {
+        "quizName": "unit338Quiz4",
+        "id": 3,
+        "correctOptionText": "perdue",
+        "line": 881
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit339Quiz3, unit353Quiz1",
+    "questionText": "FILL_BLANK sentence: \"Ce n\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      975,
+      2373
+    ],
+    "details": [
+      {
+        "quizName": "unit339Quiz3",
+        "id": 11,
+        "correctOptionText": "cher",
+        "line": 975
+      },
+      {
+        "quizName": "unit353Quiz1",
+        "id": 13,
+        "correctOptionText": "grave",
+        "line": 2373
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit340Quiz1, unit340Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Ne ___ pas le four !\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1039,
+      1115
+    ],
+    "details": [
+      {
+        "quizName": "unit340Quiz1",
+        "id": 17,
+        "correctOptionText": "touche",
+        "line": 1039
+      },
+      {
+        "quizName": "unit340Quiz4",
+        "id": 11,
+        "correctOptionText": "touche",
+        "line": 1115
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit350Quiz3, unit360Quiz3",
+    "questionText": "FILL_BLANK sentence: \"On se retrouve ___ le métro.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2092,
+      3185
+    ],
+    "details": [
+      {
+        "quizName": "unit350Quiz3",
+        "id": 7,
+        "correctOptionText": "devant",
+        "line": 2092
+      },
+      {
+        "quizName": "unit360Quiz3",
+        "id": 12,
+        "correctOptionText": "devant",
+        "line": 3185
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit351Quiz1, unit351Quiz3, unit351Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Il n\"",
+    "duplicateCount": 3,
+    "lineNumbers": [
+      2149,
+      2205,
+      2232
+    ],
+    "details": [
+      {
+        "quizName": "unit351Quiz1",
+        "id": 6,
+        "correctOptionText": "réseau",
+        "line": 2149
+      },
+      {
+        "quizName": "unit351Quiz3",
+        "id": 8,
+        "correctOptionText": "là",
+        "line": 2205
+      },
+      {
+        "quizName": "unit351Quiz4",
+        "id": 8,
+        "correctOptionText": "réseau",
+        "line": 2232
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit352Quiz3, unit353Quiz2",
+    "questionText": "FILL_BLANK sentence: \"Je suis ___.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2316,
+      2398
+    ],
+    "details": [
+      {
+        "quizName": "unit352Quiz3",
+        "id": 10,
+        "correctOptionText": "occupé",
+        "line": 2316
+      },
+      {
+        "quizName": "unit353Quiz2",
+        "id": 11,
+        "correctOptionText": "malade",
+        "line": 2398
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit353Quiz4, unit354Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Je vous en ___.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2455,
+      2563
+    ],
+    "details": [
+      {
+        "quizName": "unit353Quiz4",
+        "id": 14,
+        "correctOptionText": "prie",
+        "line": 2455
+      },
+      {
+        "quizName": "unit354Quiz4",
+        "id": 14,
+        "correctOptionText": "prie",
+        "line": 2563
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit359Quiz1, unit359Quiz2",
+    "questionText": "FILL_BLANK sentence: \"Je suis ___ ligne.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      3014,
+      3041
+    ],
+    "details": [
+      {
+        "quizName": "unit359Quiz1",
+        "id": 8,
+        "correctOptionText": "en",
+        "line": 3014
+      },
+      {
+        "quizName": "unit359Quiz2",
+        "id": 6,
+        "correctOptionText": "en",
+        "line": 3041
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-a2.ts",
+    "quizName": "unit340Quiz1, unit340Quiz4",
+    "questionText": "LISTENING audioText: \"Servez chaud\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1033,
+      1118
+    ],
+    "details": [
+      {
+        "quizName": "unit340Quiz1",
+        "id": 13,
+        "correctOptionText": "Sıcak servis edin",
+        "line": 1033
+      },
+      {
+        "quizName": "unit340Quiz4",
+        "id": 14,
+        "correctOptionText": "Sıcak servis edin.",
+        "line": 1118
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_IN_QUIZ",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit370Quiz2",
+    "questionText": "Doldur (Gérondif):\", sentence: \"On protège la nature en ___ (recycler) le plastique.\", options: [{ id: \"a\", text: \"recyclant\", correct: true }, { id: \"b\", text: \"recycle",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      910,
+      913
+    ],
+    "details": [
+      {
+        "id": 823,
+        "type": "FILL_BLANK",
+        "hint": null,
+        "correctAnswer": "recyclant",
+        "line": 910
+      },
+      {
+        "id": 826,
+        "type": "FILL_BLANK",
+        "hint": null,
+        "correctAnswer": "recyclant",
+        "line": 913
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_IN_QUIZ",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit370Quiz2",
+    "questionText": "FILL_BLANK sentence: \"On protège la nature en ___ (recycler) le plastique.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      910,
+      913
+    ],
+    "details": [
+      {
+        "id": 823,
+        "correctOptionText": "recyclant",
+        "line": 910
+      },
+      {
+        "id": 826,
+        "correctOptionText": "recyclant",
+        "line": 913
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit361Quiz1, unit361Quiz4",
+    "questionText": "Traduisez la phrase :\", hint: \"Maaş beklentileriniz nelerdir?\", correctAnswer: \"Quelles sont vos attentes salariales ?",
+    "answer": "Quelles sont vos attentes salariales ?",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      26,
+      88
+    ],
+    "details": [
+      {
+        "quizName": "unit361Quiz1",
+        "id": 16,
+        "type": "TRANSLATE",
+        "line": 26
+      },
+      {
+        "quizName": "unit361Quiz4",
+        "id": 66,
+        "type": "TRANSLATE",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit362Quiz2, unit362Quiz4",
+    "questionText": "Traduisez la phrase :\", hint: \"Gülümseyerek konuştu.\", correctAnswer: \"Il a parlé en souriant.",
+    "answer": "Il a parlé en souriant.",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      138,
+      186
+    ],
+    "details": [
+      {
+        "quizName": "unit362Quiz2",
+        "id": 107,
+        "type": "TRANSLATE",
+        "line": 138
+      },
+      {
+        "quizName": "unit362Quiz4",
+        "id": 147,
+        "type": "TRANSLATE",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit373Quiz3, unit374Quiz1",
+    "questionText": "Traduisez la phrase :\", hint: \"Gelenekler\", correctAnswer: \"Les coutumes",
+    "answer": "Les coutumes",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1233,
+      1285
+    ],
+    "details": [
+      {
+        "quizName": "unit373Quiz3",
+        "id": 1091,
+        "type": "TRANSLATE",
+        "line": 1233
+      },
+      {
+        "quizName": "unit374Quiz1",
+        "id": 1134,
+        "type": "TRANSLATE",
+        "line": 1285
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz1, unit380Quiz4",
+    "questionText": "Choisissez ce que vous entendez :\", audioText: \"La soie\", options: [{ id: \"a\", text: \"La soie\", correct: true }, { id: \"b\", text: \"Le coton\", correct: false }, { id: \"c\", text: \"La laine\", correct: false }, { id: \"d\", text: \"Le cuir",
+    "answer": "La soie",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1867,
+      1942
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz1",
+        "id": 1614,
+        "type": "LISTENING",
+        "line": 1867
+      },
+      {
+        "quizName": "unit380Quiz4",
+        "id": 1678,
+        "type": "LISTENING",
+        "line": 1942
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz2, unit382Quiz2",
+    "questionText": "Quelle est la structure correcte pour la comparaison ?\", options: [{ id: \"a\", text: \"plus ... que\", correct: true }, { id: \"b\", text: \"plus ... de\", correct: false }, { id: \"c\", text: \"plus ... à\", correct: false }, { id: \"d\", text: \"plus ... en",
+    "answer": "plus ... que",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1880,
+      2075
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz2",
+        "id": 1623,
+        "type": "SELECT",
+        "line": 1880
+      },
+      {
+        "quizName": "unit382Quiz2",
+        "id": 1784,
+        "type": "SELECT",
+        "line": 2075
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz2, unit380Quiz4",
+    "questionText": "Complétez la phrase :\", sentence: \"Je ___ une veste.\", options: [{ id: \"a\", text: \"mets\", correct: true }, { id: \"b\", text: \"met",
+    "answer": "mets",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1891,
+      1925
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz2",
+        "id": 1634,
+        "type": "FILL_BLANK",
+        "line": 1891
+      },
+      {
+        "quizName": "unit380Quiz4",
+        "id": 1661,
+        "type": "FILL_BLANK",
+        "line": 1925
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz2, unit380Quiz4",
+    "questionText": "Traduisez la phrase :\", hint: \"Renkleri uyumlu yapmak gerekir.\", correctAnswer: \"Il faut assortir les couleurs.",
+    "answer": "Il faut assortir les couleurs.",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1894,
+      1938
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz2",
+        "id": 1637,
+        "type": "TRANSLATE",
+        "line": 1894
+      },
+      {
+        "quizName": "unit380Quiz4",
+        "id": 1674,
+        "type": "TRANSLATE",
+        "line": 1938
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit361Quiz1, unit361Quiz4",
+    "questionText": "TRANSLATE hint: \"Maaş beklentileriniz nelerdir?\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      26,
+      88
+    ],
+    "details": [
+      {
+        "quizName": "unit361Quiz1",
+        "id": 16,
+        "correctAnswer": "Quelles sont vos attentes salariales ?",
+        "line": 26
+      },
+      {
+        "quizName": "unit361Quiz4",
+        "id": 66,
+        "correctAnswer": "Quelles sont vos attentes salariales ?",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit362Quiz2, unit362Quiz4",
+    "questionText": "TRANSLATE hint: \"Gülümseyerek konuştu.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      138,
+      186
+    ],
+    "details": [
+      {
+        "quizName": "unit362Quiz2",
+        "id": 107,
+        "correctAnswer": "Il a parlé en souriant.",
+        "line": 138
+      },
+      {
+        "quizName": "unit362Quiz4",
+        "id": 147,
+        "correctAnswer": "Il a parlé en souriant.",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit367Quiz3, unit367Quiz4",
+    "questionText": "TRANSLATE hint: \"Herkes çevre için çaba göstermelidir.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      657,
+      674
+    ],
+    "details": [
+      {
+        "quizName": "unit367Quiz3",
+        "id": 617,
+        "correctAnswer": "Tout le monde doit faire un effort pour l",
+        "line": 657
+      },
+      {
+        "quizName": "unit367Quiz4",
+        "id": 630,
+        "correctAnswer": "Tout le monde doit faire un effort pour l",
+        "line": 674
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit373Quiz3, unit374Quiz1",
+    "questionText": "TRANSLATE hint: \"Gelenekler\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1233,
+      1285
+    ],
+    "details": [
+      {
+        "quizName": "unit373Quiz3",
+        "id": 1091,
+        "correctAnswer": "Les coutumes",
+        "line": 1233
+      },
+      {
+        "quizName": "unit374Quiz1",
+        "id": 1134,
+        "correctAnswer": "Les coutumes",
+        "line": 1285
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz2, unit380Quiz4",
+    "questionText": "TRANSLATE hint: \"Renkleri uyumlu yapmak gerekir.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1894,
+      1938
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz2",
+        "id": 1637,
+        "correctAnswer": "Il faut assortir les couleurs.",
+        "line": 1894
+      },
+      {
+        "quizName": "unit380Quiz4",
+        "id": 1674,
+        "correctAnswer": "Il faut assortir les couleurs.",
+        "line": 1938
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit361Quiz2, unit361Quiz4",
+    "questionText": "FILL_BLANK sentence: \"___-vous m\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      40,
+      90
+    ],
+    "details": [
+      {
+        "quizName": "unit361Quiz2",
+        "id": 26,
+        "correctOptionText": "Pourriez",
+        "line": 40
+      },
+      {
+        "quizName": "unit361Quiz4",
+        "id": 68,
+        "correctOptionText": "Pourriez",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit362Quiz2, unit366Quiz2",
+    "questionText": "FILL_BLANK sentence: \"Il mange ___ regardant la télé.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      136,
+      521
+    ],
+    "details": [
+      {
+        "quizName": "unit362Quiz2",
+        "id": 105,
+        "correctOptionText": "en",
+        "line": 136
+      },
+      {
+        "quizName": "unit366Quiz2",
+        "id": 502,
+        "correctOptionText": "en",
+        "line": 521
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit363Quiz2, unit363Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Voici l\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      232,
+      284
+    ],
+    "details": [
+      {
+        "quizName": "unit363Quiz2",
+        "id": 184,
+        "correctOptionText": "qui",
+        "line": 232
+      },
+      {
+        "quizName": "unit363Quiz4",
+        "id": 228,
+        "correctOptionText": "qui",
+        "line": 284
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit366Quiz4, unit367Quiz1, unit367Quiz3",
+    "questionText": "FILL_BLANK sentence: \"Beaucoup d\"",
+    "duplicateCount": 3,
+    "lineNumbers": [
+      576,
+      608,
+      648
+    ],
+    "details": [
+      {
+        "quizName": "unit366Quiz4",
+        "id": 549,
+        "correctOptionText": "adolescents",
+        "line": 576
+      },
+      {
+        "quizName": "unit367Quiz1",
+        "id": 576,
+        "correctOptionText": "espèces",
+        "line": 608
+      },
+      {
+        "quizName": "unit367Quiz3",
+        "id": 608,
+        "correctOptionText": "extinction",
+        "line": 648
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit367Quiz2, unit367Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Il faut qu\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      628,
+      683
+    ],
+    "details": [
+      {
+        "quizName": "unit367Quiz2",
+        "id": 592,
+        "correctOptionText": "écoutent",
+        "line": 628
+      },
+      {
+        "quizName": "unit367Quiz4",
+        "id": 639,
+        "correctOptionText": "finissent",
+        "line": 683
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit369Quiz2, unit369Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Bien qu\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      813,
+      877
+    ],
+    "details": [
+      {
+        "quizName": "unit369Quiz2",
+        "id": 743,
+        "correctOptionText": "soit",
+        "line": 813
+      },
+      {
+        "quizName": "unit369Quiz4",
+        "id": 799,
+        "correctOptionText": "étudie",
+        "line": 877
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit369Quiz2, unit369Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Je veux t\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      822,
+      871
+    ],
+    "details": [
+      {
+        "quizName": "unit369Quiz2",
+        "id": 752,
+        "correctOptionText": "comprennes",
+        "line": 822
+      },
+      {
+        "quizName": "unit369Quiz4",
+        "id": 793,
+        "correctOptionText": "aies",
+        "line": 871
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz2, unit380Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Je ___ une veste.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1891,
+      1925
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz2",
+        "id": 1634,
+        "correctOptionText": "mets",
+        "line": 1891
+      },
+      {
+        "quizName": "unit380Quiz4",
+        "id": 1661,
+        "correctOptionText": "mets",
+        "line": 1925
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz2, unit380Quiz4",
+    "questionText": "FILL_BLANK sentence: \"Elle ___ une robe noire.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1892,
+      1926
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz2",
+        "id": 1635,
+        "correctOptionText": "porte",
+        "line": 1892
+      },
+      {
+        "quizName": "unit380Quiz4",
+        "id": 1662,
+        "correctOptionText": "porte",
+        "line": 1926
+      }
+    ]
+  },
+  {
+    "type": "SAME_SENTENCE_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit383Quiz1, unit383Quiz4",
+    "questionText": "FILL_BLANK sentence: \"La ___ est confirmée.\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2159,
+      2219
+    ],
+    "details": [
+      {
+        "quizName": "unit383Quiz1",
+        "id": 1856,
+        "correctOptionText": "nouvelle",
+        "line": 2159
+      },
+      {
+        "quizName": "unit383Quiz4",
+        "id": 1905,
+        "correctOptionText": "rumeur",
+        "line": 2219
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit362Quiz1, unit370Quiz1",
+    "questionText": "LISTENING audioText: \"Protéger\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      115,
+      887
+    ],
+    "details": [
+      {
+        "quizName": "unit362Quiz1",
+        "id": 88,
+        "correctOptionText": "Prendre soin / Préserver",
+        "line": 115
+      },
+      {
+        "quizName": "unit370Quiz1",
+        "id": 804,
+        "correctOptionText": "Protéger",
+        "line": 887
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit367Quiz1, unit370Quiz1",
+    "questionText": "LISTENING audioText: \"Recycler\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      597,
+      888
+    ],
+    "details": [
+      {
+        "quizName": "unit367Quiz1",
+        "id": 565,
+        "correctOptionText": "Geri dönüştürmek",
+        "line": 597
+      },
+      {
+        "quizName": "unit370Quiz1",
+        "id": 805,
+        "correctOptionText": "Recycler",
+        "line": 888
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit367Quiz1, unit379Quiz4",
+    "questionText": "LISTENING audioText: \"La planète\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      598,
+      1845
+    ],
+    "details": [
+      {
+        "quizName": "unit367Quiz1",
+        "id": 566,
+        "correctOptionText": "Gezegen",
+        "line": 598
+      },
+      {
+        "quizName": "unit379Quiz4",
+        "id": 1597,
+        "correctOptionText": "La planète",
+        "line": 1845
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit375Quiz1, unit375Quiz4",
+    "questionText": "LISTENING audioText: \"Le poème\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1380,
+      1459
+    ],
+    "details": [
+      {
+        "quizName": "unit375Quiz1",
+        "id": 1212,
+        "correctOptionText": "Le poème",
+        "line": 1380
+      },
+      {
+        "quizName": "unit375Quiz4",
+        "id": 1279,
+        "correctOptionText": "Le poème",
+        "line": 1459
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit375Quiz1, unit375Quiz4",
+    "questionText": "LISTENING audioText: \"Le théâtre\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1381,
+      1458
+    ],
+    "details": [
+      {
+        "quizName": "unit375Quiz1",
+        "id": 1213,
+        "correctOptionText": "Le théâtre",
+        "line": 1381
+      },
+      {
+        "quizName": "unit375Quiz4",
+        "id": 1278,
+        "correctOptionText": "Le théâtre",
+        "line": 1458
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit376Quiz1, unit376Quiz4",
+    "questionText": "LISTENING audioText: \"La constitution\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1479,
+      1557
+    ],
+    "details": [
+      {
+        "quizName": "unit376Quiz1",
+        "id": 1294,
+        "correctOptionText": "La constitution",
+        "line": 1479
+      },
+      {
+        "quizName": "unit376Quiz4",
+        "id": 1360,
+        "correctOptionText": "Anayasa",
+        "line": 1557
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit378Quiz1, unit379Quiz1",
+    "questionText": "LISTENING audioText: \"Le télescope\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1671,
+      1770
+    ],
+    "details": [
+      {
+        "quizName": "unit378Quiz1",
+        "id": 1452,
+        "correctOptionText": "Le télescope",
+        "line": 1671
+      },
+      {
+        "quizName": "unit379Quiz1",
+        "id": 1534,
+        "correctOptionText": "Le télescope",
+        "line": 1770
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit379Quiz1, unit379Quiz4",
+    "questionText": "LISTENING audioText: \"La lune\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1767,
+      1847
+    ],
+    "details": [
+      {
+        "quizName": "unit379Quiz1",
+        "id": 1531,
+        "correctOptionText": "La lune",
+        "line": 1767
+      },
+      {
+        "quizName": "unit379Quiz4",
+        "id": 1599,
+        "correctOptionText": "La lune",
+        "line": 1847
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz1, unit380Quiz4",
+    "questionText": "LISTENING audioText: \"La soie\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1867,
+      1942
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz1",
+        "id": 1614,
+        "correctOptionText": "La soie",
+        "line": 1867
+      },
+      {
+        "quizName": "unit380Quiz4",
+        "id": 1678,
+        "correctOptionText": "La soie",
+        "line": 1942
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit380Quiz1, unit380Quiz4",
+    "questionText": "LISTENING audioText: \"Le cuir\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1868,
+      1944
+    ],
+    "details": [
+      {
+        "quizName": "unit380Quiz1",
+        "id": 1615,
+        "correctOptionText": "Le cuir",
+        "line": 1868
+      },
+      {
+        "quizName": "unit380Quiz4",
+        "id": 1680,
+        "correctOptionText": "Le cuir",
+        "line": 1944
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit381Quiz1, unit381Quiz4",
+    "questionText": "LISTENING audioText: \"La livraison\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      1961,
+      2041
+    ],
+    "details": [
+      {
+        "quizName": "unit381Quiz1",
+        "id": 1692,
+        "correctOptionText": "La livraison",
+        "line": 1961
+      },
+      {
+        "quizName": "unit381Quiz4",
+        "id": 1760,
+        "correctOptionText": "Teslimat",
+        "line": 2041
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit382Quiz1, unit382Quiz4",
+    "questionText": "LISTENING audioText: \"La concurrence\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2059,
+      2139
+    ],
+    "details": [
+      {
+        "quizName": "unit382Quiz1",
+        "id": 1772,
+        "correctOptionText": "La concurrence",
+        "line": 2059
+      },
+      {
+        "quizName": "unit382Quiz4",
+        "id": 1840,
+        "correctOptionText": "La concurrence",
+        "line": 2139
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions-fr-b1.ts",
+    "quizName": "unit384Quiz1, unit386Quiz4",
+    "questionText": "LISTENING audioText: \"La liberté d\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      2251,
+      2508
+    ],
+    "details": [
+      {
+        "quizName": "unit384Quiz1",
+        "id": 1932,
+        "correctOptionText": "La liberté d",
+        "line": 2251
+      },
+      {
+        "quizName": "unit386Quiz4",
+        "id": 2153,
+        "correctOptionText": "La liberté d",
+        "line": 2508
+      }
+    ]
+  },
+  {
+    "type": "SAME_HINT_IN_QUIZ",
+    "fileName": "questions-unit24.ts",
+    "quizName": "unit24Quiz3",
+    "questionText": "TRANSLATE hint: \"İspanya\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      59,
+      64
+    ],
+    "details": [
+      {
+        "id": 7,
+        "correctAnswer": "España",
+        "line": 59
+      },
+      {
+        "id": 12,
+        "correctAnswer": "Vivo en España",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz1, unit2Quiz2",
+    "questionText": "'Nueve' kaç?\", options: [{ id: \"a\", text: \"8\", correct: false }, { id: \"b\", text: \"9\", correct: true }, { id: \"c\", text: \"10\", correct: false }, { id: \"d\", text: \"19",
+    "answer": "9",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      189,
+      213
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz1",
+        "id": 15,
+        "type": "SELECT",
+        "line": 189
+      },
+      {
+        "quizName": "unit2Quiz2",
+        "id": 7,
+        "type": "SELECT",
+        "line": 213
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz1, unit2Quiz2",
+    "questionText": "'Once' kaç?\", options: [{ id: \"a\", text: \"10\", correct: false }, { id: \"b\", text: \"11\", correct: true }, { id: \"c\", text: \"12\", correct: false }, { id: \"d\", text: \"1",
+    "answer": "11",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      190,
+      209
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz1",
+        "id": 16,
+        "type": "SELECT",
+        "line": 190
+      },
+      {
+        "quizName": "unit2Quiz2",
+        "id": 3,
+        "type": "SELECT",
+        "line": 209
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz1, unit2Quiz2",
+    "questionText": "Duyduğun sayıyı seç:\", audioText: \"Trece\", options: [{ id: \"a\", text: \"3\", correct: false }, { id: \"b\", text: \"13\", correct: true }, { id: \"c\", text: \"30\", correct: false }, { id: \"d\", text: \"33",
+    "answer": "13",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      191,
+      211
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz1",
+        "id": 17,
+        "type": "LISTENING",
+        "line": 191
+      },
+      {
+        "quizName": "unit2Quiz2",
+        "id": 5,
+        "type": "LISTENING",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz1, unit2Quiz2",
+    "questionText": "Sayıyı yaz:\", hint: \"14\", correctAnswer: \"Catorce",
+    "answer": "Catorce",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      200,
+      222
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz1",
+        "id": 24,
+        "type": "TRANSLATE",
+        "line": 200
+      },
+      {
+        "quizName": "unit2Quiz2",
+        "id": 14,
+        "type": "TRANSLATE",
+        "line": 222
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz1, unit2Quiz2",
+    "questionText": "Sayıyı yaz:\", hint: \"17\", correctAnswer: \"Diecisiete",
+    "answer": "Diecisiete",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      201,
+      228
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz1",
+        "id": 25,
+        "type": "TRANSLATE",
+        "line": 201
+      },
+      {
+        "quizName": "unit2Quiz2",
+        "id": 18,
+        "type": "TRANSLATE",
+        "line": 228
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz2, unit2Quiz3",
+    "questionText": "Duyduğun sayıyı seç:\", audioText: \"Diecisiete\", options: [{ id: \"a\", text: \"16\", correct: false }, { id: \"b\", text: \"17\", correct: true }, { id: \"c\", text: \"7\", correct: false }, { id: \"d\", text: \"70",
+    "answer": "17",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      230,
+      264
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz2",
+        "id": 20,
+        "type": "LISTENING",
+        "line": 230
+      },
+      {
+        "quizName": "unit2Quiz3",
+        "id": 20,
+        "type": "LISTENING",
+        "line": 264
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz2, unit2Quiz3",
+    "questionText": "Sayıyı yaz:\", hint: \"19\", correctAnswer: \"Diecinueve",
+    "answer": "Diecinueve",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      232,
+      256
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz2",
+        "id": 22,
+        "type": "TRANSLATE",
+        "line": 232
+      },
+      {
+        "quizName": "unit2Quiz3",
+        "id": 14,
+        "type": "TRANSLATE",
+        "line": 256
+      }
+    ]
+  },
+  {
+    "type": "SAME_QUESTION_ANSWER_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz2, unit2Quiz3",
+    "questionText": "Sayıyı yaz:\", hint: \"15\", correctAnswer: \"Quince",
+    "answer": "Quince",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      234,
+      252
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz2",
+        "id": 24,
+        "type": "TRANSLATE",
+        "line": 234
+      },
+      {
+        "quizName": "unit2Quiz3",
+        "id": 10,
+        "type": "TRANSLATE",
+        "line": 252
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz1, unit2Quiz3",
+    "questionText": "LISTENING audioText: \"Cuatro\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      177,
+      248
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz1",
+        "id": 5,
+        "correctOptionText": "4",
+        "line": 177
+      },
+      {
+        "quizName": "unit2Quiz3",
+        "id": 8,
+        "correctOptionText": "4",
+        "line": 248
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz1, unit2Quiz2",
+    "questionText": "LISTENING audioText: \"Trece\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      191,
+      211
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz1",
+        "id": 17,
+        "correctOptionText": "13",
+        "line": 191
+      },
+      {
+        "quizName": "unit2Quiz2",
+        "id": 5,
+        "correctOptionText": "13",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz1, unit2Quiz3",
+    "questionText": "LISTENING audioText: \"Dieciocho\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      196,
+      259
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz1",
+        "id": 20,
+        "correctOptionText": "18",
+        "line": 196
+      },
+      {
+        "quizName": "unit2Quiz3",
+        "id": 17,
+        "correctOptionText": "18",
+        "line": 259
+      }
+    ]
+  },
+  {
+    "type": "SAME_AUDIO_ACROSS_QUIZZES",
+    "fileName": "questions.ts",
+    "quizName": "unit2Quiz2, unit2Quiz3",
+    "questionText": "LISTENING audioText: \"Diecisiete\"",
+    "duplicateCount": 2,
+    "lineNumbers": [
+      230,
+      264
+    ],
+    "details": [
+      {
+        "quizName": "unit2Quiz2",
+        "id": 20,
+        "correctOptionText": "17",
+        "line": 230
+      },
+      {
+        "quizName": "unit2Quiz3",
+        "id": 20,
+        "correctOptionText": "17",
+        "line": 264
+      }
+    ]
+  }
+]

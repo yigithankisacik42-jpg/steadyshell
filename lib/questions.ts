@@ -206,11 +206,11 @@ const unit2Quiz2: Question[] = [
     // KOLAY (8 soru)
     { id: 1, type: "SELECT", question: "'Seis' kaç?", options: [{ id: "a", text: "5", correct: false }, { id: "b", text: "6", correct: true }, { id: "c", text: "7", correct: false }, { id: "d", text: "8", correct: false }] },
     { id: 2, type: "SELECT", question: "'Siete' kaç?", options: [{ id: "a", text: "6", correct: false }, { id: "b", text: "7", correct: true }, { id: "c", text: "8", correct: false }, { id: "d", text: "9", correct: false }] },
-    { id: 3, type: "SELECT", question: "'Once' kaç?", options: [{ id: "a", text: "10", correct: false }, { id: "b", text: "11", correct: true }, { id: "c", text: "12", correct: false }, { id: "d", text: "1", correct: false }] },
+    { id: 3, type: "SELECT", question: "'Diecisiete' kaç?", options: [{ id: "a", text: "16", correct: false }, { id: "b", text: "17", correct: true }, { id: "c", text: "18", correct: false }, { id: "d", text: "7", correct: false }] },
     { id: 4, type: "SELECT", question: "'Cero' kaç?", options: [{ id: "a", text: "0", correct: true }, { id: "b", text: "1", correct: false }, { id: "c", text: "10", correct: false }, { id: "d", text: "100", correct: false }] },
-    { id: 5, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Trece", options: [{ id: "a", text: "3", correct: false }, { id: "b", text: "13", correct: true }, { id: "c", text: "30", correct: false }, { id: "d", text: "33", correct: false }] },
+    { id: 5, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Doce", options: [{ id: "a", text: "2", correct: false }, { id: "b", text: "12", correct: true }, { id: "c", text: "20", correct: false }, { id: "d", text: "22", correct: false }] },
     { id: 6, type: "SELECT", question: "'Doce' kaç?", options: [{ id: "a", text: "10", correct: false }, { id: "b", text: "12", correct: true }, { id: "c", text: "2", correct: false }, { id: "d", text: "20", correct: false }] },
-    { id: 7, type: "SELECT", question: "'Nueve' kaç?", options: [{ id: "a", text: "8", correct: false }, { id: "b", text: "9", correct: true }, { id: "c", text: "10", correct: false }, { id: "d", text: "19", correct: false }] },
+    { id: 7, type: "SELECT", question: "'Dieciocho' kaç?", options: [{ id: "a", text: "16", correct: false }, { id: "b", text: "18", correct: true }, { id: "c", text: "8", correct: false }, { id: "d", text: "80", correct: false }] },
     { id: 8, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Veinte", options: [{ id: "a", text: "12", correct: false }, { id: "b", text: "20", correct: true }, { id: "c", text: "22", correct: false }, { id: "d", text: "2", correct: false }] },
 
     // ORTA (9 soru)
@@ -219,19 +219,19 @@ const unit2Quiz2: Question[] = [
     { id: 11, type: "SELECT", question: "'Dieciséis' kaç?", options: [{ id: "a", text: "15", correct: false }, { id: "b", text: "16", correct: true }, { id: "c", text: "17", correct: false }, { id: "d", text: "6", correct: false }] },
     { id: 12, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Diecinueve", options: [{ id: "a", text: "17", correct: false }, { id: "b", text: "19", correct: true }, { id: "c", text: "18", correct: false }, { id: "d", text: "9", correct: false }] },
     { id: 13, type: "FILL_BLANK", question: "Doldur:", sentence: "Cuatro, cinco, _____", options: [{ id: "a", text: "seis", correct: true }, { id: "b", text: "siete", correct: false }] },
-    { id: 14, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "14", correctAnswer: "Catorce" },
+    { id: 14, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "20", correctAnswer: "Veinte" },
     { id: 15, type: "SELECT", question: "'Trece' kaç?", options: [{ id: "a", text: "3", correct: false }, { id: "b", text: "13", correct: true }, { id: "c", text: "30", correct: false }, { id: "d", text: "33", correct: false }] },
     { id: 16, type: "SELECT", question: "'Quince' kaç?", options: [{ id: "a", text: "14", correct: false }, { id: "b", text: "15", correct: true }, { id: "c", text: "16", correct: false }, { id: "d", text: "5", correct: false }] },
     { id: 17, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Catorce", options: [{ id: "a", text: "4", correct: false }, { id: "b", text: "14", correct: true }, { id: "c", text: "40", correct: false }, { id: "d", text: "15", correct: false }] },
 
     // ZOR (8 soru)
-    { id: 18, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "17", correctAnswer: "Diecisiete" },
+    { id: 18, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "16", correctAnswer: "Dieciséis" },
     { id: 19, type: "FILL_BLANK", question: "Doldur:", sentence: "Trece, catorce, _____", options: [{ id: "a", text: "quince", correct: true }, { id: "b", text: "dieciséis", correct: false }] },
-    { id: 20, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Diecisiete", options: [{ id: "a", text: "16", correct: false }, { id: "b", text: "17", correct: true }, { id: "c", text: "7", correct: false }, { id: "d", text: "70", correct: false }] },
+    { id: 20, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Once", options: [{ id: "a", text: "1", correct: false }, { id: "b", text: "11", correct: true }, { id: "c", text: "21", correct: false }, { id: "d", text: "10", correct: false }] },
     { id: 21, type: "FILL_BLANK", question: "Doldur:", sentence: "Diecisiete, _____, diecinueve", options: [{ id: "a", text: "dieciséis", correct: false }, { id: "b", text: "dieciocho", correct: true }] },
-    { id: 22, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "19", correctAnswer: "Diecinueve" },
+    { id: 22, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "12", correctAnswer: "Doce" },
     { id: 23, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "13", correctAnswer: "Trece" },
-    { id: 24, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "15", correctAnswer: "Quince" },
+    { id: 24, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "6", correctAnswer: "Seis" },
     { id: 25, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "10", correctAnswer: "Diez" },
 ];
 
@@ -245,11 +245,11 @@ const unit2Quiz3: Question[] = [
     { id: 5, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Nueve", options: [{ id: "a", text: "6", correct: false }, { id: "b", text: "9", correct: true }, { id: "c", text: "19", correct: false }, { id: "d", text: "90", correct: false }] },
     { id: 6, type: "SELECT", question: "'Ocho' ne demek?", options: [{ id: "a", text: "Yedi", correct: false }, { id: "b", text: "Sekiz", correct: true }, { id: "c", text: "Dokuz", correct: false }, { id: "d", text: "On", correct: false }] },
     { id: 7, type: "SELECT", question: "'Seis' ne demek?", options: [{ id: "a", text: "Beş", correct: false }, { id: "b", text: "Altı", correct: true }, { id: "c", text: "Yedi", correct: false }, { id: "d", text: "Sekiz", correct: false }] },
-    { id: 8, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Cuatro", options: [{ id: "a", text: "14", correct: false }, { id: "b", text: "4", correct: true }, { id: "c", text: "40", correct: false }, { id: "d", text: "44", correct: false }] },
+    { id: 8, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Seis", options: [{ id: "a", text: "7", correct: false }, { id: "b", text: "6", correct: true }, { id: "c", text: "16", correct: false }, { id: "d", text: "60", correct: false }] },
 
     // ORTA (9 soru - basit işlemler ve sıralama)
     { id: 9, type: "SELECT", question: "5 + 7 = ?", options: [{ id: "a", text: "Once", correct: false }, { id: "b", text: "Doce", correct: true }, { id: "c", text: "Trece", correct: false }, { id: "d", text: "Catorce", correct: false }] },
-    { id: 10, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "15", correctAnswer: "Quince" },
+    { id: 10, type: "TRANSLATE", question: "Sayıyı yaz:", hint: "8", correctAnswer: "Ocho" },
     { id: 11, type: "FILL_BLANK", question: "Doldur:", sentence: "Ocho, nueve, _____", options: [{ id: "a", text: "diez", correct: true }, { id: "b", text: "once", correct: false }] },
     { id: 12, type: "LISTENING", question: "Duyduğun sayıyı seç:", audioText: "Once", options: [{ id: "a", text: "1", correct: false }, { id: "b", text: "11", correct: true }, { id: "c", text: "21", correct: false }, { id: "d", text: "10", correct: false }] },
     { id: 13, type: "SELECT", question: "10 + 6 = ?", options: [{ id: "a", text: "Quince", correct: false }, { id: "b", text: "Dieciséis", correct: true }, { id: "c", text: "Diecisiete", correct: false }, { id: "d", text: "Catorce", correct: false }] },

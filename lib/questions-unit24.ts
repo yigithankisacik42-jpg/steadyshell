@@ -56,7 +56,7 @@ export const unit24Quiz3: Question[] = [
     { id: 4, type: "SELECT", question: "'Inglaterra' ne demek?", options: [{ id: "a", text: "İrlanda", correct: false }, { id: "b", text: "İngiltere", correct: true }, { id: "c", text: "İskoçya", correct: false }, { id: "d", text: "Galler", correct: false }] },
     { id: 5, type: "SELECT", question: "'Estados Unidos' ne demek?", options: [{ id: "a", text: "Birleşik Krallık", correct: false }, { id: "b", text: "Amerika Birleşik Devletleri", correct: true }, { id: "c", text: "Meksika", correct: false }, { id: "d", text: "Kanada", correct: false }] },
     { id: 6, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Mi padre es de Alemania", options: [{ id: "a", text: "Babam Almanya'dan", correct: true }, { id: "b", text: "Babam Almanya'da", correct: false }, { id: "c", text: "Babam Almanya'ya gidiyor", correct: false }, { id: "d", text: "Babam Alman değil", correct: false }] },
-    { id: 7, type: "TRANSLATE", question: "Çevir:", hint: "İspanya", correctAnswer: "España" },
+    { id: 7, type: "TRANSLATE", question: "Çevir:", hint: "Fransa", correctAnswer: "Francia" },
     { id: 8, type: "SELECT", question: "'Nacionalidad' ne demek?", options: [{ id: "a", text: "Ülke", correct: false }, { id: "b", text: "Milliyet", correct: true }, { id: "c", text: "Dil", correct: false }, { id: "d", text: "Kültür", correct: false }] },
     { id: 9, type: "FILL_BLANK", question: "Doldur:", sentence: "Soy de _____ Unidos.", options: [{ id: "a", text: "Estados", correct: true }, { id: "b", text: "Estado", correct: false }] },
     { id: 10, type: "TRANSLATE", question: "Çevir:", hint: "Almanya", correctAnswer: "Alemania" },

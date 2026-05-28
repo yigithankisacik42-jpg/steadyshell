@@ -366,7 +366,7 @@ export const unit307Quiz4: Question[] = [
     { id: 11, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Brésilien", options: [{ id: "a", text: "Brezilyalı", correct: true }, { id: "b", text: "Arjantinli", correct: false }, { id: "c", text: "Şilili", correct: false }, { id: "d", text: "Perulu", correct: false }] },
     { id: 12, type: "SELECT", question: "'Marocain(e)' ne demek?", options: [{ id: "a", text: "Faslı", correct: true }, { id: "b", text: "Cezayirli", correct: false }, { id: "c", text: "Tunuslu", correct: false }, { id: "d", text: "Mısırlı", correct: false }] },
     { id: 13, type: "TRANSLATE", question: "Çevir:", hint: "Piramitler Mısır'da", correctAnswer: "Les pyramides sont en Égypte" },
-    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Elle est ___.", options: [{ id: "a", text: "grecque", correct: true }, { id: "b", text: "grec", correct: false }] },
+    { id: 14, type: "FILL_BLANK", question: "Doldur:", sentence: "Il est ___.", options: [{ id: "a", text: "grecque", correct: true }, { id: "b", text: "grec", correct: false }] },
     { id: 15, type: "TRANSLATE", question: "Çevir:", hint: "Rusya dünyanın en büyük ülkesi", correctAnswer: "La Russie est le plus grand pays du monde" },
     { id: 16, type: "LISTENING", question: "Duyduğunu seç:", audioText: "Russe", options: [{ id: "a", text: "Rus", correct: true }, { id: "b", text: "Polonyalı", correct: false }, { id: "c", text: "Ukraynalı", correct: false }, { id: "d", text: "Finli", correct: false }] },
     { id: 17, type: "FILL_BLANK", question: "Doldur:", sentence: "Il parle ___.", options: [{ id: "a", text: "russe", correct: true }, { id: "b", text: "Russe", correct: false }] },
