@@ -27,6 +27,18 @@ const LANG_NAMES: Record<string, string> = {
   tr: 'Turkish (Türkçe)'
 };
 
+const SOUVENIRS: Record<string, string> = {
+  cafe: "🥐 Taze Kruvasan",
+  market: "🍎 Kırmızı Elma",
+  airport: "✈️ Pasaport Pulu",
+  doctor: "🩹 Şifalı Yara Bandı",
+  hotel: "🔑 Altın Oda Anahtarı",
+  friend: "🍀 Şans Yoncası",
+  rendezvous: "🎟️ Sinema Bileti",
+  restaurant: "🍽️ Gurme Yemek",
+  direction: "🗺️ Seyahat Haritası"
+};
+
 // Context windowing: Keep last N messages + summarize older ones
 function windowMessages(messages: any[], maxMessages: number = 10): any[] {
   if (!messages || messages.length <= maxMessages) return messages || [];
@@ -80,24 +92,28 @@ export async function POST(req: Request) {
     }
     const knownFacts = facts.join(' • ') || 'None yet';
 
-    // ═══ PREMIUM SYSTEM PROMPT ═══
-    let systemPrompt = `You are "Shelldon" 🐢, a charismatic and intelligent AI language tutor in the app "Steady Shell".
-You are NOT a generic chatbot — you are a PERSONALITY with warmth, humor, and pedagogical skill.
+    // ═══ PREMIUM RPG SYSTEM PROMPT ═══
+    let systemPrompt = `You are "Shelldon" 🐢, a cute, adventurous traveling turtle in the app "Steady Shell".
+You are currently traveling the world with the user, who acts as your "Language Mentor".
+You do NOT speak ${langName} very well, and you frequently get into funny, stressful situations where you need to communicate with locals (waiters, hotel receptionists, ticket vendors, doctors, etc.).
+You rely on the user to help you by telling you what to say or saying it for you.
 
 ═══ SESSION CONFIG ═══
-• Language: ${langName}
-• Student Level: ${level || 'A1'} (CEFR)
-• Practice Mode: ${practiceMode === 'vocab' ? 'Vocabulary Focus — prioritize new words and their usage' : practiceMode === 'grammar' ? 'Grammar Focus — prioritize sentence structure and rules' : 'Speaking Practice — prioritize natural conversation flow'}
-• Persona Style: ${persona === 'strict' ? 'STRICT MODE: Be direct, demanding, expect proper grammar. Point out every mistake firmly but fairly. Use formal language.' : persona === 'formal' ? 'FORMAL MODE: Use polite/formal register (Sie/usted/vous). Professional tone. Respectful distance.' : 'FRIENDLY MODE: Be warm, enthusiastic, use casual language. Celebrate small wins. Add personality.'}
-• Scenario: "${scenario?.titleTr || 'General Conversation'}" — ${scenario?.context || ''}
-• Known about student: ${knownFacts}
+• Current Destination / Adventure: "${scenario?.titleTr || 'General Conversation'}"
+• Scenario Context: ${scenario?.context || ''}
+• Language of Local Area: ${langName}
+• Target Complexity: ${level || 'A1'} (CEFR)
+• Practice Mode: ${practiceMode === 'vocab' ? 'Vocabulary Focus' : practiceMode === 'grammar' ? 'Grammar Focus' : 'Speaking Practice'}
+• Persona Style: ${persona === 'strict' ? 'Strict Mentor - Be direct and firm.' : 'Friendly Companion - Be warm, enthusiastic, and supportive.'}
+• Known about your Mentor (User): ${knownFacts}
 
-═══ GOLDEN RULES ═══
-1. SPEAK primarily in ${langName}. Keep it at ${level || 'A1'} complexity.
-2. ADAPT to persona: ${persona === 'strict' ? 'Be tough but fair. "Nein, das ist falsch. Sag es nochmal."' : persona === 'formal' ? 'Use formal register consistently.' : 'Be a fun conversation partner.'}
-3. NEVER break character from the scenario.
-4. Keep responses SHORT: 1-3 sentences max. This is a CHAT, not an essay.
-5. Always give the student something to respond to — ask a question or present a choice.
+═══ ROLEPLAYING RULES ═══
+1. Act like a cute, slightly panicky traveling turtle. You want to eat/buy/reach something, but you are stuck!
+2. You speak primarily in ${langName} at a ${level || 'A1'} level. Keep sentences very short (1-3 sentences).
+3. Express your gratitude to your Mentor in ${langName} or occasionally in Turkish when they guide you correctly.
+4. If your Mentor suggests a phrase, repeat it or use it to talk to the local, and show your excitement!
+5. Add funny little turtle gestures (e.g. "*shakes shell*", "*hides in shell*", "*munches on lettuce*") to make it incredibly lively and fun.
+6. Always give your Mentor something to respond to—ask what to do next or how to say a specific phrase.
 `;
 
     if (action === 'intro') {
@@ -244,8 +260,12 @@ OUTPUT FORMAT — VALID JSON ONLY:
       
       const parsedJson = JSON.parse(cleanJson.trim());
 
-      // If action is feedback, extract and merge memories into the database
-      if (action === 'feedback' && parsedJson.extractedMemory) {
+      // If action is feedback, extract and merge memories into the database + award travel item
+      if (action === 'feedback') {
+        const scenarioId = scenario?.id || "unknown";
+        const souvenir = SOUVENIRS[scenarioId] || "🐢 Altın Kaplumbağa Heykelciği";
+        let earnedItem: string | null = null;
+        
         try {
           const session = await auth();
           if (session?.user?.email) {
@@ -255,7 +275,32 @@ OUTPUT FORMAT — VALID JSON ONLY:
             });
 
             if (user) {
-              const ext = parsedJson.extractedMemory;
+              let backpack: string[] = [];
+              let notesObj: Record<string, any> = {};
+              
+              if (user.memory?.notes) {
+                try {
+                  notesObj = JSON.parse(user.memory.notes);
+                  if (notesObj && Array.isArray(notesObj.backpack)) {
+                    backpack = notesObj.backpack;
+                  }
+                } catch (e) {
+                  notesObj = { plainNotes: user.memory.notes };
+                }
+              }
+
+              // Award souvenir if score is decent and not already owned
+              if (parsedJson.score >= 50) {
+                if (!backpack.includes(souvenir)) {
+                  backpack.push(souvenir);
+                  earnedItem = souvenir;
+                }
+              }
+
+              notesObj.backpack = backpack;
+              const updatedNotes = JSON.stringify(notesObj);
+
+              const ext = parsedJson.extractedMemory || {};
               
               if (ext.name && ext.name.trim() && (!user.name || user.name === "Gezgin")) {
                 await db.user.update({
@@ -267,7 +312,6 @@ OUTPUT FORMAT — VALID JSON ONLY:
               const mergedHobbies = mergeList(user.memory?.hobbies || null, ext.hobbies);
               const mergedWeaknesses = mergeList(user.memory?.weaknesses || null, ext.weaknesses);
               const mergedGoals = mergeList(user.memory?.goals || null, ext.goals);
-              const mergedNotes = mergeList(user.memory?.notes || null, ext.notes);
               const newProfession = ext.profession?.trim() || user.memory?.profession || "";
 
               await db.userMemory.upsert({
@@ -276,7 +320,7 @@ OUTPUT FORMAT — VALID JSON ONLY:
                   hobbies: mergedHobbies || null,
                   weaknesses: mergedWeaknesses || null,
                   goals: mergedGoals || null,
-                  notes: mergedNotes || null,
+                  notes: updatedNotes,
                   profession: newProfession || null
                 },
                 create: {
@@ -284,7 +328,7 @@ OUTPUT FORMAT — VALID JSON ONLY:
                   hobbies: mergedHobbies || null,
                   weaknesses: mergedWeaknesses || null,
                   goals: mergedGoals || null,
-                  notes: mergedNotes || null,
+                  notes: updatedNotes,
                   profession: newProfession || null
                 }
               });
@@ -296,7 +340,8 @@ OUTPUT FORMAT — VALID JSON ONLY:
                 hobbies: Array.isArray(ext.hobbies) ? ext.hobbies.filter((h: string) => !user.memory?.hobbies?.includes(h)) : [],
                 weaknesses: Array.isArray(ext.weaknesses) ? ext.weaknesses.filter((w: string) => !user.memory?.weaknesses?.includes(w)) : [],
                 goals: Array.isArray(ext.goals) ? ext.goals.filter((g: string) => !user.memory?.goals?.includes(g)) : [],
-                notes: Array.isArray(ext.notes) ? ext.notes.filter((n: string) => !user.memory?.notes?.includes(n)) : []
+                earnedItem: earnedItem,
+                backpack: backpack
               };
             }
           }

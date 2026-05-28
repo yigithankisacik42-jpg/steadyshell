@@ -165,7 +165,13 @@ export default function ShelldonPage() {
         weaknesses: string[];
         goals: string[];
         notes: string[];
+        earnedItem: string | null;
+        backpack: string[];
     } | null>(null);
+    
+    // Backpack Gamification States
+    const [backpack, setBackpack] = useState<string[]>([]);
+    const [showBackpack, setShowBackpack] = useState(false);
     
     // Yeni stateler (Hint & Görevler)
     const [isLoadingHint, setIsLoadingHint] = useState(false);
@@ -269,6 +275,9 @@ export default function ShelldonPage() {
             if (res.ok) {
                 const data = await res.json();
                 setDbMemory(data);
+                if (Array.isArray(data.backpack)) {
+                    setBackpack(data.backpack);
+                }
             }
         } catch (e) {
             console.error("Failed to load Shelldon Memory", e);
@@ -571,6 +580,9 @@ export default function ShelldonPage() {
                 
                 if (data.newMemoryLearned) {
                     setNewMemoryLearned(data.newMemoryLearned);
+                    if (data.newMemoryLearned.backpack) {
+                        setBackpack(data.newMemoryLearned.backpack);
+                    }
                     fetchMemory();
                 }
             } else {
@@ -795,6 +807,25 @@ export default function ShelldonPage() {
 
                 {(sessionSummary || sessionGoal || newMemoryLearned) && (
                     <div className="w-full max-w-md space-y-4 mb-8 animate-in slide-in-from-bottom-4 duration-500">
+                        {/* RPG Acquired Item Congratulatory Card */}
+                        {newMemoryLearned?.earnedItem && (
+                            <div className="bg-gradient-to-br from-amber-500/10 via-yellow-500/5 to-transparent border-2 border-amber-200/80 rounded-2xl p-6 shadow-md relative overflow-hidden group text-center animate-in zoom-in duration-500">
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                                <div className="text-6xl mb-3 animate-bounce">
+                                    {newMemoryLearned.earnedItem.split(" ")[0]}
+                                </div>
+                                <h3 className="text-base font-black text-amber-800 tracking-wide uppercase mb-1">
+                                    YENİ MACERA ÖDÜLÜ KAZANILDI!
+                                </h3>
+                                <p className="text-slate-600 text-xs font-bold leading-relaxed mb-3">
+                                    Shelldon sırt çantasına nefis bir <span className="text-amber-700 font-extrabold">{newMemoryLearned.earnedItem.split(" ").slice(1).join(" ")}</span> ekledi!
+                                </p>
+                                <div className="inline-block bg-amber-500 text-white text-[10px] font-black tracking-widest uppercase px-3 py-1.5 rounded-xl shadow-sm">
+                                    🎒 Sırt Çantasına Eklendi
+                                </div>
+                            </div>
+                        )}
+
                         {/* Auto-learning banner */}
                         {newMemoryLearned && (
                             newMemoryLearned.name || 
@@ -974,6 +1005,27 @@ export default function ShelldonPage() {
                                 {isCallMode ? <PhoneOff className="w-4 h-4 text-white" /> : <Phone className="w-4 h-4 text-emerald-500" />}
                                 {isCallMode ? "Aramayı Bitir" : "Canlı Görüşme"}
                             </Button>
+                        </div>
+                    </div>
+
+                    {/* Shelldon'ın Neşesi (Energy/Confidence Bar) */}
+                    <div className="w-full max-w-lg px-6 mt-3 shrink-0">
+                        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-indigo-100 shadow-sm">
+                            <div className="flex items-center justify-between mb-1.5">
+                                <div className="flex items-center gap-1.5">
+                                    <span className="text-base animate-pulse">🐢</span>
+                                    <span className="text-xs font-black text-slate-700 uppercase tracking-wider">Shelldon'ın Neşesi ve Özgüveni</span>
+                                </div>
+                                <span className="text-xs font-extrabold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                    %{Math.min(100, Math.round((completedObjectives.length / (selectedScenario.objectives[selectedLang]?.length || 3)) * 100))}
+                                </span>
+                            </div>
+                            <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden shadow-inner">
+                                <div 
+                                    className="h-full bg-gradient-to-r from-amber-400 via-indigo-500 to-emerald-500 rounded-full transition-all duration-1000"
+                                    style={{ width: `${Math.max(10, Math.min(100, (completedObjectives.length / (selectedScenario.objectives[selectedLang]?.length || 3)) * 100))}%` }}
+                                />
+                            </div>
                         </div>
                     </div>
 
@@ -1306,16 +1358,18 @@ export default function ShelldonPage() {
                     </div>
                     <div className="flex items-center gap-2">
                         <button
+                            onClick={() => setShowBackpack(true)}
+                            className="text-xs font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm active:scale-95 border border-amber-100"
+                        >
+                            🎒 Sırt Çantası ({backpack.length})
+                        </button>
+                        <button
                             onClick={() => setShowMemoryDashboard(true)}
                             className="text-xs font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm active:scale-95 animate-pulse"
                         >
                             <Sparkles className="w-3.5 h-3.5 text-indigo-500 animate-spin" />
                             Akıllı Bellek v2 🧠
                         </button>
-                        <div className="text-xs font-bold text-emerald-500 bg-emerald-50 px-3 py-1.5 rounded-lg hidden sm:flex items-center gap-1.5">
-                            <Sparkles className="w-3.5 h-3.5" />
-                            Konuşma Partneri
-                        </div>
                     </div>
                 </div>
             </header>
@@ -1403,25 +1457,128 @@ export default function ShelldonPage() {
                             Senaryo Seç
                         </h3>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            {SHELLDON_SCENARIOS.map((scenario) => (
-                                <button
-                                    key={scenario.id}
-                                    onClick={() => startScenario(scenario)}
-                                    className="group bg-white hover:bg-emerald-50 border border-slate-100 hover:border-emerald-200 rounded-2xl p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10 border-b-4 border-b-slate-100 hover:border-b-emerald-300"
-                                >
-                                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                                        {scenario.icon}
-                                    </div>
-                                    <div className="text-slate-700 font-bold text-sm mb-0.5">{scenario.titleTr}</div>
-                                    <div className="text-slate-400 text-[11px] leading-relaxed line-clamp-2">
-                                        {scenario.description}
-                                    </div>
-                                </button>
-                            ))}
+                            {SHELLDON_SCENARIOS.map((scenario) => {
+                                // Dynamic RPG Mission Customization
+                                let rpgTitle = scenario.titleTr;
+                                let rpgDesc = scenario.description;
+                                if (scenario.id === "cafe") {
+                                    rpgTitle = "Shelldon Fırında Aç Kaldı! 🥖";
+                                    rpgDesc = "Kaplumbağa dostumuz çok aç ama sipariş veremiyor! Ona taze kruvasan sipariş ettir.";
+                                } else if (scenario.id === "market") {
+                                    rpgTitle = "Yemek Alışverişi 🛒";
+                                    rpgDesc = "Shelldon'ın seyahat sırt çantasını taze sebze ve meyvelerle doldurmasına rehberlik et.";
+                                } else if (scenario.id === "airport") {
+                                    rpgTitle = "Pasaport Kontrolü! ✈️";
+                                    rpgDesc = "Shelldon uçağa binmek üzere ama dili tutuldu! Check-in yapmasına yardım et.";
+                                } else if (scenario.id === "doctor") {
+                                    rpgTitle = "Shelldon Revirde 🩹";
+                                    rpgDesc = "Dostumuzun kabuğu biraz incinmiş. Doktora şikayetini anlatmasına mentorluk et.";
+                                } else if (scenario.id === "hotel") {
+                                    rpgTitle = "Otelde Check-in 🏨";
+                                    rpgDesc = "Shelldon'a güzel bir oda ayarla, resepsiyondan oda anahtarını almasını sağla.";
+                                } else if (scenario.id === "friend") {
+                                    rpgTitle = "Kaplumbağa Arkadaş 👋";
+                                    rpgDesc = "Shelldon yerel bir arkadaş edindi! Onunla kaynaşmasına ve hobilerinden bahsetmesine rehberlik et.";
+                                } else if (scenario.id === "rendezvous") {
+                                    rpgTitle = "Sinema Randevusu 📅";
+                                    rpgDesc = "Arkadaşıyla sinema buluşması planlarken Shelldon'a yardım et.";
+                                } else if (scenario.id === "restaurant") {
+                                    rpgTitle = "Gurme Restoran 🍽️";
+                                    rpgDesc = "Shelldon'a yerel lezzetler sipariş ettir ve gurme dünyasını keşfettir.";
+                                } else if (scenario.id === "direction") {
+                                    rpgTitle = "Yolda Kaybolduk! 🗺️";
+                                    rpgDesc = "Shelldon haritasını ters tutuyor! Ona istasyonun yolunu buldur.";
+                                }
+
+                                return (
+                                    <button
+                                        key={scenario.id}
+                                        onClick={() => startScenario(scenario)}
+                                        className="group bg-white hover:bg-indigo-50/50 border border-slate-100 hover:border-indigo-200 rounded-2xl p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5 border-b-4 border-b-slate-100 hover:border-b-indigo-300 relative overflow-hidden"
+                                    >
+                                        <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                                            {scenario.icon}
+                                        </div>
+                                        <div className="text-slate-800 font-bold text-sm mb-0.5">{rpgTitle}</div>
+                                        <div className="text-slate-400 text-[11px] leading-relaxed line-clamp-3">
+                                            {rpgDesc}
+                                        </div>
+                                    </button>
+                                );
+                            })}
                         </div>
                     </section>
                 )}
             </main>
+
+            {/* === BACKPACK DRAWER OVERLAY === */}
+            {showBackpack && (
+                <div className="fixed inset-0 z-[100] flex justify-end animate-in fade-in duration-300">
+                    <div 
+                        onClick={() => setShowBackpack(false)}
+                        className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
+                    />
+
+                    <div className="relative w-full max-w-md h-full bg-white/80 backdrop-blur-2xl border-l border-white/20 shadow-2xl flex flex-col z-10 animate-in slide-in-from-right duration-300 overflow-hidden">
+                        <div className="absolute top-[-10%] left-[-10%] w-72 h-72 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+                        
+                        <header className="p-6 border-b border-amber-100 flex items-center justify-between shrink-0 relative z-10">
+                            <div className="flex items-center gap-2.5">
+                                <span className="text-2xl animate-pulse">🎒</span>
+                                <div>
+                                    <h3 className="font-extrabold text-slate-800 text-base leading-none">Shelldon'ın Sırt Çantası</h3>
+                                    <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider mt-1 block">Travel Souvenirs Inventory</span>
+                                </div>
+                            </div>
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={() => setShowBackpack(false)}
+                                className="w-8 h-8 rounded-full border border-slate-100 bg-white/50 text-slate-400 hover:text-slate-700"
+                            >
+                                <ArrowLeft className="w-4 h-4 rotate-180" />
+                            </Button>
+                        </header>
+
+                        <div className="flex-1 overflow-y-auto p-6 relative z-10">
+                            {backpack.length === 0 ? (
+                                <div className="h-64 flex flex-col items-center justify-center gap-4 text-center text-slate-400">
+                                    <span className="text-5xl animate-bounce">🎒</span>
+                                    <div>
+                                        <p className="text-sm font-bold text-slate-600 mb-1">Sırt Çantası Bomboş</p>
+                                        <p className="text-xs leading-relaxed max-w-[200px] mx-auto">Shelldon'a maceralarında yardım et ve özel seyahat hatıraları topla!</p>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="grid grid-cols-2 gap-4">
+                                    {backpack.map((item, idx) => {
+                                        const parts = item.split(" ");
+                                        const emoji = parts[0] || "🎁";
+                                        const label = parts.slice(1).join(" ") || item;
+
+                                        return (
+                                            <div 
+                                                key={idx} 
+                                                className="bg-white/60 hover:bg-white border border-amber-100 hover:border-amber-200 p-4 rounded-2xl flex flex-col items-center text-center gap-2.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-default group"
+                                            >
+                                                <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                                                    {emoji}
+                                                </div>
+                                                <span className="text-xs font-bold text-slate-700 leading-tight">
+                                                    {label}
+                                                </span>
+                                                <span className="text-[9px] text-amber-600 font-bold uppercase tracking-wider bg-amber-50 px-2 py-0.5 rounded-full">
+                                                    Macera Ödülü
+                                                </span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* === AKILLI BELLEK DASHBOARD OVERLAY === */}
             {showMemoryDashboard && (

@@ -19,13 +19,29 @@ export async function GET() {
       return new NextResponse("User not found", { status: 404 });
     }
 
+    let backpack: string[] = [];
+    let plainNotes = user.memory?.notes || "";
+
+    if (user.memory?.notes) {
+      try {
+        const notesObj = JSON.parse(user.memory.notes);
+        if (notesObj && typeof notesObj === "object") {
+          backpack = notesObj.backpack || [];
+          plainNotes = notesObj.plainNotes || "";
+        }
+      } catch (e) {
+        // Plain text, keep plainNotes as the raw string
+      }
+    }
+
     return NextResponse.json({
       name: user.name || "",
       profession: user.memory?.profession || "",
       hobbies: user.memory?.hobbies || "",
       weaknesses: user.memory?.weaknesses || "",
       goals: user.memory?.goals || "",
-      notes: user.memory?.notes || "",
+      notes: plainNotes,
+      backpack: backpack,
     });
   } catch (error) {
     console.error("[SHELLDON_MEMORY_GET]", error);
@@ -59,6 +75,28 @@ export async function POST(req: Request) {
       });
     }
 
+    // Preserve existing backpack JSON array
+    const existing = await db.userMemory.findUnique({
+      where: { userId: user.id },
+    });
+
+    let backpack: string[] = [];
+    if (existing?.notes) {
+      try {
+        const notesObj = JSON.parse(existing.notes);
+        if (notesObj && Array.isArray(notesObj.backpack)) {
+          backpack = notesObj.backpack;
+        }
+      } catch (e) {
+        // Not JSON
+      }
+    }
+
+    const notesJson = JSON.stringify({
+      plainNotes: notes ?? "",
+      backpack: backpack,
+    });
+
     const updatedMemory = await db.userMemory.upsert({
       where: { userId: user.id },
       update: {
@@ -66,7 +104,7 @@ export async function POST(req: Request) {
         hobbies: hobbies ?? null,
         weaknesses: weaknesses ?? null,
         goals: goals ?? null,
-        notes: notes ?? null,
+        notes: notesJson,
       },
       create: {
         userId: user.id,
@@ -74,7 +112,7 @@ export async function POST(req: Request) {
         hobbies: hobbies ?? null,
         weaknesses: weaknesses ?? null,
         goals: goals ?? null,
-        notes: notes ?? null,
+        notes: notesJson,
       },
     });
 
@@ -84,7 +122,8 @@ export async function POST(req: Request) {
       hobbies: updatedMemory.hobbies || "",
       weaknesses: updatedMemory.weaknesses || "",
       goals: updatedMemory.goals || "",
-      notes: updatedMemory.notes || "",
+      notes: notes ?? "",
+      backpack: backpack,
     });
   } catch (error) {
     console.error("[SHELLDON_MEMORY_POST]", error);
