@@ -146,6 +146,27 @@ export default function ShelldonPage() {
     const [userMemory, setUserMemory] = useState<any>(null);
     const [isCallMode, setIsCallMode] = useState(false);
     
+    // Database Memory States
+    const [dbMemory, setDbMemory] = useState<{
+        name: string;
+        profession: string;
+        hobbies: string;
+        weaknesses: string;
+        goals: string;
+        notes: string;
+    } | null>(null);
+    const [isLoadingMemory, setIsLoadingMemory] = useState(false);
+    const [isSavingMemory, setIsSavingMemory] = useState(false);
+    const [showMemoryDashboard, setShowMemoryDashboard] = useState(false);
+    const [newMemoryLearned, setNewMemoryLearned] = useState<{
+        name: string | null;
+        profession: string | null;
+        hobbies: string[];
+        weaknesses: string[];
+        goals: string[];
+        notes: string[];
+    } | null>(null);
+    
     // Yeni stateler (Hint & Görevler)
     const [isLoadingHint, setIsLoadingHint] = useState(false);
     const [currentHint, setCurrentHint] = useState<string | null>(null);
@@ -240,7 +261,25 @@ export default function ShelldonPage() {
         return "Mini hedef: Bir sonraki seans daha uzun cümleler kur.";
     }, [selectedScenario, completedObjectives, selectedLang, currentLanguage]);
 
-    // === MEMORY LOAD (REMOVED - offline mode) ===
+    // === MEMORY LOAD ===
+    const fetchMemory = useCallback(async () => {
+        setIsLoadingMemory(true);
+        try {
+            const res = await fetch("/api/shelldon/memory");
+            if (res.ok) {
+                const data = await res.json();
+                setDbMemory(data);
+            }
+        } catch (e) {
+            console.error("Failed to load Shelldon Memory", e);
+        } finally {
+            setIsLoadingMemory(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        fetchMemory();
+    }, [fetchMemory]);
 
     useEffect(() => {
         if (!isSpeaking && (shelldonState === "speaking" || shelldonState === "happy" || shelldonState === "surprised")) {
@@ -292,7 +331,8 @@ export default function ShelldonPage() {
                     language: langCode,
                     level: levelCode,
                     practiceMode,
-                    memory: createEmptyMemory()
+                    memory: createEmptyMemory(),
+                    dbMemory
                 })
             });
             const data = await response.json();
@@ -387,7 +427,8 @@ export default function ShelldonPage() {
                     messages: updatedMessages.map(m => ({ role: m.role, content: m.content })),
                     turnIndex: turnCount,
                     completedObjectives,
-                    memory
+                    memory,
+                    dbMemory
                 })
             });
             const data = await response.json();
@@ -515,7 +556,8 @@ export default function ShelldonPage() {
                     practiceMode,
                     messages: allMessages.map(m => ({ role: m.role, content: m.content })),
                     completedObjectives,
-                    memory
+                    memory,
+                    dbMemory
                 })
             });
             const data = await response.json();
@@ -526,6 +568,11 @@ export default function ShelldonPage() {
                     vocabulary: data.vocabulary || "İyi iş çıkardın.",
                     tip: data.tip || "Böyle devam et!"
                 });
+                
+                if (data.newMemoryLearned) {
+                    setNewMemoryLearned(data.newMemoryLearned);
+                    fetchMemory();
+                }
             } else {
                 throw new Error("Invalid feedback format");
             }
@@ -563,7 +610,8 @@ export default function ShelldonPage() {
                     messages: messages.map(m => ({ role: m.role, content: m.content })),
                     turnIndex: turnCount,
                     completedObjectives,
-                    memory
+                    memory,
+                    dbMemory
                 })
             });
             const data = await response.json();
@@ -649,8 +697,6 @@ export default function ShelldonPage() {
 
     // === GERİ DÖN ===
     const goBack = () => {
-        // Memory extraction removed — offline mode
-
         stopSpeaking();
         setIsInChat(false);
         setCompletedObjectives([]);
@@ -664,6 +710,7 @@ export default function ShelldonPage() {
         setTurnCount(0);
         setSelectedImage(null);
         setRepeatQueue([]);
+        setNewMemoryLearned(null);
     };
 
     // =============================================
@@ -746,8 +793,45 @@ export default function ShelldonPage() {
                     </div>
                 )}
 
-                {(sessionSummary || sessionGoal) && (
-                    <div className="w-full max-w-md space-y-4 mb-8">
+                {(sessionSummary || sessionGoal || newMemoryLearned) && (
+                    <div className="w-full max-w-md space-y-4 mb-8 animate-in slide-in-from-bottom-4 duration-500">
+                        {/* Auto-learning banner */}
+                        {newMemoryLearned && (
+                            newMemoryLearned.name || 
+                            newMemoryLearned.profession || 
+                            newMemoryLearned.hobbies?.length > 0 || 
+                            newMemoryLearned.weaknesses?.length > 0 || 
+                            newMemoryLearned.goals?.length > 0 || 
+                            newMemoryLearned.notes?.length > 0
+                        ) && (
+                            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100/60 rounded-2xl p-5 shadow-sm relative overflow-hidden group">
+                                <div className="absolute -right-6 -bottom-6 w-20 h-20 bg-indigo-500/10 rounded-full blur-xl group-hover:scale-110 transition-transform" />
+                                <div className="flex items-center gap-2 mb-3">
+                                    <div className="w-6 h-6 rounded-lg bg-indigo-500 flex items-center justify-center text-[12px]">🧠</div>
+                                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-600">Shelldon Hafızasına Kaydetti!</p>
+                                </div>
+                                <div className="space-y-2.5 text-xs font-semibold text-slate-700 leading-relaxed">
+                                    {newMemoryLearned.name && (
+                                        <p>👤 Adınızı öğrendi: <span className="text-indigo-600 font-extrabold">{newMemoryLearned.name}</span></p>
+                                    )}
+                                    {newMemoryLearned.profession && (
+                                        <p>💼 Mesleğinizi öğrendi: <span className="text-indigo-600 font-extrabold">{newMemoryLearned.profession}</span></p>
+                                    )}
+                                    {newMemoryLearned.hobbies?.length > 0 && (
+                                        <p>🎨 Yeni hobi keşfetti: <span className="text-indigo-600 font-extrabold">{newMemoryLearned.hobbies.join(", ")}</span></p>
+                                    )}
+                                    {newMemoryLearned.weaknesses?.length > 0 && (
+                                        <p>🎯 Geliştirilecek yön: <span className="text-indigo-600 font-extrabold">{newMemoryLearned.weaknesses.join(", ")}</span></p>
+                                    )}
+                                    {newMemoryLearned.goals?.length > 0 && (
+                                        <p>🚀 Hedefinizi kaydetti: <span className="text-indigo-600 font-extrabold">{newMemoryLearned.goals.join(", ")}</span></p>
+                                    )}
+                                    {newMemoryLearned.notes?.length > 0 && (
+                                        <p>📝 Yeni notlar aldı: <span className="text-indigo-600 font-extrabold">{newMemoryLearned.notes.join(", ")}</span></p>
+                                    )}
+                                </div>
+                            </div>
+                        )}
                         {sessionSummary && (
                             <div className="bg-emerald-50 border border-emerald-100/50 rounded-2xl p-5 shadow-sm">
                                 <div className="flex items-center gap-2 mb-2">
@@ -837,6 +921,12 @@ export default function ShelldonPage() {
                                 </div>
                             </div>
                         </div>
+                        <button
+                            onClick={() => setShowMemoryDashboard(true)}
+                            className="text-xs font-bold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100 px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-all active:scale-95 border border-indigo-100/50"
+                        >
+                            🧠 Bellek
+                        </button>
                     </div>
                 </header>
 
@@ -1214,9 +1304,18 @@ export default function ShelldonPage() {
                             🐢 Shelldon
                         </h1>
                     </div>
-                    <div className="text-xs font-bold text-emerald-500 bg-emerald-50 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5" />
-                        Konuşma Partneri
+                    <div className="flex items-center gap-2">
+                        <button
+                            onClick={() => setShowMemoryDashboard(true)}
+                            className="text-xs font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm active:scale-95 animate-pulse"
+                        >
+                            <Sparkles className="w-3.5 h-3.5 text-indigo-500 animate-spin" />
+                            Akıllı Bellek v2 🧠
+                        </button>
+                        <div className="text-xs font-bold text-emerald-500 bg-emerald-50 px-3 py-1.5 rounded-lg hidden sm:flex items-center gap-1.5">
+                            <Sparkles className="w-3.5 h-3.5" />
+                            Konuşma Partneri
+                        </div>
                     </div>
                 </div>
             </header>
@@ -1323,6 +1422,207 @@ export default function ShelldonPage() {
                     </section>
                 )}
             </main>
+
+            {/* === AKILLI BELLEK DASHBOARD OVERLAY === */}
+            {showMemoryDashboard && (
+                <div className="fixed inset-0 z-[100] flex justify-end animate-in fade-in duration-300">
+                    {/* Backdrop */}
+                    <div 
+                        onClick={() => setShowMemoryDashboard(false)}
+                        className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
+                    />
+
+                    {/* Sliding Panel */}
+                    <div className="relative w-full max-w-md h-full bg-white/75 backdrop-blur-2xl border-l border-white/20 shadow-2xl flex flex-col z-10 animate-in slide-in-from-right duration-300 overflow-hidden">
+                        {/* Glow blobs for premium aesthetics */}
+                        <div className="absolute top-[-10%] left-[-10%] w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+                        <div className="absolute bottom-[-10%] right-[-10%] w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+                        {/* Panel Header */}
+                        <header className="p-6 border-b border-indigo-100/50 flex items-center justify-between shrink-0 relative z-10">
+                            <div className="flex items-center gap-2.5">
+                                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                                    <Sparkles className="w-5 h-5 text-white animate-pulse" />
+                                </div>
+                                <div>
+                                    <h3 className="font-extrabold text-slate-800 text-base leading-none">Akıllı Bellek v2</h3>
+                                    <span className="text-[10px] text-indigo-500 font-bold uppercase tracking-wider mt-1 block">Shelldon Memory System</span>
+                                </div>
+                            </div>
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={() => setShowMemoryDashboard(false)}
+                                className="w-8 h-8 rounded-full border border-slate-100 bg-white/50 text-slate-400 hover:text-slate-700"
+                            >
+                                <ArrowLeft className="w-4 h-4 rotate-180" />
+                            </Button>
+                        </header>
+
+                        {/* Panel Content (Form) */}
+                        <div className="flex-1 overflow-y-auto p-6 space-y-6 relative z-10">
+                            {isLoadingMemory ? (
+                                <div className="h-64 flex flex-col items-center justify-center gap-3 text-slate-400">
+                                    <Loader2 className="w-8 h-8 animate-spin text-indigo-500" />
+                                    <span className="text-xs font-bold uppercase tracking-wider animate-pulse">Hafıza yükleniyor...</span>
+                                </div>
+                            ) : dbMemory ? (
+                                <div className="space-y-5">
+                                    <div className="p-4 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 border border-indigo-100/30 rounded-2xl">
+                                        <p className="text-[11px] text-indigo-500 font-bold uppercase tracking-wide mb-1">Akıllı Analiz Durumu</p>
+                                        <p className="text-sm font-semibold text-slate-700 leading-relaxed flex items-center gap-1.5">
+                                            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                                            Shelldon konuşmalarınızdan yeni bilgiler öğreniyor!
+                                        </p>
+                                    </div>
+
+                                    {/* Name Input */}
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Adınız</label>
+                                        <input
+                                            type="text"
+                                            value={dbMemory.name}
+                                            onChange={(e) => setDbMemory({ ...dbMemory, name: e.target.value })}
+                                            placeholder="Örn: Yiğithan"
+                                            className="w-full px-4 py-3 bg-white/55 border border-slate-200/80 rounded-xl outline-none text-slate-700 text-sm font-semibold focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 transition-all placeholder:text-slate-300"
+                                        />
+                                    </div>
+
+                                    {/* Profession Input */}
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Mesleğiniz</label>
+                                        <input
+                                            type="text"
+                                            value={dbMemory.profession}
+                                            onChange={(e) => setDbMemory({ ...dbMemory, profession: e.target.value })}
+                                            placeholder="Örn: Yazılım Mühendisi"
+                                            className="w-full px-4 py-3 bg-white/55 border border-slate-200/80 rounded-xl outline-none text-slate-700 text-sm font-semibold focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 transition-all placeholder:text-slate-300"
+                                        />
+                                    </div>
+
+                                    {/* Hobbies Input */}
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Hobileriniz (Virgülle ayırın)</label>
+                                        <input
+                                            type="text"
+                                            value={dbMemory.hobbies}
+                                            onChange={(e) => setDbMemory({ ...dbMemory, hobbies: e.target.value })}
+                                            placeholder="Örn: Yüzme, Kitap Okumak, Satranç"
+                                            className="w-full px-4 py-3 bg-white/55 border border-slate-200/80 rounded-xl outline-none text-slate-700 text-sm font-semibold focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 transition-all placeholder:text-slate-300"
+                                        />
+                                    </div>
+
+                                    {/* Weaknesses Input */}
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Zayıf Yönler / Hatalarınız</label>
+                                        <textarea
+                                            value={dbMemory.weaknesses}
+                                            onChange={(e) => setDbMemory({ ...dbMemory, weaknesses: e.target.value })}
+                                            placeholder="Örn: Kelime telaffuzu, Fransızca geçmiş zaman kuralları"
+                                            rows={2}
+                                            className="w-full px-4 py-3 bg-white/55 border border-slate-200/80 rounded-xl outline-none text-slate-700 text-sm font-semibold focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 transition-all placeholder:text-slate-300 resize-none"
+                                        />
+                                    </div>
+
+                                    {/* Goals Input */}
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Dil Öğrenme Amaçlarınız</label>
+                                        <input
+                                            type="text"
+                                            value={dbMemory.goals}
+                                            onChange={(e) => setDbMemory({ ...dbMemory, goals: e.target.value })}
+                                            placeholder="Örn: Fransa'da çalışmak, seyahat etmek"
+                                            className="w-full px-4 py-3 bg-white/55 border border-slate-200/80 rounded-xl outline-none text-slate-700 text-sm font-semibold focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 transition-all placeholder:text-slate-300"
+                                        />
+                                    </div>
+
+                                    {/* General Notes Input */}
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Ek Notlar / Detaylar</label>
+                                        <textarea
+                                            value={dbMemory.notes}
+                                            onChange={(e) => setDbMemory({ ...dbMemory, notes: e.target.value })}
+                                            placeholder="Örn: Her sabah kahve içmeyi sever, kedisinin adı Mırmır."
+                                            rows={3}
+                                            className="w-full px-4 py-3 bg-white/55 border border-slate-200/80 rounded-xl outline-none text-slate-700 text-sm font-semibold focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 transition-all placeholder:text-slate-300 resize-none"
+                                        />
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="h-64 flex flex-col items-center justify-center gap-4 text-center text-slate-400">
+                                    <Sparkles className="w-12 h-12 text-slate-300" />
+                                    <div>
+                                        <p className="text-sm font-bold text-slate-600 mb-1">Oturum Açılmamış</p>
+                                        <p className="text-xs leading-relaxed max-w-[200px]">Dil öğreniminizin kalıcı bellek ile kişiselleştirilmesi için oturum açmalısınız.</p>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Panel Footer */}
+                        {dbMemory && (
+                            <footer className="p-6 border-t border-slate-100 bg-white/60 backdrop-blur-md flex gap-3 shrink-0 relative z-10">
+                                <Button
+                                    variant="outline"
+                                    onClick={async () => {
+                                        if (confirm("Hafızayı tamamen silmek istediğinize emin misiniz?")) {
+                                            setIsSavingMemory(true);
+                                            try {
+                                                const res = await fetch("/api/shelldon/memory", { method: "DELETE" });
+                                                if (res.ok) {
+                                                    setDbMemory({
+                                                        name: "",
+                                                        profession: "",
+                                                        hobbies: "",
+                                                        weaknesses: "",
+                                                        goals: "",
+                                                        notes: ""
+                                                    });
+                                                    alert("Hafıza başarıyla sıfırlandı!");
+                                                }
+                                            } catch (e) {
+                                                console.error("Silme hatası:", e);
+                                            } finally {
+                                                setIsSavingMemory(false);
+                                            }
+                                        }
+                                    }}
+                                    disabled={isSavingMemory}
+                                    className="border-rose-100 text-rose-600 hover:bg-rose-50 hover:text-rose-700 rounded-xl px-4 flex items-center gap-1.5"
+                                >
+                                    Sıfırla
+                                </Button>
+                                <Button
+                                    onClick={async () => {
+                                        setIsSavingMemory(true);
+                                        try {
+                                            const res = await fetch("/api/shelldon/memory", {
+                                                method: "POST",
+                                                headers: { "Content-Type": "application/json" },
+                                                body: JSON.stringify(dbMemory)
+                                            });
+                                            if (res.ok) {
+                                                const updated = await res.json();
+                                                setDbMemory(updated);
+                                                alert("Hafıza başarıyla güncellendi!");
+                                                setShowMemoryDashboard(false);
+                                            }
+                                        } catch (e) {
+                                            console.error("Güncelleme hatası:", e);
+                                        } finally {
+                                            setIsSavingMemory(false);
+                                        }
+                                    }}
+                                    disabled={isSavingMemory}
+                                    className="flex-1 bg-gradient-to-br from-indigo-500 to-purple-600 text-white hover:opacity-90 rounded-xl font-bold tracking-wider animate-pulse"
+                                >
+                                    {isSavingMemory ? <Loader2 className="w-4 h-4 animate-spin mx-auto" /> : "Kaydet"}
+                                </Button>
+                            </footer>
+                        )}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

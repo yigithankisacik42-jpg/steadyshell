@@ -1,4 +1,23 @@
 import { NextResponse } from 'next/server';
+import { auth } from '@/auth';
+import { db } from '@/lib/db';
+
+function mergeList(existing: string | null, extracted: string[] | string | undefined): string {
+  if (!extracted) return existing || "";
+  const extList = Array.isArray(extracted) ? extracted : [extracted];
+  const cleanExtracted = extList
+    .map(x => x.trim())
+    .filter(x => x.length > 0);
+    
+  if (cleanExtracted.length === 0) return existing || "";
+
+  const existList = existing
+    ? existing.split(",").map(x => x.trim()).filter(x => x.length > 0)
+    : [];
+
+  const combined = Array.from(new Set([...existList, ...cleanExtracted]));
+  return combined.join(", ");
+}
 
 const LANG_NAMES: Record<string, string> = {
   es: 'Spanish (Español)',
@@ -38,12 +57,28 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json();
-    const { action, scenario, language, level, practiceMode, messages, turnIndex, completedObjectives, memory } = body;
+    const { action, scenario, language, level, practiceMode, messages, turnIndex, completedObjectives, memory, dbMemory } = body;
     
     const langName = LANG_NAMES[language] || language || 'German';
     const persona = memory?.persona || "friendly";
     const objectives = scenario?.objectives?.[language] || [];
-    const knownFacts = memory?.knownFacts?.join(', ') || 'None yet';
+    
+    // Merge database memory with session facts
+    const facts: string[] = [];
+    if (dbMemory) {
+      if (dbMemory.name) facts.push(`Student's name: ${dbMemory.name}`);
+      if (dbMemory.profession) facts.push(`Profession: ${dbMemory.profession}`);
+      if (dbMemory.hobbies) facts.push(`Hobbies: ${dbMemory.hobbies}`);
+      if (dbMemory.weaknesses) facts.push(`Weaknesses/Struggles: ${dbMemory.weaknesses}`);
+      if (dbMemory.goals) facts.push(`Goals: ${dbMemory.goals}`);
+      if (dbMemory.notes) facts.push(`Notes: ${dbMemory.notes}`);
+    }
+    if (memory?.knownFacts?.length > 0) {
+      memory.knownFacts.forEach((fact: string) => {
+        if (!facts.includes(fact)) facts.push(fact);
+      });
+    }
+    const knownFacts = facts.join(' • ') || 'None yet';
 
     // ═══ PREMIUM SYSTEM PROMPT ═══
     let systemPrompt = `You are "Shelldon" 🐢, a charismatic and intelligent AI language tutor in the app "Steady Shell".
@@ -123,13 +158,16 @@ OUTPUT FORMAT — VALID JSON ONLY:
 }`;
     } else if (action === 'feedback') {
       systemPrompt += `
-TASK: The conversation has ended. Evaluate the student's performance.
+TASK: The conversation has ended. Evaluate the student's performance AND extract personal details for memory.
 
 SCORING CRITERIA:
 - Grammar accuracy (30%)
 - Vocabulary range and appropriateness (30%)
 - Objective completion (25%)
 - Conversational flow and naturalness (15%)
+
+MEMORY EXTRACTION:
+Analyze the dialogue history. If the student mentioned any personal details like their name, profession, hobbies, weaknesses/struggles in language learning, goals, or general notes, extract them as brief items. Keep extracted facts in Turkish. If nothing new is mentioned, return null or empty arrays.
 
 Be specific in your feedback — mention exact examples from the conversation.
 ${persona === 'strict' ? 'Be honest and critical. High standards.' : 'Be encouraging but constructive.'}
@@ -139,7 +177,15 @@ OUTPUT FORMAT — VALID JSON ONLY:
   "score": 75,
   "grammar": "Türkçe gramer değerlendirmesi (1-2 cümle, somut örneklerle)",
   "vocabulary": "Türkçe kelime değerlendirmesi (1-2 cümle)",
-  "tip": "Türkçe gelişim önerisi (1-2 cümle, spesifik)"
+  "tip": "Türkçe gelişim önerisi (1-2 cümle, spesifik)",
+  "extractedMemory": {
+    "name": "extracted name or empty string",
+    "profession": "extracted profession or empty string",
+    "hobbies": ["extracted hobby 1", "extracted hobby 2"],
+    "weaknesses": ["extracted weakness 1", "extracted weakness 2"],
+    "goals": ["extracted goal 1", "extracted goal 2"],
+    "notes": ["extracted custom note 1", "extracted custom note 2"]
+  }
 }`;
     } else {
       return NextResponse.json({ error: 'Invalid action' }, { status: 400 });
@@ -197,6 +243,68 @@ OUTPUT FORMAT — VALID JSON ONLY:
       }
       
       const parsedJson = JSON.parse(cleanJson.trim());
+
+      // If action is feedback, extract and merge memories into the database
+      if (action === 'feedback' && parsedJson.extractedMemory) {
+        try {
+          const session = await auth();
+          if (session?.user?.email) {
+            const user = await db.user.findUnique({
+              where: { email: session.user.email },
+              include: { memory: true }
+            });
+
+            if (user) {
+              const ext = parsedJson.extractedMemory;
+              
+              if (ext.name && ext.name.trim() && (!user.name || user.name === "Gezgin")) {
+                await db.user.update({
+                  where: { id: user.id },
+                  data: { name: ext.name.trim() }
+                });
+              }
+
+              const mergedHobbies = mergeList(user.memory?.hobbies || null, ext.hobbies);
+              const mergedWeaknesses = mergeList(user.memory?.weaknesses || null, ext.weaknesses);
+              const mergedGoals = mergeList(user.memory?.goals || null, ext.goals);
+              const mergedNotes = mergeList(user.memory?.notes || null, ext.notes);
+              const newProfession = ext.profession?.trim() || user.memory?.profession || "";
+
+              await db.userMemory.upsert({
+                where: { userId: user.id },
+                update: {
+                  hobbies: mergedHobbies || null,
+                  weaknesses: mergedWeaknesses || null,
+                  goals: mergedGoals || null,
+                  notes: mergedNotes || null,
+                  profession: newProfession || null
+                },
+                create: {
+                  userId: user.id,
+                  hobbies: mergedHobbies || null,
+                  weaknesses: mergedWeaknesses || null,
+                  goals: mergedGoals || null,
+                  notes: mergedNotes || null,
+                  profession: newProfession || null
+                }
+              });
+
+              // Flag the newly learned items so the client can display them in the results!
+              parsedJson.newMemoryLearned = {
+                name: ext.name && ext.name.trim() && ext.name.trim() !== user.name ? ext.name.trim() : null,
+                profession: ext.profession && ext.profession.trim() && ext.profession.trim() !== user.memory?.profession ? ext.profession.trim() : null,
+                hobbies: Array.isArray(ext.hobbies) ? ext.hobbies.filter((h: string) => !user.memory?.hobbies?.includes(h)) : [],
+                weaknesses: Array.isArray(ext.weaknesses) ? ext.weaknesses.filter((w: string) => !user.memory?.weaknesses?.includes(w)) : [],
+                goals: Array.isArray(ext.goals) ? ext.goals.filter((g: string) => !user.memory?.goals?.includes(g)) : [],
+                notes: Array.isArray(ext.notes) ? ext.notes.filter((n: string) => !user.memory?.notes?.includes(n)) : []
+              };
+            }
+          }
+        } catch (dbError) {
+          console.error('[Shelldon AI] Failed to auto-save extracted memory:', dbError);
+        }
+      }
+
       return NextResponse.json(parsedJson);
     } catch (parseError) {
       console.error('[Shelldon AI] JSON Parse Error:', parseError, 'Raw:', aiMessageText);
