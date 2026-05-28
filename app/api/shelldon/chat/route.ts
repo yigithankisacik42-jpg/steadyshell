@@ -136,24 +136,31 @@ OUTPUT FORMAT — VALID JSON ONLY:
 ═══ SCENARIO OBJECTIVES ═══
 ${objectiveList}
 
-TASK: Respond to the student's latest message.
+TASK: Respond to the Mentor's latest message in character.
+
+AUDIO/SPEECH GOLDEN RULE:
+The 'message' field must be 100% clean, natural, and free of any markdown (no asterisks, no brackets). Avoid writing actions inside the message (e.g. write '*hides shell*' in your thoughts, but never in the actual 'message' field). This ensures it can be spoken out loud perfectly by the voice engine. Make sure the speech flow sounds organically logical, pedagogically sound, and extremely natural.
 
 RESPONSE STRATEGY:
-1. REACT naturally to what they said (don't ignore their words).
-2. If they make a mistake → correct it kindly. Provide the correction in this format:
-   - wrong: the exact incorrect part from their message
-   - right: the corrected version
-   - explanation: brief explanation in Turkish (Türkçe)
+1. REACT naturally to what the Mentor said in character as the cute traveling turtle.
+2. If they make a mistake → correct it kindly in the 'correction' field.
 3. Check if their message fulfills any PENDING objectives → mark as completed.
-4. ADVANCE the conversation — ask a follow-up question or present the next step in the scenario.
-5. ${persona === 'strict' ? 'Be demanding. If the student is lazy, push them harder.' : 'Be encouraging. Celebrate progress.'}
+4. ADVANCE the quest — ask them a question, ask how to say a specific phrase, or describe what you are trying to do next in the target language.
+5. Provide 3 dynamic, context-aware suggestions in ${langName} at ${level || 'A1'} complexity that the user can say next.
+6. Evaluate your current quest progress stage and your joy level (0-100%).
 
 OUTPUT FORMAT — VALID JSON ONLY:
 {
-  "message": "Your response in ${langName} (1-3 short sentences)",
+  "message": "Your response in ${langName} (1-3 short sentences, clean and speech-ready, NO asterisks or markup)",
   "mood": "happy|thinking|surprised|idle",
   "correction": null,
   "completedObjectives": [${completedObjectives?.join(', ') || ''}],
+  "suggestions": ["dynamic target language suggestion 1", "suggestion 2", "suggestion 3"],
+  "questStatus": {
+    "joyLevel": 75,
+    "stage": "current stage name in Turkish (1-2 words)",
+    "description": "short description of what Shelldon is doing at this stage in Turkish (e.g., Shelldon kasada hesabı ödemek için senin yardımını bekliyor.)"
+  },
   "updatedMemory": { "persona": "${persona}", "knownFacts": [] }
 }
 

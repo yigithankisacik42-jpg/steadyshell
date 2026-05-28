@@ -168,10 +168,26 @@ export default function ShelldonPage() {
         earnedItem: string | null;
         backpack: string[];
     } | null>(null);
-    
     // Backpack Gamification States
     const [backpack, setBackpack] = useState<string[]>([]);
     const [showBackpack, setShowBackpack] = useState(false);
+    
+    // Gramer Log and Dynamic Suggestion States
+    const [grammarLog, setGrammarLog] = useState<{ wrong: string; right: string; explanation: string; date: string }[]>([]);
+    const [showGrammarLog, setShowGrammarLog] = useState(false);
+    const [suggestions, setSuggestions] = useState<string[]>([]);
+    const [questStatus, setQuestStatus] = useState<{ joyLevel: number; stage: string; description: string } | null>(null);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem("steadyshell_grammar_log");
+            if (saved) {
+                try {
+                    setGrammarLog(JSON.parse(saved));
+                } catch(e) {}
+            }
+        }
+    }, []);
     
     // Yeni stateler (Hint & Görevler)
     const [isLoadingHint, setIsLoadingHint] = useState(false);
@@ -326,6 +342,8 @@ export default function ShelldonPage() {
         setSessionGoal(null);
         setRepeatQueue([]);
         setMemory(createEmptyMemory());
+        setSuggestions([]);
+        setQuestStatus(null);
 
         const langCode = selectedLang || currentLanguage?.code || "de";
         const levelCode = progress[langCode]?.currentLevel || currentLevel?.code || "A1";
@@ -469,6 +487,25 @@ export default function ShelldonPage() {
                     });
                 }
 
+                // Save to local grammar log
+                if (data.correction && data.correction.wrong) {
+                    setGrammarLog(prev => {
+                        const newLog = [
+                            {
+                                wrong: data.correction.wrong,
+                                right: data.correction.right,
+                                explanation: data.correction.explanation,
+                                date: new Date().toLocaleDateString("tr-TR")
+                            },
+                            ...prev
+                        ].slice(0, 100);
+                        localStorage.setItem("steadyshell_grammar_log", JSON.stringify(newLog));
+                        return newLog;
+                    });
+                }
+
+                if (data.suggestions) setSuggestions(data.suggestions);
+                if (data.questStatus) setQuestStatus(data.questStatus);
                 if (data.completedObjectives) setCompletedObjectives(data.completedObjectives);
 
                 const aiMsg: Message = { role: "assistant", content: data.message };
@@ -952,12 +989,20 @@ export default function ShelldonPage() {
                                 </div>
                             </div>
                         </div>
-                        <button
-                            onClick={() => setShowMemoryDashboard(true)}
-                            className="text-xs font-bold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100 px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-all active:scale-95 border border-indigo-100/50"
-                        >
-                            🧠 Bellek
-                        </button>
+                        <div className="flex items-center gap-2">
+                            <button
+                                onClick={() => setShowGrammarLog(true)}
+                                className="text-xs font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-all active:scale-95 border border-indigo-100/50"
+                            >
+                                📖 Günlük
+                            </button>
+                            <button
+                                onClick={() => setShowMemoryDashboard(true)}
+                                className="text-xs font-bold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100 px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-all active:scale-95 border border-indigo-100/50"
+                            >
+                                🧠 Bellek
+                            </button>
+                        </div>
                     </div>
                 </header>
 
@@ -1005,6 +1050,39 @@ export default function ShelldonPage() {
                                 {isCallMode ? <PhoneOff className="w-4 h-4 text-white" /> : <Phone className="w-4 h-4 text-emerald-500" />}
                                 {isCallMode ? "Aramayı Bitir" : "Canlı Görüşme"}
                             </Button>
+                        </div>
+                    </div>
+
+                    {/* Shelldon'ın Macera Takipçisi (Quest Tracker Widget) */}
+                    <div className="w-full max-w-lg px-6 mt-3 shrink-0 animate-in slide-in-from-top-4 duration-500">
+                        <div className="bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-white/90 backdrop-blur-md rounded-2xl p-4 border border-indigo-100 shadow-sm relative overflow-hidden">
+                            <div className="absolute -top-10 -left-10 w-24 h-24 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none" />
+                            
+                            <div className="flex items-center justify-between mb-2">
+                                <div className="flex items-center gap-1.5">
+                                    <span className="text-lg">🗺️</span>
+                                    <div>
+                                        <p className="text-[10px] font-black text-indigo-500 uppercase tracking-wider">Mevcut Macera Aşaması</p>
+                                        <p className="text-xs font-extrabold text-slate-800 leading-none mt-0.5">
+                                            {questStatus?.stage || "Maceraya Isınma"}
+                                        </p>
+                                    </div>
+                                </div>
+                                <span className="text-[11px] font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100 flex items-center gap-1">
+                                    🐢 Neşe: %{questStatus?.joyLevel ?? 50}
+                                </span>
+                            </div>
+                            
+                            <p className="text-xs text-slate-500 leading-relaxed font-semibold mb-3 border-t border-slate-100 pt-2.5">
+                                {questStatus?.description || `${selectedScenario.titleTr} macerasına başladınız! Shelldon'a rehberlik edin.`}
+                            </p>
+
+                            <div className="h-2 bg-slate-100 rounded-full overflow-hidden shadow-inner">
+                                <div 
+                                    className="h-full bg-gradient-to-r from-amber-400 via-indigo-500 to-emerald-500 rounded-full transition-all duration-1000"
+                                    style={{ width: `${questStatus?.joyLevel ?? 50}%` }}
+                                />
+                            </div>
                         </div>
                     </div>
 
@@ -1171,14 +1249,14 @@ export default function ShelldonPage() {
                         )}
 
                         {/* Öneri cümleleri */}
-                        {suggestions.length > 0 && turnCount < MAX_TURNS && (
+                        {turnCount < MAX_TURNS && (
                             <div className="flex gap-2 overflow-x-auto pb-3 scrollbar-hide">
-                                {suggestions.map((phrase, i) => (
+                                {(suggestions.length > 0 ? suggestions : (selectedScenario.suggestedPhrases[langCode] || [])).map((phrase, i) => (
                                     <button
                                         key={i}
                                         onClick={() => handleSendMessage(phrase)}
                                         disabled={isLoading}
-                                        className="shrink-0 px-3 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full border border-emerald-200 hover:bg-emerald-100 transition-colors disabled:opacity-50"
+                                        className="shrink-0 px-3 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-200 hover:bg-indigo-100 transition-colors disabled:opacity-50 active:scale-95 transition-all shadow-sm font-semibold"
                                     >
                                         {phrase}
                                     </button>
@@ -1358,6 +1436,12 @@ export default function ShelldonPage() {
                     </div>
                     <div className="flex items-center gap-2">
                         <button
+                            onClick={() => setShowGrammarLog(true)}
+                            className="text-xs font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm active:scale-95 border border-indigo-100"
+                        >
+                            📖 Gramer Günlüğü ({grammarLog.length})
+                        </button>
+                        <button
                             onClick={() => setShowBackpack(true)}
                             className="text-xs font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm active:scale-95 border border-amber-100"
                         >
@@ -1510,6 +1594,98 @@ export default function ShelldonPage() {
                     </section>
                 )}
             </main>
+
+            {/* === GRAMER GÜNLÜĞÜ DRAWER OVERLAY === */}
+            {showGrammarLog && (
+                <div className="fixed inset-0 z-[100] flex justify-end animate-in fade-in duration-300">
+                    <div 
+                        onClick={() => setShowGrammarLog(false)}
+                        className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
+                    />
+
+                    <div className="relative w-full max-w-md h-full bg-white/80 backdrop-blur-2xl border-l border-white/20 shadow-2xl flex flex-col z-10 animate-in slide-in-from-right duration-300 overflow-hidden">
+                        <div className="absolute top-[-10%] left-[-10%] w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+                        
+                        <header className="p-6 border-b border-indigo-100 flex items-center justify-between shrink-0 relative z-10">
+                            <div className="flex items-center gap-2.5">
+                                <span className="text-2xl animate-pulse">📖</span>
+                                <div>
+                                    <h3 className="font-extrabold text-slate-800 text-base leading-none">Gramer Günlüğü</h3>
+                                    <span className="text-[10px] text-indigo-600 font-bold uppercase tracking-wider mt-1 block">Mistakes Learned & Corrected</span>
+                                </div>
+                            </div>
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={() => setShowGrammarLog(false)}
+                                className="w-8 h-8 rounded-full border border-slate-100 bg-white/50 text-slate-400 hover:text-slate-700"
+                            >
+                                <ArrowLeft className="w-4 h-4 rotate-180" />
+                            </Button>
+                        </header>
+
+                        <div className="flex-1 overflow-y-auto p-6 space-y-4 relative z-10">
+                            {grammarLog.length === 0 ? (
+                                <div className="h-64 flex flex-col items-center justify-center gap-4 text-center text-slate-400">
+                                    <span className="text-5xl animate-bounce">✍️</span>
+                                    <div>
+                                        <p className="text-sm font-bold text-slate-600 mb-1">Günlük Bomboş</p>
+                                        <p className="text-xs leading-relaxed max-w-[200px] mx-auto">Sohbetlerde hata yaptıkça Shelldon'ın düzeltmeleri burada birikir. Hatalar en büyük öğretmenlerdir!</p>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="space-y-4">
+                                    {grammarLog.map((log, idx) => (
+                                        <div 
+                                            key={idx} 
+                                            className="bg-white/60 border border-indigo-100 p-4 rounded-2xl flex flex-col gap-2.5 transition-all shadow-sm hover:shadow"
+                                        >
+                                            <div className="flex justify-between items-center">
+                                                <span className="text-[9px] text-indigo-600 font-bold uppercase tracking-wider bg-indigo-50 px-2 py-0.5 rounded-full">
+                                                    Gramer Düzeltmesi
+                                                </span>
+                                                <span className="text-[10px] text-slate-400 font-bold">{log.date}</span>
+                                            </div>
+                                            
+                                            <div className="space-y-1.5 text-xs">
+                                                <p className="font-semibold text-slate-500 leading-relaxed flex items-start gap-1.5">
+                                                    <span className="text-rose-500 shrink-0">🔴 Yanlış:</span>
+                                                    <span className="line-through decoration-rose-200">{log.wrong}</span>
+                                                </p>
+                                                <p className="font-bold text-slate-700 leading-relaxed flex items-start gap-1.5">
+                                                    <span className="text-emerald-500 shrink-0">🟢 Doğru:</span>
+                                                    <span className="text-emerald-700 font-bold">{log.right}</span>
+                                                </p>
+                                            </div>
+                                            
+                                            <p className="text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-100/60 leading-relaxed font-medium">
+                                                {log.explanation}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                        
+                        {grammarLog.length > 0 && (
+                            <footer className="p-6 border-t border-slate-100 bg-white/60 backdrop-blur-md shrink-0 relative z-10">
+                                <Button
+                                    variant="outline"
+                                    onClick={() => {
+                                        if (confirm("Gramer günlüğünü tamamen temizlemek istediğinize emin misiniz?")) {
+                                            setGrammarLog([]);
+                                            localStorage.removeItem("steadyshell_grammar_log");
+                                        }
+                                    }}
+                                    className="w-full border-rose-100 text-rose-600 hover:bg-rose-50 hover:text-rose-700 rounded-xl"
+                                >
+                                    Günlüğü Temizle
+                                </Button>
+                            </footer>
+                        )}
+                    </div>
+                </div>
+            )}
 
             {/* === BACKPACK DRAWER OVERLAY === */}
             {showBackpack && (
