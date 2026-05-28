@@ -224,7 +224,10 @@ export function Scene3D({ sceneData, messages, isLoading, isMouthOpen }: Scene3D
   const lastUserMessage = userMessages.length > 0 ? userMessages[userMessages.length - 1].content : null;
 
   const assistantMessages = messages.filter(m => m.role === 'assistant');
-  const lastAssistantMessage = assistantMessages.length > 0 ? assistantMessages[assistantMessages.length - 1].content : null;
+  const lastAssistantRaw = assistantMessages.length > 0 ? assistantMessages[assistantMessages.length - 1].content : null;
+  const lastAssistantMessage = lastAssistantRaw
+    ? lastAssistantRaw.replace(/\(✏️\s*["'«“‘{]?(.*?)["'»”’}]?\s*(?:←|<-|instead of|not)\s*["'«“‘{]?(.*?)["'»”’}]?\)/g, '').replace(/\s+/g, ' ').trim()
+    : null;
 
   // Set positions from map OR default fallback coordinates
   const sceneId = sceneData?.id || "";
