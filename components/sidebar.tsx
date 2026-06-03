@@ -11,6 +11,7 @@ import { useHearts, formatTime } from "@/lib/hearts-context";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { UserAvatar } from "@/components/user-avatar";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const menuItems = [
   { href: "/learn", icon: Home, label: "Öğren", color: "text-indigo-500" },
@@ -49,29 +50,32 @@ export const Sidebar = ({ className }: { className?: string }) => {
 
   return (
     <div className={cn(
-      "flex h-full lg:w-[280px] lg:fixed left-0 top-0 px-4 py-6 border-r border-white/20 flex-col transition-all duration-300",
-      "bg-white/70 backdrop-blur-xl shadow-[4px_0_24px_rgba(0,0,0,0.02)]",
+      "flex h-full lg:w-[280px] lg:fixed left-0 top-0 px-4 py-6 border-r border-slate-200/50 dark:border-slate-800/50 flex-col transition-all duration-300",
+      "bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[4px_0_24px_rgba(0,0,0,0.02)]",
       className
     )}>
 
-      {/* --- LOGO --- */}
-      <Link href="/learn" className="mb-8 px-2 group">
-        <div className="flex items-center gap-3 transition-transform group-hover:scale-105 duration-300">
-          <div className="relative">
-            <div className="absolute inset-0 bg-indigo-500 blur-lg opacity-20 group-hover:opacity-40 transition-opacity rounded-full"></div>
-            <Image
-              src="/mascot_v2.png"
-              alt="Shelldon"
-              width={42}
-              height={42}
-              className="drop-shadow-md relative z-10"
-            />
+      {/* --- LOGO & THEME SWITCHER --- */}
+      <div className="flex items-center justify-between mb-8 px-2">
+        <Link href="/learn" className="group">
+          <div className="flex items-center gap-3 transition-transform group-hover:scale-105 duration-300">
+            <div className="relative">
+              <div className="absolute inset-0 bg-indigo-500 blur-lg opacity-20 group-hover:opacity-40 transition-opacity rounded-full"></div>
+              <Image
+                src="/mascot_v2.png"
+                alt="Shelldon"
+                width={42}
+                height={42}
+                className="drop-shadow-md relative z-10"
+              />
+            </div>
+            <h1 className="text-2xl font-black bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent tracking-tight">
+              SteadyShell
+            </h1>
           </div>
-          <h1 className="text-2xl font-black bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent tracking-tight">
-            SteadyShell
-          </h1>
-        </div>
-      </Link>
+        </Link>
+        <ModeToggle />
+      </div>
 
       {/* --- LANGUAGE SWITCHER --- */}
       <div className="px-2 mb-6">
@@ -90,8 +94,8 @@ export const Sidebar = ({ className }: { className?: string }) => {
                 className={cn(
                   "group relative flex items-center gap-x-3 px-4 py-3.5 rounded-2xl transition-all duration-300 cursor-pointer overflow-hidden",
                   isActive
-                    ? "bg-gradient-to-r from-indigo-50/80 to-purple-50/50 text-indigo-700 shadow-sm border border-indigo-100/50"
-                    : "text-slate-500 hover:bg-slate-50 hover:text-slate-700"
+                    ? "bg-gradient-to-r from-indigo-500/10 to-purple-500/10 text-indigo-600 dark:text-indigo-400 shadow-sm border border-indigo-500/20"
+                    : "text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/40 hover:text-slate-700 dark:hover:text-slate-200"
                 )}
               >
                 {/* Active Indicator Line */}
@@ -133,16 +137,16 @@ export const Sidebar = ({ className }: { className?: string }) => {
       {/* --- STATS CARDS --- */}
       <div className="grid grid-cols-2 gap-2 mb-4 mt-4">
         {/* Hearts */}
-        <div className="col-span-2 relative p-3 rounded-2xl bg-rose-50/50 border border-rose-100/60 backdrop-blur-sm group hover:bg-rose-50 transition-colors">
+        <div className="col-span-2 relative p-3 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-rose-500/10 dark:border-rose-500/20 backdrop-blur-sm group hover:bg-rose-500/10 dark:hover:bg-rose-500/20 transition-colors">
           <div className="flex justify-between items-center mb-1">
             <div className="flex items-center gap-1.5">
-              <div className="p-1.5 bg-rose-100 rounded-lg group-hover:scale-110 transition-transform">
+              <div className="p-1.5 bg-rose-100 dark:bg-rose-950/80 rounded-lg group-hover:scale-110 transition-transform">
                 <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
               </div>
-              <span className="text-xs font-bold text-rose-900/70 uppercase">Canlar</span>
+              <span className="text-xs font-bold text-rose-900/70 dark:text-rose-400/80 uppercase">Canlar</span>
             </div>
             {isRecovering && (
-              <div className="flex items-center gap-1 text-[10px] font-bold text-rose-500 bg-white/80 px-1.5 py-0.5 rounded-md shadow-sm">
+              <div className="flex items-center gap-1 text-[10px] font-bold text-rose-500 bg-white/80 dark:bg-slate-800 px-1.5 py-0.5 rounded-md shadow-sm">
                 <Clock className="w-2.5 h-2.5" />
                 {formatTime(timeUntilHeart)}
               </div>
@@ -150,29 +154,29 @@ export const Sidebar = ({ className }: { className?: string }) => {
           </div>
           <div className="flex gap-0.5 pl-1">
             {[...Array(maxHearts)].map((_, i) => (
-              <div key={i} className={cn("h-1.5 flex-1 rounded-full transition-all", i < hearts ? "bg-rose-400 shadow-[0_0_8px_rgba(251,113,133,0.4)]" : "bg-rose-200/50")} />
+              <div key={i} className={cn("h-1.5 flex-1 rounded-full transition-all", i < hearts ? "bg-rose-400 shadow-[0_0_8px_rgba(251,113,133,0.4)]" : "bg-rose-200/50 dark:bg-rose-950/30")} />
             ))}
           </div>
         </div>
 
         {/* Streak */}
-        <div className="p-3 rounded-2xl bg-amber-50/50 border border-amber-100/60 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-amber-50 transition-colors">
+        <div className="p-3 rounded-2xl bg-amber-500/5 dark:bg-amber-500/10 border border-amber-500/10 dark:border-amber-500/20 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-amber-500/10 dark:hover:bg-amber-500/20 transition-colors">
           <Flame className="w-5 h-5 text-amber-500 mb-1 group-hover:scale-110 transition-transform drop-shadow-sm" />
-          <span className="text-sm font-black text-amber-600">{displayUser.streak}</span>
-          <span className="text-[10px] font-bold text-amber-400 uppercase">Gün</span>
+          <span className="text-sm font-black text-amber-600 dark:text-amber-400">{displayUser.streak}</span>
+          <span className="text-[10px] font-bold text-amber-400/80 uppercase">Gün</span>
         </div>
 
         {/* XP */}
-        <div className="p-3 rounded-2xl bg-indigo-50/50 border border-indigo-100/60 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-indigo-50 transition-colors">
+        <div className="p-3 rounded-2xl bg-indigo-500/5 dark:bg-indigo-500/10 border border-indigo-500/10 dark:border-indigo-500/20 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-indigo-500/10 dark:hover:bg-indigo-500/20 transition-colors">
           <Zap className="w-5 h-5 text-indigo-500 mb-1 group-hover:scale-110 transition-transform drop-shadow-sm" />
-          <span className="text-sm font-black text-indigo-600">{displayUser.totalXp}</span>
-          <span className="text-[10px] font-bold text-indigo-400 uppercase">XP</span>
+          <span className="text-sm font-black text-indigo-600 dark:text-indigo-400">{displayUser.totalXp}</span>
+          <span className="text-[10px] font-bold text-indigo-400/80 uppercase">XP</span>
         </div>
       </div>
 
       {/* --- USER PROFILE CARD --- */}
       <Link href="/settings">
-        <div className="relative group p-3 rounded-2xl bg-white/50 border border-slate-100 hover:border-indigo-200 hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer">
+        <div className="relative group p-3 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800/80 hover:border-indigo-200 dark:hover:border-indigo-500/40 hover:bg-white dark:hover:bg-slate-900 hover:shadow-lg transition-all duration-300 cursor-pointer">
           <div className="flex items-center gap-3">
             <div className="relative">
               <UserAvatar 
@@ -181,19 +185,19 @@ export const Sidebar = ({ className }: { className?: string }) => {
                 size={40} 
                 className="rounded-xl shadow-md group-hover:scale-105 transition-transform" 
               />
-              <div className="absolute -bottom-1 -right-1 bg-yellow-400 border-2 border-white rounded-full p-0.5">
+              <div className="absolute -bottom-1 -right-1 bg-yellow-400 border-2 border-white dark:border-slate-900 rounded-full p-0.5">
                 <Crown className="w-2.5 h-2.5 text-yellow-900" />
               </div>
             </div>
 
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between">
-                <p className="font-bold text-slate-700 truncate text-sm group-hover:text-indigo-700 transition-colors">{displayUser.name}</p>
+                <p className="font-bold text-slate-700 dark:text-slate-200 truncate text-sm group-hover:text-indigo-700 dark:group-hover:text-indigo-400 transition-colors">{displayUser.name}</p>
               </div>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider group-hover:text-indigo-400 transition-colors">Ücretsiz Plan</p>
+              <p className="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider group-hover:text-indigo-400 transition-colors">Ücretsiz Plan</p>
             </div>
 
-            <Settings className="w-4 h-4 text-slate-300 group-hover:text-indigo-400 group-hover:rotate-45 transition-all" />
+            <Settings className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:text-indigo-400 group-hover:rotate-45 transition-all" />
           </div>
         </div>
       </Link>

@@ -11,6 +11,8 @@ import { AuthProvider } from "@/components/auth-provider";
 import { ShelldonProvider } from "@/contexts/shelldon-context";
 import { ShelldonCoach } from "@/components/shelldon-coach";
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -62,20 +64,22 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         <AuthProvider>
-          <LanguageProvider>
-            <HeartsProvider>
-              <UserProgressProvider>
-                <QuestsProvider>
-                  <ShelldonProvider>
-                    <ServiceWorkerRegistration />
-                    <OfflineIndicator />
-                    {children}
-                    <ShelldonCoach />
-                  </ShelldonProvider>
-                </QuestsProvider>
-              </UserProgressProvider>
-            </HeartsProvider>
-          </LanguageProvider>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+            <LanguageProvider>
+              <HeartsProvider>
+                <UserProgressProvider>
+                  <QuestsProvider>
+                    <ShelldonProvider>
+                      <ServiceWorkerRegistration />
+                      <OfflineIndicator />
+                      {children}
+                      <ShelldonCoach />
+                    </ShelldonProvider>
+                  </QuestsProvider>
+                </UserProgressProvider>
+              </HeartsProvider>
+            </LanguageProvider>
+          </ThemeProvider>
         </AuthProvider>
       </body>
     </html>
