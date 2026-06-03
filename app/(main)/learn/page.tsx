@@ -20,11 +20,25 @@ import dynamic from "next/dynamic";
 const WorldMap3D = dynamic(() => import("@/components/WorldMap3D"), { ssr: false });
 
 export default function LearnPage() {
-    const { currentLanguage, currentLevel, setCurrentLevel, progress } = useLanguage();
+    const { currentLanguage, currentLevel, setCurrentLevel, progress, switchLanguage, availableLanguages } = useLanguage();
     const { hearts } = useHearts();
     const { user } = useUserProgress();
     const { showShelldon } = useShelldon();
     const displayName = user.name?.trim() || "Gezgin";
+
+    const handleSelectLanguageAndLevel = (langCode: string, levelCode: string) => {
+        switchLanguage(langCode);
+        const lang = availableLanguages.find(l => l.code === langCode);
+        if (lang && lang.levels) {
+            const targetLevel = lang.levels.find(l => l.code === levelCode);
+            if (targetLevel) {
+                setCurrentLevel(targetLevel);
+                if (typeof window !== "undefined") {
+                    localStorage.setItem('steadyshell_selected_level', levelCode);
+                }
+            }
+        }
+    };
 
     // Test modu: Tüm dersler açık
     const allLessonsUnlocked = true;
@@ -269,11 +283,11 @@ export default function LearnPage() {
                     isMounted && viewMode === "map" ? (
                         <div className="mb-16">
                             <WorldMap3D
-                                langCode={currentLanguage.code}
-                                units={units}
+                                currentLanguageCode={currentLanguage.code}
+                                currentLevelCode={currentLevel?.code || "A1"}
+                                onSelectLanguageAndLevel={handleSelectLanguageAndLevel}
                                 completedLessons={currentProgress?.completedLessons || []}
-                                getLessonRoute={getLessonRoute}
-                                getLessonDescription={getLessonDescription}
+                                setViewMode={setViewMode}
                             />
                         </div>
                     ) : (
