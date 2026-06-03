@@ -164,108 +164,28 @@ interface WorldMap3DProps {
     getLessonDescription: (type: any) => string;
 }
 
-// Enlem ve boylamı 3D koordinata dönüştür
+// GPS (enlem/boylam) koordinatlarını standard equirectangular UV eşlemeli 3D küre koordinatına dönüştür
 function convertLatLngToVector3(lat: number, lon: number, radius: number): THREE.Vector3 {
     const phi = (lat * Math.PI) / 180;
-    const theta = (-lon * Math.PI) / 180;
+    const theta = ((lon + 180) * Math.PI) / 180;
 
-    const x = radius * Math.cos(phi) * Math.cos(theta);
+    const x = -radius * Math.cos(phi) * Math.cos(theta);
     const y = radius * Math.sin(phi);
     const z = radius * Math.cos(phi) * Math.sin(theta);
     return new THREE.Vector3(x, y, z);
 }
 
-// ===== 3D DÜNYA DOKUSU OLUŞTURMA (PROSEDÜREL HARİTA) =====
-function createWorldTexture(): THREE.CanvasTexture | null {
-    if (typeof window === "undefined") return null;
-
-    const width = 1024;
-    const height = 512;
-    const canvas = document.createElement("canvas");
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return null;
-
-    // Derin Uzay Arka Planı (Saydamlık ve derinlik katması için karanlık lacivert)
-    ctx.fillStyle = "#0c1020";
-    ctx.fillRect(0, 0, width, height);
-
-    // Kıtaların solid çizimleri için geçici bir canvas
-    const offCanvas = document.createElement("canvas");
-    offCanvas.width = width;
-    offCanvas.height = height;
-    const offCtx = offCanvas.getContext("2d");
-    if (!offCtx) return null;
-
-    offCtx.fillStyle = "#000000";
-    offCtx.fillRect(0, 0, width, height);
-    offCtx.fillStyle = "#ffffff";
-
-    const drawPath = (coords: number[][]) => {
-        offCtx.beginPath();
-        offCtx.moveTo(coords[0][0] * 2, coords[0][1] * 2);
-        for (let i = 1; i < coords.length; i++) {
-            offCtx.lineTo(coords[i][0] * 2, coords[i][1] * 2);
-        }
-        offCtx.closePath();
-        offCtx.fill();
-    };
-
-    // Basitleştirilmiş Kıta Koordinatları (x: [0-512], y: [0-256])
-    // Kuzey Amerika
-    drawPath([[30, 30], [150, 20], [200, 50], [160, 140], [130, 150], [100, 120]]);
-    // Güney Amerika
-    drawPath([[140, 145], [190, 160], [170, 230], [150, 240]]);
-    // Grönland
-    drawPath([[170, 15], [210, 15], [190, 45]]);
-    // Afrika
-    drawPath([[235, 130], [290, 135], [315, 170], [290, 235], [250, 210], [230, 155]]);
-    // Avrupa
-    drawPath([[225, 55], [270, 50], [290, 90], [285, 125], [230, 125]]);
-    // Asya
-    drawPath([[270, 50], [450, 45], [460, 120], [430, 175], [380, 165], [320, 150], [290, 125]]);
-    // Avustralya
-    drawPath([[410, 185], [455, 195], [445, 230], [405, 220]]);
-
-    // Pikselleri tara ve ana canvasa parlayan neon noktalar çiz
-    const imgData = offCtx.getImageData(0, 0, width, height);
-    const data = imgData.data;
-
-    ctx.fillStyle = "#818cf8"; // indigo-400
-    const dotSpacing = 8;
-    for (let y = 0; y < height; y += dotSpacing) {
-        for (let x = 0; x < width; x += dotSpacing) {
-            const index = (y * width + x) * 4;
-            const r = data[index];
-            if (r > 128) {
-                // Kıta üzerinde bir nokta
-                ctx.beginPath();
-                ctx.arc(x, y, 1.8, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-    }
-
-    const texture = new THREE.CanvasTexture(canvas);
-    texture.wrapS = THREE.RepeatWrapping;
-    texture.wrapT = THREE.ClampToEdgeWrapping;
-    return texture;
-}
-
 // ===== HARİTA KAMERA YÖNETİMİ BİLEŞENİ =====
 const CameraController = ({ langCode, isUserInteracting }: { langCode: string; isUserInteracting: boolean }) => {
     const { camera } = useThree();
-    
-    // Aktif dilin merkezine göre kameranın gitmesi gereken hedef 3D vektörü
+
     const targetVector = useMemo(() => {
         const center = COUNTRY_CENTERS[langCode] || { lat: 45, lon: 10 };
-        // Küre yarıçapımız 2, kamera uzaklığımız 5.2 olsun
+        // Kamera mesafesi = 5.2
         return convertLatLngToVector3(center.lat, center.lon, 5.2);
     }, [langCode]);
 
     useFrame(() => {
-        // Eğer kullanıcı elle döndürmüyorsa kamerayı pürüzsüzce odak noktasına götür
         if (!isUserInteracting) {
             camera.position.lerp(targetVector, 0.05);
             camera.lookAt(0, 0, 0);
@@ -286,7 +206,6 @@ interface PinProps {
 const UnitPin = ({ position, isActive, isCompleted, onClick }: PinProps) => {
     const meshRef = useRef<THREE.Mesh>(null);
 
-    // Pinlerin hafifçe parlayıp sönmesi ve dönmesi için animasyon
     useFrame((state) => {
         if (meshRef.current) {
             if (isActive) {
@@ -296,26 +215,24 @@ const UnitPin = ({ position, isActive, isCompleted, onClick }: PinProps) => {
         }
     });
 
-    // Duruma göre renk tayini
     const color = isCompleted 
-        ? "#10b981" // emerald-500
+        ? "#10b981" 
         : isActive 
-            ? "#f97316" // orange-500
-            : "#ffffff"; // locked-white
+            ? "#f97316" 
+            : "#ffffff";
 
     return (
         <mesh ref={meshRef} position={position} onClick={(e) => {
             e.stopPropagation();
             onClick();
         }}>
-            <sphereGeometry args={[0.08, 16, 16]} />
+            <sphereGeometry args={[0.07, 16, 16]} />
             <meshBasicMaterial color={color} toneMapped={false} />
             
-            {/* Aktif veya tamamlanmış pinler için dış çember parlaması */}
             {(isActive || isCompleted) && (
                 <mesh>
-                    <sphereGeometry args={[0.13, 16, 16]} />
-                    <meshBasicMaterial color={color} transparent opacity={0.35} wireframe />
+                    <sphereGeometry args={[0.12, 16, 16]} />
+                    <meshBasicMaterial color={color} transparent opacity={0.4} wireframe />
                 </mesh>
             )}
         </mesh>
@@ -325,6 +242,7 @@ const UnitPin = ({ position, isActive, isCompleted, onClick }: PinProps) => {
 export default function WorldMap3D({ langCode, units, completedLessons, getLessonRoute, getLessonDescription }: WorldMap3DProps) {
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
     const [isUserInteracting, setIsUserInteracting] = useState(false);
+    const [texture, setTexture] = useState<THREE.Texture | null>(null);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     // Dil değiştiğinde detay kartını sıfırla
@@ -332,37 +250,60 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
         setSelectedUnit(null);
     }, [langCode]);
 
-    // Kullanıcı haritayı döndürdüğünde otomatik kamera takibini geçici olarak kapat
+    // Küre kaplaması (Gerçek Dünya Haritası Dokusu) Yükleme
+    useEffect(() => {
+        const loader = new THREE.TextureLoader();
+        
+        // 1. Seçenek: Gece ışıkları olan süper şık koyu tema haritası (Gerçek NASA verisi)
+        loader.load(
+            "https://unpkg.com/three-globe/example/img/earth-night.jpg",
+            (tex) => {
+                setTexture(tex);
+            },
+            undefined,
+            (err) => {
+                console.warn("Gece haritası yüklenemedi, alternatif haritaya geçiliyor...", err);
+                // 2. Seçenek (Yedek): Klasik mavi mermer dünya haritası
+                loader.load(
+                    "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg",
+                    (tex2) => {
+                        setTexture(tex2);
+                    },
+                    undefined,
+                    () => {
+                        // 3. Seçenek (Yedek 2): Sade koyu harita
+                        loader.load(
+                            "https://unpkg.com/three-globe/example/img/earth-dark.jpg",
+                            (tex3) => setTexture(tex3)
+                        );
+                    }
+                );
+            }
+        );
+    }, []);
+
     const handleStartInteraction = () => {
         setIsUserInteracting(true);
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
 
     const handleEndInteraction = () => {
-        // Kullanıcı sürüklemeyi bıraktıktan 3 saniye sonra otomatik kamera takibini geri aç
         timeoutRef.current = setTimeout(() => {
             setIsUserInteracting(false);
         }, 3000);
     };
-
-    // Dünya kaplamasını belleğe al
-    const worldTexture = useMemo(() => createWorldTexture(), []);
 
     // Dil/seviyedeki üniteleri harita pinlerine dönüştür
     const pins = useMemo(() => {
         const cityList = CITY_COORDINATES[langCode] || CITY_COORDINATES.fr;
         
         return units.map((unit, index) => {
-            // Şehir koordinatını döngüsel olarak al
             const city = cityList[index % cityList.length];
-            const position = convertLatLngToVector3(city.lat, city.lon, 2.02); // Küre üstünde hafif dışarıda dursun
+            const position = convertLatLngToVector3(city.lat, city.lon, 2.01); 
 
-            // Ünitenin tamamlanma ve erişilebilirlik durumunu bul
             const completedCount = unit.lessons.filter(l => completedLessons.includes(l.id)).length;
             const isCompleted = completedCount === unit.lessons.length && unit.lessons.length > 0;
-            
-            // İlk bitmemiş olan ünite "aktif" ünitedir
-            const isAccessible = index === 0 || index === 21 || completedLessons.length > 0; // Basit kilit mekanizması
+            const isAccessible = index === 0 || index === 21 || completedLessons.length > 0; 
 
             return {
                 unit,
@@ -375,7 +316,6 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
         });
     }, [langCode, units, completedLessons]);
 
-    // Aktif olan (kullanıcının kaldığı) ilk üniteyi bul
     const activeUnitIndex = useMemo(() => {
         for (let i = 0; i < units.length; i++) {
             const completedCount = units[i].lessons.filter(l => completedLessons.includes(l.id)).length;
@@ -387,21 +327,25 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
     }, [units, completedLessons]);
 
     return (
-        <div className="relative w-full h-[60vh] md:h-[70vh] bg-slate-950 rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-800">
+        <div className="relative w-full h-[60vh] md:h-[70vh] bg-slate-950 rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-800 animate-in fade-in duration-500">
             {/* 3D CANVAS */}
             <Canvas camera={{ position: [0, 0, 5.5], fov: 45 }}>
-                <ambientLight intensity={0.6} />
-                <pointLight position={[10, 10, 10]} intensity={1.5} />
+                <ambientLight intensity={0.9} />
+                <pointLight position={[10, 10, 10]} intensity={2.0} />
                 
                 <CameraController langCode={langCode} isUserInteracting={isUserInteracting} />
 
-                {/* Dönen Dünya Küresi Grubu */}
+                {/* Dünya Küresi Grubu */}
                 <group>
-                    {/* 1. Yarı Şeffaf Dünya Küresi */}
+                    {/* 1. Gerçek Harita Dokulu Dünya Küresi */}
                     <mesh>
                         <sphereGeometry args={[2, 64, 64]} />
-                        {worldTexture ? (
-                            <meshBasicMaterial map={worldTexture} />
+                        {texture ? (
+                            <meshStandardMaterial 
+                                map={texture} 
+                                roughness={0.7}
+                                metalness={0.1}
+                            />
                         ) : (
                             <meshPhysicalMaterial 
                                 color="#1e293b" 
@@ -414,14 +358,14 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
                         )}
                     </mesh>
 
-                    {/* 2. Dış İnce Atmosfer Efekti (Halkalar / Izgara) */}
+                    {/* 2. Dış Atmosfer Işıltısı */}
                     <mesh>
-                        <sphereGeometry args={[2.01, 32, 32]} />
+                        <sphereGeometry args={[2.005, 32, 32]} />
                         <meshBasicMaterial 
-                            color="#3f51b5" 
-                            wireframe 
+                            color="#818cf8" 
                             transparent 
-                            opacity={0.1} 
+                            opacity={0.06} 
+                            wireframe
                         />
                     </mesh>
 
@@ -437,12 +381,12 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
                     ))}
                 </group>
 
-                {/* Mouse ve Dokunmatik Kontroller */}
+                {/* Orbit Kontrolleri */}
                 <OrbitControls 
                     enableDamping 
                     dampingFactor={0.05} 
                     minDistance={3.5}
-                    maxDistance={8}
+                    maxDistance={7}
                     enablePan={false}
                     onStart={handleStartInteraction}
                     onEnd={handleEndInteraction}
@@ -470,7 +414,7 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
 
             <div className="absolute top-4 right-4 z-10 text-right pointer-events-none">
                 <span className="bg-indigo-500/10 backdrop-blur-md border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-full text-[10px] font-black tracking-widest uppercase">
-                    3D ETKİLEŞİMLİ MOD
+                    3D UYDU GÖRÜNÜMÜ
                 </span>
             </div>
 
@@ -481,7 +425,6 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
                     ? (completedLessonCount / selectedUnit.lessons.length) * 100 
                     : 0;
 
-                // Kaldığı veya başlayacağı dersi bul
                 let nextLessonIndex = 0;
                 let nextLesson = selectedUnit.lessons[0];
                 for (let li = 0; li < selectedUnit.lessons.length; li++) {
@@ -513,7 +456,6 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
 
                         <p className="text-slate-300 text-sm leading-relaxed mb-4">{selectedUnit.description}</p>
 
-                        {/* İlerleme Çubuğu */}
                         <div className="mb-6 bg-white/5 border border-white/5 p-3.5 rounded-2xl">
                             <div className="flex justify-between text-xs font-bold text-slate-400 mb-1.5">
                                 <span>ÜNİTE İLERLEMESİ</span>
@@ -527,7 +469,6 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
                             </div>
                         </div>
 
-                        {/* Derse Başla Butonu */}
                         <Link href={startRoute} className="block w-full">
                             <button className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
                                 <Play className="w-4 h-4 fill-white" />
