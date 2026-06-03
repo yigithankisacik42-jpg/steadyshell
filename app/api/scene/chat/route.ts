@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { auth } from '@/auth';
 
 const LANG_NAMES: Record<string, string> = {
   en: 'English',
@@ -29,6 +30,12 @@ function windowMessages(messages: any[], maxMessages: number = 12): any[] {
 
 export async function POST(req: Request) {
   try {
+    // Auth check — prevent unauthorized API credit usage
+    const session = await auth();
+    if (!session?.user?.email) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const apiKey = process.env.OPENROUTER_API_KEY;
 
     if (!apiKey) {

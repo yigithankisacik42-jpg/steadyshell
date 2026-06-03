@@ -126,8 +126,6 @@ function UserMessageBubble({ content, corrections }: { content: string, correcti
 export default function ShelldonPage() {
     // === STATE ===
     const { currentLanguage, currentLevel, progress } = useLanguage();
-    
-    // === STATE ===
     const [selectedLang, setSelectedLang] = useState(currentLanguage?.code || "");
     const [practiceMode, setPracticeMode] = useState<ShelldonPracticeMode>("speaking");
     const [selectedScenario, setSelectedScenario] = useState<ShelldonScenario | null>(null);
@@ -756,7 +754,6 @@ export default function ShelldonPage() {
         setFeedback(null);
         setSessionSummary(null);
         setSessionGoal(null);
-        setTurnCount(0);
         setSelectedImage(null);
         setRepeatQueue([]);
         setNewMemoryLearned(null);
@@ -955,7 +952,7 @@ export default function ShelldonPage() {
     // =============================================
     if (isInChat && selectedScenario) {
         const langCode = selectedLang || currentLanguage?.code || "en";
-        const suggestions = selectedScenario.suggestedPhrases[langCode] || [];
+        const staticSuggestions = selectedScenario.suggestedPhrases[langCode] || [];
 
         return (
             <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-teal-50 flex flex-col relative">
@@ -1086,26 +1083,7 @@ export default function ShelldonPage() {
                         </div>
                     </div>
 
-                    {/* Shelldon'ın Neşesi (Energy/Confidence Bar) */}
-                    <div className="w-full max-w-lg px-6 mt-3 shrink-0">
-                        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-indigo-100 shadow-sm">
-                            <div className="flex items-center justify-between mb-1.5">
-                                <div className="flex items-center gap-1.5">
-                                    <span className="text-base animate-pulse">🐢</span>
-                                    <span className="text-xs font-black text-slate-700 uppercase tracking-wider">Shelldon'ın Neşesi ve Özgüveni</span>
-                                </div>
-                                <span className="text-xs font-extrabold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full">
-                                    %{Math.min(100, Math.round((completedObjectives.length / (selectedScenario.objectives[selectedLang]?.length || 3)) * 100))}
-                                </span>
-                            </div>
-                            <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden shadow-inner">
-                                <div 
-                                    className="h-full bg-gradient-to-r from-amber-400 via-indigo-500 to-emerald-500 rounded-full transition-all duration-1000"
-                                    style={{ width: `${Math.max(10, Math.min(100, (completedObjectives.length / (selectedScenario.objectives[selectedLang]?.length || 3)) * 100))}%` }}
-                                />
-                            </div>
-                        </div>
-                    </div>
+
 
                     {/* Görevler (Checklist) */}
                     {selectedScenario.objectives && selectedScenario.objectives[selectedLang] && (
@@ -1251,7 +1229,7 @@ export default function ShelldonPage() {
                         {/* Öneri cümleleri */}
                         {turnCount < MAX_TURNS && (
                             <div className="flex gap-2 overflow-x-auto pb-3 scrollbar-hide">
-                                {(suggestions.length > 0 ? suggestions : (selectedScenario.suggestedPhrases[langCode] || [])).map((phrase, i) => (
+                                {(suggestions.length > 0 ? suggestions : staticSuggestions).map((phrase, i) => (
                                     <button
                                         key={i}
                                         onClick={() => handleSendMessage(phrase)}
@@ -1611,7 +1589,7 @@ export default function ShelldonPage() {
                                 <span className="text-2xl animate-pulse">📖</span>
                                 <div>
                                     <h3 className="font-extrabold text-slate-800 text-base leading-none">Gramer Günlüğü</h3>
-                                    <span className="text-[10px] text-indigo-600 font-bold uppercase tracking-wider mt-1 block">Mistakes Learned & Corrected</span>
+                                    <span className="text-[10px] text-indigo-600 font-bold uppercase tracking-wider mt-1 block">Öğrenilen ve Düzeltilen Hatalar</span>
                                 </div>
                             </div>
                             <Button
@@ -1703,7 +1681,7 @@ export default function ShelldonPage() {
                                 <span className="text-2xl animate-pulse">🎒</span>
                                 <div>
                                     <h3 className="font-extrabold text-slate-800 text-base leading-none">Shelldon'ın Sırt Çantası</h3>
-                                    <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider mt-1 block">Travel Souvenirs Inventory</span>
+                                    <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider mt-1 block">Seyahat Hatıraları Envanteri</span>
                                 </div>
                             </div>
                             <Button
@@ -1947,7 +1925,7 @@ export default function ShelldonPage() {
                                         }
                                     }}
                                     disabled={isSavingMemory}
-                                    className="flex-1 bg-gradient-to-br from-indigo-500 to-purple-600 text-white hover:opacity-90 rounded-xl font-bold tracking-wider animate-pulse"
+                                    className="flex-1 bg-gradient-to-br from-indigo-500 to-purple-600 text-white hover:opacity-90 rounded-xl font-bold tracking-wider"
                                 >
                                     {isSavingMemory ? <Loader2 className="w-4 h-4 animate-spin mx-auto" /> : "Kaydet"}
                                 </Button>

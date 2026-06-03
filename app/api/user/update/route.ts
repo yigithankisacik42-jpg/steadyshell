@@ -14,7 +14,7 @@ export async function PUT(req: Request) {
         const { name, email, currentPassword, newPassword } = body;
 
         const cleanName = sanitizeInput(name);
-        const cleanEmail = email.trim().toLowerCase();
+        const cleanEmail = (email || "").trim().toLowerCase();
 
         if (!cleanName || !cleanEmail) {
             return NextResponse.json({ message: "İsim ve Email zorunludur" }, { status: 400 });

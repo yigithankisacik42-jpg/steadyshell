@@ -168,7 +168,7 @@ export default function LeaderboardPage() {
                                         "font-bold text-base leading-tight mb-1 flex items-center gap-2",
                                         data.isCurrentUser ? "text-indigo-600" : "text-slate-700"
                                     )}>
-                                        <span className="truncate flex-1 display-block" title={data.name}>{data.name}</span>
+                                        <span className="truncate flex-1 block" title={data.name}>{data.name}</span>
                                         {data.isCurrentUser && (
                                             <span className="px-2 py-0.5 bg-indigo-100 text-indigo-600 text-[10px] font-black rounded-lg uppercase shrink-0">Sen</span>
                                         )}

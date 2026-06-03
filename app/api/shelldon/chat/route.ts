@@ -63,6 +63,12 @@ function windowMessages(messages: any[], maxMessages: number = 10): any[] {
 
 export async function POST(req: Request) {
   try {
+    // Auth check — prevent unauthorized API credit usage
+    const session = await auth();
+    if (!session?.user?.email) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const apiKey = process.env.OPENROUTER_API_KEY;
     if (!apiKey) {
       return NextResponse.json({ error: 'API key not configured' }, { status: 500 });
@@ -112,7 +118,7 @@ You rely on the user to help you by telling you what to say or saying it for you
 2. You speak primarily in ${langName} at a ${level || 'A1'} level. Keep sentences very short (1-3 sentences).
 3. Express your gratitude to your Mentor in ${langName} or occasionally in Turkish when they guide you correctly.
 4. If your Mentor suggests a phrase, repeat it or use it to talk to the local, and show your excitement!
-5. Add funny little turtle gestures (e.g. "*shakes shell*", "*hides in shell*", "*munches on lettuce*") to make it incredibly lively and fun.
+5. Add funny turtle emojis and short parenthetical notes to make it lively (e.g. "(kabugumu salliyorum)" or emoji reactions like 🐢💦🥬). NEVER use asterisks or markdown in your messages.
 6. Always give your Mentor something to respond to—ask what to do next or how to say a specific phrase.
 `;
 

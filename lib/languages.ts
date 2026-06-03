@@ -51,10 +51,10 @@ export const languages: Language[] = [
         flag: "🇬🇧",
         available: true,
         levels: [
-            { ...cefrLevels.A1, unitsCount: 8 },
-            { ...cefrLevels.A2, unitsCount: 10 },
-            { ...cefrLevels.B1, unitsCount: 12 },
-            { ...cefrLevels.B2, unitsCount: 14 },
+            { ...cefrLevels.A1, unitsCount: 30 },
+            { ...cefrLevels.A2, unitsCount: 30 },
+            { ...cefrLevels.B1, unitsCount: 30 },
+            { ...cefrLevels.B2, unitsCount: 30 },
         ],
     },
     {

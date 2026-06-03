@@ -142,8 +142,9 @@ export function QuestsProvider({ children }: { children: ReactNode }) {
     }, [questsData]);
 
     // Görevleri güncelle
-    const updateQuests = useCallback((newData: Partial<QuestsData>) => {
+    const updateQuests = useCallback((updater: (prev: QuestsData) => Partial<QuestsData>) => {
         setQuestsData(prev => {
+            const newData = updater(prev);
             const updated = { ...prev, ...newData };
 
             // Görevlerin durumunu kontrol et
@@ -175,24 +176,24 @@ export function QuestsProvider({ children }: { children: ReactNode }) {
 
     // XP ekle
     const addXP = useCallback((amount: number) => {
-        updateQuests({
-            totalXpEarnedToday: questsData.totalXpEarnedToday + amount
-        });
-    }, [questsData.totalXpEarnedToday, updateQuests]);
+        updateQuests(prev => ({
+            totalXpEarnedToday: prev.totalXpEarnedToday + amount
+        }));
+    }, [updateQuests]);
 
     // Okuma tamamla
     const addReading = useCallback(() => {
-        updateQuests({
-            readingsCompletedToday: questsData.readingsCompletedToday + 1
-        });
-    }, [questsData.readingsCompletedToday, updateQuests]);
+        updateQuests(prev => ({
+            readingsCompletedToday: prev.readingsCompletedToday + 1
+        }));
+    }, [updateQuests]);
 
     // Ders tamamla
     const addLesson = useCallback(() => {
-        updateQuests({
-            lessonsCompletedToday: questsData.lessonsCompletedToday + 1
-        });
-    }, [questsData.lessonsCompletedToday, updateQuests]);
+        updateQuests(prev => ({
+            lessonsCompletedToday: prev.lessonsCompletedToday + 1
+        }));
+    }, [updateQuests]);
 
     // Ödül al
     const claimReward = useCallback((questId: string): number => {

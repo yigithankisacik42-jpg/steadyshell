@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Star, Zap, BookOpen, Sparkles, GraduationCap, ChevronRight, MessageCircle, Library, Play, Heart, Clock, Award, Flame, Target, Trophy } from "lucide-react";
+import { Star, Zap, BookOpen, Sparkles, GraduationCap, ChevronRight, MessageCircle, Library, Play, Heart, Clock, Award, Flame, Target, Trophy, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { getCurriculum, LessonType } from "@/lib/curriculum";
@@ -15,6 +15,9 @@ import { useHearts } from "@/lib/hearts-context";
 import { List as ListIcon } from "lucide-react";
 import { useShelldon } from "@/contexts/shelldon-context";
 import { getStoryMetaForUnit } from "@/lib/stories";
+import dynamic from "next/dynamic";
+
+const WorldMap3D = dynamic(() => import("@/components/WorldMap3D"), { ssr: false });
 
 export default function LearnPage() {
     const { currentLanguage, currentLevel, setCurrentLevel, progress } = useLanguage();
@@ -28,10 +31,20 @@ export default function LearnPage() {
 
     // Hydration mismatch önleme
     const [isMounted, setIsMounted] = useState(false);
+    const [viewMode, setViewMode] = useState<"list" | "map">("list");
 
     useEffect(() => {
         setIsMounted(true);
+        const saved = localStorage.getItem("steadyshell_learn_view");
+        if (saved === "map" || saved === "list") {
+            setViewMode(saved);
+        }
     }, []);
+
+    const toggleViewMode = (mode: "list" | "map") => {
+        setViewMode(mode);
+        localStorage.setItem("steadyshell_learn_view", mode);
+    };
 
     const units = getCurriculum(currentLanguage.code, currentLevel?.code || "A1");
     const currentProgress = progress[currentLanguage.code];
@@ -140,8 +153,36 @@ export default function LearnPage() {
                             <p className="text-indigo-200 font-medium text-lg">Bugün harika bir iş çıkarıyorsun, {displayName}. 🚀</p>
                         </div>
 
-                        {/* Quick Stats Row */}
-                        <div className="flex gap-2 md:gap-3 w-full md:w-auto overflow-x-auto md:overflow-visible pb-2 md:pb-0 no-scrollbar">
+                        {/* Quick Stats Row & View Mode Toggle */}
+                        <div className="flex flex-wrap md:flex-nowrap items-center gap-3 w-full md:w-auto overflow-x-auto md:overflow-visible pb-2 md:pb-0 no-scrollbar">
+                            {/* View Mode Toggle */}
+                            <div className="flex gap-1.5 p-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl h-20 md:h-24 items-center px-2 flex-shrink-0">
+                                <button
+                                    onClick={() => toggleViewMode("list")}
+                                    className={cn(
+                                        "p-2 md:p-2.5 rounded-xl font-bold text-xs transition-all duration-300 flex flex-col items-center justify-center gap-1 w-14 h-14 md:w-16 md:h-16",
+                                        viewMode === "list"
+                                            ? "bg-white text-indigo-900 shadow-lg scale-105"
+                                            : "text-white/60 hover:text-white hover:bg-white/10"
+                                    )}
+                                >
+                                    <ListIcon className="w-4 h-4 md:w-5 md:h-5" />
+                                    <span className="text-[9px] md:text-[10px] font-bold">Liste</span>
+                                </button>
+                                <button
+                                    onClick={() => toggleViewMode("map")}
+                                    className={cn(
+                                        "p-2 md:p-2.5 rounded-xl font-bold text-xs transition-all duration-300 flex flex-col items-center justify-center gap-1 w-14 h-14 md:w-16 md:h-16",
+                                        viewMode === "map"
+                                            ? "bg-white text-indigo-900 shadow-lg scale-105"
+                                            : "text-white/60 hover:text-white hover:bg-white/10"
+                                    )}
+                                >
+                                    <Globe className="w-4 h-4 md:w-5 md:h-5" />
+                                    <span className="text-[9px] md:text-[10px] font-bold">3D Harita</span>
+                                </button>
+                            </div>
+
                             {stats.map((stat, i) => (
                                 <div key={i} className="flex flex-col items-center justify-center min-w-[5.5rem] h-20 md:w-24 md:h-24 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-colors flex-shrink-0">
                                     <div className={`p-1.5 md:p-2 rounded-full mb-0.5 md:mb-1 ${stat.bg}`}>
@@ -155,10 +196,30 @@ export default function LearnPage() {
                     </div>
 
                     {/* Quick Access Card */}
-                    {isMounted && currentLevel && units.length > 0 && (
+                    {isMounted && currentLevel && units.length > 0 && (() => {
+                        // Find the first incomplete lesson across all units
+                        let continueUnit = units[0];
+                        let continueLessonIndex = 0;
+                        let continueLesson = units[0].lessons[0];
+                        let found = false;
+
+                        for (const unit of units) {
+                            for (let li = 0; li < unit.lessons.length; li++) {
+                                if (!currentProgress?.completedLessons.includes(unit.lessons[li].id)) {
+                                    continueUnit = unit;
+                                    continueLessonIndex = li;
+                                    continueLesson = unit.lessons[li];
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (found) break;
+                        }
+
+                        return (
                         <div className="flex flex-col gap-4">
                             <Link
-                                href={getLessonRoute(units[0].lessons[0].type, units[0].id, 0, units[0].lessons)}
+                                href={getLessonRoute(continueLesson.type, continueUnit.id, continueLessonIndex, continueUnit.lessons)}
                                 className="block w-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 p-6 rounded-3xl flex items-center justify-between group cursor-pointer hover:border-white/40 transition-all hover:scale-[1.02]"
                             >
                                 <div className="flex items-center gap-4">
@@ -167,13 +228,14 @@ export default function LearnPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-xl">Kaldığın Yerden Devam Et</h3>
-                                        <p className="text-white/70 text-sm">Ünite 1: {units[0].title} • {getLessonDescription(units[0].lessons[0].type)}</p>
+                                        <p className="text-white/70 text-sm">Ünite {continueUnit.id}: {continueUnit.title} • {getLessonDescription(continueLesson.type)}</p>
                                     </div>
                                 </div>
                                 <ChevronRight className="w-6 h-6 text-white/50 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
-                    )}
+                        );
+                    })()}
                 </div>
             </div>
 
@@ -204,8 +266,19 @@ export default function LearnPage() {
             {/* CURRICULUM CONTENT */}
             <div className="max-w-3xl mx-auto px-4 w-full z-20 relative">
                 {units.length > 0 ? (
-                    <div className="flex flex-col gap-12">
-                        {units.map((unit, unitIndex) => {
+                    isMounted && viewMode === "map" ? (
+                        <div className="mb-16">
+                            <WorldMap3D
+                                langCode={currentLanguage.code}
+                                units={units}
+                                completedLessons={currentProgress?.completedLessons || []}
+                                getLessonRoute={getLessonRoute}
+                                getLessonDescription={getLessonDescription}
+                            />
+                        </div>
+                    ) : (
+                        <div className="flex flex-col gap-12">
+                            {units.map((unit, unitIndex) => {
                             const completedLessonCount = unit.lessons.filter(l => currentProgress?.completedLessons.includes(l.id)).length;
                             const unitProgressPercent = unit.lessons.length > 0
                                 ? (completedLessonCount / unit.lessons.length) * 100
@@ -337,6 +410,7 @@ export default function LearnPage() {
                         );
                         })}
                     </div>
+                    )
                 ) : (
                     <div className="max-w-3xl mx-auto px-4 flex flex-col items-center justify-center py-20 bg-white rounded-3xl shadow-xl border border-slate-100 text-center">
                         <div className="w-24 h-24 bg-indigo-50 rounded-full flex items-center justify-center mb-6">

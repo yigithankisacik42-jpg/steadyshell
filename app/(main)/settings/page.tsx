@@ -22,13 +22,13 @@ const settingsItems = [
 ];
 
 const defaultUser = {
-    name: "Yiğithan",
-    email: "yigithan@steadyshell.com",
-    avatar: "Y",
+    name: "Kullanıcı",
+    email: "",
+    avatar: "",
     isPremium: false,
     streak: 0,
     totalXp: 0,
-    joinDate: "Aralık 2025",
+    joinDate: "",
 };
 
 export default function SettingsPage() {

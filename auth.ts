@@ -31,7 +31,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 const clientIp = (credentials.clientIp as string) || "unknown";
 
                 // 🛠️ Demo Account Bypass
-                if (email.toLowerCase() === "demo@user.com") {
+                if (email.toLowerCase() === "demo@user.com" && password === "demopassword") {
                     console.log("[Auth] 🧪 Demo Login detected");
                     return {
                         id: "demo-user-id",
@@ -65,7 +65,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                         return null;
                     }
 
-                    console.log(`[Auth] User found: ${user.email}, HashedPwd Length: ${user.password.length}`);
+                    console.log(`[Auth] User found: ${user.email}`);
 
                     const isValid = await verifyPassword(password, user.password);
 
@@ -79,8 +79,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                         };
                     } else {
                         console.log("[Auth] ❌ Password verification FAILED (NextAuth)");
-                        // Debugging tip: Check if db hash starts with $2a$ or $2b$
-                        console.log(`[Auth] Stored Hash Prefix: ${user.password.substring(0, 7)}...`);
                         return null;
                     }
 
@@ -97,10 +95,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     callbacks: {
         authorized({ auth, request: { nextUrl } }) {
             const isLoggedIn = !!auth?.user
-            const isOnDashboard = nextUrl.pathname.startsWith('/learn')
+            const protectedRoutes = ['/learn', '/grammar', '/vocabulary', '/speaking', '/reading', '/story', '/lesson', '/lecture', '/video', '/phrases', '/placement-test', '/shelldon', '/scene', '/quests', '/shop', '/settings', '/leaderboard'];
+            const isOnProtected = protectedRoutes.some(route => nextUrl.pathname.startsWith(route));
             const isOnAuth = nextUrl.pathname === '/login' || nextUrl.pathname === '/register'
 
-            if (isOnDashboard) {
+            if (isOnProtected) {
                 if (isLoggedIn) return true
                 return false // Redirect unauthenticated users to login page
             } else if (isOnAuth && isLoggedIn) {
