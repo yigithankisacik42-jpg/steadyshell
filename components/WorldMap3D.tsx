@@ -254,16 +254,16 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
     useEffect(() => {
         const loader = new THREE.TextureLoader();
         
-        // 1. Seçenek: Gece ışıkları olan süper şık koyu tema haritası (Gerçek NASA verisi)
+        // 1. Seçenek: Klasik renkli coğrafi atlas haritası (Three.js resmi renkli dünya dokusu)
         loader.load(
-            "https://unpkg.com/three-globe/example/img/earth-night.jpg",
+            "https://cdn.jsdelivr.net/gh/mrdoob/three.js@dev/examples/textures/planets/earth_atmos_2048.jpg",
             (tex) => {
                 setTexture(tex);
             },
             undefined,
             (err) => {
-                console.warn("Gece haritası yüklenemedi, alternatif haritaya geçiliyor...", err);
-                // 2. Seçenek (Yedek): Klasik mavi mermer dünya haritası
+                console.warn("Renkli coğrafi harita yüklenemedi, yedek haritaya geçiliyor...", err);
+                // 2. Seçenek (Yedek): NASA Mavi Mermer Haritası
                 loader.load(
                     "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg",
                     (tex2) => {
@@ -271,9 +271,9 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
                     },
                     undefined,
                     () => {
-                        // 3. Seçenek (Yedek 2): Sade koyu harita
+                        // 3. Seçenek (Yedek 2): Gece haritası
                         loader.load(
-                            "https://unpkg.com/three-globe/example/img/earth-dark.jpg",
+                            "https://unpkg.com/three-globe/example/img/earth-night.jpg",
                             (tex3) => setTexture(tex3)
                         );
                     }
@@ -330,8 +330,8 @@ export default function WorldMap3D({ langCode, units, completedLessons, getLesso
         <div className="relative w-full h-[60vh] md:h-[70vh] bg-slate-950 rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-800 animate-in fade-in duration-500">
             {/* 3D CANVAS */}
             <Canvas camera={{ position: [0, 0, 5.5], fov: 45 }}>
-                <ambientLight intensity={0.9} />
-                <pointLight position={[10, 10, 10]} intensity={2.0} />
+                <ambientLight intensity={1.4} />
+                <pointLight position={[10, 10, 10]} intensity={3.0} />
                 
                 <CameraController langCode={langCode} isUserInteracting={isUserInteracting} />
 
