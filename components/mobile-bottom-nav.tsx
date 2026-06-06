@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Trophy, Theater, User, MessageCircle } from "lucide-react";
+import { Home, Trophy, Theater, User, MessageCircle, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
     { href: "/learn", icon: Home, label: "Ana" },
     { href: "/shelldon", icon: MessageCircle, label: "Shelldon" },
+    { href: "/adaptive-quiz", icon: Brain, label: "Akıllı Quiz" },
     { href: "/scene", icon: Theater, label: "Sahne" },
     { href: "/settings", icon: User, label: "Profil" },
 ];

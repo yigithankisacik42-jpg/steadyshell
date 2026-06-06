@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Home, Trophy, Target, Store, Settings, User, Heart, Flame, Zap, Clock, Theater, ChevronRight, Crown, MessageCircle } from "lucide-react";
+import { Home, Trophy, Target, Store, Settings, User, Heart, Flame, Zap, Clock, Theater, ChevronRight, Crown, MessageCircle, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useHearts, formatTime } from "@/lib/hearts-context";
 import { useUserProgress } from "@/contexts/user-progress-context";
@@ -16,6 +16,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 const menuItems = [
   { href: "/learn", icon: Home, label: "Öğren", color: "text-indigo-500" },
   { href: "/shelldon", icon: MessageCircle, label: "Shelldon AI", color: "text-emerald-500", isNew: true },
+  { href: "/adaptive-quiz", icon: Brain, label: "Akıllı Quiz", color: "text-cyan-500", isNew: true },
   { href: "/scene", icon: Theater, label: "Sahne Modu", color: "text-pink-500", isNew: true },
   { href: "/leaderboard", icon: Trophy, label: "Liderlik", color: "text-amber-500" },
   { href: "/quests", icon: Target, label: "Görevler", color: "text-rose-500" },

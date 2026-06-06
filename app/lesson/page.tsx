@@ -242,6 +242,25 @@ function LessonContent() {
       const sadMsgs = ["Biraz daha dikkatli olmalısın.", "Öğrenmek hatalarla başlar, pes etme!", "Bir sonrakini kesin yaparsın.", "Küçük bir hata, dert etme."];
       showShelldon(sadMsgs[Math.floor(Math.random() * sadMsgs.length)], "sad", 2500);
 
+      // Zayıf noktayı kaydet (Akıllı Quiz sistemi için)
+      const unitData2 = findUnitById(unitId);
+      fetch('/api/weakness', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          language: unitData2?.langCode || "es",
+          level: unitData2?.levelCode || "A1",
+          category: challenge.type === "TRANSLATE" ? "translation" : 
+                    challenge.type === "LISTENING" ? "listening" : 
+                    challenge.type === "FILL_BLANK" ? "grammar" : "vocabulary",
+          topic: unitTitle,
+          originalQuestion: challenge.question + (challenge.hint ? ` (${challenge.hint})` : '') + (challenge.sentence ? ` — ${challenge.sentence}` : ''),
+          correctAnswer: getCorrectAnswer() || "",
+          userAnswer: challenge.type === "TRANSLATE" ? textInput : 
+                      challenge.options?.find(o => o.id === selectedOption)?.text || ""
+        })
+      }).catch(() => {}); // Sessizce başarısız olsun
+
       // Can 0'a düştüyse oyunu bitir
       if (hearts - 1 === 0) {
         setTimeout(() => {

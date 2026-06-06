@@ -500,6 +500,23 @@ export default function ShelldonPage() {
                         localStorage.setItem("steadyshell_grammar_log", JSON.stringify(newLog));
                         return newLog;
                     });
+
+                    // Zayıf noktayı kaydet (Akıllı Quiz sistemi için)
+                    const weakLang = selectedLang || currentLanguage?.code || "de";
+                    const weakLevel = progress[weakLang]?.currentLevel || currentLevel?.code || "A1";
+                    fetch('/api/weakness', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            language: weakLang,
+                            level: weakLevel,
+                            category: "grammar",
+                            topic: selectedScenario?.titleTr || "Shelldon Sohbet",
+                            originalQuestion: data.correction.wrong,
+                            correctAnswer: data.correction.right,
+                            userAnswer: data.correction.wrong
+                        })
+                    }).catch(() => {});
                 }
 
                 if (data.suggestions) setSuggestions(data.suggestions);
