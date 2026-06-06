@@ -98,7 +98,6 @@ export async function GET(req: Request) {
 
     const whereClause = {
       userId: user.id,
-      resolved: false,
       ...(language ? { language } : {}),
     };
 
@@ -107,27 +106,7 @@ export async function GET(req: Request) {
       orderBy: { wrongCount: "desc" as const },
     });
 
-    // Count resolved weaknesses for progress display
-    const resolvedCount = await db.userWeakness.count({
-      where: {
-        userId: user.id,
-        resolved: true,
-        ...(language ? { language } : {}),
-      },
-    });
-
-    const totalCount = await db.userWeakness.count({
-      where: {
-        userId: user.id,
-        ...(language ? { language } : {}),
-      },
-    });
-
-    return NextResponse.json({
-      weaknesses,
-      resolvedCount,
-      totalCount,
-    });
+    return NextResponse.json(weaknesses);
   } catch (error) {
     console.error("[WEAKNESS_GET]", error);
     const msg = error instanceof Error ? error.message : "Internal Error";
