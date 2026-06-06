@@ -64,7 +64,7 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         <AuthProvider>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false}>
             <LanguageProvider>
               <HeartsProvider>
                 <UserProgressProvider>

@@ -11,7 +11,7 @@ import { useHearts, formatTime } from "@/lib/hearts-context";
 import { useUserProgress } from "@/contexts/user-progress-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { UserAvatar } from "@/components/user-avatar";
-import { ModeToggle } from "@/components/mode-toggle";
+
 
 const menuItems = [
   { href: "/learn", icon: Home, label: "Öğren", color: "text-indigo-500" },
@@ -75,7 +75,7 @@ export const Sidebar = ({ className }: { className?: string }) => {
             </h1>
           </div>
         </Link>
-        <ModeToggle />
+
       </div>
 
       {/* --- LANGUAGE SWITCHER --- */}
